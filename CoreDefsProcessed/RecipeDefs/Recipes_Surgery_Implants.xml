@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RecipeDefs>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallJoywire</defName>
+    <label>install joywire</label>
+    <description>Installs joywire.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing joywire.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Joywire</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Joywire</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Joywire</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallPainstopper</defName>
+    <label>install painstopper</label>
+    <description>Installs painstopper.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing painstopper.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Painstopper</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Painstopper</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Painstopper</addsHediff>
+  </RecipeDef>
+</RecipeDefs>

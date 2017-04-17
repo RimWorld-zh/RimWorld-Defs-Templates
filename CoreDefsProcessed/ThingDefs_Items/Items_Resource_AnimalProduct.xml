@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--=====================================================================-->
+  <!--=============================== Misc ================================-->
+  <!--=====================================================================-->
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Milk</defName>
+    <label>milk</label>
+    <description>Milk from an animal.</description>
+    <statBases>
+      <MarketValue>3.1</MarketValue>
+      <Mass>0.045</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_Rottable" ListIndex="2">
+        <daysToRotStart>14</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/Milk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">AnimalProductRaw</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <foodType>AnimalProduct, Fluid</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>RawTasty</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>InsectJelly</defName>
+    <label>insect jelly</label>
+    <description>Jelly stored and used as food by oversized insects. It is smooth, rich, and brings joy to those who consume it. Because of its unique biological properties, it can nourish almost any creature and never rots.</description>
+    <statBases>
+      <MarketValue>8.0</MarketValue>
+      <Mass>0.025</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/InsectJelly</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">AnimalProductRaw</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.05</nutrition>
+      <joy>0.08</joy>
+      <joyKind>Gluttonous</joyKind>
+      <preferability>MealFine</preferability>
+    </ingestible>
+  </ThingDef>
+  <!--=====================================================================-->
+  <!--=============================== Eggs ================================-->
+  <!--=====================================================================-->
+  <ThingDef Abstract="True" Name="EggBase" ParentName="OrganicProductBase">
+    <statBases>
+      <Mass>0.15</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+    </ingestible>
+  </ThingDef>
+  <ThingDef Abstract="True" Name="EggUnfertBase" ParentName="EggBase">
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>EggsUnfertilized</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>RawBad</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef Abstract="True" Name="EggFertBase" ParentName="EggBase">
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_FoodPoisoningChance">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>EggsFertilized</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Chicken -->
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggChickenUnfertilized</defName>
+    <label>chicken egg (unfert.)</label>
+    <description>Unfertilized chicken egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsUnfertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>RawBad</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggChickenFertilized</defName>
+    <label>chicken egg (fert.)</label>
+    <description>Fertilized chicken egg. If all goes well, it should hatch into a chick. It can be eaten raw, but it's much better cooked.</description>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+      <li Class="CompProperties_Hatcher" ListIndex="3">
+        <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
+        <hatcherPawn>Chicken</hatcherPawn>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsFertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Cobra -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggCobraFertilized</defName>
+    <label>cobra egg (fert.)</label>
+    <description>Fertilized cobra egg. If all goes well, it should hatch into a baby cobra. It can be eaten raw, but it's much better cooked.</description>
+    <statBases>
+      <MarketValue>40.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+      <li Class="CompProperties_Hatcher" ListIndex="3">
+        <hatcherDaystoHatch>4.5</hatcherDaystoHatch>
+        <hatcherPawn>Cobra</hatcherPawn>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsFertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Iguana -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggIguanaFertilized</defName>
+    <label>iguana egg (fert.)</label>
+    <description>Fertilized iguana egg. If all goes well, it should hatch into a baby iguana. It can be eaten raw, but it's much better cooked.</description>
+    <statBases>
+      <MarketValue>25.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+      <li Class="CompProperties_Hatcher" ListIndex="3">
+        <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
+        <hatcherPawn>Iguana</hatcherPawn>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsFertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Tortoise -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggTortoiseFertilized</defName>
+    <label>tortoise egg (fert.)</label>
+    <description>Fertilized tortoise egg. If all goes well, it should hatch into a baby tortoise. It can be eaten raw, but it's much better cooked.</description>
+    <statBases>
+      <MarketValue>23.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+      <li Class="CompProperties_Hatcher" ListIndex="3">
+        <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
+        <hatcherPawn>Tortoise</hatcherPawn>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggRound</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(245,245,245)</color>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsFertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Cassowary -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggCassowaryFertilized</defName>
+    <label>cassowary egg (fert.)</label>
+    <description>Fertilized cassowary egg. If all goes well, it should hatch into a baby cassowary. It can be eaten raw, but it's much better cooked.</description>
+    <statBases>
+      <MarketValue>19.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+      <li Class="CompProperties_Hatcher" ListIndex="3">
+        <hatcherDaystoHatch>7</hatcherDaystoHatch>
+        <hatcherPawn>Cassowary</hatcherPawn>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(125,138,97)</color>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsFertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Emu -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggEmuFertilized</defName>
+    <label>emu egg (fert.)</label>
+    <description>Fertilized emu egg. If all goes well, it should hatch into a baby emu. It can be eaten raw, but it's much better cooked.</description>
+    <statBases>
+      <MarketValue>18.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+      <li Class="CompProperties_Hatcher" ListIndex="3">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>Emu</hatcherPawn>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(48,104,100)</color>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsFertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Ostrich -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggOstrichFertilized</defName>
+    <label>ostrich egg (fert.)</label>
+    <description>Fertilized ostrich egg. If all goes well, it should hatch into a baby ostrich. It can be eaten raw, but it's much better cooked.</description>
+    <statBases>
+      <MarketValue>23.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+      <li Class="CompProperties_Hatcher" ListIndex="3">
+        <hatcherDaystoHatch>8</hatcherDaystoHatch>
+        <hatcherPawn>Ostrich</hatcherPawn>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(230,230,230)</color>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsFertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Turkey -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggTurkeyFertilized</defName>
+    <label>turkey egg (fert.)</label>
+    <description>Fertilized turkey egg. If all goes well, it should hatch into a baby turkey. It can be eaten raw, but it's much better cooked.</description>
+    <statBases>
+      <MarketValue>11.0</MarketValue>
+      <Mass>0.15</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+        <minSafeTemperature>0</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+      <li Class="CompProperties_Hatcher" ListIndex="3">
+        <hatcherDaystoHatch>5</hatcherDaystoHatch>
+        <hatcherPawn>Turkey</hatcherPawn>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(236,217,184)</color>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">EggsFertilized</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>AnimalProduct</foodType>
+      <nutrition>0.25</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+</Defs>

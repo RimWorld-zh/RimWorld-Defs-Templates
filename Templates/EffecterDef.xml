@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EffecterDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Complex List-->
+    <!--Type: List<Verse.SubEffecterDef>-->
+    <children>
+      <!--Type: Verse.SubEffecterDef-->
+      <li>
+        <!--Type: System.Type-->
+        <subEffecterClass>class_name</subEffecterClass>
+        <!--Type: Verse.IntRange-->
+        <!--Default Value: new IntRange(1, 1)-->
+        <burstCount>
+          <!--Type: int-->
+          <min>int_value</min>
+          <!--Type: int-->
+          <max>int_value</max>
+        </burstCount>
+        <!--Type: int-->
+        <!--Default Value: 40-->
+        <ticksBetweenMotes>int_value</ticksBetweenMotes>
+        <!--Type: float-->
+        <!--Default Value: 0.1-->
+        <chancePerTick>float_value</chancePerTick>
+        <!--Type: Verse.MoteSpawnLocType-->
+        <!--Available Values: OnSource, BetweenPositions, BetweenTouchingCells, RandomCellOnTarget-->
+        <!--Default Value: BetweenPositions-->
+        <spawnLocType>enum_value</spawnLocType>
+        <!--Type: float-->
+        <!--Default Value: 0.5-->
+        <positionLerpFactor>float_value</positionLerpFactor>
+        <!--Type: float-->
+        <positionRadius>float_value</positionRadius>
+        <!--Type: Verse.ThingDef-->
+        <moteDef>ThingDef_defName</moteDef>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: new FloatRange(0f, 360f)-->
+        <angle>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </angle>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <absoluteAngle>true_or_false</absoluteAngle>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: new FloatRange(0f, 0f)-->
+        <speed>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </speed>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: new FloatRange(0f, 0f)-->
+        <rotationRate>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </rotationRate>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: new FloatRange(1f, 1f)-->
+        <scale>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </scale>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: new FloatRange(999999f, 999999f)-->
+        <airTime>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </airTime>
+        <!--Type: Verse.SoundDef-->
+        <soundDef>SoundDef_defName</soundDef>
+        <!--Type: int-->
+        <ticksBeforeSustainerStart>int_value</ticksBeforeSustainerStart>
+      </li>
+      <!-- ... -->
+    </children>
+  </EffecterDef>
+</Defs>

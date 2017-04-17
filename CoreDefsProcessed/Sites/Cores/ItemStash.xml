@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SiteCoreDef>
+    <defName>ItemStash</defName>
+    <label>item stash</label>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/ItemStash</expandingIconTexture>
+    <workerClass>SiteCoreWorker_ItemStash</workerClass>
+  </SiteCoreDef>
+  <GenStepDef>
+    <defName>ItemStash</defName>
+    <linkWithSite>ItemStash</linkWithSite>
+    <order>460</order>
+    <genStep Class="GenStep_ItemStash">
+      <count>1</count>
+      <nearMapCenter>true</nearMapCenter>
+      <stockpileContents>
+        <li ListIndex="0">RawResources</li>
+        <li ListIndex="1">Apparel</li>
+        <li ListIndex="2">Weapons</li>
+      </stockpileContents>
+      <totalValueRange>
+        <min>2000</min>
+        <max>2800</max>
+      </totalValueRange>
+    </genStep>
+  </GenStepDef>
+</Defs>

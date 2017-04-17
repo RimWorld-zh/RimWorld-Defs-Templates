@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef Name="ImplantBase" Abstract="True">
+    <label>implant</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <isBodyPartOrImplant>true</isBodyPartOrImplant>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li>BodyPartsArtificial</li>
+    </thingCategories>
+    <tradeTags>
+      <li>BodyPartOrImplant</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef ParentName="ImplantBase">
+    <defName>Joywire</defName>
+    <label>joywire</label>
+    <description>This little brain implant will make you feel happy and relaxed, though you might end up a bit drowsy as a result.</description>
+    <statBases>
+      <MarketValue>800</MarketValue>
+      <Mass>0.2</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isBodyPartOrImplant>true</isBodyPartOrImplant>
+    <graphicData>
+      <texPath>Things/Item/Implant/Implant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">BodyPartsArtificial</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">BodyPartOrImplant</li>
+    </tradeTags>
+    <techHediffsTags>
+      <li ListIndex="0">Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+  <ThingDef ParentName="ImplantBase">
+    <defName>Painstopper</defName>
+    <label>painstopper</label>
+    <description>This brain implant will make you not feel pain.</description>
+    <statBases>
+      <MarketValue>800</MarketValue>
+      <Mass>0.08</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isBodyPartOrImplant>true</isBodyPartOrImplant>
+    <graphicData>
+      <texPath>Things/Item/Implant/Implant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">BodyPartsArtificial</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">BodyPartOrImplant</li>
+    </tradeTags>
+    <techHediffsTags>
+      <li ListIndex="0">Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+</ThingDefs>

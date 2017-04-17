@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorldObjectDef>
+    <defName>Caravan</defName>
+    <label>caravan</label>
+    <description>A group of traveling people.</description>
+    <worldObjectClass>Caravan</worldObjectClass>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <inspectorTabs>
+      <li ListIndex="0">WITab_Caravan_Health</li>
+      <li ListIndex="1">WITab_Caravan_Needs</li>
+      <li ListIndex="2">WITab_Caravan_Gear</li>
+      <li ListIndex="3">WITab_Caravan_Social</li>
+      <li ListIndex="4">WITab_Caravan_Items</li>
+    </inspectorTabs>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/Caravan</expandingIconTexture>
+    <expandingIconPriority>100</expandingIconPriority>
+    <texture>World/WorldObjects/Caravan</texture>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>FactionBase</defName>
+    <label>faction base</label>
+    <description>A base of one of the factions.</description>
+    <worldObjectClass>FactionBase</worldObjectClass>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>10</expandingIconPriority>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>AbandonedFactionBase</defName>
+    <label>abandoned faction base</label>
+    <description>An abandoned base of one of the factions.</description>
+    <texture>World/WorldObjects/TribalFactionBase</texture>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>DestroyedFactionBase</defName>
+    <label>destroyed faction base</label>
+    <description>A destroyed faction base.</description>
+    <worldObjectClass>DestroyedFactionBase</worldObjectClass>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/DestroyedFactionBase</expandingIconTexture>
+    <expandingIconPriority>20</expandingIconPriority>
+    <texture>World/WorldObjects/TribalFactionBase</texture>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>JourneyDestination</defName>
+    <label>journey destination</label>
+    <description>The location of a hidden ship which can help you escape the planet.</description>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/JourneyDestination</expandingIconTexture>
+    <expandingIconPriority>50</expandingIconPriority>
+    <texture>World/WorldObjects/JourneyDestination</texture>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>AttackedCaravan</defName>
+    <label>attacked caravan</label>
+    <description>A caravan under attack.</description>
+    <worldObjectClass>CaravansBattlefield</worldObjectClass>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/Ambush</expandingIconTexture>
+    <expandingIconPriority>80</expandingIconPriority>
+    <texture>World/WorldObjects/Ambush</texture>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>TravelingTransportPods</defName>
+    <label>transport pods</label>
+    <description>Transport pods in flight.</description>
+    <worldObjectClass>TravelingTransportPods</worldObjectClass>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/TravelingTransportPods</expandingIconTexture>
+    <expandingIconPriority>60</expandingIconPriority>
+    <texture>World/WorldObjects/TravelingTransportPods</texture>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>RoutePlannerWaypoint</defName>
+    <label>waypoint</label>
+    <description>A temporary waypoint.</description>
+    <worldObjectClass>RoutePlannerWaypoint</worldObjectClass>
+    <saved>false</saved>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/RoutePlannerWaypoint</expandingIconTexture>
+    <expandingIconPriority>1000</expandingIconPriority>
+    <texture>World/WorldObjects/RoutePlannerWaypoint</texture>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>Site</defName>
+    <worldObjectClass>Site</worldObjectClass>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>70</expandingIconPriority>
+  </WorldObjectDef>
+</Defs>

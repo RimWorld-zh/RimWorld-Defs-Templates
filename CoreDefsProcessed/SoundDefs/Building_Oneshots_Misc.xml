@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-SoundDef>
+  <SoundDef>
+    <defName>CryptosleepCasketEject</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li ListIndex="0">
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip" ListIndex="0">
+            <clipPath>Misc/CryptosleepCasket/CryptosleepCasketEject</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>15</min>
+          <max>15</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>CryptosleepCasketAccept</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li ListIndex="0">
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip" ListIndex="0">
+            <clipPath>Misc/CryptosleepCasket/CryptosleepCasketAccept</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>15</min>
+          <max>15</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</DefPackage-SoundDef>

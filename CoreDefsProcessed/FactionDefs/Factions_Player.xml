@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef Abstract="True" Name="PlayerFactionBase">
+    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerColony</defName>
+    <label>New Arrivals</label>
+    <description>Your own community.</description>
+    <isPlayer>true</isPlayer>
+    <baseNameMaker>NamerFactionBasePlayerColony</baseNameMaker>
+    <basicMemberKind>Colonist</basicMemberKind>
+    <startingResearchTags>
+      <li ListIndex="0">ClassicStart</li>
+    </startingResearchTags>
+    <pawnsPlural>colonists</pawnsPlural>
+    <techLevel>Industrial</techLevel>
+    <backstoryCategory>Civil</backstoryCategory>
+    <hairTags>
+      <li ListIndex="0">Urban</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li ListIndex="0">Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+    <colorSpectrum>
+      <li ListIndex="0">(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerTribe</defName>
+    <label>New Tribe</label>
+    <description>Your own tribe.</description>
+    <isPlayer>true</isPlayer>
+    <baseNameMaker>NamerFactionBasePlayerTribe</baseNameMaker>
+    <basicMemberKind>Tribesperson</basicMemberKind>
+    <startingResearchTags>
+      <li ListIndex="0">TribalStart</li>
+    </startingResearchTags>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <pawnNameMaker>NamerPersonTribal</pawnNameMaker>
+    <techLevel>Neolithic</techLevel>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <hairTags>
+      <li ListIndex="0">Tribal</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li ListIndex="0">Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <homeIconPath>World/WorldObjects/TribalFactionBase</homeIconPath>
+    <expandingIconTexture>World/WorldObjects/Expanding/Village</expandingIconTexture>
+    <colorSpectrum>
+      <li ListIndex="0">(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+</Defs>

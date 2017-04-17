@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TerrainDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: string-->
+    <!--Desc: A human-readable description given when the Def is inspected by players.-->
+    <description>string_value</description>
+    <!--Type: List<RimWorld.StatModifier>-->
+    <statBases>
+      <!--Type: RimWorld.StatModifier-->
+      <!--Tag Field: stat, Tag Type: RimWorld.StatDef-->
+      <!--Value Field: value, Value Type: float-->
+      <!--Pattern: <StatDef_defName>float_value</StatDef_defName>-->
+      <!-- ... -->
+    </statBases>
+    <!--Type: Verse.Traversability-->
+    <!--Available Values: Standable, PassThroughOnly, Impassable-->
+    <passability>enum_value</passability>
+    <!--Type: int-->
+    <pathCost>int_value</pathCost>
+    <!--Type: float-->
+    <!--Default Value: -1.0-->
+    <fertility>float_value</fertility>
+    <!--Type: List<Verse.ThingCountClass>-->
+    <costList>
+      <!--Type: Verse.ThingCountClass-->
+      <!--Tag Field: thingDef, Tag Type: Verse.ThingDef-->
+      <!--Value Field: count, Value Type: int-->
+      <!--Pattern: <ThingDef_defName>int_value</ThingDef_defName>-->
+      <!-- ... -->
+    </costList>
+    <!--Type: Verse.TerrainAffordance-->
+    <!--Available Values: Undefined, Light, Heavy, GrowSoil, Diggable, SmoothHard, SmoothableStone-->
+    <!--Default Value: Light-->
+    <terrainAffordanceNeeded>enum_value</terrainAffordanceNeeded>
+    <!--Type: List<Verse.ResearchProjectDef>-->
+    <researchPrerequisites>
+      <!--Type: Verse.ResearchProjectDef-->
+      <li>ResearchProjectDef_defName</li>
+      <!-- ... -->
+    </researchPrerequisites>
+    <!--Type: Verse.EffecterDef-->
+    <constructEffect>EffecterDef_defName</constructEffect>
+    <!--Type: Verse.DesignationCategoryDef-->
+    <designationCategory>DesignationCategoryDef_defName</designationCategory>
+    <!--Type: Verse.KeyBindingDef-->
+    <designationHotKey>KeyBindingDef_defName</designationHotKey>
+    <!--Type: string-->
+    <texturePath>string_value</texturePath>
+    <!--Type: Verse.TerrainDef+TerrainEdgeType-->
+    <!--Available Values: Hard, Fade, FadeRough-->
+    <edgeType>enum_value</edgeType>
+    <!--Type: int-->
+    <renderPrecedence>int_value</renderPrecedence>
+    <!--Type: List<Verse.TerrainAffordance>-->
+    <affordances>
+      <!--Type: Verse.TerrainAffordance-->
+      <!--Available Values: Undefined, Light, Heavy, GrowSoil, Diggable, SmoothHard, SmoothableStone-->
+      <li>enum_value</li>
+      <!-- ... -->
+    </affordances>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <layerable>true_or_false</layerable>
+    <!--Type: string-->
+    <scatterType>string_value</scatterType>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <takeFootprints>true_or_false</takeFootprints>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <avoidWander>true_or_false</avoidWander>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <changeable>true_or_false</changeable>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <holdSnow>true_or_false</holdSnow>
+    <!--Type: UnityEngine.Color-->
+    <!--Default Value: Color.white-->
+    <color>value</color>
+    <!--Type: Verse.TerrainDef-->
+    <driesTo>TerrainDef_defName</driesTo>
+    <!--Type: Verse.ThingDef-->
+    <terrainFilthDef>ThingDef_defName</terrainFilthDef>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <acceptTerrainSourceFilth>true_or_false</acceptTerrainSourceFilth>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <acceptFilth>true_or_false</acceptFilth>
+  </TerrainDef>
+</Defs>

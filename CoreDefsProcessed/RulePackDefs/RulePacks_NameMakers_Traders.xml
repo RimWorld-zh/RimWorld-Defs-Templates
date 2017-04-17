@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NameMakerDefs>
+  <RulePackDef>
+    <defName>NamerTraderGeneral</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">name->[businessname] [businesstype]</li>
+        <li ListIndex="1">name->[businessname] [businesstype]</li>
+        <li ListIndex="2">name->[businessname] [businesstype]</li>
+        <li ListIndex="3">name->[businessname] [businesstype]</li>
+        <li ListIndex="4">name->[color] [animal] [businesstype]</li>
+        <li ListIndex="5">name->[letter][letter] [businesstype]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File" ListIndex="0">
+          <keyword>businessname</keyword>
+          <path>Names/Business</path>
+        </li>
+        <li Class="Rule_File" ListIndex="1">
+          <keyword>businesstype</keyword>
+          <path>Words/Nouns/BusinessTypes</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</NameMakerDefs>

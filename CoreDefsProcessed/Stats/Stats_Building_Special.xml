@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StatDef>
+    <defName>DoorOpenSpeed</defName>
+    <label>door opening speed</label>
+    <description>The speed at which the door opens.</description>
+    <category>Building</category>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.2</minValue>
+  </StatDef>
+  <StatDef>
+    <defName>BedRestEffectiveness</defName>
+    <label>rest effectiveness</label>
+    <description>How fast people sleeping on this gain rest.</description>
+    <category>Building</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>0.0</defaultBaseValue>
+    <minValue>0.4</minValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.85</factorAwful>
+        <factorShoddy>0.9</factorShoddy>
+        <factorPoor>0.95</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.05</factorGood>
+        <factorSuperior>1.1</factorSuperior>
+        <factorExcellent>1.15</factorExcellent>
+        <factorMasterwork>1.2</factorMasterwork>
+        <factorLegendary>1.25</factorLegendary>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef>
+    <defName>TrapMeleeDamage</defName>
+    <label>trap melee damage</label>
+    <description>How much damage this trap typically does. The actual damage may vary somewhat.</description>
+    <category>Building</category>
+    <workerClass>StatWorker_MeleeDamageAmountTrap</workerClass>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>Integer</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>1</minValue>
+  </StatDef>
+  <StatDef>
+    <defName>TrapSpringChance</defName>
+    <label>trap spring chance</label>
+    <description>The likelihood that the trap will spring when an unaware creature passes over it.</description>
+    <category>Building</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+  </StatDef>
+  <StatDef>
+    <defName>ResearchSpeedFactor</defName>
+    <label>research speed factor</label>
+    <description>Speed at which people do research is multiplied by this value.</description>
+    <category>Building</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.25</minValue>
+    <parts>
+      <li Class="StatPart_Outdoors" ListIndex="0">
+        <factorIndoors>1.00</factorIndoors>
+        <factorOutdoors>0.75</factorOutdoors>
+      </li>
+      <li Class="StatPart_RoomStat" ListIndex="1">
+        <roomStat>ResearchSpeedFactor</roomStat>
+        <customLabel>Room cleanliness</customLabel>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef>
+    <defName>MedicalTendQualityOffset</defName>
+    <label>medical tend quality offset</label>
+    <description>Medical tend quality is offset by this value.</description>
+    <category>Building</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+  </StatDef>
+  <StatDef>
+    <defName>ImmunityGainSpeedFactor</defName>
+    <label>immunity gain speed factor</label>
+    <description>Immunity gain speed is multiplied by this value.</description>
+    <category>Building</category>
+    <hideAtValue>1</hideAtValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.5</minValue>
+  </StatDef>
+  <StatDef>
+    <defName>WorkTableWorkSpeedFactor</defName>
+    <label>work speed factor</label>
+    <description>Work speed is multiplied by this value.</description>
+    <category>Building</category>
+    <hideAtValue>1</hideAtValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.5</minValue>
+    <parts>
+      <li Class="StatPart_WorkTableUnpowered" ListIndex="0" />
+      <li Class="StatPart_WorkTableTemperature" ListIndex="1" />
+      <li Class="StatPart_WorkTableOutdoors" ListIndex="2" />
+    </parts>
+  </StatDef>
+  <StatDef>
+    <defName>EntertainmentStrengthFactor</defName>
+    <label>entertainment strength factor</label>
+    <description>How effectively this item entertains people and gives them joy.</description>
+    <category>Building</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.3</minValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.8</factorAwful>
+        <factorShoddy>0.9</factorShoddy>
+        <factorPoor>0.95</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.05</factorGood>
+        <factorSuperior>1.1</factorSuperior>
+        <factorExcellent>1.25</factorExcellent>
+        <factorMasterwork>1.4</factorMasterwork>
+        <factorLegendary>1.65</factorLegendary>
+      </li>
+    </parts>
+  </StatDef>
+</Defs>

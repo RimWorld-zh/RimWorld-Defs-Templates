@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <!--Desc: If checked, this sound is a sustainer.\n\nSustainers are used for sounds with a defined beginning and end (as opposed to OneShots, which just fire at a given instant).\n\nThis value must match what the game expects from the SubSoundDef with this name.-->
+    <sustain>true_or_false</sustain>
+    <!--Type: Verse.Sound.SoundContext-->
+    <!--Available Values: Any, MapOnly, WorldOnly-->
+    <!--Default Value: Any-->
+    <!--Desc: When the sound is allowed to play: only when the map view is active, only when the world view is active, or always (map + world + main menu).-->
+    <context>enum_value</context>
+    <!--Type: List<string>-->
+    <!--Desc: Event names for this sound. \n\nThe code will look up sounds to play them according to their name. If the code finds the event name it wants in this list, it will trigger this sound.\n\nThe Def name is also used as an event name.-->
+    <eventNames>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </eventNames>
+    <!--Type: int-->
+    <!--Default Value: 4-->
+    <!--Desc: For one-shots, this is the number of individual sounds from this Def than can be playing at a time.\n\n For sustainers, this is the number of sustainers that can be running with this sound (each of which can have sub-sounds). Sustainers can fade in and out as you move the camera or objects move, to keep the nearest ones audible.\n\nThis setting may not work for on-camera sounds.-->
+    <maxVoices>int_value</maxVoices>
+    <!--Type: int-->
+    <!--Default Value: 3-->
+    <!--Desc: The number of instances of this sound that can play at almost exactly the same moment. Handles cases like six gunners all firing their identical guns at the same time because a target came into view of all of them at the same time. Ordinarily this would make a painfully loud sound, but you can reduce it with this.-->
+    <maxSimultaneous>int_value</maxSimultaneous>
+    <!--Type: Verse.Sound.VoicePriorityMode-->
+    <!--Available Values: PrioritizeNewest, PrioritizeNearest-->
+    <!--Default Value: PrioritizeNewest-->
+    <!--Desc: If the system has to not play some instances of this sound because of maxVoices, this determines which ones are ignored.\n\nYou should use PrioritizeNewest for things like gunshots, so older still-playing samples are overridden by newer, more important ones.\n\nSustained sounds should usually prioritize nearest, so if a new fire starts burning nearby it can override a more distant one.-->
+    <priorityMode>enum_value</priorityMode>
+    <!--Type: string-->
+    <!--Default Value: -->
+    <!--Desc: The special sound slot this sound takes. If a sound with this slot is playing, new sounds in this slot will not play.\n\nOnly works for on-camera sounds.-->
+    <slot>string_value</slot>
+    <!--Type: string-->
+    <!--Default Value: -->
+    <!--Desc: The name of the SoundDef that will be played when this sustainer starts.-->
+    <!--Alias: sustainerStartSound-->
+    <sustainStartSound>string_value</sustainStartSound>
+    <!--Type: string-->
+    <!--Default Value: -->
+    <!--Desc: The name of the SoundDef that will be played when this sustainer ends.-->
+    <!--Alias: sustainerStopSound-->
+    <sustainStopSound>string_value</sustainStopSound>
+    <!--Type: float-->
+    <!--Default Value: 0.0-->
+    <!--Desc: After a sustainer is ended, the sound will fade out over this many real-time seconds.-->
+    <sustainFadeoutTime>float_value</sustainFadeoutTime>
+    <!--Complex List-->
+    <!--Type: List<Verse.Sound.SubSoundDef>-->
+    <!--Desc: All the sounds that will play when this set is triggered.-->
+    <subSounds>
+      <!--Type: Verse.Sound.SubSoundDef-->
+      <li>
+        <!--Type: string-->
+        <!--Default Value: UnnamedSubSoundDef-->
+        <!--Desc: A name to help you identify the sound.-->
+        <name>string_value</name>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <!--Desc: Whether this sound plays on the camera or in the world.\n\nThis must match what the game expects from the sound Def with this name.-->
+        <onCamera>true_or_false</onCamera>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <!--Desc: Whether to mute this subSound while the game is paused (either by the pausing in play or by opening a menu)-->
+        <muteWhenPaused>true_or_false</muteWhenPaused>
+        <!--Complex List-->
+        <!--Type: List<Verse.Sound.AudioGrain>-->
+        <!--Desc: The sound grains used for this sample. The game will choose one of these randomly when the sound plays. Sustainers choose one for each sample as it begins.-->
+        <grains>
+          <!--Type: Verse.Sound.AudioGrain_Clip-->
+          <li Class="AudioGrain_Clip">
+            <!--Type: string-->
+            <clipPath>string_value</clipPath>
+          </li>
+          <!--Type: Verse.Sound.AudioGrain_Folder-->
+          <li Class="AudioGrain_Folder">
+            <!--Type: string-->
+            <!--Alias: clipPath-->
+            <clipFolderPath>string_value</clipFolderPath>
+          </li>
+          <!-- ... -->
+        </grains>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: 50~50-->
+        <!--Desc: This sound will play at a random volume inside this range.\n\nSustainers will choose a different random volume for each sample.-->
+        <volumeRange>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </volumeRange>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: 1~1-->
+        <!--Desc: This sound will play at a random pitch inside this range.\n\nSustainers will choose a different random pitch for each sample.-->
+        <pitchRange>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </pitchRange>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: 25~70-->
+        <!--Desc: This sound will play max volume when it is under minDistance from the camera.\n\nIt will fade out linearly until the camera distance reaches its max.-->
+        <distRange>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </distRange>
+        <!--Type: Verse.Sound.RepeatSelectMode-->
+        <!--Available Values: Any, NeverTwice, NeverLastHalf-->
+        <!--Default Value: NeverLastHalf-->
+        <!--Desc: When the sound chooses the next grain, you may use this setting to have it avoid repeating the last grain, or avoid repeating any of the grains in the last X played, X being half the total number of grains defined.-->
+        <repeatMode>enum_value</repeatMode>
+        <!--Complex List-->
+        <!--Type: List<Verse.Sound.SoundParameterMapping>-->
+        <!--Desc: Mappings between game parameters (like fire size or wind speed) and properties of the sound.-->
+        <paramMappings>
+          <!--Type: Verse.Sound.SoundParameterMapping-->
+          <li>
+            <!--Type: Verse.Sound.SoundParamSource_External-->
+            <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
+            <inParam Class="SoundParamSource_External">
+              <!--Type: string-->
+              <!--Desc: The name of the independent parameter that the game will change to drive this relationship.\n\nThis must exactly match a string that the code will use to modify this sound. If the code doesn't reference this, it will have no effect.\n\nOn the graph, this is the X axis.-->
+              <inParamName>string_value</inParamName>
+              <!--Type: float-->
+              <!--Desc: If the code has never set this parameter on a sustainer, it will use this value.-->
+              <defaultValue>float_value</defaultValue>
+            </inParam>
+            <!--Type: Verse.Sound.SoundParamSource_CameraAltitude-->
+            <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
+            <inParam Class="SoundParamSource_CameraAltitude">value</inParam>
+            <!--Type: Verse.Sound.SoundParamSource_MusicPlayingFadeOut-->
+            <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
+            <inParam Class="SoundParamSource_MusicPlayingFadeOut">value</inParam>
+            <!--Type: RimWorld.SoundParamSource_TimeOfDay-->
+            <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
+            <inParam Class="SoundParamSource_TimeOfDay">value</inParam>
+            <!--Type: Verse.Sound.SoundParamSource_OutdoorTemperature-->
+            <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
+            <inParam Class="SoundParamSource_OutdoorTemperature">value</inParam>
+            <!--Type: Verse.Sound.SoundParamSource_AggregateSize-->
+            <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
+            <inParam Class="SoundParamSource_AggregateSize">value</inParam>
+            <!--Type: Verse.Sound.SoundParamSource_SourceAge-->
+            <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
+            <inParam Class="SoundParamSource_SourceAge">
+              <!--Type: Verse.Sound.TimeType-->
+              <!--Available Values: Ticks, RealtimeSeconds-->
+              <timeType>enum_value</timeType>
+            </inParam>
+            <!--Type: Verse.Sound.SoundParamTarget_Volume-->
+            <!--Desc: The dependent parameter that will respond to changes to the in-parameter.\n\nThis must match something the game can change about this sound.\n\nOn the graph, this is the y-axis.-->
+            <outParam Class="SoundParamTarget_Volume">value</outParam>
+            <!--Type: Verse.Sound.SoundParamTarget_PropertyLowPass-->
+            <!--Desc: The dependent parameter that will respond to changes to the in-parameter.\n\nThis must match something the game can change about this sound.\n\nOn the graph, this is the y-axis.-->
+            <outParam Class="SoundParamTarget_PropertyLowPass">
+              <!--Type: Verse.Sound.LowPassFilterProperty-->
+              <!--Available Values: Cutoff, Resonance-->
+              <filterProperty>enum_value</filterProperty>
+            </outParam>
+            <!--Type: Verse.Sound.SoundParamTarget_PropertyReverb-->
+            <!--Desc: The dependent parameter that will respond to changes to the in-parameter.\n\nThis must match something the game can change about this sound.\n\nOn the graph, this is the y-axis.-->
+            <outParam Class="SoundParamTarget_PropertyReverb">
+              <!--Type: Verse.Sound.ReverbSetup-->
+              <!--Desc: The base setup for the reverb.\n\nOnly used if no parameters are touching this filter.-->
+              <baseSetup>
+                <!--Type: float-->
+                <dryLevel>float_value</dryLevel>
+                <!--Type: float-->
+                <room>float_value</room>
+                <!--Type: float-->
+                <roomHF>float_value</roomHF>
+                <!--Type: float-->
+                <roomLF>float_value</roomLF>
+                <!--Type: float-->
+                <decayTime>float_value</decayTime>
+                <!--Type: float-->
+                <decayHFRatio>float_value</decayHFRatio>
+                <!--Type: float-->
+                <reflectionsLevel>float_value</reflectionsLevel>
+                <!--Type: float-->
+                <reflectionsDelay>float_value</reflectionsDelay>
+                <!--Type: float-->
+                <reverbLevel>float_value</reverbLevel>
+                <!--Type: float-->
+                <reverbDelay>float_value</reverbDelay>
+                <!--Type: float-->
+                <hfReference>float_value</hfReference>
+                <!--Type: float-->
+                <lfReference>float_value</lfReference>
+                <!--Type: float-->
+                <diffusion>float_value</diffusion>
+                <!--Type: float-->
+                <density>float_value</density>
+              </baseSetup>
+              <!--Type: Verse.Sound.ReverbSetup-->
+              <!--Desc: The interpolation target setup for this filter.\n\nWhen the interpolant parameter is at 1, these settings will be active.-->
+              <targetSetup>
+                <!--Type: float-->
+                <dryLevel>float_value</dryLevel>
+                <!--Type: float-->
+                <room>float_value</room>
+                <!--Type: float-->
+                <roomHF>float_value</roomHF>
+                <!--Type: float-->
+                <roomLF>float_value</roomLF>
+                <!--Type: float-->
+                <decayTime>float_value</decayTime>
+                <!--Type: float-->
+                <decayHFRatio>float_value</decayHFRatio>
+                <!--Type: float-->
+                <reflectionsLevel>float_value</reflectionsLevel>
+                <!--Type: float-->
+                <reflectionsDelay>float_value</reflectionsDelay>
+                <!--Type: float-->
+                <reverbLevel>float_value</reverbLevel>
+                <!--Type: float-->
+                <reverbDelay>float_value</reverbDelay>
+                <!--Type: float-->
+                <hfReference>float_value</hfReference>
+                <!--Type: float-->
+                <lfReference>float_value</lfReference>
+                <!--Type: float-->
+                <diffusion>float_value</diffusion>
+                <!--Type: float-->
+                <density>float_value</density>
+              </targetSetup>
+            </outParam>
+            <!--Type: Verse.Sound.SoundParamTarget_PropertyHighPass-->
+            <!--Desc: The dependent parameter that will respond to changes to the in-parameter.\n\nThis must match something the game can change about this sound.\n\nOn the graph, this is the y-axis.-->
+            <outParam Class="SoundParamTarget_PropertyHighPass">
+              <!--Type: Verse.Sound.HighPassFilterProperty-->
+              <!--Available Values: Cutoff, Resonance-->
+              <filterProperty>enum_value</filterProperty>
+            </outParam>
+            <!--Type: Verse.Sound.SoundParamTarget_Pitch-->
+            <!--Desc: The dependent parameter that will respond to changes to the in-parameter.\n\nThis must match something the game can change about this sound.\n\nOn the graph, this is the y-axis.-->
+            <outParam Class="SoundParamTarget_Pitch">
+              <!--Type: Verse.Sound.PitchParamType-->
+              <!--Available Values: Multiply, Semitones-->
+              <!--Desc: The scale used for this pitch input.\n\nMultiply means a multiplier for the natural frequency of the sound. 1.0 gives normal sound, 0.5 gives twice as long and one octave down, and 2.0 gives half as long and an octave up.\n\nSemitones sets a number of semitones to offset the sound.-->
+              <pitchType>enum_value</pitchType>
+            </outParam>
+            <!--Type: Verse.Sound.SoundParamUpdateMode-->
+            <!--Available Values: Constant, OncePerSample-->
+            <!--Desc: Determines when sound parameters should be applies to samples.\n\nConstant means the parameters are updated every frame and can change continuously.\n\nOncePerSample means that the parameters are applied exactly once to each sample that plays.-->
+            <paramUpdateMode>enum_value</paramUpdateMode>
+            <!--Type: Verse.SimpleCurve-->
+            <curve>
+              <!--Complex List-->
+              <!--Type: List<Verse.CurvePoint>-->
+              <points>
+                <!--Type: Verse.CurvePoint-->
+                <li>
+                  <!--Type: UnityEngine.Vector2-->
+                  <loc>
+                    <!--Type: float-->
+                    <x>float_value</x>
+                    <!--Type: float-->
+                    <y>float_value</y>
+                  </loc>
+                </li>
+                <!-- ... -->
+              </points>
+            </curve>
+          </li>
+          <!-- ... -->
+        </paramMappings>
+        <!--Complex List-->
+        <!--Type: List<Verse.Sound.SoundFilter>-->
+        <!--Desc: The filters to be applied to this sound.-->
+        <filters>
+          <!--Type: Verse.Sound.SoundFilterEcho-->
+          <li Class="SoundFilterEcho">
+            <!--Type: float-->
+            <!--Desc: Echo delay in ms. 10 to 5000. Default = 500.-->
+            <delay>float_value</delay>
+            <!--Type: float-->
+            <!--Desc: Echo decay per delay. 0 to 1. 1.0 = No decay, 0.0 = total decay (ie simple 1 line delay).-->
+            <decayRatio>float_value</decayRatio>
+            <!--Type: float-->
+            <!--Desc: The volume of the echo signal to pass to output.-->
+            <wetMix>float_value</wetMix>
+            <!--Type: float-->
+            <!--Desc: The volume of the original signal to pass to output.-->
+            <dryMix>float_value</dryMix>
+          </li>
+          <!--Type: Verse.Sound.SoundFilterLowPass-->
+          <li Class="SoundFilterLowPass">
+            <!--Type: float-->
+            <!--Desc: This filter will attenuate frequencies above this cutoff frequency.-->
+            <cutoffFrequency>float_value</cutoffFrequency>
+            <!--Type: float-->
+            <!--Desc: The resonance Q value.-->
+            <lowpassResonaceQ>float_value</lowpassResonaceQ>
+          </li>
+          <!--Type: Verse.Sound.SoundFilterReverb-->
+          <li Class="SoundFilterReverb">
+            <!--Type: Verse.Sound.ReverbSetup-->
+            <!--Desc: The base setup for this filter.\n\nOnly used if no parameters ever affect this filter.-->
+            <baseSetup>
+              <!--Type: float-->
+              <dryLevel>float_value</dryLevel>
+              <!--Type: float-->
+              <room>float_value</room>
+              <!--Type: float-->
+              <roomHF>float_value</roomHF>
+              <!--Type: float-->
+              <roomLF>float_value</roomLF>
+              <!--Type: float-->
+              <decayTime>float_value</decayTime>
+              <!--Type: float-->
+              <decayHFRatio>float_value</decayHFRatio>
+              <!--Type: float-->
+              <reflectionsLevel>float_value</reflectionsLevel>
+              <!--Type: float-->
+              <reflectionsDelay>float_value</reflectionsDelay>
+              <!--Type: float-->
+              <reverbLevel>float_value</reverbLevel>
+              <!--Type: float-->
+              <reverbDelay>float_value</reverbDelay>
+              <!--Type: float-->
+              <hfReference>float_value</hfReference>
+              <!--Type: float-->
+              <lfReference>float_value</lfReference>
+              <!--Type: float-->
+              <diffusion>float_value</diffusion>
+              <!--Type: float-->
+              <density>float_value</density>
+            </baseSetup>
+          </li>
+          <!--Type: Verse.Sound.SoundFilterHighPass-->
+          <li Class="SoundFilterHighPass">
+            <!--Type: float-->
+            <!--Desc: This filter will attenuate frequencies below this cutoff frequency.-->
+            <cutoffFrequency>float_value</cutoffFrequency>
+          </li>
+          <!-- ... -->
+        </filters>
+        <!--Type: bool-->
+        <!--Default Value: true-->
+        <!--Desc: If true, each sample in the sustainer will be looped and ended only after sustainerLoopDurationRange. If not, the sounds will just play once and end after their own length.-->
+        <sustainLoop>true_or_false</sustainLoop>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: 9999~9999-->
+        <!--Desc: The range of durations that individual looped samples in the sustainer will have. Each sample ends after a time randomly chosen in this range.\n\nOnly used if the sustainer is looped.-->
+        <sustainLoopDurationRange>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </sustainLoopDurationRange>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: 0~0-->
+        <!--Desc: The time between when one sample ends and the next starts.\n\nSet to negative if you wish samples to overlap.-->
+        <!--Alias: sustainInterval-->
+        <sustainIntervalRange>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </sustainIntervalRange>
+        <!--Type: float-->
+        <!--Default Value: 0.0-->
+        <!--Desc: The fade-in time of each sample. The sample will start at 0 volume and fade in over this number of seconds.-->
+        <sustainAttack>float_value</sustainAttack>
+        <!--Type: bool-->
+        <!--Default Value: true-->
+        <!--Desc: Skip the attack on the first sustainer sample.-->
+        <sustainSkipFirstAttack>true_or_false</sustainSkipFirstAttack>
+        <!--Type: float-->
+        <!--Default Value: 0.0-->
+        <!--Desc: The fade-out time of each sample. At this number of seconds before the sample ends, it will start fading out. Its volume will be zero at the moment it finishes fading out.-->
+        <sustainRelease>float_value</sustainRelease>
+      </li>
+      <!-- ... -->
+    </subSounds>
+  </SoundDef>
+</Defs>

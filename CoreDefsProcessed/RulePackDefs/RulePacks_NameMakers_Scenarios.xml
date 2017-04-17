@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerScenario</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">name->[story] [trans] the [weapon]</li>
+        <li ListIndex="1">name->[story] [trans] the [animal]</li>
+        <li ListIndex="2">name->[story] [trans] the [terrainfeature]</li>
+        <li ListIndex="3">name->[story] [trans] [outlander]s</li>
+        <li ListIndex="4">name->[story] [trans] [concept]</li>
+        <li ListIndex="5">name->[concept] [story]</li>
+        <li ListIndex="6">name->[story] [trans] a [community]</li>
+        <li ListIndex="7">name->a [adjective] [story]</li>
+        <li ListIndex="8">name->[story] [trans] the [game]</li>
+        <li ListIndex="9">name->[story] in [color] and [color]</li>
+        <li ListIndex="10">name->[color] [story]</li>
+        <li ListIndex="11">name->[story] [romannumeral]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File" ListIndex="0">
+          <keyword>story</keyword>
+          <path>Words/Nouns/Stories</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</Defs>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RecipeDefs>
+  <RecipeDef Name="MakeStoneBlocksBase" Abstract="True">
+    <jobString>Cutting stone blocks from chunk.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Construction</workSkill>
+    <workSkillLearnFactor>0.3</workSkillLearnFactor>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <recipeUsers>
+      <li>TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>MakeStoneBlocksAny</defName>
+    <label>make any stone blocks</label>
+    <description>Cuts rock chunks into usable stone blocks.</description>
+    <workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+    <jobString>Cutting stone blocks from chunk.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">StoneChunks</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">StoneChunks</li>
+      </categories>
+    </fixedIngredientFilter>
+    <specialProducts>
+      <li ListIndex="0">Butchery</li>
+    </specialProducts>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Construction</workSkill>
+    <workSkillLearnFactor>0.3</workSkillLearnFactor>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <recipeUsers>
+      <li ListIndex="0">TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>ExtractMetalFromSlag</defName>
+    <label>smelt metal from slag</label>
+    <description>Use heat and strong electromagnets to separate useful metal from slag chunks.</description>
+    <jobString>Smelting metal from slag.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">ChunkSlagSteel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">ChunkSlagSteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <!-- Switched to standard products so we can do "do until you have X"
+    <specialProducts>
+      <li>Smelted</li>
+    </specialProducts>-->
+    <products>
+      <Steel>10</Steel>
+    </products>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>SmeltWeapon</defName>
+    <label>smelt weapon</label>
+    <description>Use heat and strong electromagnets to break down weapons into useful resources.</description>
+    <jobString>Smelting weapon.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Weapons</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Weapons</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li ListIndex="0">AllowNonSmeltableWeapons</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <forceHiddenSpecialFilters>
+      <li ListIndex="0">AllowSmeltable</li>
+    </forceHiddenSpecialFilters>
+    <specialProducts>
+      <li ListIndex="0">Smelted</li>
+    </specialProducts>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>DestroyWeapon</defName>
+    <label>destroy weapon</label>
+    <description>Use heat to destroy unwanted weapons. Faster than smelting, and works on non-smeltable items, but yields no resources.</description>
+    <jobString>Destroying weapon.</jobString>
+    <workAmount>400</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Weapons</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Weapons</li>
+      </categories>
+    </fixedIngredientFilter>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeMortarShell</defName>
+    <label>make mortar shell</label>
+    <description>Craft a mortar shell.</description>
+    <jobString>Making mortar shell.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Steel</li>
+        <li ListIndex="1">Chemfuel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <products>
+      <MortarShell>1</MortarShell>
+    </products>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeChemfuelFromWood</defName>
+    <label>make chemfuel from wood</label>
+    <description>Make a batch of chemfuel by gasifying wood logs.</description>
+    <jobString>Refining chemfuel from wood.</jobString>
+    <workAmount>2500</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>70</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Chemfuel>35</Chemfuel>
+    </products>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeChemfuelFromOrganics</defName>
+    <label>make chemfuel from organics</label>
+    <description>Make a batch of chemfuel by extracting biofuel from organic feedstocks.</description>
+    <jobString>Refining chemfuel from organics.</jobString>
+    <workAmount>2500</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Foods</li>
+            <li ListIndex="1">PlantMatter</li>
+          </categories>
+          <exceptedThingDefs>
+            <li ListIndex="0">Hay</li>
+          </exceptedThingDefs>
+        </filter>
+        <count>3.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Foods</li>
+        <li ListIndex="1">PlantMatter</li>
+      </categories>
+      <exceptedThingDefs>
+        <li ListIndex="0">Hay</li>
+      </exceptedThingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li ListIndex="0">FoodRaw</li>
+      </categories>
+      <exceptedCategories>
+        <li ListIndex="0">MeatRaw</li>
+        <li ListIndex="1">AnimalProductRaw</li>
+      </exceptedCategories>
+    </defaultIngredientFilter>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <products>
+      <Chemfuel>35</Chemfuel>
+    </products>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>MakeComponent</defName>
+    <label>make component</label>
+    <description>Make a component.</description>
+    <jobString>Making component.</jobString>
+    <workAmount>9000</workAmount>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Steel</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Component>1</Component>
+    </products>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <skillRequirements>
+      <li ListIndex="0">
+        <skill>Crafting</skill>
+        <minLevel>10</minLevel>
+      </li>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+  </RecipeDef>
+</RecipeDefs>

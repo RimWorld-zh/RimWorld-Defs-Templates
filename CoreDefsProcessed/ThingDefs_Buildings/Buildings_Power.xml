@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Buildings>
+  <ThingDef ParentName="BuildingBase">
+    <defName>PowerConduit</defName>
+    <label>power conduit</label>
+    <description>A set of electrical cables for moving power around. Can be placed under walls and other buildings.</description>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>35</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <passability>Standable</passability>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_Conduit</li>
+    </placeWorkers>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Linked/PowerConduit_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0,0.35,1,0.3)</rect>
+      </damageData>
+      <linkType>Transmitter</linkType>
+      <linkFlags>
+        <li ListIndex="0">PowerConduit</li>
+      </linkFlags>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Linked/PowerConduit_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+    <building>
+      <isEdifice>false</isEdifice>
+      <isInert>true</isInert>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>PowerSwitch</defName>
+    <label>power switch</label>
+    <description>Switches power on/off.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0.4</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <passability>Standable</passability>
+    <costList>
+      <Steel>15</Steel>
+      <Component>1</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <placingDraggableDimensions>0</placingDraggableDimensions>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <thingClass>Building_PowerSwitch</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Power/PowerSwitch</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <allowWireConnection>false</allowWireConnection>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>FueledGenerator</defName>
+    <label>fueled generator</label>
+    <description>Produces power by consuming wood fuel. Must be fueled by hand.</description>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>2</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerPlant</compClass>
+        <transmitsPower>true</transmitsPower>
+        <basePowerConsumption>-1000</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Refuelable" ListIndex="2">
+        <fuelConsumptionRate>22.0</fuelConsumptionRate>
+        <fuelCapacity>75.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li ListIndex="0">WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="3">
+        <glowRadius>6</glowRadius>
+        <glowColor>(217,112,33,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher" ListIndex="4">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>4</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="5" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Power/FueledGenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1.0</fillPercent>
+    <blockWind>true</blockWind>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Battery</defName>
+    <label>battery</label>
+    <description>Stores electricity when there is excess power and yields it when there is not. Warning - charged batteries tend to explode when exposed to rain or fire.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>-18</Beauty>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>50</Steel>
+      <Component>2</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Batteries</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <thingClass>Building_Battery</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(1,2)</size>
+    <comps>
+      <li Class="CompProperties_Battery" ListIndex="0">
+        <transmitsPower>true</transmitsPower>
+        <startElectricalFires>true</startElectricalFires>
+        <storedEnergyMax>1000</storedEnergyMax>
+        <efficiency>0.5</efficiency>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="1" />
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Power/Battery</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.40</fillPercent>
+    <blockWind>true</blockWind>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>SolarGenerator</defName>
+    <label>solar generator</label>
+    <description>Produces electricity from sunlight. Does not work in the dark.</description>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>3</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+      <li ListIndex="1">SolarPanels</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(4,4)</size>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerPlantSolar</compClass>
+        <transmitsPower>true</transmitsPower>
+        <basePowerConsumption>-1</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="1" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Power/SolarCollector</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <rect>(0,0.6,4,2.8)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>GeothermalGenerator</defName>
+    <label>geothermal generator</label>
+    <description>Produces electricity from geothermal steam geysers. Must be placed on a geyser.</description>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-30</Beauty>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>400</Steel>
+      <Component>8</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">GeothermalPower</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_OnSteamGeyser</li>
+    </placeWorkers>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(6,6)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerPlantSteam</compClass>
+        <transmitsPower>true</transmitsPower>
+        <basePowerConsumption>-3600</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="1" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Power/GeothermalPlant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+      <damageData>
+        <rect>(0.3,0,5.4,6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+</Buildings>

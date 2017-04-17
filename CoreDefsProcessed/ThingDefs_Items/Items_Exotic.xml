@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <ThingDef Name="ResourceVerbBase" ParentName="ResourceBase" Abstract="True">
+    <comps>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+  </ThingDef>
+  <!--=============== AI persona core ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>AIPersonaCore</defName>
+    <label>AI persona core</label>
+    <description>A hyper-advanced computer core that houses a superhumanlike artificial intelligence. In its isolated state, the core is dormant. Installed in a proper support structure, however, it can become a mind of frightening power.</description>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>2</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Special/AIPersonaCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Items</li>
+    </thingCategories>
+    <soundDrop>Metal_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+  </ThingDef>
+  <!--=============== Neurotrainer ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Neurotrainer</defName>
+    <label>neurotrainer</label>
+    <description>A one-use nanotech trainer device. The neurotrainer is inserted through the orbit of the eye and releases nanomachines into the subject's brain, quickly improving their skills in a specific area.</description>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>0.2</Mass>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Usable" ListIndex="1">
+        <compClass>CompNeurotrainer</compClass>
+        <useJob>UseNeurotrainer</useJob>
+        <useLabel>Use neurotrainer to learn {0}</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect" ListIndex="2">
+        <compClass>CompUseEffect_LearnSkill</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Special/Neurotrainer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Items</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <!--=============== Thrumbo horn ====================-->
+  <ThingDef ParentName="ResourceVerbBase">
+    <defName>ThrumboHorn</defName>
+    <label>thrumbo horn</label>
+    <description>A thrumbo's horn. It's razor-sharp, very hard and priceless in most markets. This is a true trophy.</description>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>3</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <MeleeWeapon_DamageAmount>15</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>1.75</MeleeWeapon_Cooldown>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>10</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Special/ThrumboHorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Items</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+      </li>
+    </verbs>
+    <equippedAngleOffset>-20</equippedAngleOffset>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+  </ThingDef>
+  <!--=============== Elephant tusk ====================-->
+  <ThingDef ParentName="ResourceVerbBase">
+    <defName>ElephantTusk</defName>
+    <label>elephant tusk</label>
+    <description>An elephant's tusk. Very durable and valuable. Deadly but somewhat unwieldy as a weapon.</description>
+    <statBases>
+      <MarketValue>450</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.8</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0.4</DeteriorationRate>
+      <MeleeWeapon_DamageAmount>16</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>2.5</MeleeWeapon_Cooldown>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>10</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Special/ElephantTusk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Items</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+      </li>
+    </verbs>
+    <equippedAngleOffset>-20</equippedAngleOffset>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+  </ThingDef>
+</GameData>

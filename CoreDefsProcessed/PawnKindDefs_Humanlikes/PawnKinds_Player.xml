@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PawnKindDefs>
+  <PawnKindDef Abstract="True" Name="BasePlayerPawnKind">
+    <race>Human</race>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <isFighter>false</isFighter>
+    <combatPower>30</combatPower>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>Colonist</defName>
+    <label>colonist</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <backstoryCategory>Civil</backstoryCategory>
+    <labelPlural>colonists</labelPlural>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <isFighter>false</isFighter>
+    <combatPower>30</combatPower>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Spacer</li>
+    </apparelTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <chemicalAddictionChance>0.06</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>Tribesperson</defName>
+    <label>member</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerTribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>members</labelPlural>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <isFighter>false</isFighter>
+    <combatPower>30</combatPower>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>200</min>
+      <max>400</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Tribal</li>
+    </apparelTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+</PawnKindDefs>

@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: string-->
+    <!--Desc: A human-readable description given when the Def is inspected by players.-->
+    <description>string_value</description>
+    <!--Type: List<RimWorld.StatModifier>-->
+    <statBases>
+      <!--Type: RimWorld.StatModifier-->
+      <!--Tag Field: stat, Tag Type: RimWorld.StatDef-->
+      <!--Value Field: value, Value Type: float-->
+      <!--Pattern: <StatDef_defName>float_value</StatDef_defName>-->
+      <!-- ... -->
+    </statBases>
+    <!--Type: Verse.Traversability-->
+    <!--Available Values: Standable, PassThroughOnly, Impassable-->
+    <passability>enum_value</passability>
+    <!--Type: int-->
+    <pathCost>int_value</pathCost>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <pathCostIgnoreRepeat>true_or_false</pathCostIgnoreRepeat>
+    <!--Type: List<Verse.ThingCountClass>-->
+    <costList>
+      <!--Type: Verse.ThingCountClass-->
+      <!--Tag Field: thingDef, Tag Type: Verse.ThingDef-->
+      <!--Value Field: count, Value Type: int-->
+      <!--Pattern: <ThingDef_defName>int_value</ThingDef_defName>-->
+      <!-- ... -->
+    </costList>
+    <!--Type: int-->
+    <!--Default Value: -1-->
+    <costStuffCount>int_value</costStuffCount>
+    <!--Type: List<RimWorld.StuffCategoryDef>-->
+    <stuffCategories>
+      <!--Type: RimWorld.StuffCategoryDef-->
+      <li>StuffCategoryDef_defName</li>
+      <!-- ... -->
+    </stuffCategories>
+    <!--Type: Verse.AltitudeLayer-->
+    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, FlyingItem, Gas, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, WorldDataOverlay, MetaOverlays-->
+    <!--Default Value: Item-->
+    <altitudeLayer>enum_value</altitudeLayer>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <menuHidden>true_or_false</menuHidden>
+    <!--Type: System.Type-->
+    <thingClass>class_name</thingClass>
+    <!--Type: Verse.ThingCategory-->
+    <!--Available Values: None, Pawn, Item, Plant, Building, Filth, Projectile, Mote, Ethereal, Attachment, Skyfaller, Gas-->
+    <category>Item</category>
+    <!--Type: Verse.TickerType-->
+    <!--Available Values: Never, Normal, Rare, Long-->
+    <tickerType>enum_value</tickerType>
+    <!--Type: int-->
+    <!--Default Value: 1-->
+    <stackLimit>int_value</stackLimit>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <rotatable>true_or_false</rotatable>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <smallVolume>true_or_false</smallVolume>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <useHitPoints>true_or_false</useHitPoints>
+    <!--Complex List-->
+    <!--Type: List<Verse.CompProperties>-->
+    <comps>
+      <!--Type: RimWorld.CompProperties_Forbiddable-->
+      <li Class="CompProperties_Forbiddable" />
+      <!--Type: Verse.CompProperties-->
+      <li>
+        <!--Type: System.Type-->
+        <compClass>class_name</compClass>
+      </li>
+      <!--Type: RimWorld.CompProperties_Art-->
+      <li Class="CompProperties_Art">
+        <!--Type: Verse.RulePackDef-->
+        <nameMaker>RulePackDef_defName</nameMaker>
+        <!--Type: Verse.RulePackDef-->
+        <descriptionMaker>RulePackDef_defName</descriptionMaker>
+        <!--Type: RimWorld.QualityCategory-->
+        <!--Available Values: Awful, Shoddy, Poor, Normal, Good, Superior, Excellent, Masterwork, Legendary-->
+        <minQualityForArtistic>enum_value</minQualityForArtistic>
+      </li>
+      <!--Type: RimWorld.CompProperties_Rottable-->
+      <li Class="CompProperties_Rottable">
+        <!--Type: float-->
+        <!--Default Value: 2.0-->
+        <daysToRotStart>float_value</daysToRotStart>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <rotDestroys>true_or_false</rotDestroys>
+      </li>
+      <!--Type: RimWorld.CompProperties_FoodPoisoningChance-->
+      <li Class="CompProperties_FoodPoisoningChance">
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <humanlikeOnly>true_or_false</humanlikeOnly>
+      </li>
+      <!--Type: RimWorld.CompProperties_Explosive-->
+      <li Class="CompProperties_Explosive">
+        <!--Type: float-->
+        <!--Default Value: 1.9-->
+        <explosiveRadius>float_value</explosiveRadius>
+        <!--Type: Verse.DamageDef-->
+        <!--Default Value: DamageDefOf.Bomb-->
+        <explosiveDamageType>DamageDef_defName</explosiveDamageType>
+        <!--Type: Verse.ThingDef-->
+        <preExplosionSpawnThingDef>ThingDef_defName</preExplosionSpawnThingDef>
+        <!--Type: float-->
+        <preExplosionSpawnChance>float_value</preExplosionSpawnChance>
+        <!--Type: float-->
+        <explosiveExpandPerStackcount>float_value</explosiveExpandPerStackcount>
+        <!--Type: Verse.DamageDef-->
+        <startWickOnDamageTaken>DamageDef_defName</startWickOnDamageTaken>
+        <!--Type: float-->
+        <!--Default Value: 0.2-->
+        <startWickHitPointsPercent>float_value</startWickHitPointsPercent>
+        <!--Type: Verse.IntRange-->
+        <!--Default Value: new IntRange(140, 150)-->
+        <wickTicks>
+          <!--Type: int-->
+          <min>int_value</min>
+          <!--Type: int-->
+          <max>int_value</max>
+        </wickTicks>
+      </li>
+      <!--Type: RimWorld.CompProperties_TemperatureRuinable-->
+      <li Class="CompProperties_TemperatureRuinable">
+        <!--Type: float-->
+        <minSafeTemperature>float_value</minSafeTemperature>
+        <!--Type: float-->
+        <!--Default Value: 100.0-->
+        <maxSafeTemperature>float_value</maxSafeTemperature>
+        <!--Type: float-->
+        <!--Default Value: 1E-05.0-->
+        <progressPerDegreePerTick>float_value</progressPerDegreePerTick>
+      </li>
+      <!--Type: RimWorld.CompProperties_Hatcher-->
+      <li Class="CompProperties_Hatcher">
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <hatcherDaystoHatch>float_value</hatcherDaystoHatch>
+        <!--Type: Verse.PawnKindDef-->
+        <hatcherPawn>PawnKindDef_defName</hatcherPawn>
+      </li>
+      <!--Type: RimWorld.CompProperties_Ingredients-->
+      <li Class="CompProperties_Ingredients" />
+      <!--Type: RimWorld.CompProperties_FoodPoisonable-->
+      <li Class="CompProperties_FoodPoisonable" />
+      <!--Type: RimWorld.CompProperties_Usable-->
+      <li Class="CompProperties_Usable">
+        <!--Type: System.Type-->
+        <compClass>class_name</compClass>
+        <!--Type: Verse.JobDef-->
+        <useJob>JobDef_defName</useJob>
+        <!--Type: string-->
+        <useLabel>string_value</useLabel>
+      </li>
+      <!--Type: RimWorld.CompProperties_UseEffect-->
+      <li Class="CompProperties_UseEffect">
+        <!--Type: System.Type-->
+        <compClass>class_name</compClass>
+      </li>
+      <!--Type: RimWorld.CompProperties_Targetable-->
+      <li Class="CompProperties_Targetable">
+        <!--Type: System.Type-->
+        <compClass>class_name</compClass>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <doCameraShake>true_or_false</doCameraShake>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <psychicSensitiveTargetsOnly>true_or_false</psychicSensitiveTargetsOnly>
+      </li>
+      <!--Type: RimWorld.CompProperties_Drug-->
+      <li Class="CompProperties_Drug">
+        <!--Type: RimWorld.ChemicalDef-->
+        <chemical>ChemicalDef_defName</chemical>
+        <!--Type: float-->
+        <addictiveness>float_value</addictiveness>
+        <!--Type: float-->
+        <minToleranceToAddict>float_value</minToleranceToAddict>
+        <!--Type: float-->
+        <!--Default Value: 0.1-->
+        <existingAddictionSeverityOffset>float_value</existingAddictionSeverityOffset>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <needLevelOffset>float_value</needLevelOffset>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: FloatRange.Zero-->
+        <overdoseSeverityOffset>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </overdoseSeverityOffset>
+        <!--Type: float-->
+        <largeOverdoseChance>float_value</largeOverdoseChance>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <isCombatEnhancingDrug>true_or_false</isCombatEnhancingDrug>
+        <!--Type: float-->
+        <listOrder>float_value</listOrder>
+      </li>
+      <!-- ... -->
+    </comps>
+    <!--Type: List<Verse.ThingCountClass>-->
+    <butcherProducts>
+      <!--Type: Verse.ThingCountClass-->
+      <!--Tag Field: thingDef, Tag Type: Verse.ThingDef-->
+      <!--Value Field: count, Value Type: int-->
+      <!--Pattern: <ThingDef_defName>int_value</ThingDef_defName>-->
+      <!-- ... -->
+    </butcherProducts>
+    <!--Type: List<Verse.ThingCountClass>-->
+    <smeltProducts>
+      <!--Type: Verse.ThingCountClass-->
+      <!--Tag Field: thingDef, Tag Type: Verse.ThingDef-->
+      <!--Value Field: count, Value Type: int-->
+      <!--Pattern: <ThingDef_defName>int_value</ThingDef_defName>-->
+      <!-- ... -->
+    </smeltProducts>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <smeltable>true_or_false</smeltable>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <randomizeRotationOnSpawn>true_or_false</randomizeRotationOnSpawn>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <isBodyPartOrImplant>true_or_false</isBodyPartOrImplant>
+    <!--Type: Verse.RecipeMakerProperties-->
+    <recipeMaker>
+      <!--Type: RimWorld.StatDef-->
+      <workSpeedStat>StatDef_defName</workSpeedStat>
+      <!--Type: Verse.ThingDef-->
+      <unfinishedThingDef>ThingDef_defName</unfinishedThingDef>
+      <!--Type: Verse.ThingFilter-->
+      <defaultIngredientFilter>
+        <!--Type: List<string>-->
+        <categories>
+          <!--Type: string-->
+          <li>string_value</li>
+          <!-- ... -->
+        </categories>
+        <!--Type: List<Verse.ThingDef>-->
+        <exceptedThingDefs>
+          <!--Type: Verse.ThingDef-->
+          <li>ThingDef_defName</li>
+          <!-- ... -->
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
+      <!--Complex List-->
+      <!--Type: List<Verse.SkillRequirement>-->
+      <skillRequirements>
+        <!--Type: Verse.SkillRequirement-->
+        <li>
+          <!--Type: RimWorld.SkillDef-->
+          <skill>SkillDef_defName</skill>
+          <!--Type: int-->
+          <minLevel>int_value</minLevel>
+        </li>
+        <!-- ... -->
+      </skillRequirements>
+      <!--Type: RimWorld.SkillDef-->
+      <workSkill>SkillDef_defName</workSkill>
+      <!--Type: Verse.EffecterDef-->
+      <effectWorking>EffecterDef_defName</effectWorking>
+      <!--Type: Verse.SoundDef-->
+      <soundWorking>SoundDef_defName</soundWorking>
+      <!--Type: List<Verse.ThingDef>-->
+      <recipeUsers>
+        <!--Type: Verse.ThingDef-->
+        <li>ThingDef_defName</li>
+        <!-- ... -->
+      </recipeUsers>
+      <!--Type: Verse.ResearchProjectDef-->
+      <researchPrerequisite>ResearchProjectDef_defName</researchPrerequisite>
+    </recipeMaker>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <isUnfinishedThing>true_or_false</isUnfinishedThing>
+    <!--Type: Verse.ThingDef-->
+    <slagDef>ThingDef_defName</slagDef>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <intricate>true_or_false</intricate>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <scatterableOnMapGen>true_or_false</scatterableOnMapGen>
+    <!--Type: float-->
+    <deepCommonality>float_value</deepCommonality>
+    <!--Type: int-->
+    <!--Default Value: 150-->
+    <deepCountPerCell>int_value</deepCountPerCell>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <generateCommonality>float_value</generateCommonality>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <generateAllowChance>float_value</generateAllowChance>
+    <!--Type: Verse.GraphicData-->
+    <graphicData>
+      <!--Type: string-->
+      <texPath>string_value</texPath>
+      <!--Type: System.Type-->
+      <graphicClass>class_name</graphicClass>
+      <!--Type: UnityEngine.Color-->
+      <!--Default Value: Color.white-->
+      <color>value</color>
+      <!--Type: UnityEngine.Vector2-->
+      <!--Default Value: Vector2.one-->
+      <drawSize>value</drawSize>
+      <!--Type: float-->
+      <onGroundRandomRotateAngle>float_value</onGroundRandomRotateAngle>
+      <!--Type: Verse.ShadowData-->
+      <shadowData>
+        <!--Type: UnityEngine.Vector3-->
+        <!--Default Value: Vector3.one-->
+        <volume>value</volume>
+      </shadowData>
+    </graphicData>
+    <!--Type: Verse.DrawerType-->
+    <!--Available Values: None, RealtimeOnly, MapMeshOnly, MapMeshAndRealTime-->
+    <!--Default Value: RealtimeOnly-->
+    <drawerType>enum_value</drawerType>
+    <!--Type: Verse.ColorGenerator_Options-->
+    <colorGenerator Class="ColorGenerator_Options">
+      <!--Complex List-->
+      <!--Type: List<Verse.ColorOption>-->
+      <options>
+        <!--Type: Verse.ColorOption-->
+        <li>
+          <!--Type: float-->
+          <!--Default Value: 10.0-->
+          <weight>float_value</weight>
+          <!--Type: UnityEngine.Color-->
+          <!--Default Value: new Color(-1f, -1f, -1f, -1f)-->
+          <min>value</min>
+          <!--Type: UnityEngine.Color-->
+          <!--Default Value: new Color(-1f, -1f, -1f, -1f)-->
+          <max>value</max>
+          <!--Type: UnityEngine.Color-->
+          <!--Default Value: new Color(-1f, -1f, -1f, -1f)-->
+          <only>value</only>
+        </li>
+        <!-- ... -->
+      </options>
+    </colorGenerator>
+    <!--Type: Verse.ColorGenerator_StandardApparel-->
+    <colorGenerator Class="ColorGenerator_StandardApparel">value</colorGenerator>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <selectable>true_or_false</selectable>
+    <!--Type: List<System.Type>-->
+    <inspectorTabs>
+      <!--Type: System.Type-->
+      <li>class_name</li>
+      <!-- ... -->
+    </inspectorTabs>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <drawGUIOverlay>true_or_false</drawGUIOverlay>
+    <!--Type: Verse.ResourceCountPriority-->
+    <!--Available Values: Uncounted, Last, Middle, First-->
+    <resourceReadoutPriority>enum_value</resourceReadoutPriority>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <resourceReadoutAlwaysShow>true_or_false</resourceReadoutAlwaysShow>
+    <!--Type: RimWorld.ConceptDef-->
+    <storedConceptLearnOpportunity>ConceptDef_defName</storedConceptLearnOpportunity>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <alwaysHaulable>true_or_false</alwaysHaulable>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <designateHaulable>true_or_false</designateHaulable>
+    <!--Type: List<Verse.ThingCategoryDef>-->
+    <thingCategories>
+      <!--Type: Verse.ThingCategoryDef-->
+      <li>ThingCategoryDef_defName</li>
+      <!-- ... -->
+    </thingCategories>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <socialPropernessMatters>true_or_false</socialPropernessMatters>
+    <!--Type: Verse.SoundDef-->
+    <soundDrop>SoundDef_defName</soundDrop>
+    <!--Type: Verse.SoundDef-->
+    <soundInteract>SoundDef_defName</soundInteract>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <saveCompressible>true_or_false</saveCompressible>
+    <!--Type: float-->
+    <fillPercent>float_value</fillPercent>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <blockWind>true_or_false</blockWind>
+    <!--Type: Verse.Tradeability-->
+    <!--Available Values: Never, Sellable, Stockable-->
+    <!--Default Value: Stockable-->
+    <tradeability>enum_value</tradeability>
+    <!--Type: List<string>-->
+    <tradeTags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </tradeTags>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <tradeNeverStack>true_or_false</tradeNeverStack>
+    <!--Type: Verse.ColorGenerator_Options-->
+    <colorGeneratorInTraderStock Class="ColorGenerator_Options">
+      <!--Complex List-->
+      <!--Type: List<Verse.ColorOption>-->
+      <options>
+        <!--Type: Verse.ColorOption-->
+        <li>
+          <!--Type: float-->
+          <!--Default Value: 10.0-->
+          <weight>float_value</weight>
+          <!--Type: UnityEngine.Color-->
+          <!--Default Value: new Color(-1f, -1f, -1f, -1f)-->
+          <min>value</min>
+          <!--Type: UnityEngine.Color-->
+          <!--Default Value: new Color(-1f, -1f, -1f, -1f)-->
+          <max>value</max>
+          <!--Type: UnityEngine.Color-->
+          <!--Default Value: new Color(-1f, -1f, -1f, -1f)-->
+          <only>value</only>
+        </li>
+        <!-- ... -->
+      </options>
+    </colorGeneratorInTraderStock>
+    <!--Complex List-->
+    <!--Type: List<Verse.VerbProperties>-->
+    <verbs>
+      <!--Type: Verse.VerbProperties-->
+      <li>
+        <!--Type: System.Type-->
+        <verbClass>class_name</verbClass>
+        <!--Type: string-->
+        <label>string_value</label>
+        <!--Type: float-->
+        <minRange>float_value</minRange>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <range>float_value</range>
+        <!--Type: int-->
+        <!--Default Value: 1-->
+        <burstShotCount>int_value</burstShotCount>
+        <!--Type: int-->
+        <!--Default Value: 15-->
+        <ticksBetweenBurstShots>int_value</ticksBetweenBurstShots>
+        <!--Type: float-->
+        <!--Default Value: 3.0-->
+        <noiseRadius>float_value</noiseRadius>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <hasStandardCommand>true_or_false</hasStandardCommand>
+        <!--Type: RimWorld.TargetingParameters-->
+        <!--Default Value: new TargetingParameters()-->
+        <targetParams>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <canTargetLocations>true_or_false</canTargetLocations>
+        </targetParams>
+        <!--Type: bool-->
+        <!--Default Value: true-->
+        <forceNormalTimeSpeed>true_or_false</forceNormalTimeSpeed>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <onlyManualCast>true_or_false</onlyManualCast>
+        <!--Type: bool-->
+        <!--Default Value: true-->
+        <stopBurstWithoutLos>true_or_false</stopBurstWithoutLos>
+        <!--Type: float-->
+        <warmupTime>float_value</warmupTime>
+        <!--Type: Verse.SoundDef-->
+        <soundCast>SoundDef_defName</soundCast>
+        <!--Type: Verse.SoundDef-->
+        <soundCastTail>SoundDef_defName</soundCastTail>
+        <!--Type: float-->
+        <muzzleFlashScale>float_value</muzzleFlashScale>
+        <!--Type: Verse.DamageDef-->
+        <meleeDamageDef>DamageDef_defName</meleeDamageDef>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <ai_IsIncendiary>true_or_false</ai_IsIncendiary>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <ai_IsBuildingDestroyer>true_or_false</ai_IsBuildingDestroyer>
+        <!--Type: float-->
+        <ai_AvoidFriendlyFireRadius>float_value</ai_AvoidFriendlyFireRadius>
+        <!--Type: Verse.ThingDef-->
+        <projectileDef>ThingDef_defName</projectileDef>
+        <!--Type: float-->
+        <forcedMissRadius>float_value</forcedMissRadius>
+      </li>
+      <!-- ... -->
+    </verbs>
+    <!--Type: float-->
+    <equippedAngleOffset>float_value</equippedAngleOffset>
+    <!--Type: Verse.EquipmentType-->
+    <!--Available Values: None, Primary-->
+    <equipmentType>enum_value</equipmentType>
+    <!--Type: RimWorld.TechLevel-->
+    <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
+    <techLevel>enum_value</techLevel>
+    <!--Type: List<string>-->
+    <weaponTags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </weaponTags>
+    <!--Type: List<string>-->
+    <techHediffsTags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </techHediffsTags>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <canBeSpawningInventory>true_or_false</canBeSpawningInventory>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <destroyOnDrop>true_or_false</destroyOnDrop>
+    <!--Type: List<RimWorld.StatModifier>-->
+    <equippedStatOffsets>
+      <!--Type: RimWorld.StatModifier-->
+      <!--Tag Field: stat, Tag Type: RimWorld.StatDef-->
+      <!--Value Field: value, Value Type: float-->
+      <!--Pattern: <StatDef_defName>float_value</StatDef_defName>-->
+      <!-- ... -->
+    </equippedStatOffsets>
+    <!--Type: RimWorld.IngestibleProperties-->
+    <ingestible>
+      <!--Type: int-->
+      <!--Default Value: 20-->
+      <maxNumToIngestAtOnce>int_value</maxNumToIngestAtOnce>
+      <!--Complex List-->
+      <!--Type: List<RimWorld.IngestionOutcomeDoer>-->
+      <outcomeDoers>
+        <!--Type: RimWorld.IngestionOutcomeDoer_GiveHediff-->
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <doToGeneratedPawnIfAddicted>true_or_false</doToGeneratedPawnIfAddicted>
+          <!--Type: Verse.HediffDef-->
+          <hediffDef>HediffDef_defName</hediffDef>
+          <!--Type: float-->
+          <!--Default Value: -1.0-->
+          <severity>float_value</severity>
+          <!--Type: RimWorld.ChemicalDef-->
+          <toleranceChemical>ChemicalDef_defName</toleranceChemical>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <divideByBodySize>true_or_false</divideByBodySize>
+        </li>
+        <!--Type: RimWorld.IngestionOutcomeDoer_OffsetNeed-->
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <!--Type: RimWorld.NeedDef-->
+          <need>NeedDef_defName</need>
+          <!--Type: float-->
+          <offset>float_value</offset>
+          <!--Type: RimWorld.ChemicalDef-->
+          <toleranceChemical>ChemicalDef_defName</toleranceChemical>
+        </li>
+        <!-- ... -->
+      </outcomeDoers>
+      <!--Type: int-->
+      <!--Default Value: 500-->
+      <baseIngestTicks>int_value</baseIngestTicks>
+      <!--Type: float-->
+      <!--Default Value: 25.0-->
+      <chairSearchRadius>float_value</chairSearchRadius>
+      <!--Type: bool-->
+      <!--Default Value: true-->
+      <useEatingSpeedStat>true_or_false</useEatingSpeedStat>
+      <!--Type: RimWorld.ThoughtDef-->
+      <tasteThought>ThoughtDef_defName</tasteThought>
+      <!--Type: Verse.EffecterDef-->
+      <ingestEffect>EffecterDef_defName</ingestEffect>
+      <!--Type: Verse.EffecterDef-->
+      <ingestEffectEat>EffecterDef_defName</ingestEffectEat>
+      <!--Type: Verse.SoundDef-->
+      <ingestSound>SoundDef_defName</ingestSound>
+      <!--Type: string-->
+      <ingestCommandString>string_value</ingestCommandString>
+      <!--Type: string-->
+      <ingestReportString>string_value</ingestReportString>
+      <!--Type: RimWorld.HoldOffsetSet-->
+      <ingestHoldOffsetStanding>
+        <!--Type: RimWorld.HoldOffset-->
+        <northDefault>
+          <!--Type: UnityEngine.Vector3-->
+          <!--Default Value: new Vector3(-1000f, -1000f, -1000f)-->
+          <offset>value</offset>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <behind>true_or_false</behind>
+        </northDefault>
+        <!--Type: RimWorld.HoldOffset-->
+        <east>
+          <!--Type: UnityEngine.Vector3-->
+          <!--Default Value: new Vector3(-1000f, -1000f, -1000f)-->
+          <offset>value</offset>
+        </east>
+        <!--Type: RimWorld.HoldOffset-->
+        <south>
+          <!--Type: UnityEngine.Vector3-->
+          <!--Default Value: new Vector3(-1000f, -1000f, -1000f)-->
+          <offset>value</offset>
+        </south>
+        <!--Type: RimWorld.HoldOffset-->
+        <west>
+          <!--Type: UnityEngine.Vector3-->
+          <!--Default Value: new Vector3(-1000f, -1000f, -1000f)-->
+          <offset>value</offset>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <flip>true_or_false</flip>
+        </west>
+      </ingestHoldOffsetStanding>
+      <!--Type: bool-->
+      <!--Default Value: true-->
+      <ingestHoldUsesTable>true_or_false</ingestHoldUsesTable>
+      <!--Type: RimWorld.FoodTypeFlags-->
+      <!--Available Values: None, VegetableOrFruit, Meat, Fluid, Corpse, CarnivoreAnimalStrict, Seed, AnimalProduct, Plant, Tree, Meal, Processed, Liquor, Kibble, DendrovoreAnimal, CarnivoreAnimal, OvivoreAnimal, VegetarianAnimal, OmnivoreAnimal, OmnivoreHuman, VegetarianRoughAnimal, OmnivoreRoughAnimal-->
+      <foodType>enum_value</foodType>
+      <!--Type: float-->
+      <nutrition>float_value</nutrition>
+      <!--Type: float-->
+      <joy>float_value</joy>
+      <!--Type: RimWorld.JoyKindDef-->
+      <joyKind>JoyKindDef_defName</joyKind>
+      <!--Type: RimWorld.FoodPreferability-->
+      <!--Available Values: Undefined, NeverForNutrition, DesperateOnly, RawBad, RawTasty, MealAwful, MealSimple, MealFine, MealLavish-->
+      <preferability>enum_value</preferability>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <nurseable>true_or_false</nurseable>
+      <!--Type: float-->
+      <optimalityOffset>float_value</optimalityOffset>
+      <!--Type: RimWorld.DrugCategory-->
+      <!--Available Values: None, Any, Medical, Social, Hard-->
+      <drugCategory>enum_value</drugCategory>
+    </ingestible>
+    <!--Type: RimWorld.ApparelProperties-->
+    <apparel>
+      <!--Type: List<Verse.BodyPartGroupDef>-->
+      <bodyPartGroups>
+        <!--Type: Verse.BodyPartGroupDef-->
+        <li>BodyPartGroupDef_defName</li>
+        <!-- ... -->
+      </bodyPartGroups>
+      <!--Type: List<RimWorld.ApparelLayer>-->
+      <layers>
+        <!--Type: RimWorld.ApparelLayer-->
+        <!--Available Values: OnSkin, Middle, Shell, Belt, Overhead-->
+        <li>enum_value</li>
+        <!-- ... -->
+      </layers>
+      <!--Type: string-->
+      <!--Default Value: string.Empty-->
+      <wornGraphicPath>string_value</wornGraphicPath>
+      <!--Type: List<string>-->
+      <tags>
+        <!--Type: string-->
+        <li>string_value</li>
+        <!-- ... -->
+      </tags>
+      <!--Type: List<string>-->
+      <defaultOutfitTags>
+        <!--Type: string-->
+        <li>string_value</li>
+        <!-- ... -->
+      </defaultOutfitTags>
+      <!--Type: bool-->
+      <!--Default Value: true-->
+      <careIfWornByCorpse>true_or_false</careIfWornByCorpse>
+    </apparel>
+    <!--Type: Verse.StuffProperties-->
+    <stuffProps>
+      <!--Type: string-->
+      <stuffAdjective>string_value</stuffAdjective>
+      <!--Type: float-->
+      <!--Default Value: 1.0-->
+      <commonality>float_value</commonality>
+      <!--Type: List<RimWorld.StuffCategoryDef>-->
+      <categories>
+        <!--Type: RimWorld.StuffCategoryDef-->
+        <li>StuffCategoryDef_defName</li>
+        <!-- ... -->
+      </categories>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <smeltable>true_or_false</smeltable>
+      <!--Type: List<RimWorld.StatModifier>-->
+      <statOffsets>
+        <!--Type: RimWorld.StatModifier-->
+        <!--Tag Field: stat, Tag Type: RimWorld.StatDef-->
+        <!--Value Field: value, Value Type: float-->
+        <!--Pattern: <StatDef_defName>float_value</StatDef_defName>-->
+        <!-- ... -->
+      </statOffsets>
+      <!--Type: List<RimWorld.StatModifier>-->
+      <statFactors>
+        <!--Type: RimWorld.StatModifier-->
+        <!--Tag Field: stat, Tag Type: RimWorld.StatDef-->
+        <!--Value Field: value, Value Type: float-->
+        <!--Pattern: <StatDef_defName>float_value</StatDef_defName>-->
+        <!-- ... -->
+      </statFactors>
+      <!--Type: UnityEngine.Color-->
+      <!--Default Value: new Color(0.8f, 0.8f, 0.8f)-->
+      <color>value</color>
+      <!--Type: Verse.EffecterDef-->
+      <constructEffect>EffecterDef_defName</constructEffect>
+      <!--Type: Verse.StuffAppearanceDef-->
+      <!--Default Value: StuffAppearanceDefOf.Smooth-->
+      <appearance>StuffAppearanceDef_defName</appearance>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <allowColorGenerators>true_or_false</allowColorGenerators>
+      <!--Type: Verse.SoundDef-->
+      <soundImpactStuff>SoundDef_defName</soundImpactStuff>
+      <!--Type: Verse.SoundDef-->
+      <soundMeleeHitSharp>SoundDef_defName</soundMeleeHitSharp>
+      <!--Type: Verse.SoundDef-->
+      <soundMeleeHitBlunt>SoundDef_defName</soundMeleeHitBlunt>
+    </stuffProps>
+  </ThingDef>
+</Defs>

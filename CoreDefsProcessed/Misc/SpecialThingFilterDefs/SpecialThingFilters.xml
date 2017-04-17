@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpecialThingFilters>
+  <SpecialThingFilterDef>
+    <defName>AllowCorpsesColonist</defName>
+    <label>allow colonist corpses</label>
+    <description>Allow dead former colonists.</description>
+    <parentCategory>CorpsesHumanlike</parentCategory>
+    <saveKey>allowCorpsesColonist</saveKey>
+    <allowedByDefault>false</allowedByDefault>
+    <workerClass>SpecialThingFilterWorker_CorpsesColonist</workerClass>
+  </SpecialThingFilterDef>
+  <SpecialThingFilterDef>
+    <defName>AllowCorpsesStranger</defName>
+    <label>allow stranger corpses</label>
+    <description>Allow dead former strangers and enemies.</description>
+    <parentCategory>CorpsesHumanlike</parentCategory>
+    <saveKey>allowCorpsesStranger</saveKey>
+    <allowedByDefault>false</allowedByDefault>
+    <workerClass>SpecialThingFilterWorker_CorpsesStranger</workerClass>
+  </SpecialThingFilterDef>
+  <SpecialThingFilterDef>
+    <defName>AllowRotten</defName>
+    <label>allow rotten</label>
+    <description>Allow organic things which have started to rot.</description>
+    <parentCategory>Root</parentCategory>
+    <saveKey>allowRotten</saveKey>
+    <allowedByDefault>true</allowedByDefault>
+    <workerClass>SpecialThingFilterWorker_Rotten</workerClass>
+  </SpecialThingFilterDef>
+  <SpecialThingFilterDef>
+    <defName>AllowPlantFood</defName>
+    <label>allow plant food</label>
+    <description>Allow foods that are of quality equivalent to unharvested plants, like hay.</description>
+    <parentCategory>Root</parentCategory>
+    <saveKey>allowPlantFood</saveKey>
+    <allowedByDefault>true</allowedByDefault>
+    <configurable>false</configurable>
+    <workerClass>SpecialThingFilterWorker_PlantFood</workerClass>
+  </SpecialThingFilterDef>
+  <SpecialThingFilterDef>
+    <defName>AllowSmeltable</defName>
+    <label>allow smeltable</label>
+    <parentCategory>Weapons</parentCategory>
+    <saveKey>allowSmeltable</saveKey>
+    <allowedByDefault>true</allowedByDefault>
+    <workerClass>SpecialThingFilterWorker_Smeltable</workerClass>
+  </SpecialThingFilterDef>
+  <SpecialThingFilterDef>
+    <defName>AllowNonSmeltableWeapons</defName>
+    <label>allow non-smeltable</label>
+    <parentCategory>Weapons</parentCategory>
+    <saveKey>allowNonSmeltableWeapons</saveKey>
+    <allowedByDefault>true</allowedByDefault>
+    <workerClass>SpecialThingFilterWorker_NonSmeltableWeapons</workerClass>
+  </SpecialThingFilterDef>
+  <SpecialThingFilterDef>
+    <defName>AllowNonDeadmansApparel</defName>
+    <label>allow non-deadman's apparel</label>
+    <parentCategory>Apparel</parentCategory>
+    <saveKey>allowNonDeadmansApparel</saveKey>
+    <allowedByDefault>true</allowedByDefault>
+    <workerClass>SpecialThingFilterWorker_NonDeadmansApparel</workerClass>
+  </SpecialThingFilterDef>
+</SpecialThingFilters>

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThoughtDefs>
+  <!-- affecting opinion -->
+  <ThoughtDef>
+    <defName>Affair</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Affair</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>affair</label>
+        <baseOpinionOffset>-70</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Incestuous</defName>
+    <thoughtClass>Thought_Incestuous</thoughtClass>
+    <workerClass>ThoughtWorker_Incestuous</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>incestuous</label>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Disfigured</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Disfigured</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>disfigured</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>HardWorkerVsLazy</defName>
+    <thoughtClass>Thought_HardWorkerVsLazy</thoughtClass>
+    <workerClass>ThoughtWorker_HardWorkerVsLazy</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>hard worker vs lazy</label>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>TeetotalerVsChemicalInterest</defName>
+    <thoughtClass>Thought_TeetotalerVsChemicalInterest</thoughtClass>
+    <workerClass>ThoughtWorker_TeetotalerVsChemicalInterest</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>teetotaler vs chemical interest</label>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>TeetotalerVsAddict</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_TeetotalerVsAddict</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>teetotaler vs addict</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ChemicalInterestVsTeetotaler</defName>
+    <thoughtClass>Thought_ChemicalInterestVsTeetotaler</thoughtClass>
+    <workerClass>ThoughtWorker_ChemicalInterestVsTeetotaler</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>chemical interest vs teetotaler</label>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Drunk</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Drunk</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>drunk</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Pretty</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Pretty</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>pretty</label>
+        <baseOpinionOffset>20</baseOpinionOffset>
+      </li>
+      <li ListIndex="1">
+        <label>beautiful</label>
+        <baseOpinionOffset>40</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Ugly</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Ugly</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>ugly</label>
+        <baseOpinionOffset>-20</baseOpinionOffset>
+      </li>
+      <li ListIndex="1">
+        <label>staggeringly ugly</label>
+        <baseOpinionOffset>-40</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AnnoyingVoice</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_AnnoyingVoice</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>annoying voice</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CreepyBreathing</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_CreepyBreathing</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>creepy breathing</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Man</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Man</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>man</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Woman</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Woman</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>woman</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ButcheredHumanlikeCorpseOpinion</defName>
+    <thoughtClass>Thought_Tale</thoughtClass>
+    <workerClass>ThoughtWorker_Tale</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>butchered humanlike corpse</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li ListIndex="0">Cannibal</li>
+      <li ListIndex="1">Bloodlust</li>
+      <li ListIndex="2">Psychopath</li>
+    </nullifyingTraits>
+    <nullifyingOwnTales>
+      <li ListIndex="0">ButcheredHumanlikeCorpse</li>
+      <li ListIndex="1">AteRawHumanlikeMeat</li>
+    </nullifyingOwnTales>
+    <taleDef>ButcheredHumanlikeCorpse</taleDef>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteRawHumanlikeMeat</defName>
+    <thoughtClass>Thought_Tale</thoughtClass>
+    <workerClass>ThoughtWorker_Tale</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>ate raw humanlike meat</label>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li ListIndex="0">Cannibal</li>
+    </nullifyingTraits>
+    <nullifyingOwnTales>
+      <li ListIndex="0">ButcheredHumanlikeCorpse</li>
+      <li ListIndex="1">AteRawHumanlikeMeat</li>
+    </nullifyingOwnTales>
+    <taleDef>AteRawHumanlikeMeat</taleDef>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>SoldPrisoner</defName>
+    <thoughtClass>Thought_Tale</thoughtClass>
+    <workerClass>ThoughtWorker_Tale</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>sold prisoner to slavery</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <taleDef>SoldPrisoner</taleDef>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ExecutedPrisoner</defName>
+    <thoughtClass>Thought_Tale</thoughtClass>
+    <workerClass>ThoughtWorker_Tale</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>executed prisoner</label>
+        <baseOpinionOffset>-8</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <taleDef>ExecutedPrisoner</taleDef>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledColonist</defName>
+    <thoughtClass>Thought_Tale</thoughtClass>
+    <workerClass>ThoughtWorker_Tale</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed colonist</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <taleDef>KilledColonist</taleDef>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledColonyAnimal</defName>
+    <thoughtClass>Thought_Tale</thoughtClass>
+    <workerClass>ThoughtWorker_Tale</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed colony animal</label>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <taleDef>KilledColonyAnimal</taleDef>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMajorColonyEnemy</defName>
+    <thoughtClass>Thought_Tale</thoughtClass>
+    <workerClass>ThoughtWorker_Tale</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed major enemy</label>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <taleDef>KilledMajorColonyEnemy</taleDef>
+  </ThoughtDef>
+  <!-- affecting mood -->
+  <ThoughtDef>
+    <defName>OpinionOfMyLover</defName>
+    <thoughtClass>Thought_OpinionOfMyLover</thoughtClass>
+    <workerClass>ThoughtWorker_OpinionOfMyLover</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>opinion of my {0} {1}</label>
+        <description>Being with my lover makes me feel this way.</description>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>BondedAnimalMaster</defName>
+    <workerClass>ThoughtWorker_BondedAnimalMaster</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>{0}'s master</label>
+        <description>Being together with my bonded animal makes me feel better.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>NotBondedAnimalMaster</defName>
+    <workerClass>ThoughtWorker_NotBondedAnimalMaster</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>not {0}'s master</label>
+        <description>I should be together with my bonded animal.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>WantToSleepWithSpouseOrLover</defName>
+    <thoughtClass>Thought_WantToSleepWithSpouseOrLover</thoughtClass>
+    <workerClass>ThoughtWorker_WantToSleepWithSpouseOrLover</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>want to sleep with {0}</label>
+        <description>I don't like sleeping apart from my partner.</description>
+      </li>
+    </stages>
+  </ThoughtDef>
+</ThoughtDefs>

@@ -1,0 +1,1445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Buildings>
+  <ThingDef Name="FurnitureBase" ParentName="BuildingBase" Abstract="True">
+    <designationCategory>Furniture</designationCategory>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <tradeTags>
+      <li>Furniture</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef Name="ArtableFurnitureBase" ParentName="FurnitureBase" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_Furniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+  <!--============================== Beds ==============================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>SleepingSpot</defName>
+    <label>sleeping spot</label>
+    <description>Designates a spot on the ground where people should sleep. Not comfortable.</description>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+      <Comfort>0.4</Comfort>
+    </statBases>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <thingClass>Building_Bed</thingClass>
+    <category>Building</category>
+    <size>(1,2)</size>
+    <useHitPoints>False</useHitPoints>
+    <comps>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="0">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/SleepSpot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <bed_showSleeperBody>True</bed_showSleeperBody>
+      <sowTag>SupportPlantsOnly</sowTag>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>Bed</defName>
+    <label>bed</label>
+    <description>A cozy mattress and sheets on a frame for resting.</description>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+      <WorkToBuild>870</WorkToBuild>
+      <Mass>50</Mass>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.75</Comfort>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <costStuffCount>35</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <thingClass>Building_Bed</thingClass>
+    <category>Building</category>
+    <size>(1,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
+        <linkableFacilities>
+          <li ListIndex="0">VitalsMonitor</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="2">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/Bed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,4)</drawSize>
+      <damageData>
+        <rect>(0,0.05,1,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>True</castEdgeShadows>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <bed_healPerDay>3</bed_healPerDay>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ArtableFurnitureBase">
+    <defName>DoubleBed</defName>
+    <label>double bed</label>
+    <description>A simple double-wide bed that fits two people.</description>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>1740</WorkToBuild>
+      <Mass>85</Mass>
+      <Comfort>0.75</Comfort>
+      <Beauty>2</Beauty>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <thingClass>Building_Bed</thingClass>
+    <category>Building</category>
+    <size>(2,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="1">
+        <nameMaker>ArtName_Furniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="2">
+        <linkableFacilities>
+          <li ListIndex="0">VitalsMonitor</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="3">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/DoubleBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <rect>(0,0.05,2,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>True</castEdgeShadows>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <bed_healPerDay>3</bed_healPerDay>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ArtableFurnitureBase">
+    <defName>RoyalBed</defName>
+    <label>royal bed</label>
+    <description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful. Fits two.</description>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>4500</WorkToBuild>
+      <Mass>90</Mass>
+      <Beauty>25</Beauty>
+      <BedRestEffectiveness>1.05</BedRestEffectiveness>
+      <Comfort>0.90</Comfort>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <costList>
+      <Gold>50</Gold>
+    </costList>
+    <costStuffCount>110</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <thingClass>Building_Bed</thingClass>
+    <category>Building</category>
+    <size>(2,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="1">
+        <nameMaker>ArtName_Furniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="2">
+        <linkableFacilities>
+          <li ListIndex="0">VitalsMonitor</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="3">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/RoyalBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <rect>(0,0.05,2,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>True</castEdgeShadows>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <bed_healPerDay>3</bed_healPerDay>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>HospitalBed</defName>
+    <label>hospital bed</label>
+    <description>A bed specially designed for injured people. Improves chance of successful medical work.</description>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>2850</WorkToBuild>
+      <Mass>45</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.80</Comfort>
+      <ImmunityGainSpeedFactor>1.144</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <costList>
+      <Steel>80</Steel>
+      <Medicine>10</Medicine>
+    </costList>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">HospitalBed</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <thingClass>Building_Bed</thingClass>
+    <category>Building</category>
+    <size>(1,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
+        <linkableFacilities>
+          <li ListIndex="0">VitalsMonitor</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="2">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/HospitalBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>True</castEdgeShadows>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <bed_healPerDay>9</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+    </building>
+  </ThingDef>
+  <!--=========================== Animal beds ===============================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AnimalSleepingSpot</defName>
+    <label>animal sleeping spot</label>
+    <description>Designates a spot on the ground where animals should sleep.</description>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building_Bed</thingClass>
+    <category>Building</category>
+    <size>(1,1)</size>
+    <useHitPoints>False</useHitPoints>
+    <comps>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="0">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Misc/AnimalBed/AnimalSleepSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <bed_showSleeperBody>True</bed_showSleeperBody>
+      <bed_humanlike>false</bed_humanlike>
+      <sowTag>SupportPlantsOnly</sowTag>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>AnimalSleepingBox</defName>
+    <label>animal sleeping box</label>
+    <description>A small box for animals to sleep in. Fits smaller animals like chickens, cats, or small dogs.</description>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>120</WorkToBuild>
+      <Mass>3</Mass>
+      <BedRestEffectiveness>0.93</BedRestEffectiveness>
+      <Comfort>0.60</Comfort>
+      <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <costStuffCount>35</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building_Bed</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="1">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/AnimalBed/AnimalSleepBox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.05,0.05,0.9,0.9)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.25</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <bed_healPerDay>3</bed_healPerDay>
+      <bed_showSleeperBody>true</bed_showSleeperBody>
+      <bed_humanlike>false</bed_humanlike>
+      <bed_maxBodySize>0.55</bed_maxBodySize>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>AnimalBed</defName>
+    <label>animal bed</label>
+    <description>A soft bed for animals to sleep on. Fits any animal.</description>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.75</Comfort>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <costStuffCount>45</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building_Bed</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="1">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/AnimalBed/AnimalBed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.25</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <bed_healPerDay>3</bed_healPerDay>
+      <bed_showSleeperBody>true</bed_showSleeperBody>
+      <bed_humanlike>false</bed_humanlike>
+    </building>
+  </ThingDef>
+  <!--======================= Basic domestic furniture ==============================-->
+  <ThingDef ParentName="FurnitureBase">
+    <defName>Stool</defName>
+    <label>stool</label>
+    <description>A simple platform on which to sit.</description>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+      <Mass>3</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+      <Comfort>0.5</Comfort>
+    </statBases>
+    <pathCost>30</pathCost>
+    <costStuffCount>15</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Stool</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+      <damageData>
+        <rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+        <rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+        <rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+        <rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.30</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ArtableFurnitureBase">
+    <defName>DiningChair</defName>
+    <label>dining chair</label>
+    <description>A comfortable and attractive chair for sitting at a table.</description>
+    <statBases>
+      <MaxHitPoints>170</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+      <Comfort>0.70</Comfort>
+    </statBases>
+    <pathCost>30</pathCost>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc7</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="1">
+        <nameMaker>ArtName_Furniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Furniture/DiningChair</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+      <damageData>
+        <rectN>(0.25,0.234375,0.5,0.28125)</rectN>
+        <rectE>(0.28125,0.25,0.453125,0.25)</rectE>
+        <rectS>(0.25,0.234375,0.5,0.28125)</rectS>
+        <rectW>(0.28125,0.25,0.453125,0.25)</rectW>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.35</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>Armchair</defName>
+    <label>armchair</label>
+    <description>A large, soft, comfy seat. Great for relaxation.</description>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <WorkToBuild>7500</WorkToBuild>
+      <Mass>18</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+      <Comfort>0.8</Comfort>
+    </statBases>
+    <pathCost>30</pathCost>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc8</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Armchair</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.6, 0.6)</volume>
+      </shadowData>
+      <damageData>
+        <rectN>(0,0,1,0.703125)</rectN>
+        <rectE>(0,0,0.84375,0.625)</rectE>
+        <rectS>(0.09375,0,0.84375,1)</rectS>
+        <rectW>(0.15625,0,0.84375,0.625)</rectW>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.40</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+  </ThingDef>
+  <!-- Table base -->
+  <ThingDef Abstract="True" ParentName="FurnitureBase" Name="TableBase">
+    <description>People eat off tables when chairs are placed facing them.</description>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building</thingClass>
+    <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+      <li Class="CompProperties_RoomIdentifier">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.4</fillPercent>
+    <surfaceType>Eat</surfaceType>
+  </ThingDef>
+  <ThingDef ParentName="TableBase">
+    <defName>TableShort</defName>
+    <label>table (short)</label>
+    <description>People eat off tables when chairs are placed facing them.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li ListIndex="1">
+        <compClass>CompGatherSpot</compClass>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="2">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Furniture/TableShort</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <rect>(0.05,0.27,1.9,1.73)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <surfaceType>Eat</surfaceType>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef ParentName="TableBase">
+    <defName>TableLong</defName>
+    <label>table (long)</label>
+    <description>People eat off tables when chairs are placed facing them.</description>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <costStuffCount>95</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(2,4)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li ListIndex="1">
+        <compClass>CompGatherSpot</compClass>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="2">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Furniture/TableLong</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,6)</drawSize>
+      <damageData>
+        <rectN>(0,0.27,2,3.73)</rectN>
+        <rectE>(0.125,0.27,3.75,1.73)</rectE>
+        <rectS>(0,0.27,2,3.73)</rectS>
+        <rectW>(0.125,0.27,3.75,1.73)</rectW>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <surfaceType>Eat</surfaceType>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>PlantPot</defName>
+    <label>plant pot</label>
+    <description>Plant decorative flowers here to improve the mood of people nearby.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>495</WorkToBuild>
+      <Mass>2</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <fertility>1.0</fertility>
+    <costStuffCount>15</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc9</designationHotKey>
+    <thingClass>Building_PlantGrower</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Forbiddable" ListIndex="1" />
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Furniture/PlantPot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.20</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <sowTag>Decorative</sowTag>
+      <defaultPlantToGrow>PlantDaylily</defaultPlantToGrow>
+    </building>
+  </ThingDef>
+  <!-- ======================== Lighting ======================= -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>TorchLamp</defName>
+    <label>torch lamp</label>
+    <description>A wooden torch for lighting an area. Can be automatically refueled with wood. Produces a small amount of heat.</description>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_Heater</li>
+    </placeWorkers>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc10</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Refuelable" ListIndex="0">
+        <fuelConsumptionRate>2.2</fuelConsumptionRate>
+        <fuelCapacity>20.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li ListIndex="0">WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <destroyOnNoFuel>true</destroyOnNoFuel>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="1">
+        <glowRadius>10</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher" ListIndex="2">
+        <heatPerSecond>3.5</heatPerSecond>
+        <heatPushMaxTemperature>23</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_FireOverlay" ListIndex="3">
+        <fireSize>0.4</fireSize>
+        <offset>(0,0,0.2)</offset>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Misc/TorchLamp</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <fillPercent>0.15</fillPercent>
+  </ThingDef>
+  <ThingDef Abstract="True" Name="LampBase" ParentName="BuildingBase">
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>170</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.20</fillPercent>
+  </ThingDef>
+  <ThingDef Abstract="True" Name="StandingLampBase" ParentName="LampBase">
+    <statBases>
+      <Mass>4</Mass>
+    </statBases>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+    </graphicData>
+  </ThingDef>
+  <ThingDef ParentName="StandingLampBase">
+    <defName>StandingLamp</defName>
+    <label>standing lamp</label>
+    <description>Standing lamp that lights an area.</description>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>170</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc11</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Flickable" ListIndex="0" />
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="2">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.20</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="StandingLampBase">
+    <defName>StandingLamp_Red</defName>
+    <label>standing lamp (red)</label>
+    <description>Standing lamp that lights an area in red.</description>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>170</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+      <li ListIndex="1">ColoredLights</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Flickable" ListIndex="0" />
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="2">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,0,0,0)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.20</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="StandingLampBase">
+    <defName>StandingLamp_Green</defName>
+    <label>standing lamp (green)</label>
+    <description>Standing lamp that lights an area in green.</description>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>170</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+      <li ListIndex="1">ColoredLights</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Flickable" ListIndex="0" />
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="2">
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,217,0,0)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.20</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="StandingLampBase">
+    <defName>StandingLamp_Blue</defName>
+    <label>standing lamp (blue)</label>
+    <description>Standing lamp that lights an area in blue.</description>
+    <statBases>
+      <Mass>4</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>170</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+      <li ListIndex="1">ColoredLights</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Flickable" ListIndex="0" />
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="2">
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,0,217,0)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.20</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="LampBase">
+    <defName>SunLamp</defName>
+    <label>sun lamp</label>
+    <description>Lights an area brightly enough to grow crops, but consumes a huge amount of power. Automatically turns itself off at night.</description>
+    <statBases>
+      <WorkToBuild>330</WorkToBuild>
+      <Mass>4.5</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <!-- Determined by trial and error
+    This value isn't perfect because these radii use different algorithms
+    but it matches in this case-->
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+    <designationCategory>Furniture</designationCategory>
+    <thingClass>Building_SunLamp</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Flickable" ListIndex="0" />
+      <li Class="CompProperties_Glower" ListIndex="1">
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="2">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2900</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Schedule" ListIndex="3">
+        <!-- Match plant growing times -->
+        <startTime>0.25</startTime>
+        <endTime>0.8</endTime>
+        <offMessage>Off for plant resting period</offMessage>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Production/LampSun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.20</fillPercent>
+    <blockWind>true</blockWind>
+  </ThingDef>
+  <!--============================== Storage ==============================-->
+  <ThingDef ParentName="FurnitureBase">
+    <defName>Shelf</defName>
+    <label>shelf</label>
+    <description>Items stored in this will not deteriorate, even if outside.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <WorkToBuild>1050</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc12</designationHotKey>
+    <thingClass>Building_Storage</thingClass>
+    <category>Building</category>
+    <size>(2,1)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Shelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,2)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Storage</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <preventDeterioration>true</preventDeterioration>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li ListIndex="0">Weapons</li>
+          </categories>
+        </filter>
+        <priorityInt>Important</priorityInt>
+      </defaultStorageSettings>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+    </building>
+  </ThingDef>
+</Buildings>

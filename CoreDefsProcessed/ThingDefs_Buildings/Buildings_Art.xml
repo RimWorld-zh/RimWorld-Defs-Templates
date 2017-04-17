@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="SculptureBase" Abstract="True">
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>1.15</SellPriceFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building_Art</thingClass>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_Sculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
+      <workSkill>Artistic</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li>TableSculpting</li>
+      </recipeUsers>
+    </recipeMaker>
+    <castEdgeShadows>true</castEdgeShadows>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+  <!--================================ Sculptures ======================================-->
+  <ThingDef ParentName="SculptureBase">
+    <defName>SculptureSmall</defName>
+    <label>small sculpture</label>
+    <description>A torso-sized piece of material sculpted into an artistic form.</description>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Mass>5</Mass>
+      <Beauty>50</Beauty>
+      <WorkToMake>18000</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>1.15</SellPriceFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building_Art</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="1">
+        <nameMaker>ArtName_Sculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
+      <workSkill>Artistic</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableSculpting</li>
+      </recipeUsers>
+    </recipeMaker>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Art/SculptureSmall</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.35</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="SculptureBase">
+    <defName>SculptureLarge</defName>
+    <label>large sculpture</label>
+    <description>A person-sized piece of material sculpted into an artistic form.</description>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>10</Mass>
+      <Beauty>100</Beauty>
+      <WorkToMake>30000</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>1.15</SellPriceFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costStuffCount>135</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building_Art</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="1">
+        <nameMaker>ArtName_Sculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
+      <workSkill>Artistic</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableSculpting</li>
+      </recipeUsers>
+    </recipeMaker>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Art/SculptureLarge</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="SculptureBase">
+    <defName>SculptureGrand</defName>
+    <label>grand sculpture</label>
+    <description>A car-sized piece of material sculpted into an artistic form.</description>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>240</Beauty>
+      <Mass>50</Mass>
+      <WorkToMake>65000</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>1.15</SellPriceFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costStuffCount>260</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building_Art</thingClass>
+    <category>Building</category>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="1">
+        <nameMaker>ArtName_Sculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
+      <workSkill>Artistic</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableSculpting</li>
+      </recipeUsers>
+    </recipeMaker>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Art/SculptureGrand</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+  </ThingDef>
+  <!--================================ Snowman ======================================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Snowman</defName>
+    <label>snowman</label>
+    <description>A set of large snowballs piled and shaped to resemble a person.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Beauty>4</Beauty>
+      <WorkToBuild>1000</WorkToBuild>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>25</pathCost>
+    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompMelter</compClass>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <forceDebugSpawnable>true</forceDebugSpawnable>
+    <graphicData>
+      <texPath>Things/Building/Art/Snowman</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawDamagedOverlay>false</drawDamagedOverlay>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.35</fillPercent>
+    <building>
+      <isInert>true</isInert>
+      <expandHomeArea>false</expandHomeArea>
+      <repairable>false</repairable>
+    </building>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,1819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>CraftingSpot</defName>
+    <label>crafting spot</label>
+    <description>A place for crafting simple things like shivs or bows.</description>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(1,1)</size>
+    <useHitPoints>False</useHitPoints>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="0">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Production/CraftingSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <sowTag>SupportPlantsOnly</sowTag>
+    </building>
+  </ThingDef>
+  <!-- ========================= Work tables ==========================-->
+  <ThingDef Name="BenchBase" ParentName="BuildingBase" Abstract="True">
+    <placeWorkers>
+      <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+    </placeWorkers>
+    <comps>
+      <li>
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+    </comps>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <building>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>TableSculpting</defName>
+    <label>sculptor's table</label>
+    <description>A workbench equipped for artistic sculpting.</description>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableSculpting</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>TableButcher</defName>
+    <label>butcher table</label>
+    <description>A heavy table for butchering dead creatures into pieces of raw meat.</description>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-15</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableButcher</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">ButcherCorpseFlesh</li>
+      <li ListIndex="1">MakeKibble</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>HandTailoringBench</defName>
+    <label>hand tailor bench</label>
+    <description>A workbench for tailoring clothes by hand. Works at 50% of the speed of an electric tailoring bench.</description>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">ComplexClothing</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableTailorHand</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>ElectricTailoringBench</defName>
+    <label>electric tailor bench</label>
+    <description>A workbench with a sewing machine for rapid tailoring of clothes. Can work without electricity at 40% of normal speed.</description>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>50</Steel>
+      <Component>3</Component>
+    </costList>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">ComplexClothing</li>
+      <li ListIndex="1">Electricity</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>120</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="3">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="4" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableTailorElectric</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <unpoweredWorkTableWorkSpeedFactor>0.5</unpoweredWorkTableWorkSpeedFactor>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>FueledSmithy</defName>
+    <label>fueled smithy</label>
+    <description>A wood-fueled station equipped for smithing non-mechanical weapons and tools.</description>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>100</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Smithing</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Refuelable" ListIndex="1">
+        <fuelConsumptionRate>80.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li ListIndex="0">WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="2">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableSmithingFueled</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>ElectricSmithy</defName>
+    <label>electric smithy</label>
+    <description>An electric-powered station equipped for smithing non-mechanical weapons and tools.</description>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>4</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Smithing</li>
+      <li ListIndex="1">ElectricSmelting</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>210</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="3">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableSmithingElectric</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>TableMachining</defName>
+    <label>machining table</label>
+    <description>A work station for assembling and disassembling machinery such as guns or mechanoid corpses.</description>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>150</Steel>
+      <Component>5</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Machining</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc7</designationHotKey>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>350</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_Glower" ListIndex="3">
+        <glowRadius>5</glowRadius>
+        <glowColor>(73,123,138,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="4">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="5" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableMachining</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">ButcherCorpseMechanoid</li>
+      <li ListIndex="1">MakeMortarShell</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>ElectricStove</defName>
+    <label>electric stove</label>
+    <description>An electrically-powered stove with an attached countertop for preparing meals.</description>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>80</Steel>
+      <Component>2</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc8</designationHotKey>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>350</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_Breakdownable" ListIndex="3" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableStoveElectric</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">CookMealSimple</li>
+      <li ListIndex="1">CookMealFine</li>
+      <li ListIndex="2">CookMealLavish</li>
+      <li ListIndex="3">CookMealSurvival</li>
+      <li ListIndex="4">MakePemmican</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+      <isMealSource>true</isMealSource>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>FueledStove</defName>
+    <label>fueled stove</label>
+    <description>A simple wood-fueled stove with an attached countertop for preparing meals.</description>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>80</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Refuelable" ListIndex="1">
+        <fuelConsumptionRate>160.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li ListIndex="0">WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableStoveFueled</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">CookMealSimple</li>
+      <li ListIndex="1">CookMealFine</li>
+      <li ListIndex="2">CookMealLavish</li>
+      <li ListIndex="3">CookMealSurvival</li>
+      <li ListIndex="4">MakePemmican</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+      <isMealSource>true</isMealSource>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>TableStonecutter</defName>
+    <label>stonecutter's table</label>
+    <description>A work table equipped to cut rough stone into usable blocks.</description>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>30</Steel>
+    </costList>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Stonecutting</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc9</designationHotKey>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableStonecutter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>Brewery</defName>
+    <label>brewery</label>
+    <description>A work station with all the equipment needed to brew beer.</description>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <WoodLog>120</WoodLog>
+      <Steel>30</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Brewing</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableBrewery</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">MakeWort</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>DrugLab</defName>
+    <label>drug lab</label>
+    <description>A work bench equipped with various containers, heaters, and measurement equipment for producing a variety of drugs.</description>
+    <statBases>
+      <WorkToBuild>3500</WorkToBuild>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>75</Steel>
+      <Component>8</Component>
+    </costList>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">DrugProduction</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/TableDrugLab</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>ElectricSmelter</defName>
+    <label>electric smelter</label>
+    <description>Extracts usable metal from slag chunks and other mixed metal items. Consumes a lot of power.</description>
+    <statBases>
+      <WorkToBuild>3500</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>170</Steel>
+      <Component>2</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">ElectricSmelting</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc10</designationHotKey>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>700</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_Glower" ListIndex="3">
+        <glowRadius>6</glowRadius>
+        <glowColor>(217,112,33,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher" ListIndex="4">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>12</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="5" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/ElectricSmelter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">ExtractMetalFromSlag</li>
+      <li ListIndex="1">SmeltWeapon</li>
+      <li ListIndex="2">DestroyWeapon</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>Refinery</defName>
+    <label>refinery</label>
+    <description>A chemical refining plant. Used to refine wood into chemfuel.</description>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>150</Steel>
+      <Component>3</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Refining</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(3,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>170</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_Breakdownable" ListIndex="3" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/Refinery</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,2)</drawSize>
+      <shadowData>
+        <volume>(2.7,1,1.8)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0.1,2.4,1.8)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">MakeChemfuelFromWood</li>
+      <li ListIndex="1">MakeChemfuelFromOrganics</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>ComponentAssemblyBench</defName>
+    <label>component assembly bench</label>
+    <description>A workbench equipped with advanced tools for producing components from simpler materials.</description>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>400</Steel>
+      <Component>20</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">ComponentAssembly</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc12</designationHotKey>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <size>(5,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
+        <linkableFacilities>
+          <li ListIndex="0">ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="2">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="3" />
+      <li Class="CompProperties_Breakdownable" ListIndex="4" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/ComponentAssemblyBench</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(7,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">MakeComponent</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <!-- ========== Non-standard work buildings ==============-->
+  <ThingDef ParentName="BenchBase">
+    <defName>SimpleResearchBench</defName>
+    <label>simple research bench</label>
+    <description>A simple bench with writing implements and low-tech scientific tools. Researchers work here to discover new things.</description>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2800</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <ResearchSpeedFactor>0.6</ResearchSpeedFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_ResearchBench</thingClass>
+    <category>Building</category>
+    <size>(3,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/ResearchBenchSimple</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(5,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>HiTechResearchBench</defName>
+    <label>hi-tech research bench</label>
+    <description>A high-tech bench with computers and electronic measurement equipment. Research is sped up by the high-tech tools. Requires power.</description>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <ResearchSpeedFactor>1.0</ResearchSpeedFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>10</Component>
+    </costList>
+    <costStuffCount>150</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">MicroelectronicsBasics</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li ListIndex="1">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <thingClass>Building_ResearchBench</thingClass>
+    <category>Building</category>
+    <size>(5,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_AffectedByFacilities" ListIndex="3">
+        <linkableFacilities>
+          <li ListIndex="0">MultiAnalyzer</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/ResearchBenchHiTech</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(7,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+      <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ElectricCrematorium</defName>
+    <label>electric crematorium</label>
+    <description>Cremates corpses. Electrically-powered.</description>
+    <statBases>
+      <WorkToBuild>4500</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Cleanliness>-20</Cleanliness>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>20</Steel>
+      <Component>2</Component>
+    </costList>
+    <costStuffCount>150</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">ElectricCremation</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <category>Building</category>
+    <size>(3,2)</size>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Glower" ListIndex="2">
+        <glowRadius>6</glowRadius>
+        <glowColor>(217,112,33,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher" ListIndex="3">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>15</heatPerSecond>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/Crematorium</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,2)</drawSize>
+      <shadowData>
+        <volume>(2.7,1,1.8)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0.1,2.4,1.8)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li ListIndex="0">CremateCorpse</li>
+      <li ListIndex="1">BurnApparel</li>
+      <li ListIndex="2">BurnDrugs</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>HydroponicsBasin</defName>
+    <label>hydroponics basin</label>
+    <description>Grows plants quickly in an artificial nutrient bath. Requires power to work; plants will die if power is cut.</description>
+    <statBases>
+      <WorkToBuild>2800</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <fertility>2.3</fertility>
+    <costList>
+      <Steel>100</Steel>
+      <Component>1</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Hydroponics</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_PlantGrower</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <size>(1,4)</size>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>70</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_Breakdownable" ListIndex="3" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/HydroponicsBasin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.30</fillPercent>
+    <building>
+      <sowTag>Hydroponic</sowTag>
+      <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>FermentingBarrel</defName>
+    <label>fermenting barrel</label>
+    <description>A barrel for fermenting raw wort into beer.</description>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Brewing</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_FermentingBarrel</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="0">
+        <minSafeTemperature>-1</minSafeTemperature>
+        <maxSafeTemperature>32</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.45</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>DeepDrill</defName>
+    <label>deep drill</label>
+    <description>A deep-crust drilling rig for extracting minerals from deep under the surface. Use a ground-penetrating scanner to detect the resources.</description>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-25</Beauty>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>3</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">DeepDrilling</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <specialDisplayRadius>1.5</specialDisplayRadius>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowDeepResources</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc12</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(1,1)</size>
+    <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Power" ListIndex="2">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li ListIndex="3">
+        <compClass>CompDeepDrill</compClass>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Production/DeepDrill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+  </ThingDef>
+  <!--======================== Nutrient dispenser ==============================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>NutrientPasteDispenser</defName>
+    <label>nutrient paste dispenser</label>
+    <description>Synthesizes nutrient paste from organic feedstocks. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay.</description>
+    <statBases>
+      <WorkToBuild>2200</WorkToBuild>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>90</Steel>
+      <Component>3</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">NutrientPaste</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <thingClass>Building_NutrientPasteDispenser</thingClass>
+    <category>Building</category>
+    <size>(3,4)</size>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Breakdownable" ListIndex="2" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,3)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/NutrientDispenser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,4)</drawSize>
+      <damageData>
+        <rect>(0.02,0.25,2.96,2.85)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1</fillPercent>
+    <blockWind>true</blockWind>
+    <building>
+      <wantsHopperAdjacent>true</wantsHopperAdjacent>
+      <isMealSource>true</isMealSource>
+      <nutritionCostPerDispense>0.3</nutritionCostPerDispense>
+      <soundDispense>DispensePaste</soundDispense>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Hopper</defName>
+    <label>hopper</label>
+    <description>Holds resources for use by machines like nutrient paste dispensers.</description>
+    <statBases>
+      <WorkToBuild>450</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_NextToHopperAccepter</li>
+    </placeWorkers>
+    <designationCategory>Production</designationCategory>
+    <thingClass>Building_Storage</thingClass>
+    <category>Building</category>
+    <tickerType>Never</tickerType>
+    <rotatable>true</rotatable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Production/Hopper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Storage</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <disallowedSpecialFilters>
+            <li ListIndex="0">AllowPlantFood</li>
+          </disallowedSpecialFilters>
+          <categories>
+            <li ListIndex="0">FoodRaw</li>
+          </categories>
+        </filter>
+        <priorityInt>Important</priorityInt>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li ListIndex="0">FoodRaw</li>
+          </categories>
+          <exceptedThingDefs>
+            <li ListIndex="0">Human_Meat</li>
+            <li ListIndex="1">Megaspider_Meat</li>
+          </exceptedThingDefs>
+        </filter>
+        <priorityInt>Important</priorityInt>
+      </defaultStorageSettings>
+    </building>
+  </ThingDef>
+</ThingDefs>

@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StatDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: string-->
+    <!--Desc: A human-readable description given when the Def is inspected by players.-->
+    <description>string_value</description>
+    <!--Type: RimWorld.StatCategoryDef-->
+    <category>StatCategoryDef_defName</category>
+    <!--Type: System.Type-->
+    <!--Default Value: typeof(StatWorker)-->
+    <workerClass>class_name</workerClass>
+    <!--Type: float-->
+    <!--Default Value: -2.14748365E+09-->
+    <hideAtValue>float_value</hideAtValue>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <showNonAbstract>true_or_false</showNonAbstract>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <showIfUndefined>true_or_false</showIfUndefined>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <showOnPawns>true_or_false</showOnPawns>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <showOnHumanlikes>true_or_false</showOnHumanlikes>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <showOnAnimals>true_or_false</showOnAnimals>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <showOnMechanoids>true_or_false</showOnMechanoids>
+    <!--Type: int-->
+    <displayPriorityInCategory>int_value</displayPriorityInCategory>
+    <!--Type: Verse.ToStringNumberSense-->
+    <!--Available Values: Undefined, Absolute, Factor, Offset-->
+    <!--Default Value: Absolute-->
+    <toStringNumberSense>enum_value</toStringNumberSense>
+    <!--Type: Verse.ToStringStyle-->
+    <!--Available Values: Integer, FloatOne, FloatTwo, PercentZero, PercentOne, PercentTwo, Temperature, TemperatureOffset, WorkAmount-->
+    <toStringStyle>enum_value</toStringStyle>
+    <!--Type: string-->
+    <formatString>string_value</formatString>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <defaultBaseValue>float_value</defaultBaseValue>
+    <!--Type: float-->
+    <minValue>float_value</minValue>
+    <!--Type: float-->
+    <!--Default Value: 9999999.0-->
+    <maxValue>float_value</maxValue>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <roundValue>true_or_false</roundValue>
+    <!--Type: float-->
+    <!--Default Value: 3.40282347E+38-->
+    <roundToFiveOver>float_value</roundToFiveOver>
+    <!--Type: List<RimWorld.StatDef>-->
+    <statFactors>
+      <!--Type: RimWorld.StatDef-->
+      <li>StatDef_defName</li>
+      <!-- ... -->
+    </statFactors>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <applyFactorsIfNegative>true_or_false</applyFactorsIfNegative>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <noSkillFactor>float_value</noSkillFactor>
+    <!--Complex List-->
+    <!--Type: List<RimWorld.SkillNeed>-->
+    <skillNeedFactors>
+      <!--Type: RimWorld.SkillNeed_BaseBonus-->
+      <li Class="SkillNeed_BaseBonus">
+        <!--Type: RimWorld.SkillDef-->
+        <skill>SkillDef_defName</skill>
+        <!--Type: float-->
+        <!--Default Value: 0.5-->
+        <baseFactor>float_value</baseFactor>
+        <!--Type: float-->
+        <!--Default Value: 0.05-->
+        <bonusFactor>float_value</bonusFactor>
+      </li>
+      <!--Type: RimWorld.SkillNeed_Direct-->
+      <li Class="SkillNeed_Direct">
+        <!--Type: RimWorld.SkillDef-->
+        <skill>SkillDef_defName</skill>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <reportInverse>true_or_false</reportInverse>
+        <!--Type: List<float>-->
+        <factorsPerLevel>
+          <!--Type: float-->
+          <li>float_value</li>
+          <!-- ... -->
+        </factorsPerLevel>
+      </li>
+      <!-- ... -->
+    </skillNeedFactors>
+    <!--Complex List-->
+    <!--Type: List<RimWorld.PawnCapacityFactor>-->
+    <capacityFactors>
+      <!--Type: RimWorld.PawnCapacityFactor-->
+      <li>
+        <!--Type: Verse.PawnCapacityDef-->
+        <capacity>PawnCapacityDef_defName</capacity>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <weight>float_value</weight>
+        <!--Type: float-->
+        <!--Default Value: 9999.0-->
+        <max>float_value</max>
+      </li>
+      <!-- ... -->
+    </capacityFactors>
+    <!--Type: Verse.SimpleCurve-->
+    <postProcessCurve>
+      <!--Type: List<Verse.CurvePoint>-->
+      <points>
+        <!--Type: Verse.CurvePoint-->
+        <li>value</li>
+        <!-- ... -->
+      </points>
+    </postProcessCurve>
+    <!--Complex List-->
+    <!--Type: List<RimWorld.StatPart>-->
+    <parts>
+      <!--Type: RimWorld.StatPart_Quality-->
+      <li Class="StatPart_Quality">
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorAwful>float_value</factorAwful>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorShoddy>float_value</factorShoddy>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorPoor>float_value</factorPoor>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorNormal>float_value</factorNormal>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorGood>float_value</factorGood>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorSuperior>float_value</factorSuperior>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorExcellent>float_value</factorExcellent>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorMasterwork>float_value</factorMasterwork>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorLegendary>float_value</factorLegendary>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <alsoAppliesToNegativeValues>true_or_false</alsoAppliesToNegativeValues>
+      </li>
+      <!--Type: RimWorld.StatPart_Health-->
+      <li Class="StatPart_Health">
+        <!--Type: Verse.SimpleCurve-->
+        <curve>
+          <!--Type: List<Verse.CurvePoint>-->
+          <points>
+            <!--Type: Verse.CurvePoint-->
+            <li>value</li>
+            <!-- ... -->
+          </points>
+        </curve>
+      </li>
+      <!--Type: RimWorld.StatPart_Mood-->
+      <li Class="StatPart_Mood">
+        <!--Type: Verse.SimpleCurve-->
+        <curve>
+          <!--Type: List<Verse.CurvePoint>-->
+          <points>
+            <!--Type: Verse.CurvePoint-->
+            <li>value</li>
+            <!-- ... -->
+          </points>
+        </curve>
+      </li>
+      <!--Type: RimWorld.StatPart_BodySize-->
+      <li Class="StatPart_BodySize" />
+      <!--Type: RimWorld.StatPart_NaturalNotMissingBodyPartsCoverage-->
+      <li Class="StatPart_NaturalNotMissingBodyPartsCoverage" />
+      <!--Type: RimWorld.StatPart_Food-->
+      <li Class="StatPart_Food">
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorStarving>float_value</factorStarving>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorUrgentlyHungry>float_value</factorUrgentlyHungry>
+      </li>
+      <!--Type: RimWorld.StatPart_Rest-->
+      <li Class="StatPart_Rest">
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorExhausted>float_value</factorExhausted>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorVeryTired>float_value</factorVeryTired>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorTired>float_value</factorTired>
+      </li>
+      <!--Type: RimWorld.StatPart_BedStat-->
+      <li Class="StatPart_BedStat">
+        <!--Type: RimWorld.StatDef-->
+        <stat>StatDef_defName</stat>
+      </li>
+      <!--Type: RimWorld.StatPart_Age-->
+      <li Class="StatPart_Age">
+        <!--Type: Verse.SimpleCurve-->
+        <curve>
+          <!--Type: List<Verse.CurvePoint>-->
+          <points>
+            <!--Type: Verse.CurvePoint-->
+            <li>value</li>
+            <!-- ... -->
+          </points>
+        </curve>
+      </li>
+      <!--Type: RimWorld.StatPart_ApparelStatOffset-->
+      <li Class="StatPart_ApparelStatOffset">
+        <!--Type: RimWorld.StatDef-->
+        <apparelStat>StatDef_defName</apparelStat>
+      </li>
+      <!--Type: RimWorld.StatPart_WorkTableUnpowered-->
+      <li Class="StatPart_WorkTableUnpowered" />
+      <!--Type: RimWorld.StatPart_WorkTableTemperature-->
+      <li Class="StatPart_WorkTableTemperature" />
+      <!--Type: RimWorld.StatPart_WorkTableOutdoors-->
+      <li Class="StatPart_WorkTableOutdoors" />
+      <!--Type: RimWorld.StatPart_Outdoors-->
+      <li Class="StatPart_Outdoors">
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorIndoors>float_value</factorIndoors>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <factorOutdoors>float_value</factorOutdoors>
+      </li>
+      <!--Type: RimWorld.StatPart_RoomStat-->
+      <li Class="StatPart_RoomStat">
+        <!--Type: Verse.RoomStatDef-->
+        <roomStat>RoomStatDef_defName</roomStat>
+        <!--Type: string-->
+        <customLabel>string_value</customLabel>
+      </li>
+      <!--Type: RimWorld.StatPart_WornByCorpse-->
+      <li Class="StatPart_WornByCorpse" />
+      <!--Type: RimWorld.StatPart_GearAndInventoryMass-->
+      <li Class="StatPart_GearAndInventoryMass" />
+      <!-- ... -->
+    </parts>
+  </StatDef>
+</Defs>

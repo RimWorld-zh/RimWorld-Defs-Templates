@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IncidentDefs>
+  <!--=============== ShipChunkDrop =============-->
+  <IncidentDef>
+    <defName>ShipChunkDrop</defName>
+    <label>ship chunk drop</label>
+    <workerClass>IncidentWorker_ShipChunkDrop</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>3</baseChance>
+    <category>ShipChunkDrop</category>
+  </IncidentDef>
+  <!--=============== OrbitalVisitor =============-->
+  <IncidentDef>
+    <defName>OrbitalTraderArrival</defName>
+    <label>orbital trader arrival</label>
+    <workerClass>IncidentWorker_OrbitalTraderArrival</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>3</baseChance>
+    <category>OrbitalVisitor</category>
+  </IncidentDef>
+  <!--================= AllyArrival ================-->
+  <IncidentDef>
+    <defName>TraderCaravanArrival</defName>
+    <label>trader caravan arrival</label>
+    <workerClass>IncidentWorker_TraderCaravanArrival</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>4</baseChance>
+    <category>AllyArrival</category>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>VisitorGroup</defName>
+    <label>visitor group</label>
+    <workerClass>IncidentWorker_VisitorGroup</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>4</baseChance>
+    <category>AllyArrival</category>
+    <pointsScaleable>true</pointsScaleable>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>TravelerGroup</defName>
+    <label>traveler group</label>
+    <workerClass>IncidentWorker_TravelerGroup</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>4</baseChance>
+    <category>AllyArrival</category>
+    <pointsScaleable>true</pointsScaleable>
+  </IncidentDef>
+  <!--================= Population gain ================-->
+  <IncidentDef>
+    <defName>WandererJoin</defName>
+    <label>wanderer join</label>
+    <workerClass>IncidentWorker_WandererJoin</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>0.2</baseChance>
+    <populationEffect>Increase</populationEffect>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>RefugeePodCrash</defName>
+    <label>refugee pod crash</label>
+    <workerClass>IncidentWorker_RefugeePodCrash</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>1.0</baseChance>
+    <populationEffect>Increase</populationEffect>
+  </IncidentDef>
+  <!--================= Misc ================-->
+  <IncidentDef>
+    <defName>ResourcePodCrash</defName>
+    <label>resource pod crash</label>
+    <workerClass>IncidentWorker_ResourcePodCrash</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>4</baseChance>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>RaidFriendly</defName>
+    <label>friendly raid</label>
+    <workerClass>IncidentWorker_RaidFriendly</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>3</baseChance>
+    <category>AllyAssistance</category>
+    <pointsScaleable>true</pointsScaleable>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>PsychicSoothe</defName>
+    <label>psychic soothe</label>
+    <workerClass>IncidentWorker_PsychicSoothe</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>1.0</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <durationDays>
+      <min>0.75</min>
+      <max>1.75</max>
+    </durationDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>SelfTame</defName>
+    <label>self-tame</label>
+    <workerClass>IncidentWorker_SelfTame</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>0.75</baseChance>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>FarmAnimalsWanderIn</defName>
+    <label>farm animals wander in</label>
+    <workerClass>IncidentWorker_FarmAnimalsWanderIn</workerClass>
+    <targetType>BaseMap</targetType>
+    <baseChance>0.2</baseChance>
+  </IncidentDef>
+</IncidentDefs>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Penoxycyline>
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>Penoxycyline</defName>
+    <label>penoxycyline</label>
+    <description>A drug for blocking various infections. Blocks malaria, sleeping sickness, and plague. Take every five days.</description>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>32</MarketValue>
+      <Mass>0.005</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <Neutroamine>3</Neutroamine>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>400</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Drug" ListIndex="1">
+        <overdoseSeverityOffset>
+          <min>0.08</min>
+          <max>0.14</max>
+        </overdoseSeverityOffset>
+        <listOrder>1000</listOrder>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_CookMeal</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Drug/Penoxycyline</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Drugs</li>
+    </thingCategories>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="0">
+          <hediffDef>PenoxycylineHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+      <baseIngestTicks>120</baseIngestTicks>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <foodType>Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <preferability>NeverForNutrition</preferability>
+      <drugCategory>Medical</drugCategory>
+    </ingestible>
+  </ThingDef>
+  <HediffDef>
+    <defName>PenoxycylineHigh</defName>
+    <label>penoxycyline</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-0.18</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li ListIndex="0">
+        <makeImmuneTo>
+          <li ListIndex="0">Malaria</li>
+          <li ListIndex="1">SleepingSickness</li>
+          <li ListIndex="2">Plague</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+  </HediffDef>
+</Penoxycyline>

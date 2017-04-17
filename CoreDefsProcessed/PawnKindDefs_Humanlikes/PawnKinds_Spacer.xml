@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PawnKindDefs>
+  <PawnKindDef>
+    <defName>SpaceRefugee</defName>
+    <label>space refugee</label>
+    <race>Human</race>
+    <defaultFactionType>Spacer</defaultFactionType>
+    <backstoryCategory>Civil</backstoryCategory>
+    <labelPlural>space refugees</labelPlural>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <gearHealthRange>
+      <min>0.4</min>
+      <max>1.4</max>
+    </gearHealthRange>
+    <isFighter>false</isFighter>
+    <combatPower>25</combatPower>
+    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>0</min>
+      <max>3000</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Spacer</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <chemicalAddictionChance>0.08</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef>
+    <defName>SpaceSoldier</defName>
+    <label>space soldier</label>
+    <race>Human</race>
+    <defaultFactionType>SpacerHostile</defaultFactionType>
+    <backstoryCategory>Civil</backstoryCategory>
+    <labelPlural>space soldiers</labelPlural>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <maxGenerationAge>58</maxGenerationAge>
+    <combatPower>100</combatPower>
+    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>0</min>
+      <max>4000</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Spacer</li>
+      <li ListIndex="1">BeltDefensePop</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <weaponMoney>
+      <min>300</min>
+      <max>900</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>5000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li ListIndex="0">Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.3</techHediffsChance>
+    <itemQuality>Good</itemQuality>
+    <chemicalAddictionChance>0.08</chemicalAddictionChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+  </PawnKindDef>
+</PawnKindDefs>

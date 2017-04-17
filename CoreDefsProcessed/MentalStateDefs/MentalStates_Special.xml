@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Special mental states not from mental breaks -->
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>WanderConfused</defName>
+    <label>confused wandering</label>
+    <stateClass>MentalState_WanderConfused</stateClass>
+    <category>Sad</category>
+    <unspawnedCanDo>true</unspawnedCanDo>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <recoveryMtbDays>0.2</recoveryMtbDays>
+    <minTicksBeforeRecovery>3500</minTicksBeforeRecovery>
+    <beginLetter>{0} has broken down and is wandering around confused.</beginLetter>
+    <beginLetterLabel>confusion</beginLetterLabel>
+    <beginLetterType>BadNonUrgent</beginLetterType>
+    <nameColor>(0.65, 0.9, 0.93)</nameColor>
+    <recoveryMessage>{0} is no longer confused.</recoveryMessage>
+    <baseInspectLine>Mental state: Confused and wandering</baseInspectLine>
+  </MentalStateDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>PanicFlee</defName>
+    <label>panic fleeing</label>
+    <stateClass>MentalState_PanicFlee</stateClass>
+    <category>Panic</category>
+    <unspawnedCanDo>true</unspawnedCanDo>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <recoveryMtbDays>0.3</recoveryMtbDays>
+    <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
+    <beginLetter>{0} is fleeing in panic.</beginLetter>
+    <beginLetterLabel>flee</beginLetterLabel>
+    <nameColor>(0.65, 0.9, 0.93)</nameColor>
+    <recoveryMessage>{0} is no longer fleeing in panic.</recoveryMessage>
+    <baseInspectLine>Mental state: Fleeing in panic</baseInspectLine>
+  </MentalStateDef>
+  <MentalStateDef ParentName="BaseMentalState" Name="Manhunter">
+    <defName>Manhunter</defName>
+    <label>manhunter</label>
+    <stateClass>MentalState_Manhunter</stateClass>
+    <category>Aggro</category>
+    <unspawnedCanDo>true</unspawnedCanDo>
+    <stateEffecter>Manhunter</stateEffecter>
+    <recoveryMtbDays>0.3</recoveryMtbDays>
+    <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
+    <beginLetter>{0} has become a manhunter!</beginLetter>
+    <beginLetterLabel>manhunter</beginLetterLabel>
+    <nameColor>(0.9,0.2,0.5)</nameColor>
+    <recoveryMessage>{0}'s manhunting bloodlust has come to an end.</recoveryMessage>
+    <baseInspectLine>Maddened: Manhunter</baseInspectLine>
+  </MentalStateDef>
+  <MentalStateDef ParentName="Manhunter">
+    <defName>ManhunterPermanent</defName>
+    <label>manhunter</label>
+    <stateClass>MentalState_Manhunter</stateClass>
+    <category>Aggro</category>
+    <unspawnedCanDo>true</unspawnedCanDo>
+    <stateEffecter>Manhunter</stateEffecter>
+    <recoveryMtbDays>0.3</recoveryMtbDays>
+    <minTicksBeforeRecovery>99999999</minTicksBeforeRecovery>
+    <beginLetter>{0} has become a manhunter!</beginLetter>
+    <beginLetterLabel>manhunter</beginLetterLabel>
+    <nameColor>(0.9,0.2,0.5)</nameColor>
+    <recoveryMessage>{0}'s manhunting bloodlust has come to an end.</recoveryMessage>
+    <baseInspectLine>Maddened: Manhunter</baseInspectLine>
+  </MentalStateDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>SocialFighting</defName>
+    <label>social fighting</label>
+    <stateClass>MentalState_SocialFighting</stateClass>
+    <category>Aggro</category>
+    <unspawnedCanDo>true</unspawnedCanDo>
+    <recoveryMtbDays>0.02</recoveryMtbDays>
+    <minTicksBeforeRecovery>420</minTicksBeforeRecovery>
+    <nameColor>(0.88,0.48,0.16)</nameColor>
+    <baseInspectLine>Mental state: Social fighting</baseInspectLine>
+  </MentalStateDef>
+</Defs>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>Heatstroke</defName>
+    <label>heatstroke</label>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>initial-hidden</label>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.04</minSeverity>
+        <label>initial</label>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.2</minSeverity>
+        <label>minor</label>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.35</minSeverity>
+        <label>serious</label>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="4">
+        <minSeverity>0.62</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.30</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef>
+    <defName>Hypothermia</defName>
+    <label>hypothermia</label>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>shivering-hidden</label>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.04</minSeverity>
+        <label>shivering</label>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Manipulation</capacity>
+            <offset>-0.08</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.2</minSeverity>
+        <label>minor</label>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.35</minSeverity>
+        <label>serious</label>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="4">
+        <minSeverity>0.62</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.30</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
+  </HediffDef>
+</Defs>

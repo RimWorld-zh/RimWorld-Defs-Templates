@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Mass>0.03</Mass>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+  <ThingDef Abstract="True" Name="PlantFoodRawBase" ParentName="OrganicProductBase">
+    <comps>
+      <li Class="CompProperties_FoodPoisoningChance">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantFoodRaw</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <nutrition>0.05</nutrition>
+      <preferability>RawBad</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawPotatoes</defName>
+    <label>potatoes</label>
+    <description>Raw potatoes.</description>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_Rottable" ListIndex="2">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">PlantFoodRaw</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <foodType>VegetableOrFruit</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>RawBad</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawRice</defName>
+    <label>rice</label>
+    <description>Raw rice.</description>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_Rottable" ListIndex="2">
+        <daysToRotStart>40</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Rice</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">PlantFoodRaw</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundDrop>Grain_Drop</soundDrop>
+    <soundInteract>Grain_Drop</soundInteract>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <foodType>Seed</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>RawBad</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawAgave</defName>
+    <label>agave fruit</label>
+    <description>Raw agave fruit.</description>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_Rottable" ListIndex="2">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/AgaveFruit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">PlantFoodRaw</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <foodType>VegetableOrFruit</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>RawBad</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawCorn</defName>
+    <label>corn</label>
+    <description>Raw corn.</description>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_Rottable" ListIndex="2">
+        <daysToRotStart>60</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Corn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">PlantFoodRaw</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundDrop>Grain_Drop</soundDrop>
+    <soundInteract>Grain_Drop</soundInteract>
+    <ingestible>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <foodType>VegetableOrFruit</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>RawBad</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawBerries</defName>
+    <label>berries</label>
+    <description>Assorted berries. Nice to eat, even when raw.</description>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+      <Mass>0.027</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+      <li Class="CompProperties_Rottable" ListIndex="2">
+        <daysToRotStart>14</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Berries</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">PlantFoodRaw</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought></tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <foodType>VegetableOrFruit</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>RawTasty</preferability>
+    </ingestible>
+  </ThingDef>
+  <!-- Plant matter (inedible by people) -->
+  <ThingDef ParentName="OrganicProductBase" Name="RoughPlantBase" Abstract="True">
+    <ingestible>
+      <foodType>Plant</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>Hay</defName>
+    <label>hay</label>
+    <description>Nutrient-rich grasses and shoots, harvested and compacted for storage. Hay is good animal feed, but inedible for humans.</description>
+    <statBases>
+      <MarketValue>0.9</MarketValue>
+      <Mass>0.014</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>200</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>60</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Hay</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Foods</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>RawHops</defName>
+    <label>hops</label>
+    <description>Raw hops. A flavoring and preserving agent that is necessary for making beer.</description>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Hops</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>PsychoidLeaves</defName>
+    <label>psychoid leaves</label>
+    <description>Raw cut leaves of a psychoid plant.</description>
+    <statBases>
+      <MarketValue>2.2</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/PsychoidLeaves</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>SmokeleafLeaves</defName>
+    <label>smokeleaf leaves</label>
+    <description>Raw cut leaves of a smokeleaf plant. Can be rolled into smokeable joint at a crafting spot.</description>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/SmokeleafLeaves</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+</Defs>

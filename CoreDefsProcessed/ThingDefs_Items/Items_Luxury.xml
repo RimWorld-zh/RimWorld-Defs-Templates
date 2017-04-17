@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--================== Bases ==================-->
+  <ThingDef Name="ResourceBase" Abstract="True">
+    <statBases>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+  </ThingDef>
+  <!--=============== Luxury ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Chocolate</defName>
+    <label>chocolate</label>
+    <description>A delicious preparation of cocoa seeds ground together with sugar and vanilla. Very pleasurable to eat, but not very nutritious.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.075</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/Chocolate</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Foods</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Standard_Drop</soundInteract>
+    <ingestible>
+      <maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Processed</foodType>
+      <nutrition>0.10</nutrition>
+      <joy>0.10</joy>
+      <joyKind>Gluttonous</joyKind>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+  </ThingDef>
+</Defs>

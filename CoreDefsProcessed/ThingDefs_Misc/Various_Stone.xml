@@ -1,0 +1,1020 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- =========== Bases =========== -->
+  <ThingDef Name="ChunkBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-8</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Thing</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <designateHaulable>true</designateHaulable>
+    <saveCompressible>true</saveCompressible>
+    <fillPercent>0.4</fillPercent>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase" Name="StoneBlocksBase" Abstract="True">
+    <description>Blocks of stone. Mostly useful for building long-lasting, simple structures.</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>StoneBlocks</li>
+    </thingCategories>
+    <soundDrop>Stone_Drop</soundDrop>
+    <soundInteract>Stone_Drop</soundInteract>
+    <stuffProps>
+      <commonality>0.20</commonality>
+      <categories>
+        <li>Stony</li>
+      </categories>
+      <statOffsets>
+        <WorkToBuild>140</WorkToBuild>
+      </statOffsets>
+      <statFactors>
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>2.4</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>6.0</WorkToBuild>
+        <WorkToMake>1.3</WorkToMake>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <BedRestEffectiveness>0.9</BedRestEffectiveness>
+        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+      </statFactors>
+      <!-- because there are so many stone types -->
+      <appearance>Bricks</appearance>
+    </stuffProps>
+  </ThingDef>
+  <ThingDef Name="UglyRockBase" ParentName="RockBase" Abstract="True">
+    <statBases>
+      <Flammability>0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <building>
+      <mineableYieldWasteable>false</mineableYieldWasteable>
+    </building>
+  </ThingDef>
+  <!-- =========== Misc chunks =========== -->
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkSlagSteel</defName>
+    <label>steel slag chunk</label>
+    <statBases>
+      <Mass>5</Mass>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-8</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Thing</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <smeltProducts>
+      <Steel>10</Steel>
+    </smeltProducts>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkSlag</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <designateHaulable>true</designateHaulable>
+    <thingCategories>
+      <li ListIndex="0">Chunks</li>
+    </thingCategories>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <saveCompressible>true</saveCompressible>
+    <fillPercent>0.4</fillPercent>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <!-- ================ Sandstone ================ -->
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Sandstone</defName>
+    <label>sandstone</label>
+    <description>A sedimentary rock composed of sand particles compressed together.</description>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <passability>Impassable</passability>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Mineable</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <filthLeaving>RockRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Linked/Rock_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(126,104,94)</color>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li ListIndex="0">Rock</li>
+        <li ListIndex="1">MapEdge</li>
+      </linkFlags>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <mineable>true</mineable>
+    <saveCompressible>true</saveCompressible>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <isInert>true</isInert>
+      <deconstructible>false</deconstructible>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <isNaturalRock>true</isNaturalRock>
+      <mineableThing>ChunkSandstone</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+      <mineableYieldWasteable>false</mineableYieldWasteable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkSandstone</defName>
+    <label>sandstone chunk</label>
+    <statBases>
+      <Mass>20</Mass>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-8</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Thing</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <butcherProducts>
+      <BlocksSandstone>20</BlocksSandstone>
+    </butcherProducts>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(126,104,94)</color>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <designateHaulable>true</designateHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneChunks</li>
+    </thingCategories>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <saveCompressible>true</saveCompressible>
+    <fillPercent>0.4</fillPercent>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksSandstone</defName>
+    <label>sandstone blocks</label>
+    <description>Blocks of solid sandstone. Sandstone is a relatively soft rock and chips easily.</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(126,104,94)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneBlocks</li>
+    </thingCategories>
+    <soundDrop>Stone_Drop</soundDrop>
+    <soundInteract>Stone_Drop</soundInteract>
+    <stuffProps>
+      <stuffAdjective>sandstone</stuffAdjective>
+      <commonality>0.20</commonality>
+      <categories>
+        <li ListIndex="0">Stony</li>
+      </categories>
+      <statOffsets>
+        <WorkToBuild>140</WorkToBuild>
+      </statOffsets>
+      <statFactors>
+        <Beauty>1.1</Beauty>
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>1.4</MaxHitPoints>
+        <WorkToBuild>5.0</WorkToBuild>
+        <WorkToMake>1.1</WorkToMake>
+        <Flammability>0</Flammability>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <BedRestEffectiveness>0.9</BedRestEffectiveness>
+        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+      </statFactors>
+      <color>(126,104,94)</color>
+      <appearance>Bricks</appearance>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+    </stuffProps>
+  </ThingDef>
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>MakeStoneBlocksSandstone</defName>
+    <label>make sandstone blocks</label>
+    <description>Cuts sandstone chunks into usable blocks.</description>
+    <jobString>Cutting stone blocks from chunk.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">ChunkSandstone</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">ChunkSandstone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <BlocksSandstone>20</BlocksSandstone>
+    </products>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Construction</workSkill>
+    <workSkillLearnFactor>0.3</workSkillLearnFactor>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <recipeUsers>
+      <li ListIndex="0">TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
+  <!-- ================ Granite ================ -->
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Granite</defName>
+    <label>granite</label>
+    <description>A very hard igneous rock.</description>
+    <statBases>
+      <MaxHitPoints>900</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <passability>Impassable</passability>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Mineable</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <filthLeaving>RockRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Linked/Rock_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(105,95,97)</color>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li ListIndex="0">Rock</li>
+        <li ListIndex="1">MapEdge</li>
+      </linkFlags>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <mineable>true</mineable>
+    <saveCompressible>true</saveCompressible>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <isInert>true</isInert>
+      <deconstructible>false</deconstructible>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <isNaturalRock>true</isNaturalRock>
+      <mineableThing>ChunkGranite</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+      <mineableYieldWasteable>false</mineableYieldWasteable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkGranite</defName>
+    <label>granite chunk</label>
+    <statBases>
+      <Mass>25</Mass>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-8</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Thing</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <butcherProducts>
+      <BlocksGranite>20</BlocksGranite>
+    </butcherProducts>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(105,95,97)</color>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <designateHaulable>true</designateHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneChunks</li>
+    </thingCategories>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <saveCompressible>true</saveCompressible>
+    <fillPercent>0.4</fillPercent>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksGranite</defName>
+    <label>granite blocks</label>
+    <description>Blocks of solid granite. Granite is a very hard stone.</description>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+      <Mass>1.25</Mass>
+      <SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(105,95,97)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneBlocks</li>
+    </thingCategories>
+    <soundDrop>Stone_Drop</soundDrop>
+    <soundInteract>Stone_Drop</soundInteract>
+    <stuffProps>
+      <stuffAdjective>granite</stuffAdjective>
+      <commonality>0.20</commonality>
+      <categories>
+        <li ListIndex="0">Stony</li>
+      </categories>
+      <statOffsets>
+        <WorkToBuild>140</WorkToBuild>
+      </statOffsets>
+      <statFactors>
+        <MarketValue>0.5</MarketValue>
+        <MaxHitPoints>1.7</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>6.0</WorkToBuild>
+        <WorkToMake>1.3</WorkToMake>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <BedRestEffectiveness>0.9</BedRestEffectiveness>
+        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+      </statFactors>
+      <color>(105,95,97)</color>
+      <appearance>Bricks</appearance>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+    </stuffProps>
+  </ThingDef>
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>MakeStoneBlocksGranite</defName>
+    <label>make granite blocks</label>
+    <description>Cuts granite chunks into usable blocks.</description>
+    <jobString>Cutting stone blocks from chunk.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">ChunkGranite</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">ChunkGranite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <BlocksGranite>20</BlocksGranite>
+    </products>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Construction</workSkill>
+    <workSkillLearnFactor>0.3</workSkillLearnFactor>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <recipeUsers>
+      <li ListIndex="0">TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
+  <!-- ================ Limestone ================ -->
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Limestone</defName>
+    <label>limestone</label>
+    <description>A sedimentary rock formed from the compacted remains of ancient seashells.</description>
+    <statBases>
+      <MaxHitPoints>700</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <passability>Impassable</passability>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Mineable</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <filthLeaving>RockRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Linked/Rock_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(158,153,135)</color>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li ListIndex="0">Rock</li>
+        <li ListIndex="1">MapEdge</li>
+      </linkFlags>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <mineable>true</mineable>
+    <saveCompressible>true</saveCompressible>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <isInert>true</isInert>
+      <deconstructible>false</deconstructible>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <isNaturalRock>true</isNaturalRock>
+      <mineableThing>ChunkLimestone</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+      <mineableYieldWasteable>false</mineableYieldWasteable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkLimestone</defName>
+    <label>limestone chunk</label>
+    <statBases>
+      <Mass>22</Mass>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-8</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Thing</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <butcherProducts>
+      <BlocksLimestone>20</BlocksLimestone>
+    </butcherProducts>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(158,153,135)</color>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <designateHaulable>true</designateHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneChunks</li>
+    </thingCategories>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <saveCompressible>true</saveCompressible>
+    <fillPercent>0.4</fillPercent>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksLimestone</defName>
+    <label>limestone blocks</label>
+    <description>Blocks of solid limestone.</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>1.1</Mass>
+      <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(158,153,135)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneBlocks</li>
+    </thingCategories>
+    <soundDrop>Stone_Drop</soundDrop>
+    <soundInteract>Stone_Drop</soundInteract>
+    <stuffProps>
+      <stuffAdjective>limestone</stuffAdjective>
+      <commonality>0.20</commonality>
+      <categories>
+        <li ListIndex="0">Stony</li>
+      </categories>
+      <statOffsets>
+        <WorkToBuild>140</WorkToBuild>
+      </statOffsets>
+      <statFactors>
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>1.55</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>6.0</WorkToBuild>
+        <WorkToMake>1.3</WorkToMake>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <BedRestEffectiveness>0.9</BedRestEffectiveness>
+        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+      </statFactors>
+      <color>(158,153,135)</color>
+      <appearance>Bricks</appearance>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+    </stuffProps>
+  </ThingDef>
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>MakeStoneBlocksLimestone</defName>
+    <label>make limestone blocks</label>
+    <description>Cuts limestone chunks into usable blocks.</description>
+    <jobString>Cutting stone blocks from chunk.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">ChunkLimestone</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">ChunkLimestone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <BlocksLimestone>20</BlocksLimestone>
+    </products>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Construction</workSkill>
+    <workSkillLearnFactor>0.3</workSkillLearnFactor>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <recipeUsers>
+      <li ListIndex="0">TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
+  <!-- ================ Slate ================ -->
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Slate</defName>
+    <label>slate</label>
+    <description>A dark-colored metamorphic rock. Its fine layers are emblematic of slaty cleavage.</description>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <passability>Impassable</passability>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Mineable</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <filthLeaving>RockRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Linked/Rock_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(70,70,70)</color>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li ListIndex="0">Rock</li>
+        <li ListIndex="1">MapEdge</li>
+      </linkFlags>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <mineable>true</mineable>
+    <saveCompressible>true</saveCompressible>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <isInert>true</isInert>
+      <deconstructible>false</deconstructible>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <isNaturalRock>true</isNaturalRock>
+      <mineableThing>ChunkSlate</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+      <mineableYieldWasteable>false</mineableYieldWasteable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkSlate</defName>
+    <label>slate chunk</label>
+    <statBases>
+      <Mass>18</Mass>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-8</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Thing</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <butcherProducts>
+      <BlocksSlate>20</BlocksSlate>
+    </butcherProducts>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(90,90,90)</color>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <designateHaulable>true</designateHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneChunks</li>
+    </thingCategories>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <saveCompressible>true</saveCompressible>
+    <fillPercent>0.4</fillPercent>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksSlate</defName>
+    <label>slate blocks</label>
+    <description>Blocks of solid slate. A dull-looking rock that chips easily.</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>0.9</Mass>
+      <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(70,70,70)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneBlocks</li>
+    </thingCategories>
+    <soundDrop>Stone_Drop</soundDrop>
+    <soundInteract>Stone_Drop</soundInteract>
+    <stuffProps>
+      <stuffAdjective>slate</stuffAdjective>
+      <commonality>0.20</commonality>
+      <categories>
+        <li ListIndex="0">Stony</li>
+      </categories>
+      <statOffsets>
+        <WorkToBuild>140</WorkToBuild>
+      </statOffsets>
+      <statFactors>
+        <Beauty>1.1</Beauty>
+        <MarketValue>0.38</MarketValue>
+        <MaxHitPoints>1.3</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>6.0</WorkToBuild>
+        <WorkToMake>1.3</WorkToMake>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <BedRestEffectiveness>0.9</BedRestEffectiveness>
+        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+      </statFactors>
+      <color>(70,70,70)</color>
+      <appearance>Bricks</appearance>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+    </stuffProps>
+  </ThingDef>
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>MakeStoneBlocksSlate</defName>
+    <label>make slate blocks</label>
+    <description>Cuts slate chunks into usable blocks.</description>
+    <jobString>Cutting stone blocks from chunk.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">ChunkSlate</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">ChunkSlate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <BlocksSlate>20</BlocksSlate>
+    </products>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Construction</workSkill>
+    <workSkillLearnFactor>0.3</workSkillLearnFactor>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <recipeUsers>
+      <li ListIndex="0">TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
+  <!-- ================ Marble ================ -->
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Marble</defName>
+    <label>marble</label>
+    <description>A soft metamorphic rock.</description>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <Beauty>-1</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <passability>Impassable</passability>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Mineable</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <filthLeaving>RockRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Linked/Rock_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(132,135,132)</color>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li ListIndex="0">Rock</li>
+        <li ListIndex="1">MapEdge</li>
+      </linkFlags>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <mineable>true</mineable>
+    <saveCompressible>true</saveCompressible>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <isInert>true</isInert>
+      <deconstructible>false</deconstructible>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <isNaturalRock>true</isNaturalRock>
+      <mineableThing>ChunkMarble</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+      <mineableYieldWasteable>false</mineableYieldWasteable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ChunkBase">
+    <defName>ChunkMarble</defName>
+    <label>marble chunk</label>
+    <statBases>
+      <Mass>25</Mass>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-8</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Thing</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <butcherProducts>
+      <BlocksMarble>20</BlocksMarble>
+    </butcherProducts>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(132,135,132)</color>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <designateHaulable>true</designateHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneChunks</li>
+    </thingCategories>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <saveCompressible>true</saveCompressible>
+    <fillPercent>0.4</fillPercent>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksMarble</defName>
+    <label>marble blocks</label>
+    <description>Blocks of solid marble. Marble is a soft, beautiful stone, known for being easy to sculpt.</description>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>1.25</Mass>
+      <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(132,135,132)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">StoneBlocks</li>
+    </thingCategories>
+    <soundDrop>Stone_Drop</soundDrop>
+    <soundInteract>Stone_Drop</soundInteract>
+    <stuffProps>
+      <stuffAdjective>marble</stuffAdjective>
+      <commonality>0.20</commonality>
+      <categories>
+        <li ListIndex="0">Stony</li>
+      </categories>
+      <statOffsets>
+        <WorkToBuild>140</WorkToBuild>
+      </statOffsets>
+      <statFactors>
+        <Beauty>1.35</Beauty>
+        <MarketValue>0.45</MarketValue>
+        <MaxHitPoints>1.2</MaxHitPoints>
+        <WorkToBuild>5.5</WorkToBuild>
+        <WorkToMake>1.15</WorkToMake>
+        <Flammability>0</Flammability>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <BedRestEffectiveness>0.9</BedRestEffectiveness>
+        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+      </statFactors>
+      <color>(132,135,132)</color>
+      <appearance>Bricks</appearance>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+    </stuffProps>
+  </ThingDef>
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>MakeStoneBlocksMarble</defName>
+    <label>make marble blocks</label>
+    <description>Cuts marble chunks into usable blocks.</description>
+    <jobString>Cutting stone blocks from chunk.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">ChunkMarble</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">ChunkMarble</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <BlocksMarble>20</BlocksMarble>
+    </products>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Construction</workSkill>
+    <workSkillLearnFactor>0.3</workSkillLearnFactor>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <recipeUsers>
+      <li ListIndex="0">TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
+</Defs>

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: string-->
+    <!--Desc: A human-readable description given when the Def is inspected by players.-->
+    <description>string_value</description>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <isPlayer>true_or_false</isPlayer>
+    <!--Type: Verse.RulePackDef-->
+    <factionNameMaker>RulePackDef_defName</factionNameMaker>
+    <!--Type: Verse.RulePackDef-->
+    <baseNameMaker>RulePackDef_defName</baseNameMaker>
+    <!--Type: string-->
+    <fixedName>string_value</fixedName>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <humanlikeFaction>true_or_false</humanlikeFaction>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <hidden>true_or_false</hidden>
+    <!--Complex List-->
+    <!--Type: List<RimWorld.PawnGroupMaker>-->
+    <pawnGroupMakers>
+      <!--Type: RimWorld.PawnGroupMaker-->
+      <li>
+        <!--Type: RimWorld.PawnGroupKindDef-->
+        <kindDef>PawnGroupKindDef_defName</kindDef>
+        <!--Type: float-->
+        <!--Default Value: 100.0-->
+        <commonality>float_value</commonality>
+        <!--Type: List<RimWorld.RaidStrategyDef>-->
+        <disallowedStrategies>
+          <!--Type: RimWorld.RaidStrategyDef-->
+          <li>RaidStrategyDef_defName</li>
+          <!-- ... -->
+        </disallowedStrategies>
+        <!--Type: List<RimWorld.PawnGenOption>-->
+        <options>
+          <!--Type: RimWorld.PawnGenOption-->
+          <!--Tag Field: kind, Tag Type: Verse.PawnKindDef-->
+          <!--Value Field: selectionWeight, Value Type: int-->
+          <!--Pattern: <PawnKindDef_defName>int_value</PawnKindDef_defName>-->
+          <!-- ... -->
+        </options>
+        <!--Type: List<RimWorld.PawnGenOption>-->
+        <traders>
+          <!--Type: RimWorld.PawnGenOption-->
+          <!--Tag Field: kind, Tag Type: Verse.PawnKindDef-->
+          <!--Value Field: selectionWeight, Value Type: int-->
+          <!--Pattern: <PawnKindDef_defName>int_value</PawnKindDef_defName>-->
+          <!-- ... -->
+        </traders>
+        <!--Type: List<RimWorld.PawnGenOption>-->
+        <carriers>
+          <!--Type: RimWorld.PawnGenOption-->
+          <!--Tag Field: kind, Tag Type: Verse.PawnKindDef-->
+          <!--Value Field: selectionWeight, Value Type: int-->
+          <!--Pattern: <PawnKindDef_defName>int_value</PawnKindDef_defName>-->
+          <!-- ... -->
+        </carriers>
+        <!--Type: List<RimWorld.PawnGenOption>-->
+        <guards>
+          <!--Type: RimWorld.PawnGenOption-->
+          <!--Tag Field: kind, Tag Type: Verse.PawnKindDef-->
+          <!--Value Field: selectionWeight, Value Type: int-->
+          <!--Pattern: <PawnKindDef_defName>int_value</PawnKindDef_defName>-->
+          <!-- ... -->
+        </guards>
+      </li>
+      <!-- ... -->
+    </pawnGroupMakers>
+    <!--Type: float-->
+    <raidCommonality>float_value</raidCommonality>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <autoFlee>true_or_false</autoFlee>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <canSiege>true_or_false</canSiege>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <canStageAttacks>true_or_false</canStageAttacks>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <canUseAvoidGrid>true_or_false</canUseAvoidGrid>
+    <!--Type: float-->
+    <earliestRaidDays>float_value</earliestRaidDays>
+    <!--Type: Verse.FloatRange-->
+    <!--Default Value: new FloatRange(-1000f, 1000f)-->
+    <allowedArrivalTemperatureRange>
+      <!--Type: float-->
+      <min>float_value</min>
+      <!--Type: float-->
+      <max>float_value</max>
+    </allowedArrivalTemperatureRange>
+    <!--Type: Verse.PawnKindDef-->
+    <basicMemberKind>PawnKindDef_defName</basicMemberKind>
+    <!--Type: List<string>-->
+    <startingResearchTags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </startingResearchTags>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <rescueesCanJoin>true_or_false</rescueesCanJoin>
+    <!--Type: string-->
+    <!--Default Value: "members"-->
+    <pawnsPlural>string_value</pawnsPlural>
+    <!--Type: string-->
+    <!--Default Value: "leader"-->
+    <leaderTitle>string_value</leaderTitle>
+    <!--Type: int-->
+    <requiredCountAtGameStart>int_value</requiredCountAtGameStart>
+    <!--Type: int-->
+    <!--Default Value: 9999-->
+    <maxCountAtGameStart>int_value</maxCountAtGameStart>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <canMakeRandomly>true_or_false</canMakeRandomly>
+    <!--Type: float-->
+    <baseSelectionWeight>float_value</baseSelectionWeight>
+    <!--Type: Verse.RulePackDef-->
+    <pawnNameMaker>RulePackDef_defName</pawnNameMaker>
+    <!--Type: RimWorld.TechLevel-->
+    <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
+    <techLevel>enum_value</techLevel>
+    <!--Type: string-->
+    <backstoryCategory>string_value</backstoryCategory>
+    <!--Type: List<string>-->
+    <hairTags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </hairTags>
+    <!--Type: Verse.ThingFilter-->
+    <apparelStuffFilter>
+      <!--Type: List<Verse.ThingDef>-->
+      <thingDefs>
+        <!--Type: Verse.ThingDef-->
+        <li>ThingDef_defName</li>
+        <!-- ... -->
+      </thingDefs>
+    </apparelStuffFilter>
+    <!--Type: List<RimWorld.TraderKindDef>-->
+    <caravanTraderKinds>
+      <!--Type: RimWorld.TraderKindDef-->
+      <li>TraderKindDef_defName</li>
+      <!-- ... -->
+    </caravanTraderKinds>
+    <!--Type: List<RimWorld.TraderKindDef>-->
+    <visitorTraderKinds>
+      <!--Type: RimWorld.TraderKindDef-->
+      <li>TraderKindDef_defName</li>
+      <!-- ... -->
+    </visitorTraderKinds>
+    <!--Type: List<RimWorld.TraderKindDef>-->
+    <baseTraderKinds>
+      <!--Type: RimWorld.TraderKindDef-->
+      <li>TraderKindDef_defName</li>
+      <!-- ... -->
+    </baseTraderKinds>
+    <!--Type: Verse.FloatRange-->
+    <!--Default Value: FloatRange.Zero-->
+    <startingGoodwill>
+      <!--Type: float-->
+      <min>float_value</min>
+      <!--Type: float-->
+      <max>float_value</max>
+    </startingGoodwill>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <mustStartOneEnemy>true_or_false</mustStartOneEnemy>
+    <!--Type: Verse.FloatRange-->
+    <!--Default Value: FloatRange.Zero-->
+    <naturalColonyGoodwill>
+      <!--Type: float-->
+      <min>float_value</min>
+      <!--Type: float-->
+      <max>float_value</max>
+    </naturalColonyGoodwill>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <appreciative>true_or_false</appreciative>
+    <!--Type: string-->
+    <homeIconPath>string_value</homeIconPath>
+    <!--Type: string-->
+    <expandingIconTexture>string_value</expandingIconTexture>
+    <!--Type: List<UnityEngine.Color>-->
+    <colorSpectrum>
+      <!--Type: UnityEngine.Color-->
+      <li>value</li>
+      <!-- ... -->
+    </colorSpectrum>
+  </FactionDef>
+</Defs>

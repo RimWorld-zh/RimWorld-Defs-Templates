@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorkTypeDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: string-->
+    <!--Desc: A human-readable description given when the Def is inspected by players.-->
+    <description>string_value</description>
+    <!--Type: Verse.WorkTags-->
+    <!--Available Values: None, ManualDumb, ManualSkilled, Violent, Caring, Social, Intellectual, Animals, Artistic, Crafting, Cooking, Firefighting, Cleaning, Hauling, PlantWork, Mining-->
+    <workTags>
+      <li>enum_value</li>
+      <!-- ... -->
+    </workTags>
+    <!--Type: string-->
+    <labelShort>string_value</labelShort>
+    <!--Type: string-->
+    <pawnLabel>string_value</pawnLabel>
+    <!--Type: string-->
+    <gerundLabel>string_value</gerundLabel>
+    <!--Type: string-->
+    <verb>string_value</verb>
+    <!--Type: int-->
+    <naturalPriority>int_value</naturalPriority>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <alwaysStartActive>true_or_false</alwaysStartActive>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <requireCapableColonist>true_or_false</requireCapableColonist>
+    <!--Type: List<RimWorld.SkillDef>-->
+    <relevantSkills>
+      <!--Type: RimWorld.SkillDef-->
+      <li>SkillDef_defName</li>
+      <!-- ... -->
+    </relevantSkills>
+  </WorkTypeDef>
+</Defs>

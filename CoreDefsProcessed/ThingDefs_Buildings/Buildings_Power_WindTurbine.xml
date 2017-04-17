@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Buildings>
+  <ThingDef ParentName="BuildingBase">
+    <defName>WindTurbine</defName>
+    <label>wind turbine</label>
+    <description>A wind-powered electrical generator. Requires a large clear space in front and behind for optimal air flow.</description>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>3300</WorkToBuild>
+      <Flammability>0.4</Flammability>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>100</Steel>
+      <Component>2</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_WindTurbine</li>
+    </placeWorkers>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc7</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(5,2)</size>
+    <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerPlantWind</compClass>
+        <transmitsPower>true</transmitsPower>
+        <basePowerConsumption>-2000</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="1" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Power/WindTurbine/WindTurbineBody</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,2)</drawSize>
+      <shadowData>
+        <volume>(0.2, 1.0, 0.8)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(2,0.15,1,1.4)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <blockWind>true</blockWind>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+</Buildings>

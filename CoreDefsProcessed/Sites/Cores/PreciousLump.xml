@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SiteCoreDef>
+    <defName>PreciousLump</defName>
+    <label>lump of precious resources</label>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/PreciousLump</expandingIconTexture>
+    <workerClass>SiteCoreWorker_PreciousLump</workerClass>
+  </SiteCoreDef>
+  <GenStepDef>
+    <defName>PreciousLump</defName>
+    <linkWithSite>PreciousLump</linkWithSite>
+    <order>450</order>
+    <genStep Class="GenStep_PreciousLump">
+      <nearMapCenter>true</nearMapCenter>
+      <mineables>
+        <li ListIndex="0">MineableGold</li>
+        <li ListIndex="1">MineableJade</li>
+      </mineables>
+      <totalValueRange>
+        <min>1400</min>
+        <max>2500</max>
+      </totalValueRange>
+    </genStep>
+  </GenStepDef>
+</Defs>

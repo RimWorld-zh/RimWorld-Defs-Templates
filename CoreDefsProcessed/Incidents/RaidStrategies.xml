@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RaidStrategyDef>
+    <defName>ImmediateAttack</defName>
+    <workerClass>RaidStrategyWorker_ImmediateAttack</workerClass>
+    <arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
+    <arrivalTextEnemy>They are attacking immediately.</arrivalTextEnemy>
+    <pointsFactor>0.9</pointsFactor>
+    <selectionChance>0.75</selectionChance>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arriveModes>
+      <li ListIndex="0">EdgeDrop</li>
+      <li ListIndex="1">EdgeWalkIn</li>
+      <li ListIndex="2">CenterDrop</li>
+    </arriveModes>
+  </RaidStrategyDef>
+  <RaidStrategyDef>
+    <defName>ImmediateAttackSmart</defName>
+    <workerClass>RaidStrategyWorker_ImmediateAttackSmart</workerClass>
+    <arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
+    <arrivalTextEnemy>They are attacking immediately.\n\nWatch out - they appear to be unusually clever with their tactics.</arrivalTextEnemy>
+    <pointsFactor>0.85</pointsFactor>
+    <selectionChance>0.25</selectionChance>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arriveModes>
+      <li ListIndex="0">EdgeDrop</li>
+      <li ListIndex="1">EdgeWalkIn</li>
+      <li ListIndex="2">CenterDrop</li>
+    </arriveModes>
+  </RaidStrategyDef>
+  <RaidStrategyDef>
+    <defName>StageThenAttack</defName>
+    <workerClass>RaidStrategyWorker_StageThenAttack</workerClass>
+    <arrivalTextFriendly>They will prepare for a while before moving in to help you.</arrivalTextFriendly>
+    <arrivalTextEnemy>They will prepare for a while, then attack.\n\nPrepare a defense or attack them pre-emptively.</arrivalTextEnemy>
+    <pointsFactor>1.0</pointsFactor>
+    <selectionChance>1.0</selectionChance>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arriveModes>
+      <li ListIndex="0">EdgeDrop</li>
+      <li ListIndex="1">EdgeWalkIn</li>
+    </arriveModes>
+  </RaidStrategyDef>
+  <RaidStrategyDef>
+    <defName>ImmediateAttackSappers</defName>
+    <workerClass>RaidStrategyWorker_ImmediateAttackSappers</workerClass>
+    <arrivalTextEnemy>It looks like they want to use sappers to tunnel around your defenses.</arrivalTextEnemy>
+    <pointsFactor>0.80</pointsFactor>
+    <selectionChance>2.0</selectionChance>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <arriveModes>
+      <li ListIndex="0">EdgeDrop</li>
+      <li ListIndex="1">EdgeWalkIn</li>
+    </arriveModes>
+    <minPawns>2</minPawns>
+    <minDaysPassed>30</minDaysPassed>
+  </RaidStrategyDef>
+  <RaidStrategyDef>
+    <defName>Siege</defName>
+    <workerClass>RaidStrategyWorker_Siege</workerClass>
+    <arrivalTextFriendly>It looks like they want to use siege tactics to help you.</arrivalTextFriendly>
+    <arrivalTextEnemy>It looks like they want to besiege the colony and pound you with mortars from a distance. You can try to wait them out - or go get them.</arrivalTextEnemy>
+    <pointsFactor>0.6</pointsFactor>
+    <selectionChance>1.1</selectionChance>
+    <letterLabelEnemy>Siege</letterLabelEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arriveModes>
+      <li ListIndex="0">EdgeDrop</li>
+      <li ListIndex="1">EdgeWalkIn</li>
+    </arriveModes>
+    <minPawns>4</minPawns>
+    <minDaysPassed>15</minDaysPassed>
+  </RaidStrategyDef>
+</Defs>

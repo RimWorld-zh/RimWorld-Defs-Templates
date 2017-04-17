@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DutyDef>
+    <defName>PrepareCaravan_GatherItems</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Basic needs -->
+        <li Class="ThinkNode_Subtree" ListIndex="0">
+          <treeDef>SatisfyVeryUrgentNeeds</treeDef>
+        </li>
+        <!-- Gather items -->
+        <li Class="JobGiver_PrepareCaravan_GatherItems" ListIndex="1" />
+        <!-- Wander -->
+        <li Class="ThinkNode_Tagger" ListIndex="2">
+          <subNodes>
+            <li Class="JobGiver_WanderAnywhere" ListIndex="0" />
+          </subNodes>
+          <tagToGive>WaitingForOthersToFinishGatheringItems</tagToGive>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>PrepareCaravan_Wait</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Basic needs -->
+        <li Class="ThinkNode_Subtree" ListIndex="0">
+          <treeDef>SatisfyVeryUrgentNeeds</treeDef>
+        </li>
+        <!-- Wander near duty target -->
+        <li Class="ThinkNode_ConditionalHasDutyTarget" ListIndex="1">
+          <subNodes>
+            <li Class="JobGiver_WanderNearDutyLocation" ListIndex="0">
+              <wanderRadius>5</wanderRadius>
+            </li>
+          </subNodes>
+        </li>
+        <!-- Wander in prison cell if prisoner -->
+        <li Class="ThinkNode_ConditionalPrisonerInPrisonCell" ListIndex="2">
+          <subNodes>
+            <li Class="JobGiver_WanderCurrentRoom" ListIndex="0" />
+          </subNodes>
+        </li>
+        <!-- Wander anywhere -->
+        <li Class="JobGiver_WanderAnywhere" ListIndex="3" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <!-- note that this duty is assigned to both: followers and followees -->
+  <DutyDef>
+    <defName>PrepareCaravan_GatherPawns</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Basic needs -->
+        <li Class="ThinkNode_Subtree" ListIndex="0">
+          <treeDef>SatisfyVeryUrgentNeeds</treeDef>
+        </li>
+        <!-- Colonist -->
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="1">
+          <subNodes>
+            <!-- Gather pawns -->
+            <li Class="JobGiver_PrepareCaravan_GatherPawns" ListIndex="0" />
+            <li Class="JobGiver_GotoTravelDestination" ListIndex="1">
+              <locomotionUrgency>Jog</locomotionUrgency>
+            </li>
+          </subNodes>
+        </li>
+        <!-- Non-colonist -->
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="2">
+          <subNodes>
+            <!-- Follow the colonist -->
+            <li Class="ThinkNode_ConditionalHasDutyPawnTarget" ListIndex="0">
+              <subNodes>
+                <li Class="JobGiver_AIFollowEscortee" ListIndex="0" />
+              </subNodes>
+            </li>
+          </subNodes>
+          <invert>true</invert>
+        </li>
+        <!-- Wander near the colonist -->
+        <li Class="ThinkNode_ConditionalHasDutyPawnTarget" ListIndex="3">
+          <subNodes>
+            <li Class="JobGiver_WanderNearDutyLocation" ListIndex="0">
+              <wanderRadius>5</wanderRadius>
+            </li>
+          </subNodes>
+        </li>
+        <!-- Wander in prison cell if prisoner -->
+        <li Class="ThinkNode_ConditionalPrisonerInPrisonCell" ListIndex="4">
+          <subNodes>
+            <li Class="JobGiver_WanderCurrentRoom" ListIndex="0" />
+          </subNodes>
+        </li>
+        <!-- Wander anywhere -->
+        <li Class="JobGiver_WanderAnywhere" ListIndex="5" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>PrepareCaravan_Pause</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Colonist -->
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="0">
+          <subNodes>
+            <!-- Just do the normal work -->
+            <li Class="ThinkNode_Subtree" ListIndex="0">
+              <treeDef>MainColonistBehaviorCore</treeDef>
+            </li>
+          </subNodes>
+        </li>
+        <!-- Non-colonist -->
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="1">
+          <subNodes>
+            <!-- Basic needs -->
+            <li Class="ThinkNode_Subtree" ListIndex="0">
+              <treeDef>SatisfyVeryUrgentNeeds</treeDef>
+            </li>
+          </subNodes>
+          <invert>true</invert>
+        </li>
+        <!-- Wander in prison cell if prisoner -->
+        <li Class="ThinkNode_ConditionalPrisonerInPrisonCell" ListIndex="2">
+          <subNodes>
+            <li Class="JobGiver_WanderCurrentRoom" ListIndex="0" />
+          </subNodes>
+        </li>
+        <!-- Wander anywhere -->
+        <li Class="JobGiver_WanderAnywhere" ListIndex="3" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+</Defs>

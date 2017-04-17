@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef Name="BaseWeaponNeolithic" Abstract="True" ParentName="BaseWeapon">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li>Neolithic</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef Name="BaseProjectileNeolithic" Abstract="True">
+    <label>arrow</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+  </ThingDef>
+  <!-- ======================================================== -->
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_Short</defName>
+    <label>shortbow arrow</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>44</speed>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>Bow_Short</defName>
+    <label>short bow</label>
+    <description>A simple short bow, made with skill, but using only the most primitive technologies.</description>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>0.8</Mass>
+      <AccuracyTouch>0.89</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.41</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricSmithy</li>
+        <li ListIndex="1">FueledSmithy</li>
+        <li ListIndex="2">ElectricSmithy</li>
+        <li ListIndex="3">FueledSmithy</li>
+        <li ListIndex="4">CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/BowShort</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>BowSmall</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>29</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.35</warmupTime>
+        <soundCast>BowSmall</soundCast>
+        <projectileDef>Arrow_Short</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Neolithic</li>
+      <li ListIndex="1">NeolithicRanged</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Pilum_Thrown</defName>
+    <label>pilum (thrown)</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Pilum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>26</speed>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Stab</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>Pila</defName>
+    <label>pila</label>
+    <description>A bundle of pila, non-reusable throwing spears.</description>
+    <statBases>
+      <WorkToMake>13000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.91</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <WoodLog>70</WoodLog>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricSmithy</li>
+        <li ListIndex="1">FueledSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Pilum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>20</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>4.0</warmupTime>
+        <soundCast>Interact_BeatFire</soundCast>
+        <projectileDef>Pilum_Thrown</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Neolithic</li>
+      <li ListIndex="1">NeolithicRanged</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_Great</defName>
+    <label>greatbow arrow</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>49</speed>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>Bow_Great</defName>
+    <label>great bow</label>
+    <description>A powerful greatbow. Fires a heavy arrow long distances.</description>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>0.93</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <WoodLog>50</WoodLog>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricSmithy</li>
+        <li ListIndex="1">FueledSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/BowGreat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>BowLarge</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>32</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.8</warmupTime>
+        <soundCast>BowLarge</soundCast>
+        <projectileDef>Arrow_Great</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Neolithic</li>
+      <li ListIndex="1">NeolithicRanged</li>
+    </weaponTags>
+  </ThingDef>
+</ThingDefs>

@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Abstract="True" ParentName="AnimalThingBase" Name="BaseInsect">
+    <statBases>
+      <ToxicSensitivity>0</ToxicSensitivity>
+    </statBases>
+    <race>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <meatColor>(160,150,140)</meatColor>
+    </race>
+  </ThingDef>
+  <!-- ====================================================== -->
+  <ThingDef ParentName="BaseInsect">
+    <defName>Megascarab</defName>
+    <label>megascarab</label>
+    <description>A large, genetically-engineered beetle. Once the worker caste of an artifical ecosystem of insectoids designed to fight mechanoid invasions, it is now usually seen without its deadlier insectoid cousins. Still, its size and hard shell make it dangerous when it attacks. A eusocial creature, it cannot reproduce individually.</description>
+    <statBases>
+      <MoveSpeed>4.7</MoveSpeed>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <MarketValue>100</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>1.0</Flammability>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">Insectoid</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <body>BeetleLike</body>
+      <lifeExpectancy>10</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <wildness>0.95</wildness>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHealthScale>0.4</baseHealthScale>
+      <baseHungerRate>0.10</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>EusocialInsectAdult</def>
+          <minAge>0.4</minAge>
+          <soundCall>Pawn_Megascarab_Call</soundCall>
+          <soundAngry>Pawn_Megascarab_Angry</soundAngry>
+          <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+          <soundDeath>Pawn_Megascarab_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <meatColor>(160,150,140)</meatColor>
+      <useMeatFrom>Megaspider</useMeatFrom>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Megascarab</defName>
+    <label>megascarab</label>
+    <race>Megascarab</race>
+    <labelPlural>megascarabs</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>megascarab</label>
+        <labelPlural>megascarab</labelPlural>
+        <labelMale>male megascarab</labelMale>
+        <labelMalePlural>male megascarabs</labelMalePlural>
+        <labelFemale>female megascarab</labelFemale>
+        <labelFemalePlural>female megascarabs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megascarab/Megascarab</texPath>
+          <color>(114,107,84)</color>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>megascarab</label>
+        <labelPlural>megascarab</labelPlural>
+        <labelMale>male megascarab</labelMale>
+        <labelMalePlural>male megascarabs</labelMalePlural>
+        <labelFemale>female megascarab</labelFemale>
+        <labelFemalePlural>female megascarabs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megascarab/Megascarab</texPath>
+          <color>(114,107,84)</color>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>megascarab</label>
+        <labelPlural>megascarab</labelPlural>
+        <labelMale>male megascarab</labelMale>
+        <labelMalePlural>male megascarabs</labelMalePlural>
+        <labelFemale>female megascarab</labelFemale>
+        <labelFemalePlural>female megascarabs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megascarab/Megascarab</texPath>
+          <color>(114,107,84)</color>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.3, 0.2)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>30</combatPower>
+    <labelMale>male megascarab</labelMale>
+    <labelMalePlural>male megascarabs</labelMalePlural>
+    <labelFemale>female megascarab</labelFemale>
+    <labelFemalePlural>female megascarabs</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.25</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!-- ====================================================== -->
+  <ThingDef ParentName="BaseInsect">
+    <defName>Spelopede</defName>
+    <label>spelopede</label>
+    <description>A medium-sized bioengineered bug the size of a sheep. The spelopede is the middle caste of a hive, taking care of most work tasks as well as fighting with its claws.</description>
+    <statBases>
+      <MoveSpeed>4.3</MoveSpeed>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <MarketValue>450</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>1.0</Flammability>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">Insectoid</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.9</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <body>BeetleLikeWithClaw</body>
+      <lifeExpectancy>6</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <wildness>0.95</wildness>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>10</gestationPeriodDays>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.8</baseBodySize>
+      <baseHealthScale>1.7</baseHealthScale>
+      <baseHungerRate>0.25</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>EusocialInsectAdult</def>
+          <minAge>0.2</minAge>
+          <soundCall>Pawn_Spelopede_Call</soundCall>
+          <soundAngry>Pawn_Spelopede_Angry</soundAngry>
+          <soundWounded>Pawn_Spelopede_Pain</soundWounded>
+          <soundDeath>Pawn_Spelopede_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <meatColor>(160,150,140)</meatColor>
+      <useMeatFrom>Megaspider</useMeatFrom>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Spelopede</defName>
+    <label>spelopede</label>
+    <race>Spelopede</race>
+    <labelPlural>spelopedes</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>spelopede</label>
+        <labelPlural>spelopede</labelPlural>
+        <labelMale>male spelopede</labelMale>
+        <labelMalePlural>male spelopedes</labelMalePlural>
+        <labelFemale>female spelopede</labelFemale>
+        <labelFemalePlural>female spelopedes</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Spelopede/Spelopede</texPath>
+          <color>(156,148,125)</color>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>spelopede</label>
+        <labelPlural>spelopede</labelPlural>
+        <labelMale>male spelopede</labelMale>
+        <labelMalePlural>male spelopedes</labelMalePlural>
+        <labelFemale>female spelopede</labelFemale>
+        <labelFemalePlural>female spelopedes</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Spelopede/Spelopede</texPath>
+          <color>(156,148,125)</color>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>spelopede</label>
+        <labelPlural>spelopede</labelPlural>
+        <labelMale>male spelopede</labelMale>
+        <labelMalePlural>male spelopedes</labelMalePlural>
+        <labelFemale>female spelopede</labelFemale>
+        <labelFemalePlural>female spelopedes</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Spelopede/Spelopede</texPath>
+          <color>(156,148,125)</color>
+          <drawSize>1.65</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.5, 0.37)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.65</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>65</combatPower>
+    <labelMale>male spelopede</labelMale>
+    <labelMalePlural>male spelopedes</labelMalePlural>
+    <labelFemale>female spelopede</labelFemale>
+    <labelFemalePlural>female spelopedes</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!-- ====================================================== -->
+  <ThingDef ParentName="BaseInsect">
+    <defName>Megaspider</defName>
+    <label>megaspider</label>
+    <description>Not actually a spider, the megaspider is a genetically-engineered giant insectoid the size of a bear. Designed for heavy work and combat, its thick chitinous armor makes it hard to kill, while its long deadly ripper-blades make it deadly.</description>
+    <statBases>
+      <MoveSpeed>4.5</MoveSpeed>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <MarketValue>700</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>1.0</Flammability>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">Insectoid</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.9</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <meleeDamageBaseAmount>13</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <body>BeetleLikeWithClaw</body>
+      <lifeExpectancy>6</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <wildness>0.95</wildness>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>10</gestationPeriodDays>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>1.2</baseBodySize>
+      <baseHealthScale>2.5</baseHealthScale>
+      <baseHungerRate>0.35</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>EusocialInsectAdult</def>
+          <minAge>0.2</minAge>
+          <soundCall>Pawn_BigInsect_Call</soundCall>
+          <soundAngry>Pawn_BigInsect_Angry</soundAngry>
+          <soundWounded>Pawn_BigInsect_Pain</soundWounded>
+          <soundDeath>Pawn_BigInsect_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(160,150,140)</meatColor>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Megaspider</defName>
+    <label>megaspider</label>
+    <race>Megaspider</race>
+    <labelPlural>megaspiders</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>megaspider</label>
+        <labelPlural>megaspider</labelPlural>
+        <labelMale>male megaspider</labelMale>
+        <labelMalePlural>male megaspiders</labelMalePlural>
+        <labelFemale>female megaspider</labelFemale>
+        <labelFemalePlural>female megaspiders</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Megaspider</texPath>
+          <color>(154,125,94)</color>
+          <drawSize>1.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>megaspider</label>
+        <labelPlural>megaspider</labelPlural>
+        <labelMale>male megaspider</labelMale>
+        <labelMalePlural>male megaspiders</labelMalePlural>
+        <labelFemale>female megaspider</labelFemale>
+        <labelFemalePlural>female megaspiders</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Megaspider</texPath>
+          <color>(154,125,94)</color>
+          <drawSize>1.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>megaspider</label>
+        <labelPlural>megaspider</labelPlural>
+        <labelMale>male megaspider</labelMale>
+        <labelMalePlural>male megaspiders</labelMalePlural>
+        <labelFemale>female megaspider</labelFemale>
+        <labelFemalePlural>female megaspiders</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Megaspider</texPath>
+          <color>(154,125,94)</color>
+          <drawSize>2.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.7, 0.43)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>2.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>150</combatPower>
+    <labelMale>male megaspider</labelMale>
+    <labelMalePlural>male megaspiders</labelMalePlural>
+    <labelFemale>female megaspider</labelFemale>
+    <labelFemalePlural>female megaspiders</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+</Defs>

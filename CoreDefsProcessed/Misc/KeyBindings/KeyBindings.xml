@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KeyBindingDefs>
+  <!-- In-game camera -->
+  <KeyBindingDef Name="GameMapKeyBinding" Abstract="true">
+    <category>GameMapCamera</category>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameMapKeyBinding">
+    <defName>MapDollyUp</defName>
+    <label>dolly up</label>
+    <category>GameMapCamera</category>
+    <defaultKeyCodeA>W</defaultKeyCodeA>
+    <defaultKeyCodeB>UpArrow</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameMapKeyBinding">
+    <defName>MapDollyDown</defName>
+    <label>dolly down</label>
+    <category>GameMapCamera</category>
+    <defaultKeyCodeA>S</defaultKeyCodeA>
+    <defaultKeyCodeB>DownArrow</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameMapKeyBinding">
+    <defName>MapDollyLeft</defName>
+    <label>dolly left</label>
+    <category>GameMapCamera</category>
+    <defaultKeyCodeA>A</defaultKeyCodeA>
+    <defaultKeyCodeB>LeftArrow</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameMapKeyBinding">
+    <defName>MapDollyRight</defName>
+    <label>dolly right</label>
+    <category>GameMapCamera</category>
+    <defaultKeyCodeA>D</defaultKeyCodeA>
+    <defaultKeyCodeB>RightArrow</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameMapKeyBinding">
+    <defName>MapZoomIn</defName>
+    <label>zoom in</label>
+    <category>GameMapCamera</category>
+    <defaultKeyCodeA>PageDown</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameMapKeyBinding">
+    <defName>MapZoomOut</defName>
+    <label>zoom out</label>
+    <category>GameMapCamera</category>
+    <defaultKeyCodeA>PageUp</defaultKeyCodeA>
+  </KeyBindingDef>
+  <!-- Map play -->
+  <KeyBindingDef Name="GameKeyBinding" Abstract="true">
+    <category>Game</category>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>TakeScreenshot</defName>
+    <label>take screenshot</label>
+    <category>Game</category>
+    <defaultKeyCodeA>F10</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>ToggleScreenshotMode</defName>
+    <label>toggle screenshot mode</label>
+    <category>Game</category>
+    <defaultKeyCodeA>F11</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>SelectNextInCell</defName>
+    <label>select next in cell</label>
+    <category>Game</category>
+    <defaultKeyCodeA>KeypadMultiply</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>TogglePause</defName>
+    <label>pause/resume game</label>
+    <category>Game</category>
+    <defaultKeyCodeA>Space</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>TimeSpeedNormal</defName>
+    <label>game speed: normal</label>
+    <category>Game</category>
+    <defaultKeyCodeA>Alpha1</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>TimeSpeedFast</defName>
+    <label>game speed: fast</label>
+    <category>Game</category>
+    <defaultKeyCodeA>Alpha2</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>TimeSpeedSuperfast</defName>
+    <label>game speed: super fast</label>
+    <category>Game</category>
+    <defaultKeyCodeA>Alpha3</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>TimeSpeedUltrafast</defName>
+    <label>game speed: ultra fast (debug)</label>
+    <category>Game</category>
+    <defaultKeyCodeA>Alpha4</defaultKeyCodeA>
+    <devModeOnly>true</devModeOnly>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>PreviousColonist</defName>
+    <label>previous colonist</label>
+    <category>Game</category>
+    <defaultKeyCodeA>Comma</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="GameKeyBinding">
+    <defName>NextColonist</defName>
+    <label>next colonist</label>
+    <category>Game</category>
+    <defaultKeyCodeA>Period</defaultKeyCodeA>
+  </KeyBindingDef>
+  <!-- Misc (re-used) -->
+  <KeyBindingDef Name="MiscKeyBinding" Abstract="true">
+    <category>SelectionMisc</category>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc1</defName>
+    <label>Misc 1</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>B</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc2</defName>
+    <label>Misc 2</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>H</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc3</defName>
+    <label>Misc 3</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>Y</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc4</defName>
+    <label>Misc 4</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>N</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc5</defName>
+    <label>Misc 5</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>J</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc6</defName>
+    <label>Misc 6</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>U</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc7</defName>
+    <label>Misc 7</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>M</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc8</defName>
+    <label>Misc 8</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>K</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc9</defName>
+    <label>Misc 9</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>I</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc10</defName>
+    <label>Misc 10</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>L</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc11</defName>
+    <label>Misc 11</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>O</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="MiscKeyBinding">
+    <defName>Misc12</defName>
+    <label>Misc 12</label>
+    <category>SelectionMisc</category>
+    <defaultKeyCodeA>P</defaultKeyCodeA>
+  </KeyBindingDef>
+  <!-- Selection special -->
+  <KeyBindingDef Name="SelectionSpecialKeyBinding" Abstract="true">
+    <category>SelectionSpecial</category>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="SelectionSpecialKeyBinding">
+    <defName>CommandTogglePower</defName>
+    <label>toggle power</label>
+    <category>SelectionSpecial</category>
+    <defaultKeyCodeA>V</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="SelectionSpecialKeyBinding">
+    <defName>CommandItemForbid</defName>
+    <label>toggle forbidden</label>
+    <category>SelectionSpecial</category>
+    <defaultKeyCodeA>F</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="SelectionSpecialKeyBinding">
+    <defName>CommandColonistDraft</defName>
+    <label>draft</label>
+    <category>SelectionSpecial</category>
+    <defaultKeyCodeA>R</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="SelectionSpecialKeyBinding">
+    <defName>ModifierIncrement10x</defName>
+    <label>increment 10x</label>
+    <category>SelectionSpecial</category>
+    <defaultKeyCodeA>LeftControl</defaultKeyCodeA>
+    <defaultKeyCodeB>RightControl</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="SelectionSpecialKeyBinding">
+    <defName>ModifierIncrement100x</defName>
+    <label>increment 100x</label>
+    <category>SelectionSpecial</category>
+    <defaultKeyCodeA>LeftShift</defaultKeyCodeA>
+    <defaultKeyCodeB>RightShift</defaultKeyCodeB>
+  </KeyBindingDef>
+  <!-- Architect: Common -->
+  <KeyBindingDef Name="ArchitectBase" Abstract="true">
+    <category>Architect</category>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="ArchitectBase">
+    <defName>DesignatorCancel</defName>
+    <label>cancel</label>
+    <category>Architect</category>
+    <defaultKeyCodeA>C</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="ArchitectBase">
+    <defName>DesignatorDeconstruct</defName>
+    <label>deconstruct</label>
+    <category>Architect</category>
+    <defaultKeyCodeA>X</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="ArchitectBase">
+    <defName>DesignatorRotateLeft</defName>
+    <label>rotate left</label>
+    <category>Architect</category>
+    <defaultKeyCodeA>Q</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="ArchitectBase">
+    <defName>DesignatorRotateRight</defName>
+    <label>rotate right</label>
+    <category>Architect</category>
+    <defaultKeyCodeA>E</defaultKeyCodeA>
+  </KeyBindingDef>
+  <!-- Debug -->
+  <KeyBindingDef Name="DevelopmentKeyBinding" Abstract="true">
+    <category>Development</category>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="DevelopmentKeyBinding">
+    <defName>TickOnce</defName>
+    <label>tick once</label>
+    <category>Development</category>
+    <defaultKeyCodeA>KeypadPlus</defaultKeyCodeA>
+    <devModeOnly>true</devModeOnly>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="DevelopmentKeyBinding">
+    <defName>ToggleGodMode</defName>
+    <label>toggle god mode</label>
+    <category>Development</category>
+    <defaultKeyCodeA>Semicolon</defaultKeyCodeA>
+    <devModeOnly>true</devModeOnly>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="DevelopmentKeyBinding">
+    <defName>ToggleDebugLog</defName>
+    <label>toggle debug log</label>
+    <category>Development</category>
+    <defaultKeyCodeA>BackQuote</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="DevelopmentKeyBinding">
+    <defName>ToggleDebugActionsMenu</defName>
+    <label>toggle debug actions menu</label>
+    <category>Development</category>
+    <defaultKeyCodeA>Slash</defaultKeyCodeA>
+    <devModeOnly>true</devModeOnly>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="DevelopmentKeyBinding">
+    <defName>ToggleDebugLogMenu</defName>
+    <label>toggle debug log menu</label>
+    <category>Development</category>
+    <defaultKeyCodeA>Insert</defaultKeyCodeA>
+    <devModeOnly>true</devModeOnly>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="DevelopmentKeyBinding">
+    <defName>ToggleDebugInspector</defName>
+    <label>toggle debug inspector</label>
+    <category>Development</category>
+    <defaultKeyCodeA>Quote</defaultKeyCodeA>
+    <devModeOnly>true</devModeOnly>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="DevelopmentKeyBinding">
+    <defName>ToggleDebugSettingsMenu</defName>
+    <label>toggle debug settings menu</label>
+    <category>Development</category>
+    <defaultKeyCodeA>RightBracket</defaultKeyCodeA>
+    <devModeOnly>true</devModeOnly>
+  </KeyBindingDef>
+</KeyBindingDefs>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SitePartDef>
+    <defName>Outpost</defName>
+    <label>outpost</label>
+    <siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <workerClass>SitePartWorker_Outpost</workerClass>
+  </SitePartDef>
+  <GenStepDef>
+    <defName>Outpost</defName>
+    <linkWithSite>Outpost</linkWithSite>
+    <order>450</order>
+    <genStep Class="GenStep_Outpost" />
+  </GenStepDef>
+  <GenStepDef>
+    <defName>OutpostPower</defName>
+    <linkWithSite>Outpost</linkWithSite>
+    <order>451</order>
+    <genStep Class="GenStep_Power" />
+  </GenStepDef>
+</Defs>

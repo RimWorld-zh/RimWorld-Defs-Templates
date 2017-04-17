@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyPartDef>
+    <defName>MechanicalThorax</defName>
+    <label>thorax</label>
+    <hitPoints>40</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftBlade</defName>
+    <label>left blade</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <spawnThingOnRemoved>ScytherBlade</spawnThingOnRemoved>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightBlade</defName>
+    <label>right blade</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <spawnThingOnRemoved>ScytherBlade</spawnThingOnRemoved>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>MechanicalNeck</defName>
+    <label>neck</label>
+    <tags>
+      <li ListIndex="0">BreathingPathway</li>
+      <li ListIndex="1">EatingPathway</li>
+      <li ListIndex="2">TalkingPathway</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>MechanicalHead</defName>
+    <label>head</label>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftSightSensor</defName>
+    <label>left sight sensor</label>
+    <tags>
+      <li ListIndex="0">SightSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightSightSensor</defName>
+    <label>right sight sensor</label>
+    <tags>
+      <li ListIndex="0">SightSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftHearingSensor</defName>
+    <label>left hearing sensor</label>
+    <tags>
+      <li ListIndex="0">HearingSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightHearingSensor</defName>
+    <label>right hearing sensor</label>
+    <tags>
+      <li ListIndex="0">HearingSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>SmellSensor</defName>
+    <label>smell sensor</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftMechanicalShoulder</defName>
+    <label>left shoulder</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>25</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftMechanicalArm</defName>
+    <label>left arm</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbCore</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftMechanicalHand</defName>
+    <label>left hand</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftHandMechanicalPinky</defName>
+    <label>left pinky</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbDigit</li>
+    </tags>
+    <hitPoints>7</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftHandMechanicalMiddleFinger</defName>
+    <label>left middle finger</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbDigit</li>
+    </tags>
+    <hitPoints>7</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftHandMechanicalIndexFinger</defName>
+    <label>left index finger</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbDigit</li>
+    </tags>
+    <hitPoints>7</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftHandMechanicalThumb</defName>
+    <label>left thumb</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbDigit</li>
+    </tags>
+    <hitPoints>7</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightMechanicalShoulder</defName>
+    <label>right shoulder</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>25</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightMechanicalArm</defName>
+    <label>right arm</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbCore</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightMechanicalHand</defName>
+    <label>right hand</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightHandMechanicalPinky</defName>
+    <label>right pinky</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbDigit</li>
+    </tags>
+    <hitPoints>7</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightHandMechanicalMiddleFinger</defName>
+    <label>right middle finger</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbDigit</li>
+    </tags>
+    <hitPoints>7</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightHandMechanicalIndexFinger</defName>
+    <label>right index finger</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbDigit</li>
+    </tags>
+    <hitPoints>7</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightHandMechanicalThumb</defName>
+    <label>right thumb</label>
+    <tags>
+      <li ListIndex="0">ManipulationLimbDigit</li>
+    </tags>
+    <hitPoints>7</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftMechanicalLeg</defName>
+    <label>left leg</label>
+    <tags>
+      <li ListIndex="0">MovingLimbCore</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftMechanicalFoot</defName>
+    <label>left foot</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightMechanicalLeg</defName>
+    <label>right leg</label>
+    <tags>
+      <li ListIndex="0">MovingLimbCore</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightMechanicalFoot</defName>
+    <label>right foot</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>MechanicalCentipedeBodyFirstRing</defName>
+    <label>first body ring</label>
+    <tags>
+      <li ListIndex="0">MovingLimbCore</li>
+      <li ListIndex="1">ManipulationLimbCore</li>
+    </tags>
+    <hitPoints>100</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>MechanicalCentipedeBodySecondRing</defName>
+    <label>second body ring</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+      <li ListIndex="1">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>85</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>MechanicalCentipedeBodyThirdRing</defName>
+    <label>third body ring</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+      <li ListIndex="1">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>70</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>MechanicalCentipedeBodyFourthRing</defName>
+    <label>fourth body ring</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+      <li ListIndex="1">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>55</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>MechanicalCentipedeBodyFifthRing</defName>
+    <label>fifth body ring</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+      <li ListIndex="1">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>40</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>MechanicalCentipedeBodySixthRing</defName>
+    <label>sixth body ring</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+      <li ListIndex="1">ManipulationLimbSegment</li>
+    </tags>
+    <hitPoints>100</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>ArtificialBrain</defName>
+    <label>artificial brain</label>
+    <tags>
+      <li ListIndex="0">ConsciousnessSource</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+</Defs>

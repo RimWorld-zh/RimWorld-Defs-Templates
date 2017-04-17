@@ -1,0 +1,964 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Buildings>
+  <ThingDef ParentName="BuildingBase">
+    <defName>OrbitalTradeBeacon</defName>
+    <label>orbital trade beacon</label>
+    <description>Required for orbital trading. You can only sell goods that are near an orbital trade beacon. Can be placed indoors.</description>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>1300</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <pathCost>8</pathCost>
+    <costList>
+      <Steel>50</Steel>
+      <Component>1</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">MicroelectronicsBasics</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowTradeBeaconRadius</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <thingClass>Building_OrbitalTradeBeacon</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>40</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Breakdownable" ListIndex="2" />
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Misc/DropBeacon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.4, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.15</fillPercent>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>CommsConsole</defName>
+    <label>comms console</label>
+    <description>Allows radio contact with remote traders as well as other factions for trade and diplomacy.</description>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>120</Steel>
+      <Component>4</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">MicroelectronicsBasics</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <thingClass>Building_CommsConsole</thingClass>
+    <category>Building</category>
+    <size>(3,2)</size>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Breakdownable" ListIndex="2" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,2)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/CommsConsole</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,4)</drawSize>
+      <damageData>
+        <rect>(0,0,3,1.8)</rect>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1</fillPercent>
+    <blockWind>true</blockWind>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>FirefoamPopper</defName>
+    <label>firefoam popper</label>
+    <description>When touched by fire or triggered by hand, this pops and sprays a fire-extinguishing foam in a circular field around itself.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>-8</Beauty>
+    </statBases>
+    <pathCost>25</pathCost>
+    <costList>
+      <Steel>75</Steel>
+      <Component>1</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Firefoam</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <specialDisplayRadius>9.9</specialDisplayRadius>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc7</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Explosive" ListIndex="0">
+        <explosiveRadius>9.9</explosiveRadius>
+        <explosiveDamageType>Extinguish</explosiveDamageType>
+        <postExplosionSpawnThingDef>FilthFireFoam</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <startWickOnDamageTaken>Flame</startWickOnDamageTaken>
+        <startWickHitPointsPercent>-1</startWickHitPointsPercent>
+      </li>
+      <li Class="CompProperties_Usable" ListIndex="1">
+        <useJob>TriggerFirefoamPopper</useJob>
+        <useLabel>Trigger firefoam popper</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect" ListIndex="2">
+        <compClass>CompUseEffect_StartWick</compClass>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Misc/FirefoamPopper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.25, 0.5, 0.25)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.15</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>MoisturePump</defName>
+    <label>moisture pump</label>
+    <description>Very slowly removes moisture from nearby terrain, converting marshes or shallow water into dry ground. Does not affect deep water.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-8</Beauty>
+    </statBases>
+    <pathCost>25</pathCost>
+    <costList>
+      <Steel>75</Steel>
+      <Component>5</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">MoisturePump</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <specialDisplayRadius>6.9</specialDisplayRadius>
+    <designationCategory>Misc</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_TerrainPumpDry" ListIndex="1">
+        <radius>6.9</radius>
+        <daysToRadius>60</daysToRadius>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Misc/MoisturePump</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.25, 0.5, 0.25)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.15</fillPercent>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>GroundPenetratingScanner</defName>
+    <label>ground-penetrating scanner</label>
+    <description>A downward-facing penetrating radar, combined with sonar and magnetic imagers, allows you to detect (but not identify) minerals buried deep under the surface. Requires a huge amount of electricity.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-8</Beauty>
+    </statBases>
+    <pathCost>25</pathCost>
+    <costList>
+      <Steel>400</Steel>
+      <Component>12</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">GroundPenetratingScanner</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1500</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="1" />
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li ListIndex="3">
+        <compClass>CompDeepScanner</compClass>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/GroundPenetratingScanner</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(1.4, 0.5, 1.4)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.25</fillPercent>
+  </ThingDef>
+  <!--========================== Transport pods ============================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>PodLauncher</defName>
+    <label>pod launcher</label>
+    <description>A fueling port for launching one transport pod. Pod launchers can launch as a group - but the launchers must be placed adjacent to each other.</description>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>80</Steel>
+      <Component>3</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">TransportPod</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_FuelingPort</li>
+      <li ListIndex="1">PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(1,2)</size>
+    <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_Refuelable" ListIndex="0">
+        <fuelCapacity>150.0</fuelCapacity>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <fuelFilter>
+          <thingDefs>
+            <li ListIndex="0">Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showFuelGizmo>true</showFuelGizmo>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/PodLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,3)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1.0</fillPercent>
+    <building>
+      <hasFuelingPort>true</hasFuelingPort>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>TransportPod</defName>
+    <label>transport pod</label>
+    <description>A launchable suborbital-travel cargo pod capable of carrying people, items, or animals. Can be used for transport, surprise attacks, or reinforcing battles.</description>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <costList>
+      <Steel>80</Steel>
+      <Component>1</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">TransportPod</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_NeedsFuelingPort</li>
+      <li ListIndex="1">PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Transporter" ListIndex="0" />
+      <li Class="CompProperties_Launchable" ListIndex="1" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>false</castEdgeShadows>
+    <selectable>true</selectable>
+    <iconDrawScale>1</iconDrawScale>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+  </ThingDef>
+  <!--========================== Facilities ============================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>MultiAnalyzer</defName>
+    <label>multi-analyzer</label>
+    <description>Increases research speed. Needs to be placed near hi-tech research bench. One research bench can be linked to only one multi-analyzer.</description>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>100</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>50</Plasteel>
+      <Gold>20</Gold>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">MultiAnalyzer</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Facility" ListIndex="2">
+        <statOffsets>
+          <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/MultiAnalyzer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0.15,0.15,1.7,1.7)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>VitalsMonitor</defName>
+    <label>vitals monitor</label>
+    <description>Increases patients treatment quality. Needs to be placed adjacent to a medical bed. One medical bed can be linked to only one vitals monitor.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <costList>
+      <Steel>180</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">VitalsMonitor</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(1,1)</size>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Facility" ListIndex="2">
+        <statOffsets>
+          <MedicalTendQualityOffset>0.07</MedicalTendQualityOffset>
+          <ImmunityGainSpeedFactor>0.02</ImmunityGainSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+        <canLinkToMedBedsOnly>true</canLinkToMedBedsOnly>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Misc/VitalsMonitor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.3, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </shadowData>
+      <damageData>
+        <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+        <rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+        <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+        <rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+        <cornerTR>Damage/Corner</cornerTR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.2</fillPercent>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ToolCabinet</defName>
+    <label>tool cabinet</label>
+    <description>Increases work speed. Needs to be placed near workbench. One workbench can be simultaneously linked to only two tools cabinets.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <costList>
+      <Steel>200</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(2,1)</size>
+    <comps>
+      <li Class="CompProperties_Facility" ListIndex="0">
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.06</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/ToolCabinet</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <color>(96,114,95)</color>
+      <drawSize>(2,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.35</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+  </ThingDef>
+  <!--=========================== Graves ============================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Grave</defName>
+    <label>grave</label>
+    <description>Place the dead in graves to give them a decent final resting place. Colonists will visit full graves to gain meditative joy.</description>
+    <statBases>
+      <WorkToBuild>650</WorkToBuild>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructDirt</constructEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc8</designationHotKey>
+    <thingClass>Building_Grave</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <size>(1,2)</size>
+    <useHitPoints>false</useHitPoints>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/GraveEmpty</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Storage</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <isInert>true</isInert>
+      <preventDeterioration>true</preventDeterioration>
+      <fullGraveGraphicData>
+        <texPath>Things/Building/Misc/GraveFull</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3,4)</drawSize>
+      </fullGraveGraphicData>
+      <ai_chillDestination>false</ai_chillDestination>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li ListIndex="0">Corpses</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li ListIndex="0">CorpsesHumanlike</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Sarcophagus</defName>
+    <label>sarcophagus</label>
+    <description>An ornamented burial receptacle for the honored dead.</description>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Woody</li>
+      <li ListIndex="1">Metallic</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc9</designationHotKey>
+    <thingClass>Building_Sarcophagus</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <size>(1,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="1">
+        <nameMaker>ArtName_SarcophagusPlate</nameMaker>
+        <descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+        <mustBeFullGrave>true</mustBeFullGrave>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/Sarcophagus</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Storage</li>
+      <li ListIndex="1">ITab_Art</li>
+    </inspectorTabs>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <blockWind>true</blockWind>
+    <building>
+      <preventDeterioration>true</preventDeterioration>
+      <fullGraveGraphicData>
+        <texPath>Things/Building/Misc/SarcophagusFull</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3,4)</drawSize>
+      </fullGraveGraphicData>
+      <ai_chillDestination>false</ai_chillDestination>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li ListIndex="0">Corpses</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li ListIndex="0">CorpsesHumanlike</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li ListIndex="0">AllowCorpsesStranger</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+  </ThingDef>
+  <!--======================= Cryptosleep caskets ===========================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CryptosleepCasket</defName>
+    <label>cryptosleep casket</label>
+    <description>A self-powered sarcophagus designed to keep a person in a state of suspended animation for many years.</description>
+    <statBases>
+      <WorkToBuild>3200</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>180</Steel>
+      <Uranium>5</Uranium>
+      <Component>8</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Cryptosleep</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <thingClass>Building_CryptosleepCasket</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(1,2)</size>
+    <comps>
+      <li Class="CompProperties_Explosive" ListIndex="0">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipCryptosleepCasket</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2, 3)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.4</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <blockWind>true</blockWind>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>AncientCryptosleepCasket</defName>
+    <label>ancient cryptosleep casket</label>
+    <description>This cryptosleep casket looks like it has been here for a very long time. Who knows what it might contain?</description>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>180</Steel>
+      <Uranium>5</Uranium>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building_AncientCryptosleepCasket</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(1,2)</size>
+    <comps>
+      <li Class="CompProperties_Explosive" ListIndex="0">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlagSteel>1</ChunkSlagSteel>
+      <Steel>25</Steel>
+      <Uranium>3</Uranium>
+    </killedLeavings>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipCryptosleepCasket</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,3)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.4</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <blockWind>true</blockWind>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <!--============================ Spots =============================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>MarriageSpot</defName>
+    <label>marriage spot</label>
+    <description>Designates a spot where marriage ceremonies will take place. Spectators can watch from either side.</description>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc10</designationHotKey>
+    <thingClass>Building_MarriageSpot</thingClass>
+    <category>Building</category>
+    <size>(2,1)</size>
+    <useHitPoints>False</useHitPoints>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Misc/MarriageSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,1)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <sowTag>SupportPlantsOnly</sowTag>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>PartySpot</defName>
+    <label>party spot</label>
+    <description>Designates a spot where parties will be centered. Parties use an area around the spot.</description>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc11</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <useHitPoints>False</useHitPoints>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Misc/PartySpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <sowTag>SupportPlantsOnly</sowTag>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>CaravanPackingSpot</defName>
+    <label>caravan packing spot</label>
+    <description>Designates a spot where caravans will be formed.</description>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <designationHotKey>Misc12</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <useHitPoints>false</useHitPoints>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Building/Misc/CaravanPackingSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <sowTag>SupportPlantsOnly</sowTag>
+    </building>
+  </ThingDef>
+</Buildings>

@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef Name="ApparelBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <techLevel>Medieval</techLevel>
+  </ThingDef>
+  <ThingDef Name="ApparelMakeableBase" ParentName="ApparelBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef Name="ArmorMakeableBase" ParentName="ApparelBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <!-- ====================================== Neolithic =========================================== -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_TribalA</defName>
+    <label>tribalwear</label>
+    <description>A garment crafted without machines using neolithic tools.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>3200</WorkToMake>
+      <Mass>0.4</Mass>
+      <Insulation_Cold>-10</Insulation_Cold>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>35</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+        <li ListIndex="2">ElectricTailoringBench</li>
+        <li ListIndex="3">HandTailoringBench</li>
+        <li ListIndex="4">CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/TribalA/TribalA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li ListIndex="0">
+          <weight>10</weight>
+          <only>RGBA(0.4,0.3,0.15,1)</only>
+        </li>
+        <li ListIndex="1">
+          <weight>15</weight>
+          <only>RGBA(0.6,0.45,0.18,1)</only>
+        </li>
+        <li ListIndex="2">
+          <weight>20</weight>
+          <only>RGBA(0.8,0.6,0.23,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Neolithic</techLevel>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Torso</li>
+        <li ListIndex="1">Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">OnSkin</li>
+        <li ListIndex="1">Middle</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/TribalA/TribalA</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Tribal</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_Parka</defName>
+    <label>parka</label>
+    <description>A thick parka for staying warm in even the coldest of temperatures.</description>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>3.8</Mass>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.03</ArmorRating_Heat>
+      <Insulation_Cold>-40</Insulation_Cold>
+      <Insulation_Heat>-3</Insulation_Heat>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Parka/Parka</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li ListIndex="0">
+          <weight>10</weight>
+          <only>RGBA(0.33,0.33,0.33,1)</only>
+        </li>
+        <li ListIndex="1">
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li ListIndex="2">
+          <weight>10</weight>
+          <only>RGBA(0.4,0.3,0.15,1)</only>
+        </li>
+        <li ListIndex="3">
+          <weight>15</weight>
+          <min>RGBA(0.3,0.3,0.3,1)</min>
+          <max>RGBA(0.5,0.5,0.5,1)</max>
+        </li>
+        <li ListIndex="4">
+          <weight>6</weight>
+          <min>RGBA(0.5,0.5,0.5,1)</min>
+          <max>RGBA(1,1,1,1)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <techLevel>Neolithic</techLevel>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.05</MoveSpeed>
+      <WorkSpeedGlobal>-0.20</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Torso</li>
+        <li ListIndex="1">Shoulders</li>
+        <li ListIndex="2">Arms</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">Shell</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Parka/Parka</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Outlander</li>
+        <li ListIndex="1">Tribal</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Worker</li>
+        <li ListIndex="1">Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <!-- ====================================== Medieval =========================================== -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_Pants</defName>
+    <label>pants</label>
+    <description>A simple set of pants.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>7000</WorkToMake>
+      <Mass>0.5</Mass>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <Insulation_Cold>-3</Insulation_Cold>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+      </recipeUsers>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Various/Pants_OnMap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <techLevel>Medieval</techLevel>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">OnSkin</li>
+      </layers>
+      <tags>
+        <li ListIndex="0">Outlander</li>
+        <li ListIndex="1">Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Worker</li>
+        <li ListIndex="1">Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_BasicShirt</defName>
+    <label>T-shirt</label>
+    <description>A simple T-shirt.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>0.25</Mass>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <Insulation_Cold>-3</Insulation_Cold>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <techLevel>Medieval</techLevel>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Torso</li>
+        <li ListIndex="1">Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">OnSkin</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Outlander</li>
+        <li ListIndex="1">Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Worker</li>
+        <li ListIndex="1">Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_CollarShirt</defName>
+    <label>button-down shirt</label>
+    <description>A nice-looking collared shirt with buttons.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>7500</WorkToMake>
+      <Mass>0.3</Mass>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <Insulation_Cold>-4</Insulation_Cold>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>55</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+      </recipeUsers>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <generateCommonality>0.8</generateCommonality>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ShirtButton/ShirtButton</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <techLevel>Medieval</techLevel>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Torso</li>
+        <li ListIndex="1">Shoulders</li>
+        <li ListIndex="2">Arms</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">OnSkin</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtButton/ShirtButton</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Outlander</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Worker</li>
+        <li ListIndex="1">Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_Duster</defName>
+    <label>duster</label>
+    <description>A long duster coat for blocking the sun and grit of the desert.</description>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>2.2</Mass>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.07</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.07</ArmorRating_Heat>
+      <Insulation_Cold>-15</Insulation_Cold>
+      <Insulation_Heat>15</Insulation_Heat>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+      </recipeUsers>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Duster/Duster</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li ListIndex="0">
+          <weight>10</weight>
+          <only>RGBA(0.33,0.33,0.33,1)</only>
+        </li>
+        <li ListIndex="1">
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li ListIndex="2">
+          <weight>30</weight>
+          <only>RGBA(0.4,0.3,0.15,1)</only>
+        </li>
+        <li ListIndex="3">
+          <weight>6</weight>
+          <min>RGBA(0.3,0.3,0.3,1)</min>
+          <max>RGBA(0.5,0.5,0.5,1)</max>
+        </li>
+        <li ListIndex="4">
+          <weight>2</weight>
+          <min>RGBA(0.5,0.5,0.5,1)</min>
+          <max>RGBA(1,1,1,1)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <techLevel>Medieval</techLevel>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.04</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Torso</li>
+        <li ListIndex="1">Shoulders</li>
+        <li ListIndex="2">Arms</li>
+        <li ListIndex="3">Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">Shell</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Duster/Duster</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Outlander</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_Jacket</defName>
+    <label>jacket</label>
+    <description>A tough jacket to stop scrapes and bruises, and keep one warm in chilly weather.</description>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>1.7</Mass>
+      <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.03</ArmorRating_Heat>
+      <Insulation_Cold>-15</Insulation_Cold>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+      <li ListIndex="1">Leathery</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Jacket/Jacket</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li ListIndex="0">
+          <weight>10</weight>
+          <only>RGBA(0.33,0.33,0.33,1)</only>
+        </li>
+        <li ListIndex="1">
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li ListIndex="2">
+          <weight>10</weight>
+          <only>RGBA(0.4,0.3,0.15,1)</only>
+        </li>
+        <li ListIndex="3">
+          <weight>15</weight>
+          <min>RGBA(0.3,0.3,0.3,1)</min>
+          <max>RGBA(0.5,0.5,0.5,1)</max>
+        </li>
+        <li ListIndex="4">
+          <weight>6</weight>
+          <min>RGBA(0.5,0.5,0.5,1)</min>
+          <max>RGBA(1,1,1,1)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <techLevel>Medieval</techLevel>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.03</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Torso</li>
+        <li ListIndex="1">Shoulders</li>
+        <li ListIndex="2">Arms</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">Shell</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Jacket/Jacket</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Outlander</li>
+        <li ListIndex="1">Spacer</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <!-- ======================================= Industrial =======================================-->
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_VestPlate</defName>
+    <label>armor vest</label>
+    <description>A vest with armor plates inserted on the chest and back. Protects against gunfire.</description>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>4</Mass>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>120</Steel>
+      <Component>2</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/VestPlate/VestPlate</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li ListIndex="0">
+          <weight>10</weight>
+          <only>RGBA(0.33,0.33,0.33,1)</only>
+        </li>
+        <li ListIndex="1">
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li ListIndex="2">
+          <weight>6</weight>
+          <min>RGBA(0.3,0.3,0.3,1)</min>
+          <max>RGBA(0.5,0.5,0.5,1)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <techLevel>Industrial</techLevel>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.08</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">Middle</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/VestPlate/VestPlate</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Outlander</li>
+        <li ListIndex="1">Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <!-- ==================================== Spacer =====================================-->
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_PowerArmor</defName>
+    <label>power armor</label>
+    <description>Powered armor usually used by assault troops from advanced glitterworld planets.</description>
+    <statBases>
+      <WorkToMake>170000</WorkToMake>
+      <MaxHitPoints>340</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+      <Insulation_Cold>-45</Insulation_Cold>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Component>18</Component>
+      <Plasteel>135</Plasteel>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+    </recipeMaker>
+    <generateCommonality>2</generateCommonality>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li ListIndex="0">
+          <weight>10</weight>
+          <only>RGBA(0.33,0.33,0.33,1)</only>
+        </li>
+        <li ListIndex="1">
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li ListIndex="2">
+          <weight>6</weight>
+          <min>RGBA(0.3,0.3,0.3,1)</min>
+          <max>RGBA(0.5,0.5,0.5,1)</max>
+        </li>
+        <li ListIndex="3">
+          <weight>10</weight>
+          <only>RGBA(0.9,0.9,0.9,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Apparel</li>
+    </thingCategories>
+    <techLevel>Spacer</techLevel>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.10</MoveSpeed>
+      <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">Torso</li>
+        <li ListIndex="1">Neck</li>
+        <li ListIndex="2">Shoulders</li>
+        <li ListIndex="3">Arms</li>
+        <li ListIndex="4">Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">Middle</li>
+        <li ListIndex="1">Shell</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Outlander</li>
+        <li ListIndex="1">Spacer</li>
+        <li ListIndex="2">Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+</ThingDefs>

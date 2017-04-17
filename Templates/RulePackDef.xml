@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: List<Verse.RulePackDef>-->
+    <include>
+      <!--Type: Verse.RulePackDef-->
+      <li>RulePackDef_defName</li>
+      <!-- ... -->
+    </include>
+    <!--Type: Verse.Grammar.RulePack-->
+    <rulePack>
+      <!--Type: List<string>-->
+      <rulesStrings>
+        <!--Type: string-->
+        <li>string_value</li>
+        <!-- ... -->
+      </rulesStrings>
+      <!--Complex List-->
+      <!--Type: List<Verse.Grammar.Rule>-->
+      <rulesRaw>
+        <!--Type: Verse.Grammar.Rule_File-->
+        <li Class="Rule_File">
+          <!--Type: string-->
+          <keyword>string_value</keyword>
+          <!--Type: string-->
+          <path>string_value</path>
+          <!--Type: List<string>-->
+          <pathList>
+            <!--Type: string-->
+            <li>string_value</li>
+            <!-- ... -->
+          </pathList>
+        </li>
+        <!--Type: Verse.Grammar.Rule_PersonName-->
+        <li Class="Rule_PersonName">
+          <!--Type: string-->
+          <keyword>string_value</keyword>
+          <!--Type: int-->
+          <selectionWeight>int_value</selectionWeight>
+          <!--Type: Verse.Gender-->
+          <!--Available Values: None, Male, Female-->
+          <gender>enum_value</gender>
+        </li>
+        <!--Type: Verse.Grammar.Rule_Number-->
+        <li Class="Rule_Number">
+          <!--Type: string-->
+          <keyword>string_value</keyword>
+          <!--Type: Verse.IntRange-->
+          <range>
+            <!--Type: int-->
+            <min>int_value</min>
+            <!--Type: int-->
+            <max>int_value</max>
+          </range>
+          <!--Type: int-->
+          <selectionWeight>int_value</selectionWeight>
+        </li>
+        <!-- ... -->
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</Defs>

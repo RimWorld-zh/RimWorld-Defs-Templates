@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <InstructionDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: System.Type-->
+    <!--Default Value: typeof(Instruction_Basic)-->
+    <instructionClass>class_name</instructionClass>
+    <!--Type: string-->
+    <text>string_value</text>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <startCentered>true_or_false</startCentered>
+    <!--Type: string-->
+    <eventTagInitiate>string_value</eventTagInitiate>
+    <!--Type: List<string>-->
+    <eventTagsEnd>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </eventTagsEnd>
+    <!--Type: List<string>-->
+    <actionTagsAllowed>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </actionTagsAllowed>
+    <!--Type: string-->
+    <rejectInputMessage>string_value</rejectInputMessage>
+    <!--Type: RimWorld.ConceptDef-->
+    <concept>ConceptDef_defName</concept>
+    <!--Type: List<string>-->
+    <highlightTags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </highlightTags>
+    <!--Type: string-->
+    <onMapInstruction>string_value</onMapInstruction>
+    <!--Type: int-->
+    <targetCount>int_value</targetCount>
+    <!--Type: Verse.ThingDef-->
+    <thingDef>ThingDef_defName</thingDef>
+    <!--Type: Verse.RecipeDef-->
+    <recipeDef>RecipeDef_defName</recipeDef>
+    <!--Type: int-->
+    <!--Default Value: 1-->
+    <recipeTargetCount>int_value</recipeTargetCount>
+    <!--Type: Verse.ThingDef-->
+    <giveOnActivateDef>ThingDef_defName</giveOnActivateDef>
+    <!--Type: int-->
+    <giveOnActivateCount>int_value</giveOnActivateCount>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <endTutorial>true_or_false</endTutorial>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <resetBuildDesignatorStuffs>true_or_false</resetBuildDesignatorStuffs>
+  </InstructionDef>
+</Defs>

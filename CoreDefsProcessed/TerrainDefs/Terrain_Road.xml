@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TerrainDefs>
+  <TerrainDef ParentName="FloorBase">
+    <defName>BrokenAsphalt</defName>
+    <label>broken asphalt</label>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+      <WorkToBuild>135</WorkToBuild>
+    </statBases>
+    <pathCost>0</pathCost>
+    <fertility>0.0</fertility>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <texturePath>Terrain/Surfaces/BrokenAsphalt</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>370</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+      <li ListIndex="3">Light</li>
+      <li ListIndex="4">Heavy</li>
+    </affordances>
+    <layerable>true</layerable>
+    <scatterType>Rocky</scatterType>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>PackedDirt</defName>
+    <label>packed dirt</label>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <pathCost>1</pathCost>
+    <fertility>0.0</fertility>
+    <texturePath>Terrain/Surfaces/PackedDirt</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>360</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+    </affordances>
+    <scatterType>Rocky</scatterType>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+  </TerrainDef>
+</TerrainDefs>

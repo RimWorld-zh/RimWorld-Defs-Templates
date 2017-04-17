@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>MoodOffsetSanguine</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>sanguine</label>
+        <description>Natural bonus from Sanguine trait.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">NaturalMood</li>
+    </requiredTraits>
+    <requiredTraitsDegree>2</requiredTraitsDegree>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>MoodOffsetOptimist</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>optimist</label>
+        <description>Natural bonus from Optimist trait.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">NaturalMood</li>
+    </requiredTraits>
+    <requiredTraitsDegree>1</requiredTraitsDegree>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>MoodOffsetPessimist</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>pessimist</label>
+        <description>Natural penalty from Pessimist trait.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">NaturalMood</li>
+    </requiredTraits>
+    <requiredTraitsDegree>-1</requiredTraitsDegree>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>MoodOffsetDepressive</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>depressive</label>
+        <description>Natural penalty from Depressive trait.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">NaturalMood</li>
+    </requiredTraits>
+    <requiredTraitsDegree>-2</requiredTraitsDegree>
+  </ThoughtDef>
+</Defs>

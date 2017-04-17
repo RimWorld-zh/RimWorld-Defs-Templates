@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StatDef Name="ArmorRatingBase" Abstract="True">
+    <category>Apparel</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <parts>
+      <li Class="StatPart_Quality">
+        <factorAwful>0.4</factorAwful>
+        <factorShoddy>0.7</factorShoddy>
+        <factorPoor>0.85</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.1</factorGood>
+        <factorSuperior>1.3</factorSuperior>
+        <factorExcellent>1.5</factorExcellent>
+        <factorMasterwork>1.7</factorMasterwork>
+        <factorLegendary>2.1</factorLegendary>
+      </li>
+      <li Class="StatPart_Health">
+        <curve>
+          <points>
+            <li>(0,0.25)</li>
+            <li>(0.70,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef ParentName="ArmorRatingBase">
+    <defName>ArmorRating_Blunt</defName>
+    <label>Armor - Blunt</label>
+    <description>Armor against blunt damage like club attacks, rock falls, and explosions.</description>
+    <category>Apparel</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.4</factorAwful>
+        <factorShoddy>0.7</factorShoddy>
+        <factorPoor>0.85</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.1</factorGood>
+        <factorSuperior>1.3</factorSuperior>
+        <factorExcellent>1.5</factorExcellent>
+        <factorMasterwork>1.7</factorMasterwork>
+        <factorLegendary>2.1</factorLegendary>
+      </li>
+      <li Class="StatPart_Health" ListIndex="1">
+        <curve>
+          <points>
+            <li ListIndex="0">(0,0.25)</li>
+            <li ListIndex="1">(0.70,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef ParentName="ArmorRatingBase">
+    <defName>ArmorRating_Sharp</defName>
+    <label>Armor - Sharp</label>
+    <description>Armor against sharp damage like bullets, knife stabs, and animal bites.</description>
+    <category>Apparel</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.4</factorAwful>
+        <factorShoddy>0.7</factorShoddy>
+        <factorPoor>0.85</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.1</factorGood>
+        <factorSuperior>1.3</factorSuperior>
+        <factorExcellent>1.5</factorExcellent>
+        <factorMasterwork>1.7</factorMasterwork>
+        <factorLegendary>2.1</factorLegendary>
+      </li>
+      <li Class="StatPart_Health" ListIndex="1">
+        <curve>
+          <points>
+            <li ListIndex="0">(0,0.25)</li>
+            <li ListIndex="1">(0.70,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef ParentName="ArmorRatingBase">
+    <defName>ArmorRating_Heat</defName>
+    <label>Armor - Heat</label>
+    <description>Armor against temperature-related damage like burns.</description>
+    <category>Apparel</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.4</factorAwful>
+        <factorShoddy>0.7</factorShoddy>
+        <factorPoor>0.85</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.1</factorGood>
+        <factorSuperior>1.3</factorSuperior>
+        <factorExcellent>1.5</factorExcellent>
+        <factorMasterwork>1.7</factorMasterwork>
+        <factorLegendary>2.1</factorLegendary>
+      </li>
+      <li Class="StatPart_Health" ListIndex="1">
+        <curve>
+          <points>
+            <li ListIndex="0">(0,0.25)</li>
+            <li ListIndex="1">(0.70,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef ParentName="ArmorRatingBase">
+    <defName>ArmorRating_Electric</defName>
+    <label>Armor - Electric </label>
+    <description>Armor against electric damage like EMP pulses.</description>
+    <category>Apparel</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.4</factorAwful>
+        <factorShoddy>0.7</factorShoddy>
+        <factorPoor>0.85</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.1</factorGood>
+        <factorSuperior>1.3</factorSuperior>
+        <factorExcellent>1.5</factorExcellent>
+        <factorMasterwork>1.7</factorMasterwork>
+        <factorLegendary>2.1</factorLegendary>
+      </li>
+      <li Class="StatPart_Health" ListIndex="1">
+        <curve>
+          <points>
+            <li ListIndex="0">(0,0.25)</li>
+            <li ListIndex="1">(0.70,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef Name="InsulationBase" Abstract="True">
+    <category>Apparel</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringNumberSense>Offset</toStringNumberSense>
+    <toStringStyle>Temperature</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>-9999</minValue>
+    <maxValue>9999</maxValue>
+    <parts>
+      <li Class="StatPart_Quality">
+        <factorAwful>0.7</factorAwful>
+        <factorShoddy>0.8</factorShoddy>
+        <factorPoor>0.9</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.05</factorGood>
+        <factorSuperior>1.10</factorSuperior>
+        <factorExcellent>1.15</factorExcellent>
+        <factorMasterwork>1.20</factorMasterwork>
+        <factorLegendary>1.25</factorLegendary>
+        <alsoAppliesToNegativeValues>true</alsoAppliesToNegativeValues>
+      </li>
+      <li Class="StatPart_Health">
+        <curve>
+          <points>
+            <li>(0,0.75)</li>
+            <li>(0.7,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef ParentName="InsulationBase">
+    <defName>Insulation_Cold</defName>
+    <label>Insulation - Cold</label>
+    <description>How much this apparel offsets a wearer's minimum comfortable temperature when worn.</description>
+    <category>Apparel</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringNumberSense>Offset</toStringNumberSense>
+    <toStringStyle>Temperature</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>-9999</minValue>
+    <maxValue>9999</maxValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.7</factorAwful>
+        <factorShoddy>0.8</factorShoddy>
+        <factorPoor>0.9</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.05</factorGood>
+        <factorSuperior>1.10</factorSuperior>
+        <factorExcellent>1.15</factorExcellent>
+        <factorMasterwork>1.20</factorMasterwork>
+        <factorLegendary>1.25</factorLegendary>
+        <alsoAppliesToNegativeValues>true</alsoAppliesToNegativeValues>
+      </li>
+      <li Class="StatPart_Health" ListIndex="1">
+        <curve>
+          <points>
+            <li ListIndex="0">(0,0.75)</li>
+            <li ListIndex="1">(0.7,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef ParentName="InsulationBase">
+    <defName>Insulation_Heat</defName>
+    <label>Insulation - Heat</label>
+    <description>How much this apparel offsets a wearer's maximum comfortable temperature when worn.</description>
+    <category>Apparel</category>
+    <hideAtValue>0</hideAtValue>
+    <toStringNumberSense>Offset</toStringNumberSense>
+    <toStringStyle>Temperature</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>-9999</minValue>
+    <maxValue>9999</maxValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.7</factorAwful>
+        <factorShoddy>0.8</factorShoddy>
+        <factorPoor>0.9</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.05</factorGood>
+        <factorSuperior>1.10</factorSuperior>
+        <factorExcellent>1.15</factorExcellent>
+        <factorMasterwork>1.20</factorMasterwork>
+        <factorLegendary>1.25</factorLegendary>
+        <alsoAppliesToNegativeValues>true</alsoAppliesToNegativeValues>
+      </li>
+      <li Class="StatPart_Health" ListIndex="1">
+        <curve>
+          <points>
+            <li ListIndex="0">(0,0.75)</li>
+            <li ListIndex="1">(0.7,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef>
+    <defName>EnergyShieldEnergyMax</defName>
+    <label>Shield max energy</label>
+    <description>The maximum energy a shield belt can have at one time. More energy can absorb more damage.</description>
+    <category>Apparel</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.7</factorAwful>
+        <factorShoddy>0.8</factorShoddy>
+        <factorPoor>0.9</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.1</factorGood>
+        <factorSuperior>1.25</factorSuperior>
+        <factorExcellent>1.4</factorExcellent>
+        <factorMasterwork>1.6</factorMasterwork>
+        <factorLegendary>1.85</factorLegendary>
+      </li>
+      <li Class="StatPart_Health" ListIndex="1">
+        <curve>
+          <points>
+            <li ListIndex="0">(0,0.5)</li>
+            <li ListIndex="1">(0.7,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef>
+    <defName>EnergyShieldRechargeRate</defName>
+    <label>Shield recharge rate</label>
+    <description>The rate at which a shield gains energy as long as it is not broken.</description>
+    <category>Apparel</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+    <formatString>{0}/s</formatString>
+    <defaultBaseValue>0.45</defaultBaseValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.8</factorAwful>
+        <factorShoddy>0.88</factorShoddy>
+        <factorPoor>0.94</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.05</factorGood>
+        <factorSuperior>1.1</factorSuperior>
+        <factorExcellent>1.125</factorExcellent>
+        <factorMasterwork>1.15</factorMasterwork>
+        <factorLegendary>1.175</factorLegendary>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef>
+    <defName>SmokepopBeltRadius</defName>
+    <label>Smokepop belt radius</label>
+    <description>The area obscured when a smokepop belt detonates.</description>
+    <category>Apparel</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>FloatOne</toStringStyle>
+    <formatString>{0} c</formatString>
+    <defaultBaseValue>3</defaultBaseValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.75</factorAwful>
+        <factorShoddy>0.82</factorShoddy>
+        <factorPoor>0.9</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.06</factorGood>
+        <factorSuperior>1.12</factorSuperior>
+        <factorExcellent>1.18</factorExcellent>
+        <factorMasterwork>1.22</factorMasterwork>
+        <factorLegendary>1.25</factorLegendary>
+      </li>
+    </parts>
+  </StatDef>
+</Defs>

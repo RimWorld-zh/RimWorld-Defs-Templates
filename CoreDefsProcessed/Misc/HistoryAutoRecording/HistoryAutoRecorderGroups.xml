@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HistoryAutoRecorderGroupDefs>
+  <HistoryAutoRecorderGroupDef>
+    <defName>Wealth</defName>
+    <label>wealth</label>
+    <graphLabelY>Amount</graphLabelY>
+    <historyAutoRecorderDefs>
+      <li ListIndex="0">WealthTotal</li>
+      <li ListIndex="1">WealthItems</li>
+      <li ListIndex="2">WealthBuildings</li>
+    </historyAutoRecorderDefs>
+  </HistoryAutoRecorderGroupDef>
+  <HistoryAutoRecorderGroupDef>
+    <defName>Population</defName>
+    <label>population</label>
+    <graphLabelY>Colonists</graphLabelY>
+    <historyAutoRecorderDefs>
+      <li ListIndex="0">FreeColonists</li>
+      <li ListIndex="1">Prisoners</li>
+    </historyAutoRecorderDefs>
+  </HistoryAutoRecorderGroupDef>
+  <HistoryAutoRecorderGroupDef>
+    <defName>ColonistMood</defName>
+    <label>colonist mood</label>
+    <graphLabelY>Percent</graphLabelY>
+    <useFixedScale>true</useFixedScale>
+    <fixedScale>(0, 100)</fixedScale>
+    <historyAutoRecorderDefs>
+      <li ListIndex="0">ColonistMood</li>
+      <!--<li>ColonistFear</li>-->
+    </historyAutoRecorderDefs>
+  </HistoryAutoRecorderGroupDef>
+</HistoryAutoRecorderGroupDefs>

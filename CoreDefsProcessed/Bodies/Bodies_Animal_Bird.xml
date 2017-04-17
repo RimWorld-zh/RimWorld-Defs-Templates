@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyDef>
+    <defName>Bird</defName>
+    <label>bird</label>
+    <corePart>
+      <def>Body</def>
+      <parts>
+        <li ListIndex="0">
+          <def>Tail</def>
+          <coverage>0.10</coverage>
+        </li>
+        <li ListIndex="1">
+          <def>Spine</def>
+          <depth>Inside</depth>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="2">
+          <def>Stomach</def>
+          <depth>Inside</depth>
+          <coverage>0.04</coverage>
+        </li>
+        <li ListIndex="3">
+          <def>Heart</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="4">
+          <def>LeftLung</def>
+          <depth>Inside</depth>
+          <coverage>0.04</coverage>
+        </li>
+        <li ListIndex="5">
+          <def>RightLung</def>
+          <depth>Inside</depth>
+          <coverage>0.04</coverage>
+        </li>
+        <li ListIndex="6">
+          <def>LeftKidney</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="7">
+          <def>RightKidney</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="8">
+          <def>Liver</def>
+          <depth>Inside</depth>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="9">
+          <def>Neck</def>
+          <parts>
+            <li ListIndex="0">
+              <def>Head</def>
+              <parts>
+                <li ListIndex="0">
+                  <def>Skull</def>
+                  <parts>
+                    <li ListIndex="0">
+                      <def>Brain</def>
+                      <depth>Inside</depth>
+                      <coverage>0.60</coverage>
+                    </li>
+                  </parts>
+                  <depth>Inside</depth>
+                  <coverage>0.30</coverage>
+                </li>
+                <li ListIndex="1">
+                  <def>LeftEye</def>
+                  <coverage>0.12</coverage>
+                </li>
+                <li ListIndex="2">
+                  <def>RightEye</def>
+                  <coverage>0.12</coverage>
+                </li>
+                <li ListIndex="3">
+                  <def>Beak</def>
+                  <coverage>0.25</coverage>
+                  <groups>
+                    <li ListIndex="0">Beak</li>
+                  </groups>
+                </li>
+              </parts>
+              <coverage>0.75</coverage>
+              <groups>
+                <li ListIndex="0">HeadAttackTool</li>
+              </groups>
+            </li>
+          </parts>
+          <height>Top</height>
+          <coverage>0.2</coverage>
+        </li>
+        <li ListIndex="10">
+          <def>LeftLeg</def>
+          <parts>
+            <li ListIndex="0">
+              <def>LeftFoot</def>
+              <coverage>0.5</coverage>
+              <groups>
+                <li ListIndex="0">Feet</li>
+              </groups>
+            </li>
+          </parts>
+          <height>Bottom</height>
+          <coverage>0.15</coverage>
+        </li>
+        <li ListIndex="11">
+          <def>RightLeg</def>
+          <parts>
+            <li ListIndex="0">
+              <def>RightFoot</def>
+              <coverage>0.5</coverage>
+              <groups>
+                <li ListIndex="0">Feet</li>
+              </groups>
+            </li>
+          </parts>
+          <height>Bottom</height>
+          <coverage>0.15</coverage>
+        </li>
+      </parts>
+      <height>Middle</height>
+      <depth>Outside</depth>
+    </corePart>
+  </BodyDef>
+</Defs>

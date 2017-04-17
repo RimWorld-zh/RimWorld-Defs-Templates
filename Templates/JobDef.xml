@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: System.Type-->
+    <driverClass>class_name</driverClass>
+    <!--Type: string-->
+    <!--Default Value: "Doing something."-->
+    <reportString>string_value</reportString>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <playerInterruptible>true_or_false</playerInterruptible>
+    <!--Type: Verse.CheckJobOverrideOnDamageMode-->
+    <!--Available Values: Never, OnlyIfInstigatorNotJobTarget, Always-->
+    <!--Default Value: Always-->
+    <checkOverrideOnDamage>enum_value</checkOverrideOnDamage>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <alwaysShowWeapon>true_or_false</alwaysShowWeapon>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <neverShowWeapon>true_or_false</neverShowWeapon>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <suspendable>true_or_false</suspendable>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <casualInterruptible>true_or_false</casualInterruptible>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <collideWithPawns>true_or_false</collideWithPawns>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <makeTargetPrisoner>true_or_false</makeTargetPrisoner>
+    <!--Type: int-->
+    <!--Default Value: 4000-->
+    <joyDuration>int_value</joyDuration>
+    <!--Type: int-->
+    <!--Default Value: 1-->
+    <joyMaxParticipants>int_value</joyMaxParticipants>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <joyGainRate>float_value</joyGainRate>
+    <!--Type: RimWorld.SkillDef-->
+    <joySkill>SkillDef_defName</joySkill>
+    <!--Type: float-->
+    <joyXpPerTick>float_value</joyXpPerTick>
+    <!--Type: RimWorld.JoyKindDef-->
+    <joyKind>JoyKindDef_defName</joyKind>
+  </JobDef>
+</Defs>

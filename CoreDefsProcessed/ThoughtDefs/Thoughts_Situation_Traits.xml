@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>MasochistPain</defName>
+    <workerClass>ThoughtWorker_Pain</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>masochist in a little pain</label>
+        <description>Ow... Heh heh heh... I could get used to this!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li ListIndex="1">
+        <label>masochist in moderate pain</label>
+        <description>Ughhh... It hurts, but I love it! Keep it coming!</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+      <li ListIndex="2">
+        <label>masochist in acute pain</label>
+        <description>Ouch... I think something's broken... But what an exquisite feeling!</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+      <li ListIndex="3">
+        <label>masochist in exceptional pain</label>
+        <description>Ahhh... Am I in heaven?</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">Masochist</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ProsthophileNoProsthetic</defName>
+    <workerClass>ThoughtWorker_HasBionicBodyPart</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>prosthophile lacks bionic bodypart</label>
+        <description>Flesh is so limiting. I wish I had some kind of artificial body part.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <invert>true</invert>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">Prosthophile</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ProsthophileHappy</defName>
+    <workerClass>ThoughtWorker_HasBionicBodyPart</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>prosthophile has bionic bodypart</label>
+        <description>I'm a product of modern technology! I can do everything better!</description>
+        <baseMoodEffect>14</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">Prosthophile</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ProsthophobeUnhappy</defName>
+    <workerClass>ThoughtWorker_HasBionicBodyPart</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>prosthophobe has bionic bodypart</label>
+        <description>They turned me into a technological abomination... If only they had given me a choice...</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">Prosthophobe</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>BrawlerUnhappy</defName>
+    <workerClass>ThoughtWorker_IsCarryingRangedWeapon</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>brawler has ranged weapon</label>
+        <description>I hate shooting from a distance. I want to get up close and personal!</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">Brawler</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>PyromaniacHappy</defName>
+    <workerClass>ThoughtWorker_IsCarryingIncendiaryWeapon</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>pyromaniac has incendiary weapon</label>
+        <description>It makes me think of flame and fire. I'm so happy.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">Pyromaniac</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ClothedNudist</defName>
+    <workerClass>ThoughtWorker_NudistNude</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>constraining clothes</label>
+        <description>I'm a nudist but I have to wear these clothes. It's not unbearable - but I still feel constrained and uncomfortable.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+    <invert>true</invert>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">Nudist</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>HappyNude</defName>
+    <workerClass>ThoughtWorker_NudistNude</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>happily nude</label>
+        <description>I'm nude and loving it! I feel so free and unconstrained and in touch with my surroundings!</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li ListIndex="0">Nudist</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>NightOwlDuringTheDay</defName>
+    <workerClass>ThoughtWorker_IsDayForNightOwl</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>night owl in daytime</label>
+        <description>I don't like working during the day.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+    <requiredTraits>
+      <li ListIndex="0">NightOwl</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>NightOwlDuringTheNight</defName>
+    <workerClass>ThoughtWorker_IsNightForNightOwl</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>night owl at night</label>
+        <description>I feel much better at night.</description>
+        <baseMoodEffect>16</baseMoodEffect>
+      </li>
+    </stages>
+    <requiredTraits>
+      <li ListIndex="0">NightOwl</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Greedy</defName>
+    <workerClass>ThoughtWorker_Greedy</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <!-- used also if has no bedroom at all -->
+        <label>greedy for impressive bedroom</label>
+        <description>I'm greedy. I want a really impressive bedroom.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li ListIndex="1">
+        <label>greedy for impressive bedroom</label>
+        <description>I'm greedy. My room is pathetic! I want a really impressive bedroom.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li ListIndex="2">
+        <label>greedy for impressive bedroom</label>
+        <description>I'm greedy. My room isn't nearly good enough. I want a really impressive bedroom.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li ListIndex="3">
+        <label>greedy for impressive bedroom</label>
+        <description>I'm greedy. My room isn't good enough. I want a really impressive bedroom.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+      <li ListIndex="4">
+        <label>greedy for impressive bedroom</label>
+        <description>I'm greedy. My room isn't quite good enough. I want a really impressive bedroom.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li IsNull="True" ListIndex="5" />
+      <!-- slightly impressive -->
+      <li IsNull="True" ListIndex="6" />
+      <!-- somewhat impressive -->
+      <li IsNull="True" ListIndex="7" />
+      <!-- very impressive -->
+      <li IsNull="True" ListIndex="8" />
+      <!-- extremely impressive -->
+      <li IsNull="True" ListIndex="9" />
+      <!-- unbelievably impressive -->
+      <li IsNull="True" ListIndex="10" />
+      <!-- wondrously impressive -->
+    </stages>
+    <requiredTraits>
+      <li ListIndex="0">Greedy</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Jealous</defName>
+    <workerClass>ThoughtWorker_BedroomJealous</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>jealous of {0}'s bedroom</label>
+        <description>I need to have the best one!</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+    <requiredTraits>
+      <li ListIndex="0">Jealous</li>
+    </requiredTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Ascetic</defName>
+    <workerClass>ThoughtWorker_Ascetic</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>ascetic has awful bedroom</label>
+        <description>My bedroom is just how I want it to be. Very humble and simple.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li ListIndex="1">
+        <label>ascetic has repulsive bedroom</label>
+        <description>My bedroom is just how I want it to be. Very humble and simple.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li ListIndex="2">
+        <label>ascetic has dull bedroom</label>
+        <description>My bedroom is very humble and simple. I like it.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li IsNull="True" ListIndex="3" />
+      <!-- mediocre -->
+      <li IsNull="True" ListIndex="4" />
+      <!-- interesting -->
+      <li ListIndex="5">
+        <label>ascetic has impressive bedroom</label>
+        <description>I don't like having an impressive bedroom.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="6">
+        <label>ascetic has impressive bedroom</label>
+        <description>I don't like having an impressive bedroom.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="7">
+        <label>ascetic has impressive bedroom</label>
+        <description>I don't like having an impressive bedroom.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="8">
+        <label>ascetic has impressive bedroom</label>
+        <description>I don't like having an impressive bedroom.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="9">
+        <label>ascetic has impressive bedroom</label>
+        <description>I don't like having an impressive bedroom.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="10">
+        <label>ascetic has impressive bedroom</label>
+        <description>I don't like having an impressive bedroom.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="11">
+        <label>ascetic has impressive bedroom</label>
+        <description>I don't like having an impressive bedroom.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <requiredTraits>
+      <li ListIndex="0">Ascetic</li>
+    </requiredTraits>
+  </ThoughtDef>
+</Defs>

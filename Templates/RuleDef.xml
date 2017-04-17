@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RuleDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <symbol>string_value</symbol>
+    <!--Complex List-->
+    <!--Type: List<RimWorld.BaseGen.SymbolResolver>-->
+    <resolvers>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_DiningRoom-->
+      <li Class="SymbolResolver_Interior_DiningRoom">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_BatteryRoom-->
+      <li Class="SymbolResolver_Interior_BatteryRoom">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_Brewery-->
+      <li Class="SymbolResolver_Interior_Brewery">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_AncientTemple-->
+      <li Class="SymbolResolver_Interior_AncientTemple">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_Barracks-->
+      <li Class="SymbolResolver_Interior_Barracks">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_Storage-->
+      <li Class="SymbolResolver_Interior_Storage" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_AncientTemple-->
+      <li Class="SymbolResolver_AncientTemple">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Barracks-->
+      <li Class="SymbolResolver_Barracks">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Storage-->
+      <li Class="SymbolResolver_Storage">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BatteryRoom-->
+      <li Class="SymbolResolver_BatteryRoom">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_DiningRoom-->
+      <li Class="SymbolResolver_DiningRoom">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Brewery-->
+      <li Class="SymbolResolver_Brewery">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_IndoorLighting-->
+      <li Class="SymbolResolver_IndoorLighting" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeStreet-->
+      <li Class="SymbolResolver_EdgeStreet" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Street-->
+      <li Class="SymbolResolver_Street" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_AddWortToFermentingBarrels-->
+      <li Class="SymbolResolver_AddWortToFermentingBarrels" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_RandomlyPlaceMealsOnTables-->
+      <li Class="SymbolResolver_RandomlyPlaceMealsOnTables" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_PlaceChairsNearTables-->
+      <li Class="SymbolResolver_PlaceChairsNearTables" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_ChargeBatteries-->
+      <li Class="SymbolResolver_ChargeBatteries" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Refuel-->
+      <li Class="SymbolResolver_Refuel" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_FillWithThings-->
+      <li Class="SymbolResolver_FillWithThings" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Farm-->
+      <li Class="SymbolResolver_Farm" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeMannedMortar-->
+      <li Class="SymbolResolver_EdgeMannedMortar">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_MannedMortar-->
+      <li Class="SymbolResolver_MannedMortar">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Stockpile-->
+      <li Class="SymbolResolver_Stockpile" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_FillWithBeds-->
+      <li Class="SymbolResolver_FillWithBeds" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Hives-->
+      <li Class="SymbolResolver_Hives">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_RandomMechanoidGroup-->
+      <li Class="SymbolResolver_RandomMechanoidGroup" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_AncientRuins-->
+      <li Class="SymbolResolver_AncientRuins">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_AncientShrine-->
+      <li Class="SymbolResolver_AncientShrine">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_AncientShrinesGroup-->
+      <li Class="SymbolResolver_AncientShrinesGroup">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeDefense-->
+      <li Class="SymbolResolver_EdgeDefense">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_FactionBase-->
+      <li Class="SymbolResolver_FactionBase">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_CultivatedPlants-->
+      <li Class="SymbolResolver_CultivatedPlants" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeThing-->
+      <li Class="SymbolResolver_EdgeThing" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_AncientCryptosleepCasket-->
+      <li Class="SymbolResolver_AncientCryptosleepCasket" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeFloor-->
+      <li Class="SymbolResolver_EdgeFloor" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeWalls-->
+      <li Class="SymbolResolver_EdgeWalls" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeSandbags-->
+      <li Class="SymbolResolver_EdgeSandbags" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_ExtraDoor-->
+      <li Class="SymbolResolver_ExtraDoor" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Doors-->
+      <li Class="SymbolResolver_Doors" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EmptyRoom-->
+      <li Class="SymbolResolver_EmptyRoom">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_PawnGroup-->
+      <li Class="SymbolResolver_PawnGroup" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_FirefoamPopper-->
+      <li Class="SymbolResolver_FirefoamPopper" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_OutdoorsCampfire-->
+      <li Class="SymbolResolver_OutdoorsCampfire" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EnsureCanReachMapEdge-->
+      <li Class="SymbolResolver_EnsureCanReachMapEdge">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Roof-->
+      <li Class="SymbolResolver_Roof" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_FloorFill-->
+      <li Class="SymbolResolver_FloorFill" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_SinglePawn-->
+      <li Class="SymbolResolver_SinglePawn" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_SingleThing-->
+      <li Class="SymbolResolver_SingleThing" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Clear-->
+      <li Class="SymbolResolver_Clear" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_Leaf_Empty-->
+      <li Class="SymbolResolver_BasePart_Outdoors_Leaf_Empty">
+        <!--Type: float-->
+        <selectionWeight>float_value</selectionWeight>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_Leaf_Farm-->
+      <li Class="SymbolResolver_BasePart_Outdoors_Leaf_Farm">
+        <!--Type: float-->
+        <selectionWeight>float_value</selectionWeight>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_Leaf_PowerPlant-->
+      <li Class="SymbolResolver_BasePart_Outdoors_Leaf_PowerPlant">
+        <!--Type: float-->
+        <selectionWeight>float_value</selectionWeight>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_Leaf_Building-->
+      <li Class="SymbolResolver_BasePart_Outdoors_Leaf_Building">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_LeafDecorated_EdgeStreet-->
+      <li Class="SymbolResolver_BasePart_Outdoors_LeafDecorated_EdgeStreet">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_LeafDecorated_RandomInnerRect-->
+      <li Class="SymbolResolver_BasePart_Outdoors_LeafDecorated_RandomInnerRect">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_LeafPossiblyDecorated-->
+      <li Class="SymbolResolver_BasePart_Outdoors_LeafPossiblyDecorated" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_Division_Grid-->
+      <li Class="SymbolResolver_BasePart_Outdoors_Division_Grid">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors_Division_Split-->
+      <li Class="SymbolResolver_BasePart_Outdoors_Division_Split">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Outdoors-->
+      <li Class="SymbolResolver_BasePart_Outdoors" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Indoors_Leaf_Barracks-->
+      <li Class="SymbolResolver_BasePart_Indoors_Leaf_Barracks">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+        <!--Type: float-->
+        <selectionWeight>float_value</selectionWeight>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Indoors_Leaf_Storage-->
+      <li Class="SymbolResolver_BasePart_Indoors_Leaf_Storage">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Indoors_Leaf_Brewery-->
+      <li Class="SymbolResolver_BasePart_Indoors_Leaf_Brewery">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+        <!--Type: float-->
+        <selectionWeight>float_value</selectionWeight>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Indoors_Leaf_DiningRoom-->
+      <li Class="SymbolResolver_BasePart_Indoors_Leaf_DiningRoom">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+        <!--Type: float-->
+        <selectionWeight>float_value</selectionWeight>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Indoors_Leaf_BatteryRoom-->
+      <li Class="SymbolResolver_BasePart_Indoors_Leaf_BatteryRoom">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Indoors_Division_Split-->
+      <li Class="SymbolResolver_BasePart_Indoors_Division_Split">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_BasePart_Indoors-->
+      <li Class="SymbolResolver_BasePart_Indoors" />
+      <!-- ... -->
+    </resolvers>
+  </RuleDef>
+</Defs>

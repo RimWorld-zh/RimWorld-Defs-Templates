@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>DebugBad</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>debug bad thought</label>
+        <description>Test thought for debugging.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>100</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <durationDays>1.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>DebugGood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>debug good thought</label>
+        <description>Test thought for debugging.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>100</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <durationDays>1.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+</Defs>

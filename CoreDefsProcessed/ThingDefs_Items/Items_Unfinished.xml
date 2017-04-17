@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="UnfinishedBase" Abstract="True">
+    <label>unfinished thing</label>
+    <!-- For CompForbiddable -->
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedSculpture</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li>Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedSculpture</defName>
+    <label>unfinished sculpture</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+      <li ListIndex="3">Metallic</li>
+      <li ListIndex="4">Woody</li>
+      <li ListIndex="5">Stony</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedSculpture</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedGun</defName>
+    <label>unfinished gun</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories />
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedWeapon</defName>
+    <label>unfinished weapon</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+      <li ListIndex="3">Metallic</li>
+      <li ListIndex="4">Woody</li>
+      <li ListIndex="5">Stony</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedTechArmor</defName>
+    <label>unfinished armor</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories />
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedTechArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedApparel</defName>
+    <label>unfinished apparel</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+      <li ListIndex="3">Fabric</li>
+      <li ListIndex="4">Leathery</li>
+      <li ListIndex="5">Metallic</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedApparel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedBelt</defName>
+    <label>unfinished belt</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories />
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedComponent</defName>
+    <label>unfinished component</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories />
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedComponent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <!-- ======================= Minified things ========================= -->
+  <ThingDef Name="MinifiedBase" Abstract="True">
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>MinifiedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <!-- for CompForbiddable -->
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+  </ThingDef>
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedSculpture</defName>
+    <label>sculpture</label>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>MinifiedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Art</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedFurniture</defName>
+    <label>furniture</label>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>MinifiedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Furniture</li>
+    </thingCategories>
+  </ThingDef>
+  <!--
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedCapsuleReactor</defName>
+    <label>capsule reactor</label>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+  </ThingDef>
+  -->
+</Defs>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef Abstract="True" Name="SpacerBase">
+    <label>spacer</label>
+    <description>People from the distant reaches of space.</description>
+    <fixedName>Spacer</fixedName>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <rescueesCanJoin>true</rescueesCanJoin>
+    <pawnsPlural>spacers</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <techLevel>Spacer</techLevel>
+    <backstoryCategory>Civil</backstoryCategory>
+    <hairTags>
+      <li>Urban</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+        <li>Hyperweave</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+  <FactionDef ParentName="SpacerBase">
+    <defName>Spacer</defName>
+    <label>spacer</label>
+    <description>People from the distant reaches of space.</description>
+    <fixedName>Spacer</fixedName>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <rescueesCanJoin>true</rescueesCanJoin>
+    <pawnsPlural>spacers</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <techLevel>Spacer</techLevel>
+    <backstoryCategory>Civil</backstoryCategory>
+    <hairTags>
+      <li ListIndex="0">Urban</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li ListIndex="0">Synthread</li>
+        <li ListIndex="1">Hyperweave</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+  <FactionDef ParentName="SpacerBase">
+    <defName>SpacerHostile</defName>
+    <label>spacer</label>
+    <description>People from the distant reaches of space.</description>
+    <fixedName>Spacer</fixedName>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <rescueesCanJoin>true</rescueesCanJoin>
+    <pawnsPlural>spacers</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <techLevel>Spacer</techLevel>
+    <backstoryCategory>Civil</backstoryCategory>
+    <hairTags>
+      <li ListIndex="0">Urban</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li ListIndex="0">Synthread</li>
+        <li ListIndex="1">Hyperweave</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </startingGoodwill>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </naturalColonyGoodwill>
+  </FactionDef>
+  <FactionDef>
+    <defName>Mechanoid</defName>
+    <label>mechanoid hive</label>
+    <description>A hive of ancient self-replicating machines.</description>
+    <fixedName>a mechanoid hive</fixedName>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>true</hidden>
+    <pawnGroupMakers>
+      <li ListIndex="0">
+        <kindDef>Normal</kindDef>
+        <options>
+          <Centipede>100</Centipede>
+          <Scyther>100</Scyther>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <raidCommonality>37</raidCommonality>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <earliestRaidDays>45</earliestRaidDays>
+    <allowedArrivalTemperatureRange>
+      <min>-100</min>
+      <max>200</max>
+    </allowedArrivalTemperatureRange>
+    <pawnsPlural>mechanoids</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <techLevel>Ultra</techLevel>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>true</mustStartOneEnemy>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </naturalColonyGoodwill>
+    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+  </FactionDef>
+  <FactionDef>
+    <defName>Insect</defName>
+    <label>insects</label>
+    <description>Usually aggressive and intrusive insects.</description>
+    <fixedName>insects</fixedName>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>true</hidden>
+    <raidCommonality>0</raidCommonality>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <allowedArrivalTemperatureRange>
+      <min>0</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <pawnsPlural>insects</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <techLevel>Animal</techLevel>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>true</mustStartOneEnemy>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </naturalColonyGoodwill>
+    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+  </FactionDef>
+</Defs>

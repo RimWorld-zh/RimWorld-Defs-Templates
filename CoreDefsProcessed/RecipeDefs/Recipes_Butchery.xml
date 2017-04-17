@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RecipeDefs>
+  <RecipeDef>
+    <defName>ButcherCorpseFlesh</defName>
+    <label>butcher creature</label>
+    <description>Butchers a creature to obtain its meat in usable form.</description>
+    <jobString>Butchering.</jobString>
+    <workAmount>450</workAmount>
+    <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Corpses</li>
+      </categories>
+      <exceptedCategories>
+        <li ListIndex="0">CorpsesMechanoid</li>
+      </exceptedCategories>
+      <specialFiltersToDisallow>
+        <li ListIndex="0">AllowRotten</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li ListIndex="0">CorpsesAnimal</li>
+      </categories>
+    </defaultIngredientFilter>
+    <specialProducts>
+      <li ListIndex="0">Butchery</li>
+    </specialProducts>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>ButcherCorpseMechanoid</defName>
+    <label>disassemble mechanoid</label>
+    <description>Disassembles a dead mechanoid into its component parts.</description>
+    <jobString>Disassembling mechanoid.</jobString>
+    <workAmount>300</workAmount>
+    <workSpeedStat>ButcheryMechanoidSpeed</workSpeedStat>
+    <efficiencyStat>ButcheryMechanoidEfficiency</efficiencyStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">CorpsesMechanoid</li>
+      </categories>
+    </fixedIngredientFilter>
+    <specialProducts>
+      <li ListIndex="0">Butchery</li>
+    </specialProducts>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>ButcherMechanoid</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+  </RecipeDef>
+</RecipeDefs>

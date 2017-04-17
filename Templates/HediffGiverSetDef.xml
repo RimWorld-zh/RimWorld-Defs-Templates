@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffGiverSetDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Complex List-->
+    <!--Type: List<Verse.HediffGiver>-->
+    <hediffGivers>
+      <!--Type: Verse.HediffGiver_Bleeding-->
+      <li Class="HediffGiver_Bleeding">
+        <!--Type: Verse.HediffDef-->
+        <hediff>HediffDef_defName</hediff>
+      </li>
+      <!--Type: Verse.HediffGiver_Hypothermia-->
+      <li Class="HediffGiver_Hypothermia">
+        <!--Type: Verse.HediffDef-->
+        <hediff>HediffDef_defName</hediff>
+      </li>
+      <!--Type: Verse.HediffGiver_Heat-->
+      <li Class="HediffGiver_Heat">
+        <!--Type: Verse.HediffDef-->
+        <hediff>HediffDef_defName</hediff>
+      </li>
+      <!--Type: Verse.HediffGiver_RandomAgeCurved-->
+      <li Class="HediffGiver_RandomAgeCurved">
+        <!--Type: Verse.HediffDef-->
+        <hediff>HediffDef_defName</hediff>
+        <!--Type: List<Verse.BodyPartDef>-->
+        <partsToAffect>
+          <!--Type: Verse.BodyPartDef-->
+          <li>BodyPartDef_defName</li>
+          <!-- ... -->
+        </partsToAffect>
+        <!--Type: Verse.SimpleCurve-->
+        <ageFractionMtbDaysCurve>
+          <!--Type: List<Verse.CurvePoint>-->
+          <points>
+            <!--Type: Verse.CurvePoint-->
+            <li>value</li>
+            <!-- ... -->
+          </points>
+        </ageFractionMtbDaysCurve>
+      </li>
+      <!--Type: Verse.HediffGiver_BrainInjury-->
+      <li Class="HediffGiver_BrainInjury">
+        <!--Type: Verse.HediffDef-->
+        <hediff>HediffDef_defName</hediff>
+        <!--Type: List<Verse.BodyPartDef>-->
+        <partsToAffect>
+          <!--Type: Verse.BodyPartDef-->
+          <li>BodyPartDef_defName</li>
+          <!-- ... -->
+        </partsToAffect>
+        <!--Type: float-->
+        <chancePerDamagePct>float_value</chancePerDamagePct>
+        <!--Type: string-->
+        <letterLabel>string_value</letterLabel>
+        <!--Type: string-->
+        <letter>string_value</letter>
+      </li>
+      <!--Type: Verse.HediffGiver_Birthday-->
+      <li Class="HediffGiver_Birthday">
+        <!--Type: Verse.HediffDef-->
+        <hediff>HediffDef_defName</hediff>
+        <!--Type: List<Verse.BodyPartDef>-->
+        <partsToAffect>
+          <!--Type: Verse.BodyPartDef-->
+          <li>BodyPartDef_defName</li>
+          <!-- ... -->
+        </partsToAffect>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <canAffectAnyLivePart>true_or_false</canAffectAnyLivePart>
+        <!--Type: int-->
+        <!--Default Value: 1-->
+        <countToAffect>int_value</countToAffect>
+        <!--Type: Verse.SimpleCurve-->
+        <ageFractionChanceCurve>
+          <!--Type: List<Verse.CurvePoint>-->
+          <points>
+            <!--Type: Verse.CurvePoint-->
+            <li>value</li>
+            <!-- ... -->
+          </points>
+        </ageFractionChanceCurve>
+        <!--Type: float-->
+        <averageSeverityPerDayBeforeGeneration>float_value</averageSeverityPerDayBeforeGeneration>
+      </li>
+      <!-- ... -->
+    </hediffGivers>
+  </HediffGiverSetDef>
+</Defs>

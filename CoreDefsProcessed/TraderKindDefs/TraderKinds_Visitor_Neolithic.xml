@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-TraderKindDef>
+  <TraderKindDef>
+    <defName>Visitor_Neolithic_Standard</defName>
+    <label>trader</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef" ListIndex="0">
+        <countRange>
+          <min>50</min>
+          <max>250</max>
+        </countRange>
+        <thingDef>Silver</thingDef>
+      </li>
+      <li Class="StockGenerator_SingleDef" ListIndex="1">
+        <countRange>
+          <min>40</min>
+          <max>80</max>
+        </countRange>
+        <thingDef>Pemmican</thingDef>
+      </li>
+      <li Class="StockGenerator_SingleDef" ListIndex="2">
+        <countRange>
+          <min>1</min>
+          <max>4</max>
+        </countRange>
+        <thingDef>HerbalMedicine</thingDef>
+      </li>
+      <li Class="StockGenerator_WeaponsRanged" ListIndex="3">
+        <countRange>
+          <min>0</min>
+          <max>1</max>
+        </countRange>
+        <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+      </li>
+      <li Class="StockGenerator_Category" ListIndex="4">
+        <countRange>
+          <min>0</min>
+          <max>1</max>
+        </countRange>
+        <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+        <categoryDef>WeaponsMelee</categoryDef>
+      </li>
+      <li Class="StockGenerator_Category" ListIndex="5">
+        <totalPriceRange>
+          <min>200</min>
+          <max>400</max>
+        </totalPriceRange>
+        <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+        <price>Expensive</price>
+        <categoryDef>Drugs</categoryDef>
+        <thingDefCountRange>
+          <min>-1</min>
+          <max>1</max>
+        </thingDefCountRange>
+      </li>
+      <li Class="StockGenerator_Clothes" ListIndex="6">
+        <countRange>
+          <min>0</min>
+          <max>1</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_BuyArt" ListIndex="7" />
+      <li Class="StockGenerator_BuyWeirdOrganic" ListIndex="8" />
+      <li Class="StockGenerator_MultiDef" ListIndex="9">
+        <thingDefs>
+          <li ListIndex="0">Cloth</li>
+          <li ListIndex="1">Chocolate</li>
+        </thingDefs>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+</DefPackage-TraderKindDef>

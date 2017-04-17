@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DrugBases>
+  <ThingDef Name="DrugBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>400</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li>Drugs</li>
+    </thingCategories>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <chairSearchRadius>8</chairSearchRadius>
+      <joyKind>Chemical</joyKind>
+      <preferability>NeverForNutrition</preferability>
+    </ingestible>
+  </ThingDef>
+  <ThingDef Name="MakeableDrugBase" ParentName="DrugBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_CookMeal</soundWorking>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef Name="MakeableDrugPillBase" ParentName="MakeableDrugBase" Abstract="True">
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <baseIngestTicks>120</baseIngestTicks>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <foodType>Processed</foodType>
+    </ingestible>
+  </ThingDef>
+  <ThingDef Name="DrugPillBase" ParentName="DrugBase" Abstract="True">
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <baseIngestTicks>120</baseIngestTicks>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <foodType>Processed</foodType>
+    </ingestible>
+  </ThingDef>
+  <HediffDef Name="AddictionBase" Abstract="True">
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(255,0,127)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef Name="DrugToleranceBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <everVisible>false</everVisible>
+      </li>
+      <li>
+        <minSeverity>0.20</minSeverity>
+        <label>small</label>
+      </li>
+      <li>
+        <minSeverity>0.50</minSeverity>
+        <label>large</label>
+      </li>
+      <li>
+        <minSeverity>0.80</minSeverity>
+        <label>massive</label>
+      </li>
+    </stages>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(179,86,132)</defaultLabelColor>
+  </HediffDef>
+  <NeedDef Name="DrugAddictionNeedBase" Abstract="True">
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <tutorHighlightTag>NeedAddiction</tutorHighlightTag>
+    <showForCaravanMembers>true</showForCaravanMembers>
+  </NeedDef>
+</DrugBases>

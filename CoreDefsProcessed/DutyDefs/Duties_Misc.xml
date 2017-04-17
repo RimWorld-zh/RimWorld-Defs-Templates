@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DutyDef>
+    <defName>Travel</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_GotoTravelDestination" ListIndex="0" />
+        <!-- Note this exit node can happen at odd times
+            like if you block siegers from hitting their siege location before they arrive-->
+        <li Class="JobGiver_ExitMapRandom" ListIndex="1">
+          <defaultLocomotion>Walk</defaultLocomotion>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>Defend</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <!-- Todo here - if outside of duty radius, go to within duty radius-->
+      <!-- Currently this is handled by a hack in JobGiver_AIFightBase-->
+      <subNodes>
+        <li Class="JobGiver_TakeCombatEnhancingDrug" ListIndex="0">
+          <onlyIfInDanger>true</onlyIfInDanger>
+        </li>
+        <li Class="JobGiver_AIDefendPoint" ListIndex="1">
+          <targetAcquireRadius>65</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius" ListIndex="2">
+          <subNodes>
+            <li Class="ThinkNode_Subtree" ListIndex="0">
+              <treeDef>SatisfyBasicNeedsAndWork</treeDef>
+            </li>
+          </subNodes>
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation" ListIndex="3">
+          <wanderRadius>8</wanderRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </DutyDef>
+  <DutyDef>
+    <defName>Follow</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AIFollowEscortee" ListIndex="0" />
+        <li Class="ThinkNode_ForbidOutsideFlagRadius" ListIndex="1">
+          <subNodes>
+            <li Class="ThinkNode_Subtree" ListIndex="0">
+              <treeDef>SatisfyBasicNeedsAndWork</treeDef>
+            </li>
+          </subNodes>
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation" ListIndex="2">
+          <wanderRadius>5</wanderRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>Build</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_FightFiresNearPoint" ListIndex="0">
+          <maxDistFromPoint>25</maxDistFromPoint>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius" ListIndex="1">
+          <subNodes>
+            <li Class="JobGiver_Work" ListIndex="0" />
+          </subNodes>
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_AIDefendPoint" ListIndex="2">
+          <targetAcquireRadius>35</targetAcquireRadius>
+          <targetKeepRadius>40</targetKeepRadius>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius" ListIndex="3">
+          <subNodes>
+            <li Class="ThinkNode_Subtree" ListIndex="0">
+              <treeDef>SatisfyBasicNeedsAndWork</treeDef>
+            </li>
+          </subNodes>
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_ManTurretsNearPoint" ListIndex="4">
+          <maxDistFromPoint>25</maxDistFromPoint>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation" ListIndex="5">
+          <wanderRadius>8</wanderRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>AssaultColony</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_TakeCombatEnhancingDrug" ListIndex="0" />
+        <li Class="JobGiver_AIFightEnemies" ListIndex="1">
+          <targetAcquireRadius>65</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_AITrashColonyClose" ListIndex="2" />
+        <li Class="JobGiver_AITrashBuildingsDistant" ListIndex="3" />
+        <li Class="JobGiver_AIGotoNearestHostile" ListIndex="4" />
+        <li Class="JobGiver_AISapper" ListIndex="5">
+          <canMineNonMineables>false</canMineNonMineables>
+        </li>
+      </subNodes>
+    </thinkNode>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </DutyDef>
+  <DutyDef>
+    <defName>Sapper</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_TakeCombatEnhancingDrug" ListIndex="0" />
+        <li Class="JobGiver_AIFightEnemies" ListIndex="1">
+          <targetAcquireRadius>12</targetAcquireRadius>
+          <targetKeepRadius>15</targetKeepRadius>
+          <needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+        </li>
+        <li Class="JobGiver_AISapper" ListIndex="2" />
+        <li Class="JobGiver_AITrashColonyClose" ListIndex="3" />
+        <li Class="JobGiver_AITrashBuildingsDistant" ListIndex="4" />
+        <li Class="JobGiver_AIGotoNearestHostile" ListIndex="5" />
+      </subNodes>
+    </thinkNode>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </DutyDef>
+  <DutyDef>
+    <defName>Escort</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_TakeCombatEnhancingDrug" ListIndex="0">
+          <onlyIfInDanger>true</onlyIfInDanger>
+        </li>
+        <li Class="JobGiver_AIFollowEscortee" ListIndex="1" />
+        <li Class="JobGiver_AIDefendEscortee" ListIndex="2">
+          <targetAcquireRadius>65</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation" ListIndex="3">
+          <wanderRadius>8</wanderRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </DutyDef>
+  <DutyDef>
+    <defName>HuntEnemiesIndividual</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_TakeCombatEnhancingDrug" ListIndex="0" />
+        <li Class="JobGiver_AIFightEnemies" ListIndex="1">
+          <targetAcquireRadius>65</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_AITrashColonyClose" ListIndex="2" />
+        <li Class="JobGiver_AITrashBuildingsDistant" ListIndex="3" />
+        <li Class="JobGiver_AIGotoNearestHostile" ListIndex="4" />
+      </subNodes>
+    </thinkNode>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </DutyDef>
+  <DutyDef>
+    <defName>Kidnap</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_Kidnap" ListIndex="0" />
+        <li Class="JobGiver_ExitMapBest" ListIndex="1">
+          <defaultLocomotion>Jog</defaultLocomotion>
+          <jobMaxDuration>200</jobMaxDuration>
+          <forceCanDig>true</forceCanDig>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>TakeWoundedGuest</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_TakeWoundedGuest" ListIndex="0" />
+        <li Class="JobGiver_ExitMapBest" ListIndex="1">
+          <defaultLocomotion>Jog</defaultLocomotion>
+          <jobMaxDuration>500</jobMaxDuration>
+          <forceCanDig>true</forceCanDig>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>Steal</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_Steal" ListIndex="0" />
+        <li Class="JobGiver_ExitMapBest" ListIndex="1">
+          <defaultLocomotion>Jog</defaultLocomotion>
+          <jobMaxDuration>200</jobMaxDuration>
+          <forceCanDig>true</forceCanDig>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>PrisonerEscape</defName>
+    <thinkNode Class="ThinkNode_Tagger">
+      <subNodes>
+        <!-- Take combat enhancing drugs -->
+        <li Class="JobGiver_TakeCombatEnhancingDrug" ListIndex="0" />
+        <li Class="ThinkNode_ConditionalHasDutyPawnTarget" ListIndex="1">
+          <subNodes>
+            <!-- Follow and defend leader -->
+            <li Class="JobGiver_AIFollowEscortee" ListIndex="0" />
+            <li Class="JobGiver_AIDefendEscortee" ListIndex="1">
+              <targetAcquireRadius>15</targetAcquireRadius>
+              <targetKeepRadius>18</targetKeepRadius>
+              <needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+            </li>
+            <li Class="JobGiver_WanderNearDutyLocation" ListIndex="2">
+              <wanderRadius>3</wanderRadius>
+            </li>
+          </subNodes>
+        </li>
+        <!-- Leader -->
+        <!-- Fight nearby enemies -->
+        <li Class="JobGiver_AIFightEnemies" ListIndex="2">
+          <targetAcquireRadius>14</targetAcquireRadius>
+          <targetKeepRadius>17</targetKeepRadius>
+          <needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+        </li>
+        <!-- Escape -->
+        <li Class="JobGiver_GotoTravelDestination" ListIndex="3">
+          <locomotionUrgency>Jog</locomotionUrgency>
+          <jobMaxDuration>500</jobMaxDuration>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation" ListIndex="4">
+          <wanderRadius>3</wanderRadius>
+        </li>
+      </subNodes>
+      <tagToGive>Escaping</tagToGive>
+    </thinkNode>
+    <constantThinkNode Class="ThinkNode_Tagger">
+      <subNodes>
+        <!-- Try to pick up nearby weapons -->
+        <li Class="JobGiver_PickUpOpportunisticWeapon" ListIndex="0" />
+      </subNodes>
+      <tagToGive>Escaping</tagToGive>
+    </constantThinkNode>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </DutyDef>
+  <DutyDef>
+    <defName>PrisonerEscapeSapper</defName>
+    <thinkNode Class="ThinkNode_Tagger">
+      <subNodes>
+        <!-- Take combat enhancing drugs -->
+        <li Class="JobGiver_TakeCombatEnhancingDrug" ListIndex="0" />
+        <!-- Fight nearby enemies -->
+        <li Class="JobGiver_AIFightEnemies" ListIndex="1">
+          <targetAcquireRadius>12</targetAcquireRadius>
+          <targetKeepRadius>15</targetKeepRadius>
+          <needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+        </li>
+        <!-- Dig out of the colony to get to the exit point -->
+        <li Class="JobGiver_AISapper" ListIndex="2" />
+        <!-- Wait until the lord tells to exit the map -->
+        <li Class="JobGiver_WanderNearDutyLocation" ListIndex="3">
+          <wanderRadius>3</wanderRadius>
+        </li>
+      </subNodes>
+      <tagToGive>Escaping</tagToGive>
+    </thinkNode>
+    <constantThinkNode Class="ThinkNode_Tagger">
+      <subNodes>
+        <!-- Try to pick up nearby weapons -->
+        <li Class="JobGiver_PickUpOpportunisticWeapon" ListIndex="0">
+          <!-- prefer building destroyers (e.g. grenades) because I'm a sapper -->
+          <preferBuildingDestroyers>true</preferBuildingDestroyers>
+        </li>
+      </subNodes>
+      <tagToGive>Escaping</tagToGive>
+    </constantThinkNode>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </DutyDef>
+  <DutyDef>
+    <defName>DefendAndExpandHive</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_HiveDefense" ListIndex="0">
+          <targetAcquireRadius>30</targetAcquireRadius>
+          <needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+          <chaseTarget>false</chaseTarget>
+        </li>
+        <li Class="ThinkNode_ChancePerHour_Constant" ListIndex="1">
+          <subNodes>
+            <li Class="JobGiver_MaintainHives" ListIndex="0" />
+          </subNodes>
+          <mtbHours>5</mtbHours>
+        </li>
+        <li Class="ThinkNode_ConditionalBodySize" ListIndex="2">
+          <subNodes>
+            <li Class="ThinkNode_ChancePerHour_Constant" ListIndex="0">
+              <subNodes>
+                <li Class="JobGiver_MineRandom" ListIndex="0" />
+              </subNodes>
+              <mtbHours>18</mtbHours>
+            </li>
+          </subNodes>
+          <min>0.7</min>
+        </li>
+        <li Class="ThinkNode_Tagger" ListIndex="3">
+          <subNodes>
+            <li Class="ThinkNode_PrioritySorter" ListIndex="0">
+              <subNodes>
+                <li Class="JobGiver_GetFood" ListIndex="0" />
+                <li Class="JobGiver_GetRest" ListIndex="1" />
+              </subNodes>
+            </li>
+          </subNodes>
+          <tagToGive>SatisfyingNeeds</tagToGive>
+        </li>
+        <li Class="JobGiver_WanderHive" ListIndex="4">
+          <maxDanger>Deadly</maxDanger>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>ExitMapRandom</defName>
+    <thinkNode Class="JobGiver_ExitMapRandom">
+      <defaultLocomotion>Walk</defaultLocomotion>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>ExitMapBest</defName>
+    <thinkNode Class="JobGiver_ExitMapBest">
+      <defaultLocomotion>Walk</defaultLocomotion>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>ExitMapBestAndDefendSelf</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AIDefendSelf" ListIndex="0">
+          <targetAcquireRadius>35</targetAcquireRadius>
+          <targetKeepRadius>40</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_ExitMapBest" ListIndex="1">
+          <defaultLocomotion>Walk</defaultLocomotion>
+          <jobMaxDuration>200</jobMaxDuration>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>LoadAndEnterTransporters</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_LoadTransporters" ListIndex="0" />
+        <li Class="JobGiver_EnterTransporter" ListIndex="1" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+  <DutyDef>
+    <defName>ManClosestTurret</defName>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree" ListIndex="0">
+          <treeDef>SatisfyBasicNeeds</treeDef>
+        </li>
+        <li Class="JobGiver_ManTurretsNearSelf" ListIndex="1">
+          <maxDistFromPoint>50</maxDistFromPoint>
+        </li>
+        <li Class="JobGiver_AIDefendPoint" ListIndex="2">
+          <targetAcquireRadius>35</targetAcquireRadius>
+          <targetKeepRadius>40</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation" ListIndex="3">
+          <wanderRadius>12</wanderRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+</Defs>

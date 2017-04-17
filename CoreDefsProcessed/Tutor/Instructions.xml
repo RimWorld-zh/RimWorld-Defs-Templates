@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <InstructionDef>
+    <defName>CreateWorldParams</defName>
+    <text>Welcome to RimWorld! This tutorial will teach you how to play the game.\n\nThe first step is to generate a world to play in.\n\nThis page configures how your world should be generated.\n\nThe default settings here are good - go ahead and click GENERATE!</text>
+    <startCentered>true</startCentered>
+    <eventTagInitiate>PageStart-CreateWorldParams</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">PageClosed</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">GotoPrevPage</li>
+      <li ListIndex="1">GotoNextPage</li>
+    </actionTagsAllowed>
+    <highlightTags>
+      <li ListIndex="0">NextPage</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>ChooseLandingSite</defName>
+    <text>Here, you choose your landing site.\n\nThere are lots of biomes, but for now, let's start with a friendly one.\n\nClick a landing site with temperate forest biome and flat terrain, and click NEXT.\n\nYou can use the TERRAIN tab to view information about the selected tile.</text>
+    <eventTagInitiate>PageStart-SelectLandingSite</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">PageClosed</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">GotoPrevPage</li>
+      <li ListIndex="1">ChooseBiome-TemperateForest-Flat</li>
+      <li ListIndex="2">ITab-Planet-Open</li>
+      <li ListIndex="3">ITab-Terrain-Open</li>
+      <li ListIndex="4">GotoNextPage</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please choose a temperate forest landing site with flat terrain.</rejectInputMessage>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>RandomizeCharacter</defName>
+    <text>Now you'll generate characters!\n\nTry randomizing a character with the RANDOMIZE button.</text>
+    <eventTagInitiate>PageStart-ConfigureStartingPawns</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">RandomizePawn</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">GotoPrevPage</li>
+      <li ListIndex="1">RandomizePawn</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please try randomizing a character first.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">RandomizePawn</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>AcceptStartingPawns</defName>
+    <text>Great!\n\nRandomize more if you want - but don't try to get the perfect character. Everyone has flaws, and it makes the story more interesting!\n\nYou can also re-name the characters by clicking on their names.\n\nClick START when you're ready.</text>
+    <eventTagInitiate>RandomizePawn</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">PageClosed</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">GotoPrevPage</li>
+      <li ListIndex="1">RandomizePawn</li>
+      <li ListIndex="2">GotoNextPage</li>
+    </actionTagsAllowed>
+    <highlightTags>
+      <li ListIndex="0">NextPage</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>MapCameraDolly</defName>
+    <instructionClass>Instruction_LearnConcept</instructionClass>
+    <text>Here you are on the surface!\n\nNow try moving the camera around.\n\nUse the {Key:MapDollyUp}-{Key:MapDollyLeft}-{Key:MapDollyDown}-{Key:MapDollyRight} keys, or click and drag with the middle mouse button.\n\nTry it now!</text>
+    <eventTagInitiate>GameStartDialogClosed</eventTagInitiate>
+    <concept>CameraDolly</concept>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>MapCameraZoom</defName>
+    <instructionClass>Instruction_LearnConcept</instructionClass>
+    <text>Great!\n\nYou can also zoom in and out with the mouse wheel, or the {Key:MapZoomIn} and {Key:MapZoomOut} keys.\n\nTry it now!</text>
+    <eventTagInitiate>InstructionDeactivated-MapCameraDolly</eventTagInitiate>
+    <concept>CameraZoom</concept>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>Pause</defName>
+    <instructionClass>Instruction_LearnConcept</instructionClass>
+    <text>You can pause time.\n\nThis means you never need to rush. You can always pause and take your time to issue orders.\n\nTry pausing with the {Key:TogglePause} key, or by using the time controls in the bottom right.</text>
+    <eventTagInitiate>InstructionDeactivated-MapCameraZoom</eventTagInitiate>
+    <concept>Pause</concept>
+    <highlightTags>
+      <li ListIndex="0">TimeControls</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>TimeControls</defName>
+    <instructionClass>Instruction_LearnConcept</instructionClass>
+    <text>You can also speed up time.\n\nTry controlling time with the {Key:TimeSpeedNormal}, {Key:TimeSpeedFast}, and {Key:TimeSpeedSuperfast} keys, or with the time controls in the bottom right.</text>
+    <eventTagInitiate>InstructionDeactivated-Pause</eventTagInitiate>
+    <concept>TimeControls</concept>
+    <highlightTags>
+      <li ListIndex="0">TimeControls</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>MakeStockpile</defName>
+    <instructionClass>Instruction_PlaceStockpile</instructionClass>
+    <text>Great!\n\nNow, make a stockpile so your colonists know where to keep items.\n\n1. Click ARCHITECT tab in the bottom left.\n2. Click the ZONE/AREA category.\n3. Select the CREATE STOCKPILE tool.\n4. Click and drag out a square as indicated on the map.</text>
+    <eventTagInitiate>InstructionDeactivated-TimeControls</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">Designate-ZoneAddStockpile_Resources</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-ZoneAddStockpile_Resources</li>
+      <li ListIndex="2">Designate-ZoneAddStockpile_Resources</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please make a stockpile on the indicated area.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Zone-Closed</li>
+      <li ListIndex="2">Designator-ZoneAddStockpile_Resources</li>
+    </highlightTags>
+    <onMapInstruction>Place stockpile here\n(drag corner-to-corner)</onMapInstruction>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>EndStockpileDesignating</defName>
+    <text>Right-click to get out of stockpile designating mode.</text>
+    <eventTagInitiate>InstructionDeactivated-MakeStockpile</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">ClearDesignatorSelection</li>
+    </eventTagsEnd>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>UnforbidStartingResources</defName>
+    <instructionClass>Instruction_UnforbidStartingResources</instructionClass>
+    <text>Now, to allow your colonists to bring your items to the stockpile, you must unforbid the items.\n\n1. Clicking your starting items to select them.\n2. Click the TOGGLE FORBIDDEN command to unforbid them.\n\n(Pro tip: Double-click an item to select all on screen of the same type.)</text>
+    <eventTagInitiate>InstructionDeactivated-EndStockpileDesignating</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">ToggleForbidden</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please unforbid your starting items.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">ToggleForbidden</li>
+    </highlightTags>
+    <onMapInstruction>Unforbid this</onMapInstruction>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildRoomWalls</defName>
+    <instructionClass>Instruction_BuildRoomWalls</instructionClass>
+    <text>Awesome! Next, we'll build a room.\n\n1. Click ARCHITECT.\n2. Click STRUCTURE.\n3. Select WALL.\n4. Select WOOD as the material.\n5. Drag out four walls to form the shape indicated on the map.</text>
+    <eventTagInitiate>InstructionDeactivated-UnforbidStartingResources</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-Wall</li>
+      <li ListIndex="2">SelectStuff-Wall-WoodLog</li>
+      <li ListIndex="3">Designate-Wall</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please build wooden walls along the edges of the highlighted rectangle.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Structure-Closed</li>
+      <li ListIndex="2">Designator-Build-Wall</li>
+      <li ListIndex="3">SelectStuff-Wall-WoodLog</li>
+    </highlightTags>
+    <onMapInstruction>Build walls</onMapInstruction>
+    <resetBuildDesignatorStuffs>true</resetBuildDesignatorStuffs>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildRoomDoor</defName>
+    <instructionClass>Instruction_BuildRoomDoor</instructionClass>
+    <text>Now just place a DOOR over any one of the room walls.\n\nDOOR is right beside WALL in the ARCHITECT menu.</text>
+    <eventTagInitiate>InstructionDeactivated-BuildRoomWalls</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-Door</li>
+      <li ListIndex="2">SelectStuff-Door-WoodLog</li>
+      <li ListIndex="3">Designate-Door</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please build a wooden door over one of your room walls.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Structure-Closed</li>
+      <li ListIndex="2">Designator-Build-Door</li>
+      <li ListIndex="3">SelectStuff-Door-WoodLog</li>
+    </highlightTags>
+    <onMapInstruction>Build a door over one wall</onMapInstruction>
+    <resetBuildDesignatorStuffs>true</resetBuildDesignatorStuffs>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildBeds</defName>
+    <instructionClass>Instruction_BuildInRoom</instructionClass>
+    <text>Your colonists will now build the room!\n\nNow they need somewhere to sleep. Place three BEDS inside the room.\n\nFind them in the FURNITURE category.</text>
+    <eventTagInitiate>InstructionDeactivated-BuildRoomDoor</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-Bed</li>
+      <li ListIndex="2">SelectStuff-Bed-WoodLog</li>
+      <li ListIndex="3">Designate-Bed</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please build wooden beds inside the room.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Furniture-Closed</li>
+      <li ListIndex="2">Designator-Build-Bed</li>
+      <li ListIndex="3">SelectStuff-Bed-WoodLog</li>
+    </highlightTags>
+    <onMapInstruction>Build three beds inside the room</onMapInstruction>
+    <targetCount>3</targetCount>
+    <thingDef>Bed</thingDef>
+    <resetBuildDesignatorStuffs>true</resetBuildDesignatorStuffs>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildTorchLamp</defName>
+    <instructionClass>Instruction_BuildInRoom</instructionClass>
+    <text>You'll also want some light inside, or your colonists will get grumpy in the dark.\n\nBuild a TORCH LAMP inside the room.</text>
+    <eventTagInitiate>InstructionDeactivated-BuildBeds</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-TorchLamp</li>
+      <li ListIndex="2">Designate-TorchLamp</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please build a torch lamp inside the room.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Furniture-Closed</li>
+      <li ListIndex="2">Designator-Build-TorchLamp</li>
+    </highlightTags>
+    <onMapInstruction>Build a torch lamp inside the room</onMapInstruction>
+    <targetCount>1</targetCount>
+    <thingDef>TorchLamp</thingDef>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildAnimalSleepingSpot</defName>
+    <instructionClass>Instruction_BuildInRoom</instructionClass>
+    <text>So your pet will sleep inside with you, place an ANIMAL SLEEPING SPOT inside the room.\n\nSleeping spots aren't real buildings - they're just spots on the ground designated for a sleeping.</text>
+    <eventTagInitiate>InstructionDeactivated-BuildTorchLamp</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-AnimalSleepingSpot</li>
+      <li ListIndex="2">Designate-AnimalSleepingSpot</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please place an animal sleeping spot inside the room.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Furniture-Closed</li>
+      <li ListIndex="2">Designator-Build-AnimalSleepingSpot</li>
+    </highlightTags>
+    <onMapInstruction>Build an animal sleeping spot\ninside the room</onMapInstruction>
+    <targetCount>1</targetCount>
+    <thingDef>AnimalSleepingSpot</thingDef>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildHorseshoesPin</defName>
+    <instructionClass>Instruction_BuildNearRoom</instructionClass>
+    <text>Your colonists need sources of joy or they'll get sad over time.\n\nBuild a HORSESHOES pin outside, near the room.</text>
+    <eventTagInitiate>InstructionDeactivated-BuildAnimalSleepingSpot</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-HorseshoesPin</li>
+      <li ListIndex="2">SelectStuff-HorseshoesPin-WoodLog</li>
+      <li ListIndex="3">SelectStuff-HorseshoesPin-Steel</li>
+      <li ListIndex="4">Designate-HorseshoesPin</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please place a horseshoes pin somewhere near the room.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Joy-Closed</li>
+      <li ListIndex="2">Designator-Build-HorseshoesPin</li>
+      <li ListIndex="3">SelectStuff-HorseshoesPin-WoodLog</li>
+      <li ListIndex="4">SelectStuff-HorseshoesPin-Steel</li>
+    </highlightTags>
+    <onMapInstruction>Build a horseshoes pin\noutside the room</onMapInstruction>
+    <targetCount>1</targetCount>
+    <thingDef>HorseshoesPin</thingDef>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>MakeGrowingZone</defName>
+    <instructionClass>Instruction_PlaceGrowingZone</instructionClass>
+    <text>The house is being built!\n\nYour colonists will need something to eat, so place a GROWING ZONE as indicated on the map.\n\nThis is where your colonists will sow crops.</text>
+    <eventTagInitiate>InstructionDeactivated-BuildHorseshoesPin</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">Designate-ZoneAdd_Growing</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-ZoneAdd_Growing</li>
+      <li ListIndex="2">Designate-ZoneAdd_Growing</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please make a growing zone on the indicated area.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Zone-Closed</li>
+      <li ListIndex="2">Designator-ZoneAdd_Growing</li>
+    </highlightTags>
+    <onMapInstruction>Place growing zone here\n(drag corner-to-corner)</onMapInstruction>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>SetToGrowRice</defName>
+    <instructionClass>Instruction_SetGrowingZonePlant</instructionClass>
+    <text>You can decide what plant your colonists should sow in a growing zone.\n\n1. Right-click to exit architect mode.\n2. Click your growing zone to select it.\n3. Click the "Select plant" command at the bottom and change it to Rice.</text>
+    <eventTagInitiate>InstructionDeactivated-MakeGrowingZone</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">GrowingZoneSetPlant-PlantRice</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">GrowingZoneSetPlant</li>
+      <li ListIndex="1">GrowingZoneSetPlant-PlantRice</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please set your growing zone to grow rice.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">GrowingZoneSetPlant</li>
+    </highlightTags>
+    <onMapInstruction>Set this growing zone to grow rice</onMapInstruction>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>EquipWeapons</defName>
+    <instructionClass>Instruction_EquipWeapons</instructionClass>
+    <text>Have your colonists equip the starting weapons. To equip a weapon:\n\n1. Click a colonist to select them.\n2. Right-click the weapon you want to equip.\n3. Click 'equip weapon' on the context menu.\n\nDo this for each colonist.</text>
+    <eventTagInitiate>InstructionDeactivated-SetToGrowRice</eventTagInitiate>
+    <rejectInputMessage>Please have your colonists equip weapons.</rejectInputMessage>
+    <onMapInstruction>Equip this</onMapInstruction>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildFueledStove</defName>
+    <instructionClass>Instruction_BuildInRoom</instructionClass>
+    <text>Excellent!\n\nNow you'll need to make a stove to cook food.\n\nBuild a FUELED STOVE inside the room.</text>
+    <eventTagInitiate>InstructionDeactivated-EquipWeapons</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-FueledStove</li>
+      <li ListIndex="2">Designate-FueledStove</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please build the fueled stove inside the room you built earlier.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Production-Closed</li>
+      <li ListIndex="2">Designator-Build-FueledStove</li>
+    </highlightTags>
+    <onMapInstruction>Build a fueled stove inside the room</onMapInstruction>
+    <targetCount>1</targetCount>
+    <thingDef>FueledStove</thingDef>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>AddBillSimpleMeal</defName>
+    <instructionClass>Instruction_AddBill</instructionClass>
+    <text>Colonists need to be told what to cook.\n\nCooking orders are added on the stove itself. Once a bill has been created, colonists will do the work automatically.\n\n1. Wait for the stove to be built.\n2. Click the stove to select it.\n3. Open the BILLS tab.\n4. Click ADD BILL.\n5. Select COOK SIMPLE MEAL on the context menu.\n6. Click the + button to increase the count to 10.\n\nRemember, you can speed up time if building is taking too long.\n\nYou can also select a colonist and right-click the stove to prioritize building it.</text>
+    <eventTagInitiate>InstructionDeactivated-BuildFueledStove</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">ITab-Bills-Open</li>
+      <li ListIndex="1">MainTab-Work-Open</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please add a bill to cook simple meals at your cook stove.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">ITab-Bills-Closed</li>
+    </highlightTags>
+    <onMapInstruction>Select this</onMapInstruction>
+    <thingDef>FueledStove</thingDef>
+    <recipeDef>CookMealSimple</recipeDef>
+    <recipeTargetCount>10</recipeTargetCount>
+    <giveOnActivateDef>RawPotatoes</giveOnActivateDef>
+    <giveOnActivateCount>75</giveOnActivateCount>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>MineSteel</defName>
+    <instructionClass>Instruction_MineSteel</instructionClass>
+    <text>Now your colonists will cook some food! Tasty!\n\nNext, you'll want to mine some minerals. I've spawned some mineable steel near your base.\n\nSelect the MINE designator and drag over the steel to designate it for mining.</text>
+    <eventTagInitiate>InstructionDeactivated-AddBillSimpleMeal</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-Mine</li>
+      <li ListIndex="2">Designate-Mine</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please use the 'mine' designator on the compacted steel.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Orders-Closed</li>
+      <li ListIndex="2">Designator-Mine</li>
+    </highlightTags>
+    <onMapInstruction>Designate all this\nfor mining</onMapInstruction>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>ChopTrees</defName>
+    <instructionClass>Instruction_ChopWood</instructionClass>
+    <text>You'll want to harvest some wood. Designate some trees to be chopped.\n\nSelect the CHOP WOOD designator and designate 10 trees to be chopped down.\n\n(Pro tip: You can drag a box over trees to designate several at once.)</text>
+    <eventTagInitiate>InstructionDeactivated-MineSteel</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">SelectDesignator-PlantsHarvestWood</li>
+      <li ListIndex="2">Designate-PlantsHarvestWood</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please drag the 'chop wood' designator over some trees.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Orders-Closed</li>
+      <li ListIndex="2">Designator-PlantsHarvestWood</li>
+    </highlightTags>
+    <targetCount>10</targetCount>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>OpenMainTabWork</defName>
+    <text>You can control which colonist does what kind of work.\n\nOpen the WORK tab at the bottom of the screen.</text>
+    <eventTagInitiate>InstructionDeactivated-ChopTrees</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">Open-MainTab-Work</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Work-Open</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please open the 'Work' tab.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Work-Closed</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>ChangeWorkSettings</defName>
+    <instructionClass>Instruction_LearnConcept</instructionClass>
+    <text>You can control who does what kinds of work using the checkboxes. Colonists will do tasks in order, from left to right.\n\nTry changing some settings now.\n\nBeware - Colonists always follow their work priorities, even if this makes them do dumb things! Setting up a smart work regime is a key skill for success in RimWorld. So set the work settings carefully, and review them often!</text>
+    <eventTagInitiate>InstructionDeactivated-OpenMainTabWork</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Work-Open</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please open the 'Work' tab and change some settings.</rejectInputMessage>
+    <concept>WorkTab</concept>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Work-Closed</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildSimpleResearchBench</defName>
+    <instructionClass>Instruction_BuildInRoom</instructionClass>
+    <text>To advance, you'll need to research new technologies.\n\nBuild a wooden SIMPLE RESEARCH BENCH inside your room.</text>
+    <eventTagInitiate>InstructionDeactivated-ChangeWorkSettings</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Work-Open</li>
+      <li ListIndex="1">MainTab-Architect-Open</li>
+      <li ListIndex="2">SelectDesignator-SimpleResearchBench</li>
+      <li ListIndex="3">SelectStuff-SimpleResearchBench-WoodLog</li>
+      <li ListIndex="4">Designate-SimpleResearchBench</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please place a wooden simple research bench inside the room you built earlier.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Production-Closed</li>
+      <li ListIndex="2">Designator-Build-SimpleResearchBench</li>
+      <li ListIndex="3">SelectStuff-SimpleResearchBench-WoodLog</li>
+    </highlightTags>
+    <onMapInstruction>Build a wooden simple research bench\ninside the room</onMapInstruction>
+    <targetCount>1</targetCount>
+    <thingDef>SimpleResearchBench</thingDef>
+    <resetBuildDesignatorStuffs>true</resetBuildDesignatorStuffs>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>OpenMainTabResearch</defName>
+    <text>Excellent! Next, you'll want to select what you want to be researched.\n\nOpen the RESEARCH tab.</text>
+    <eventTagInitiate>InstructionDeactivated-BuildSimpleResearchBench</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">Open-MainTab-Research</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Research-Open</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please open the 'Research' tab.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Research-Closed</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>SelectResearchProject</defName>
+    <text>Now just choose whatever you want to be researched first.\n\nYou might have to wait for the research bench to be constructed, or for trees to be chopped for wood.\n\nIf it's taking too long, use the WORK tab to assign more colonists to Construct.</text>
+    <eventTagInitiate>InstructionDeactivated-OpenMainTabResearch</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">StartResearchProject</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Research-Open</li>
+      <li ListIndex="1">MainTab-Work-Open</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please choose a research project.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Research-Closed</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>ExpandAreaHome</defName>
+    <instructionClass>Instruction_ExpandAreaHome</instructionClass>
+    <text>Next, you'll learn to expand the HOME AREA.\n\nColonists will clean floors and extinguish fires in the home area only, and ignore fires or filth outside of it.\n\nThe home area is added automatically when you build things - but you can also expand it manually.\n\nSelect the EXPAND HOME AREA tool and drag out a new area on the map.</text>
+    <eventTagInitiate>InstructionDeactivated-SelectResearchProject</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">MainTab-Work-Open</li>
+      <li ListIndex="2">SelectDesignator-AreaHomeExpand</li>
+      <li ListIndex="3">Designate-AreaHomeExpand</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please expand the home area a bit, just for practice.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Zone-Closed</li>
+      <li ListIndex="2">Designator-AreaHomeExpand</li>
+    </highlightTags>
+    <targetCount>30</targetCount>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>ExpandAreaBuildRoof</defName>
+    <instructionClass>Instruction_ExpandAreaBuildRoof</instructionClass>
+    <text>The BUILD ROOF AREA defines where your colonists will try to build roofs.\n\nIt auto-fills when you enclose a new room.\n\nSelect the EXPAND BUILD ROOF AREA tool and drag out the shape of a porch roof on the front of the house.</text>
+    <eventTagInitiate>InstructionDeactivated-ExpandAreaHome</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">MainTab-Work-Open</li>
+      <li ListIndex="2">SelectDesignator-AreaBuildRoofExpand</li>
+      <li ListIndex="3">Designate-AreaBuildRoofExpand</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please expand the build roof area a bit, just for practice.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Zone-Closed</li>
+      <li ListIndex="2">Designator-AreaBuildRoofExpand</li>
+    </highlightTags>
+    <targetCount>10</targetCount>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>BuildSandbags</defName>
+    <instructionClass>Instruction_BuildSandbags</instructionClass>
+    <text>Great! You've now got a basic colony running! Eventually, enemies will raid your colony. It's time to prepare for that.\n\nSelect the SANDBAGS designator and drag the sandbags out at the designated area.</text>
+    <eventTagInitiate>InstructionDeactivated-ExpandAreaBuildRoof</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Architect-Open</li>
+      <li ListIndex="1">MainTab-Work-Open</li>
+      <li ListIndex="2">SelectDesignator-Sandbags</li>
+      <li ListIndex="3">Designate-Sandbags</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please build sandbags in the highlighted area.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Architect-Closed</li>
+      <li ListIndex="1">DesignationCategoryButton-Security-Closed</li>
+      <li ListIndex="2">Designator-Build-Sandbags</li>
+    </highlightTags>
+    <onMapInstruction>Build sandbags here</onMapInstruction>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>FinishSandbags</defName>
+    <instructionClass>Instruction_FinishConstruction</instructionClass>
+    <text>Let's just wait for all your constructions to be built.\n\nConsider using the WORK tab to assign more colonists to Construct.\n\nAlso, you can speed up time to shorten the wait.\n\nOnce everything's built, I'll send an attacker to test your defenses!</text>
+    <eventTagInitiate>InstructionDeactivated-BuildSandbags</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Work-Open</li>
+      <li ListIndex="1">ITab-Health-Open</li>
+      <li ListIndex="2">ITab-Gear-Open</li>
+      <li ListIndex="3">ITab-Needs-Open</li>
+      <li ListIndex="4">ITab-Social-Open</li>
+      <li ListIndex="5">ITab-Character-Open</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please wait for your colonists to finish building the sandbags.</rejectInputMessage>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>DownRaider</defName>
+    <instructionClass>Instruction_DownRaider</instructionClass>
+    <text>I've now sent a raider to attack your colony!\n\n1. Pause the game by hitting {Key:TogglePause}!\n2. Read the red letter in the bottom-right of the screen.\n3. DRAFT your colonists by selecting them and hitting the DRAFT command.\n4. Right-click to them to positions inside the sandbag square, touching the sandbags.\n5. Unpause.\n\nColonists must be touching cover to benefit from it. Once you're in cover, wait for the attacker to approach. Your colonists will shoot automatically.</text>
+    <eventTagInitiate>InstructionDeactivated-FinishSandbags</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">Draft</li>
+      <li ListIndex="1">Undraft</li>
+      <li ListIndex="2">AllowFiringToggle</li>
+      <li ListIndex="3">VerbTarget</li>
+      <li ListIndex="4">ITab-Health-Open</li>
+      <li ListIndex="5">ITab-Gear-Open</li>
+      <li ListIndex="6">ITab-Needs-Open</li>
+      <li ListIndex="7">ITab-Social-Open</li>
+      <li ListIndex="8">ITab-Character-Open</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please focus on winning the fight!</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">Draft</li>
+    </highlightTags>
+    <onMapInstruction>Send colonists here\ntouching sandbags for cover</onMapInstruction>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>UndraftAll</defName>
+    <instructionClass>Instruction_UndraftAll</instructionClass>
+    <text>Success! Now UNDRAFT all your colonists using the same command as before.\n\nThis will let them return to their own schedules.</text>
+    <eventTagInitiate>InstructionDeactivated-DownRaider</eventTagInitiate>
+    <actionTagsAllowed>
+      <li ListIndex="0">Draft</li>
+      <li ListIndex="1">Undraft</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please un-draft your colonists.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">Undraft</li>
+    </highlightTags>
+  </InstructionDef>
+  <InstructionDef>
+    <defName>ChooseStoryteller</defName>
+    <text>This is the end of the tutorial!\n\nThere's still tons more to learn, including prisoners, hunting, trade, animal taming, and much more. But you've got the basics down.\n\nRandom incidents were disabled during this tutorial. To begin the real game:\n\n1. Open the MENU tab in the bottom-right.\n2. Select OPTIONS.\n3. Click CHOOSE STORYTELLER.\n4. Select a storyteller and difficulty level that appeals to you.\n\nGood luck, and have fun.</text>
+    <eventTagInitiate>InstructionDeactivated-UndraftAll</eventTagInitiate>
+    <eventTagsEnd>
+      <li ListIndex="0">ChooseStoryteller</li>
+    </eventTagsEnd>
+    <actionTagsAllowed>
+      <li ListIndex="0">MainTab-Menu-Open</li>
+      <li ListIndex="1">ChooseStoryteller</li>
+    </actionTagsAllowed>
+    <rejectInputMessage>Please choose a storyteller in the Options menu to end the tutorial.</rejectInputMessage>
+    <highlightTags>
+      <li ListIndex="0">MainTab-Menu-Closed</li>
+      <li ListIndex="1">MenuButton-Options</li>
+      <li ListIndex="2">OptionsButton-ChooseStoryteller</li>
+    </highlightTags>
+    <endTutorial>true</endTutorial>
+  </InstructionDef>
+</Defs>

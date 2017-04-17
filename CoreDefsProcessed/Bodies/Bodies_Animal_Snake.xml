@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyDef>
+    <defName>Snake</defName>
+    <label>snake</label>
+    <corePart>
+      <def>SnakeBody</def>
+      <parts>
+        <li ListIndex="0">
+          <def>Stomach</def>
+          <depth>Inside</depth>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="1">
+          <def>Heart</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="2">
+          <def>LeftLung</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="3">
+          <def>RightLung</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="4">
+          <def>LeftKidney</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="5">
+          <def>RightKidney</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="6">
+          <def>Liver</def>
+          <depth>Inside</depth>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="7">
+          <def>SnakeHead</def>
+          <parts>
+            <li ListIndex="0">
+              <def>Skull</def>
+              <parts>
+                <li ListIndex="0">
+                  <def>Brain</def>
+                  <depth>Inside</depth>
+                  <coverage>0.50</coverage>
+                </li>
+              </parts>
+              <depth>Inside</depth>
+              <coverage>0.30</coverage>
+            </li>
+            <li ListIndex="1">
+              <def>LeftEye</def>
+              <coverage>0.10</coverage>
+            </li>
+            <li ListIndex="2">
+              <def>RightEye</def>
+              <coverage>0.10</coverage>
+            </li>
+            <li ListIndex="3">
+              <def>Nose</def>
+              <coverage>0.15</coverage>
+            </li>
+            <li ListIndex="4">
+              <def>SnakeMouth</def>
+              <coverage>0.15</coverage>
+              <groups>
+                <li ListIndex="0">Mouth</li>
+              </groups>
+            </li>
+          </parts>
+          <coverage>0.20</coverage>
+          <groups>
+            <li ListIndex="0">HeadAttackTool</li>
+          </groups>
+        </li>
+      </parts>
+      <height>Middle</height>
+      <depth>Outside</depth>
+    </corePart>
+  </BodyDef>
+</Defs>

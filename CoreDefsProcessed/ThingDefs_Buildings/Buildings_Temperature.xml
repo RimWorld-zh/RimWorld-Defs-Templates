@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Campfire</defName>
+    <label>campfire</label>
+    <description>Cooks meals and produces heat. Burns out after a few days. As with all heat sources, it must be placed indoors so it has a closed space to heat. Refuelable.</description>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <costList>
+      <WoodLog>20</WoodLog>
+      <!-- just the intial wood -->
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructDirt</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_Heater</li>
+    </placeWorkers>
+    <designationCategory>Temperature</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <thingClass>Building_WorkTable</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Refuelable" ListIndex="0">
+        <fuelConsumptionRate>10.0</fuelConsumptionRate>
+        <fuelCapacity>20.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li ListIndex="0">WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <destroyOnNoFuel>true</destroyOnNoFuel>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="1">
+        <glowRadius>10</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher" ListIndex="2">
+        <heatPerSecond>21</heatPerSecond>
+        <heatPushMaxTemperature>28</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_FireOverlay" ListIndex="3">
+        <fireSize>1</fireSize>
+      </li>
+      <li ListIndex="4">
+        <compClass>CompGatherSpot</compClass>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Misc/Campfire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Bills</li>
+    </inspectorTabs>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <fillPercent>0.25</fillPercent>
+    <recipes>
+      <li ListIndex="0">CookMealSimpleCampfire</li>
+      <li ListIndex="1">MakePemmicanCampfire</li>
+      <li ListIndex="2">BurnApparelCampfire</li>
+      <li ListIndex="3">BurnDrugs</li>
+    </recipes>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <isMealSource>true</isMealSource>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>PassiveCooler</defName>
+    <label>passive cooler</label>
+    <description>A traditional unpowered cooler that works by water evaporation. Will run out and self-destruct after several days.</description>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <costList>
+      <WoodLog>50</WoodLog>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">PassiveCooler</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructDirt</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_CoolerSimple</li>
+    </placeWorkers>
+    <designationCategory>Temperature</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_HeatPusher" ListIndex="0">
+        <heatPerSecond>-11</heatPerSecond>
+        <heatPushMinTemperature>15</heatPushMinTemperature>
+      </li>
+      <li Class="CompProperties_Lifespan" ListIndex="1">
+        <lifespanTicks>300000</lifespanTicks>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Misc/PassiveCooler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <fillPercent>0.40</fillPercent>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Heater</defName>
+    <label>heater</label>
+    <description>An electrical device that converts electricity into heat. It can automatically turn itself on or off to reach a specific target temperature.</description>
+    <statBases>
+      <WorkToBuild>1000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>6</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <costList>
+      <Steel>65</Steel>
+      <Component>1</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_Heater</li>
+    </placeWorkers>
+    <designationCategory>Temperature</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <thingClass>Building_Heater</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>175</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_TempControl" ListIndex="2">
+        <energyPerSecond>21</energyPerSecond>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="3">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,150,100,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="4" />
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/Heater</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.25,0.4,0.7)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.234375,0,0.515625,0.984375)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <blockWind>true</blockWind>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cooler</defName>
+    <label>cooler</label>
+    <description>An electrical device that fits into a wall and pushes cold air into a room. Its exhaust port generates a lot of heat. Can be used to cool down rooms during summer, or to create a walk-in freezer. </description>
+    <statBases>
+      <WorkToBuild>1600</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>90</Steel>
+      <Component>3</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">AirConditioning</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_Cooler</li>
+    </placeWorkers>
+    <designationCategory>Temperature</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <thingClass>Building_Cooler</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_TempControl" ListIndex="2">
+        <energyPerSecond>-21</energyPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="3" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/Cooler</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Vent</defName>
+    <label>vent</label>
+    <description>A simple vent for equalizing the temperature between two rooms without allowing people to walk between them.</description>
+    <statBases>
+      <WorkToBuild>400</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>30</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_Vent</li>
+    </placeWorkers>
+    <designationCategory>Temperature</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <thingClass>Building_Vent</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Flickable" ListIndex="0">
+        <commandTexture>UI/Commands/Vent</commandTexture>
+        <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
+        <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/Vent</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+  </ThingDef>
+</Defs>

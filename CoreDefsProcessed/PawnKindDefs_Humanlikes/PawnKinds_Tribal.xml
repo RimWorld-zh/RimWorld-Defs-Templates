@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PawnKindDefs>
+  <PawnKindDef Name="TribalBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef Name="TribalWarrior" ParentName="TribalBase">
+    <defName>TribalWarrior</defName>
+    <label>warrior</label>
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>warriors</labelPlural>
+    <maxGenerationAge>40</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>1.8</max>
+    </gearHealthRange>
+    <combatPower>38</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>180</min>
+      <max>350</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Tribal</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>60</min>
+      <max>400</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">NeolithicMelee</li>
+    </weaponTags>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalWarrior">
+    <defName>TribalTrader</defName>
+    <label>trader</label>
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>traders</labelPlural>
+    <maxGenerationAge>40</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>1.8</max>
+    </gearHealthRange>
+    <combatPower>38</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>180</min>
+      <max>350</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Tribal</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>60</min>
+      <max>400</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">NeolithicMelee</li>
+    </weaponTags>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <trader>true</trader>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>TribalArcher</defName>
+    <label>archer</label>
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>archers</labelPlural>
+    <maxGenerationAge>40</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>1.8</max>
+    </gearHealthRange>
+    <combatPower>48</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>180</min>
+      <max>350</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Tribal</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>400</min>
+      <max>400</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">NeolithicRanged</li>
+    </weaponTags>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>TribalChief</defName>
+    <label>chief</label>
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>chiefs</labelPlural>
+    <minGenerationAge>35</minGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>3.0</max>
+    </gearHealthRange>
+    <factionLeader>true</factionLeader>
+    <combatPower>70</combatPower>
+    <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>600</min>
+      <max>1600</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Tribal</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>800</min>
+      <max>1000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">NeolithicRanged</li>
+    </weaponTags>
+    <itemQuality>Superior</itemQuality>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+</PawnKindDefs>

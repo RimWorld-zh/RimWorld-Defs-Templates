@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>WakeUp</defName>
+    <label>wake-up</label>
+    <description>An addictive stimulant. Fills the need for rest, and allows users to work for extended periods without getting tired. Addiction causes reduced mental performance and, sometimes, psychotic breaks with reality.</description>
+    <statBases>
+      <WorkToMake>900</WorkToMake>
+      <MarketValue>24</MarketValue>
+      <Mass>0.005</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>400</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Drug" ListIndex="1">
+        <chemical>WakeUp</chemical>
+        <addictiveness>0.10</addictiveness>
+        <minToleranceToAddict>0.08</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <overdoseSeverityOffset>
+          <min>0.18</min>
+          <max>0.35</max>
+        </overdoseSeverityOffset>
+        <largeOverdoseChance>0.01</largeOverdoseChance>
+        <listOrder>210</listOrder>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_CookMeal</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>WakeUpProduction</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Drug/WakeUp</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Drugs</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="0">
+          <hediffDef>WakeUpHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>WakeUp</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed" ListIndex="1">
+          <need>Rest</need>
+          <offset>1.0</offset>
+          <toleranceChemical>WakeUp</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="2">
+          <hediffDef>WakeUpTolerance</hediffDef>
+          <severity>0.045</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+      <baseIngestTicks>120</baseIngestTicks>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <foodType>Processed</foodType>
+      <joy>0.40</joy>
+      <joyKind>Chemical</joyKind>
+      <preferability>NeverForNutrition</preferability>
+      <drugCategory>Hard</drugCategory>
+    </ingestible>
+  </ThingDef>
+  <HediffDef>
+    <defName>WakeUpHigh</defName>
+    <label>high on wake-up</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-1.5</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li ListIndex="0">
+        <restFallFactor>0.8</restFallFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random" ListIndex="0">
+            <hediff>HeartAttack</hediff>
+            <partsToAffect>
+              <li ListIndex="0">Heart</li>
+            </partsToAffect>
+            <mtbDays>120</mtbDays>
+          </li>
+        </hediffGivers>
+        <statOffsets>
+          <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </stages>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+  </HediffDef>
+  <!-- WakeUp addiction -->
+  <ChemicalDef>
+    <defName>WakeUp</defName>
+    <label>wake-up</label>
+    <addictionHediff>WakeUpAddiction</addictionHediff>
+    <toleranceHediff>WakeUpTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_WakeUp</defName>
+    <label>wake-up</label>
+    <description>Because of an wake-up addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <needClass>Need_Chemical</needClass>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <listPriority>40</listPriority>
+    <tutorHighlightTag>NeedAddiction</tutorHighlightTag>
+    <showForCaravanMembers>true</showForCaravanMembers>
+  </NeedDef>
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>WakeUpTolerance</defName>
+    <label>wake-up tolerance</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor" ListIndex="1">
+        <chemical>WakeUp</chemical>
+      </li>
+    </comps>
+    <stages>
+      <li ListIndex="0">
+        <minSeverity>0</minSeverity>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.20</minSeverity>
+        <label>small</label>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.50</minSeverity>
+        <label>large</label>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.80</minSeverity>
+        <label>massive</label>
+      </li>
+    </stages>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect" ListIndex="0">
+        <hediff>ChemicalDamageModerate</hediff>
+        <partsToAffect>
+          <li ListIndex="0">Brain</li>
+        </partsToAffect>
+        <baseMtbDays>120</baseMtbDays>
+        <minSeverity>0.50</minSeverity>
+      </li>
+    </hediffGivers>
+    <defaultLabelColor>(179,86,132)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="AddictionBase">
+    <defName>WakeUpAddiction</defName>
+    <label>wake-up addiction</label>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-0.0333</severityPerDay>
+      </li>
+    </comps>
+    <initialSeverity>0.5</initialSeverity>
+    <stages>
+      <li ListIndex="0"></li>
+      <li ListIndex="1">
+        <label>withdrawal</label>
+        <restFallFactor>1.3</restFallFactor>
+        <socialFightChanceFactor>2.0</socialFightChanceFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.50</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Moving</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li ListIndex="0">
+            <mentalState>BingingDrugExtreme</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+          <li ListIndex="1">
+            <mentalState>WanderPsychotic</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <causesNeed>Chemical_WakeUp</causesNeed>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(255,0,127)</defaultLabelColor>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>WakeUpWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <visible>false</visible>
+      </li>
+      <li ListIndex="1">
+        <label>wake-up withdrawal</label>
+        <description>I feel all fuzzy and unfocused.</description>
+        <baseMoodEffect>-35</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <hediff>WakeUpAddiction</hediff>
+  </ThoughtDef>
+</Defs>

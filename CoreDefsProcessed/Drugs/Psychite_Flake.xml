@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>Flake</defName>
+    <label>flake</label>
+    <description>A flaky substance that can be smoked to induce a short but powerful euphoric state. While it is cheap to produce, it is exceptionally addictive.</description>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>14</MarketValue>
+      <Mass>0.05</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <PsychoidLeaves>4</PsychoidLeaves>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>400</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Drug" ListIndex="1">
+        <chemical>Psychite</chemical>
+        <addictiveness>0.20</addictiveness>
+        <minToleranceToAddict>0.00</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <overdoseSeverityOffset>
+          <min>0.18</min>
+          <max>0.35</max>
+        </overdoseSeverityOffset>
+        <largeOverdoseChance>0.015</largeOverdoseChance>
+        <listOrder>110</listOrder>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_CookMeal</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>PsychiteRefining</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Drug/Flake</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Drugs</li>
+    </thingCategories>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="0">
+          <hediffDef>FlakeHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Psychite</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed" ListIndex="1">
+          <need>Rest</need>
+          <offset>0.2</offset>
+          <toleranceChemical>Psychite</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="2">
+          <hediffDef>PsychiteTolerance</hediffDef>
+          <severity>0.045</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+      <baseIngestTicks>720</baseIngestTicks>
+      <chairSearchRadius>8</chairSearchRadius>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <ingestEffect>Smoke_Flake</ingestEffect>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestCommandString>Smoke {0}</ingestCommandString>
+      <ingestReportString>Smoking {0}.</ingestReportString>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.23,0,0.065)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <foodType>Processed</foodType>
+      <joy>0.70</joy>
+      <joyKind>Chemical</joyKind>
+      <preferability>NeverForNutrition</preferability>
+      <nurseable>true</nurseable>
+      <drugCategory>Hard</drugCategory>
+    </ingestible>
+  </ThingDef>
+  <HediffDef>
+    <defName>FlakeHigh</defName>
+    <label>high on flake</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li ListIndex="0">
+        <painFactor>0.5</painFactor>
+        <restFallFactor>0.33</restFallFactor>
+      </li>
+    </stages>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>FlakeHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>high on flake</label>
+        <description>So good, so good.</description>
+        <baseMoodEffect>35</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <hediff>FlakeHigh</hediff>
+  </ThoughtDef>
+</Defs>

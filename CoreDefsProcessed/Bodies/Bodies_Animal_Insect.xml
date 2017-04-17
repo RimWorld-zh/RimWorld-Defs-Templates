@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyDef>
+    <defName>BeetleLike</defName>
+    <label>beetle-like</label>
+    <corePart>
+      <def>Shell</def>
+      <parts>
+        <li ListIndex="0">
+          <def>LeftElytra</def>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="1">
+          <def>RightElytra</def>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="2">
+          <def>Stomach</def>
+          <depth>Inside</depth>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="3">
+          <def>InsectHeart</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="4">
+          <def>Pronotum</def>
+          <parts>
+            <li ListIndex="0">
+              <def>InsectHead</def>
+              <parts>
+                <li ListIndex="0">
+                  <def>Brain</def>
+                  <depth>Inside</depth>
+                  <coverage>0.2</coverage>
+                </li>
+                <li ListIndex="1">
+                  <def>LeftEye</def>
+                  <coverage>0.15</coverage>
+                </li>
+                <li ListIndex="2">
+                  <def>RightEye</def>
+                  <coverage>0.15</coverage>
+                </li>
+                <li ListIndex="3">
+                  <def>LeftAntenna</def>
+                  <coverage>0.10</coverage>
+                </li>
+                <li ListIndex="4">
+                  <def>RightAntenna</def>
+                  <coverage>0.10</coverage>
+                </li>
+                <li ListIndex="5">
+                  <def>InsectNostril</def>
+                  <coverage>0.07</coverage>
+                </li>
+                <li ListIndex="6">
+                  <def>InsectMouth</def>
+                  <coverage>0.10</coverage>
+                  <groups>
+                    <li ListIndex="0">Mouth</li>
+                  </groups>
+                </li>
+              </parts>
+              <coverage>0.65</coverage>
+              <groups>
+                <li ListIndex="0">HeadAttackTool</li>
+              </groups>
+            </li>
+          </parts>
+          <height>Top</height>
+          <coverage>0.18</coverage>
+        </li>
+        <li ListIndex="5">
+          <def>FrontLeftInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="6">
+          <def>FrontRightInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="7">
+          <def>MiddleLeftInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="8">
+          <def>MiddleRightInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="9">
+          <def>RearLeftInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="10">
+          <def>RearRightInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+      </parts>
+      <height>Middle</height>
+      <depth>Outside</depth>
+    </corePart>
+  </BodyDef>
+  <BodyDef>
+    <defName>BeetleLikeWithClaw</defName>
+    <label>beetle-like with claw</label>
+    <corePart>
+      <def>Shell</def>
+      <parts>
+        <li ListIndex="0">
+          <def>LeftElytra</def>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="1">
+          <def>RightElytra</def>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="2">
+          <def>Stomach</def>
+          <depth>Inside</depth>
+          <coverage>0.05</coverage>
+        </li>
+        <li ListIndex="3">
+          <def>InsectHeart</def>
+          <depth>Inside</depth>
+          <coverage>0.03</coverage>
+        </li>
+        <li ListIndex="4">
+          <def>Pronotum</def>
+          <parts>
+            <li ListIndex="0">
+              <def>InsectHead</def>
+              <parts>
+                <li ListIndex="0">
+                  <def>Brain</def>
+                  <depth>Inside</depth>
+                  <coverage>0.2</coverage>
+                </li>
+                <li ListIndex="1">
+                  <def>LeftEye</def>
+                  <coverage>0.12</coverage>
+                </li>
+                <li ListIndex="2">
+                  <def>RightEye</def>
+                  <coverage>0.12</coverage>
+                </li>
+                <li ListIndex="3">
+                  <def>LeftAntenna</def>
+                  <coverage>0.08</coverage>
+                </li>
+                <li ListIndex="4">
+                  <def>RightAntenna</def>
+                  <coverage>0.08</coverage>
+                </li>
+                <li ListIndex="5">
+                  <def>InsectNostril</def>
+                  <coverage>0.06</coverage>
+                </li>
+                <li ListIndex="6">
+                  <def>InsectMouth</def>
+                  <coverage>0.08</coverage>
+                  <groups>
+                    <li ListIndex="0">Mouth</li>
+                  </groups>
+                </li>
+                <li ListIndex="7">
+                  <def>HeadClaw</def>
+                  <coverage>0.15</coverage>
+                  <groups>
+                    <li ListIndex="0">HeadClaw</li>
+                  </groups>
+                </li>
+              </parts>
+              <coverage>0.65</coverage>
+              <groups>
+                <li ListIndex="0">HeadAttackTool</li>
+              </groups>
+            </li>
+          </parts>
+          <height>Top</height>
+          <coverage>0.18</coverage>
+        </li>
+        <li ListIndex="5">
+          <def>FrontLeftInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="6">
+          <def>FrontRightInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="7">
+          <def>MiddleLeftInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="8">
+          <def>MiddleRightInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="9">
+          <def>RearLeftInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+        <li ListIndex="10">
+          <def>RearRightInsectLeg</def>
+          <height>Bottom</height>
+          <coverage>0.06</coverage>
+        </li>
+      </parts>
+      <height>Middle</height>
+      <depth>Outside</depth>
+    </corePart>
+  </BodyDef>
+</Defs>

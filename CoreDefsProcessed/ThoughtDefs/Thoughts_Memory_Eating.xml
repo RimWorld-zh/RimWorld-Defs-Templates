@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======= Basic quality thoughts ========= -->
+  <ThoughtDef>
+    <defName>AteLavishMeal</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate lavish meal</label>
+        <description>That lavish meal was amazing. It nourished my body and my soul.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>1</stackLimit>
+    <durationDays>0.5</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteFineMeal</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate fine meal</label>
+        <description>I ate a really tasty fine meal. Yum!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>1</stackLimit>
+    <durationDays>0.5</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteAwfulMeal</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate awful meal</label>
+        <description>I had to eat a disgusting, tasteless meal. I know it keeps you alive, but nobody wants to swallow that glop.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <durationDays>0.5</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteRawFood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate raw food</label>
+        <description>I had to eat raw food. Can't we cook it, or at least synthesize some nutrient paste?</description>
+        <baseMoodEffect>-7</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <durationDays>0.5</durationDays>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteKibble</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate kibble</label>
+        <description>I had to eat animal kibble. It's like I don't get to be human any more.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <durationDays>0.5</durationDays>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteCorpse</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate corpse</label>
+        <description>I had to eat a corpse without even butchering or cooking it. It was horrible.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <durationDays>1.0</durationDays>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <!--=========== Special nature thoughts ============-->
+  <ThoughtDef>
+    <defName>AteHumanlikeMeatDirect</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>raw cannibalism</label>
+        <description>I ate the meat of another human, raw, like an animal. This is a nightmare.</description>
+        <baseMoodEffect>-25</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>1.0</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Cannibal</li>
+    </nullifyingTraits>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteHumanlikeMeatDirectCannibal</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>raw cannibalism</label>
+        <description>I ate the meat of another human, raw, like an animal. It was so... succulent.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>1</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>1.0</durationDays>
+    <requiredTraits>
+      <li ListIndex="0">Cannibal</li>
+    </requiredTraits>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteHumanlikeMeatAsIngredient</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>cooked cannibalism</label>
+        <description>I ate a meal made from the meat of another human. This is horrible.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>1.0</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Cannibal</li>
+    </nullifyingTraits>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteHumanlikeMeatAsIngredientCannibal</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>cooked cannibalism</label>
+        <description>I ate a meal made from the meat of another human. So pleasurable. If only I had some fava beans and a nice chianti.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>1</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>1.0</durationDays>
+    <requiredTraits>
+      <li ListIndex="0">Cannibal</li>
+    </requiredTraits>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteInsectMeatDirect</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate insect meat</label>
+        <description>I ate some gray, slimy insect meat. It was, possibly, the most disgusting thing I've ever tasted.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <durationDays>0.5</durationDays>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteInsectMeatAsIngredient</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate cooked insect meat</label>
+        <description>I ate a meal cooked from gray, slimy insect meat. The seasoning partly covered the taste, but there were glands and fluid pockets in there that I can't identify.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <durationDays>0.5</durationDays>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <!--================== Rotten state thoughts =================-->
+  <ThoughtDef>
+    <defName>AteRottenFood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>ate rotten food</label>
+        <description>I ate some disgusting, purtid food. It was melting in my mouth - but not in a good way.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>1</stackLimit>
+    <durationDays>1.0</durationDays>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+</Defs>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PawnRelationDefs>
+  <PawnRelationDef>
+    <defName>Bond</defName>
+    <label>bond</label>
+    <labelFemale>bond</labelFemale>
+    <importance>85</importance>
+    <implied>false</implied>
+    <reflexive>true</reflexive>
+    <opinionOffset>50</opinionOffset>
+    <diedThought>BondedAnimalDied</diedThought>
+    <soldThought>SoldMyBondedAnimal</soldThought>
+  </PawnRelationDef>
+</PawnRelationDefs>

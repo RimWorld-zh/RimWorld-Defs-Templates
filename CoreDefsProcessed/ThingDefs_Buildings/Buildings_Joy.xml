@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>HorseshoesPin</defName>
+    <label>horseshoes pin</label>
+    <description>A simple ancient game played with a few horseshoes and a large pin in the ground. Players toss horseshoes from a distance and attempt to get them to land close to or around the pin. It's relaxing, and even trains hand-eye coordination.</description>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>150</WorkToBuild>
+      <Mass>3</Mass>
+      <Flammability>1.0</Flammability>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>15</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="0">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Joy/HorseshoesPin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.08,0.3,0.08)</volume>
+        <offset>(0,0,-0.18)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0.3,0.4,0.4)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <isJoySource>true</isJoySource>
+      <watchBuildingStandDistanceRange>
+        <min>5</min>
+        <max>5</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>ChessTable</defName>
+    <label>chess table</label>
+    <description>The ancient game of kings. Fun for a few hours here and there, even playing alone.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="1">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Joy/ChessTable</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.09375,0.296875,0.796875,0.703125)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.40</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <isJoySource>true</isJoySource>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>BilliardsTable</defName>
+    <label>billiards table</label>
+    <description>A soft-topped bounded table for playing a variety of billiards-type games.</description>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Mass>300</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Cloth>80</Cloth>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_NeverAdjacentUnstandable</li>
+    </placeWorkers>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(2,3)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="1">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Joy/BilliardsTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.40</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <isJoySource>true</isJoySource>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>TubeTelevision</defName>
+    <label>tube television</label>
+    <description>A cathode ray tube display for showing moving pictures with sound. Even on the rimworlds, there is often an old transmitter running something at least marginally interesting.</description>
+    <statBases>
+      <WorkToBuild>6000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>28</Mass>
+      <Flammability>1.0</Flammability>
+      <MarketValue>700</MarketValue>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>8</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">TubeTelevision</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_WatchArea</li>
+    </placeWorkers>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_RoomIdentifier" ListIndex="2">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Joy/TubeTelevision</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.7, 0.6, 0.7)</volume>
+        <offset>(0,0,-0.15)</offset>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.40</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Television</li>
+    </tradeTags>
+    <building>
+      <spawnedConceptLearnOpportunity>TVForSickPeople</spawnedConceptLearnOpportunity>
+      <boughtConceptLearnOpportunity>TVForSickPeople</boughtConceptLearnOpportunity>
+      <isJoySource>true</isJoySource>
+      <watchBuildingStandDistanceRange>
+        <min>2</min>
+        <max>4</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>FlatscreenTelevision</defName>
+    <label>flatscreen television</label>
+    <description>A high-tech flat-screen television with crystal-clear image and rich color. More entertaining than a grainy tube TV.</description>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>1200</MarketValue>
+      <Mass>5</Mass>
+      <EntertainmentStrengthFactor>1.2</EntertainmentStrengthFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_WatchArea</li>
+    </placeWorkers>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(2,1)</size>
+    <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_RoomIdentifier" ListIndex="2">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Joy/FlatscreenTelevision</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,1)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.25</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Television</li>
+    </tradeTags>
+    <building>
+      <spawnedConceptLearnOpportunity>TVForSickPeople</spawnedConceptLearnOpportunity>
+      <boughtConceptLearnOpportunity>TVForSickPeople</boughtConceptLearnOpportunity>
+      <isJoySource>true</isJoySource>
+      <watchBuildingStandDistanceRange>
+        <min>2</min>
+        <max>6</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>6</watchBuildingStandRectWidth>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>MegascreenTelevision</defName>
+    <label>megascreen television</label>
+    <description>A huge, high-tech television. Gigantic, hyper-vibrant images almost leap out of the screen. Very entertaining.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>2000</MarketValue>
+      <Mass>8</Mass>
+      <EntertainmentStrengthFactor>1.35</EntertainmentStrengthFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_WatchArea</li>
+    </placeWorkers>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(3,1)</size>
+    <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>220</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_RoomIdentifier" ListIndex="2">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Joy/MegascreenTelevision</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,1)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.25</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Television</li>
+    </tradeTags>
+    <building>
+      <spawnedConceptLearnOpportunity>TVForSickPeople</spawnedConceptLearnOpportunity>
+      <boughtConceptLearnOpportunity>TVForSickPeople</boughtConceptLearnOpportunity>
+      <isJoySource>true</isJoySource>
+      <watchBuildingStandDistanceRange>
+        <min>2</min>
+        <max>7</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>7</watchBuildingStandRectWidth>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Telescope</defName>
+    <label>telescope</label>
+    <description>A telescope for doing amateur astronomy. It's a relaxing and fun hobby for a certain kind of person.</description>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>350</MarketValue>
+      <Mass>7.5</Mass>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <comps>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="0">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Joy/Telescope</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.15</fillPercent>
+    <building>
+      <isJoySource>true</isJoySource>
+    </building>
+  </ThingDef>
+</ThingDefs>

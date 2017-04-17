@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>TalelessImages</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">image->a [outlander] surrounded by [outlander]s</li>
+        <li ListIndex="1">image->a [outlander] playing [game] with [quantity_adjphrase] [outlander]s</li>
+        <li ListIndex="2">image->a [outlander] [subject_desc] holding a [weapon]</li>
+        <li ListIndex="3">image->a solitary [outlander]</li>
+        <li ListIndex="4">image->a [adjective] [outlander] wearing a [apparel]</li>
+        <li ListIndex="5">image->a [outlander] eating a [vegetable]</li>
+        <li ListIndex="6">image->[quantity_adjphrase] [outlander]s and [outlander]s eating [vegetable]s together</li>
+        <li ListIndex="7">image->an empty [apparel] [subject_desc]</li>
+        <li ListIndex="8">image->a [adjective] [terrainfeature]</li>
+        <li ListIndex="9">image->[animal]s playing [game]</li>
+        <li ListIndex="10">image->a [animal] wearing a [apparel] [subject_desc]</li>
+        <li ListIndex="11">image->a [terrainfeature]</li>
+        <li ListIndex="12">image->an abstracted depiction of [concept]</li>
+        <li ListIndex="13">image->a [community]</li>
+        <li ListIndex="14">image->a [weapon]</li>
+        <li ListIndex="15">image->[quantity_adjphrase] [weapon]s</li>
+        <li ListIndex="16">image->[quantity_adjphrase] [vegetable]s</li>
+        <li ListIndex="17">image->the minor celebrity [personname] [subject_desc]</li>
+        <li ListIndex="18">image->a [animal] in the [apparel] of a [outlander]</li>
+        <li ListIndex="19">subject_desc->flying through the air</li>
+        <li ListIndex="20">subject_desc->suspended in the air</li>
+        <li ListIndex="21">subject_desc->standing on the ground</li>
+        <li ListIndex="22">subject_desc->moving to the left</li>
+        <li ListIndex="23">subject_desc->moving to the right</li>
+        <li ListIndex="24">subject_desc->sitting on a table</li>
+        <li ListIndex="25">subject_desc->seen through a looking glass</li>
+        <li ListIndex="26">subject_desc->rendered in silhouette</li>
+        <li ListIndex="27">subject_desc->riding on a [animal] wearing a [apparel]</li>
+        <li ListIndex="28">subject_desc->looking [adjective]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

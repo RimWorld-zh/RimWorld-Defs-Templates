@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HistoryAutoRecorderDefs>
+  <HistoryAutoRecorderDef>
+    <defName>WealthTotal</defName>
+    <label>wealth (total)</label>
+    <workerClass>HistoryAutoRecorderWorker_WealthTotal</workerClass>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <graphColor>RGBA(1, 1, 0, 1)</graphColor>
+  </HistoryAutoRecorderDef>
+  <HistoryAutoRecorderDef>
+    <defName>WealthItems</defName>
+    <label>wealth (items)</label>
+    <workerClass>HistoryAutoRecorderWorker_WealthItems</workerClass>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <graphColor>RGBA(0.9, 0.7, 0, 1)</graphColor>
+  </HistoryAutoRecorderDef>
+  <HistoryAutoRecorderDef>
+    <defName>WealthBuildings</defName>
+    <label>wealth (buildings)</label>
+    <workerClass>HistoryAutoRecorderWorker_WealthBuildings</workerClass>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <graphColor>RGBA(0.5, 0.7, 0, 1)</graphColor>
+  </HistoryAutoRecorderDef>
+  <HistoryAutoRecorderDef>
+    <defName>FreeColonists</defName>
+    <label>free colonists</label>
+    <workerClass>HistoryAutoRecorderWorker_FreeColonists</workerClass>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <graphColor>RGBA(0, 1, 0, 1)</graphColor>
+  </HistoryAutoRecorderDef>
+  <HistoryAutoRecorderDef>
+    <defName>Prisoners</defName>
+    <label>prisoners</label>
+    <workerClass>HistoryAutoRecorderWorker_Prisoners</workerClass>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <graphColor>RGBA(1, 0, 0, 1)</graphColor>
+  </HistoryAutoRecorderDef>
+  <HistoryAutoRecorderDef>
+    <defName>ColonistMood</defName>
+    <label>mood</label>
+    <workerClass>HistoryAutoRecorderWorker_ColonistMood</workerClass>
+    <recordTicksFrequency>30000</recordTicksFrequency>
+    <graphColor>RGBA(0, 1, 0, 1)</graphColor>
+  </HistoryAutoRecorderDef>
+</HistoryAutoRecorderDefs>

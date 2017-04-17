@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThoughtDefs>
+  <!-- Random social interactions -->
+  <ThoughtDef>
+    <defName>Chitchat</defName>
+    <thoughtClass>Thought_MemorySocialCumulative</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>chitchat</label>
+        <baseOpinionOffset>0.66</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+    </nullifyingTraits>
+    <maxCumulatedOpinionOffset>10</maxCumulatedOpinionOffset>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>DeepTalk</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>had deep talk</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+    <durationDays>20</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+    </nullifyingTraits>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Slighted</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>slighted</label>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.95</stackedEffectMultiplier>
+    <durationDays>20</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Insulted</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>insulted</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+    <durationDays>20</durationDays>
+    <thoughtToMake>InsultedMood</thoughtToMake>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>InsultedMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>insulted</label>
+        <description>I've been directly insulted! What an awful person!</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <durationDays>2</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KindWords</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>kind words</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+    <durationDays>20</durationDays>
+    <thoughtToMake>KindWordsMood</thoughtToMake>
+    <showBubble>true</showBubble>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KindWordsMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>kind words</label>
+        <description>I've been bestowed with kind words! What a nice person!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <durationDays>2</durationDays>
+  </ThoughtDef>
+  <!-- Special -->
+  <ThoughtDef>
+    <defName>RapportBuilt</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>rapport built</label>
+        <baseOpinionOffset>2</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <durationDays>10</durationDays>
+    <stackLimitPerPawn>50</stackLimitPerPawn>
+  </ThoughtDef>
+  <!-- Social fights -->
+  <ThoughtDef>
+    <defName>HadAngeringFight</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>had an angering fight</label>
+        <baseOpinionOffset>-22</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+    <durationDays>20.0</durationDays>
+    <stackLimitPerPawn>5</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>HadCatharticFight</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>had a cathartic fight</label>
+        <baseOpinionOffset>38</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.6</stackedEffectMultiplier>
+    <durationDays>20.0</durationDays>
+    <stackLimitPerPawn>5</stackLimitPerPawn>
+  </ThoughtDef>
+  <!-- Misc actions affecting opinion -->
+  <ThoughtDef>
+    <defName>HarmedMe</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>harmed me</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>10.0</durationDays>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>BotchedMySurgery</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>botched my surgery</label>
+        <baseOpinionOffset>-20</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.85</stackedEffectMultiplier>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>5</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RescuedMe</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>rescued me</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.6</stackedEffectMultiplier>
+    <durationDays>20.0</durationDays>
+    <stackLimitPerPawn>3</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RecruitedMe</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>recruited me</label>
+        <baseOpinionOffset>20</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>1</stackLimit>
+    <durationDays>200.0</durationDays>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CrashedTogether</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>crashed together</label>
+        <baseOpinionOffset>25</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>20</stackLimit>
+    <durationDays>10.0</durationDays>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>SoldMyLovedOne</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>loved one sold</label>
+        <labelSocial>sold my loved one</labelSocial>
+        <description>Someone I love was sold to a trader like a piece of meat!</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <durationDays>20.0</durationDays>
+    <stackLimitPerPawn>2</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>SoldMyBondedAnimal</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>bonded animal sold</label>
+        <labelSocial>sold my bonded animal</labelSocial>
+        <description>My special bonded animal was sold to a trader!</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <durationDays>10.0</durationDays>
+    <stackLimitPerPawn>2</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ForcedMeToTakeDrugs</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>forced me to take drugs</label>
+        <baseOpinionOffset>-30</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <durationDays>6.0</durationDays>
+    <thoughtToMake>ForcedMeToTakeDrugsMood</thoughtToMake>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ForcedMeToTakeDrugsMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>forced to take drugs</label>
+        <description>I'm a teetotaler; I would never take drugs by choice. But I was forced! I feel unclean.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <durationDays>6.0</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ForcedMeToTakeLuciferium</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>forced me to take luciferium</label>
+        <baseOpinionOffset>-30</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <durationDays>6.0</durationDays>
+    <thoughtToMake>ForcedMeToTakeLuciferiumMood</thoughtToMake>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ForcedMeToTakeLuciferiumMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>forced to take luciferium</label>
+        <description>I'm a prosthophobe; I would never take luciferium by choice. But I was forced! I feel unclean.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <durationDays>6.0</durationDays>
+  </ThoughtDef>
+  <!-- Romance -->
+  <ThoughtDef>
+    <defName>RebuffedMyRomanceAttempt</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>rebuffed me</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <durationDays>10.0</durationDays>
+    <thoughtToMake>RebuffedMyRomanceAttemptMood</thoughtToMake>
+    <stackLimitPerPawn>5</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RebuffedMyRomanceAttemptMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>rebuffed by {0}</label>
+        <description>I attempted to create a romance, but I got the cold shoulder. Feels bad man.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+    <durationDays>3.0</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>FailedRomanceAttemptOnMe</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>failed to romance me</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <durationDays>10.0</durationDays>
+    <stackLimitPerPawn>5</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>FailedRomanceAttemptOnMeLowOpinionMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>had to rebuff {0}</label>
+        <description>Someone I don't like tried to romance me.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+    <durationDays>3.0</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>BrokeUpWithMe</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>broke up with me</label>
+        <baseOpinionOffset>-50</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>40.0</durationDays>
+    <thoughtToMake>BrokeUpWithMeMood</thoughtToMake>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>BrokeUpWithMeMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>broken up with by {0}</label>
+        <description>I was just dumped like a load of garbage.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <durationDays>25.0</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CheatedOnMe</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>cheated on me</label>
+        <baseOpinionOffset>-70</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>70.0</durationDays>
+    <thoughtToMake>CheatedOnMeMood</thoughtToMake>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CheatedOnMeMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>cheated on by {0}</label>
+        <description>How could someone cheat on me!</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>2</stackLimit>
+    <durationDays>25.0</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>DivorcedMe</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>divorced me</label>
+        <baseOpinionOffset>-70</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <thoughtToMake>DivorcedMeMood</thoughtToMake>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>DivorcedMeMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>divorced by {0}</label>
+        <description>We made a commitment, and they just tore it apart.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>2</stackLimit>
+    <durationDays>30.0</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RejectedMyProposal</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>rejected my proposal</label>
+        <baseOpinionOffset>-30</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.95</stackedEffectMultiplier>
+    <durationDays>40.0</durationDays>
+    <thoughtToMake>RejectedMyProposalMood</thoughtToMake>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>RejectedMyProposalMood</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my proposal was rejected by {0}</label>
+        <description>I thought we were meant to marry. But I was just shot down.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.95</stackedEffectMultiplier>
+    <durationDays>25.0</durationDays>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>IRejectedTheirProposal</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>I rejected their proposal</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.95</stackedEffectMultiplier>
+    <durationDays>40.0</durationDays>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>HoneymoonPhase</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>honeymoon phase</label>
+        <labelSocial>honeymoon phase</labelSocial>
+        <description>It's so wonderful to be starting a new life together!</description>
+        <baseMoodEffect>20</baseMoodEffect>
+        <baseOpinionOffset>40</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>30.0</durationDays>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>GotSomeLovin</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>got some lovin’</label>
+        <description>There's nothing like a tumble between the sheets to lift the mood.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.2</stackedEffectMultiplier>
+    <durationDays>1.0</durationDays>
+  </ThoughtDef>
+  <!-- Killed my X -->
+  <ThoughtDef>
+    <defName>KilledMyFriend</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my friend</label>
+        <baseOpinionOffset>-35</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMyRival</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my rival</label>
+        <baseOpinionOffset>35</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMyLover</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my lover</label>
+        <baseOpinionOffset>-50</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMyFiance</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my fiance</label>
+        <baseOpinionOffset>-65</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMySpouse</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my spouse</label>
+        <baseOpinionOffset>-65</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMyFather</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my father</label>
+        <baseOpinionOffset>-80</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMyMother</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my mother</label>
+        <baseOpinionOffset>-80</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMySon</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my son</label>
+        <baseOpinionOffset>-80</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMyDaughter</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my daughter</label>
+        <baseOpinionOffset>-80</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMyBrother</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my brother</label>
+        <baseOpinionOffset>-80</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMySister</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my sister</label>
+        <baseOpinionOffset>-80</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KilledMyKin</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my kin</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+</ThoughtDefs>

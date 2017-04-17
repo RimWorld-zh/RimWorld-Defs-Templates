@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GenStepDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: Verse.MapGeneratorDef-->
+    <linkWithMapGenerator>MapGeneratorDef_defName</linkWithMapGenerator>
+    <!--Type: RimWorld.SiteDefBase-->
+    <linkWithSite>SiteDefBase_defName</linkWithSite>
+    <!--Type: float-->
+    <order>float_value</order>
+    <!--Type: RimWorld.GenStep_ElevationFertility-->
+    <genStep Class="GenStep_ElevationFertility">value</genStep>
+    <!--Type: RimWorld.GenStep_ScatterDeepResourceLumps-->
+    <genStep Class="GenStep_ScatterDeepResourceLumps">
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: FloatRange.Zero-->
+      <countPer10kCellsRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </countPer10kCellsRange>
+      <!--Type: float-->
+      <!--Default Value: 10.0-->
+      <minSpacing>float_value</minSpacing>
+      <!--Type: bool-->
+      <!--Default Value: true-->
+      <warnOnFail>true_or_false</warnOnFail>
+    </genStep>
+    <!--Type: RimWorld.GenStep_RocksFromGrid-->
+    <genStep Class="GenStep_RocksFromGrid">value</genStep>
+    <!--Type: RimWorld.GenStep_Terrain-->
+    <genStep Class="GenStep_Terrain">value</genStep>
+    <!--Type: RimWorld.GenStep_RockChunks-->
+    <genStep Class="GenStep_RockChunks">value</genStep>
+    <!--Type: RimWorld.GenStep_ScatterRuinsSimple-->
+    <genStep Class="GenStep_ScatterRuinsSimple">
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: FloatRange.Zero-->
+      <countPer10kCellsRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </countPer10kCellsRange>
+      <!--Type: bool-->
+      <!--Default Value: true-->
+      <allowOnWater>true_or_false</allowOnWater>
+    </genStep>
+    <!--Type: RimWorld.GenStep_Roads-->
+    <genStep Class="GenStep_Roads">value</genStep>
+    <!--Type: Verse.GenStep_ScatterThings-->
+    <genStep Class="GenStep_ScatterThings">
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: FloatRange.Zero-->
+      <countPer10kCellsRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </countPer10kCellsRange>
+      <!--Type: float-->
+      <!--Default Value: 10.0-->
+      <minSpacing>float_value</minSpacing>
+      <!--Type: int-->
+      <extraNoBuildEdgeDist>int_value</extraNoBuildEdgeDist>
+      <!--Complex List-->
+      <!--Type: List<Verse.ScattererValidator>-->
+      <validators>
+        <!--Type: Verse.ScattererValidator_Buildable-->
+        <li Class="ScattererValidator_Buildable">
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <radius>int_value</radius>
+          <!--Type: Verse.TerrainAffordance-->
+          <!--Available Values: Undefined, Light, Heavy, GrowSoil, Diggable, SmoothHard, SmoothableStone-->
+          <!--Default Value: Heavy-->
+          <affordance>enum_value</affordance>
+        </li>
+        <!--Type: Verse.ScattererValidator_NoNonNaturalEdifices-->
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <radius>int_value</radius>
+        </li>
+        <!-- ... -->
+      </validators>
+      <!--Type: bool-->
+      <!--Default Value: true-->
+      <allowOnWater>true_or_false</allowOnWater>
+      <!--Type: Verse.ThingDef-->
+      <thingDef>ThingDef_defName</thingDef>
+      <!--Type: int-->
+      <clearSpaceSize>int_value</clearSpaceSize>
+    </genStep>
+    <!--Type: RimWorld.GenStep_FindPlayerStartSpot-->
+    <genStep Class="GenStep_FindPlayerStartSpot">value</genStep>
+    <!--Type: RimWorld.GenStep_ScenParts-->
+    <genStep Class="GenStep_ScenParts">value</genStep>
+    <!--Type: RimWorld.GenStep_Plants-->
+    <genStep Class="GenStep_Plants">value</genStep>
+    <!--Type: RimWorld.GenStep_Snow-->
+    <genStep Class="GenStep_Snow">value</genStep>
+    <!--Type: RimWorld.GenStep_Animals-->
+    <genStep Class="GenStep_Animals">value</genStep>
+    <!--Type: RimWorld.GenStep_Fog-->
+    <genStep Class="GenStep_Fog">value</genStep>
+    <!--Type: RimWorld.GenStep_FactionBase-->
+    <genStep Class="GenStep_FactionBase">
+      <!--Type: int-->
+      <!--Default Value: -1-->
+      <count>int_value</count>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <nearMapCenter>true_or_false</nearMapCenter>
+    </genStep>
+    <!--Type: RimWorld.GenStep_Power-->
+    <genStep Class="GenStep_Power">value</genStep>
+    <!--Type: RimWorld.GenStep_ScatterShrines-->
+    <genStep Class="GenStep_ScatterShrines">
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: FloatRange.Zero-->
+      <countPer10kCellsRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </countPer10kCellsRange>
+      <!--Type: bool-->
+      <!--Default Value: true-->
+      <allowOnWater>true_or_false</allowOnWater>
+    </genStep>
+    <!--Type: RimWorld.GenStep_ItemStash-->
+    <genStep Class="GenStep_ItemStash">
+      <!--Type: int-->
+      <!--Default Value: -1-->
+      <count>int_value</count>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <nearMapCenter>true_or_false</nearMapCenter>
+      <!--Type: List<Verse.ItemDefPreset>-->
+      <stockpileContents>
+        <!--Type: Verse.ItemDefPreset-->
+        <!--Available Values: RandomGeneralGoods, RawResources, Weapons, Apparel, Artifacts-->
+        <li>enum_value</li>
+        <!-- ... -->
+      </stockpileContents>
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: new FloatRange(1000f, 2000f)-->
+      <totalValueRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </totalValueRange>
+    </genStep>
+    <!--Type: RimWorld.GenStep_PreciousLump-->
+    <genStep Class="GenStep_PreciousLump">
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <nearMapCenter>true_or_false</nearMapCenter>
+      <!--Type: List<Verse.ThingDef>-->
+      <mineables>
+        <!--Type: Verse.ThingDef-->
+        <li>ThingDef_defName</li>
+        <!-- ... -->
+      </mineables>
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: new FloatRange(1000f, 2000f)-->
+      <totalValueRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </totalValueRange>
+    </genStep>
+    <!--Type: RimWorld.GenStep_ManhunterPack-->
+    <genStep Class="GenStep_ManhunterPack">
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: new FloatRange(300f, 500f)-->
+      <pointsRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </pointsRange>
+    </genStep>
+    <!--Type: RimWorld.GenStep_Outpost-->
+    <genStep Class="GenStep_Outpost">value</genStep>
+    <!--Type: RimWorld.GenStep_Turrets-->
+    <genStep Class="GenStep_Turrets">
+      <!--Type: Verse.IntRange-->
+      <!--Default Value: new IntRange(3, 5)-->
+      <widthRange>
+        <!--Type: int-->
+        <min>int_value</min>
+        <!--Type: int-->
+        <max>int_value</max>
+      </widthRange>
+      <!--Type: Verse.IntRange-->
+      <!--Default Value: new IntRange(1, 3)-->
+      <turretsCountRange>
+        <!--Type: int-->
+        <min>int_value</min>
+        <!--Type: int-->
+        <max>int_value</max>
+      </turretsCountRange>
+      <!--Type: Verse.IntRange-->
+      <!--Default Value: new IntRange(0, 1)-->
+      <mortarsCountRange>
+        <!--Type: int-->
+        <min>int_value</min>
+        <!--Type: int-->
+        <max>int_value</max>
+      </mortarsCountRange>
+      <!--Type: Verse.IntRange-->
+      <!--Default Value: IntRange.one-->
+      <guardsCountRange>
+        <!--Type: int-->
+        <min>int_value</min>
+        <!--Type: int-->
+        <max>int_value</max>
+      </guardsCountRange>
+    </genStep>
+  </GenStepDef>
+</Defs>

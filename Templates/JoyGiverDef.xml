@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JoyGiverDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: System.Type-->
+    <giverClass>class_name</giverClass>
+    <!--Type: float-->
+    <baseChance>float_value</baseChance>
+    <!--Type: List<Verse.ThingDef>-->
+    <thingDefs>
+      <!--Type: Verse.ThingDef-->
+      <li>ThingDef_defName</li>
+      <!-- ... -->
+    </thingDefs>
+    <!--Type: Verse.JobDef-->
+    <jobDef>JobDef_defName</jobDef>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <desireSit>true_or_false</desireSit>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <pctPawnsEverDo>float_value</pctPawnsEverDo>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <unroofedOnly>true_or_false</unroofedOnly>
+    <!--Type: RimWorld.JoyKindDef-->
+    <joyKind>JoyKindDef_defName</joyKind>
+    <!--Type: List<Verse.PawnCapacityDef>-->
+    <requiredCapacities>
+      <!--Type: Verse.PawnCapacityDef-->
+      <li>PawnCapacityDef_defName</li>
+      <!-- ... -->
+    </requiredCapacities>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <canDoWhileInBed>true_or_false</canDoWhileInBed>
+  </JoyGiverDef>
+</Defs>

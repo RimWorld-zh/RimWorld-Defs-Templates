@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecordDef>
+    <defName>TimeAsColonistOrColonyAnimal</defName>
+    <label>time as a colonist</label>
+    <description>Total time spent as a colonist.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeAsColonistOrColonyAnimal</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeAsPrisoner</defName>
+    <label>time as a prisoner</label>
+    <description>Total time spent as a prisoner.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeAsPrisoner</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeInBed</defName>
+    <label>time in a bed</label>
+    <description>Total time spent in a bed.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeInBed</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeInBedForMedicalReasons</defName>
+    <label>time in a bed for medical reasons</label>
+    <description>Total time spent in a bed for medical reasons: awaiting treatment, recovering from injuries or being operated on.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeInBedForMedicalReasons</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeDowned</defName>
+    <label>time downed</label>
+    <description>Total time spent downed.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeDowned</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeGettingFood</defName>
+    <label>time finding food and eating</label>
+    <description>Total time spent on finding food and eating.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">Ingest</li>
+      <li ListIndex="1">PredatorHunt</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeGettingJoy</defName>
+    <label>time spent on entertainment</label>
+    <description>Total time spent on entertainment.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeGettingJoy</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeUnderRoof</defName>
+    <label>time under a roof</label>
+    <description>Total time spent under a roof.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeUnderRoof</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeDrafted</defName>
+    <label>time drafted</label>
+    <description>Total time spent drafted.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeDrafted</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeOnFire</defName>
+    <label>time on fire</label>
+    <description>Total time spent on fire.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeOnFire</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeInMentalState</defName>
+    <label>time in mental state</label>
+    <description>Total time spent in mental state.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeInMentalState</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeHauling</defName>
+    <label>time hauling</label>
+    <description>Total time spent hauling things.</description>
+    <type>Time</type>
+    <workerClass>RecordWorker_TimeHauling</workerClass>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeHandlingAnimals</defName>
+    <label>time handling animals</label>
+    <description>Total time spent handling animals.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">Slaughter</li>
+      <li ListIndex="1">Milk</li>
+      <li ListIndex="2">Shear</li>
+      <li ListIndex="3">Tame</li>
+      <li ListIndex="4">Train</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeFirefighting</defName>
+    <label>time firefighting</label>
+    <description>Total time spent firefighting.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">BeatFire</li>
+      <li ListIndex="1">ExtinguishSelf</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeWardening</defName>
+    <label>time wardening</label>
+    <description>Total time spent wardening.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">PrisonerFriendlyChat</li>
+      <li ListIndex="1">PrisonerAttemptRecruit</li>
+      <li ListIndex="2">PrisonerExecution</li>
+      <li ListIndex="3">TakeWoundedPrisonerToBed</li>
+      <li ListIndex="4">EscortPrisonerToBed</li>
+      <li ListIndex="5">ReleasePrisoner</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeHunting</defName>
+    <label>time hunting</label>
+    <description>Total time spent hunting.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">Hunt</li>
+      <li ListIndex="1">PredatorHunt</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeConstructing</defName>
+    <label>time constructing</label>
+    <description>Total time spent constructing and deconstructing.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">FinishFrame</li>
+      <li ListIndex="1">PlaceNoCostFrame</li>
+      <li ListIndex="2">Deconstruct</li>
+      <li ListIndex="3">Uninstall</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeTreatingAndFeeding</defName>
+    <label>time treating and feeding</label>
+    <description>Total time spent treating and feeding patients.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">TendPatient</li>
+      <li ListIndex="1">FeedPatient</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeResearching</defName>
+    <label>time researching</label>
+    <description>Total time spent researching.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">Research</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeCleaning</defName>
+    <label>time cleaning</label>
+    <description>Total time spent cleaning.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">Clean</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeRepairing</defName>
+    <label>time repairing</label>
+    <description>Total time spent repairing.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">Repair</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeMining</defName>
+    <label>time mining</label>
+    <description>Total time spent mining.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">Mine</li>
+    </measuredTimeJobs>
+  </RecordDef>
+  <RecordDef>
+    <defName>TimeSowingAndHarvesting</defName>
+    <label>time sowing and harvesting</label>
+    <description>Total time spent sowing, harvesting and cutting plants.</description>
+    <type>Time</type>
+    <measuredTimeJobs>
+      <li ListIndex="0">Sow</li>
+      <li ListIndex="1">Harvest</li>
+      <li ListIndex="2">CutPlant</li>
+    </measuredTimeJobs>
+  </RecordDef>
+</Defs>

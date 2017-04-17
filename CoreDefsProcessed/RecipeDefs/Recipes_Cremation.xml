@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RecipeDefs>
+  <RecipeDef>
+    <defName>CremateCorpse</defName>
+    <label>cremate corpse</label>
+    <description>Cremate a corpse to completely destroy it.</description>
+    <jobString>Cremating.</jobString>
+    <workAmount>300</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Corpses</li>
+      </categories>
+      <exceptedCategories>
+        <li ListIndex="0">CorpsesMechanoid</li>
+      </exceptedCategories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Human_Corpse</li>
+      </thingDefs>
+      <specialFiltersToAllow>
+        <li ListIndex="0">AllowCorpsesColonist</li>
+        <li ListIndex="1">AllowCorpsesStranger</li>
+      </specialFiltersToAllow>
+    </defaultIngredientFilter>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+  </RecipeDef>
+  <RecipeDef Name="BurnApparel">
+    <defName>BurnApparel</defName>
+    <label>burn apparel</label>
+    <description>Burn apparel to completely destroy it.</description>
+    <jobString>Burning apparel.</jobString>
+    <requiredGiverWorkType>Hauling</requiredGiverWorkType>
+    <workAmount>200</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Apparel</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Apparel</li>
+      </categories>
+    </fixedIngredientFilter>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+  </RecipeDef>
+  <RecipeDef ParentName="BurnApparel">
+    <defName>BurnApparelCampfire</defName>
+    <label>burn apparel</label>
+    <description>Burn apparel to completely destroy it.</description>
+    <jobString>Burning apparel.</jobString>
+    <requiredGiverWorkType>Hauling</requiredGiverWorkType>
+    <workAmount>350</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Apparel</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Apparel</li>
+      </categories>
+    </fixedIngredientFilter>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>BurnDrugs</defName>
+    <label>burn drugs</label>
+    <description>Burn drugs to completely destroy them.</description>
+    <jobString>Burning drugs.</jobString>
+    <requiredGiverWorkType>Hauling</requiredGiverWorkType>
+    <workAmount>40</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Drugs</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Drugs</li>
+      </categories>
+    </fixedIngredientFilter>
+    <effectWorking>BurnDrug</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <conceptLearned>DrugBurning</conceptLearned>
+  </RecipeDef>
+</RecipeDefs>

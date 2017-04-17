@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TerrainDefs>
+  <TerrainDef>
+    <defName>Sand</defName>
+    <label>sand</label>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <pathCost>4</pathCost>
+    <fertility>0.06</fertility>
+    <texturePath>Terrain/Surfaces/Sand</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>350</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">Diggable</li>
+    </affordances>
+    <scatterType>SoftDry</scatterType>
+    <takeFootprints>True</takeFootprints>
+    <terrainFilthDef>FilthSand</terrainFilthDef>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>Soil</defName>
+    <label>soil</label>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <pathCost>2</pathCost>
+    <fertility>1.0</fertility>
+    <texturePath>Terrain/Surfaces/Soil</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>340</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">GrowSoil</li>
+      <li ListIndex="3">Diggable</li>
+    </affordances>
+    <scatterType>Rocky</scatterType>
+    <takeFootprints>True</takeFootprints>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>MarshyTerrain</defName>
+    <label>marshy soil</label>
+    <statBases>
+      <Beauty>-2</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <pathCost>15</pathCost>
+    <fertility>0.7</fertility>
+    <texturePath>Terrain/Surfaces/MarshyTerrain</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>337</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">GrowSoil</li>
+      <li ListIndex="3">Diggable</li>
+    </affordances>
+    <scatterType>Rocky</scatterType>
+    <takeFootprints>True</takeFootprints>
+    <driesTo>Soil</driesTo>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>SoilRich</defName>
+    <label>rich soil</label>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <pathCost>2</pathCost>
+    <fertility>1.4</fertility>
+    <texturePath>Terrain/Surfaces/SoilRich</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>335</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">GrowSoil</li>
+      <li ListIndex="3">Diggable</li>
+    </affordances>
+    <takeFootprints>True</takeFootprints>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>Mud</defName>
+    <label>mud</label>
+    <statBases>
+      <Beauty>-2</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <pathCost>12</pathCost>
+    <fertility>0</fertility>
+    <texturePath>Terrain/Surfaces/Mud</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>330</renderPrecedence>
+    <takeFootprints>True</takeFootprints>
+    <avoidWander>true</avoidWander>
+    <driesTo>Soil</driesTo>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+    <acceptFilth>false</acceptFilth>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>Marsh</defName>
+    <label>marsh</label>
+    <statBases>
+      <Beauty>-2</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <pathCost>23</pathCost>
+    <fertility>0</fertility>
+    <texturePath>Terrain/Surfaces/Marsh</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>325</renderPrecedence>
+    <takeFootprints>True</takeFootprints>
+    <avoidWander>true</avoidWander>
+    <driesTo>Soil</driesTo>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+    <acceptFilth>false</acceptFilth>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>Gravel</defName>
+    <label>gravel</label>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <pathCost>2</pathCost>
+    <fertility>0.7</fertility>
+    <texturePath>Terrain/Surfaces/Gravel</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>320</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">GrowSoil</li>
+      <li ListIndex="3">Diggable</li>
+    </affordances>
+    <scatterType>Rocky</scatterType>
+    <takeFootprints>True</takeFootprints>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>MossyTerrain</defName>
+    <label>lichen-covered dirt</label>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <pathCost>3</pathCost>
+    <fertility>1</fertility>
+    <texturePath>Terrain/Surfaces/Mossy</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>315</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">GrowSoil</li>
+      <li ListIndex="3">Diggable</li>
+    </affordances>
+    <takeFootprints>True</takeFootprints>
+    <avoidWander>false</avoidWander>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+    <acceptFilth>true</acceptFilth>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>Ice</defName>
+    <label>Ice</label>
+    <statBases>
+      <Beauty>-1</Beauty>
+    </statBases>
+    <pathCost>12</pathCost>
+    <fertility>0.00</fertility>
+    <texturePath>Terrain/Surfaces/Ice</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>350</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">Diggable</li>
+    </affordances>
+    <scatterType>SoftGray</scatterType>
+    <takeFootprints>True</takeFootprints>
+    <terrainFilthDef>FilthDirt</terrainFilthDef>
+  </TerrainDef>
+</TerrainDefs>

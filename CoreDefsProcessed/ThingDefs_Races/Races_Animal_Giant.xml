@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Elephant</defName>
+    <label>elephant</label>
+    <description>The largest unmodified land animal. It can use its tusks as tools for moving objects - or as deadly weapons.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+      <MarketValue>1100</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>2.4</defaultCooldownTime>
+        <linkedBodyPartsGroup>TuskAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>23</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <body>QuadrupedAnimalWithHoovesTusksAndTrunk</body>
+      <lifeExpectancy>50</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <herdAnimal>true</herdAnimal>
+      <wildness>0.75</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>60</gestationPeriodDays>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>4.0</baseBodySize>
+      <baseHealthScale>3.6</baseHealthScale>
+      <baseHungerRate>2.0</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.8</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>2.0</minAge>
+          <soundCall>Pawn_Elephant_Call</soundCall>
+          <soundAngry>Pawn_Elephant_Angry</soundAngry>
+          <soundWounded>Pawn_Elephant_Injured</soundWounded>
+          <soundDeath>Pawn_Elephant_Dead</soundDeath>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(130,126,119)</leatherColor>
+      <leatherLabel>elephant skin</leatherLabel>
+      <leatherInsulation>0.65</leatherInsulation>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Elephant</defName>
+    <label>elephant</label>
+    <race>Elephant</race>
+    <labelPlural>elephants</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>elephant calf</label>
+        <labelPlural>elephant calfs</labelPlural>
+        <labelMale>male elephant calf</labelMale>
+        <labelMalePlural>male elephant calfs</labelMalePlural>
+        <labelFemale>female elephant calf</labelFemale>
+        <labelFemalePlural>female elephant calfs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elephant/Elephant</texPath>
+          <color>(130,126,119)</color>
+          <drawSize>1.8</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>elephant</label>
+        <labelPlural>elephant</labelPlural>
+        <labelMale>male elephant</labelMale>
+        <labelMalePlural>male elephants</labelMalePlural>
+        <labelFemale>female elephant</labelFemale>
+        <labelFemalePlural>female elephants</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elephant/Elephant</texPath>
+          <color>(130,126,119)</color>
+          <drawSize>2.6</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>2.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>elephant</label>
+        <labelPlural>elephant</labelPlural>
+        <labelMale>male elephant</labelMale>
+        <labelMalePlural>male elephants</labelMalePlural>
+        <labelFemale>female elephant</labelFemale>
+        <labelFemalePlural>female elephants</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elephant/Elephant</texPath>
+          <color>(130,126,119)</color>
+          <drawSize>3.8</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>3.8</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>TuskAttackTool</bodyPartGroup>
+          <thing>ElephantTusk</thing>
+          <allowFemale>false</allowFemale>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+    <combatPower>310</combatPower>
+    <labelMale>male elephant</labelMale>
+    <labelMalePlural>male elephants</labelMalePlural>
+    <labelFemale>female elephant</labelFemale>
+    <labelFemalePlural>female elephants</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
+    <wildSpawn_GroupSizeRange>
+      <min>3</min>
+      <max>7</max>
+    </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+  <!-- =======================================================-->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Megasloth</defName>
+    <label>Megasloth</label>
+    <description>Giant, solitary herbivores. Long extinct after being wiped out by the natives of Earth's American continent, the megasloth was later brought back using advanced cloning and artificial gestators.</description>
+    <statBases>
+      <MoveSpeed>3.5</MoveSpeed>
+      <ComfyTemperatureMin>-45</ComfyTemperatureMin>
+      <MarketValue>1100</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+      <li Class="CompProperties_Shearable" ListIndex="1">
+        <shearIntervalDays>50</shearIntervalDays>
+        <woolAmount>330</woolAmount>
+        <woolDef>WoolMegasloth</woolDef>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+      <li ListIndex="1">BadassAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>2.3</defaultCooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>22</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>2.3</defaultCooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>22</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <body>Human</body>
+      <lifeExpectancy>20</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <wildness>0.97</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>60</gestationPeriodDays>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>4.0</baseBodySize>
+      <baseHealthScale>3.6</baseHealthScale>
+      <baseHungerRate>2.0</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>1.0</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>3.0</minAge>
+          <soundCall>Pawn_Thrumbo_Call</soundCall>
+          <soundAngry>Pawn_Thrumbo_Angry</soundAngry>
+          <soundWounded>Pawn_Thrumbo_Pain</soundWounded>
+          <soundDeath>Pawn_Thrumbo_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(189,161,116)</leatherColor>
+      <leatherInsulation>1.0</leatherInsulation>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Megasloth</defName>
+    <label>Megasloth</label>
+    <race>Megasloth</race>
+    <labelPlural>Megasloths</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>Megasloth</label>
+        <labelPlural>Megasloth</labelPlural>
+        <labelMale>male Megasloth</labelMale>
+        <labelMalePlural>male Megasloths</labelMalePlural>
+        <labelFemale>female Megasloth</labelFemale>
+        <labelFemalePlural>female Megasloths</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megasloth/Megasloth</texPath>
+          <drawSize>1.8</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>Megasloth</label>
+        <labelPlural>Megasloth</labelPlural>
+        <labelMale>male Megasloth</labelMale>
+        <labelMalePlural>male Megasloths</labelMalePlural>
+        <labelFemale>female Megasloth</labelFemale>
+        <labelFemalePlural>female Megasloths</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megasloth/Megasloth</texPath>
+          <drawSize>2.6</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>2.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>Megasloth</label>
+        <labelPlural>Megasloth</labelPlural>
+        <labelMale>male Megasloth</labelMale>
+        <labelMalePlural>male Megasloths</labelMalePlural>
+        <labelFemale>female Megasloth</labelFemale>
+        <labelFemalePlural>female Megasloths</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megasloth/Megasloth</texPath>
+          <drawSize>3.8</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>3.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>310</combatPower>
+    <labelMale>male Megasloth</labelMale>
+    <labelMalePlural>male Megasloths</labelMalePlural>
+    <labelFemale>female Megasloth</labelFemale>
+    <labelFemalePlural>female Megasloths</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!-- ====================================================== -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Thrumbo</defName>
+    <label>thrumbo</label>
+    <description>A gigantic creature of unknown origin. The thrumbo is gentle by nature, but extremely dangerous when enraged. Its long fur is exceptionally beautiful and valuable, and its razor-sharp horn is very valuable in most markets. Legends say that an old thrumbo is the wisest creature in the universe - it simply chooses not to speak.</description>
+    <statBases>
+      <MoveSpeed>5.25</MoveSpeed>
+      <ComfyTemperatureMin>-65</ComfyTemperatureMin>
+      <MarketValue>4400</MarketValue>
+      <MeatAmount>140</MeatAmount>
+      <!-- more than implied by body size -->
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>22</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>VegetarianRoughAnimal, DendrovoreAnimal</foodType>
+      <body>QuadrupedAnimalWithHoovesAndHorn</body>
+      <lifeExpectancy>220</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <herdAnimal>true</herdAnimal>
+      <wildness>0.985</wildness>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>80</gestationPeriodDays>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHealthScale>13.0</baseHealthScale>
+      <baseHungerRate>4.5</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>2.0</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>4.0</minAge>
+          <soundCall>Pawn_Thrumbo_Call</soundCall>
+          <soundAngry>Pawn_Thrumbo_Angry</soundAngry>
+          <soundWounded>Pawn_Thrumbo_Pain</soundWounded>
+          <soundDeath>Pawn_Thrumbo_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(233,233,233)</leatherColor>
+      <leatherLabel>thrumbofur</leatherLabel>
+      <leatherCommonalityFactor>0.1</leatherCommonalityFactor>
+      <leatherInsulation>1.35</leatherInsulation>
+      <leatherStatFactors>
+        <ArmorRating_Blunt>3.5</ArmorRating_Blunt>
+        <ArmorRating_Sharp>4.0</ArmorRating_Sharp>
+        <ArmorRating_Heat>3.2</ArmorRating_Heat>
+      </leatherStatFactors>
+      <leatherMarketValueFactor>7</leatherMarketValueFactor>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Thrumbo</defName>
+    <label>thrumbo</label>
+    <race>Thrumbo</race>
+    <labelPlural>thrumbos</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>thrumbo calf</label>
+        <labelPlural>thrumbo calves</labelPlural>
+        <labelMale>male thrumbo calf</labelMale>
+        <labelMalePlural>male thrumbo calves</labelMalePlural>
+        <labelFemale>female thrumbo calf</labelFemale>
+        <labelFemalePlural>female thrumbo calves</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Thrumbo/Thrumbo</texPath>
+          <drawSize>2.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>thrumbo</label>
+        <labelPlural>thrumbo</labelPlural>
+        <labelMale>male thrumbo</labelMale>
+        <labelMalePlural>male thrumbos</labelMalePlural>
+        <labelFemale>female thrumbo</labelFemale>
+        <labelFemalePlural>female thrumbos</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Thrumbo/Thrumbo</texPath>
+          <drawSize>4.0</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.6, 0.4)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.75</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>thrumbo</label>
+        <labelPlural>thrumbo</labelPlural>
+        <labelMale>male thrumbo</labelMale>
+        <labelMalePlural>male thrumbos</labelMalePlural>
+        <labelFemale>female thrumbo</labelFemale>
+        <labelFemalePlural>female thrumbos</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Thrumbo/Thrumbo</texPath>
+          <drawSize>4.8</drawSize>
+          <shadowData>
+            <volume>(1, 0.8, 0.5)</volume>
+            <offset>(0,0,-0.5)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+        <butcherBodyPart>
+          <bodyPartGroup>HornAttackTool</bodyPartGroup>
+          <thing>ThrumboHorn</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+    <combatPower>600</combatPower>
+    <labelMale>male thrumbo</labelMale>
+    <labelMalePlural>male thrumbos</labelMalePlural>
+    <labelFemale>female thrumbo</labelFemale>
+    <labelFemalePlural>female thrumbos</labelFemalePlural>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+</Defs>

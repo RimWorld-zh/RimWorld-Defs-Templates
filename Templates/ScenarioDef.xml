@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ScenarioDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: string-->
+    <!--Desc: A human-readable description given when the Def is inspected by players.-->
+    <description>string_value</description>
+    <!--Type: RimWorld.Scenario-->
+    <scenario>
+      <!--Type: string-->
+      <name>string_value</name>
+      <!--Type: string-->
+      <summary>string_value</summary>
+      <!--Type: string-->
+      <description>string_value</description>
+      <!--Type: RimWorld.ScenPart_PlayerFaction-->
+      <playerFaction>
+        <!--Type: RimWorld.ScenPartDef-->
+        <def>ScenPartDef_defName</def>
+        <!--Type: RimWorld.FactionDef-->
+        <factionDef>FactionDef_defName</factionDef>
+      </playerFaction>
+      <!--Complex List-->
+      <!--Type: List<RimWorld.ScenPart>-->
+      <parts>
+        <!--Type: RimWorld.ScenPart_ConfigPage_ConfigureStartingPawns-->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: int-->
+          <!--Default Value: 3-->
+          <pawnCount>int_value</pawnCount>
+        </li>
+        <!--Type: RimWorld.ScenPart_PlayerPawnsArriveMethod-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: bool-->
+          <!--Default Value: true-->
+          <visible>true_or_false</visible>
+          <!--Type: RimWorld.PlayerPawnsArriveMethod-->
+          <!--Available Values: Standing, DropPods-->
+          <method>enum_value</method>
+        </li>
+        <!--Type: RimWorld.ScenPart_ForcedHediff-->
+        <li Class="ScenPart_ForcedHediff">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: bool-->
+          <!--Default Value: true-->
+          <visible>true_or_false</visible>
+          <!--Type: float-->
+          <!--Default Value: 1.0-->
+          <chance>float_value</chance>
+          <!--Type: RimWorld.PawnGenerationContext-->
+          <!--Available Values: All, PlayerStarter, NonPlayer-->
+          <context>enum_value</context>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <hideOffMap>true_or_false</hideOffMap>
+          <!--Type: Verse.HediffDef-->
+          <hediff>HediffDef_defName</hediff>
+          <!--Type: Verse.FloatRange-->
+          <severityRange>
+            <!--Type: float-->
+            <min>float_value</min>
+            <!--Type: float-->
+            <max>float_value</max>
+          </severityRange>
+        </li>
+        <!--Type: RimWorld.ScenPart_SetNeedLevel-->
+        <li Class="ScenPart_SetNeedLevel">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: bool-->
+          <!--Default Value: true-->
+          <visible>true_or_false</visible>
+          <!--Type: float-->
+          <!--Default Value: 1.0-->
+          <chance>float_value</chance>
+          <!--Type: RimWorld.PawnGenerationContext-->
+          <!--Available Values: All, PlayerStarter, NonPlayer-->
+          <context>enum_value</context>
+          <!--Type: RimWorld.NeedDef-->
+          <need>NeedDef_defName</need>
+          <!--Type: Verse.FloatRange-->
+          <levelRange>
+            <!--Type: float-->
+            <min>float_value</min>
+            <!--Type: float-->
+            <max>float_value</max>
+          </levelRange>
+        </li>
+        <!--Type: RimWorld.ScenPart_StartingThing_Defined-->
+        <li Class="ScenPart_StartingThing_Defined">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: Verse.ThingDef-->
+          <thingDef>ThingDef_defName</thingDef>
+          <!--Type: Verse.ThingDef-->
+          <stuff>ThingDef_defName</stuff>
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <count>int_value</count>
+        </li>
+        <!--Type: RimWorld.ScenPart_StartingAnimal-->
+        <li Class="ScenPart_StartingAnimal">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <count>int_value</count>
+          <!--Type: float-->
+          <!--Default Value: 0.5-->
+          <bondToRandomPlayerPawnChance>float_value</bondToRandomPlayerPawnChance>
+        </li>
+        <!--Type: RimWorld.ScenPart_ScatterThingsNearPlayerStart-->
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: Verse.ThingDef-->
+          <thingDef>ThingDef_defName</thingDef>
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <count>int_value</count>
+        </li>
+        <!--Type: RimWorld.ScenPart_GameStartDialog-->
+        <li Class="ScenPart_GameStartDialog">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: string-->
+          <text>string_value</text>
+          <!--Type: string-->
+          <textKey>string_value</textKey>
+          <!--Type: Verse.SoundDef-->
+          <closeSound>SoundDef_defName</closeSound>
+        </li>
+        <!--Type: RimWorld.ScenPart_StartingResearch-->
+        <li Class="ScenPart_StartingResearch">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: Verse.ResearchProjectDef-->
+          <project>ResearchProjectDef_defName</project>
+        </li>
+        <!--Type: RimWorld.ScenPart_ScatterThingsAnywhere-->
+        <li Class="ScenPart_ScatterThingsAnywhere">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: Verse.ThingDef-->
+          <thingDef>ThingDef_defName</thingDef>
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <count>int_value</count>
+        </li>
+        <!-- ... -->
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

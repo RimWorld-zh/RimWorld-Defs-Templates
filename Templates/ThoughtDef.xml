@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: System.Type-->
+    <thoughtClass>class_name</thoughtClass>
+    <!--Type: System.Type-->
+    <workerClass>class_name</workerClass>
+    <!--Complex List-->
+    <!--Type: List<RimWorld.ThoughtStage>-->
+    <stages>
+      <!--Type: RimWorld.ThoughtStage-->
+      <li>
+        <!--Type: string-->
+        <label>string_value</label>
+        <!--Type: string-->
+        <labelSocial>string_value</labelSocial>
+        <!--Type: string-->
+        <description>string_value</description>
+        <!--Type: float-->
+        <baseMoodEffect>float_value</baseMoodEffect>
+        <!--Type: float-->
+        <baseOpinionOffset>float_value</baseOpinionOffset>
+        <!--Type: bool-->
+        <!--Default Value: true-->
+        <visible>true_or_false</visible>
+      </li>
+      <!-- ... -->
+    </stages>
+    <!--Type: int-->
+    <!--Default Value: 1-->
+    <stackLimit>int_value</stackLimit>
+    <!--Type: float-->
+    <!--Default Value: 0.75-->
+    <stackedEffectMultiplier>float_value</stackedEffectMultiplier>
+    <!--Type: float-->
+    <durationDays>float_value</durationDays>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <invert>true_or_false</invert>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <validWhileDespawned>true_or_false</validWhileDespawned>
+    <!--Type: RimWorld.ThoughtDef-->
+    <nextThought>ThoughtDef_defName</nextThought>
+    <!--Type: List<RimWorld.TraitDef>-->
+    <nullifyingTraits>
+      <!--Type: RimWorld.TraitDef-->
+      <li>TraitDef_defName</li>
+      <!-- ... -->
+    </nullifyingTraits>
+    <!--Type: List<RimWorld.TaleDef>-->
+    <nullifyingOwnTales>
+      <!--Type: RimWorld.TaleDef-->
+      <li>TaleDef_defName</li>
+      <!-- ... -->
+    </nullifyingOwnTales>
+    <!--Type: List<RimWorld.TraitDef>-->
+    <requiredTraits>
+      <!--Type: RimWorld.TraitDef-->
+      <li>TraitDef_defName</li>
+      <!-- ... -->
+    </requiredTraits>
+    <!--Type: int-->
+    <!--Default Value: -2147483648-->
+    <requiredTraitsDegree>int_value</requiredTraitsDegree>
+    <!--Type: RimWorld.StatDef-->
+    <effectMultiplyingStat>StatDef_defName</effectMultiplyingStat>
+    <!--Type: Verse.HediffDef-->
+    <hediff>HediffDef_defName</hediff>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <nullifiedIfNotColonist>true_or_false</nullifiedIfNotColonist>
+    <!--Type: RimWorld.ThoughtDef-->
+    <thoughtToMake>ThoughtDef_defName</thoughtToMake>
+    <!--Type: string-->
+    <icon>string_value</icon>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <showBubble>true_or_false</showBubble>
+    <!--Type: int-->
+    <!--Default Value: -1-->
+    <stackLimitPerPawn>int_value</stackLimitPerPawn>
+    <!--Type: float-->
+    <!--Default Value: 3.40282347E+38-->
+    <maxCumulatedOpinionOffset>float_value</maxCumulatedOpinionOffset>
+    <!--Type: RimWorld.TaleDef-->
+    <taleDef>TaleDef_defName</taleDef>
+  </ThoughtDef>
+</Defs>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>SeedGenerator</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">seed->[personnamemale]</li>
+        <li ListIndex="1">seed->[personnamemale]</li>
+        <li ListIndex="2">seed->[personnamemale]</li>
+        <li ListIndex="3">seed->[personnamefemale]</li>
+        <li ListIndex="4">seed->[personnamefemale]</li>
+        <li ListIndex="5">seed->[personnamefemale]</li>
+        <li ListIndex="6">seed->[animal]</li>
+        <li ListIndex="7">seed->[terrainfeature]</li>
+        <li ListIndex="8">seed->[outlander]</li>
+        <li ListIndex="9">seed->[apparel]</li>
+        <li ListIndex="10">seed->[adjective]</li>
+        <li ListIndex="11">seed->[concept]</li>
+        <li ListIndex="12">seed->[tribalword]</li>
+        <li ListIndex="13">seed->[rareseed]</li>
+        <li ListIndex="14">seed->[rareseed]</li>
+        <li ListIndex="15">rareseed->[weapon]</li>
+        <li ListIndex="16">rareseed->[color]</li>
+        <li ListIndex="17">rareseed->[vegetable]</li>
+        <li ListIndex="18">rareseed->[game]</li>
+        <li ListIndex="19">rareseed->[businessname]</li>
+        <li ListIndex="20">rareseed->[businesstype]</li>
+        <li ListIndex="21">rareseed->[community]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File" ListIndex="0">
+          <keyword>tribalword</keyword>
+          <path>Words/Foreign/Tribal</path>
+        </li>
+        <li Class="Rule_File" ListIndex="1">
+          <keyword>businessname</keyword>
+          <path>Names/Business</path>
+        </li>
+        <li Class="Rule_File" ListIndex="2">
+          <keyword>businesstype</keyword>
+          <path>Words/Nouns/BusinessTypes</path>
+        </li>
+        <li Class="Rule_PersonName" ListIndex="3">
+          <keyword>personnamemale</keyword>
+          <gender>Male</gender>
+        </li>
+        <li Class="Rule_PersonName" ListIndex="4">
+          <keyword>personnamefemale</keyword>
+          <gender>Female</gender>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</Defs>

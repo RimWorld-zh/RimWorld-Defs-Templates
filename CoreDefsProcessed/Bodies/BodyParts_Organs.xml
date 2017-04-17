@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyPartDef>
+    <defName>Heart</defName>
+    <label>heart</label>
+    <tags>
+      <li ListIndex="0">BloodPumpingSource</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <bleedingRateMultiplier>5</bleedingRateMultiplier>
+    <skinCovered>false</skinCovered>
+    <spawnThingOnRemoved>Heart</spawnThingOnRemoved>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftLung</defName>
+    <label>left lung</label>
+    <tags>
+      <li ListIndex="0">BreathingSource</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <spawnThingOnRemoved>Lung</spawnThingOnRemoved>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightLung</defName>
+    <label>right lung</label>
+    <tags>
+      <li ListIndex="0">BreathingSource</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <spawnThingOnRemoved>Lung</spawnThingOnRemoved>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftKidney</defName>
+    <label>left kidney</label>
+    <tags>
+      <li ListIndex="0">BloodFiltrationKidney</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <spawnThingOnRemoved>Kidney</spawnThingOnRemoved>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightKidney</defName>
+    <label>right kidney</label>
+    <tags>
+      <li ListIndex="0">BloodFiltrationKidney</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <spawnThingOnRemoved>Kidney</spawnThingOnRemoved>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Liver</defName>
+    <label>liver</label>
+    <tags>
+      <li ListIndex="0">BloodFiltrationLiver</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <spawnThingOnRemoved>Liver</spawnThingOnRemoved>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Stomach</defName>
+    <label>stomach</label>
+    <tags>
+      <li ListIndex="0">MetabolismSource</li>
+    </tags>
+    <hitPoints>25</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+  </BodyPartDef>
+</Defs>

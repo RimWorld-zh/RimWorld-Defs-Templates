@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef>
+    <defName>Deterioration</defName>
+    <label>deterioration</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+  </DamageDef>
+  <DamageDef>
+    <defName>Mining</defName>
+    <label>mining</label>
+  </DamageDef>
+  <DamageDef>
+    <defName>Rotting</defName>
+    <label>rotting</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+  </DamageDef>
+  <DamageDef>
+    <defName>Extinguish</defName>
+    <label>extinguish</label>
+    <workerClass>DamageWorker_Extinguish</workerClass>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <explosionDamage>999999</explosionDamage>
+    <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+    <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+  </DamageDef>
+  <DamageDef>
+    <defName>Smoke</defName>
+    <label>smoke</label>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <explosionDamage>0</explosionDamage>
+    <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+    <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Smoke</soundExplosion>
+  </DamageDef>
+</Defs>

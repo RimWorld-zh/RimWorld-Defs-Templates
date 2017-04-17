@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--================= player pawn filters =================-->
+  <ScenPartDef>
+    <defName>GameStartDialog</defName>
+    <label>game start dialog</label>
+    <category>Misc</category>
+    <scenPartClass>ScenPart_GameStartDialog</scenPartClass>
+    <maxUses>1</maxUses>
+  </ScenPartDef>
+  <!--================= player pawn filters =================-->
+  <ScenPartDef>
+    <defName>PawnFilter_Age</defName>
+    <label>allowed age range</label>
+    <category>PlayerPawnFilter</category>
+    <scenPartClass>ScenPart_PawnFilter_Age</scenPartClass>
+    <summaryPriority>475</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+    <maxUses>1</maxUses>
+  </ScenPartDef>
+  <!--================== player pawn modifier ================-->
+  <ScenPartDef>
+    <defName>OnPawnDeathExplode</defName>
+    <label>characters explode on death</label>
+    <category>PlayerPawnModifier</category>
+    <scenPartClass>ScenPart_OnPawnDeathExplode</scenPartClass>
+    <summaryPriority>461</summaryPriority>
+    <selectionWeight>0.7</selectionWeight>
+    <maxUses>1</maxUses>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>ForcedTrait</defName>
+    <label>forced trait</label>
+    <category>PlayerPawnModifier</category>
+    <scenPartClass>ScenPart_ForcedTrait</scenPartClass>
+    <summaryPriority>460</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>ForcedHediff</defName>
+    <label>forced health condition</label>
+    <category>PlayerPawnModifier</category>
+    <scenPartClass>ScenPart_ForcedHediff</scenPartClass>
+    <summaryPriority>459</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>SetNeedLevel</defName>
+    <label>set need level</label>
+    <category>PlayerPawnModifier</category>
+    <scenPartClass>ScenPart_SetNeedLevel</scenPartClass>
+    <summaryPriority>458</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>StartingResearch</defName>
+    <label>start with research</label>
+    <category>StartingImportant</category>
+    <scenPartClass>ScenPart_StartingResearch</scenPartClass>
+    <summaryPriority>400</summaryPriority>
+    <selectionWeight>0.2</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>MapCondition_Planetkiller</defName>
+    <label>planetkiller weapon incoming</label>
+    <category>MapCondition</category>
+    <scenPartClass>ScenPart_MapCondition</scenPartClass>
+    <summaryPriority>400</summaryPriority>
+    <selectionWeight>0.8</selectionWeight>
+    <maxUses>1</maxUses>
+    <mapCondition>Planetkiller</mapCondition>
+    <durationRandomRange>
+      <min>90</min>
+      <max>500</max>
+    </durationRandomRange>
+  </ScenPartDef>
+  <!--=================== rules changes =================-->
+  <ScenPartDef Name="DisallowDesignatorBase" Abstract="True">
+    <category>Rule</category>
+    <scenPartClass>ScenPart_Rule_DisallowDesignator</scenPartClass>
+    <summaryPriority>380</summaryPriority>
+    <selectionWeight>0.25</selectionWeight>
+    <maxUses>1</maxUses>
+  </ScenPartDef>
+  <ScenPartDef ParentName="DisallowDesignatorBase">
+    <defName>Rule_DisallowDesignator_ZoneAdd_Growing</defName>
+    <label>cannot sow</label>
+    <description>Cannot sow plants on the ground.</description>
+    <category>Rule</category>
+    <scenPartClass>ScenPart_Rule_DisallowDesignator</scenPartClass>
+    <summaryPriority>380</summaryPriority>
+    <selectionWeight>0.25</selectionWeight>
+    <maxUses>1</maxUses>
+    <designatorType>Designator_ZoneAdd_Growing</designatorType>
+  </ScenPartDef>
+  <ScenPartDef ParentName="DisallowDesignatorBase">
+    <defName>Rule_DisallowDesignator_Mine</defName>
+    <label>cannot mine</label>
+    <description>Cannot mine.</description>
+    <category>Rule</category>
+    <scenPartClass>ScenPart_Rule_DisallowDesignator</scenPartClass>
+    <summaryPriority>380</summaryPriority>
+    <selectionWeight>0.25</selectionWeight>
+    <maxUses>1</maxUses>
+    <designatorType>Designator_Mine</designatorType>
+  </ScenPartDef>
+  <ScenPartDef ParentName="DisallowDesignatorBase">
+    <defName>Rule_DisallowDesignator_Hunt</defName>
+    <label>cannot hunt</label>
+    <description>Cannot hunt.</description>
+    <category>Rule</category>
+    <scenPartClass>ScenPart_Rule_DisallowDesignator</scenPartClass>
+    <summaryPriority>380</summaryPriority>
+    <selectionWeight>0.25</selectionWeight>
+    <maxUses>1</maxUses>
+    <designatorType>Designator_Hunt</designatorType>
+  </ScenPartDef>
+  <ScenPartDef ParentName="DisallowDesignatorBase">
+    <defName>Rule_DisallowDesignator_Tame</defName>
+    <label>cannot tame</label>
+    <description>Cannot tame animals.</description>
+    <category>Rule</category>
+    <scenPartClass>ScenPart_Rule_DisallowDesignator</scenPartClass>
+    <summaryPriority>380</summaryPriority>
+    <selectionWeight>0.25</selectionWeight>
+    <maxUses>1</maxUses>
+    <designatorType>Designator_Tame</designatorType>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>StatFactor</defName>
+    <label>stat multiplier</label>
+    <category>Rule</category>
+    <scenPartClass>ScenPart_StatFactor</scenPartClass>
+    <summaryPriority>379</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <!--===============================================-->
+  <!--==================== grouped ==================-->
+  <!--===============================================-->
+  <ScenPartDef>
+    <defName>DisableIncident</defName>
+    <label>disable incident</label>
+    <category>Rule</category>
+    <scenPartClass>ScenPart_DisableIncident</scenPartClass>
+    <summaryPriority>360</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>CreateIncident</defName>
+    <label>create incident</label>
+    <category>Rule</category>
+    <scenPartClass>ScenPart_CreateIncident</scenPartClass>
+    <summaryPriority>361</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>Rule_DisallowBuilding</defName>
+    <label>disallow building</label>
+    <category>Rule</category>
+    <scenPartClass>ScenPart_DisallowBuilding</scenPartClass>
+    <summaryPriority>359</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>PermanentMapCondition</defName>
+    <label>permanent map condition</label>
+    <category>MapCondition</category>
+    <scenPartClass>ScenPart_PermaMapCondition</scenPartClass>
+    <summaryPriority>350</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>StartingAnimal</defName>
+    <label>start with animal(s)</label>
+    <category>StartingImportant</category>
+    <scenPartClass>ScenPart_StartingAnimal</scenPartClass>
+    <summaryPriority>305</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>StartingThing_Defined</defName>
+    <label>start with</label>
+    <category>StartingItem</category>
+    <scenPartClass>ScenPart_StartingThing_Defined</scenPartClass>
+    <summaryPriority>300</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>ScatterThingsNearPlayerStart</defName>
+    <label>start near</label>
+    <category>StartingItem</category>
+    <scenPartClass>ScenPart_ScatterThingsNearPlayerStart</scenPartClass>
+    <summaryPriority>295</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>ScatterThingsAnywhere</defName>
+    <label>scattered randomly</label>
+    <category>WorldThing</category>
+    <scenPartClass>ScenPart_ScatterThingsAnywhere</scenPartClass>
+    <summaryPriority>100</summaryPriority>
+    <selectionWeight>1.0</selectionWeight>
+  </ScenPartDef>
+</Defs>

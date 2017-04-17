@@ -1,0 +1,1627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ========================== Warg ================================= -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Warg</defName>
+    <label>warg</label>
+    <description>Heavily-muscled wolf-like creatures. Scientists say wargs are the descendants of weaponized military animals created for population suppression. The superstitious see them as the tools of an angry god. They will only eat meat or corpses.</description>
+    <statBases>
+      <MoveSpeed>5.00</MoveSpeed>
+      <ComfyTemperatureMin>-65</ComfyTemperatureMin>
+      <MarketValue>450</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+      <li ListIndex="1">BadassAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.5</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.5</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>2.0</defaultCooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="3">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>CarnivoreAnimalStrict</foodType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <lifeExpectancy>15</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <petness>0.5</petness>
+      <predator>true</predator>
+      <wildness>0.80</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>22.5</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li ListIndex="0">(0.5, 0)</li>
+          <li ListIndex="1">(1, 1)</li>
+          <li ListIndex="2">(2, 1.7)</li>
+          <li ListIndex="3">(3, 0.7)</li>
+          <li ListIndex="4">(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnTameChance>1</nameOnTameChance>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.15</baseHealthScale>
+      <baseHungerRate>0.25</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+          <soundCall>Pawn_Warg_Call</soundCall>
+          <soundAngry>Pawn_Warg_Angry</soundAngry>
+          <soundWounded>Pawn_Warg_Wounded</soundWounded>
+          <soundDeath>Pawn_Warg_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(123,104,89)</leatherColor>
+      <leatherLabel>warg fur</leatherLabel>
+      <leatherInsulation>1.1</leatherInsulation>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Warg</defName>
+    <label>warg</label>
+    <race>Warg</race>
+    <labelPlural>wargs</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>warg puppy</label>
+        <labelPlural>warg puppies</labelPlural>
+        <labelMale>male warg puppy</labelMale>
+        <labelMalePlural>male warg puppies</labelMalePlural>
+        <labelFemale>female warg puppy</labelFemale>
+        <labelFemalePlural>female warg puppies</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Warg/Warg</texPath>
+          <color>(123,104,89)</color>
+          <drawSize>1.05</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>warg</label>
+        <labelPlural>warg</labelPlural>
+        <labelMale>male warg</labelMale>
+        <labelMalePlural>male wargs</labelMalePlural>
+        <labelFemale>female warg</labelFemale>
+        <labelFemalePlural>female wargs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Warg/Warg</texPath>
+          <color>(123,104,89)</color>
+          <drawSize>1.7</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>warg</label>
+        <labelPlural>warg</labelPlural>
+        <labelMale>male warg</labelMale>
+        <labelMalePlural>male wargs</labelMalePlural>
+        <labelFemale>female warg</labelFemale>
+        <labelFemalePlural>female wargs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Warg/Warg</texPath>
+          <color>(123,104,89)</color>
+          <drawSize>2.05</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>75</combatPower>
+    <labelMale>male warg</labelMale>
+    <labelMalePlural>male wargs</labelMalePlural>
+    <labelFemale>female warg</labelFemale>
+    <labelFemalePlural>female wargs</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.9</wildSpawn_EcoSystemWeight>
+    <wildSpawn_GroupSizeRange>
+      <min>2</min>
+      <max>5</max>
+    </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+  <!-- ========================== Wolves ================================= -->
+  <ThingDef Name="ThingBaseWolf" ParentName="AnimalThingBase" Abstract="True">
+    <statBases>
+      <MoveSpeed>5.25</MoveSpeed>
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <MarketValue>370</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>StandardAnimal</li>
+      <li>BadassAnimal</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <foodType>CarnivoreAnimal</foodType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <lifeExpectancy>12</lifeExpectancy>
+      <petness>0.1</petness>
+      <predator>true</predator>
+      <wildness>0.75</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>22.5</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameOnTameChance>1</nameOnTameChance>
+      <baseBodySize>0.85</baseBodySize>
+      <baseHealthScale>0.99</baseHealthScale>
+      <baseHungerRate>0.18</baseHungerRate>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+          <soundCall>Pawn_Dog_Call</soundCall>
+          <soundAngry>Pawn_Dog_Angry</soundAngry>
+          <soundWounded>Pawn_Dog_Injured</soundWounded>
+          <soundDeath>Pawn_Dog_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <leatherInsulation>1.0</leatherInsulation>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase" Name="AnimalKindBaseWolf" Abstract="True">
+    <combatPower>75</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.9</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <ThingDef ParentName="ThingBaseWolf">
+    <defName>WolfTimber</defName>
+    <label>timber wolf</label>
+    <description>A rugged predator long feared by many ancient Earth cultures. As pack hunters, wolves have a complex social life and are fiercely intelligent.</description>
+    <statBases>
+      <MoveSpeed>5.25</MoveSpeed>
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <MarketValue>370</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+      <li ListIndex="1">BadassAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="3">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>CarnivoreAnimal</foodType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <lifeExpectancy>12</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <petness>0.1</petness>
+      <predator>true</predator>
+      <wildness>0.75</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>22.5</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li ListIndex="0">(0.5, 0)</li>
+          <li ListIndex="1">(1, 1)</li>
+          <li ListIndex="2">(2, 1.7)</li>
+          <li ListIndex="3">(3, 0.7)</li>
+          <li ListIndex="4">(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnTameChance>1</nameOnTameChance>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.85</baseBodySize>
+      <baseHealthScale>0.99</baseHealthScale>
+      <baseHungerRate>0.18</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+          <soundCall>Pawn_Dog_Call</soundCall>
+          <soundAngry>Pawn_Dog_Angry</soundAngry>
+          <soundWounded>Pawn_Dog_Injured</soundWounded>
+          <soundDeath>Pawn_Dog_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(115,110,100)</leatherColor>
+      <leatherLabel>timber wolfskin</leatherLabel>
+      <leatherInsulation>1.0</leatherInsulation>
+      <meatLabel>wolfmeat</meatLabel>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBaseWolf">
+    <defName>WolfTimber</defName>
+    <label>timber wolf</label>
+    <race>WolfTimber</race>
+    <labelPlural>timber wolves</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>timber wolf puppy</label>
+        <labelPlural>timber wolf puppies</labelPlural>
+        <labelMale>male timber wolf puppy</labelMale>
+        <labelMalePlural>male timber wolf puppies</labelMalePlural>
+        <labelFemale>female timber wolf puppy</labelFemale>
+        <labelFemalePlural>female timber wolf puppies</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WolfTimber/WolfTimber</texPath>
+          <drawSize>1.05</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>timber wolf</label>
+        <labelPlural>timber wolves</labelPlural>
+        <labelMale>male timber wolf</labelMale>
+        <labelMalePlural>male timber wolfs</labelMalePlural>
+        <labelFemale>female timber wolf</labelFemale>
+        <labelFemalePlural>female timber wolfs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WolfTimber/WolfTimber</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>timber wolf</label>
+        <labelPlural>timber wolves</labelPlural>
+        <labelMale>male timber wolf</labelMale>
+        <labelMalePlural>male timber wolfs</labelMalePlural>
+        <labelFemale>female timber wolf</labelFemale>
+        <labelFemalePlural>female timber wolfs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WolfTimber/WolfTimber</texPath>
+          <drawSize>1.95</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.95</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>75</combatPower>
+    <labelMale>male timber wolf</labelMale>
+    <labelMalePlural>male timber wolves</labelMalePlural>
+    <labelFemale>female timber wolf</labelFemale>
+    <labelFemalePlural>female timber wolves</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.9</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <ThingDef ParentName="ThingBaseWolf">
+    <defName>WolfArctic</defName>
+    <label>arctic wolf</label>
+    <description>An arctic variant of the old Earth wolf. As pack hunters, wolves have a complex social life and are fiercely intelligent.</description>
+    <statBases>
+      <MoveSpeed>5.25</MoveSpeed>
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <MarketValue>370</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+      <li ListIndex="1">BadassAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="3">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>CarnivoreAnimal</foodType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <lifeExpectancy>12</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <petness>0.1</petness>
+      <predator>true</predator>
+      <wildness>0.75</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>22.5</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li ListIndex="0">(0.5, 0)</li>
+          <li ListIndex="1">(1, 1)</li>
+          <li ListIndex="2">(2, 1.7)</li>
+          <li ListIndex="3">(3, 0.7)</li>
+          <li ListIndex="4">(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnTameChance>1</nameOnTameChance>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.85</baseBodySize>
+      <baseHealthScale>0.99</baseHealthScale>
+      <baseHungerRate>0.18</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+          <soundCall>Pawn_Dog_Call</soundCall>
+          <soundAngry>Pawn_Dog_Angry</soundAngry>
+          <soundWounded>Pawn_Dog_Injured</soundWounded>
+          <soundDeath>Pawn_Dog_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(200,200,200)</leatherColor>
+      <leatherLabel>arctic wolfskin</leatherLabel>
+      <leatherInsulation>1.25</leatherInsulation>
+      <useMeatFrom>WolfTimber</useMeatFrom>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBaseWolf">
+    <defName>WolfArctic</defName>
+    <label>arctic wolf</label>
+    <race>WolfArctic</race>
+    <labelPlural>arctic wolves</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>arctic wolf puppy</label>
+        <labelPlural>arctic wolf puppies</labelPlural>
+        <labelMale>male arctic wolf puppy</labelMale>
+        <labelMalePlural>male arctic wolf puppies</labelMalePlural>
+        <labelFemale>female arctic wolf puppy</labelFemale>
+        <labelFemalePlural>female arctic wolf puppies</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WolfArctic/WolfArctic</texPath>
+          <drawSize>1.05</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.05</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>arctic wolf</label>
+        <labelPlural>arctic wolves</labelPlural>
+        <labelMale>male arctic wolf</labelMale>
+        <labelMalePlural>male arctic wolfs</labelMalePlural>
+        <labelFemale>female arctic wolf</labelFemale>
+        <labelFemalePlural>female arctic wolfs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WolfArctic/WolfArctic</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>arctic wolf</label>
+        <labelPlural>arctic wolves</labelPlural>
+        <labelMale>male arctic wolf</labelMale>
+        <labelMalePlural>male arctic wolfs</labelMalePlural>
+        <labelFemale>female arctic wolf</labelFemale>
+        <labelFemalePlural>female arctic wolfs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/WolfArctic/WolfArctic</texPath>
+          <drawSize>1.95</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.95</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>75</combatPower>
+    <labelMale>male arctic wolf</labelMale>
+    <labelMalePlural>male arctic wolves</labelMalePlural>
+    <labelFemale>female arctic wolf</labelFemale>
+    <labelFemalePlural>female arctic wolves</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.9</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!--========================== Fox base ========================-->
+  <ThingDef Name="ThingBaseFox" ParentName="AnimalThingBase" Abstract="True">
+    <statBases>
+      <MoveSpeed>5.00</MoveSpeed>
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <MarketValue>210</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>StandardAnimal</li>
+      <li>BadassAnimal</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <foodType>CarnivoreAnimal</foodType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <lifeExpectancy>9</lifeExpectancy>
+      <petness>0.1</petness>
+      <predator>true</predator>
+      <wildness>0.75</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>18</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameOnTameChance>1</nameOnTameChance>
+      <baseBodySize>0.55</baseBodySize>
+      <baseHealthScale>0.70</baseHealthScale>
+      <baseHungerRate>0.12</baseHungerRate>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <!-- no sounds -->
+          <def>AnimalAdult</def>
+          <minAge>0.35</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherInsulation>1.0</leatherInsulation>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase" Name="AnimalKindBaseFox" Abstract="True">
+    <combatPower>45</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.5</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!--========================== Fox fennec ========================-->
+  <ThingDef ParentName="ThingBaseFox">
+    <defName>FoxFennec</defName>
+    <label>fennec fox</label>
+    <description>A small fox originally from the northern part of Earth's Africa continent. It hunts small creatures and has very large ears.</description>
+    <statBases>
+      <MoveSpeed>5.00</MoveSpeed>
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <MarketValue>210</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+      <li ListIndex="1">BadassAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="3">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>CarnivoreAnimal</foodType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <lifeExpectancy>9</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <petness>0.1</petness>
+      <predator>true</predator>
+      <wildness>0.75</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>18</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li ListIndex="0">(0.5, 0)</li>
+          <li ListIndex="1">(1, 1)</li>
+          <li ListIndex="2">(2, 1.7)</li>
+          <li ListIndex="3">(3, 0.7)</li>
+          <li ListIndex="4">(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnTameChance>1</nameOnTameChance>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.55</baseBodySize>
+      <baseHealthScale>0.70</baseHealthScale>
+      <baseHungerRate>0.12</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li ListIndex="2">
+          <!-- no sounds -->
+          <def>AnimalAdult</def>
+          <minAge>0.35</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(197,161,103)</leatherColor>
+      <leatherLabel>fennec foxskin</leatherLabel>
+      <leatherInsulation>1.0</leatherInsulation>
+      <meatLabel>foxmeat</meatLabel>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBaseFox">
+    <defName>FoxFennec</defName>
+    <label>fennec fox</label>
+    <race>FoxFennec</race>
+    <labelPlural>fennec foxes</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>fennec fox puppy</label>
+        <labelPlural>fennec fox puppies</labelPlural>
+        <labelMale>male fennec fox puppy</labelMale>
+        <labelMalePlural>male fennec fox puppies</labelMalePlural>
+        <labelFemale>female fennec fox puppy</labelFemale>
+        <labelFemalePlural>female fennec fox puppies</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxFennec/FoxFennec</texPath>
+          <drawSize>0.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>fennec fox</label>
+        <labelPlural>fennec foxes</labelPlural>
+        <labelMale>male fennec fox</labelMale>
+        <labelMalePlural>male fennec foxs</labelMalePlural>
+        <labelFemale>female fennec fox</labelFemale>
+        <labelFemalePlural>female fennec foxs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxFennec/FoxFennec</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>fennec fox</label>
+        <labelPlural>fennec foxes</labelPlural>
+        <labelMale>male fennec fox</labelMale>
+        <labelMalePlural>male fennec foxs</labelMalePlural>
+        <labelFemale>female fennec fox</labelFemale>
+        <labelFemalePlural>female fennec foxs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxFennec/FoxFennec</texPath>
+          <drawSize>1.45</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.75</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>45</combatPower>
+    <labelMale>male fennec fox</labelMale>
+    <labelMalePlural>male fennec foxes</labelMalePlural>
+    <labelFemale>female fennec fox</labelFemale>
+    <labelFemalePlural>female fennec foxes</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.5</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!--========================== Fox red ========================-->
+  <ThingDef ParentName="ThingBaseFox">
+    <defName>FoxRed</defName>
+    <label>red fox</label>
+    <description>A small solitary canine evolved for hunting small prey in temperate climates.</description>
+    <statBases>
+      <MoveSpeed>5.00</MoveSpeed>
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <MarketValue>210</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+      <li ListIndex="1">BadassAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="3">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>CarnivoreAnimal</foodType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <lifeExpectancy>9</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <petness>0.1</petness>
+      <predator>true</predator>
+      <wildness>0.75</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>18</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li ListIndex="0">(0.5, 0)</li>
+          <li ListIndex="1">(1, 1)</li>
+          <li ListIndex="2">(2, 1.7)</li>
+          <li ListIndex="3">(3, 0.7)</li>
+          <li ListIndex="4">(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnTameChance>1</nameOnTameChance>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.55</baseBodySize>
+      <baseHealthScale>0.70</baseHealthScale>
+      <baseHungerRate>0.12</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li ListIndex="2">
+          <!-- no sounds -->
+          <def>AnimalAdult</def>
+          <minAge>0.35</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(178,100,34)</leatherColor>
+      <leatherLabel>red foxskin</leatherLabel>
+      <leatherInsulation>1.0</leatherInsulation>
+      <useMeatFrom>FoxFennec</useMeatFrom>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBaseFox">
+    <defName>FoxRed</defName>
+    <label>red fox</label>
+    <race>FoxRed</race>
+    <labelPlural>red foxes</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>red fox puppy</label>
+        <labelPlural>red fox puppies</labelPlural>
+        <labelMale>male red fox puppy</labelMale>
+        <labelMalePlural>male red fox puppies</labelMalePlural>
+        <labelFemale>female red fox puppy</labelFemale>
+        <labelFemalePlural>female red fox puppies</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxRed/FoxRed</texPath>
+          <drawSize>1.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>red fox</label>
+        <labelPlural>red foxes</labelPlural>
+        <labelMale>male red fox</labelMale>
+        <labelMalePlural>male red foxs</labelMalePlural>
+        <labelFemale>female red fox</labelFemale>
+        <labelFemalePlural>female red foxs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxRed/FoxRed</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>red fox</label>
+        <labelPlural>red foxes</labelPlural>
+        <labelMale>male red fox</labelMale>
+        <labelMalePlural>male red foxs</labelMalePlural>
+        <labelFemale>female red fox</labelFemale>
+        <labelFemalePlural>female red foxs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxRed/FoxRed</texPath>
+          <drawSize>1.68</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.68</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>45</combatPower>
+    <labelMale>male red fox</labelMale>
+    <labelMalePlural>male red foxes</labelMalePlural>
+    <labelFemale>female red fox</labelFemale>
+    <labelFemalePlural>female red foxes</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.5</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!--========================== Fox arctic ========================-->
+  <ThingDef ParentName="ThingBaseFox">
+    <defName>FoxArctic</defName>
+    <label>arctic fox</label>
+    <description>A small predator adapted for the far north. It usually hunts small game like mice and voles, sometimes burrowing through a meter of snow to reach its prey.</description>
+    <statBases>
+      <MoveSpeed>5.00</MoveSpeed>
+      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <MarketValue>210</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+      <li ListIndex="1">BadassAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="3">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>CarnivoreAnimal</foodType>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <lifeExpectancy>9</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <petness>0.1</petness>
+      <predator>true</predator>
+      <wildness>0.75</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <gestationPeriodDays>18</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li ListIndex="0">(0.5, 0)</li>
+          <li ListIndex="1">(1, 1)</li>
+          <li ListIndex="2">(2, 1.7)</li>
+          <li ListIndex="3">(3, 0.7)</li>
+          <li ListIndex="4">(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnTameChance>1</nameOnTameChance>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.55</baseBodySize>
+      <baseHealthScale>0.70</baseHealthScale>
+      <baseHungerRate>0.12</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li ListIndex="2">
+          <!-- no sounds -->
+          <def>AnimalAdult</def>
+          <minAge>0.35</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(200,200,200)</leatherColor>
+      <leatherLabel>arctic foxskin</leatherLabel>
+      <leatherInsulation>1.0</leatherInsulation>
+      <useMeatFrom>FoxFennec</useMeatFrom>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBaseFox">
+    <defName>FoxArctic</defName>
+    <label>arctic fox</label>
+    <race>FoxArctic</race>
+    <labelPlural>arctic foxes</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>arctic fox puppy</label>
+        <labelPlural>arctic fox puppies</labelPlural>
+        <labelMale>male arctic fox puppy</labelMale>
+        <labelMalePlural>male arctic fox puppies</labelMalePlural>
+        <labelFemale>female arctic fox puppy</labelFemale>
+        <labelFemalePlural>female arctic fox puppies</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxArctic/FoxArctic</texPath>
+          <drawSize>1.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>arctic fox</label>
+        <labelPlural>arctic foxes</labelPlural>
+        <labelMale>male arctic fox</labelMale>
+        <labelMalePlural>male arctic foxs</labelMalePlural>
+        <labelFemale>female arctic fox</labelFemale>
+        <labelFemalePlural>female arctic foxs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxArctic/FoxArctic</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>arctic fox</label>
+        <labelPlural>arctic foxes</labelPlural>
+        <labelMale>male arctic fox</labelMale>
+        <labelMalePlural>male arctic foxs</labelMalePlural>
+        <labelFemale>female arctic fox</labelFemale>
+        <labelFemalePlural>female arctic foxs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FoxArctic/FoxArctic</texPath>
+          <drawSize>1.75</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.75</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>45</combatPower>
+    <labelMale>male arctic fox</labelMale>
+    <labelMalePlural>male arctic foxes</labelMalePlural>
+    <labelFemale>female arctic fox</labelFemale>
+    <labelFemalePlural>female arctic foxes</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.5</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+</Defs>

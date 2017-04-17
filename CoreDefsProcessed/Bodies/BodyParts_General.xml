@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BodyPartDefs>
+  <BodyPartDef>
+    <defName>Head</defName>
+    <label>head</label>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <bleedingRateMultiplier>2</bleedingRateMultiplier>
+    <skinCovered>true</skinCovered>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Skull</defName>
+    <label>skull</label>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Brain</defName>
+    <label>brain</label>
+    <tags>
+      <li ListIndex="0">ConsciousnessSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftEye</defName>
+    <label>left eye</label>
+    <tags>
+      <li ListIndex="0">SightSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <beautyRelated>true</beautyRelated>
+    <hitChanceFactors>
+      <li ListIndex="0">
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightEye</defName>
+    <label>right eye</label>
+    <tags>
+      <li ListIndex="0">SightSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <beautyRelated>true</beautyRelated>
+    <hitChanceFactors>
+      <li ListIndex="0">
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftEar</defName>
+    <label>left ear</label>
+    <tags>
+      <li ListIndex="0">HearingSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <beautyRelated>true</beautyRelated>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightEar</defName>
+    <label>right ear</label>
+    <tags>
+      <li ListIndex="0">HearingSource</li>
+    </tags>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <beautyRelated>true</beautyRelated>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Nose</defName>
+    <label>nose</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <beautyRelated>true</beautyRelated>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Jaw</defName>
+    <label>jaw</label>
+    <tags>
+      <li ListIndex="0">EatingSource</li>
+      <li ListIndex="1">TalkingSource</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <beautyRelated>true</beautyRelated>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Neck</defName>
+    <label>neck</label>
+    <tags>
+      <li ListIndex="0">BreathingPathway</li>
+      <li ListIndex="1">EatingPathway</li>
+      <li ListIndex="2">TalkingPathway</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <bleedingRateMultiplier>4</bleedingRateMultiplier>
+    <skinCovered>true</skinCovered>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Rib</defName>
+    <label>rib</label>
+    <hitPoints>8</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>Spine</defName>
+    <label>spine</label>
+    <tags>
+      <li ListIndex="0">Spine</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftLeg</defName>
+    <label>left leg</label>
+    <tags>
+      <li ListIndex="0">MovingLimbCore</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>LeftFoot</defName>
+    <label>left foot</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightLeg</defName>
+    <label>right leg</label>
+    <tags>
+      <li ListIndex="0">MovingLimbCore</li>
+    </tags>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+  </BodyPartDef>
+  <BodyPartDef>
+    <defName>RightFoot</defName>
+    <label>right foot</label>
+    <tags>
+      <li ListIndex="0">MovingLimbSegment</li>
+    </tags>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+  </BodyPartDef>
+</BodyPartDefs>

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef Name="MealBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+      <Mass>0.44</Mass>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>10</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li>FoodMeals</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <foodType>Meal</foodType>
+      <optimalityOffset>16</optimalityOffset>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MealBase" Name="MealRottable" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="MealBase">
+    <defName>MealSurvivalPack</defName>
+    <label>packaged survival meal</label>
+    <description>A high-quality packaged meal, manufactured for use in survival situations.</description>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>25</MarketValue>
+      <Mass>0.4</Mass>
+      <WorkToMake>1400</WorkToMake>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>10</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Ingredients" ListIndex="1" />
+      <li Class="CompProperties_FoodPoisonable" ListIndex="2" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Meal/SurvivalPack</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">FoodMeals</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Meal</foodType>
+      <nutrition>0.90</nutrition>
+      <preferability>MealSimple</preferability>
+      <optimalityOffset>-5</optimalityOffset>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MealRottable">
+    <defName>MealNutrientPaste</defName>
+    <label>nutrient paste meal</label>
+    <description>A synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs, and absolutely disgusting.</description>
+    <statBases>
+      <DeteriorationRate>20</DeteriorationRate>
+      <MarketValue>12</MarketValue>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+      <Mass>0.44</Mass>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>10</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Ingredients" ListIndex="1" />
+      <li Class="CompProperties_FoodPoisonable" ListIndex="2" />
+      <li Class="CompProperties_Rottable" ListIndex="3">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Meal/NutrientPaste</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">FoodMeals</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <tasteThought>AteAwfulMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Meal</foodType>
+      <nutrition>0.90</nutrition>
+      <preferability>MealAwful</preferability>
+      <optimalityOffset>16</optimalityOffset>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MealRottable">
+    <defName>MealSimple</defName>
+    <label>simple meal</label>
+    <description>A simple meal quickly cooked from a few ingredients.</description>
+    <statBases>
+      <DeteriorationRate>20</DeteriorationRate>
+      <MarketValue>18</MarketValue>
+      <WorkToMake>300</WorkToMake>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+      <Mass>0.44</Mass>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>10</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Ingredients" ListIndex="1" />
+      <li Class="CompProperties_FoodPoisonable" ListIndex="2" />
+      <li Class="CompProperties_Rottable" ListIndex="3">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">FoodMeals</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Meal</foodType>
+      <nutrition>0.90</nutrition>
+      <preferability>MealSimple</preferability>
+      <optimalityOffset>16</optimalityOffset>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MealRottable">
+    <defName>MealFine</defName>
+    <label>fine meal</label>
+    <description>A complex dish assembled with care from a wide selection of ingredients.</description>
+    <statBases>
+      <DeteriorationRate>20</DeteriorationRate>
+      <MarketValue>24</MarketValue>
+      <WorkToMake>450</WorkToMake>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+      <Mass>0.44</Mass>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>10</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Ingredients" ListIndex="1" />
+      <li Class="CompProperties_FoodPoisonable" ListIndex="2" />
+      <li Class="CompProperties_Rottable" ListIndex="3">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Meal/Fine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">FoodMeals</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <tasteThought>AteFineMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Meal</foodType>
+      <nutrition>0.90</nutrition>
+      <preferability>MealFine</preferability>
+      <optimalityOffset>16</optimalityOffset>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MealRottable">
+    <defName>MealLavish</defName>
+    <label>lavish meal</label>
+    <description>A masterpiece of the culinary arts, this meal nourishes the body, mind, and soul.</description>
+    <statBases>
+      <DeteriorationRate>20</DeteriorationRate>
+      <MarketValue>30</MarketValue>
+      <WorkToMake>800</WorkToMake>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+      <Mass>0.44</Mass>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>10</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Ingredients" ListIndex="1" />
+      <li Class="CompProperties_FoodPoisonable" ListIndex="2" />
+      <li Class="CompProperties_Rottable" ListIndex="3">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Meal/Lavish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">FoodMeals</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <tasteThought>AteLavishMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Meal</foodType>
+      <nutrition>1.00</nutrition>
+      <preferability>MealLavish</preferability>
+      <optimalityOffset>16</optimalityOffset>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Kibble</defName>
+    <label>kibble</label>
+    <description>Kibble animal feed made from mixed meat and plant sources. Humans can eat it, but they really, really don't like it.</description>
+    <statBases>
+      <MarketValue>1.3</MarketValue>
+      <Mass>0.015</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/Kibble</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Foods</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <tasteThought>AteKibble</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <foodType>Kibble</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>RawBad</preferability>
+      <optimalityOffset>-30</optimalityOffset>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Pemmican</defName>
+    <label>pemmican</label>
+    <description>A preserved mashed mixture of fat and plant food. Tastes bland, but not offensive. It lasts a very long time without refrigeration.</description>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.018</Mass>
+      <WorkToMake>700</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>80</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients" ListIndex="2" />
+      <li Class="CompProperties_FoodPoisonable" ListIndex="3" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/Pemmican</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Foods</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Meal</foodType>
+      <nutrition>0.05</nutrition>
+      <preferability>MealSimple</preferability>
+      <optimalityOffset>6</optimalityOffset>
+    </ingestible>
+  </ThingDef>
+</ThingDefs>

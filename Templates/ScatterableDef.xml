@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ScatterableDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <texturePath>string_value</texturePath>
+    <!--Type: float-->
+    <minSize>float_value</minSize>
+    <!--Type: float-->
+    <maxSize>float_value</maxSize>
+    <!--Type: float-->
+    <!--Default Value: 100.0-->
+    <selectionWeight>float_value</selectionWeight>
+    <!--Type: string-->
+    <!--Default Value: string.Empty-->
+    <scatterType>string_value</scatterType>
+  </ScatterableDef>
+</Defs>

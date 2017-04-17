@@ -1,0 +1,1172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThinkTreeDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: Verse.AI.ThinkNode_Priority-->
+    <thinkRoot Class="ThinkNode_Priority">
+      <!--Complex List-->
+      <!--Type: List<Verse.AI.ThinkNode>-->
+      <subNodes>
+        <!--Type: Verse.AI.ThinkNode_Subtree-->
+        <li Class="ThinkNode_Subtree">
+          <!--Type: Verse.ThinkTreeDef-->
+          <treeDef>ThinkTreeDef_defName</treeDef>
+        </li>
+        <!--Type: Verse.AI.ThinkNode_Tagger-->
+        <li Class="ThinkNode_Tagger">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.ThinkNode_ConditionalHerdAnimal-->
+            <li Class="ThinkNode_ConditionalHerdAnimal">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_WanderHerd-->
+                <li Class="JobGiver_WanderHerd">
+                  <!--Type: Verse.IntRange-->
+                  <ticksBetweenWandersRange>
+                    <!--Type: int-->
+                    <min>int_value</min>
+                    <!--Type: int-->
+                    <max>int_value</max>
+                  </ticksBetweenWandersRange>
+                  <!--Type: Verse.Danger-->
+                  <!--Available Values: Unspecified, None, Some, Deadly-->
+                  <maxDanger>enum_value</maxDanger>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
+            <li Class="JobGiver_WanderAnywhere">
+              <!--Type: Verse.IntRange-->
+              <ticksBetweenWandersRange>
+                <!--Type: int-->
+                <min>int_value</min>
+                <!--Type: int-->
+                <max>int_value</max>
+              </ticksBetweenWandersRange>
+              <!--Type: Verse.Danger-->
+              <!--Available Values: Unspecified, None, Some, Deadly-->
+              <maxDanger>enum_value</maxDanger>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: Verse.AI.JobTag-->
+          <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+          <tagToGive>enum_value</tagToGive>
+        </li>
+        <!--Type: Verse.AI.JobGiver_IdleError-->
+        <li Class="JobGiver_IdleError" />
+        <!--Type: RimWorld.ThinkNode_ConditionalCanDoConstantThinkTreeJobNow-->
+        <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Subtree-->
+            <li Class="ThinkNode_Subtree">
+              <!--Type: Verse.ThinkTreeDef-->
+              <treeDef>ThinkTreeDef_defName</treeDef>
+            </li>
+            <!--Type: RimWorld.JobGiver_FleeExplosion-->
+            <li Class="JobGiver_FleeExplosion" />
+            <!--Type: RimWorld.JobGiver_ConfigurableHostilityResponse-->
+            <li Class="JobGiver_ConfigurableHostilityResponse" />
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalLyingDown-->
+        <li Class="ThinkNode_ConditionalLyingDown">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_ChancePerHour_Lovin-->
+            <li Class="ThinkNode_ChancePerHour_Lovin">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_Tagger-->
+                <li Class="ThinkNode_Tagger">
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_DoLovin-->
+                    <li Class="JobGiver_DoLovin" />
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: Verse.AI.JobTag-->
+                  <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                  <tagToGive>enum_value</tagToGive>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalMustKeepLyingDown-->
+        <li Class="ThinkNode_ConditionalMustKeepLyingDown">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.JobGiver_KeepLyingDown-->
+            <li Class="JobGiver_KeepLyingDown" />
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_GetJoyInBed-->
+                <li Class="JobGiver_GetJoyInBed" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.JobGiver_ReactToCloseMeleeThreat-->
+        <li Class="JobGiver_ReactToCloseMeleeThreat" />
+        <!--Type: Verse.AI.ThinkNode_SubtreesByTag-->
+        <li Class="ThinkNode_SubtreesByTag">
+          <!--Type: string-->
+          <insertTag>string_value</insertTag>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalColonist-->
+        <li Class="ThinkNode_ConditionalColonist">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_Orders-->
+                <li Class="JobGiver_Orders" />
+                <!--Type: RimWorld.JobGiver_UnloadYourInventory-->
+                <li Class="JobGiver_UnloadYourInventory" />
+                <!--Type: RimWorld.JobGiver_OptimizeApparel-->
+                <li Class="JobGiver_OptimizeApparel">
+                  <!--Type: bool-->
+                  <!--Default Value: false-->
+                  <leaveJoinableLordIfIssuesJob>true_or_false</leaveJoinableLordIfIssuesJob>
+                </li>
+                <!--Type: RimWorld.ThinkNode_ConditionalNeedPercentageAbove-->
+                <li Class="ThinkNode_ConditionalNeedPercentageAbove">
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_IdleJoy-->
+                    <li Class="JobGiver_IdleJoy" />
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: bool-->
+                  <!--Default Value: false-->
+                  <invert>true_or_false</invert>
+                  <!--Type: RimWorld.NeedDef-->
+                  <need>NeedDef_defName</need>
+                  <!--Type: float-->
+                  <threshold>float_value</threshold>
+                </li>
+                <!--Type: RimWorld.JobGiver_WanderColony-->
+                <li Class="JobGiver_WanderColony">
+                  <!--Type: Verse.Danger-->
+                  <!--Available Values: Unspecified, None, Some, Deadly-->
+                  <maxDanger>enum_value</maxDanger>
+                </li>
+                <!--Type: Verse.AI.JobGiver_ExitMapBest-->
+                <li Class="JobGiver_ExitMapBest">
+                  <!--Type: Verse.AI.LocomotionUrgency-->
+                  <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+                  <defaultLocomotion>enum_value</defaultLocomotion>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!--Type: Verse.AI.ThinkNode_Subtree-->
+            <li Class="ThinkNode_Subtree">
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <leaveJoinableLordIfIssuesJob>true_or_false</leaveJoinableLordIfIssuesJob>
+              <!--Type: Verse.ThinkTreeDef-->
+              <treeDef>ThinkTreeDef_defName</treeDef>
+            </li>
+            <!--Type: RimWorld.JobGiver_SeekAllowedArea-->
+            <li Class="JobGiver_SeekAllowedArea" />
+            <!--Type: RimWorld.JobGiver_SeekSafeTemperature-->
+            <li Class="JobGiver_SeekSafeTemperature" />
+            <!--Type: RimWorld.JobGiver_DropUnusedInventory-->
+            <li Class="JobGiver_DropUnusedInventory" />
+            <!--Type: RimWorld.ThinkNode_ConditionalStarving-->
+            <li Class="ThinkNode_ConditionalStarving">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_Tagger-->
+                <li Class="ThinkNode_Tagger">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_GetFood-->
+                    <li Class="JobGiver_GetFood">
+                      <!--Type: bool-->
+                      <!--Default Value: false-->
+                      <leaveJoinableLordIfIssuesJob>true_or_false</leaveJoinableLordIfIssuesJob>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: Verse.AI.JobTag-->
+                  <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                  <tagToGive>enum_value</tagToGive>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!--Type: RimWorld.JobGiver_Work-->
+            <li Class="JobGiver_Work">
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <leaveJoinableLordIfIssuesJob>true_or_false</leaveJoinableLordIfIssuesJob>
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <emergency>true_or_false</emergency>
+            </li>
+            <!--Type: RimWorld.ThinkNode_JoinVoluntarilyJoinableLord-->
+            <li Class="ThinkNode_JoinVoluntarilyJoinableLord">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_Subtree-->
+                <li Class="ThinkNode_Subtree">
+                  <!--Type: Verse.ThinkTreeDef-->
+                  <treeDef>ThinkTreeDef_defName</treeDef>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.ThinkTreeDutyHook-->
+              <!--Available Values: None, HighPriority, MediumPriority-->
+              <dutyHook>enum_value</dutyHook>
+            </li>
+            <!--Type: RimWorld.ThinkNode_ConditionalNeedPercentageAbove-->
+            <li Class="ThinkNode_ConditionalNeedPercentageAbove">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_PackFood-->
+                <li Class="JobGiver_PackFood">
+                  <!--Type: bool-->
+                  <!--Default Value: false-->
+                  <leaveJoinableLordIfIssuesJob>true_or_false</leaveJoinableLordIfIssuesJob>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: RimWorld.NeedDef-->
+              <need>NeedDef_defName</need>
+              <!--Type: float-->
+              <threshold>float_value</threshold>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <invert>true_or_false</invert>
+        </li>
+        <!--Type: RimWorld.ThinkNode_JoinVoluntarilyJoinableLord-->
+        <li Class="ThinkNode_JoinVoluntarilyJoinableLord">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Subtree-->
+            <li Class="ThinkNode_Subtree">
+              <!--Type: Verse.ThinkTreeDef-->
+              <treeDef>ThinkTreeDef_defName</treeDef>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: Verse.AI.ThinkTreeDutyHook-->
+          <!--Available Values: None, HighPriority, MediumPriority-->
+          <dutyHook>enum_value</dutyHook>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalPrisoner-->
+        <li Class="ThinkNode_ConditionalPrisoner">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.ThinkNode_ConditionalInNonPlayerHomeMap-->
+            <li Class="ThinkNode_ConditionalInNonPlayerHomeMap">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.ThinkNode_ConditionalAnyUndownedColonistSpawnedNearby-->
+                <li Class="ThinkNode_ConditionalAnyUndownedColonistSpawnedNearby">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: Verse.AI.ThinkNode_Tagger-->
+                    <li Class="ThinkNode_Tagger">
+                      <!--Type: List<Verse.AI.ThinkNode>-->
+                      <subNodes>
+                        <!--Type: RimWorld.JobGiver_PrisonerEscape-->
+                        <li Class="JobGiver_PrisonerEscape" />
+                        <!-- ... -->
+                      </subNodes>
+                      <!--Type: Verse.AI.JobTag-->
+                      <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                      <tagToGive>enum_value</tagToGive>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: bool-->
+                  <!--Default Value: false-->
+                  <invert>true_or_false</invert>
+                </li>
+                <!--Type: Verse.AI.ThinkNode_Tagger-->
+                <li Class="ThinkNode_Tagger">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_PrisonerEscape-->
+                    <li Class="JobGiver_PrisonerEscape" />
+                    <!--Type: RimWorld.JobGiver_PrisonerWaitInsteadOfEscaping-->
+                    <li Class="JobGiver_PrisonerWaitInsteadOfEscaping">
+                      <!--Type: Verse.Danger-->
+                      <!--Available Values: Unspecified, None, Some, Deadly-->
+                      <maxDanger>enum_value</maxDanger>
+                    </li>
+                    <!--Type: RimWorld.JobGiver_WanderColony-->
+                    <li Class="JobGiver_WanderColony">
+                      <!--Type: Verse.Danger-->
+                      <!--Available Values: Unspecified, None, Some, Deadly-->
+                      <maxDanger>enum_value</maxDanger>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: Verse.AI.JobTag-->
+                  <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                  <tagToGive>enum_value</tagToGive>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <invert>true_or_false</invert>
+            </li>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_WanderCurrentRoom-->
+                <li Class="JobGiver_WanderCurrentRoom">
+                  <!--Type: Verse.Danger-->
+                  <!--Available Values: Unspecified, None, Some, Deadly-->
+                  <maxDanger>enum_value</maxDanger>
+                </li>
+                <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
+                <li Class="ThinkNode_PrioritySorter">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_GetFood-->
+                    <li Class="JobGiver_GetFood" />
+                    <!--Type: RimWorld.JobGiver_GetRest-->
+                    <li Class="JobGiver_GetRest" />
+                    <!--Type: RimWorld.JobGiver_SatisfyChemicalNeed-->
+                    <li Class="JobGiver_SatisfyChemicalNeed" />
+                    <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
+                    <li Class="ThinkNode_Priority_GetJoy">
+                      <!--Type: List<Verse.AI.ThinkNode>-->
+                      <subNodes>
+                        <!--Type: RimWorld.JobGiver_GetJoy-->
+                        <li Class="JobGiver_GetJoy" />
+                        <!-- ... -->
+                      </subNodes>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                </li>
+                <!--Type: RimWorld.JobGiver_PrisonerGetDressed-->
+                <li Class="JobGiver_PrisonerGetDressed" />
+                <!--Type: RimWorld.JobGiver_PatientGoToBed-->
+                <li Class="JobGiver_PatientGoToBed" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!--Type: RimWorld.ThinkNode_ConditionalReleased-->
+            <li Class="ThinkNode_ConditionalReleased">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_Tagger-->
+                <li Class="ThinkNode_Tagger">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: Verse.AI.JobGiver_ExitMapBest-->
+                    <li Class="JobGiver_ExitMapBest">
+                      <!--Type: Verse.AI.LocomotionUrgency-->
+                      <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+                      <defaultLocomotion>enum_value</defaultLocomotion>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: Verse.AI.JobTag-->
+                  <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                  <tagToGive>enum_value</tagToGive>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!--Type: Verse.AI.ThinkNode_Subtree-->
+            <li Class="ThinkNode_Subtree">
+              <!--Type: Verse.ThinkTreeDef-->
+              <treeDef>ThinkTreeDef_defName</treeDef>
+            </li>
+            <!--Type: Verse.AI.JobGiver_IdleError-->
+            <li Class="JobGiver_IdleError" />
+            <!-- ... -->
+          </subNodes>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <leaveJoinableLordIfIssuesJob>true_or_false</leaveJoinableLordIfIssuesJob>
+        </li>
+        <!--Type: RimWorld.ThinkNode_TraitBehaviors-->
+        <li Class="ThinkNode_TraitBehaviors" />
+        <!--Type: RimWorld.ThinkNode_ConditionalGuest-->
+        <li Class="ThinkNode_ConditionalGuest">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.ThinkNode_ConditionalNeutralFaction-->
+            <li Class="ThinkNode_ConditionalNeutralFaction">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_Tagger-->
+                <li Class="ThinkNode_Tagger">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: Verse.AI.JobGiver_ExitMapBest-->
+                    <li Class="JobGiver_ExitMapBest">
+                      <!--Type: Verse.AI.LocomotionUrgency-->
+                      <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+                      <defaultLocomotion>enum_value</defaultLocomotion>
+                    </li>
+                    <!--Type: RimWorld.JobGiver_PatientGoToBed-->
+                    <li Class="JobGiver_PatientGoToBed" />
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: Verse.AI.JobTag-->
+                  <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                  <tagToGive>enum_value</tagToGive>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalHasFaction-->
+        <li Class="ThinkNode_ConditionalHasFaction">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_ChancePerHour_Mate-->
+            <li Class="ThinkNode_ChancePerHour_Mate">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_Tagger-->
+                <li Class="ThinkNode_Tagger">
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_Mate-->
+                    <li Class="JobGiver_Mate" />
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: Verse.AI.JobTag-->
+                  <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                  <tagToGive>enum_value</tagToGive>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!--Type: Verse.AI.ThinkNode_ChancePerHour_Nuzzle-->
+            <li Class="ThinkNode_ChancePerHour_Nuzzle">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_Tagger-->
+                <li Class="ThinkNode_Tagger">
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_Nuzzle-->
+                    <li Class="JobGiver_Nuzzle" />
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: Verse.AI.JobTag-->
+                  <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                  <tagToGive>enum_value</tagToGive>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!--Type: Verse.AI.ThinkNode_ChancePerHour_Constant-->
+            <li Class="ThinkNode_ChancePerHour_Constant">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.ThinkNode_ConditionalTrainableCompleted-->
+                <li Class="ThinkNode_ConditionalTrainableCompleted">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: Verse.AI.ThinkNode_Tagger-->
+                    <li Class="ThinkNode_Tagger">
+                      <!--Type: List<Verse.AI.ThinkNode>-->
+                      <subNodes>
+                        <!--Type: RimWorld.JobGiver_Haul-->
+                        <li Class="JobGiver_Haul" />
+                        <!-- ... -->
+                      </subNodes>
+                      <!--Type: Verse.AI.JobTag-->
+                      <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+                      <tagToGive>enum_value</tagToGive>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: RimWorld.TrainableDef-->
+                  <trainable>TrainableDef_defName</trainable>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: float-->
+              <mtbHours>float_value</mtbHours>
+            </li>
+            <!--Type: Verse.AI.ThinkNode_Subtree-->
+            <li Class="ThinkNode_Subtree">
+              <!--Type: Verse.ThinkTreeDef-->
+              <treeDef>ThinkTreeDef_defName</treeDef>
+            </li>
+            <!--Type: RimWorld.ThinkNode_ConditionalStarving-->
+            <li Class="ThinkNode_ConditionalStarving">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.ThinkNode_ConditionalBodySize-->
+                <li Class="ThinkNode_ConditionalBodySize">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: Verse.AI.ThinkNode_Subtree-->
+                    <li Class="ThinkNode_Subtree">
+                      <!--Type: Verse.ThinkTreeDef-->
+                      <treeDef>ThinkTreeDef_defName</treeDef>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: float-->
+                  <min>float_value</min>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <invert>true_or_false</invert>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalExitTimedOut-->
+        <li Class="ThinkNode_ConditionalExitTimedOut">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_ExitMapRandom-->
+                <li Class="JobGiver_ExitMapRandom">
+                  <!--Type: Verse.AI.LocomotionUrgency-->
+                  <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+                  <defaultLocomotion>enum_value</defaultLocomotion>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalForcedGoto-->
+        <li Class="ThinkNode_ConditionalForcedGoto">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_ForcedGoto-->
+                <li Class="JobGiver_ForcedGoto" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.JobGiver_LayEgg-->
+        <li Class="JobGiver_LayEgg" />
+        <!--Type: RimWorld.ThinkNode_ConditionalColonyFaction-->
+        <li Class="ThinkNode_ConditionalColonyFaction">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_PatientGoToBed-->
+                <li Class="JobGiver_PatientGoToBed" />
+                <!--Type: RimWorld.ThinkNode_ConditionalTrainableCompleted-->
+                <li Class="ThinkNode_ConditionalTrainableCompleted">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_RescueNearby-->
+                    <li Class="JobGiver_RescueNearby">
+                      <!--Type: float-->
+                      <!--Default Value: 30.0-->
+                      <radius>float_value</radius>
+                    </li>
+                    <!--Type: RimWorld.ThinkNode_ConditionalShouldFollowMaster-->
+                    <li Class="ThinkNode_ConditionalShouldFollowMaster">
+                      <!--Complex List-->
+                      <!--Type: List<Verse.AI.ThinkNode>-->
+                      <subNodes>
+                        <!--Type: RimWorld.JobGiver_AIDefendMaster-->
+                        <li Class="JobGiver_AIDefendMaster">
+                          <!--Type: bool-->
+                          <!--Default Value: false-->
+                          <attackMeleeThreatEvenIfNotHostile>true_or_false</attackMeleeThreatEvenIfNotHostile>
+                        </li>
+                        <!--Type: RimWorld.JobGiver_AIFollowMaster-->
+                        <li Class="JobGiver_AIFollowMaster" />
+                        <!--Type: Verse.AI.JobGiver_WanderNearMaster-->
+                        <li Class="JobGiver_WanderNearMaster" />
+                        <!-- ... -->
+                      </subNodes>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: RimWorld.TrainableDef-->
+                  <trainable>TrainableDef_defName</trainable>
+                </li>
+                <!--Type: RimWorld.JobGiver_WanderColony-->
+                <li Class="JobGiver_WanderColony">
+                  <!--Type: Verse.IntRange-->
+                  <ticksBetweenWandersRange>
+                    <!--Type: int-->
+                    <min>int_value</min>
+                    <!--Type: int-->
+                    <max>int_value</max>
+                  </ticksBetweenWandersRange>
+                  <!--Type: Verse.Danger-->
+                  <!--Available Values: Unspecified, None, Some, Deadly-->
+                  <maxDanger>enum_value</maxDanger>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!--Type: RimWorld.JobGiver_SeekAllowedArea-->
+            <li Class="JobGiver_SeekAllowedArea" />
+            <!--Type: RimWorld.JobGiver_SeekSafeTemperature-->
+            <li Class="JobGiver_SeekSafeTemperature" />
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: Verse.AI.ThinkNode_ChancePerHour_Constant-->
+        <li Class="ThinkNode_ChancePerHour_Constant">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_EatRandom-->
+                <li Class="JobGiver_EatRandom" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: float-->
+          <mtbHours>float_value</mtbHours>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalNeutralFaction-->
+        <li Class="ThinkNode_ConditionalNeutralFaction">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_ExitMapBest-->
+                <li Class="JobGiver_ExitMapBest">
+                  <!--Type: Verse.AI.LocomotionUrgency-->
+                  <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+                  <defaultLocomotion>enum_value</defaultLocomotion>
+                </li>
+                <!--Type: RimWorld.JobGiver_PatientGoToBed-->
+                <li Class="JobGiver_PatientGoToBed" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!-- ... -->
+      </subNodes>
+    </thinkRoot>
+    <!--Type: Verse.AI.ThinkNode_Tagger-->
+    <thinkRoot Class="ThinkNode_Tagger">
+      <!--Complex List-->
+      <!--Type: List<Verse.AI.ThinkNode>-->
+      <subNodes>
+        <!--Type: RimWorld.ThinkNode_ConditionalInNonPlayerHomeMap-->
+        <li Class="ThinkNode_ConditionalInNonPlayerHomeMap">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.ThinkNode_ConditionalAnyAutoJoinableCaravan-->
+            <li Class="ThinkNode_ConditionalAnyAutoJoinableCaravan">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_ExitMapBest-->
+                <li Class="JobGiver_ExitMapBest">
+                  <!--Type: bool-->
+                  <!--Default Value: false-->
+                  <failIfCantJoinOrCreateCaravan>true_or_false</failIfCantJoinOrCreateCaravan>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!--Type: RimWorld.ThinkNode_ConditionalAnyColonistTryingToExitMap-->
+            <li Class="ThinkNode_ConditionalAnyColonistTryingToExitMap">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_WanderMapEdge-->
+                <li Class="JobGiver_WanderMapEdge">
+                  <!--Type: Verse.AI.LocomotionUrgency-->
+                  <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+                  <locomotionUrgency>enum_value</locomotionUrgency>
+                  <!--Type: Verse.Danger-->
+                  <!--Available Values: Unspecified, None, Some, Deadly-->
+                  <maxDanger>enum_value</maxDanger>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
+        <li Class="ThinkNode_PrioritySorter">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.JobGiver_GetFood-->
+            <li Class="JobGiver_GetFood">
+              <!--Type: RimWorld.HungerCategory-->
+              <!--Available Values: Fed, Hungry, UrgentlyHungry, Starving-->
+              <minCategory>enum_value</minCategory>
+            </li>
+            <!--Type: RimWorld.JobGiver_GetRest-->
+            <li Class="JobGiver_GetRest">
+              <!--Type: RimWorld.RestCategory-->
+              <!--Available Values: Rested, Tired, VeryTired, Exhausted-->
+              <minCategory>enum_value</minCategory>
+            </li>
+            <!--Type: RimWorld.JobGiver_SatisfyChemicalNeed-->
+            <li Class="JobGiver_SatisfyChemicalNeed" />
+            <!--Type: RimWorld.JobGiver_TakeDrugsForDrugPolicy-->
+            <li Class="JobGiver_TakeDrugsForDrugPolicy" />
+            <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
+            <li Class="ThinkNode_Priority_GetJoy">
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_GetJoyInBed-->
+                <li Class="JobGiver_GetJoyInBed" />
+                <!--Type: RimWorld.JobGiver_GetJoy-->
+                <li Class="JobGiver_GetJoy" />
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!--Type: RimWorld.JobGiver_Work-->
+            <li Class="JobGiver_Work" />
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalAnimalWrongSeason-->
+        <li Class="ThinkNode_ConditionalAnimalWrongSeason">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.JobGiver_ExitMapRandom-->
+            <li Class="JobGiver_ExitMapRandom">
+              <!--Type: Verse.AI.LocomotionUrgency-->
+              <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+              <defaultLocomotion>enum_value</defaultLocomotion>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalDangerousTemperature-->
+        <li Class="ThinkNode_ConditionalDangerousTemperature">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.ThinkNode_ConditionalOutdoorTemperature-->
+            <li Class="ThinkNode_ConditionalOutdoorTemperature">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_ExitMapRandom-->
+                <li Class="JobGiver_ExitMapRandom">
+                  <!--Type: Verse.AI.LocomotionUrgency-->
+                  <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+                  <defaultLocomotion>enum_value</defaultLocomotion>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: Verse.AI.ThinkNode_ConditionalMentalState-->
+        <li Class="ThinkNode_ConditionalMentalState">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Priority-->
+            <li Class="ThinkNode_Priority">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
+                <li Class="ThinkNode_PrioritySorter">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_GetFood-->
+                    <li Class="JobGiver_GetFood">
+                      <!--Type: RimWorld.HungerCategory-->
+                      <!--Available Values: Fed, Hungry, UrgentlyHungry, Starving-->
+                      <minCategory>enum_value</minCategory>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                </li>
+                <!--Type: RimWorld.JobGiver_Manhunter-->
+                <li Class="JobGiver_Manhunter" />
+                <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
+                <li Class="JobGiver_WanderAnywhere">
+                  <!--Type: Verse.Danger-->
+                  <!--Available Values: Unspecified, None, Some, Deadly-->
+                  <maxDanger>enum_value</maxDanger>
+                </li>
+                <!--Type: RimWorld.JobGiver_Berserk-->
+                <li Class="JobGiver_Berserk" />
+                <!--Type: RimWorld.JobGiver_SocialFighting-->
+                <li Class="JobGiver_SocialFighting" />
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!--Type: RimWorld.JobGiver_FireStartingSpree-->
+            <li Class="JobGiver_FireStartingSpree" />
+            <!--Type: Verse.AI.JobGiver_ExitMapRandom-->
+            <li Class="JobGiver_ExitMapRandom">
+              <!--Type: Verse.AI.LocomotionUrgency-->
+              <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+              <defaultLocomotion>enum_value</defaultLocomotion>
+            </li>
+            <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
+            <li Class="JobGiver_WanderAnywhere">
+              <!--Type: Verse.AI.LocomotionUrgency-->
+              <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+              <locomotionUrgency>enum_value</locomotionUrgency>
+              <!--Type: Verse.Danger-->
+              <!--Available Values: Unspecified, None, Some, Deadly-->
+              <maxDanger>enum_value</maxDanger>
+            </li>
+            <!--Type: Verse.AI.JobGiver_ExitMapPanic-->
+            <li Class="JobGiver_ExitMapPanic" />
+            <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
+            <li Class="ThinkNode_PrioritySorter">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_GetFood-->
+                <li Class="JobGiver_GetFood" />
+                <!--Type: RimWorld.JobGiver_GetRest-->
+                <li Class="JobGiver_GetRest" />
+                <!--Type: RimWorld.JobGiver_SatisfyChemicalNeed-->
+                <li Class="JobGiver_SatisfyChemicalNeed" />
+                <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
+                <li Class="ThinkNode_Priority_GetJoy">
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_GetJoy-->
+                    <li Class="JobGiver_GetJoy" />
+                    <!-- ... -->
+                  </subNodes>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: float-->
+              <minPriority>float_value</minPriority>
+            </li>
+            <!--Type: RimWorld.JobGiver_BingeFood-->
+            <li Class="JobGiver_BingeFood" />
+            <!--Type: RimWorld.JobGiver_WanderColony-->
+            <li Class="JobGiver_WanderColony">
+              <!--Type: Verse.Danger-->
+              <!--Available Values: Unspecified, None, Some, Deadly-->
+              <maxDanger>enum_value</maxDanger>
+            </li>
+            <!--Type: Verse.AI.JobGiver_WanderOwnRoom-->
+            <li Class="JobGiver_WanderOwnRoom">
+              <!--Type: Verse.Danger-->
+              <!--Available Values: Unspecified, None, Some, Deadly-->
+              <maxDanger>enum_value</maxDanger>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: Verse.MentalStateDef-->
+          <state>MentalStateDef_defName</state>
+        </li>
+        <!--Type: Verse.AI.ThinkNode_ConditionalMentalStates-->
+        <li Class="ThinkNode_ConditionalMentalStates">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.ThinkNode_ConditionalNeedPercentageAbove-->
+            <li Class="ThinkNode_ConditionalNeedPercentageAbove">
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_GetRest-->
+                <li Class="JobGiver_GetRest" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <invert>true_or_false</invert>
+              <!--Type: RimWorld.NeedDef-->
+              <need>NeedDef_defName</need>
+              <!--Type: float-->
+              <threshold>float_value</threshold>
+            </li>
+            <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
+            <li Class="ThinkNode_PrioritySorter">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_GetFood-->
+                <li Class="JobGiver_GetFood" />
+                <!--Type: RimWorld.JobGiver_SatisfyChemicalNeed-->
+                <li Class="JobGiver_SatisfyChemicalNeed" />
+                <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
+                <li Class="ThinkNode_Priority_GetJoy">
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_GetJoy-->
+                    <li Class="JobGiver_GetJoy" />
+                    <!-- ... -->
+                  </subNodes>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: float-->
+              <minPriority>float_value</minPriority>
+            </li>
+            <!--Type: RimWorld.JobGiver_BingeDrug-->
+            <li Class="JobGiver_BingeDrug" />
+            <!--Type: RimWorld.JobGiver_WanderColony-->
+            <li Class="JobGiver_WanderColony" />
+            <!-- ... -->
+          </subNodes>
+          <!--Type: List<Verse.MentalStateDef>-->
+          <states>
+            <!--Type: Verse.MentalStateDef-->
+            <li>MentalStateDef_defName</li>
+            <!-- ... -->
+          </states>
+        </li>
+        <!--Type: RimWorld.ThinkNode_ConditionalHasLord-->
+        <li Class="ThinkNode_ConditionalHasLord">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.ThinkNode_Duty-->
+            <li Class="ThinkNode_Duty" />
+            <!--Type: RimWorld.ThinkNode_ConditionalHasVoluntarilyJoinableLord-->
+            <li Class="ThinkNode_ConditionalHasVoluntarilyJoinableLord">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_ConditionalHasFallbackLocation-->
+                <li Class="ThinkNode_ConditionalHasFallbackLocation">
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: Verse.AI.JobGiver_WanderNearFallbackLocation-->
+                    <li Class="JobGiver_WanderNearFallbackLocation" />
+                    <!-- ... -->
+                  </subNodes>
+                </li>
+                <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
+                <li Class="JobGiver_WanderAnywhere" />
+                <!--Type: Verse.AI.JobGiver_IdleError-->
+                <li Class="JobGiver_IdleError" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <invert>true_or_false</invert>
+            </li>
+            <!--Type: RimWorld.ThinkNode_DutyConstant-->
+            <li Class="ThinkNode_DutyConstant" />
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!-- ... -->
+      </subNodes>
+      <!--Type: Verse.AI.JobTag-->
+      <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+      <tagToGive>enum_value</tagToGive>
+    </thinkRoot>
+    <!--Type: RimWorld.ThinkNode_ConditionalDowned-->
+    <thinkRoot Class="ThinkNode_ConditionalDowned">
+      <!--Type: List<Verse.AI.ThinkNode>-->
+      <subNodes>
+        <!--Type: Verse.AI.JobGiver_IdleForever-->
+        <li Class="JobGiver_IdleForever" />
+        <!-- ... -->
+      </subNodes>
+    </thinkRoot>
+    <!--Type: RimWorld.ThinkNode_ConditionalBurning-->
+    <thinkRoot Class="ThinkNode_ConditionalBurning">
+      <!--Complex List-->
+      <!--Type: List<Verse.AI.ThinkNode>-->
+      <subNodes>
+        <!--Type: Verse.AI.ThinkNode_Priority-->
+        <li Class="ThinkNode_Priority">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.JobGiver_ExtinguishSelf-->
+            <li Class="JobGiver_ExtinguishSelf" />
+            <!--Type: Verse.AI.JobGiver_RunRandom-->
+            <li Class="JobGiver_RunRandom">
+              <!--Type: Verse.Danger-->
+              <!--Available Values: Unspecified, None, Some, Deadly-->
+              <maxDanger>enum_value</maxDanger>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!-- ... -->
+      </subNodes>
+    </thinkRoot>
+    <!--Type: RimWorld.ThinkNode_ConditionalCannotReachMapEdge-->
+    <thinkRoot Class="ThinkNode_ConditionalCannotReachMapEdge">
+      <!--Complex List-->
+      <!--Type: List<Verse.AI.ThinkNode>-->
+      <subNodes>
+        <!--Type: Verse.AI.ThinkNode_Tagger-->
+        <li Class="ThinkNode_Tagger">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.JobGiver_ExitMapBest-->
+            <li Class="JobGiver_ExitMapBest">
+              <!--Type: Verse.AI.LocomotionUrgency-->
+              <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+              <defaultLocomotion>enum_value</defaultLocomotion>
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <canBash>true_or_false</canBash>
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <forceCanDig>true_or_false</forceCanDig>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: Verse.AI.JobTag-->
+          <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+          <tagToGive>enum_value</tagToGive>
+        </li>
+        <!-- ... -->
+      </subNodes>
+    </thinkRoot>
+    <!--Type: RimWorld.ThinkNode_ConditionalStarving-->
+    <thinkRoot Class="ThinkNode_ConditionalStarving">
+      <!--Complex List-->
+      <!--Type: List<Verse.AI.ThinkNode>-->
+      <subNodes>
+        <!--Type: Verse.AI.ThinkNode_Tagger-->
+        <li Class="ThinkNode_Tagger">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.JobGiver_ExitMapRandom-->
+            <li Class="JobGiver_ExitMapRandom">
+              <!--Type: Verse.AI.LocomotionUrgency-->
+              <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+              <defaultLocomotion>enum_value</defaultLocomotion>
+            </li>
+            <!--Type: RimWorld.JobGiver_GetFood-->
+            <li Class="JobGiver_GetFood" />
+            <!-- ... -->
+          </subNodes>
+          <!--Type: Verse.AI.JobTag-->
+          <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+          <tagToGive>enum_value</tagToGive>
+        </li>
+        <!-- ... -->
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

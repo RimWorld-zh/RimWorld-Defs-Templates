@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>GlobalUtility</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">quantity_adjphrase->a group of</li>
+        <li ListIndex="1">quantity_adjphrase->several</li>
+        <li ListIndex="2">quantity_adjphrase->dozens of</li>
+        <li ListIndex="3">quantity_adjphrase->two</li>
+        <li ListIndex="4">quantity_adjphrase->three</li>
+        <li ListIndex="5">quantity_adjphrase->four</li>
+        <li ListIndex="6">quantity_adjphrase->five</li>
+        <li ListIndex="7">quantity_adjphrase->six</li>
+        <li ListIndex="8">quantity_adjphrase->uncountable</li>
+        <li ListIndex="9">quantity_adjphrase->innumerable</li>
+        <li ListIndex="10">trans->of</li>
+        <li ListIndex="11">trans->for</li>
+        <li ListIndex="12">trans->by</li>
+        <li ListIndex="13">trans->with</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_Number" ListIndex="0">
+          <keyword>digit</keyword>
+          <range>
+            <min>0</min>
+            <max>9</max>
+          </range>
+          <selectionWeight>10</selectionWeight>
+        </li>
+        <li Class="Rule_File" ListIndex="1">
+          <keyword>vegetable</keyword>
+          <path>Words/Nouns/Vegetables</path>
+        </li>
+        <li Class="Rule_File" ListIndex="2">
+          <keyword>game</keyword>
+          <path>Words/Nouns/Games</path>
+        </li>
+        <li Class="Rule_File" ListIndex="3">
+          <keyword>letter</keyword>
+          <path>WordParts/CapitalLetters</path>
+        </li>
+        <li Class="Rule_File" ListIndex="4">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+        <li Class="Rule_File" ListIndex="5">
+          <keyword>animal</keyword>
+          <path>Words/Nouns/Animals</path>
+        </li>
+        <li Class="Rule_File" ListIndex="6">
+          <keyword>weapon</keyword>
+          <path>Words/Nouns/Weapons</path>
+        </li>
+        <li Class="Rule_File" ListIndex="7">
+          <keyword>romannumeral</keyword>
+          <path>Words/Misc/Numbers_SmallRoman</path>
+        </li>
+        <li Class="Rule_File" ListIndex="8">
+          <keyword>terrainfeature</keyword>
+          <path>Words/Nouns/TerrainFeatures</path>
+        </li>
+        <li Class="Rule_File" ListIndex="9">
+          <keyword>outlander</keyword>
+          <pathList>
+            <li ListIndex="0">Words/Nouns/People_Outlanders</li>
+            <li ListIndex="1">Words/Nouns/People_Family</li>
+          </pathList>
+        </li>
+        <li Class="Rule_PersonName" ListIndex="10">
+          <keyword>personname</keyword>
+          <selectionWeight>25</selectionWeight>
+        </li>
+        <li Class="Rule_File" ListIndex="11">
+          <keyword>apparel</keyword>
+          <path>Words/Nouns/Apparel</path>
+        </li>
+        <li Class="Rule_File" ListIndex="12">
+          <keyword>adjective</keyword>
+          <pathList>
+            <li ListIndex="0">Words/Adjectives/Badass</li>
+            <li ListIndex="1">Words/Adjectives/Angsty</li>
+          </pathList>
+        </li>
+        <li Class="Rule_File" ListIndex="13">
+          <keyword>concept</keyword>
+          <pathList>
+            <li ListIndex="0">Words/Nouns/Concepts_Badass</li>
+            <li ListIndex="1">Words/Nouns/Concepts_Positive</li>
+            <li ListIndex="2">Words/Nouns/Concepts_Angsty</li>
+          </pathList>
+        </li>
+        <li Class="Rule_File" ListIndex="14">
+          <keyword>community</keyword>
+          <path>Words/Nouns/Communities</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</Defs>

@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TraitDefs>
+  <TraitDef>
+    <defName>Nudist</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>nudist</label>
+        <description>NAME enjoys the feeling of freedom that comes from being nude. HECAP can handle clothing, but will be happier without it.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.2</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Bloodlust</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>bloodlust</label>
+        <description>NAME gets a rush from hurting people, and never minds the sight of blood or death. HECAP is twice as likely to start a social fight.</description>
+        <socialFightChanceFactor>2</socialFightChanceFactor>
+      </li>
+    </degreeDatas>
+    <requiredWorkTags>
+      <li ListIndex="0">Violent</li>
+    </requiredWorkTags>
+    <commonality>0.17</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Kind</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>kind</label>
+        <description>NAME is a nice person. HECAP has a tendency to brighten everyone else's day and never insults others.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">Abrasive</li>
+    </conflictingTraits>
+    <commonality>0.2</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Psychopath</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>psychopath</label>
+        <description>NAME has no empathy. The suffering of others doesn't bother HIM at all. HECAP doesn't mind if others are butchered, left unburied, imprisoned, or sold to slavery - unless it affects HIM. HECAP also feels no mood boost from socializing.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.2</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Cannibal</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>cannibal</label>
+        <description>NAME was taught that eating human meat is wrong and horrible. But one time, long ago, HE tried it... and HE liked it.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.08</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Abrasive</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>abrasive</label>
+        <description>NAME always says exactly what's on HIS mind, especially if it's bugging HIM. That tends to rub people the wrong way.</description>
+      </li>
+    </degreeDatas>
+    <requiredWorkTags>
+      <li ListIndex="0">Social</li>
+    </requiredWorkTags>
+    <commonality>0.5</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>TooSmart</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>too smart</label>
+        <description>NAME is too smart for HIS own good. HECAP learns everything much faster than everyone, but can be quite eccentric.</description>
+        <statOffsets>
+          <GlobalLearningFactor>0.8</GlobalLearningFactor>
+          <MentalBreakThreshold>0.12</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">Nerves</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li ListIndex="0">Intellectual</li>
+    </requiredWorkTags>
+    <commonality>0.5</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Brawler</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>brawler</label>
+        <description>NAME likes to fight up close and personal. HISCAP accuracy is greatly increased in melee combat, but HE'll be very unhappy if asked to carry a ranged weapon.</description>
+        <statFactors>
+          <MeleeHitChance>1.30</MeleeHitChance>
+        </statFactors>
+        <skillGains>
+          <li ListIndex="0">
+            <key>Melee</key>
+            <value>4</value>
+          </li>
+          <li ListIndex="1">
+            <key>Shooting</key>
+            <value>-4</value>
+          </li>
+        </skillGains>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">ShootingAccuracy</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li ListIndex="0">Violent</li>
+    </requiredWorkTags>
+    <commonality>0.5</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Masochist</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>masochist</label>
+        <description>For NAME, there's something exciting about getting hurt. HECAP doesn't know why, HE's just wired differently.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.2</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Prosthophile</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>prosthophile</label>
+        <description>NAME feels limited in HIS feeble human body. HECAP often dreams of going bionic.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">Prosthophobe</li>
+    </conflictingTraits>
+    <commonality>0.3</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Prosthophobe</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>prosthophobe</label>
+        <description>NAME believes the human body is limited for a reason. To HIM, bionic body parts are unethical.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">Prosthophile</li>
+    </conflictingTraits>
+    <commonality>0.3</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>GreenThumb</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>green thumb</label>
+        <description>NAME has a passion for gardening. HECAP gets a mood bonus for every plant HE sows.</description>
+        <skillGains>
+          <li ListIndex="0">
+            <key>Growing</key>
+            <value>2</value>
+          </li>
+        </skillGains>
+      </li>
+    </degreeDatas>
+    <requiredWorkTypes>
+      <li ListIndex="0">Growing</li>
+      <li ListIndex="1">PlantCutting</li>
+    </requiredWorkTypes>
+    <commonality>0.5</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>NightOwl</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>night owl</label>
+        <description>NAME likes to be up during the night, and sleep during the day.\n\nHECAP gets a mood bonus if awake at night (23h-6h) and mood loss if awake during the day (11h-18h).</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.35</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Greedy</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>greedy</label>
+        <description>NAME needs a really impressive bedroom. HECAP gets a mood loss if HE doesn't get what HE wants.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">Ascetic</li>
+    </conflictingTraits>
+    <commonality>0.2</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Jealous</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>jealous</label>
+        <description>For NAME, it's degrading to have a less impressive bedroom than someone else. HECAP gets a mood loss if any colonist has a more impressive bedroom.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">Ascetic</li>
+    </conflictingTraits>
+    <commonality>0.2</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Ascetic</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>ascetic</label>
+        <description>NAME prefers to live in asceticism. HECAP will be put in a poor mood if HE has a bedroom that's too impressive. HECAP also dislikes fancy food and prefers to eat raw - and raw food won't bother HIM a bit.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">Greedy</li>
+      <li ListIndex="1">Jealous</li>
+    </conflictingTraits>
+    <commonality>0.2</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Gay</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>gay</label>
+        <description>NAME is romantically attracted to people of HIS own gender.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.2</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>DislikesMen</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>misandrist</label>
+        <description>NAME really dislikes and distrusts men.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.02</commonality>
+    <commonalityFemale>0.2</commonalityFemale>
+  </TraitDef>
+  <TraitDef>
+    <defName>DislikesWomen</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>misogynist</label>
+        <description>NAME really dislikes and distrusts women.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.2</commonality>
+    <commonalityFemale>0.02</commonalityFemale>
+  </TraitDef>
+  <TraitDef>
+    <defName>AnnoyingVoice</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>annoying voice</label>
+        <description>NAME's voice has a particularly grating, nasal quality to it, and HE tends to talk in barked, garbled phrases. This predisposes others to dislike HIM.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.1</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>CreepyBreathing</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>creepy breathing</label>
+        <description>NAME breathes heavily all the time, and sweats constantly. People find it creepy.</description>
+      </li>
+    </degreeDatas>
+    <commonality>0.05</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>Pyromaniac</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>pyromaniac</label>
+        <description>NAME loves fire. HECAP will occasionaly start fires and will never extinguish them.</description>
+        <randomMentalState>FireStartingSpree</randomMentalState>
+        <randomMentalStateMtbDaysMoodCurve>
+          <points>
+            <li ListIndex="0">(0, 15)</li>
+            <li ListIndex="1">(50, 50)</li>
+            <li ListIndex="2">(100, 100)</li>
+          </points>
+        </randomMentalStateMtbDaysMoodCurve>
+        <allowedMentalBreaks>
+          <li ListIndex="0">FireStartingSpree</li>
+        </allowedMentalBreaks>
+      </li>
+    </degreeDatas>
+    <disabledWorkTags>Firefighting</disabledWorkTags>
+    <commonality>0.3</commonality>
+  </TraitDef>
+</TraitDefs>

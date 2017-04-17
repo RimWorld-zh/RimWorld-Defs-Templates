@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GoJuice>
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>GoJuice</defName>
+    <label>go-juice</label>
+    <description>A synthetic combat drug developed for space marines during the early days of interplanetary warfare. Go-juice blocks pain and increases the user's melee and shooting abilities. It also enhances movement speed.\n\nMilitary chemists who created it were never able to remove its addictiveness. Some saw this as a downside; others saw it as a benefit.</description>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>45</MarketValue>
+      <Mass>0.1</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+      <Yayo>1</Yayo>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>400</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Drug" ListIndex="1">
+        <chemical>GoJuice</chemical>
+        <addictiveness>0.08</addictiveness>
+        <minToleranceToAddict>0.03</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <overdoseSeverityOffset>
+          <min>0.18</min>
+          <max>0.35</max>
+        </overdoseSeverityOffset>
+        <largeOverdoseChance>0.01</largeOverdoseChance>
+        <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>200</listOrder>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_CookMeal</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>GoJuiceProduction</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Drug/GoJuice</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Drugs</li>
+    </thingCategories>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="0">
+          <hediffDef>GoJuiceHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>GoJuice</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed" ListIndex="1">
+          <need>Rest</need>
+          <offset>0.4</offset>
+          <toleranceChemical>GoJuice</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="2">
+          <hediffDef>GoJuiceTolerance</hediffDef>
+          <severity>0.044</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+      <baseIngestTicks>90</baseIngestTicks>
+      <chairSearchRadius>0</chairSearchRadius>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <foodType>Processed, Fluid</foodType>
+      <joy>0.40</joy>
+      <joyKind>Chemical</joyKind>
+      <preferability>NeverForNutrition</preferability>
+      <drugCategory>Hard</drugCategory>
+    </ingestible>
+  </ThingDef>
+  <HediffDef>
+    <defName>GoJuiceHigh</defName>
+    <label>high on go-juice</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-0.40</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li ListIndex="0">
+        <painFactor>0.1</painFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>0.10</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Sight</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Moving</capacity>
+            <offset>0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>GoJuiceHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>high on go-juice</label>
+        <description>Feeling pumped but calm. I am the sniper bullet in flight, ready to cut through you.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <hediff>GoJuiceHigh</hediff>
+  </ThoughtDef>
+  <!-- Go-juice addiction -->
+  <ChemicalDef>
+    <defName>GoJuice</defName>
+    <label>go-juice</label>
+    <addictionHediff>GoJuiceAddiction</addictionHediff>
+    <toleranceHediff>GoJuiceTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_GoJuice</defName>
+    <label>go-juice</label>
+    <description>Because of a go-juice addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <needClass>Need_Chemical</needClass>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <listPriority>45</listPriority>
+    <tutorHighlightTag>NeedAddiction</tutorHighlightTag>
+    <showForCaravanMembers>true</showForCaravanMembers>
+  </NeedDef>
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>GoJuiceTolerance</defName>
+    <label>go-juice tolerance</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor" ListIndex="1">
+        <chemical>GoJuice</chemical>
+      </li>
+    </comps>
+    <stages>
+      <li ListIndex="0">
+        <minSeverity>0</minSeverity>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.20</minSeverity>
+        <label>small</label>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.50</minSeverity>
+        <label>large</label>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.80</minSeverity>
+        <label>massive</label>
+      </li>
+    </stages>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect" ListIndex="0">
+        <hediff>ChemicalDamageModerate</hediff>
+        <partsToAffect>
+          <li ListIndex="0">Brain</li>
+        </partsToAffect>
+        <baseMtbDays>120</baseMtbDays>
+        <minSeverity>0.50</minSeverity>
+      </li>
+    </hediffGivers>
+    <defaultLabelColor>(179,86,132)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="AddictionBase">
+    <defName>GoJuiceAddiction</defName>
+    <label>go-juice addiction</label>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-0.04</severityPerDay>
+      </li>
+    </comps>
+    <initialSeverity>0.5</initialSeverity>
+    <stages>
+      <li ListIndex="0"></li>
+      <li ListIndex="1">
+        <label>withdrawal</label>
+        <painFactor>3</painFactor>
+        <hungerRateFactor>1.5</hungerRateFactor>
+        <restFallFactor>1.3</restFallFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>-0.50</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Sight</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li ListIndex="3">
+            <capacity>BloodPumping</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li ListIndex="4">
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li ListIndex="0">
+            <mentalState>BingingDrugExtreme</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+          <li ListIndex="1">
+            <mentalState>WanderPsychotic</mentalState>
+            <mtbDays>7</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <causesNeed>Chemical_GoJuice</causesNeed>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(255,0,127)</defaultLabelColor>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>GoJuiceWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <visible>false</visible>
+      </li>
+      <li ListIndex="1">
+        <label>go-juice withdrawal</label>
+        <description>I'm all fuzzy and can't think straight. My limbs feel heavy, I'm tired and hungry, everything hurts. And why won't my eyes focus properly?</description>
+        <baseMoodEffect>-35</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <hediff>GoJuiceAddiction</hediff>
+  </ThoughtDef>
+</GoJuice>

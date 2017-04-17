@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RoomStatDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: System.Type-->
+    <workerClass>class_name</workerClass>
+    <!--Type: float-->
+    <updatePriority>float_value</updatePriority>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <displayRounded>true_or_false</displayRounded>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <isHidden>true_or_false</isHidden>
+    <!--Type: float-->
+    <defaultScore>float_value</defaultScore>
+    <!--Complex List-->
+    <!--Type: List<Verse.RoomStatScoreStage>-->
+    <scoreStages>
+      <!--Type: Verse.RoomStatScoreStage-->
+      <li>
+        <!--Type: float-->
+        <!--Default Value: -3.40282347E+38-->
+        <minScore>float_value</minScore>
+        <!--Type: string-->
+        <label>string_value</label>
+      </li>
+      <!-- ... -->
+    </scoreStages>
+  </RoomStatDef>
+</Defs>

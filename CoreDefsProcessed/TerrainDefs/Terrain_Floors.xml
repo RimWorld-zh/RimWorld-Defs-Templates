@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TerrainDefs>
+  <TerrainDef Name="FloorBase" Abstract="True">
+    <statBases>
+      <WorkToBuild>135</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <!-- ================= Misc ================= -->
+  <TerrainDef ParentName="FloorBase">
+    <defName>MetalTile</defName>
+    <label>metal tile</label>
+    <description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</description>
+    <statBases>
+      <WorkToBuild>500</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Steel>5</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <renderPrecedence>240</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(0.369, 0.369, 0.369)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>SilverTile</defName>
+    <label>silver tile</label>
+    <description>Expensive and slow to build, but very pretty. Fits perfectly into all kinds of luxurious rooms.</description>
+    <statBases>
+      <Beauty>2</Beauty>
+      <WorkToBuild>1200</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Silver>85</Silver>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <renderPrecedence>241</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(0.45, 0.45, 0.45)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>GoldTile</defName>
+    <label>gold tile</label>
+    <description>The most beautiful and impressive kind of floor. Very expensive and requires a lot of work to build.</description>
+    <statBases>
+      <Beauty>4</Beauty>
+      <WorkToBuild>1800</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Gold>85</Gold>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <renderPrecedence>242</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(0.65, 0.65, 0.35)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>SterileTile</defName>
+    <label>sterile tile</label>
+    <description>Sterile tiles help keep the room clean. Very useful in hospitals to prevent patients from getting various infections. Neutral in terms of looks and very slow to build.</description>
+    <statBases>
+      <Cleanliness>0.6</Cleanliness>
+      <WorkToBuild>1650</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Steel>3</Steel>
+      <Silver>15</Silver>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <renderPrecedence>243</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(0.71, 0.71, 0.71)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>PavedTile</defName>
+    <label>paved tile</label>
+    <description>Utilitarian concrete tiles. Cheap and quick to move around on, but neutral in terms of looks and slow to build.</description>
+    <statBases>
+      <WorkToBuild>400</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Steel>2</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <texturePath>Terrain/Surfaces/PavedTile</texturePath>
+    <renderPrecedence>230</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>Concrete</defName>
+    <label>concrete</label>
+    <description>Quick-poured concrete. Fast to walk on, cheap, and very quick to pour, but quite ugly.</description>
+    <statBases>
+      <WorkToBuild>70</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <texturePath>Terrain/Surfaces/Concrete</texturePath>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>70</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>WoodPlankFloor</defName>
+    <label>wood floor</label>
+    <description>Wood plank flooring. For that warm, homey feeling.</description>
+    <statBases>
+      <WorkToBuild>85</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <WoodLog>3</WoodLog>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructWood</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc7</designationHotKey>
+    <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+    <renderPrecedence>250</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <!-- ================= Carpets ================= -->
+  <TerrainDef Name="CarpetBase" ParentName="FloorBase" Abstract="True">
+    <statBases>
+      <Beauty>1</Beauty>
+    </statBases>
+    <costList>
+      <Cloth>7</Cloth>
+    </costList>
+    <researchPrerequisites>
+      <li>CarpetMaking</li>
+    </researchPrerequisites>
+    <texturePath>Terrain/Surfaces/Carpet</texturePath>
+  </TerrainDef>
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetRed</defName>
+    <label>red carpet</label>
+    <description>Plush carpet in a lovely rose hue.</description>
+    <statBases>
+      <Beauty>1</Beauty>
+      <WorkToBuild>135</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Cloth>7</Cloth>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">CarpetMaking</li>
+    </researchPrerequisites>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc8</designationHotKey>
+    <texturePath>Terrain/Surfaces/Carpet</texturePath>
+    <renderPrecedence>200</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(118,49,57)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetGreen</defName>
+    <label>green carpet</label>
+    <description>Naturalistic-feeling green carpet.</description>
+    <statBases>
+      <Beauty>1</Beauty>
+      <WorkToBuild>135</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Cloth>7</Cloth>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">CarpetMaking</li>
+    </researchPrerequisites>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc9</designationHotKey>
+    <texturePath>Terrain/Surfaces/Carpet</texturePath>
+    <renderPrecedence>199</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(89,105,62)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetBlue</defName>
+    <label>blue carpet</label>
+    <description>Toe-hugging plush carpet in a cool blue color.</description>
+    <statBases>
+      <Beauty>1</Beauty>
+      <WorkToBuild>135</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Cloth>7</Cloth>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">CarpetMaking</li>
+    </researchPrerequisites>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc10</designationHotKey>
+    <texturePath>Terrain/Surfaces/Carpet</texturePath>
+    <renderPrecedence>198</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(24,65,121)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetCream</defName>
+    <label>cream carpet</label>
+    <description>Inviting cream-colored carpet.</description>
+    <statBases>
+      <Beauty>1</Beauty>
+      <WorkToBuild>135</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Cloth>7</Cloth>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">CarpetMaking</li>
+    </researchPrerequisites>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc11</designationHotKey>
+    <texturePath>Terrain/Surfaces/Carpet</texturePath>
+    <renderPrecedence>197</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(195,192,176)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="CarpetBase">
+    <defName>CarpetDark</defName>
+    <label>dark carpet</label>
+    <description>Professional-looking dark gray carpet.</description>
+    <statBases>
+      <Beauty>1</Beauty>
+      <WorkToBuild>135</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Cloth>7</Cloth>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">CarpetMaking</li>
+    </researchPrerequisites>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc12</designationHotKey>
+    <texturePath>Terrain/Surfaces/Carpet</texturePath>
+    <renderPrecedence>196</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <color>(81,81,81)</color>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+</TerrainDefs>

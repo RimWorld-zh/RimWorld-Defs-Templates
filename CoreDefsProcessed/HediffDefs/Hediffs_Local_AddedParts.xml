@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Added body parts -->
+  <HediffDef Name="AddedBodyPartBase" Abstract="True">
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PegLeg</defName>
+    <label>peg leg</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>0.6</partEfficiency>
+      <isSolid>true</isSolid>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>Denture</defName>
+    <label>denture</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>0.8</partEfficiency>
+      <isSolid>true</isSolid>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SimpleProstheticLeg</defName>
+    <label>simple prosthetic leg</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>SimpleProstheticLeg</spawnThingOnRemoved>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>0.85</partEfficiency>
+      <isSolid>true</isSolid>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SimpleProstheticArm</defName>
+    <label>simple prosthetic arm</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>SimpleProstheticArm</spawnThingOnRemoved>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>0.5</partEfficiency>
+      <isSolid>true</isSolid>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicEye</defName>
+    <label>bionic eye</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>BionicEye</spawnThingOnRemoved>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>1.4</partEfficiency>
+      <isBionic>true</isBionic>
+      <isSolid>true</isSolid>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicArm</defName>
+    <label>bionic arm</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver" ListIndex="0">
+        <verbs>
+          <li ListIndex="0">
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTime>1.65</defaultCooldownTime>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+          </li>
+        </verbs>
+      </li>
+    </comps>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>BionicArm</spawnThingOnRemoved>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>1.4</partEfficiency>
+      <isBionic>true</isBionic>
+      <isSolid>true</isSolid>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicLeg</defName>
+    <label>bionic leg</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>BionicLeg</spawnThingOnRemoved>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>1.4</partEfficiency>
+      <isBionic>true</isBionic>
+      <isSolid>true</isSolid>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PowerClaw</defName>
+    <label>power claw</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver" ListIndex="0">
+        <verbs>
+          <li ListIndex="0">
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTime>1.2</defaultCooldownTime>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+          </li>
+        </verbs>
+      </li>
+    </comps>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>0.92</partEfficiency>
+      <isBionic>true</isBionic>
+      <isSolid>true</isSolid>
+      <isGoodWeapon>true</isGoodWeapon>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ScytherBlade</defName>
+    <label>scyther blade</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver" ListIndex="0">
+        <verbs>
+          <li ListIndex="0">
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTime>1.0</defaultCooldownTime>
+            <meleeDamageDef>Cut</meleeDamageDef>
+            <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
+          </li>
+        </verbs>
+      </li>
+    </comps>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>ScytherBlade</spawnThingOnRemoved>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <addedPartProps>
+      <partEfficiency>0.2</partEfficiency>
+      <isBionic>true</isBionic>
+      <isSolid>true</isSolid>
+      <isGoodWeapon>true</isGoodWeapon>
+    </addedPartProps>
+  </HediffDef>
+</Defs>

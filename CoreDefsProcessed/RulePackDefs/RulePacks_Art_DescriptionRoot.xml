@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>ArtDescriptionRoot_HasTale</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">art_description_root->[physical_description_root] [context_sentence]</li>
+        <li ListIndex="1">circumstance_group->[circumstance_phrase]</li>
+        <li ListIndex="2">desc_sentence_group->[desc_sentence] [style_group]</li>
+        <li ListIndex="3">context_sentence->This [depiction] refers to [tale_noun] on [date].</li>
+        <li ListIndex="4">context_sentence->This [depiction] relates to [tale_noun] on [date].</li>
+        <li ListIndex="5">context_sentence->This [depiction] tells the story of [tale_noun] on [date].</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>ArtDescriptionRoot_Taleless</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">art_description_root->[physical_description_root]</li>
+        <li ListIndex="1">desc_sentence_group->[style_group]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>ArtDescriptionUtility_Global</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">style_group->[artextra_clause]. [style_clause].</li>
+        <li ListIndex="1">style_group->[style_clause]. [artextra_clause].</li>
+        <li ListIndex="2">style_group->[artextra_clause], and [style_clause].</li>
+        <li ListIndex="3">style_group->[artextra_clause], while [style_clause].</li>
+        <li ListIndex="4">artextra_clause->the image is bordered by [quantity_adjphrase] [animal]s</li>
+        <li ListIndex="5">artextra_clause->there is a [community] [side_position]</li>
+        <li ListIndex="6">artextra_clause->there is a [terrainfeature] [side_position]</li>
+        <li ListIndex="7">artextra_clause->there is a [animal] [side_position]</li>
+        <li ListIndex="8">artextra_clause->the subjects are in front of a [terrainfeature]</li>
+        <li ListIndex="9">artextra_clause->the scene takes place in the middle of a [community]</li>
+        <li ListIndex="10">artextra_clause->the scene seems to take place on the outskirts of a [community]</li>
+        <li ListIndex="11">artextra_clause->the smiling head of a [outlander] watches over all</li>
+        <li ListIndex="12">artextra_clause->the scene takes place inside a [community] built near a [terrainfeature]</li>
+        <li ListIndex="13">artextra_clause->the lower part of the image is dominated by a [terrainfeature]</li>
+        <li ListIndex="14">artextra_clause->the whole image is depicted by the careful arrangement of hundreds of tiny [animal]s</li>
+        <li ListIndex="15">artextra_clause->a [outlander] [idle_verb_progressive] [side_position]</li>
+        <li ListIndex="16">artextra_clause->a [animal] [idle_verb_progressive] [side_position]</li>
+        <li ListIndex="17">artextra_clause->a dead [animal] [idle_verb_progressive] [side_position]</li>
+        <li ListIndex="18">artextra_clause->a personified depiction of [concept] [idle_verb_progressive] [side_position]</li>
+        <li ListIndex="19">artextra_clause->a [animal] [side_position] seems to symbolize [concept]</li>
+        <li ListIndex="20">artextra_clause->[quantity_adjphrase] [outlander]s [idle_verb_progressive] [side_position]</li>
+        <li ListIndex="21">artextra_clause->if you squint your eyes, the [composition] composition of the image reveals the outline of a [animal]</li>
+        <li ListIndex="22">style_clause->the image seems to express [concept]</li>
+        <li ListIndex="23">style_clause->the work is infused with the idea of [concept] and is done in a [artstyle_adj] style</li>
+        <li ListIndex="24">style_clause->the work suggests the concept of [concept]</li>
+        <li ListIndex="25">style_clause->the work is executed in a [artstyle_adj] style</li>
+        <li ListIndex="26">style_clause->the [artstyle_adj] style of the central scene clashes with the [artstyle_adj] depiction of the background</li>
+        <li ListIndex="27">style_clause->the work has a [artstyle_adj] feeling and a [composition] structure</li>
+        <li ListIndex="28">style_clause->the overall composition is [composition]</li>
+        <li ListIndex="29">style_clause->the style is [artstyle_adj] with [artstyle_adj] elements</li>
+        <li ListIndex="30">style_clause->the image is totally devoid of both [concept] and [concept]</li>
+        <li ListIndex="31">style_clause->the image somehow expresses both [concept] and [concept]</li>
+        <li ListIndex="32">style_clause->the [composition] structure of the image almost conflicts with its [artstyle_adj] style</li>
+        <li ListIndex="33">style_clause->the work is shaded in hues of [color] and [color]</li>
+        <li ListIndex="34">style_clause->almost every shape in the image seems to be [composition]</li>
+        <li ListIndex="35">depicts->depicts</li>
+        <li ListIndex="36">depicts->shows</li>
+        <li ListIndex="37">depicts->portrays</li>
+        <li ListIndex="38">depicts->resembles</li>
+        <li ListIndex="39">depicts->illustrates</li>
+        <li ListIndex="40">depicts->represents</li>
+        <li ListIndex="41">depicts->is shaped like</li>
+        <li ListIndex="42">depiction->depiction</li>
+        <li ListIndex="43">depiction->image</li>
+        <li ListIndex="44">depiction->portrayal</li>
+        <li ListIndex="45">depiction->representation</li>
+        <li ListIndex="46">depiction->illustration</li>
+        <li ListIndex="47">depiction->artwork</li>
+        <li ListIndex="48">composition->triangular</li>
+        <li ListIndex="49">composition->rectangular</li>
+        <li ListIndex="50">composition->square</li>
+        <li ListIndex="51">composition->unbalanced</li>
+        <li ListIndex="52">composition->well-balanced</li>
+        <li ListIndex="53">composition->very dynamic</li>
+        <li ListIndex="54">composition->very static</li>
+        <li ListIndex="55">artstyle_adj->unoriginal</li>
+        <li ListIndex="56">artstyle_adj->simple</li>
+        <li ListIndex="57">artstyle_adj->complex and realistic</li>
+        <li ListIndex="58">artstyle_adj->surrealistic</li>
+        <li ListIndex="59">artstyle_adj->classical</li>
+        <li ListIndex="60">artstyle_adj->modern</li>
+        <li ListIndex="61">artstyle_adj->symbolic</li>
+        <li ListIndex="62">artstyle_adj->amateurish yet attractive</li>
+        <li ListIndex="63">artstyle_adj->detail-oriented</li>
+        <li ListIndex="64">artstyle_adj->blocky</li>
+        <li ListIndex="65">artstyle_adj->cubist</li>
+        <li ListIndex="66">artstyle_adj->impressionistic</li>
+        <li ListIndex="67">artstyle_adj->expressionistic</li>
+        <li ListIndex="68">artstyle_adj->photographic</li>
+        <li ListIndex="69">artstyle_adj->baroque</li>
+        <li ListIndex="70">artstyle_adj->dadaist</li>
+        <li ListIndex="71">artstyle_adj->glitch-art</li>
+        <li ListIndex="72">artstyle_adj->pixelated</li>
+        <li ListIndex="73">artstyle_adj->fauvist</li>
+        <li ListIndex="74">artstyle_adj->folksy</li>
+        <li ListIndex="75">artstyle_adj->figurative</li>
+        <li ListIndex="76">artstyle_adj->sinuous</li>
+        <li ListIndex="77">artstyle_adj->geometric</li>
+        <li ListIndex="78">artstyle_adj->abstract</li>
+        <li ListIndex="79">artstyle_adj->hyper-realistic</li>
+        <li ListIndex="80">artstyle_adj->pop art</li>
+        <li ListIndex="81">artstyle_adj->minimalistic</li>
+        <li ListIndex="82">artstyle_adj->neoclassical</li>
+        <li ListIndex="83">artstyle_adj->cel-shaded</li>
+        <li ListIndex="84">artstyle_adj->post-impressionistic</li>
+        <li ListIndex="85">artstyle_adj->purist</li>
+        <li ListIndex="86">artstyle_adj->rococo</li>
+        <li ListIndex="87">artstyle_adj->romanesque</li>
+        <li ListIndex="88">artstyle_adj->romantic</li>
+        <li ListIndex="89">artstyle_adj->graffiti-like</li>
+        <li ListIndex="90">artstyle_adj->erotic</li>
+        <li ListIndex="91">artstyle_adj->sensual</li>
+        <li ListIndex="92">artstyle_adj->heartfelt</li>
+        <li ListIndex="93">idle_verb_progressive->sits</li>
+        <li ListIndex="94">idle_verb_progressive->stands</li>
+        <li ListIndex="95">idle_verb_progressive->waits</li>
+        <li ListIndex="96">idle_verb_progressive->smiles</li>
+        <li ListIndex="97">idle_verb_progressive->lies</li>
+        <li ListIndex="98">idle_verb_progressive->poses</li>
+        <li ListIndex="99">idle_verb_progressive->appears</li>
+        <li ListIndex="100">idle_verb_progressive->is shown</li>
+        <li ListIndex="101">idle_verb_progressive->fades in</li>
+        <li ListIndex="102">idle_verb_progressive->floats</li>
+        <li ListIndex="103">side_position->off to one side</li>
+        <li ListIndex="104">side_position->near the edge of the image</li>
+        <li ListIndex="105">side_position->in the background</li>
+        <li ListIndex="106">side_position->in the distance</li>
+        <li ListIndex="107">side_position->in the lower part of the image</li>
+        <li ListIndex="108">side_position->in the upper part of the image</li>
+        <li ListIndex="109">side_position->beneath the main subject</li>
+        <li ListIndex="110">side_position->behind the focal point</li>
+        <li ListIndex="111">side_position->at the left part of the image</li>
+        <li ListIndex="112">side_position->to the right of the main scene</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

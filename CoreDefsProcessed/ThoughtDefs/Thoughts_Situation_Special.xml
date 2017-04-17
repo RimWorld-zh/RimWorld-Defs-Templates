@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThoughtDefs>
+  <ThoughtDef>
+    <defName>Imprisoned</defName>
+    <workerClass>ThoughtWorker_Imprisoned</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>imprisoned</label>
+        <description>I hate being locked up.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>SharedBed</defName>
+    <thoughtClass>Thought_SharedBed</thoughtClass>
+    <workerClass>ThoughtWorker_SharedBed</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>sharing bed</label>
+        <description>I have to share a bed with someone who I don't particularly want to.</description>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ColonistLeftUnburied</defName>
+    <workerClass>ThoughtWorker_ColonistLeftUnburied</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>colonist left unburied</label>
+        <description>One of us died and we're just leaving them lying in the open. Nobody should be left like that. People deserve a decent burial.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Naked</defName>
+    <workerClass>ThoughtWorker_PsychologicallyNude</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>naked</label>
+        <description>I'm naked. This is humiliating.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li ListIndex="0">Nudist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Pain</defName>
+    <workerClass>ThoughtWorker_Pain</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>in a little pain</label>
+        <description>Ow... That hurts.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="1">
+        <label>in a moderate amount of pain</label>
+        <description>Ughhh... When will it end?</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li ListIndex="2">
+        <label>experiencing acute pain</label>
+        <description>Make it stop... make it stop... make it stop...</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+      <li ListIndex="3">
+        <label>in shock from exceptional pain</label>
+        <description>AAAAAHHH! Kill me now!</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li ListIndex="0">Masochist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+</ThoughtDefs>

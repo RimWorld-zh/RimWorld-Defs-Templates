@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StatDef>
+    <defName>MeleeWeapon_DamageAmount</defName>
+    <label>melee damage</label>
+    <description>Damage done per hit in melee combat.</description>
+    <category>Weapon</category>
+    <workerClass>StatWorker_MeleeDamageAmountWeapon</workerClass>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1000</displayPriorityInCategory>
+    <toStringStyle>Integer</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>1</minValue>
+    <parts>
+      <li Class="StatPart_Quality" ListIndex="0">
+        <factorAwful>0.4</factorAwful>
+        <factorShoddy>0.7</factorShoddy>
+        <factorPoor>0.85</factorPoor>
+        <factorNormal>1</factorNormal>
+        <factorGood>1.1</factorGood>
+        <factorSuperior>1.2</factorSuperior>
+        <factorExcellent>1.35</factorExcellent>
+        <factorMasterwork>1.45</factorMasterwork>
+        <factorLegendary>1.55</factorLegendary>
+      </li>
+      <li Class="StatPart_Health" ListIndex="1">
+        <curve>
+          <points>
+            <li ListIndex="0">(0,0.6)</li>
+            <li ListIndex="1">(1,1)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  <StatDef>
+    <defName>MeleeWeapon_Cooldown</defName>
+    <label>melee cooldown</label>
+    <description>How long it takes to recover after striking with this as a melee weapon.</description>
+    <category>Weapon</category>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>500</displayPriorityInCategory>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <formatString>{0} s</formatString>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.01</minValue>
+  </StatDef>
+  <!-- Damage multipliers should be stats on stuffs only-->
+  <StatDef>
+    <defName>SharpDamageMultiplier</defName>
+    <label>sharp damage</label>
+    <description>Multiplier on damage with sharp attacks like cutting or stabbing for items made of this material.</description>
+    <category>StuffStatFactors</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.05</minValue>
+  </StatDef>
+  <StatDef>
+    <defName>BluntDamageMultiplier</defName>
+    <label>blunt damage</label>
+    <description>Multiplier on damage with blunt attacks for items made of this material.</description>
+    <category>StuffStatFactors</category>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.05</minValue>
+  </StatDef>
+</Defs>

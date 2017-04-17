@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Implants -->
+  <HediffDef Name="ImplantHediffBase" Abstract="True">
+    <hediffClass>Hediff_Implant</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.65, 0.3, 0.9)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>Joywire</defName>
+    <label>joywire</label>
+    <hediffClass>Hediff_Implant</hediffClass>
+    <stages>
+      <li ListIndex="0">
+        <partEfficiencyOffset>-0.2</partEfficiencyOffset>
+      </li>
+    </stages>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>Joywire</spawnThingOnRemoved>
+    <defaultLabelColor>(0.65, 0.3, 0.9)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>Painstopper</defName>
+    <label>painstopper</label>
+    <hediffClass>Hediff_Implant</hediffClass>
+    <stages>
+      <li ListIndex="0">
+        <painFactor>0</painFactor>
+      </li>
+    </stages>
+    <isBad>false</isBad>
+    <spawnThingOnRemoved>Painstopper</spawnThingOnRemoved>
+    <defaultLabelColor>(0.65, 0.3, 0.9)</defaultLabelColor>
+  </HediffDef>
+</Defs>

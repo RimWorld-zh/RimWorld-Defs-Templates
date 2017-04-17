@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef ParentName="BasePawn">
+    <defName>Human</defName>
+    <label>human</label>
+    <description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
+    <statBases>
+      <MarketValue>1750</MarketValue>
+      <MoveSpeed>4.61</MoveSpeed>
+      <Flammability>1.0</Flammability>
+      <ComfyTemperatureMin>12</ComfyTemperatureMin>
+      <ComfyTemperatureMax>32</ComfyTemperatureMax>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <recipes>
+      <li ListIndex="0">InstallPowerClaw</li>
+      <li ListIndex="1">InstallScytherBlade</li>
+      <li ListIndex="2">InstallBionicEye</li>
+      <li ListIndex="3">InstallBionicArm</li>
+      <li ListIndex="4">InstallBionicLeg</li>
+      <li ListIndex="5">InstallSimpleProstheticArm</li>
+      <li ListIndex="6">InstallSimpleProstheticLeg</li>
+      <li ListIndex="7">InstallPegLeg</li>
+      <li ListIndex="8">InstallDenture</li>
+      <li ListIndex="9">InstallJoywire</li>
+      <li ListIndex="10">InstallPainstopper</li>
+      <li ListIndex="11">InstallNaturalHeart</li>
+      <li ListIndex="12">InstallNaturalLung</li>
+      <li ListIndex="13">InstallNaturalKidney</li>
+      <li ListIndex="14">InstallNaturalLiver</li>
+      <li ListIndex="15">ExciseCarcinoma</li>
+      <li ListIndex="16">RemoveBodyPart</li>
+      <li ListIndex="17">Euthanize</li>
+      <li ListIndex="18">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>Humanlike</intelligence>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <nameCategory>HumanStandard</nameCategory>
+      <foodType>OmnivoreHuman</foodType>
+      <body>Human</body>
+      <ageGenerationCurve>
+        <points>
+          <li ListIndex="0">(14,0)</li>
+          <li ListIndex="1">(16,100)</li>
+          <li ListIndex="2">(50,100)</li>
+          <li ListIndex="3">(60,30)</li>
+          <li ListIndex="4">(70,18)</li>
+          <li ListIndex="5">(80,10)</li>
+          <li ListIndex="6">(90,3)</li>
+          <li ListIndex="7">(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>80</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li ListIndex="0">(0.5, 0)</li>
+          <li ListIndex="1">(1, 1)</li>
+          <li ListIndex="2">(1.01, 0.02)</li>
+          <li ListIndex="3">(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li ListIndex="3">
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li ListIndex="4">
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(211,194,143)</leatherColor>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherInsulation>0.70</leatherInsulation>
+      <leatherMarketValueFactor>2</leatherMarketValueFactor>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+</ThingDefs>

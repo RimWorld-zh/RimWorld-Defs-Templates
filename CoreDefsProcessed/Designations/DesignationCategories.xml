@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DesignationCategoryDef>
+    <defName>Orders</defName>
+    <label>orders</label>
+    <description>Designate specific interactions with specific things.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+      <li ListIndex="2">Designator_Mine</li>
+      <li ListIndex="3">Designator_Haul</li>
+      <li ListIndex="4">Designator_PlantsCut</li>
+      <li ListIndex="5">Designator_PlantsHarvest</li>
+      <li ListIndex="6">Designator_PlantsHarvestWood</li>
+      <li ListIndex="7">Designator_Hunt</li>
+      <li ListIndex="8">Designator_Slaughter</li>
+      <li ListIndex="9">Designator_Tame</li>
+      <li ListIndex="10">Designator_Uninstall</li>
+      <li ListIndex="11">Designator_Claim</li>
+      <li ListIndex="12">Designator_Strip</li>
+      <li ListIndex="13">Designator_RearmTrap</li>
+      <li ListIndex="14">Designator_Open</li>
+      <li ListIndex="15">Designator_PlanAdd</li>
+      <li ListIndex="16">Designator_PlanRemove</li>
+    </specialDesignatorClasses>
+    <order>900</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Zone</defName>
+    <label>zone/Area</label>
+    <description>Designate zones and areas where colonists will do certain activities.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+      <li ListIndex="2">Designator_ZoneAddStockpile_Resources</li>
+      <li ListIndex="3">Designator_ZoneAddStockpile_Dumping</li>
+      <li ListIndex="4">Designator_ZoneAdd_Growing</li>
+      <li ListIndex="5">Designator_ZoneDelete</li>
+      <li ListIndex="6">Designator_AreaHomeExpand</li>
+      <li ListIndex="7">Designator_AreaHomeClear</li>
+      <li ListIndex="8">Designator_AreaBuildRoofExpand</li>
+      <li ListIndex="9">Designator_AreaBuildRoofClear</li>
+      <li ListIndex="10">Designator_AreaNoRoofExpand</li>
+      <li ListIndex="11">Designator_AreaNoRoofClear</li>
+      <li ListIndex="12">Designator_AreaSnowClearExpand</li>
+      <li ListIndex="13">Designator_AreaSnowClearClear</li>
+      <li ListIndex="14">Designator_AreaAllowedExpand</li>
+      <li ListIndex="15">Designator_AreaAllowedClear</li>
+    </specialDesignatorClasses>
+    <order>800</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Structure</defName>
+    <label>structure</label>
+    <description>Structural constructions like walls and power cables.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>700</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Production</defName>
+    <label>production</label>
+    <description>Structures used for producting goods.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>600</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Furniture</defName>
+    <label>furniture</label>
+    <description>Small constructions.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>500</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Power</defName>
+    <label>power</label>
+    <description>Electricity production, transmission, and management.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>400</order>
+    <showPowerGrid>true</showPowerGrid>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Security</defName>
+    <label>security</label>
+    <description>Security and combat-oriented constructions.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>300</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Misc</defName>
+    <label>misc</label>
+    <description>Miscellaneous constructibles.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>250</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Floors</defName>
+    <label>floors</label>
+    <description>Flooring.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_SmoothFloor</li>
+      <li ListIndex="2">Designator_RemoveFloor</li>
+    </specialDesignatorClasses>
+    <order>200</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Joy</defName>
+    <label>joy</label>
+    <description>Entertaining or pleasurable things for colonists to enjoy.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>100</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Ship</defName>
+    <label>ship</label>
+    <description>Components of your escape ship.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>50</order>
+  </DesignationCategoryDef>
+  <DesignationCategoryDef>
+    <defName>Temperature</defName>
+    <label>temperature</label>
+    <description>Things for controlling temperature.</description>
+    <specialDesignatorClasses>
+      <li ListIndex="0">Designator_Cancel</li>
+      <li ListIndex="1">Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <order>25</order>
+  </DesignationCategoryDef>
+</Defs>

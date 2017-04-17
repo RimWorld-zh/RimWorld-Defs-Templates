@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>AncientConcreteBarrier</defName>
+    <label>ancient concrete barrier</label>
+    <description>A traffic management solution from long ago.</description>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>35</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>ConstructDirt</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <startingHpRange>
+      <min>0.5</min>
+      <max>1.3</max>
+    </startingHpRange>
+    <graphicData>
+      <texPath>Things/Building/Ruins/AncientConcreteBarrier</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(231,216,206)</color>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.5</fillPercent>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>AncientLamppost</defName>
+    <label>ancient lamppost</label>
+    <description>Road lighting from long ago. No longer functional.</description>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>100</pathCost>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <startingHpRange>
+      <min>0.5</min>
+      <max>1.3</max>
+    </startingHpRange>
+    <graphicData>
+      <texPath>Things/Building/Ruins/AncientLamppost</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(231,216,206)</color>
+      <drawSize>(1,2)</drawSize>
+      <shadowData>
+        <volume>(0.28, 0.5, 0.28)</volume>
+        <offset>(0,0,-0.39)</offset>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.35</fillPercent>
+    <blockWind>true</blockWind>
+  </ThingDef>
+</ThingDefs>

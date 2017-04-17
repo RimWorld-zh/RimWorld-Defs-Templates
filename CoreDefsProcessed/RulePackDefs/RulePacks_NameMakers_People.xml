@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NameMakerDefs>
+  <RulePackDef>
+    <defName>NamerPersonTribal</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">name->[tribalword] '[badassanimal]' [tribalword]</li>
+        <li ListIndex="1">name->[color] [tribalword]</li>
+        <li ListIndex="2">name->[tribalword] [tribalword]</li>
+        <li ListIndex="3">name->[tribalword] [tribalword]</li>
+        <li ListIndex="4">name->[tribalword] [animal]</li>
+        <li ListIndex="5">name->[animal] [tribalword]</li>
+        <li ListIndex="6">name->[color] [animal]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File" ListIndex="0">
+          <keyword>tribalword</keyword>
+          <path>Words/Foreign/Tribal</path>
+        </li>
+        <li Class="Rule_File" ListIndex="1">
+          <keyword>badassanimal</keyword>
+          <path>Words/Nouns/Animals_Badass</path>
+        </li>
+        <li Class="Rule_File" ListIndex="2">
+          <keyword>animal</keyword>
+          <path>Words/Nouns/Animals</path>
+        </li>
+        <li Class="Rule_File" ListIndex="3">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</NameMakerDefs>

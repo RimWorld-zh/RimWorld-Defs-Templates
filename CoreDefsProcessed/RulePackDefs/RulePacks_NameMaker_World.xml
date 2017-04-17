@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerWorld</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">name->[celestialname]</li>
+        <li ListIndex="1">name->[celestialprefix] [celestialname]</li>
+        <li ListIndex="2">name->[celestialname] [romannumeral]</li>
+        <li ListIndex="3">name->[celestialname] [celestialname]</li>
+        <li ListIndex="4">name->[celestialname] [celestialsuffix]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File" ListIndex="0">
+          <keyword>celestialname</keyword>
+          <path>Names/Celestial</path>
+        </li>
+        <li Class="Rule_File" ListIndex="1">
+          <keyword>celestialsuffix</keyword>
+          <path>Names/CelestialSuffix</path>
+        </li>
+        <li Class="Rule_File" ListIndex="2">
+          <keyword>celestialprefix</keyword>
+          <path>Names/CelestialPrefix</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</Defs>

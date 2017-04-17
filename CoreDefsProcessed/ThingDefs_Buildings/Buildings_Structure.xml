@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Buildings>
+  <!--========================= Doors =============================-->
+  <ThingDef ParentName="BuildingBase" Name="DoorBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <placeWorkers>
+      <li>PlaceWorker_DoorLearnOpeningSpeed</li>
+    </placeWorkers>
+    <designationCategory>Structure</designationCategory>
+    <thingClass>Building_Door</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <drawerType>RealtimeOnly</drawerType>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <blueprintClass>Blueprint_Door</blueprintClass>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Door/Door_Blueprint</texPath>
+    </blueprintGraphicData>
+    <building>
+      <isInert>true</isInert>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>DoorOpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>DoorCloseManual</soundDoorCloseManual>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="DoorBase">
+    <defName>Door</defName>
+    <label>door</label>
+    <description>Divides rooms. Must be manually opened and closed, which slows people down.</description>
+    <statBases>
+      <WorkToBuild>850</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <uiIconPath>Things/Building/Door/DoorSimple_MenuIcon</uiIconPath>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_DoorLearnOpeningSpeed</li>
+    </placeWorkers>
+    <designationCategory>Structure</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <thingClass>Building_Door</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Door/DoorSimple_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <blueprintClass>Blueprint_Door</blueprintClass>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Door/Door_Blueprint</texPath>
+    </blueprintGraphicData>
+    <building>
+      <isInert>true</isInert>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>DoorOpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>DoorCloseManual</soundDoorCloseManual>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="DoorBase">
+    <defName>Autodoor</defName>
+    <label>autodoor</label>
+    <description>Divides rooms. Powered operation allows people to move through the door without slowing down.</description>
+    <statBases>
+      <WorkToBuild>1100</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Component>2</Component>
+    </costList>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Autodoors</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_DoorLearnOpeningSpeed</li>
+    </placeWorkers>
+    <designationCategory>Structure</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <thingClass>Building_Door</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Power" ListIndex="1">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="2" />
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Door/Autodoor_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <blueprintClass>Blueprint_Door</blueprintClass>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Door/Door_Blueprint</texPath>
+    </blueprintGraphicData>
+    <building>
+      <isInert>true</isInert>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>DoorOpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>DoorCloseManual</soundDoorCloseManual>
+    </building>
+  </ThingDef>
+  <!--========================= Walls =============================-->
+  <ThingDef ParentName="BuildingBase" Name="Wall">
+    <defName>Wall</defName>
+    <label>wall</label>
+    <description>An impassable wall. Capable of holding up a roof.</description>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>150</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <passability>Impassable</passability>
+    <costStuffCount>5</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <repairEffect>Repair</repairEffect>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Structure</designationCategory>
+    <designationHotKey>Misc3</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <damageMultipliers>
+      <li ListIndex="0">
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+      </damageData>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li ListIndex="0">Wall</li>
+        <li ListIndex="1">Rock</li>
+      </linkFlags>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <holdsRoof>true</holdsRoof>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+    <building>
+      <isInert>true</isInert>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+  </ThingDef>
+</Buildings>

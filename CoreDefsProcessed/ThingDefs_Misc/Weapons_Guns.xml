@@ -1,0 +1,1895 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThingDefs>
+  <ThingDef Name="BaseGun" Abstract="True" ParentName="BaseWeapon">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <techLevel>Industrial</techLevel>
+  </ThingDef>
+  <ThingDef Name="BaseMakeableGun" ParentName="BaseGun" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef Name="BaseHumanMakeableGun" ParentName="BaseMakeableGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <label>bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+  </ThingDef>
+  <!-- ============================================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Pistol</defName>
+    <label>pistol bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>55</speed>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Pistol</defName>
+    <label>pistol</label>
+    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>0.91</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>30</Steel>
+      <Component>2</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Pistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractPistol</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>24</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.3</warmupTime>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_Pistol</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ==================== T-9 incendiary launcher ========================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_IncendiaryLauncher</defName>
+    <label>incendiary bolt</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/InfernoCannonShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>40</speed>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <explosionRadius>1.1</explosionRadius>
+      <preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+      <explosionSpawnChance>0.6</explosionSpawnChance>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_IncendiaryLauncher</defName>
+    <label>incendiary launcher</label>
+    <description>Incendiary bolt launcher. Starts fires.</description>
+    <statBases>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>3.4</Mass>
+      <AccuracyTouch>0.79</AccuracyTouch>
+      <AccuracyShort>0.42</AccuracyShort>
+      <AccuracyMedium>0.18</AccuracyMedium>
+      <AccuracyLong>0.06</AccuracyLong>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>75</Steel>
+      <Component>4</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/IncendiaryLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractRifle</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>3.0</warmupTime>
+        <soundCast>ShotIncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <projectileDef>Bullet_IncendiaryLauncher</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ============================================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_PumpShotgun</defName>
+    <label>shotgun blast</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>55</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_PumpShotgun</defName>
+    <label>pump shotgun</label>
+    <description>Ancient design. Deadly, but short range.</description>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>3.4</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.77</AccuracyMedium>
+      <AccuracyLong>0.64</AccuracyLong>
+      <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>60</Steel>
+      <Component>3</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractShotgun</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>16</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.9</warmupTime>
+        <soundCast>ShotShotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_PumpShotgun</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ============================================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChainShotgun</defName>
+    <label>shotgun blast</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>55</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_ChainShotgun</defName>
+    <label>chain shotgun</label>
+    <description>A magazine-fed fully automatic shotgun. Short range and very low accuracy, but extraordinarily dangerous.</description>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4.5</Mass>
+      <AccuracyTouch>0.40</AccuracyTouch>
+      <AccuracyShort>0.43</AccuracyShort>
+      <AccuracyMedium>0.38</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>70</Steel>
+      <Component>5</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChainShotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractShotgun</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>10</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.1</warmupTime>
+        <soundCast>ShotShotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_ChainShotgun</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ============================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SurvivalRifle</defName>
+    <label>survival rifle bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>70</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SurvivalRifle</defName>
+    <label>survival rifle</label>
+    <description>Ancient bolt-action rifle. Good range, good power, low rate of fire.</description>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.96</AccuracyShort>
+      <AccuracyMedium>0.96</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>60</Steel>
+      <Component>3</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SurvivalRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractRifle</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>37</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.9</warmupTime>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_SurvivalRifle</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ============================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MachinePistol</defName>
+    <label>machine pistol bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>55</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_MachinePistol</defName>
+    <label>machine pistol</label>
+    <description>A micro-submachine gun. Short range, low power, high rate of fire. Very quick to aim and fire.</description>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>2.5</Mass>
+      <AccuracyTouch>0.73</AccuracyTouch>
+      <AccuracyShort>0.62</AccuracyShort>
+      <AccuracyMedium>0.43</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>45</Steel>
+      <Component>3</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/MachinePistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractSMG</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>24</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>ShotMachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_MachinePistol</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ============================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_HeavySMG</defName>
+    <label>heavy SMG bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>48</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_HeavySMG</defName>
+    <label>heavy SMG</label>
+    <description>A compact, wide-caliber slug-thrower. Very short range, but it packs a punch and handles quite well.</description>
+    <statBases>
+      <WorkToMake>28000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.89</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.37</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>75</Steel>
+      <Component>4</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractSMG</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>18</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.9</warmupTime>
+        <soundCast>ShotHeavySMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_HeavySMG</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ===================== LMG ========================= -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_LMG</defName>
+    <label>LMG bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>40</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_LMG</defName>
+    <label>LMG</label>
+    <description>A light machine gun.</description>
+    <statBases>
+      <WorkToMake>34000</WorkToMake>
+      <Mass>8.5</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.41</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>75</Steel>
+      <Component>4</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/LMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractRifle</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>25.9</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.4</warmupTime>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_LMG</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">EliteGun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ============================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_AssaultRifle</defName>
+    <label>assault rifle bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>70</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>7</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_AssaultRifle</defName>
+    <label>assault rifle</label>
+    <description>A general-purpose military weapon for field or urban combat. It fires a three-round burst. Good range, low power, high rate of fire.</description>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.77</AccuracyMedium>
+      <AccuracyLong>0.64</AccuracyLong>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>60</Steel>
+      <Component>7</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractRifle</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>31</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.9</warmupTime>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_AssaultRifle</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">EliteGun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ===================== Charge rifle ========================= -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChargeRifle</defName>
+    <label>charge shot</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>70</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_ChargeRifle</defName>
+    <label>charge rifle</label>
+    <description>Charged-shot energy/projectile rifle.</description>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.83</AccuracyShort>
+      <AccuracyMedium>0.68</AccuracyMedium>
+      <AccuracyLong>0.53</AccuracyLong>
+      <RangedWeapon_Cooldown>1.16</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>20</Steel>
+      <Plasteel>40</Plasteel>
+      <Component>7</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+    </recipeMaker>
+    <generateCommonality>0.30</generateCommonality>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractChargeRifle</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>23</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.0</warmupTime>
+        <soundCast>ShotChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_ChargeRifle</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">AdvancedGun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ============================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SniperRifle</defName>
+    <label>sniper rifle bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>100</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SniperRifle</defName>
+    <label>sniper rifle</label>
+    <description>Ancient pattern military sniper rifle. Bolt action. Long range, great accuracy and power.</description>
+    <statBases>
+      <WorkToMake>55000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.86</AccuracyShort>
+      <AccuracyMedium>0.86</AccuracyMedium>
+      <AccuracyLong>0.88</AccuracyLong>
+      <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>60</Steel>
+      <Component>8</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SniperRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractRifle</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>45</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>4.0</warmupTime>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_SniperRifle</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">SniperRifle</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ======================= Minigun ======================= -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Minigun</defName>
+    <label>minigun bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>70</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Minigun</defName>
+    <label>minigun</label>
+    <description>A multi-barrel machine gun with an extremely high rate of fire. Mechanoid-built.</description>
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.42</AccuracyShort>
+      <AccuracyMedium>0.18</AccuracyMedium>
+      <AccuracyLong>0.06</AccuracyLong>
+      <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>160</Steel>
+      <Component>20</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractRifle</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>32</range>
+        <burstShotCount>30</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>3.0</warmupTime>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_Minigun</projectileDef>
+        <forcedMissRadius>2.4</forcedMissRadius>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">MechanoidGunHeavy</li>
+      <li ListIndex="2">GunHeavy</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+  </ThingDef>
+  <!-- ======================= Non-producible ======================= -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Rocket</defName>
+    <label>rocket</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>50</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <explosionRadius>3.0</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_TripleRocket</defName>
+    <label>triple rocket launcher</label>
+    <description>A single-use rocket launcher that fires 3 projectiles in quick succession.</description>
+    <statBases>
+      <MarketValue>1600</MarketValue>
+      <Mass>7</Mass>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.92</AccuracyMedium>
+      <AccuracyLong>0.88</AccuracyLong>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/RocketLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <range>40</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <onlyManualCast>true</onlyManualCast>
+        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+        <warmupTime>5.0</warmupTime>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+        <projectileDef>Bullet_Rocket</projectileDef>
+        <forcedMissRadius>2.0</forcedMissRadius>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <!--<recipeMaker>
+      <researchPrerequisite>LargeRockets</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>190</Steel>
+      <Component>8</Component>
+    </costList>-->
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">GunHeavy</li>
+    </weaponTags>
+    <destroyOnDrop>false</destroyOnDrop>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_DoomsdayRocket</defName>
+    <label>doomsday rocket</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_DoomsdayRocket</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>50</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <explosionRadius>7.8</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_DoomsdayRocket</defName>
+    <label>doomsday rocket launcher</label>
+    <description>A single-use rocket launcher for quick retribution.</description>
+    <statBases>
+      <MarketValue>1600</MarketValue>
+      <Mass>8</Mass>
+      <AccuracyTouch>1.0</AccuracyTouch>
+      <AccuracyShort>1.0</AccuracyShort>
+      <AccuracyMedium>1.0</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/DoomsdayLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <range>40</range>
+        <burstShotCount>1</burstShotCount>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <onlyManualCast>true</onlyManualCast>
+        <warmupTime>4.5</warmupTime>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
+        <projectileDef>Bullet_DoomsdayRocket</projectileDef>
+        <forcedMissRadius>0.0</forcedMissRadius>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <!--<recipeMaker>
+      <researchPrerequisite>LargeRockets</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>170</Steel>
+      <Component>8</Component>
+      <MortarShell>1</MortarShell>
+    </costList>-->
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">GunHeavy</li>
+    </weaponTags>
+    <destroyOnDrop>false</destroyOnDrop>
+  </ThingDef>
+  <!-- ================= Mechanoid weapons ================= -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChargeLance</defName>
+    <label>charge lance shot</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/ChargeLanceShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>120</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>27</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_ChargeLance</defName>
+    <label>charge lance</label>
+    <description>Charged-shot rail-assisted lance weapon. Fires a single charged shot at high velocity.</description>
+    <statBases>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.92</AccuracyMedium>
+      <AccuracyLong>0.88</AccuracyLong>
+      <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <menuHidden>True</menuHidden>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>37</range>
+        <burstShotCount>1</burstShotCount>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.5</warmupTime>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_ChargeLance</projectileDef>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li ListIndex="0">MechanoidGunMedium</li>
+    </weaponTags>
+    <destroyOnDrop>True</destroyOnDrop>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_InfernoCannon</defName>
+    <label>inferno cannon shell</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/InfernoCannonShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>45</speed>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <explosionRadius>2.4</explosionRadius>
+      <preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+      <explosionSpawnChance>0.27</explosionSpawnChance>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_InfernoCannon</defName>
+    <label>inferno cannon</label>
+    <description>Incendiary-shot mini-artillery device. Mechanoid-built.</description>
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <Mass>18</Mass>
+      <AccuracyTouch>0.79</AccuracyTouch>
+      <AccuracyShort>0.42</AccuracyShort>
+      <AccuracyMedium>0.18</AccuracyMedium>
+      <AccuracyLong>0.06</AccuracyLong>
+      <RangedWeapon_Cooldown>8.4</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <menuHidden>True</menuHidden>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>27</range>
+        <burstShotCount>1</burstShotCount>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.25</warmupTime>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+        <projectileDef>Bullet_InfernoCannon</projectileDef>
+        <forcedMissRadius>3.5</forcedMissRadius>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li ListIndex="0">MechanoidGunHeavy</li>
+    </weaponTags>
+    <destroyOnDrop>True</destroyOnDrop>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChargeBlasterHeavy</defName>
+    <label>charge blaster shot</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>90</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_ChargeBlasterHeavy</defName>
+    <label>heavy charge blaster</label>
+    <description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</description>
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <Mass>22</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.59</AccuracyMedium>
+      <AccuracyLong>0.42</AccuracyLong>
+      <RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <menuHidden>True</menuHidden>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeBlasterHeavy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>27</range>
+        <burstShotCount>24</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.25</warmupTime>
+        <soundCast>ShotChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <projectileDef>Bullet_ChargeBlasterHeavy</projectileDef>
+        <forcedMissRadius>2.9</forcedMissRadius>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li ListIndex="0">MechanoidGunHeavy</li>
+    </weaponTags>
+    <destroyOnDrop>True</destroyOnDrop>
+  </ThingDef>
+</ThingDefs>

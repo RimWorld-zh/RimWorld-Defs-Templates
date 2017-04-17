@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Beer>
+  <ThingDef ParentName="DrugBase">
+    <defName>Beer</defName>
+    <label>beer</label>
+    <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol addiction.</description>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>9</MarketValue>
+      <Mass>0.3</Mass>
+      <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>25</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Drug" ListIndex="1">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.010</addictiveness>
+        <minToleranceToAddict>0.25</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>10</listOrder>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Drug/Beer</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Drugs</li>
+    </thingCategories>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+      </li>
+    </verbs>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="0">
+          <hediffDef>AlcoholHigh</hediffDef>
+          <severity>0.15</severity>
+          <toleranceChemical>Alcohol</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff" ListIndex="1">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+      <chairSearchRadius>25</chairSearchRadius>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <nutrition>0.08</nutrition>
+      <joy>0.17</joy>
+      <joyKind>Chemical</joyKind>
+      <preferability>NeverForNutrition</preferability>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+    </ingestible>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MakeWort</defName>
+    <label>make wort</label>
+    <description>Make wort from hops.</description>
+    <jobString>Making wort.</jobString>
+    <workAmount>1000</workAmount>
+    <workSpeedStat>BrewingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">RawHops</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">RawHops</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <products>
+      <Wort>5</Wort>
+    </products>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+  </RecipeDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Wort</defName>
+    <label>wort</label>
+    <description>Beer before fermentation. This substance needs to ferment in a fermenting barrel before it becomes drinkable beer.</description>
+    <statBases>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <MarketValue>2.5</MarketValue>
+      <Mass>0.8</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>25</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>5</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/Wort</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+  <HediffDef>
+    <defName>AlcoholHigh</defName>
+    <label>alcohol</label>
+    <hediffClass>Hediff_Alcohol</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Effecter" ListIndex="0">
+        <stateEffecter>Drunk</stateEffecter>
+        <severityIndices>
+          <min>3</min>
+          <max>5</max>
+        </severityIndices>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="1">
+        <severityPerDay>-1.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li ListIndex="0">
+        <label>buzzed-hidden</label>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.1</minSeverity>
+        <label>warm</label>
+        <painFactor>0.9</painFactor>
+        <socialFightChanceFactor>1.5</socialFightChanceFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Manipulation</capacity>
+            <offset>-0.02</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.25</minSeverity>
+        <label>tipsy</label>
+        <painFactor>0.8</painFactor>
+        <socialFightChanceFactor>2.5</socialFightChanceFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.4</minSeverity>
+        <label>drunk</label>
+        <tale>Drunk</tale>
+        <vomitMtbDays>0.75</vomitMtbDays>
+        <painFactor>0.5</painFactor>
+        <socialFightChanceFactor>4.0</socialFightChanceFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="4">
+        <minSeverity>0.7</minSeverity>
+        <label>hammered</label>
+        <vomitMtbDays>0.2</vomitMtbDays>
+        <painFactor>0.3</painFactor>
+        <painOffset>0.05</painOffset>
+        <socialFightChanceFactor>5.0</socialFightChanceFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.50</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="5">
+        <minSeverity>0.9</minSeverity>
+        <label>blackout</label>
+        <painFactor>0.1</painFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random" ListIndex="0">
+            <hediff>ChemicalDamageModerate</hediff>
+            <partsToAffect>
+              <li ListIndex="0">Brain</li>
+            </partsToAffect>
+            <mtbDays>10</mtbDays>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef>
+    <defName>Hangover</defName>
+    <label>hangover</label>
+    <hediffClass>Hediff_Hangover</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+    <initialSeverity>1</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <minSeverity>0</minSeverity>
+        <label>slight</label>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.03</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.15</minSeverity>
+        <label>strong</label>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <!-- starts low because it isn't visible until alcohol hediff is gone-->
+      <li ListIndex="2">
+        <minSeverity>0.40</minSeverity>
+        <label>pounding</label>
+        <vomitMtbDays>0.4</vomitMtbDays>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.18</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <scenarioCanAdd>true</scenarioCanAdd>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>Inebriated</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>buzzed-hidden</label>
+        <description>Should not appear.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+        <visible>false</visible>
+      </li>
+      <li ListIndex="1">
+        <label>Inebriated (warm)</label>
+        <description>I just feel a bit more relaxed after that drink. That's good.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+      <li ListIndex="2">
+        <label>Inebriated (tipsy)</label>
+        <description>I'm a bit wobbly! And this is quite enjoyable.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+      <li ListIndex="3">
+        <label>Inebriated (drunk)</label>
+        <description>I feel so uninhibited and unafraid! This is a great time!</description>
+        <baseMoodEffect>18</baseMoodEffect>
+      </li>
+      <li ListIndex="4">
+        <label>Inebriated (hammered)</label>
+        <description>Wooo! What is going on?</description>
+        <baseMoodEffect>24</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <hediff>AlcoholHigh</hediff>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Hungover</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <label>Hungover (slight)</label>
+        <description>The headache is almost gone.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li ListIndex="1">
+        <label>Hungover (strong)</label>
+        <description>My head hurts from all that liquor.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="2">
+        <label>Hungover (pounding)</label>
+        <description>It feels like a gaggle of geese are pecking at my skull.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li ListIndex="3">
+        <label>hungover-hidden</label>
+        <visible>false</visible>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <hediff>Hangover</hediff>
+  </ThoughtDef>
+  <!-- Alcohol addiction -->
+  <ChemicalDef>
+    <defName>Alcohol</defName>
+    <label>alcohol</label>
+    <addictionHediff>AlcoholAddiction</addictionHediff>
+    <toleranceHediff>AlcoholTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+    <onGeneratedAddictedEvents>
+      <li ListIndex="0">
+        <hediff>Cirrhosis</hediff>
+        <partsToAffect>
+          <li ListIndex="0">Liver</li>
+        </partsToAffect>
+        <chance>0.15</chance>
+      </li>
+    </onGeneratedAddictedEvents>
+  </ChemicalDef>
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Alcohol</defName>
+    <label>alcohol</label>
+    <description>Because of an alcohol addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <needClass>Need_Chemical</needClass>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <listPriority>35</listPriority>
+    <tutorHighlightTag>NeedAddiction</tutorHighlightTag>
+    <showForCaravanMembers>true</showForCaravanMembers>
+  </NeedDef>
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>AlcoholTolerance</defName>
+    <label>alcohol tolerance</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor" ListIndex="1">
+        <chemical>Alcohol</chemical>
+      </li>
+    </comps>
+    <stages>
+      <li ListIndex="0">
+        <minSeverity>0</minSeverity>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.20</minSeverity>
+        <label>small</label>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.50</minSeverity>
+        <label>large</label>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.80</minSeverity>
+        <label>massive</label>
+      </li>
+    </stages>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect" ListIndex="0">
+        <hediff>Cirrhosis</hediff>
+        <partsToAffect>
+          <li ListIndex="0">Liver</li>
+        </partsToAffect>
+        <baseMtbDays>60</baseMtbDays>
+        <minSeverity>0.50</minSeverity>
+      </li>
+      <li Class="HediffGiver_RandomDrugEffect" ListIndex="1">
+        <hediff>Carcinoma</hediff>
+        <partsToAffect>
+          <li ListIndex="0">Liver</li>
+        </partsToAffect>
+        <baseMtbDays>180</baseMtbDays>
+        <minSeverity>0.50</minSeverity>
+      </li>
+    </hediffGivers>
+    <defaultLabelColor>(179,86,132)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="AddictionBase">
+    <defName>AlcoholAddiction</defName>
+    <label>alcohol addiction</label>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="0">
+        <severityPerDay>-0.0333</severityPerDay>
+      </li>
+    </comps>
+    <initialSeverity>0.5</initialSeverity>
+    <stages>
+      <li ListIndex="0"></li>
+      <li ListIndex="1">
+        <label>withdrawal</label>
+        <socialFightChanceFactor>2.0</socialFightChanceFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Manipulation</capacity>
+            <offset>-0.50</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li ListIndex="0">
+            <mentalState>BingingDrugMajor</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <causesNeed>Chemical_Alcohol</causesNeed>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(255,0,127)</defaultLabelColor>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>AlcoholWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <stages>
+      <li ListIndex="0">
+        <visible>false</visible>
+      </li>
+      <li ListIndex="1">
+        <label>alcohol withdrawal</label>
+        <description>Feeling shaky. Everything pisses me off. I keep thinking of drinking.</description>
+        <baseMoodEffect>-35</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <hediff>AlcoholAddiction</hediff>
+  </ThoughtDef>
+</Beer>

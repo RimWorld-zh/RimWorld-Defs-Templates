@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ScenPartDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: string-->
+    <!--Desc: A human-readable description given when the Def is inspected by players.-->
+    <description>string_value</description>
+    <!--Type: RimWorld.ScenPartCategory-->
+    <!--Available Values: Undefined, Fixed, StartingImportant, PlayerPawnFilter, PlayerPawnModifier, MapCondition, Rule, StartingItem, WorldThing, Misc-->
+    <category>enum_value</category>
+    <!--Type: System.Type-->
+    <scenPartClass>class_name</scenPartClass>
+    <!--Type: float-->
+    <!--Default Value: -1.0-->
+    <summaryPriority>float_value</summaryPriority>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <selectionWeight>float_value</selectionWeight>
+    <!--Type: int-->
+    <!--Default Value: 999999-->
+    <maxUses>int_value</maxUses>
+    <!--Type: System.Type-->
+    <pageClass>class_name</pageClass>
+    <!--Type: Verse.MapConditionDef-->
+    <mapCondition>MapConditionDef_defName</mapCondition>
+    <!--Type: Verse.FloatRange-->
+    <!--Default Value: new FloatRange(30f, 100f)-->
+    <durationRandomRange>
+      <!--Type: float-->
+      <min>float_value</min>
+      <!--Type: float-->
+      <max>float_value</max>
+    </durationRandomRange>
+    <!--Type: System.Type-->
+    <designatorType>class_name</designatorType>
+  </ScenPartDef>
+</Defs>

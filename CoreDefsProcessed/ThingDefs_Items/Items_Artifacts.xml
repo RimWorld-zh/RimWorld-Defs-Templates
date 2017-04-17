@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <ThingDef ParentName="ResourceBase" Name="ArtifactBase" Abstract="True">
+    <statBases>
+      <Mass>0.5</Mass>
+    </statBases>
+    <thingClass>ThingWithComps</thingClass>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Activate</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_Artifact</compClass>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+  </ThingDef>
+  <ThingDef ParentName="ArtifactBase">
+    <defName>PsychicInsanityLance</defName>
+    <label>psychic insanity lance</label>
+    <description>One-use artifact that drives any character into a berserk state from any distance - even through walls.</description>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Usable" ListIndex="1">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Activate</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect" ListIndex="2">
+        <compClass>CompUseEffect_Artifact</compClass>
+      </li>
+      <li Class="CompProperties_Targetable" ListIndex="3">
+        <compClass>CompTargetable_SinglePawn</compClass>
+        <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
+      </li>
+      <li ListIndex="4">
+        <compClass>CompTargetEffect_Berserk</compClass>
+      </li>
+      <li ListIndex="5">
+        <compClass>CompTargetEffect_GoodwillImpact</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Artifact/PsychicInsanityLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Artifact</li>
+    </tradeTags>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <ThingDef ParentName="ArtifactBase">
+    <defName>PsychicShockLance</defName>
+    <label>psychic shock lance</label>
+    <description>One-use artifact that directs psychic disturbances towards one character, dropping them into a state of psychic shock for some time. Large risk of brain damage.</description>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Usable" ListIndex="1">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Activate</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect" ListIndex="2">
+        <compClass>CompUseEffect_Artifact</compClass>
+      </li>
+      <li Class="CompProperties_Targetable" ListIndex="3">
+        <compClass>CompTargetable_SinglePawn</compClass>
+        <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
+      </li>
+      <li ListIndex="4">
+        <compClass>CompTargetEffect_PsychicShock</compClass>
+      </li>
+      <li ListIndex="5">
+        <compClass>CompTargetEffect_BrainDamageChance</compClass>
+      </li>
+      <li ListIndex="6">
+        <compClass>CompTargetEffect_GoodwillImpact</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Artifact/PsychicShockLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Artifact</li>
+    </tradeTags>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <ThingDef ParentName="ArtifactBase">
+    <defName>PsychicAnimalPulser</defName>
+    <label>psychic animal pulser</label>
+    <description>One-use artifact that drives all animals in the region into a manhunting rage.</description>
+    <statBases>
+      <MarketValue>750</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Usable" ListIndex="1">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Activate</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect" ListIndex="2">
+        <compClass>CompUseEffect_Artifact</compClass>
+      </li>
+      <li Class="CompProperties_Targetable" ListIndex="3">
+        <compClass>CompTargetable_AllAnimalsOnTheMap</compClass>
+        <doCameraShake>true</doCameraShake>
+        <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
+      </li>
+      <li ListIndex="4">
+        <compClass>CompTargetEffect_Manhunter</compClass>
+      </li>
+      <li ListIndex="5">
+        <compClass>CompTargetEffect_GoodwillImpact</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Artifact/PsychicAnimalPulser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Artifact</li>
+    </tradeTags>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <ThingDef ParentName="ArtifactBase">
+    <defName>PsychicSoothePulser</defName>
+    <label>psychic soothe pulser</label>
+    <description>One-use artifact which gives a temporary mood boost to everyone on the map.</description>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Usable" ListIndex="1">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Activate</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect" ListIndex="2">
+        <compClass>CompUseEffect_Artifact</compClass>
+      </li>
+      <li Class="CompProperties_Targetable" ListIndex="3">
+        <compClass>CompTargetable_AllPawnsOnTheMap</compClass>
+        <doCameraShake>true</doCameraShake>
+        <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
+      </li>
+      <li ListIndex="4">
+        <compClass>CompTargetEffect_MoodBoost</compClass>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Artifact/PsychicSoothePulser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li ListIndex="0">Artifact</li>
+    </tradeTags>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+</GameData>

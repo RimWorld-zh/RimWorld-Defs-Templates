@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: System.Type-->
+    <!--Default Value: typeof(Hediff)-->
+    <hediffClass>class_name</hediffClass>
+    <!--Complex List-->
+    <!--Type: List<Verse.HediffCompProperties>-->
+    <comps>
+      <!--Type: Verse.HediffCompProperties_TendDuration-->
+      <li Class="HediffCompProperties_TendDuration">
+        <!--Type: int-->
+        <!--Default Value: -1-->
+        <tendDuration>int_value</tendDuration>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <tendAllAtOnce>true_or_false</tendAllAtOnce>
+        <!--Type: int-->
+        <!--Default Value: -1-->
+        <disappearsAtTendedCount>int_value</disappearsAtTendedCount>
+        <!--Type: float-->
+        <severityPerDayTended>float_value</severityPerDayTended>
+        <!--Type: string-->
+        <!--Alias: labelTreatedWell-->
+        <labelTendedWell>string_value</labelTendedWell>
+        <!--Type: string-->
+        <!--Alias: labelTreatedWellInner-->
+        <labelTendedWellInner>string_value</labelTendedWellInner>
+        <!--Type: string-->
+        <!--Alias: labelSolidTreatedWell-->
+        <labelSolidTendedWell>string_value</labelSolidTendedWell>
+      </li>
+      <!--Type: Verse.HediffCompProperties_Infecter-->
+      <li Class="HediffCompProperties_Infecter">
+        <!--Type: float-->
+        <!--Default Value: 0.75-->
+        <infectionChance>float_value</infectionChance>
+      </li>
+      <!--Type: Verse.HediffCompProperties_GetsOld-->
+      <li Class="HediffCompProperties_GetsOld">
+        <!--Type: string-->
+        <oldLabel>string_value</oldLabel>
+        <!--Type: string-->
+        <instantlyOldLabel>string_value</instantlyOldLabel>
+      </li>
+      <!--Type: Verse.HediffCompProperties_Discoverable-->
+      <li Class="HediffCompProperties_Discoverable">
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <sendLetterWhenDiscovered>true_or_false</sendLetterWhenDiscovered>
+        <!--Type: string-->
+        <discoverLetterLabel>string_value</discoverLetterLabel>
+        <!--Type: string-->
+        <discoverLetterText>string_value</discoverLetterText>
+      </li>
+      <!--Type: Verse.HediffCompProperties_Immunizable-->
+      <li Class="HediffCompProperties_Immunizable">
+        <!--Type: float-->
+        <immunityPerDayNotSick>float_value</immunityPerDayNotSick>
+        <!--Type: float-->
+        <immunityPerDaySick>float_value</immunityPerDaySick>
+        <!--Type: float-->
+        <severityPerDayNotImmune>float_value</severityPerDayNotImmune>
+        <!--Type: float-->
+        <severityPerDayImmune>float_value</severityPerDayImmune>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: new FloatRange(1f, 1f)-->
+        <severityPerDayNotImmuneRandomFactor>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </severityPerDayNotImmuneRandomFactor>
+      </li>
+      <!--Type: Verse.HediffCompProperties_Disappears-->
+      <li Class="HediffCompProperties_Disappears">
+        <!--Type: Verse.IntRange-->
+        <!--Default Value: default(IntRange)-->
+        <disappearsAfterTicks>
+          <!--Type: int-->
+          <min>int_value</min>
+          <!--Type: int-->
+          <max>int_value</max>
+        </disappearsAfterTicks>
+      </li>
+      <!--Type: Verse.HediffCompProperties_GrowthMode-->
+      <li Class="HediffCompProperties_GrowthMode">
+        <!--Type: float-->
+        <severityPerDayGrowing>float_value</severityPerDayGrowing>
+        <!--Type: float-->
+        <severityPerDayRemission>float_value</severityPerDayRemission>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: new FloatRange(1f, 1f)-->
+        <severityPerDayGrowingRandomFactor>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </severityPerDayGrowingRandomFactor>
+        <!--Type: Verse.FloatRange-->
+        <!--Default Value: new FloatRange(1f, 1f)-->
+        <severityPerDayRemissionRandomFactor>
+          <!--Type: float-->
+          <min>float_value</min>
+          <!--Type: float-->
+          <max>float_value</max>
+        </severityPerDayRemissionRandomFactor>
+      </li>
+      <!--Type: Verse.HediffCompProperties_VerbGiver-->
+      <li Class="HediffCompProperties_VerbGiver">
+        <!--Complex List-->
+        <!--Type: List<Verse.VerbProperties>-->
+        <verbs>
+          <!--Type: Verse.VerbProperties-->
+          <li>
+            <!--Type: System.Type-->
+            <verbClass>class_name</verbClass>
+            <!--Type: float-->
+            <defaultCooldownTime>float_value</defaultCooldownTime>
+            <!--Type: Verse.DamageDef-->
+            <meleeDamageDef>DamageDef_defName</meleeDamageDef>
+            <!--Type: int-->
+            <!--Default Value: 1-->
+            <meleeDamageBaseAmount>int_value</meleeDamageBaseAmount>
+          </li>
+          <!-- ... -->
+        </verbs>
+      </li>
+      <!--Type: Verse.HediffCompProperties_SeverityPerDay-->
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <!--Type: float-->
+        <severityPerDay>float_value</severityPerDay>
+      </li>
+      <!--Type: Verse.HediffCompProperties_DrugEffectFactor-->
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <!--Type: RimWorld.ChemicalDef-->
+        <chemical>ChemicalDef_defName</chemical>
+      </li>
+      <!--Type: Verse.HediffCompProperties_HealOldWounds-->
+      <li Class="HediffCompProperties_HealOldWounds" />
+      <!--Type: Verse.HediffCompProperties_Effecter-->
+      <li Class="HediffCompProperties_Effecter">
+        <!--Type: Verse.EffecterDef-->
+        <stateEffecter>EffecterDef_defName</stateEffecter>
+        <!--Type: Verse.IntRange-->
+        <!--Default Value: new IntRange(-1, -1)-->
+        <severityIndices>
+          <!--Type: int-->
+          <min>int_value</min>
+          <!--Type: int-->
+          <max>int_value</max>
+        </severityIndices>
+      </li>
+      <!-- ... -->
+    </comps>
+    <!--Type: float-->
+    <!--Default Value: 0.5-->
+    <initialSeverity>float_value</initialSeverity>
+    <!--Type: float-->
+    <!--Default Value: -1.0-->
+    <lethalSeverity>float_value</lethalSeverity>
+    <!--Complex List-->
+    <!--Type: List<Verse.HediffStage>-->
+    <stages>
+      <!--Type: Verse.HediffStage-->
+      <li>
+        <!--Type: float-->
+        <minSeverity>float_value</minSeverity>
+        <!--Type: string-->
+        <label>string_value</label>
+        <!--Type: bool-->
+        <!--Default Value: true-->
+        <everVisible>true_or_false</everVisible>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <lifeThreatening>true_or_false</lifeThreatening>
+        <!--Type: RimWorld.TaleDef-->
+        <tale>TaleDef_defName</tale>
+        <!--Type: float-->
+        <!--Default Value: -1.0-->
+        <vomitMtbDays>float_value</vomitMtbDays>
+        <!--Type: float-->
+        <!--Default Value: -1.0-->
+        <deathMtbDays>float_value</deathMtbDays>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <painFactor>float_value</painFactor>
+        <!--Type: float-->
+        <painOffset>float_value</painOffset>
+        <!--Type: float-->
+        <!--Default Value: -1.0-->
+        <forgetMemoryThoughtMtbDays>float_value</forgetMemoryThoughtMtbDays>
+        <!--Type: float-->
+        <pctConditionalThoughtsNullified>float_value</pctConditionalThoughtsNullified>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <opinionOfOthersFactor>float_value</opinionOfOthersFactor>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <hungerRateFactor>float_value</hungerRateFactor>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <restFallFactor>float_value</restFallFactor>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <socialFightChanceFactor>float_value</socialFightChanceFactor>
+        <!--Type: List<Verse.HediffDef>-->
+        <makeImmuneTo>
+          <!--Type: Verse.HediffDef-->
+          <li>HediffDef_defName</li>
+          <!-- ... -->
+        </makeImmuneTo>
+        <!--Complex List-->
+        <!--Type: List<Verse.PawnCapacityModifier>-->
+        <capMods>
+          <!--Type: Verse.PawnCapacityModifier-->
+          <li>
+            <!--Type: Verse.PawnCapacityDef-->
+            <capacity>PawnCapacityDef_defName</capacity>
+            <!--Type: float-->
+            <offset>float_value</offset>
+            <!--Type: float-->
+            <!--Default Value: 999.0-->
+            <setMax>float_value</setMax>
+            <!--Type: float-->
+            <!--Default Value: 1.0-->
+            <postFactor>float_value</postFactor>
+          </li>
+          <!-- ... -->
+        </capMods>
+        <!--Complex List-->
+        <!--Type: List<Verse.HediffGiver>-->
+        <hediffGivers>
+          <!--Type: Verse.HediffGiver_Random-->
+          <li Class="HediffGiver_Random">
+            <!--Type: Verse.HediffDef-->
+            <hediff>HediffDef_defName</hediff>
+            <!--Type: List<Verse.BodyPartDef>-->
+            <partsToAffect>
+              <!--Type: Verse.BodyPartDef-->
+              <li>BodyPartDef_defName</li>
+              <!-- ... -->
+            </partsToAffect>
+            <!--Type: bool-->
+            <!--Default Value: false-->
+            <canAffectAnyLivePart>true_or_false</canAffectAnyLivePart>
+            <!--Type: float-->
+            <mtbDays>float_value</mtbDays>
+          </li>
+          <!-- ... -->
+        </hediffGivers>
+        <!--Complex List-->
+        <!--Type: List<Verse.MentalStateGiver>-->
+        <mentalStateGivers>
+          <!--Type: Verse.MentalStateGiver-->
+          <li>
+            <!--Type: Verse.MentalStateDef-->
+            <mentalState>MentalStateDef_defName</mentalState>
+            <!--Type: float-->
+            <mtbDays>float_value</mtbDays>
+          </li>
+          <!-- ... -->
+        </mentalStateGivers>
+        <!--Type: List<RimWorld.StatModifier>-->
+        <statOffsets>
+          <!--Type: RimWorld.StatModifier-->
+          <!--Tag Field: stat, Tag Type: RimWorld.StatDef-->
+          <!--Value Field: value, Value Type: float-->
+          <!--Pattern: <StatDef_defName>float_value</StatDef_defName>-->
+          <!-- ... -->
+        </statOffsets>
+        <!--Type: float-->
+        <partEfficiencyOffset>float_value</partEfficiencyOffset>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <partIgnoreMissingHP>true_or_false</partIgnoreMissingHP>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <destroyPart>true_or_false</destroyPart>
+      </li>
+      <!-- ... -->
+    </stages>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <tendable>true_or_false</tendable>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <isBad>true_or_false</isBad>
+    <!--Type: Verse.ThingDef-->
+    <spawnThingOnRemoved>ThingDef_defName</spawnThingOnRemoved>
+    <!--Type: float-->
+    <chanceToCauseNoPain>float_value</chanceToCauseNoPain>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <makesSickThought>true_or_false</makesSickThought>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <makesAlert>true_or_false</makesAlert>
+    <!--Type: RimWorld.NeedDef-->
+    <causesNeed>NeedDef_defName</causesNeed>
+    <!--Type: float-->
+    <minSeverity>float_value</minSeverity>
+    <!--Type: float-->
+    <!--Default Value: 3.40282347E+38-->
+    <maxSeverity>float_value</maxSeverity>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <scenarioCanAdd>true_or_false</scenarioCanAdd>
+    <!--Complex List-->
+    <!--Type: List<Verse.HediffGiver>-->
+    <hediffGivers>
+      <!--Type: Verse.HediffGiver_RandomDrugEffect-->
+      <li Class="HediffGiver_RandomDrugEffect">
+        <!--Type: Verse.HediffDef-->
+        <hediff>HediffDef_defName</hediff>
+        <!--Type: List<Verse.BodyPartDef>-->
+        <partsToAffect>
+          <!--Type: Verse.BodyPartDef-->
+          <li>BodyPartDef_defName</li>
+          <!-- ... -->
+        </partsToAffect>
+        <!--Type: int-->
+        <!--Default Value: 1-->
+        <countToAffect>int_value</countToAffect>
+        <!--Type: float-->
+        <baseMtbDays>float_value</baseMtbDays>
+        <!--Type: float-->
+        <minSeverity>float_value</minSeverity>
+      </li>
+      <!-- ... -->
+    </hediffGivers>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <displayWound>true_or_false</displayWound>
+    <!--Type: UnityEngine.Color-->
+    <!--Default Value: Color.white-->
+    <defaultLabelColor>value</defaultLabelColor>
+    <!--Type: Verse.InjuryProps-->
+    <injuryProps>
+      <!--Type: float-->
+      <!--Default Value: 1.0-->
+      <painPerSeverity>float_value</painPerSeverity>
+      <!--Type: float-->
+      <!--Default Value: 0.5-->
+      <averagePainPerSeverityOld>float_value</averagePainPerSeverityOld>
+      <!--Type: float-->
+      <bleedRate>float_value</bleedRate>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <canMerge>true_or_false</canMerge>
+      <!--Type: string-->
+      <destroyedLabel>string_value</destroyedLabel>
+      <!--Type: string-->
+      <destroyedOutLabel>string_value</destroyedOutLabel>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <useRemovedLabel>true_or_false</useRemovedLabel>
+    </injuryProps>
+    <!--Type: Verse.AddedBodyPartProps-->
+    <addedPartProps>
+      <!--Type: float-->
+      <!--Default Value: 1.0-->
+      <partEfficiency>float_value</partEfficiency>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <isBionic>true_or_false</isBionic>
+      <!--Type: bool-->
+      <!--Default Value: true-->
+      <isSolid>true_or_false</isSolid>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <isGoodWeapon>true_or_false</isGoodWeapon>
+    </addedPartProps>
+  </HediffDef>
+</Defs>

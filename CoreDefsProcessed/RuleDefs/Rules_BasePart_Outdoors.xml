@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RuleDef>
+    <defName>BasePart_Outdoors</defName>
+    <symbol>basePart_outdoors</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_BasePart_Outdoors" ListIndex="0" />
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
+    <defName>BasePart_Outdoors_Division</defName>
+    <symbol>basePart_outdoors_division</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_BasePart_Outdoors_Division_Grid" ListIndex="0">
+        <minRectSize>(12, 12)</minRectSize>
+      </li>
+      <li Class="SymbolResolver_BasePart_Outdoors_Division_Split" ListIndex="1">
+        <minRectSize>(3, 3)</minRectSize>
+      </li>
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
+    <defName>BasePart_Outdoors_LeafPossiblyDecorated</defName>
+    <symbol>basePart_outdoors_leafPossiblyDecorated</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_BasePart_Outdoors_LeafPossiblyDecorated" ListIndex="0" />
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
+    <defName>BasePart_Outdoors_LeafDecorated</defName>
+    <symbol>basePart_outdoors_leafDecorated</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_BasePart_Outdoors_LeafDecorated_EdgeStreet" ListIndex="0">
+        <minRectSize>(3, 3)</minRectSize>
+      </li>
+      <li Class="SymbolResolver_BasePart_Outdoors_LeafDecorated_RandomInnerRect" ListIndex="1">
+        <minRectSize>(3, 3)</minRectSize>
+      </li>
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
+    <defName>BasePart_Outdoors_Leaf</defName>
+    <symbol>basePart_outdoors_leaf</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_BasePart_Outdoors_Leaf_Empty" ListIndex="0">
+        <selectionWeight>0.01</selectionWeight>
+      </li>
+      <li Class="SymbolResolver_BasePart_Outdoors_Leaf_Farm" ListIndex="1">
+        <selectionWeight>0.65</selectionWeight>
+      </li>
+      <li Class="SymbolResolver_BasePart_Outdoors_Leaf_PowerPlant" ListIndex="2">
+        <selectionWeight>0.3</selectionWeight>
+      </li>
+      <li Class="SymbolResolver_BasePart_Outdoors_Leaf_Building" ListIndex="3">
+        <minRectSize>(4, 4)</minRectSize>
+      </li>
+    </resolvers>
+  </RuleDef>
+</Defs>

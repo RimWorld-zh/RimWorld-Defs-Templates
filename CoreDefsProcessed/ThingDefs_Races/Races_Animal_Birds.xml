@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="AnimalThingBase" Name="BigBirdThingBase" Abstract="True">
+    <tradeTags>
+      <li>StandardAnimal</li>
+    </tradeTags>
+    <race>
+      <body>Bird</body>
+      <gestationPeriodDays>20</gestationPeriodDays>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherInsulation>0.5</leatherInsulation>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase" Name="BigBirdKindBase" Abstract="True">
+    <combatPower>155</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.42</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!--===============================================-->
+  <ThingDef ParentName="BigBirdThingBase">
+    <defName>Cassowary</defName>
+    <label>cassowary</label>
+    <description>A large flightless bird with brightly-colored feathers. While it looks beautiful, its kick is vicious.</description>
+    <statBases>
+      <MoveSpeed>4.5</MoveSpeed>
+      <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      <MarketValue>300</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+      <li Class="CompProperties_EggLayer" ListIndex="1">
+        <eggLayIntervalDays>20</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+        <eggFertilizedDef>EggCassowaryFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <body>Bird</body>
+      <lifeExpectancy>45</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <herdAnimal>false</herdAnimal>
+      <wildness>0.80</wildness>
+      <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.022</manhunterOnTameFailChance>
+      <gestationPeriodDays>20</gestationPeriodDays>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.8</baseBodySize>
+      <baseHealthScale>0.8</baseHealthScale>
+      <baseHungerRate>0.37</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(80,80,80)</leatherColor>
+      <leatherInsulation>0.5</leatherInsulation>
+      <meatLabel>bird meat</meatLabel>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="BigBirdKindBase">
+    <defName>Cassowary</defName>
+    <label>cassowary</label>
+    <race>Cassowary</race>
+    <labelPlural>cassowaries</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>cassowary</label>
+        <labelPlural>cassowaries</labelPlural>
+        <labelMale>male cassowary</labelMale>
+        <labelMalePlural>male cassowarys</labelMalePlural>
+        <labelFemale>female cassowary</labelFemale>
+        <labelFemalePlural>female cassowarys</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cassowary/Cassowary</texPath>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>cassowary</label>
+        <labelPlural>cassowaries</labelPlural>
+        <labelMale>male cassowary</labelMale>
+        <labelMalePlural>male cassowarys</labelMalePlural>
+        <labelFemale>female cassowary</labelFemale>
+        <labelFemalePlural>female cassowarys</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cassowary/Cassowary</texPath>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>cassowary</label>
+        <labelPlural>cassowaries</labelPlural>
+        <labelMale>male cassowary</labelMale>
+        <labelMalePlural>male cassowarys</labelMalePlural>
+        <labelFemale>female cassowary</labelFemale>
+        <labelFemalePlural>female cassowarys</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cassowary/Cassowary</texPath>
+          <drawSize>1.8</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>155</combatPower>
+    <labelMale>male cassowary</labelMale>
+    <labelMalePlural>male cassowaries</labelMalePlural>
+    <labelFemale>female cassowary</labelFemale>
+    <labelFemalePlural>female cassowaries</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.42</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!--===============================================-->
+  <ThingDef ParentName="BigBirdThingBase">
+    <defName>Emu</defName>
+    <label>emu</label>
+    <description>A large flightless bird with beady eyes on its ugly face. With its bad attitude, it is the jerk of the natural world.</description>
+    <statBases>
+      <MoveSpeed>5.1</MoveSpeed>
+      <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      <MarketValue>300</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+      <li Class="CompProperties_EggLayer" ListIndex="1">
+        <eggLayIntervalDays>18</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+        <eggFertilizedDef>EggEmuFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <body>Bird</body>
+      <lifeExpectancy>45</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <herdAnimal>false</herdAnimal>
+      <wildness>0.95</wildness>
+      <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.022</manhunterOnTameFailChance>
+      <gestationPeriodDays>20</gestationPeriodDays>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.9</baseBodySize>
+      <baseHealthScale>0.9</baseHealthScale>
+      <baseHungerRate>0.4</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(122,109,99)</leatherColor>
+      <leatherInsulation>0.5</leatherInsulation>
+      <useMeatFrom>Cassowary</useMeatFrom>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="BigBirdKindBase">
+    <defName>Emu</defName>
+    <label>emu</label>
+    <race>Emu</race>
+    <labelPlural>emus</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>emu</label>
+        <labelPlural>emu</labelPlural>
+        <labelMale>male emu</labelMale>
+        <labelMalePlural>male emus</labelMalePlural>
+        <labelFemale>female emu</labelFemale>
+        <labelFemalePlural>female emus</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Emu</texPath>
+          <drawSize>1.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>emu</label>
+        <labelPlural>emu</labelPlural>
+        <labelMale>male emu</labelMale>
+        <labelMalePlural>male emus</labelMalePlural>
+        <labelFemale>female emu</labelFemale>
+        <labelFemalePlural>female emus</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Emu</texPath>
+          <drawSize>1.3</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>emu</label>
+        <labelPlural>emu</labelPlural>
+        <labelMale>male emu</labelMale>
+        <labelMalePlural>male emus</labelMalePlural>
+        <labelFemale>female emu</labelFemale>
+        <labelFemalePlural>female emus</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Emu</texPath>
+          <drawSize>1.6</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>155</combatPower>
+    <labelMale>male emu</labelMale>
+    <labelMalePlural>male emus</labelMalePlural>
+    <labelFemale>female emu</labelFemale>
+    <labelFemalePlural>female emus</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.42</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!--===============================================-->
+  <ThingDef ParentName="BigBirdThingBase">
+    <defName>Ostrich</defName>
+    <label>ostrich</label>
+    <description>The largest unmodified bird species, ostriches are known for their fast run, huge eggs, and powerful kick.</description>
+    <statBases>
+      <MoveSpeed>6.0</MoveSpeed>
+      <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      <MarketValue>360</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+      <li Class="CompProperties_EggLayer" ListIndex="1">
+        <eggLayIntervalDays>23</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+        <eggFertilizedDef>EggOstrichFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <body>Bird</body>
+      <lifeExpectancy>45</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <herdAnimal>false</herdAnimal>
+      <wildness>0.95</wildness>
+      <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.022</manhunterOnTameFailChance>
+      <gestationPeriodDays>20</gestationPeriodDays>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>0.55</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(76,83,99)</leatherColor>
+      <leatherInsulation>0.5</leatherInsulation>
+      <useMeatFrom>Cassowary</useMeatFrom>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="BigBirdKindBase">
+    <defName>Ostrich</defName>
+    <label>ostrich</label>
+    <race>Ostrich</race>
+    <labelPlural>ostriches</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>ostrich</label>
+        <labelPlural>ostriches</labelPlural>
+        <labelMale>male ostrich</labelMale>
+        <labelMalePlural>male ostrichs</labelMalePlural>
+        <labelFemale>female ostrich</labelFemale>
+        <labelFemalePlural>female ostrichs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ostrich/Ostrich</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <color>(133,107,96)</color>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>ostrich</label>
+        <labelPlural>ostriches</labelPlural>
+        <labelMale>male ostrich</labelMale>
+        <labelMalePlural>male ostrichs</labelMalePlural>
+        <labelFemale>female ostrich</labelFemale>
+        <labelFemalePlural>female ostrichs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ostrich/Ostrich</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <color>(133,107,96)</color>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>ostrich</label>
+        <labelPlural>ostriches</labelPlural>
+        <labelMale>male ostrich</labelMale>
+        <labelMalePlural>male ostrichs</labelMalePlural>
+        <labelFemale>female ostrich</labelFemale>
+        <labelFemalePlural>female ostrichs</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ostrich/Ostrich</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <color>(62,58,66)</color>
+          <drawSize>1.8</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Ostrich/Ostrich</texPath>
+          <shaderType>CutoutComplex</shaderType>
+          <color>(133,107,96)</color>
+          <drawSize>1.8</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>155</combatPower>
+    <labelMale>male ostrich</labelMale>
+    <labelMalePlural>male ostriches</labelMalePlural>
+    <labelFemale>female ostrich</labelFemale>
+    <labelFemalePlural>female ostriches</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.42</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+  <!--===============================================-->
+  <ThingDef ParentName="BigBirdThingBase">
+    <defName>Turkey</defName>
+    <label>turkey</label>
+    <description>A short, fat, flightless bird known for its hilarious 'gobbling' call. It has been long domesticated, but also lives in the wild.</description>
+    <statBases>
+      <MoveSpeed>3.5</MoveSpeed>
+      <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      <MarketValue>250</MarketValue>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>25</LeatherAmount>
+      <Mass>70</Mass>
+    </statBases>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompAttachBase</compClass>
+      </li>
+      <li Class="CompProperties_EggLayer" ListIndex="1">
+        <eggLayIntervalDays>11</eggLayIntervalDays>
+        <eggCountRange>
+          <min>1</min>
+          <max>3</max>
+        </eggCountRange>
+        <eggFertilizedDef>EggTurkeyFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+      </li>
+    </comps>
+    <selectable>true</selectable>
+    <hasTooltip>true</hasTooltip>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Pawn_Health</li>
+      <li ListIndex="1">ITab_Pawn_Needs</li>
+      <li ListIndex="2">ITab_Pawn_Character</li>
+      <li ListIndex="3">ITab_Pawn_Training</li>
+      <li ListIndex="4">ITab_Pawn_Gear</li>
+      <li ListIndex="5">ITab_Pawn_Guest</li>
+      <li ListIndex="6">ITab_Pawn_Prisoner</li>
+      <li ListIndex="7">ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <tradeTags>
+      <li ListIndex="0">StandardAnimal</li>
+    </tradeTags>
+    <recipes>
+      <li ListIndex="0">ExciseCarcinoma</li>
+      <li ListIndex="1">RemoveBodyPart</li>
+      <li ListIndex="2">Euthanize</li>
+      <li ListIndex="3">Anesthetize</li>
+    </recipes>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="1">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+      </li>
+      <li ListIndex="2">
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <commonality>0.01</commonality>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+      </li>
+    </verbs>
+    <race>
+      <hasGenders>true</hasGenders>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <body>Bird</body>
+      <lifeExpectancy>9</lifeExpectancy>
+      <hediffGiverSets>
+        <li ListIndex="0">OrganicStandard</li>
+      </hediffGiverSets>
+      <herdAnimal>false</herdAnimal>
+      <wildness>0.45</wildness>
+      <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.003</manhunterOnTameFailChance>
+      <gestationPeriodDays>20</gestationPeriodDays>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <baseBodySize>0.6</baseBodySize>
+      <baseHealthScale>0.6</baseHealthScale>
+      <baseHungerRate>0.25</baseHungerRate>
+      <lifeStageAges>
+        <li ListIndex="0">
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li ListIndex="1">
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li ListIndex="2">
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+        </li>
+      </lifeStageAges>
+      <leatherColor>(80,80,80)</leatherColor>
+      <leatherInsulation>0.5</leatherInsulation>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="BigBirdKindBase">
+    <defName>Turkey</defName>
+    <label>turkey</label>
+    <race>Turkey</race>
+    <labelPlural>turkeys</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <label>turkey</label>
+        <labelPlural>turkey</labelPlural>
+        <labelMale>male turkey</labelMale>
+        <labelMalePlural>male turkeys</labelMalePlural>
+        <labelFemale>female turkey</labelFemale>
+        <labelFemalePlural>female turkeys</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Turkey/TurkeyHen</texPath>
+          <drawSize>1.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="1">
+        <label>turkey</label>
+        <labelPlural>turkey</labelPlural>
+        <labelMale>male turkey</labelMale>
+        <labelMalePlural>male turkeys</labelMalePlural>
+        <labelFemale>female turkey</labelFemale>
+        <labelFemalePlural>female turkeys</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Turkey/TurkeyHen</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li ListIndex="2">
+        <label>turkey</label>
+        <labelPlural>turkey</labelPlural>
+        <labelMale>male turkey</labelMale>
+        <labelMalePlural>male turkeys</labelMalePlural>
+        <labelFemale>female turkey</labelFemale>
+        <labelFemalePlural>female turkeys</labelFemalePlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Turkey/TurkeyTom</texPath>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Turkey/TurkeyHen</texPath>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>155</combatPower>
+    <labelMale>male turkey</labelMale>
+    <labelMalePlural>male turkeys</labelMalePlural>
+    <labelFemale>female turkey</labelFemale>
+    <labelFemalePlural>female turkeys</labelFemalePlural>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.42</wildSpawn_EcoSystemWeight>
+  </PawnKindDef>
+</Defs>

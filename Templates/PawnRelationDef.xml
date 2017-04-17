@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnRelationDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
+    <!--Type: System.Type-->
+    <!--Default Value: typeof(PawnRelationWorker)-->
+    <workerClass>class_name</workerClass>
+    <!--Type: string-->
+    <labelFemale>string_value</labelFemale>
+    <!--Type: float-->
+    <importance>float_value</importance>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <implied>true_or_false</implied>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <reflexive>true_or_false</reflexive>
+    <!--Type: int-->
+    <opinionOffset>int_value</opinionOffset>
+    <!--Type: float-->
+    <generationChanceFactor>float_value</generationChanceFactor>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <attractionFactor>float_value</attractionFactor>
+    <!--Type: float-->
+    <incestOpinionOffset>float_value</incestOpinionOffset>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <familyByBloodRelation>true_or_false</familyByBloodRelation>
+    <!--Type: RimWorld.ThoughtDef-->
+    <diedThought>ThoughtDef_defName</diedThought>
+    <!--Type: RimWorld.ThoughtDef-->
+    <diedThoughtFemale>ThoughtDef_defName</diedThoughtFemale>
+    <!--Type: RimWorld.ThoughtDef-->
+    <soldThought>ThoughtDef_defName</soldThought>
+    <!--Type: RimWorld.ThoughtDef-->
+    <killedThought>ThoughtDef_defName</killedThought>
+    <!--Type: RimWorld.ThoughtDef-->
+    <killedThoughtFemale>ThoughtDef_defName</killedThoughtFemale>
+  </PawnRelationDef>
+</Defs>

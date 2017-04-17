@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roofs>
+  <RoofDef>
+    <defName>RoofConstructed</defName>
+    <label>constructed roof</label>
+    <isThickRoof>false</isThickRoof>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <soundPunchThrough>PunchThroughRoofMetal</soundPunchThrough>
+  </RoofDef>
+  <RoofDef>
+    <defName>RoofRockThin</defName>
+    <label>rock roof (thin)</label>
+    <isNatural>true</isNatural>
+    <isThickRoof>false</isThickRoof>
+    <filthLeaving>RockRubble</filthLeaving>
+    <soundPunchThrough>RoofCollapse</soundPunchThrough>
+  </RoofDef>
+  <RoofDef>
+    <defName>RoofRockThick</defName>
+    <label>overhead mountain</label>
+    <isNatural>true</isNatural>
+    <isThickRoof>true</isThickRoof>
+    <collapseLeavingThingDef>CollapsedRocks</collapseLeavingThingDef>
+    <filthLeaving>RockRubble</filthLeaving>
+  </RoofDef>
+</Roofs>

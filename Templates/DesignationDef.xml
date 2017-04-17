@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DesignationDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <texturePath>string_value</texturePath>
+    <!--Type: Verse.TargetType-->
+    <!--Available Values: Thing, Cell-->
+    <targetType>enum_value</targetType>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <removeIfBuildingDespawned>true_or_false</removeIfBuildingDespawned>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <designateCancelable>true_or_false</designateCancelable>
+  </DesignationDef>
+</Defs>

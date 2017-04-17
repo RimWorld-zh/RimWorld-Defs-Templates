@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ThoughtDefs>
+  <ThoughtDef Name="DeathMemory" Abstract="True">
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+  </ThoughtDef>
+  <!--=================== executions and prisoner deaths ===================-->
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>KnowGuestExecuted</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>justified execution</label>
+        <description>A guilty prisoner or guest was executed. It was justified, but still sad.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li ListIndex="1">
+        <label>someone was euthanized</label>
+        <!-- generic humane -->
+        <description>A prisoner or guest was euthanized. It was humane, but still sad.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li ListIndex="2">
+        <label>someone was executed</label>
+        <!-- generic brutal -->
+        <description>A prisoner or guest was killed in cold blood. It seemed a bit evil.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="3">
+        <label>someone organ-harvested</label>
+        <!-- died because of organ harvesting -->
+        <description>A prisoner or guest died because the colony took body parts from him. It's horrible.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>6</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+      <li ListIndex="1">Bloodlust</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>KnowColonistExecuted</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>justified execution of colonist</label>
+        <description>A guilty colonist was executed. It was justified, but still sad.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li ListIndex="1">
+        <label>colonist euthanized</label>
+        <!-- generic humane, can't be worse than KnowColonistDied -->
+        <description>A colonist was euthanized. It was humane, but still sad.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li ListIndex="2">
+        <label>colonist executed</label>
+        <!-- generic brutal -->
+        <description>A colonist was killed in cold blood. It seemed a bit evil.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li ListIndex="3">
+        <label>colonist organ-harvested</label>
+        <!-- died because of organ harvesting -->
+        <description>A colonist died because someone took body parts from him. It's horrible.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>6</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>KnowPrisonerDiedInnocent</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>innocent prisoner died</label>
+        <description>One of our prisoners died despite being harmless. We should be able to take care of our prisoners. If we wanted them dead, we could have at least conducted an orderly execution rather than permit that barbarism.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>6</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+      <li ListIndex="1">Bloodlust</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>KnowColonistDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>colonist died</label>
+        <description>One of our people died. We should be able to take care of our people.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>6</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+      <li ListIndex="1">Bloodlust</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <!--===================== bonded animal died =====================-->
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>BondedAnimalDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>bonded animal {0} died</label>
+        <description>Such a tender, unique animal. This universe is evil!</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>20</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+    </nullifyingTraits>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <!--===================== friend/rival died =====================-->
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>PawnWithGoodOpinionDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my friend {0} died</label>
+        <description>Such a wonderful person. The universe gets darker every day.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>20</durationDays>
+    <nullifyingTraits>
+      <li ListIndex="0">Psychopath</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>PawnWithBadOpinionDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my rival {0} died</label>
+        <description>Serves them right. Things are looking up.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>10</durationDays>
+  </ThoughtDef>
+  <!--===================== Family member died thoughts =====================-->
+  <ThoughtDef Name="DeathMemoryFamily" ParentName="DeathMemory" Abstract="True">
+    <stackLimit>10</stackLimit>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MySonDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my son {0} died</label>
+        <description>My son is dead. My own flesh and blood...</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyDaughterDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my daughter {0} died</label>
+        <description>My daughter is dead. My own flesh and blood...</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyHusbandDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my husband {0} died</label>
+        <description>My husband is dead. I am alone.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyWifeDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my wife {0} died</label>
+        <description>My wife is dead. I am alone.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyFianceDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my fiance {0} died</label>
+        <description>My fiance died. Such a man... my future is gone.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyFianceeDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my fiancée {0} died</label>
+        <description>My fiancée died. Such a woman... my future is gone.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyLoverDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my lover {0} died</label>
+        <description>My lover died. I am so alone.</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyBrotherDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my brother {0} died</label>
+        <description>My brother died. My own flesh and blood...</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MySisterDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my sister {0} died</label>
+        <description>My sister died. My own flesh and blood...</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyGrandchildDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my grandchild {0} died</label>
+        <description>My grandchild died. My own flesh and blood...</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyFatherDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my father {0} died</label>
+        <description>My father died. He's gone forever.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyMotherDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my mother {0} died</label>
+        <description>My mother died. She's gone forever.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyNieceDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my niece {0} died</label>
+        <description>My niece died. Such a wonderful child.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyNephewDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my nephew {0} died</label>
+        <description>My nephew died. Such a wonderful child.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyHalfSiblingDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my half-sibling {0} died</label>
+        <description>My half-sibling died. My own flesh and blood...</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyAuntDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my aunt {0} died</label>
+        <description>My aunt died.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyUncleDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my uncle {0} died</label>
+        <description>My uncle died.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyGrandparentDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my grandparent {0} died</label>
+        <description>My grandparent died.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyCousinDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my cousin {0} died</label>
+        <description>My cousin died. My own flesh and blood...</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>MyKinDied</defName>
+    <stages>
+      <li ListIndex="0">
+        <label>my kin {0} died</label>
+        <description>My kin died.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <durationDays>30.0</durationDays>
+    <showBubble>true</showBubble>
+  </ThoughtDef>
+</ThoughtDefs>

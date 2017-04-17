@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>TraumaSavant</defName>
+    <label>trauma savant</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <opinionOfOthersFactor>0</opinionOfOthersFactor>
+        <!-- to avoid penalties from brain injuries, so manipulation is 100%+ -->
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Talking</capacity>
+            <setMax>0</setMax>
+          </li>
+          <li ListIndex="1">
+            <capacity>Hearing</capacity>
+            <setMax>0</setMax>
+          </li>
+          <li ListIndex="2">
+            <capacity>Manipulation</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+        <partIgnoreMissingHP>true</partIgnoreMissingHP>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>ChemicalDamageModerate</defName>
+    <label>chemical damage</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>ChemicalDamageSevere</defName>
+    <label>chemical damage</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>Cirrhosis</defName>
+    <label>Cirrhosis</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+        <partEfficiencyOffset>-0.60</partEfficiencyOffset>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef Name="InfectionBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>GutWorms</defName>
+    <label>gut worms</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="1">
+        <tendDuration>120000</tendDuration>
+        <disappearsAtTendedCount>5</disappearsAtTendedCount>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <vomitMtbDays>1.0</vomitMtbDays>
+        <painOffset>0.2</painOffset>
+        <hungerRateFactor>2</hungerRateFactor>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>MuscleParasites</defName>
+    <label>muscle parasites</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="1">
+        <tendDuration>120000</tendDuration>
+        <disappearsAtTendedCount>5</disappearsAtTendedCount>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <painOffset>0.2</painOffset>
+        <restFallFactor>2</restFallFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef Abstract="True" ParentName="InfectionBase" Name="MechanitesBase">
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>900000</min>
+          <max>1800000</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <tendDuration>120000</tendDuration>
+        <severityPerDayTended>-1.0</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <makesAlert>false</makesAlert>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+  </HediffDef>
+  <HediffDef ParentName="MechanitesBase">
+    <defName>FibrousMechanites</defName>
+    <label>fibrous mechanites</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_Disappears" ListIndex="1">
+        <disappearsAfterTicks>
+          <min>900000</min>
+          <max>1800000</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="2">
+        <tendDuration>120000</tendDuration>
+        <severityPerDayTended>-1.0</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable" ListIndex="3">
+        <severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>mild pain</label>
+        <painOffset>0.2</painOffset>
+        <restFallFactor>1.7</restFallFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Manipulation</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>BloodPumping</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.5</minSeverity>
+        <label>intense pain</label>
+        <painOffset>0.6</painOffset>
+        <restFallFactor>2.0</restFallFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Manipulation</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Moving</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>BloodPumping</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <makesAlert>false</makesAlert>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="MechanitesBase">
+    <defName>SensoryMechanites</defName>
+    <label>sensory mechanites</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_Disappears" ListIndex="1">
+        <disappearsAfterTicks>
+          <min>900000</min>
+          <max>1800000</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="2">
+        <tendDuration>120000</tendDuration>
+        <severityPerDayTended>-1.0</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable" ListIndex="3">
+        <severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>mild pain</label>
+        <painOffset>0.2</painOffset>
+        <restFallFactor>1.7</restFallFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Sight</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Hearing</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Talking</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="3">
+            <capacity>Manipulation</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.5</minSeverity>
+        <label>intense pain</label>
+        <painOffset>0.6</painOffset>
+        <restFallFactor>2.0</restFallFactor>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Sight</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Hearing</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Talking</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li ListIndex="3">
+            <capacity>Manipulation</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <makesAlert>false</makesAlert>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>WoundInfection</defName>
+    <label>infection</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="1">
+        <tendDuration>30000</tendDuration>
+        <severityPerDayTended>-0.53</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable" ListIndex="2">
+        <immunityPerDayNotSick>-0.4</immunityPerDayNotSick>
+        <immunityPerDaySick>0.62</immunityPerDaySick>
+        <severityPerDayNotImmune>0.86</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.667</severityPerDayImmune>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>minor</label>
+        <painOffset>0.05</painOffset>
+        <partEfficiencyOffset>-0.10</partEfficiencyOffset>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.33</minSeverity>
+        <label>major</label>
+        <painOffset>0.08</painOffset>
+        <partEfficiencyOffset>-0.30</partEfficiencyOffset>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.78</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.12</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <partEfficiencyOffset>-0.50</partEfficiencyOffset>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.87</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.85</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+          <li ListIndex="1">
+            <capacity>Breathing</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <partEfficiencyOffset>-0.70</partEfficiencyOffset>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>Flu</defName>
+    <label>flu</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="1">
+        <tendDuration>30000</tendDuration>
+        <severityPerDayTended>-0.09</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable" ListIndex="2">
+        <immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+        <immunityPerDaySick>0.173</immunityPerDaySick>
+        <severityPerDayNotImmune>0.166</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.333</severityPerDayImmune>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>minor-hidden</label>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.333</minSeverity>
+        <label>minor</label>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Breathing</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.666</minSeverity>
+        <label>major</label>
+        <vomitMtbDays>1.5</vomitMtbDays>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Breathing</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.833</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <vomitMtbDays>0.75</vomitMtbDays>
+        <painOffset>0.05</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Breathing</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>Plague</defName>
+    <label>plague</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="1">
+        <tendDuration>30000</tendDuration>
+        <severityPerDayTended>-0.30</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable" ListIndex="2">
+        <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
+        <immunityPerDaySick>0.3</immunityPerDaySick>
+        <severityPerDayNotImmune>0.4</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.2</severityPerDayImmune>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>minor</label>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.4</minSeverity>
+        <label>minor</label>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.6</minSeverity>
+        <label>major</label>
+        <painOffset>0.35</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.8</minSeverity>
+        <label>extreme</label>
+        <painOffset>0.6</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="4">
+        <minSeverity>0.9</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.85</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Breathing</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>Malaria</defName>
+    <label>malaria</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="1">
+        <tendDuration>30000</tendDuration>
+        <severityPerDayTended>-0.1145</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable" ListIndex="2">
+        <immunityPerDayNotSick>-0.03</immunityPerDayNotSick>
+        <immunityPerDaySick>0.12</immunityPerDaySick>
+        <severityPerDayNotImmune>0.137</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.27</severityPerDayImmune>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>hidden</label>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.63</minSeverity>
+        <label>minor</label>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.78</minSeverity>
+        <label>major</label>
+        <vomitMtbDays>1.5</vomitMtbDays>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Consciousness</capacity>
+            <offset>-0.12</offset>
+          </li>
+          <li ListIndex="2">
+            <capacity>Manipulation</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.91</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <vomitMtbDays>0.75</vomitMtbDays>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.22</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+          <li ListIndex="2">
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>SleepingSickness</defName>
+    <label>sleeping sickness</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable" ListIndex="0">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration" ListIndex="1">
+        <tendDuration>80000</tendDuration>
+        <severityPerDayTended>-0.025</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable" ListIndex="2">
+        <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
+        <immunityPerDaySick>0.036</immunityPerDaySick>
+        <severityPerDayNotImmune>0.0417</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.125</severityPerDayImmune>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>minor-hidden</label>
+        <everVisible>false</everVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.29</minSeverity>
+        <label>minor</label>
+        <painOffset>0.02</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.02</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.02</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.4375</minSeverity>
+        <label>minor</label>
+        <painOffset>0.03</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.04</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.04</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.625</minSeverity>
+        <label>major</label>
+        <vomitMtbDays>3.5</vomitMtbDays>
+        <painOffset>0.05</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.06</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="4">
+        <minSeverity>0.875</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <vomitMtbDays>1.75</vomitMtbDays>
+        <painOffset>0.1</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li ListIndex="5">
+        <minSeverity>0.9375</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <vomitMtbDays>1</vomitMtbDays>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <tendable>true</tendable>
+    <makesSickThought>true</makesSickThought>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+</Defs>

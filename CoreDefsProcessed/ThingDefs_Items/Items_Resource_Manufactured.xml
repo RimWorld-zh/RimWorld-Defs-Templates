@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--=============== Medicine ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>HerbalMedicine</defName>
+    <label>herbal medicine</label>
+    <description>A pack of herbal concoctions typically extracted from the healroot plant. Less potent than industrial pharmaceuticals, but much better than nothing.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>12</MarketValue>
+      <Mass>0.35</Mass>
+      <Flammability>1.0</Flammability>
+      <MedicalPotency>0.60</MedicalPotency>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Medicine</thingClass>
+    <category>Item</category>
+    <tickerType>Rare</tickerType>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>150</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/MedicineHerbal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Medicine</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Standard_Drop</soundInteract>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Medicine</defName>
+    <label>medicine</label>
+    <description>Medical staff use these supplies to heal the wounded.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>18</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>1.0</Flammability>
+      <MedicalPotency>1.00</MedicalPotency>
+      <DeteriorationRate>2</DeteriorationRate>
+      <WorkToMake>700</WorkToMake>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <HerbalMedicine>1</HerbalMedicine>
+      <Neutroamine>1</Neutroamine>
+      <Cloth>3</Cloth>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Medicine</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+      <skillRequirements>
+        <li ListIndex="0">
+          <skill>Medicine</skill>
+          <minLevel>6</minLevel>
+        </li>
+        <li ListIndex="1">
+          <skill>Crafting</skill>
+          <minLevel>3</minLevel>
+        </li>
+      </skillRequirements>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li ListIndex="0">DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>MedicineProduction</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Medicine</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Standard_Drop</soundInteract>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>GlitterworldMedicine</defName>
+    <label>glitterworld medicine</label>
+    <description>Advanced medical supplies from a high-tech glitterworld.</description>
+    <statBases>
+      <MarketValue>100</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>1.0</Flammability>
+      <MedicalPotency>2.2</MedicalPotency>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Medicine</thingClass>
+    <category>Item</category>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/MedicineGlitterworld</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Medicine</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Standard_Drop</soundInteract>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+  </ThingDef>
+  <!--=============== Shells ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>MortarShell</defName>
+    <label>mortar shell</label>
+    <description>An explosive shell to be fired from mortars. Explodes when damaged.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>3.5</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>25</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Explosive" ListIndex="1">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>10</min>
+          <max>30</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Manufactured</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+  </ThingDef>
+  <!--=============== Component ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Component</defName>
+    <label>component</label>
+    <description>Miscellaneous gears, capacitors, circuit boards, tubes, wheels, sensors, wires, chips, processors, and other electronic and industrial parts. Necessary for assembling complex machines or electronics.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>21</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>50</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <intricate>true</intricate>
+    <graphicData>
+      <texPath>Things/Item/Resource/Component</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Manufactured</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+  </ThingDef>
+  <!--=============== Neutroamine ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Neutroamine</defName>
+    <label>neutroamine</label>
+    <description>A synthetic precursor chemical. Useless on its own, many drugs require neutroamine as an ingredient.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>400</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/Resource/Neutroamine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+  <!--=============== Chemfuel ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Chemfuel</defName>
+    <label>chemfuel</label>
+    <description>Volatile liquid chemical compound. Used to fuel rockets and other machines.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>3</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>400</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Explosive" ListIndex="1">
+        <explosiveRadius>1.1</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+        <startWickOnDamageTaken>Flame</startWickOnDamageTaken>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>70</min>
+          <max>150</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <deepCommonality>2</deepCommonality>
+    <deepCountPerCell>300</deepCountPerCell>
+    <graphicData>
+      <texPath>Things/Item/Resource/Chemfuel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>

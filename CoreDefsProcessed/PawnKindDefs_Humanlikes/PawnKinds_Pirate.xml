@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PawnKindDefs>
+  <PawnKindDef Name="PirateBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <backstoryCategory>Raider</backstoryCategory>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelTags>
+      <li>Outlander</li>
+    </apparelTags>
+    <invNutrition>2.55</invNutrition>
+    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateBase">
+    <defName>Drifter</defName>
+    <label>drifter</label>
+    <race>Human</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <backstoryCategory>Raider</backstoryCategory>
+    <labelPlural>drifters</labelPlural>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>0.6</max>
+    </gearHealthRange>
+    <combatPower>25</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>90</min>
+      <max>280</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Outlander</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0.2</apparelAllowHeadwearChance>
+    <weaponMoney>
+      <min>60</min>
+      <max>100</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">Melee</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>35</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li ListIndex="0">Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.1</techHediffsChance>
+    <itemQuality>Shoddy</itemQuality>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li ListIndex="0">
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>30</min>
+            <max>70</max>
+          </countRange>
+        </li>
+        <li ListIndex="1">
+          <thingDef>Medicine</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <invNutrition>0</invNutrition>
+    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateBase">
+    <defName>Scavenger</defName>
+    <label>scavenger</label>
+    <race>Human</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <backstoryCategory>Raider</backstoryCategory>
+    <labelPlural>scavengers</labelPlural>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>0.9</max>
+    </gearHealthRange>
+    <combatPower>38</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>300</min>
+      <max>500</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Outlander</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0.3</apparelAllowHeadwearChance>
+    <weaponMoney>
+      <min>250</min>
+      <max>450</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>35</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li ListIndex="0">Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.1</techHediffsChance>
+    <itemQuality>Poor</itemQuality>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li ListIndex="0">
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>25</min>
+            <max>50</max>
+          </countRange>
+        </li>
+        <li ListIndex="1">
+          <thingDef>Medicine</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <invNutrition>2.55</invNutrition>
+    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateBase">
+    <defName>Thrasher</defName>
+    <label>thrasher</label>
+    <race>Human</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <backstoryCategory>Raider</backstoryCategory>
+    <labelPlural>thrashers</labelPlural>
+    <backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
+    <maxGenerationAge>48</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.4</min>
+      <max>1.1</max>
+    </gearHealthRange>
+    <factionLeader>true</factionLeader>
+    <combatPower>36</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>300</min>
+      <max>800</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Outlander</li>
+      <li ListIndex="1">Outlander</li>
+      <li ListIndex="2">BeltDefense</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0.8</apparelAllowHeadwearChance>
+    <weaponMoney>
+      <min>60</min>
+      <max>150</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">Melee</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>35</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li ListIndex="0">Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.1</techHediffsChance>
+    <itemQuality>Poor</itemQuality>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li ListIndex="0">
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>25</min>
+            <max>50</max>
+          </countRange>
+        </li>
+        <li ListIndex="1">
+          <thingDef>Medicine</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <invNutrition>2.55</invNutrition>
+    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateBase">
+    <defName>Pirate</defName>
+    <label>pirate</label>
+    <race>Human</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <backstoryCategory>Raider</backstoryCategory>
+    <labelPlural>pirates</labelPlural>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    <maxGenerationAge>50</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.4</min>
+      <max>1.5</max>
+    </gearHealthRange>
+    <factionLeader>true</factionLeader>
+    <combatPower>56</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>500</min>
+      <max>1100</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Outlander</li>
+      <li ListIndex="1">Outlander</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0.7</apparelAllowHeadwearChance>
+    <weaponMoney>
+      <min>450</min>
+      <max>600</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>35</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li ListIndex="0">Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.1</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li ListIndex="0">
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>40</min>
+            <max>80</max>
+          </countRange>
+        </li>
+        <li ListIndex="1">
+          <thingDef>Medicine</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <invNutrition>2.55</invNutrition>
+    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+  </PawnKindDef>
+</PawnKindDefs>

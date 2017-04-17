@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionDefs>
+  <!-- Random social interactions -->
+  <InteractionDef>
+    <defName>Chitchat</defName>
+    <label>chitchat</label>
+    <workerClass>InteractionWorker_Chitchat</workerClass>
+    <initiatorThought>Chitchat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>Chitchat</recipientThought>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Had a nice chat with [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef>
+    <defName>DeepTalk</defName>
+    <label>deep talk</label>
+    <workerClass>InteractionWorker_DeepTalk</workerClass>
+    <initiatorThought>DeepTalk</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>10</initiatorXpGainAmount>
+    <recipientThought>DeepTalk</recipientThought>
+    <symbol>Things/Mote/SpeechSymbols/DeepTalk</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Had a deep talk with [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef>
+    <defName>Slight</defName>
+    <label>slight</label>
+    <workerClass>InteractionWorker_Slight</workerClass>
+    <socialFightBaseChance>0.005</socialFightBaseChance>
+    <recipientThought>Slighted</recipientThought>
+    <symbol>Things/Mote/SpeechSymbols/Slight</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Slighted [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <logRulesRecipient>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Was slighted by [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesRecipient>
+  </InteractionDef>
+  <InteractionDef>
+    <defName>Insult</defName>
+    <label>insult</label>
+    <workerClass>InteractionWorker_Insult</workerClass>
+    <socialFightBaseChance>0.04</socialFightBaseChance>
+    <recipientThought>Insulted</recipientThought>
+    <symbol>Things/Mote/SpeechSymbols/Insult</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Insulted [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <logRulesRecipient>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Was insulted by [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesRecipient>
+  </InteractionDef>
+  <InteractionDef>
+    <defName>KindWords</defName>
+    <label>kind words</label>
+    <workerClass>InteractionWorker_KindWords</workerClass>
+    <recipientThought>KindWords</recipientThought>
+    <symbol>Things/Mote/SpeechSymbols/KindWords</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Said kind words to [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <logRulesRecipient>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Had kind words bestowed by [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesRecipient>
+  </InteractionDef>
+</InteractionDefs>

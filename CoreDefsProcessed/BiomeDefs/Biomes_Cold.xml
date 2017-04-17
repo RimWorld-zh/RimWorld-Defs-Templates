@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BiomeDef>
+    <defName>BorealForest</defName>
+    <label>boreal forest</label>
+    <description>Forests of coniferous trees. Despite the harsh winters, boreal forests sustain a diverse population of small and large animals, and have warm summers. Snow makes it extremely slow to travel in winter.</description>
+    <workerClass>BiomeWorker_BorealForest</workerClass>
+    <implemented>true</implemented>
+    <animalDensity>3.0</animalDensity>
+    <plantDensity>0.5</plantDensity>
+    <diseaseMtbDays>50</diseaseMtbDays>
+    <factionBaseSelectionWeight>0.9</factionBaseSelectionWeight>
+    <pathCost>
+      <points>
+        <li ListIndex="0">(0, 44000)</li>
+        <li ListIndex="1">(0.4, 1750)</li>
+        <li ListIndex="2">(0.6, 1750)</li>
+        <li ListIndex="3">(1, 44000)</li>
+      </points>
+    </pathCost>
+    <baseWeatherCommonalities>
+      <Clear>18</Clear>
+      <Fog>1</Fog>
+      <Rain>2</Rain>
+      <DryThunderstorm>1</DryThunderstorm>
+      <RainyThunderstorm>1</RainyThunderstorm>
+      <FoggyRain>1</FoggyRain>
+      <SnowGentle>4</SnowGentle>
+      <SnowHard>4</SnowHard>
+    </baseWeatherCommonalities>
+    <terrainsByFertility>
+      <li ListIndex="0">
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.87</max>
+      </li>
+      <li ListIndex="1">
+        <terrain>SoilRich</terrain>
+        <min>0.87</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <soundsAmbient>
+      <li ListIndex="0">AmbientNightInsects_Standard</li>
+    </soundsAmbient>
+    <terrainPatchMakers>
+      <li ListIndex="0">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>MossyTerrain</terrain>
+            <min>0.0</min>
+            <max>0.32</max>
+          </li>
+          <li ListIndex="1">
+            <terrain>Marsh</terrain>
+            <min>0.32</min>
+            <max>0.76</max>
+          </li>
+          <li ListIndex="2">
+            <terrain>WaterShallow</terrain>
+            <min>0.76</min>
+            <max>0.98</max>
+          </li>
+          <li ListIndex="3">
+            <terrain>WaterDeep</terrain>
+            <min>0.98</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.015</perlinFrequency>
+      </li>
+    </terrainPatchMakers>
+    <wildPlants>
+      <PlantRaspberry>1.8</PlantRaspberry>
+      <PlantWildHealroot>0.3</PlantWildHealroot>
+      <PlantBush>3.0</PlantBush>
+      <PlantGrass>8.0</PlantGrass>
+      <PlantMoss>4.0</PlantMoss>
+      <PlantTreePoplar>1.2</PlantTreePoplar>
+      <PlantTreePine>5.0</PlantTreePine>
+      <PlantTreeBirch>1.5</PlantTreeBirch>
+    </wildPlants>
+    <wildAnimals>
+      <Elk>0.5</Elk>
+      <Ibex>0.4</Ibex>
+      <Caribou>0.5</Caribou>
+      <Muffalo>0.5</Muffalo>
+      <Squirrel>1</Squirrel>
+      <WildBoar>0.5</WildBoar>
+      <Hare>1</Hare>
+      <Husky>0.01</Husky>
+      <Turkey>0.2</Turkey>
+      <Deer>0.03</Deer>
+      <Rat>0.8</Rat>
+      <Megasloth>0.03</Megasloth>
+      <Raccoon>0.4</Raccoon>
+      <Warg>0.02</Warg>
+      <GrizzlyBear>0.03</GrizzlyBear>
+      <Cougar>0.02</Cougar>
+      <Lynx>0.02</Lynx>
+      <WolfTimber>0.14</WolfTimber>
+      <WolfArctic>0.03</WolfArctic>
+      <FoxArctic>0.04</FoxArctic>
+      <FoxRed>0.04</FoxRed>
+    </wildAnimals>
+    <diseases>
+      <li ListIndex="0">
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="1">
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="2">
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="3">
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="4">
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>50</commonality>
+      </li>
+      <li ListIndex="5">
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>50</commonality>
+      </li>
+    </diseases>
+    <allowedPackAnimals>
+      <li ListIndex="0">Muffalo</li>
+    </allowedPackAnimals>
+    <texture>World/Biomes/BorealForest</texture>
+  </BiomeDef>
+  <BiomeDef>
+    <defName>Tundra</defName>
+    <label>tundra</label>
+    <description>These mostly-frozen plains bear almost no trees and little vegetation. There are a few small animals interspersed with large herds of migratory grazers and their predators. Snow makes it extremely slow to travel in winter.</description>
+    <workerClass>BiomeWorker_Tundra</workerClass>
+    <implemented>true</implemented>
+    <animalDensity>1.0</animalDensity>
+    <plantDensity>0.25</plantDensity>
+    <diseaseMtbDays>80</diseaseMtbDays>
+    <factionBaseSelectionWeight>0.32</factionBaseSelectionWeight>
+    <pathCost>
+      <points>
+        <li ListIndex="0">(0, 44000)</li>
+        <li ListIndex="1">(0.4, 0)</li>
+        <li ListIndex="2">(0.6, 0)</li>
+        <li ListIndex="3">(1, 44000)</li>
+      </points>
+    </pathCost>
+    <baseWeatherCommonalities>
+      <Clear>18</Clear>
+      <Fog>1</Fog>
+      <Rain>2</Rain>
+      <DryThunderstorm>1</DryThunderstorm>
+      <RainyThunderstorm>1</RainyThunderstorm>
+      <FoggyRain>1</FoggyRain>
+      <SnowGentle>4</SnowGentle>
+      <SnowHard>4</SnowHard>
+    </baseWeatherCommonalities>
+    <terrainsByFertility>
+      <li ListIndex="0">
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.87</max>
+      </li>
+      <li ListIndex="1">
+        <terrain>SoilRich</terrain>
+        <min>0.87</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <soundsAmbient>
+      <li ListIndex="0">AmbientNightInsects_Standard</li>
+    </soundsAmbient>
+    <terrainPatchMakers>
+      <li ListIndex="0">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>MossyTerrain</terrain>
+            <min>0.64</min>
+            <max>0.83</max>
+          </li>
+          <li ListIndex="1">
+            <terrain>Marsh</terrain>
+            <min>0.83</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.015</perlinFrequency>
+      </li>
+    </terrainPatchMakers>
+    <wildPlants>
+      <PlantRaspberry>0.01</PlantRaspberry>
+      <PlantWildHealroot>0.005</PlantWildHealroot>
+      <PlantBush>0.03</PlantBush>
+      <PlantAstragalus>0.01</PlantAstragalus>
+      <PlantDandelion>0.01</PlantDandelion>
+      <PlantGrass>0.3</PlantGrass>
+      <PlantMoss>0.05</PlantMoss>
+      <PlantTreePine>0.01</PlantTreePine>
+      <PlantTreeBirch>0.01</PlantTreeBirch>
+    </wildPlants>
+    <wildAnimals>
+      <Elk>0.25</Elk>
+      <Ibex>0.1</Ibex>
+      <Caribou>0.75</Caribou>
+      <Muffalo>0.5</Muffalo>
+      <Squirrel>1</Squirrel>
+      <Hare>1</Hare>
+      <Snowhare>1</Snowhare>
+      <Husky>0.01</Husky>
+      <Rat>0.4</Rat>
+      <Megasloth>0.02</Megasloth>
+      <Warg>0.03</Warg>
+      <PolarBear>0.01</PolarBear>
+      <GrizzlyBear>0.02</GrizzlyBear>
+      <Cougar>0.01</Cougar>
+      <Lynx>0.02</Lynx>
+      <WolfTimber>0.04</WolfTimber>
+      <WolfArctic>0.12</WolfArctic>
+      <FoxArctic>0.04</FoxArctic>
+      <FoxRed>0.01</FoxRed>
+    </wildAnimals>
+    <diseases>
+      <li ListIndex="0">
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="1">
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li ListIndex="2">
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li ListIndex="3">
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li ListIndex="4">
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="5">
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+    </diseases>
+    <allowedPackAnimals>
+      <li ListIndex="0">Muffalo</li>
+    </allowedPackAnimals>
+    <texture>World/Biomes/Tundra</texture>
+  </BiomeDef>
+  <BiomeDef>
+    <defName>IceSheet</defName>
+    <label>ice sheet</label>
+    <description>The surface is covered with sheets of ice which can be kilometers thick. No soil, no plants. The only animals here are migrating to somewhere else - or badly lost. Snow slows down travel, but there are ice sheets that provide smooth walking.</description>
+    <workerClass>BiomeWorker_IceSheet</workerClass>
+    <animalDensity>0.4</animalDensity>
+    <plantDensity>0</plantDensity>
+    <diseaseMtbDays>90</diseaseMtbDays>
+    <factionBaseSelectionWeight>0.15</factionBaseSelectionWeight>
+    <hasVirtualPlants>false</hasVirtualPlants>
+    <pathCost>
+      <points>
+        <li ListIndex="0">(0, 5500)</li>
+      </points>
+    </pathCost>
+    <baseWeatherCommonalities>
+      <Clear>12</Clear>
+      <Fog>0</Fog>
+      <Rain>0</Rain>
+      <DryThunderstorm>2</DryThunderstorm>
+      <RainyThunderstorm>0</RainyThunderstorm>
+      <FoggyRain>0</FoggyRain>
+      <SnowGentle>20</SnowGentle>
+      <SnowHard>40</SnowHard>
+    </baseWeatherCommonalities>
+    <terrainsByFertility>
+      <li ListIndex="0">
+        <terrain>Ice</terrain>
+        <min>-999</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <soundsAmbient>
+      <li ListIndex="0">AmbientWind_Desolate</li>
+    </soundsAmbient>
+    <terrainPatchMakers>
+      <li ListIndex="0">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>WaterShallow</terrain>
+            <min>0.76</min>
+            <max>0.98</max>
+          </li>
+          <li ListIndex="1">
+            <terrain>WaterDeep</terrain>
+            <min>0.98</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.015</perlinFrequency>
+      </li>
+    </terrainPatchMakers>
+    <wildAnimals>
+      <Snowhare>1</Snowhare>
+      <Muffalo>0.08</Muffalo>
+      <Megasloth>0.003</Megasloth>
+      <PolarBear>0.08</PolarBear>
+      <Lynx>0.01</Lynx>
+      <WolfArctic>0.02</WolfArctic>
+      <FoxArctic>0.02</FoxArctic>
+    </wildAnimals>
+    <diseases>
+      <li ListIndex="0">
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="1">
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li ListIndex="2">
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="3">
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+    </diseases>
+    <allowedPackAnimals>
+      <li ListIndex="0">Muffalo</li>
+    </allowedPackAnimals>
+    <texture>World/Biomes/IceSheet</texture>
+  </BiomeDef>
+  <BiomeDef>
+    <defName>SeaIce</defName>
+    <label>sea ice</label>
+    <description>Permanent ice sheets floating on water. There is no soil, no plants, no minerals to mine, and very few animals. Travel is very slow due to the deep snow and crevasses.</description>
+    <workerClass>BiomeWorker_SeaIce</workerClass>
+    <canAutoChoose>false</canAutoChoose>
+    <animalDensity>0.1</animalDensity>
+    <plantDensity>0</plantDensity>
+    <diseaseMtbDays>80</diseaseMtbDays>
+    <factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
+    <hasVirtualPlants>false</hasVirtualPlants>
+    <pathCost>
+      <points>
+        <li ListIndex="0">(0, 11000)</li>
+      </points>
+    </pathCost>
+    <baseWeatherCommonalities>
+      <Clear>12</Clear>
+      <Fog>0</Fog>
+      <Rain>0</Rain>
+      <DryThunderstorm>2</DryThunderstorm>
+      <RainyThunderstorm>0</RainyThunderstorm>
+      <FoggyRain>0</FoggyRain>
+      <SnowGentle>8</SnowGentle>
+      <SnowHard>8</SnowHard>
+    </baseWeatherCommonalities>
+    <terrainsByFertility>
+      <li ListIndex="0">
+        <terrain>Ice</terrain>
+        <min>-999</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <soundsAmbient>
+      <li ListIndex="0">AmbientWind_Desolate</li>
+    </soundsAmbient>
+    <terrainPatchMakers>
+      <li ListIndex="0">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>WaterShallow</terrain>
+            <min>0.76</min>
+            <max>0.98</max>
+          </li>
+          <li ListIndex="1">
+            <terrain>WaterDeep</terrain>
+            <min>0.98</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.015</perlinFrequency>
+      </li>
+    </terrainPatchMakers>
+    <wildAnimals>
+      <Snowhare>1</Snowhare>
+      <Muffalo>0.08</Muffalo>
+      <PolarBear>0.08</PolarBear>
+      <WolfArctic>0.02</WolfArctic>
+      <FoxArctic>0.02</FoxArctic>
+    </wildAnimals>
+    <diseases>
+      <li ListIndex="0">
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="1">
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li ListIndex="2">
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="3">
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+    </diseases>
+    <allowedPackAnimals>
+      <li ListIndex="0">Muffalo</li>
+    </allowedPackAnimals>
+    <texture>World/Biomes/IceSheetOcean</texture>
+  </BiomeDef>
+</Defs>

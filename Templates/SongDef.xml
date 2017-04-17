@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SongDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <clipPath>string_value</clipPath>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <volume>float_value</volume>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <playOnMap>true_or_false</playOnMap>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <commonality>float_value</commonality>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <tense>true_or_false</tense>
+    <!--Type: Verse.TimeOfDay-->
+    <!--Available Values: Night, Day, Any-->
+    <!--Default Value: Any-->
+    <allowedTimeOfDay>enum_value</allowedTimeOfDay>
+    <!--Type: List<RimWorld.Season>-->
+    <allowedSeasons>
+      <!--Type: RimWorld.Season-->
+      <!--Available Values: Undefined, Spring, Summer, Fall, Winter-->
+      <li>enum_value</li>
+      <!-- ... -->
+    </allowedSeasons>
+  </SongDef>
+</Defs>
