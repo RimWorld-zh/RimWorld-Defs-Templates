@@ -54,7 +54,7 @@
       <max>45</max>
     </allowedArrivalTemperatureRange>
     <pawnsPlural>outlanders</pawnsPlural>
-    <leaderTitle>mayor</leaderTitle>
+    <leaderTitle>prime councilor</leaderTitle>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
     <baseSelectionWeight>1</baseSelectionWeight>

@@ -155,6 +155,7 @@
         <min>0.3</min>
         <max>1.4</max>
       </visualSizeRange>
+      <immatureGraphicPath>Things/Plant/CornImmature</immatureGraphicPath>
     </plant>
   </ThingDef>
   <ThingDef ParentName="PlantBase">
@@ -208,6 +209,7 @@
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
+      <immatureGraphicPath>Things/Plant/StrawberryImmature</immatureGraphicPath>
     </plant>
   </ThingDef>
   <ThingDef ParentName="PlantBase">
@@ -313,6 +315,7 @@
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
+      <immatureGraphicPath>Things/Plant/CottonImmature</immatureGraphicPath>
     </plant>
   </ThingDef>
   <ThingDef ParentName="PlantBase">

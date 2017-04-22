@@ -10,6 +10,9 @@
     <label>string_value</label>
     <!--Type: int-->
     <priority>int_value</priority>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <ancientOnly>true_or_false</ancientOnly>
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <movementCostMultiplier>float_value</movementCostMultiplier>
@@ -19,10 +22,10 @@
     <!--Type: RimWorld.RoadPathingDef-->
     <pathingMode>RoadPathingDef_defName</pathingMode>
     <!--Complex List-->
-    <!--Type: List<RimWorld.RoadDef+RoadGenStep>-->
+    <!--Type: List<RimWorld.RoadDefGenStep>-->
     <roadGenSteps>
-      <!--Type: RimWorld.RoadDef+RoadGenStep-->
-      <li>
+      <!--Type: RimWorld.RoadDefGenStep_Bulldoze-->
+      <li Class="RoadDefGenStep_Bulldoze">
         <!--Type: Verse.SimpleCurve-->
         <chancePerPositionCurve>
           <!--Type: List<Verse.CurvePoint>-->
@@ -32,10 +35,60 @@
             <!-- ... -->
           </points>
         </chancePerPositionCurve>
+      </li>
+      <!--Type: RimWorld.RoadDefGenStep_DryWithFallback-->
+      <li Class="RoadDefGenStep_DryWithFallback">
+        <!--Type: Verse.SimpleCurve-->
+        <chancePerPositionCurve>
+          <!--Type: List<Verse.CurvePoint>-->
+          <points>
+            <!--Type: Verse.CurvePoint-->
+            <li>value</li>
+            <!-- ... -->
+          </points>
+        </chancePerPositionCurve>
+        <!--Type: Verse.TerrainDef-->
+        <fallback>TerrainDef_defName</fallback>
+      </li>
+      <!--Type: RimWorld.RoadDefGenStep_Place-->
+      <li Class="RoadDefGenStep_Place">
+        <!--Type: Verse.SimpleCurve-->
+        <chancePerPositionCurve>
+          <!--Type: List<Verse.CurvePoint>-->
+          <points>
+            <!--Type: Verse.CurvePoint-->
+            <li>value</li>
+            <!-- ... -->
+          </points>
+        </chancePerPositionCurve>
+        <!--Type: float-->
+        <antialiasingMultiplier>float_value</antialiasingMultiplier>
+        <!--Type: int-->
+        <periodicSpacing>int_value</periodicSpacing>
         <!--Type: Verse.BuildableDef-->
         <place>BuildableDef_defName</place>
+        <!--Type: int-->
+        <proximitySpacing>int_value</proximitySpacing>
       </li>
       <!-- ... -->
     </roadGenSteps>
+    <!--Complex List-->
+    <!--Type: List<RimWorld.RoadDef+WorldRenderStep>-->
+    <worldRenderSteps>
+      <!--Type: RimWorld.RoadDef+WorldRenderStep-->
+      <li>
+        <!--Type: RimWorld.RoadWorldLayerDef-->
+        <layer>RoadWorldLayerDef_defName</layer>
+        <!--Type: float-->
+        <width>float_value</width>
+      </li>
+      <!-- ... -->
+    </worldRenderSteps>
+    <!--Type: string-->
+    <worldTransitionGroup>string_value</worldTransitionGroup>
+    <!--Type: float-->
+    <distortionFrequency>float_value</distortionFrequency>
+    <!--Type: float-->
+    <distortionIntensity>float_value</distortionIntensity>
   </RoadDef>
 </Defs>

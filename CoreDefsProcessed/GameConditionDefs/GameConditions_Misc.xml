@@ -1,101 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<MapConditionDefs>
-  <MapConditionDef>
+<GameConditionDefs>
+  <GameConditionDef>
     <defName>SolarFlare</defName>
     <label>solar flare</label>
     <description>A solar flare is hitting the planet. This creates extreme electrical interference and prevents most electrical devices from working.</description>
     <endMessage>The solar flare is ending.</endMessage>
     <canBePermanent>true</canBePermanent>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>Eclipse</defName>
     <label>eclipse</label>
     <description>An eclipse is shadowing the surface. It will be dark, even during the daytime.</description>
-    <conditionClass>MapCondition_Eclipse</conditionClass>
+    <conditionClass>GameCondition_Eclipse</conditionClass>
     <endMessage>The eclipse is ending.</endMessage>
     <canBePermanent>true</canBePermanent>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>PsychicDrone</defName>
     <label>psychic drone</label>
     <description>A distant, powerful AI is emitting waves of psychic force that are driving people towards insanity.</description>
-    <conditionClass>MapCondition_PsychicEmanation</conditionClass>
+    <conditionClass>GameCondition_PsychicEmanation</conditionClass>
     <exclusiveConditions>
       <li ListIndex="0">PsychicSoothe</li>
     </exclusiveConditions>
     <endMessage>The psychic drone is ending.</endMessage>
     <canBePermanent>true</canBePermanent>
     <droneLevel>BadMedium</droneLevel>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>PsychicSoothe</defName>
     <label>psychic soothe</label>
     <description>A distant, powerful AI is emitting waves of psychic force that are calming people and stabilizing their minds.</description>
-    <conditionClass>MapCondition_PsychicEmanation</conditionClass>
+    <conditionClass>GameCondition_PsychicEmanation</conditionClass>
     <exclusiveConditions>
       <li ListIndex="0">PsychicDrone</li>
     </exclusiveConditions>
     <endMessage>The psychic soothe is ending.</endMessage>
     <canBePermanent>true</canBePermanent>
     <droneLevel>GoodMedium</droneLevel>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>ToxicFallout</defName>
     <label>toxic fallout</label>
     <description>A plume of toxic dust from some distant source is slowly settling over this entire region of the planet. Anyone not under a roof will be slowly poisoned.</description>
-    <conditionClass>MapCondition_ToxicFallout</conditionClass>
+    <conditionClass>GameCondition_ToxicFallout</conditionClass>
     <endMessage>The worst of the toxic fallout has settled.</endMessage>
     <canBePermanent>true</canBePermanent>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>VolcanicWinter</defName>
     <label>volcanic winter</label>
     <description>The atmosphere is choked with volcanic particles, significantly reducing the amount of light which reaches the surface. Temperatures will be colder and plants will grow slower.</description>
-    <conditionClass>MapCondition_VolcanicWinter</conditionClass>
+    <conditionClass>GameCondition_VolcanicWinter</conditionClass>
     <endMessage>Most of the volcanic ash has settled.</endMessage>
     <canBePermanent>true</canBePermanent>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>HeatWave</defName>
     <label>heat wave</label>
     <description>An extreme wave of heat is baking the area.</description>
-    <conditionClass>MapCondition_HeatWave</conditionClass>
+    <conditionClass>GameCondition_HeatWave</conditionClass>
     <exclusiveConditions>
       <li ListIndex="0">ColdSnap</li>
       <li ListIndex="1">VolcanicWinter</li>
     </exclusiveConditions>
     <endMessage>The heat wave is over.</endMessage>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>ColdSnap</defName>
     <label>cold snap</label>
     <description>An unusual cold snap is freezing the region.</description>
-    <conditionClass>MapCondition_ColdSnap</conditionClass>
+    <conditionClass>GameCondition_ColdSnap</conditionClass>
     <exclusiveConditions>
       <li ListIndex="0">HeatWave</li>
     </exclusiveConditions>
     <endMessage>The cold snap is over.</endMessage>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>Flashstorm</defName>
     <label>flashstorm</label>
     <description>Extreme amounts of lightning are hitting a small region.</description>
-    <conditionClass>MapCondition_Flashstorm</conditionClass>
+    <conditionClass>GameCondition_Flashstorm</conditionClass>
     <endMessage>The flashstorm is over.</endMessage>
     <canBePermanent>true</canBePermanent>
     <preventRain>true</preventRain>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>ClimateCycle</defName>
     <label>climate cycle</label>
     <description>A multi-year climate cycle due to an elliptical orbit.</description>
-    <conditionClass>MapCondition_ClimateCycle</conditionClass>
+    <conditionClass>GameCondition_ClimateCycle</conditionClass>
     <canBePermanent>true</canBePermanent>
-  </MapConditionDef>
-  <MapConditionDef>
+  </GameConditionDef>
+  <GameConditionDef>
     <defName>Planetkiller</defName>
     <label>planetkiller</label>
     <description>An interstellar planetkiller weapon is approaching this planet. When it hits, it will destroy all life.</description>
-    <conditionClass>MapCondition_Planetkiller</conditionClass>
-  </MapConditionDef>
-</MapConditionDefs>
+    <conditionClass>GameCondition_Planetkiller</conditionClass>
+  </GameConditionDef>
+</GameConditionDefs>

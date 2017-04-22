@@ -4,9 +4,6 @@
     <defName>Avoid</defName>
   </RoadPathingDef>
   <RoadPathingDef>
-    <defName>Underlay</defName>
-  </RoadPathingDef>
-  <RoadPathingDef>
     <defName>Bulldoze</defName>
   </RoadPathingDef>
 </Defs>

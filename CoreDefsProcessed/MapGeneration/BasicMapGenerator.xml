@@ -39,9 +39,15 @@
     <genStep Class="GenStep_Terrain" />
   </GenStepDef>
   <GenStepDef>
+    <defName>Roads</defName>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
+    <order>250</order>
+    <genStep Class="GenStep_Roads" />
+  </GenStepDef>
+  <GenStepDef>
     <defName>RockChunks</defName>
     <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
-    <order>220</order>
+    <order>270</order>
     <genStep Class="GenStep_RockChunks" />
   </GenStepDef>
   <!-- Empty ruins -->
@@ -56,12 +62,6 @@
       </countPer10kCellsRange>
       <allowOnWater>false</allowOnWater>
     </genStep>
-  </GenStepDef>
-  <GenStepDef>
-    <defName>Roads</defName>
-    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
-    <order>400</order>
-    <genStep Class="GenStep_Roads" />
   </GenStepDef>
   <!-- Steam geysers -->
   <GenStepDef>

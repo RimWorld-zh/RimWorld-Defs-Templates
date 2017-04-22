@@ -304,6 +304,64 @@
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <fillPercent>0.25</fillPercent>
   </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>LongRangeMineralScanner</defName>
+    <label>long-range mineral scanner</label>
+    <description>Automatically detects precious minerals like gold or jade in the nearby areas (but not in which it was built). The lumps are found on average once per 30 days within a radius of 30 tiles. Building more than one scanner in the same or nearby areas has little to no effect.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-8</Beauty>
+    </statBases>
+    <pathCost>25</pathCost>
+    <costList>
+      <Steel>250</Steel>
+      <Component>8</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">LongRangeMineralScanner</li>
+    </researchPrerequisites>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <size>(2, 2)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="1" />
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_LongRangeMineralScanner" ListIndex="3" />
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Misc/LongRangeMineralScanner</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+      <shadowData>
+        <volume>(1.4, 0.5, 1.4)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.25</fillPercent>
+  </ThingDef>
   <!--========================== Transport pods ============================-->
   <ThingDef ParentName="BuildingBase">
     <defName>PodLauncher</defName>

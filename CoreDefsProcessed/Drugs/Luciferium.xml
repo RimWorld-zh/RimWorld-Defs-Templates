@@ -3,7 +3,7 @@
   <ThingDef ParentName="DrugPillBase">
     <defName>Luciferium</defName>
     <label>luciferium</label>
-    <description>A concoction of advanced glitterworld mechanites that dramatically improve the body's functioning in all respects. Unfortunately, without the moderating effects of regular doses every five or six days, the mechanites lose cohesion, causing continuous berserk rages and, eventually, death.\n\nAfter the first dose, there is no way to get the mechanites out, ever.\n\nOn the urbworlds, they call Luciferium the 'Devil's Bargain'. Many have been forced to kill friends when no more of the seductive red pills could be found.</description>
+    <description>A concoction of advanced glitterworld mechanites that dramatically improve the body's functioning in all respects. It can even, over time, heal old scarred-over wounds or brain damage. Unfortunately, without the moderating effects of regular doses every five or six days, the mechanites lose cohesion, causing continuous berserk rages and, eventually, death.\n\nAfter the first dose, there is no way to get the mechanites out, ever.\n\nOn the urbworlds, they call Luciferium the 'Devil's Bargain'. Many have been forced to kill friends when no more of the seductive red pills could be found.</description>
     <statBases>
       <MarketValue>120</MarketValue>
       <Mass>0.01</Mass>

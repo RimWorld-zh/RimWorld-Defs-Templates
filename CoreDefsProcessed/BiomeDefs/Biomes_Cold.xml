@@ -7,15 +7,16 @@
     <workerClass>BiomeWorker_BorealForest</workerClass>
     <implemented>true</implemented>
     <animalDensity>3.0</animalDensity>
-    <plantDensity>0.5</plantDensity>
+    <plantDensity>0.30</plantDensity>
     <diseaseMtbDays>50</diseaseMtbDays>
     <factionBaseSelectionWeight>0.9</factionBaseSelectionWeight>
     <pathCost>
       <points>
-        <li ListIndex="0">(0, 44000)</li>
-        <li ListIndex="1">(0.4, 1750)</li>
-        <li ListIndex="2">(0.6, 1750)</li>
-        <li ListIndex="3">(1, 44000)</li>
+        <li ListIndex="0">(0, 26000)</li>
+        <li ListIndex="1">(0.23, 1750)</li>
+        <li ListIndex="2">(0.43, 1750)</li>
+        <li ListIndex="3">(0.83, 44000)</li>
+        <li ListIndex="4">(1, 26000)</li>
       </points>
     </pathCost>
     <baseWeatherCommonalities>
@@ -71,14 +72,14 @@
       </li>
     </terrainPatchMakers>
     <wildPlants>
-      <PlantRaspberry>1.8</PlantRaspberry>
-      <PlantWildHealroot>0.3</PlantWildHealroot>
-      <PlantBush>3.0</PlantBush>
-      <PlantGrass>8.0</PlantGrass>
+      <PlantGrass>10.0</PlantGrass>
       <PlantMoss>4.0</PlantMoss>
-      <PlantTreePoplar>1.2</PlantTreePoplar>
+      <PlantBush>3.0</PlantBush>
       <PlantTreePine>5.0</PlantTreePine>
+      <PlantRaspberry>1.8</PlantRaspberry>
       <PlantTreeBirch>1.5</PlantTreeBirch>
+      <PlantTreePoplar>1.2</PlantTreePoplar>
+      <PlantWildHealroot>0.3</PlantWildHealroot>
     </wildPlants>
     <wildAnimals>
       <Elk>0.5</Elk>
@@ -141,15 +142,16 @@
     <workerClass>BiomeWorker_Tundra</workerClass>
     <implemented>true</implemented>
     <animalDensity>1.0</animalDensity>
-    <plantDensity>0.25</plantDensity>
+    <plantDensity>0.14</plantDensity>
     <diseaseMtbDays>80</diseaseMtbDays>
     <factionBaseSelectionWeight>0.32</factionBaseSelectionWeight>
     <pathCost>
       <points>
-        <li ListIndex="0">(0, 44000)</li>
-        <li ListIndex="1">(0.4, 0)</li>
-        <li ListIndex="2">(0.6, 0)</li>
-        <li ListIndex="3">(1, 44000)</li>
+        <li ListIndex="0">(0, 25300)</li>
+        <li ListIndex="1">(0.23, 0)</li>
+        <li ListIndex="2">(0.43, 0)</li>
+        <li ListIndex="3">(0.83, 44000)</li>
+        <li ListIndex="4">(1, 25300)</li>
       </points>
     </pathCost>
     <baseWeatherCommonalities>
@@ -195,15 +197,15 @@
       </li>
     </terrainPatchMakers>
     <wildPlants>
-      <PlantRaspberry>0.01</PlantRaspberry>
-      <PlantWildHealroot>0.005</PlantWildHealroot>
+      <PlantGrass>0.36</PlantGrass>
+      <PlantMoss>0.05</PlantMoss>
       <PlantBush>0.03</PlantBush>
+      <PlantRaspberry>0.01</PlantRaspberry>
       <PlantAstragalus>0.01</PlantAstragalus>
       <PlantDandelion>0.01</PlantDandelion>
-      <PlantGrass>0.3</PlantGrass>
-      <PlantMoss>0.05</PlantMoss>
-      <PlantTreePine>0.01</PlantTreePine>
-      <PlantTreeBirch>0.01</PlantTreeBirch>
+      <PlantTreePine>0.005</PlantTreePine>
+      <PlantTreeBirch>0.005</PlantTreeBirch>
+      <PlantWildHealroot>0.005</PlantWildHealroot>
     </wildPlants>
     <wildAnimals>
       <Elk>0.25</Elk>
@@ -262,6 +264,8 @@
     <label>ice sheet</label>
     <description>The surface is covered with sheets of ice which can be kilometers thick. No soil, no plants. The only animals here are migrating to somewhere else - or badly lost. Snow slows down travel, but there are ice sheets that provide smooth walking.</description>
     <workerClass>BiomeWorker_IceSheet</workerClass>
+    <allowRoads>false</allowRoads>
+    <allowRivers>false</allowRivers>
     <animalDensity>0.4</animalDensity>
     <plantDensity>0</plantDensity>
     <diseaseMtbDays>90</diseaseMtbDays>
@@ -347,6 +351,8 @@
     <description>Permanent ice sheets floating on water. There is no soil, no plants, no minerals to mine, and very few animals. Travel is very slow due to the deep snow and crevasses.</description>
     <workerClass>BiomeWorker_SeaIce</workerClass>
     <canAutoChoose>false</canAutoChoose>
+    <allowRoads>false</allowRoads>
+    <allowRivers>false</allowRivers>
     <animalDensity>0.1</animalDensity>
     <plantDensity>0</plantDensity>
     <diseaseMtbDays>80</diseaseMtbDays>

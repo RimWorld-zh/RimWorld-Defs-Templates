@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- =========================== Good ============================-->
+  <IncidentDef>
+    <defName>ResourcePodCrash</defName>
+    <label>resource pod crash</label>
+    <workerClass>IncidentWorker_ResourcePodCrash</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>2.6</baseChance>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>PsychicSoothe</defName>
+    <label>psychic soothe</label>
+    <workerClass>IncidentWorker_PsychicSoothe</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>1.0</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <durationDays>
+      <min>1.5</min>
+      <max>3.0</max>
+    </durationDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>SelfTame</defName>
+    <label>self-tame</label>
+    <workerClass>IncidentWorker_SelfTame</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.75</baseChance>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>AmbrosiaSprout</defName>
+    <label>ambrosia sprout</label>
+    <workerClass>IncidentWorker_AmbrosiaSprout</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.35</baseChance>
+    <allowedBiomes>
+      <li ListIndex="0">TropicalRainforest</li>
+      <li ListIndex="1">TemperateForest</li>
+      <li ListIndex="2">BorealForest</li>
+      <li ListIndex="3">AridShrubland</li>
+    </allowedBiomes>
+    <letterText>A grove of the mysterious ambrosia bush has sprouted nearby! If you wait for the plants to grow, you'll be able to harvest the delicious, pleasurable, and slightly addictive fruit.</letterText>
+    <letterLabel>Ambrosia sprout</letterLabel>
+    <letterType>Good</letterType>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>FarmAnimalsWanderIn</defName>
+    <label>farm animals wander in</label>
+    <workerClass>IncidentWorker_FarmAnimalsWanderIn</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.2</baseChance>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>WandererJoin</defName>
+    <label>wanderer join</label>
+    <workerClass>IncidentWorker_WandererJoin</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.2</baseChance>
+    <populationEffect>Increase</populationEffect>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>RefugeePodCrash</defName>
+    <label>refugee pod crash</label>
+    <workerClass>IncidentWorker_RefugeePodCrash</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>1.0</baseChance>
+    <populationEffect>Increase</populationEffect>
+  </IncidentDef>
+  <!-- =========================== Neutral ============================-->
+  <IncidentDef>
+    <defName>RefugeeChased</defName>
+    <label>chased refugee</label>
+    <workerClass>IncidentWorker_RefugeeChased</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>2.5</baseChance>
+    <populationEffect>Increase</populationEffect>
+    <minRefireDays>8</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>ThrumboPasses</defName>
+    <label>thrumbos pass</label>
+    <workerClass>IncidentWorker_ThrumboPasses</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.7</baseChance>
+    <minRefireDays>13</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>RansomDemand</defName>
+    <label>ransom demand</label>
+    <workerClass>IncidentWorker_RansomDemand</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>2</baseChance>
+    <populationEffect>Increase</populationEffect>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>CaravanRequest</defName>
+    <label>caravan request</label>
+    <workerClass>IncidentWorker_CaravanRequest</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>1</baseChance>
+  </IncidentDef>
+  <!--========================== Bad ===============================-->
+  <IncidentDef>
+    <defName>PsychicDrone</defName>
+    <label>psychic drone</label>
+    <workerClass>IncidentWorker_PsychicDrone</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>1.0</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <gameCondition>PsychicDrone</gameCondition>
+    <durationDays>
+      <min>0.75</min>
+      <max>1.75</max>
+    </durationDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>ToxicFallout</defName>
+    <label>toxic fallout</label>
+    <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.15</baseChance>
+    <earliestDay>20</earliestDay>
+    <minRefireDays>90</minRefireDays>
+    <minDifficulty>2</minDifficulty>
+    <letterText>A distant chemical fire has released a plume of poison over this entire region.\n\nAny person or creature not under a roof will be slowly sickened by the toxic dust settling out of the atmosphere.\n\nIt will last for anywhere between a few days to over a season.</letterText>
+    <letterLabel>Toxic fallout</letterLabel>
+    <letterType>BadNonUrgent</letterType>
+    <gameCondition>ToxicFallout</gameCondition>
+    <durationDays>
+      <min>2.5</min>
+      <max>10.5</max>
+    </durationDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>VolcanicWinter</defName>
+    <label>volcanic winter</label>
+    <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.08</baseChance>
+    <earliestDay>30</earliestDay>
+    <minRefireDays>140</minRefireDays>
+    <minDifficulty>2</minDifficulty>
+    <letterText>A distant supervolcano has erupted and begun spewing millions of cubic kilometers of ash into the atmosphere.\n\nAsh in the atmosphere will obscure the sun. Temperatures will drop and plants will suffer for lack of sunlight. It could pass in a few weeks, or it might last many seasons.</letterText>
+    <letterLabel>Volcanic winter</letterLabel>
+    <letterType>BadNonUrgent</letterType>
+    <gameCondition>VolcanicWinter</gameCondition>
+    <durationDays>
+      <min>7.5</min>
+      <max>40</max>
+    </durationDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>HeatWave</defName>
+    <label>heat wave</label>
+    <workerClass>IncidentWorker_HeatWave</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>3</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <letterText>An unusual heat wave has begun. Watch out for heat stroke.</letterText>
+    <letterLabel>Heat wave</letterLabel>
+    <letterType>BadNonUrgent</letterType>
+    <gameCondition>HeatWave</gameCondition>
+    <durationDays>
+      <min>1.5</min>
+      <max>3.5</max>
+    </durationDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>ColdSnap</defName>
+    <label>cold snap</label>
+    <workerClass>IncidentWorker_ColdSnap</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>3</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <letterText>An unusual cold snap has set in. Watch out for hypothermia and dying crops.</letterText>
+    <letterLabel>Cold snap</letterLabel>
+    <letterType>BadNonUrgent</letterType>
+    <gameCondition>ColdSnap</gameCondition>
+    <durationDays>
+      <min>1.5</min>
+      <max>3.5</max>
+    </durationDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>Flashstorm</defName>
+    <label>flashstorm</label>
+    <workerClass>IncidentWorker_Flashstorm</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <minDifficulty>2</minDifficulty>
+    <letterText>Extreme amounts of lightning are hitting a small region. This can cause massive fires.</letterText>
+    <letterLabel>Flashstorm</letterLabel>
+    <letterType>BadNonUrgent</letterType>
+    <durationDays>
+      <min>0.075</min>
+      <max>0.1</max>
+    </durationDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>ShortCircuit</defName>
+    <label>short circuit</label>
+    <workerClass>IncidentWorker_ShortCircuit</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>1.2</baseChance>
+    <minRefireDays>8</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>CropBlight</defName>
+    <label>crop blight</label>
+    <workerClass>IncidentWorker_CropBlight</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>35</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>Alphabeavers</defName>
+    <label>alphabeavers</label>
+    <workerClass>IncidentWorker_Alphabeavers</workerClass>
+    <category>Misc</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>1.0</baseChance>
+    <minRefireDays>8</minRefireDays>
+    <allowedBiomes>
+      <li ListIndex="0">BorealForest</li>
+      <li ListIndex="1">TemperateForest</li>
+      <li ListIndex="2">TropicalRainforest</li>
+    </allowedBiomes>
+  </IncidentDef>
+</Defs>

@@ -42,6 +42,14 @@
     <!--Type: bool-->
     <!--Default Value: true-->
     <useHitPoints>true_or_false</useHitPoints>
+    <!--Type: Verse.FloatRange-->
+    <!--Default Value: new FloatRange(1f, 1f)-->
+    <startingHpRange>
+      <!--Type: float-->
+      <min>float_value</min>
+      <!--Type: float-->
+      <max>float_value</max>
+    </startingHpRange>
     <!--Type: Verse.GraphicData-->
     <graphicData>
       <!--Type: string-->
@@ -187,6 +195,8 @@
       </visualSizeRange>
       <!--Type: string-->
       <leaflessGraphicPath>string_value</leaflessGraphicPath>
+      <!--Type: string-->
+      <immatureGraphicPath>string_value</immatureGraphicPath>
     </plant>
   </ThingDef>
 </Defs>

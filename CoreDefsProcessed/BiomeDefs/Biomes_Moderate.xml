@@ -7,9 +7,22 @@
     <description>Open ocean. Great for fish - not so great for you.</description>
     <workerClass>BiomeWorker_Ocean</workerClass>
     <canBuildBase>false</canBuildBase>
+    <allowRoads>false</allowRoads>
+    <allowRivers>false</allowRivers>
     <impassable>true</impassable>
     <hasVirtualPlants>false</hasVirtualPlants>
-    <hideTerrain>true</hideTerrain>
+    <texture>World/Biomes/Ocean</texture>
+  </BiomeDef>
+  <BiomeDef>
+    <defName>Lake</defName>
+    <label>lake</label>
+    <description>A large lake. Beautiful to live next to. Not so beautiful to live in.</description>
+    <workerClass>BiomeWorker_Ocean</workerClass>
+    <canBuildBase>false</canBuildBase>
+    <allowRoads>false</allowRoads>
+    <allowRivers>false</allowRivers>
+    <impassable>true</impassable>
+    <hasVirtualPlants>false</hasVirtualPlants>
     <texture>World/Biomes/Ocean</texture>
   </BiomeDef>
   <!-- ======== Buildable biomes ==========-->
@@ -19,15 +32,16 @@
     <description>Forests of deciduous trees interspersed with fertile clearings. Many species of animals move around in the trees and on the plains. Because of snow, it is slow to travel in winter.</description>
     <workerClass>BiomeWorker_TemperateForest</workerClass>
     <animalDensity>5.5</animalDensity>
-    <plantDensity>0.83</plantDensity>
+    <plantDensity>0.55</plantDensity>
     <diseaseMtbDays>45</diseaseMtbDays>
     <factionBaseSelectionWeight>1</factionBaseSelectionWeight>
     <pathCost>
       <points>
-        <li ListIndex="0">(0, 27500)</li>
-        <li ListIndex="1">(0.2, 1650)</li>
-        <li ListIndex="2">(0.8, 1650)</li>
-        <li ListIndex="3">(1, 27500)</li>
+        <li ListIndex="0">(0, 5500)</li>
+        <li ListIndex="1">(0.03, 1650)</li>
+        <li ListIndex="2">(0.63, 1650)</li>
+        <li ListIndex="3">(0.83, 27500)</li>
+        <li ListIndex="4">(1, 5500)</li>
       </points>
     </pathCost>
     <baseWeatherCommonalities>
@@ -83,13 +97,13 @@
       </li>
     </terrainPatchMakers>
     <wildPlants>
-      <PlantRaspberry>0.1</PlantRaspberry>
-      <PlantWildHealroot>0.05</PlantWildHealroot>
-      <PlantBush>0.7</PlantBush>
-      <PlantGrass>6.9</PlantGrass>
+      <PlantGrass>8.0</PlantGrass>
       <PlantDandelion>0.8</PlantDandelion>
+      <PlantBush>0.7</PlantBush>
       <PlantTreeOak>0.5</PlantTreeOak>
       <PlantTreePoplar>0.5</PlantTreePoplar>
+      <PlantRaspberry>0.1</PlantRaspberry>
+      <PlantWildHealroot>0.05</PlantWildHealroot>
     </wildPlants>
     <wildAnimals>
       <Gazelle>0.05</Gazelle>
@@ -157,7 +171,7 @@
     <description>A thick, moist jungle. Despite its visual beauty, this is a very dangerous biome. Choking overgrowth, aggressive animals, and constant disease are why some explorers call this the "green hell".</description>
     <workerClass>BiomeWorker_TropicalRainforest</workerClass>
     <animalDensity>7.2</animalDensity>
-    <plantDensity>1.0</plantDensity>
+    <plantDensity>0.85</plantDensity>
     <diseaseMtbDays>30</diseaseMtbDays>
     <factionBaseSelectionWeight>0.7</factionBaseSelectionWeight>
     <pathCost>
@@ -219,12 +233,12 @@
       </li>
     </terrainPatchMakers>
     <wildPlants>
-      <PlantRaspberry>0.1</PlantRaspberry>
-      <PlantBush>0.7</PlantBush>
-      <PlantTallGrass>6.9</PlantTallGrass>
+      <PlantTallGrass>7.0</PlantTallGrass>
       <PlantDandelion>0.8</PlantDandelion>
-      <PlantTreeTeak>0.3</PlantTreeTeak>
+      <PlantBush>0.7</PlantBush>
       <PlantTreeCecropia>0.6</PlantTreeCecropia>
+      <PlantTreeTeak>0.3</PlantTreeTeak>
+      <PlantRaspberry>0.1</PlantRaspberry>
     </wildPlants>
     <wildAnimals>
       <Elephant>0.05</Elephant>

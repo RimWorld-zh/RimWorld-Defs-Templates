@@ -23,6 +23,13 @@
     <fillPercent>0.4</fillPercent>
     <tradeability>Never</tradeability>
   </ThingDef>
+  <ThingDef ParentName="ChunkBase" Name="ChunkRockBase" Abstract="True">
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <flipExtraRotation>80</flipExtraRotation>
+    </graphicData>
+  </ThingDef>
   <ThingDef ParentName="ResourceBase" Name="StoneBlocksBase" Abstract="True">
     <description>Blocks of stone. Mostly useful for building long-lasting, simple structures.</description>
     <statBases>
@@ -158,7 +165,7 @@
       <mineableYieldWasteable>false</mineableYieldWasteable>
     </building>
   </ThingDef>
-  <ThingDef ParentName="ChunkBase">
+  <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkSandstone</defName>
     <label>sandstone chunk</label>
     <statBases>
@@ -183,6 +190,7 @@
       <texPath>Things/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(126,104,94)</color>
+      <flipExtraRotation>80</flipExtraRotation>
     </graphicData>
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
@@ -340,7 +348,7 @@
       <mineableYieldWasteable>false</mineableYieldWasteable>
     </building>
   </ThingDef>
-  <ThingDef ParentName="ChunkBase">
+  <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkGranite</defName>
     <label>granite chunk</label>
     <statBases>
@@ -365,6 +373,7 @@
       <texPath>Things/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(105,95,97)</color>
+      <flipExtraRotation>80</flipExtraRotation>
     </graphicData>
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
@@ -521,7 +530,7 @@
       <mineableYieldWasteable>false</mineableYieldWasteable>
     </building>
   </ThingDef>
-  <ThingDef ParentName="ChunkBase">
+  <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkLimestone</defName>
     <label>limestone chunk</label>
     <statBases>
@@ -546,6 +555,7 @@
       <texPath>Things/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(158,153,135)</color>
+      <flipExtraRotation>80</flipExtraRotation>
     </graphicData>
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
@@ -702,7 +712,7 @@
       <mineableYieldWasteable>false</mineableYieldWasteable>
     </building>
   </ThingDef>
-  <ThingDef ParentName="ChunkBase">
+  <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkSlate</defName>
     <label>slate chunk</label>
     <statBases>
@@ -727,6 +737,7 @@
       <texPath>Things/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(90,90,90)</color>
+      <flipExtraRotation>80</flipExtraRotation>
     </graphicData>
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
@@ -884,7 +895,7 @@
       <mineableYieldWasteable>false</mineableYieldWasteable>
     </building>
   </ThingDef>
-  <ThingDef ParentName="ChunkBase">
+  <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkMarble</defName>
     <label>marble chunk</label>
     <statBases>
@@ -909,6 +920,7 @@
       <texPath>Things/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(132,135,132)</color>
+      <flipExtraRotation>80</flipExtraRotation>
     </graphicData>
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>

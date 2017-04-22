@@ -5,7 +5,7 @@
     <label>manhunter pack</label>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Manhunters</expandingIconTexture>
-    <workerClass>SitePartWorker_Manhunters</workerClass>
+    <knownDanger>true</knownDanger>
   </SitePartDef>
   <GenStepDef>
     <defName>Manhunters</defName>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RoadWorldLayerDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: int-->
+    <order>int_value</order>
+    <!--Type: UnityEngine.Color-->
+    <color>value</color>
+  </RoadWorldLayerDef>
+</Defs>

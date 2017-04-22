@@ -2,15 +2,15 @@
 <IncidentDefs>
   <IncidentDef Name="DiseaseIncident" Abstract="True">
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
   </IncidentDef>
   <IncidentDef ParentName="DiseaseIncident">
     <defName>Disease_Flu</defName>
     <label>flu</label>
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
     <diseaseIncident>Flu</diseaseIncident>
     <diseaseVictimFractionRange>
       <min>0.2</min>
@@ -21,8 +21,8 @@
     <defName>Disease_Plague</defName>
     <label>plague</label>
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
     <diseaseIncident>Plague</diseaseIncident>
     <diseaseVictimFractionRange>
       <min>0.2</min>
@@ -33,8 +33,8 @@
     <defName>Disease_Malaria</defName>
     <label>malaria</label>
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
     <diseaseIncident>Malaria</diseaseIncident>
     <diseaseVictimFractionRange>
       <min>0.2</min>
@@ -45,8 +45,8 @@
     <defName>Disease_SleepingSickness</defName>
     <label>sleeping sickness</label>
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
     <diseaseIncident>SleepingSickness</diseaseIncident>
     <diseaseVictimFractionRange>
       <min>0.2</min>
@@ -57,8 +57,8 @@
     <defName>Disease_FibrousMechanites</defName>
     <label>fibrous mechanites</label>
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
     <diseaseIncident>FibrousMechanites</diseaseIncident>
     <diseaseVictimFractionRange>
       <min>0.2</min>
@@ -69,8 +69,8 @@
     <defName>Disease_SensoryMechanites</defName>
     <label>sensory mechanites</label>
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
     <diseaseIncident>SensoryMechanites</diseaseIncident>
     <diseaseVictimFractionRange>
       <min>0.2</min>
@@ -81,8 +81,8 @@
     <defName>Disease_GutWorms</defName>
     <label>gut worms</label>
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
     <diseaseIncident>GutWorms</diseaseIncident>
     <diseaseVictimFractionRange>
       <min>0.2</min>
@@ -96,8 +96,8 @@
     <defName>Disease_MuscleParasites</defName>
     <label>muscle parasites</label>
     <workerClass>IncidentWorker_Disease</workerClass>
-    <targetType>BaseMap</targetType>
     <category>Disease</category>
+    <targetType>MapPlayerHome</targetType>
     <diseaseIncident>MuscleParasites</diseaseIncident>
     <diseaseVictimFractionRange>
       <min>0.2</min>

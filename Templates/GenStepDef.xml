@@ -34,6 +34,8 @@
     <genStep Class="GenStep_RocksFromGrid">value</genStep>
     <!--Type: RimWorld.GenStep_Terrain-->
     <genStep Class="GenStep_Terrain">value</genStep>
+    <!--Type: RimWorld.GenStep_Roads-->
+    <genStep Class="GenStep_Roads">value</genStep>
     <!--Type: RimWorld.GenStep_RockChunks-->
     <genStep Class="GenStep_RockChunks">value</genStep>
     <!--Type: RimWorld.GenStep_ScatterRuinsSimple-->
@@ -50,8 +52,6 @@
       <!--Default Value: true-->
       <allowOnWater>true_or_false</allowOnWater>
     </genStep>
-    <!--Type: RimWorld.GenStep_Roads-->
-    <genStep Class="GenStep_Roads">value</genStep>
     <!--Type: Verse.GenStep_ScatterThings-->
     <genStep Class="GenStep_ScatterThings">
       <!--Type: Verse.FloatRange-->
@@ -141,13 +141,12 @@
       <!--Type: bool-->
       <!--Default Value: false-->
       <nearMapCenter>true_or_false</nearMapCenter>
-      <!--Type: List<Verse.ItemDefPreset>-->
-      <stockpileContents>
-        <!--Type: Verse.ItemDefPreset-->
-        <!--Available Values: RandomGeneralGoods, RawResources, Weapons, Apparel, Artifacts-->
-        <li>enum_value</li>
+      <!--Type: List<RimWorld.ItemCollectionGeneratorDef>-->
+      <itemCollectionGeneratorDefs>
+        <!--Type: RimWorld.ItemCollectionGeneratorDef-->
+        <li>ItemCollectionGeneratorDef_defName</li>
         <!-- ... -->
-      </stockpileContents>
+      </itemCollectionGeneratorDefs>
       <!--Type: Verse.FloatRange-->
       <!--Default Value: new FloatRange(1000f, 2000f)-->
       <totalValueRange>

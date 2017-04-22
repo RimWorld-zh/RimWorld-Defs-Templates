@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <!-- ============================== Big threats ==============================-->
   <IncidentDef>
     <defName>RaidEnemy</defName>
     <label>enemy raid</label>
     <workerClass>IncidentWorker_RaidEnemy</workerClass>
-    <targetType>BaseMap</targetType>
-    <baseChance>7.4</baseChance>
     <category>ThreatBig</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>7.4</baseChance>
     <pointsScaleable>true</pointsScaleable>
   </IncidentDef>
   <IncidentDef>
     <defName>Infestation</defName>
     <label>infestation</label>
     <workerClass>IncidentWorker_Infestation</workerClass>
-    <targetType>BaseMap</targetType>
-    <baseChance>2.7</baseChance>
     <category>ThreatBig</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>2.7</baseChance>
     <minRefireDays>20</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
     <minThreatPoints>400</minThreatPoints>
@@ -27,9 +28,9 @@
     <defName>ManhunterPack</defName>
     <label>manhunter pack</label>
     <workerClass>IncidentWorker_ManhunterPack</workerClass>
-    <targetType>BaseMap</targetType>
-    <baseChance>2.0</baseChance>
     <category>ThreatBig</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>2.0</baseChance>
     <minRefireDays>8</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
   </IncidentDef>
@@ -37,9 +38,9 @@
     <defName>PsychicEmanatorShipPartCrash</defName>
     <label>ship part crash (psychic)</label>
     <workerClass>IncidentWorker_PsychicEmanatorShipPartCrash</workerClass>
-    <targetType>BaseMap</targetType>
-    <baseChance>2.0</baseChance>
     <category>ThreatBig</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>2.0</baseChance>
     <minRefireDays>15</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
     <minThreatPoints>450</minThreatPoints>
@@ -58,9 +59,9 @@
     <defName>PoisonShipPartCrash</defName>
     <label>ship part crash (poison)</label>
     <workerClass>IncidentWorker_PoisonShipPartCrash</workerClass>
-    <targetType>BaseMap</targetType>
-    <baseChance>2.0</baseChance>
     <category>ThreatBig</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>2.0</baseChance>
     <minRefireDays>15</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
     <minThreatPoints>450</minThreatPoints>
@@ -79,10 +80,20 @@
     <defName>AnimalInsanityMass</defName>
     <label>mass animal insanity</label>
     <workerClass>IncidentWorker_AnimalInsanityMass</workerClass>
-    <targetType>BaseMap</targetType>
-    <baseChance>1.3</baseChance>
     <category>ThreatBig</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>1.3</baseChance>
     <minRefireDays>1</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
+  </IncidentDef>
+  <!-- ============================== Small threats ==============================-->
+  <IncidentDef>
+    <defName>AnimalInsanitySingle</defName>
+    <label>single animal insanity</label>
+    <workerClass>IncidentWorker_AnimalInsanitySingle</workerClass>
+    <category>ThreatSmall</category>
+    <targetType>MapPlayerHome</targetType>
+    <baseChance>5</baseChance>
+    <minRefireDays>2</minRefireDays>
   </IncidentDef>
 </Defs>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <MapConditionDef>
+  <GameConditionDef>
     <!--Type: string-->
     <!--Default Value: "UnnamedDef"-->
     <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
@@ -12,12 +12,11 @@
     <!--Desc: A human-readable description given when the Def is inspected by players.-->
     <description>string_value</description>
     <!--Type: System.Type-->
-    <!--Default Value: typeof(MapCondition)-->
     <conditionClass>class_name</conditionClass>
-    <!--Type: List<Verse.MapConditionDef>-->
+    <!--Type: List<Verse.GameConditionDef>-->
     <exclusiveConditions>
-      <!--Type: Verse.MapConditionDef-->
-      <li>MapConditionDef_defName</li>
+      <!--Type: Verse.GameConditionDef-->
+      <li>GameConditionDef_defName</li>
       <!-- ... -->
     </exclusiveConditions>
     <!--Type: string-->
@@ -27,10 +26,9 @@
     <canBePermanent>true_or_false</canBePermanent>
     <!--Type: RimWorld.PsychicDroneLevel-->
     <!--Available Values: None, GoodMedium, BadLow, BadMedium, BadHigh, BadExtreme-->
-    <!--Default Value: BadMedium-->
     <droneLevel>enum_value</droneLevel>
     <!--Type: bool-->
     <!--Default Value: false-->
     <preventRain>true_or_false</preventRain>
-  </MapConditionDef>
+  </GameConditionDef>
 </Defs>

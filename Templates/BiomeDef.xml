@@ -22,6 +22,12 @@
     <!--Type: bool-->
     <!--Default Value: true-->
     <canAutoChoose>true_or_false</canAutoChoose>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <allowRoads>true_or_false</allowRoads>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <allowRivers>true_or_false</allowRivers>
     <!--Type: float-->
     <animalDensity>float_value</animalDensity>
     <!--Type: float-->
@@ -139,9 +145,6 @@
       <li>ThingDef_defName</li>
       <!-- ... -->
     </allowedPackAnimals>
-    <!--Type: bool-->
-    <!--Default Value: false-->
-    <hideTerrain>true_or_false</hideTerrain>
     <!--Type: string-->
     <texture>string_value</texture>
   </BiomeDef>

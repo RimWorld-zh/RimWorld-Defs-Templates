@@ -24,6 +24,9 @@
     <label>faction base</label>
     <description>A base of one of the factions.</description>
     <worldObjectClass>FactionBase</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_CaravanRequest" ListIndex="0" />
+    </comps>
     <expandingIcon>true</expandingIcon>
     <expandingIconPriority>10</expandingIconPriority>
   </WorldObjectDef>
@@ -57,6 +60,7 @@
     <label>attacked caravan</label>
     <description>A caravan under attack.</description>
     <worldObjectClass>CaravansBattlefield</worldObjectClass>
+    <isTempIncidentMapOwner>true</isTempIncidentMapOwner>
     <expandingIcon>true</expandingIcon>
     <expandingIconTexture>World/WorldObjects/Expanding/Ambush</expandingIconTexture>
     <expandingIconPriority>80</expandingIconPriority>
@@ -89,6 +93,11 @@
   <WorldObjectDef>
     <defName>Site</defName>
     <worldObjectClass>Site</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_Timeout" ListIndex="0" />
+      <li Class="WorldObjectCompProperties_DefeatAllEnemiesQuest" ListIndex="1" />
+      <li Class="WorldObjectCompProperties_ItemStashContents" ListIndex="2" />
+    </comps>
     <expandingIcon>true</expandingIcon>
     <expandingIconPriority>70</expandingIconPriority>
   </WorldObjectDef>

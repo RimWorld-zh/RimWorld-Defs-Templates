@@ -299,4 +299,15 @@
     <disabledWorkTags>Firefighting</disabledWorkTags>
     <commonality>0.3</commonality>
   </TraitDef>
+  <TraitDef>
+    <defName>Wimp</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>wimp</label>
+        <description>NAME is weak and cowardly. Even a little pain will immobilize HIM.</description>
+        <painShockThreshold>0.15</painShockThreshold>
+      </li>
+    </degreeDatas>
+    <commonality>0.15</commonality>
+  </TraitDef>
 </TraitDefs>

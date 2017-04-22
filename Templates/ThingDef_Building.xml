@@ -414,6 +414,8 @@
       <li Class="CompProperties_Transporter" />
       <!--Type: RimWorld.CompProperties_Launchable-->
       <li Class="CompProperties_Launchable" />
+      <!--Type: RimWorld.CompProperties_LongRangeMineralScanner-->
+      <li Class="CompProperties_LongRangeMineralScanner" />
       <!--Type: RimWorld.CompProperties_TerrainPumpDry-->
       <li Class="CompProperties_TerrainPumpDry">
         <!--Type: float-->

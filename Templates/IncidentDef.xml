@@ -10,23 +10,23 @@
     <label>string_value</label>
     <!--Type: System.Type-->
     <workerClass>class_name</workerClass>
+    <!--Type: RimWorld.IncidentCategory-->
+    <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, JourneyOffer, Disease, CaravanTarget, AllyAssistance-->
+    <!--Default Value: Misc-->
+    <category>enum_value</category>
     <!--Type: RimWorld.IncidentTargetType-->
-    <!--Available Values: None, BaseMap, TempMap, Caravan, World-->
+    <!--Available Values: None, MapPlayerHome, MapTempIncident, MapMisc, Caravan, World, All-->
     <targetType>enum_value</targetType>
     <!--Type: float-->
     <baseChance>float_value</baseChance>
-    <!--Type: RimWorld.IncidentCategory-->
-    <!--Available Values: ThreatSmall, ThreatBig, Misc, AllyArrival, OrbitalVisitor, ShipChunkDrop, JourneyOffer, Disease, CaravanTarget, AllyAssistance-->
-    <!--Default Value: Misc-->
-    <category>enum_value</category>
     <!--Type: RimWorld.IncidentPopulationEffect-->
     <!--Available Values: Decrease, None, Increase-->
     <!--Default Value: None-->
     <populationEffect>enum_value</populationEffect>
     <!--Type: int-->
     <earliestDay>int_value</earliestDay>
-    <!--Type: int-->
-    <minRefireDays>int_value</minRefireDays>
+    <!--Type: float-->
+    <minRefireDays>float_value</minRefireDays>
     <!--Type: int-->
     <minDifficulty>int_value</minDifficulty>
     <!--Type: bool-->
@@ -60,8 +60,8 @@
     <!--Type: Verse.LetterType-->
     <!--Available Values: Good, BadNonUrgent, BadUrgent-->
     <letterType>enum_value</letterType>
-    <!--Type: Verse.MapConditionDef-->
-    <mapCondition>MapConditionDef_defName</mapCondition>
+    <!--Type: Verse.GameConditionDef-->
+    <gameCondition>GameConditionDef_defName</gameCondition>
     <!--Type: Verse.FloatRange-->
     <durationDays>
       <!--Type: float-->

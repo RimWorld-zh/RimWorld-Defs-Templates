@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TerrainDef Name="BurnedFloorBase" Abstract="True">
+    <statBases>
+      <Beauty>-30</Beauty>
+    </statBases>
+    <pathCost>9</pathCost>
+    <fertility>0</fertility>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <affordances>
+      <li>Light</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="BurnedFloorBase">
+    <defName>BurnedWoodPlankFloor</defName>
+    <label>burned wood floor</label>
+    <description>Burned out wood plank flooring.</description>
+    <statBases>
+      <Beauty>-30</Beauty>
+    </statBases>
+    <pathCost>9</pathCost>
+    <fertility>0</fertility>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <texturePath>Terrain/Surfaces/BurnedWoodFloor</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>251</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="BurnedFloorBase">
+    <defName>BurnedCarpet</defName>
+    <label>burned carpet</label>
+    <description>Burned out carpet.</description>
+    <statBases>
+      <Beauty>-30</Beauty>
+    </statBases>
+    <pathCost>9</pathCost>
+    <fertility>0</fertility>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <texturePath>Terrain/Surfaces/BurnedCarpet</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>201</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+</Defs>

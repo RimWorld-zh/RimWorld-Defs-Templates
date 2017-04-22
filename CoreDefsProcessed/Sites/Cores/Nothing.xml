@@ -5,6 +5,5 @@
     <label>site</label>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Nothing</expandingIconTexture>
-    <workerClass>SiteCoreWorker_Nothing</workerClass>
   </SiteCoreDef>
 </Defs>

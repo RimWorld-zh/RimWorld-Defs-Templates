@@ -4,7 +4,7 @@
     <defName>JourneyOffer</defName>
     <label>journey offer</label>
     <workerClass>IncidentWorker_JourneyOffer</workerClass>
-    <targetType>BaseMap</targetType>
     <category>JourneyOffer</category>
+    <targetType>World</targetType>
   </IncidentDef>
 </Defs>

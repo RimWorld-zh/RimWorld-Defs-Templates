@@ -66,6 +66,13 @@
     </resolvers>
   </RuleDef>
   <RuleDef>
+    <defName>ItemCollection</defName>
+    <symbol>itemCollection</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_ItemCollection" ListIndex="0" />
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
     <defName>EmptyRoom</defName>
     <symbol>emptyRoom</symbol>
     <resolvers>

@@ -154,6 +154,8 @@
         <!--Type: Verse.IntVec2-->
         <minRectSize>value</minRectSize>
       </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_ItemCollection-->
+      <li Class="SymbolResolver_ItemCollection" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_PawnGroup-->
       <li Class="SymbolResolver_PawnGroup" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_FirefoamPopper-->

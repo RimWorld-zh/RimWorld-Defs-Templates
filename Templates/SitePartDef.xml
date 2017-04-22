@@ -15,8 +15,17 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <applyFactionColorToSiteTexture>true_or_false</applyFactionColorToSiteTexture>
-    <!--Type: System.Type-->
-    <!--Default Value: typeof(SitePartWorker)-->
-    <workerClass>class_name</workerClass>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <showFactionInInspectString>true_or_false</showFactionInInspectString>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <knownDanger>true_or_false</knownDanger>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <requiresFaction>true_or_false</requiresFaction>
+    <!--Type: RimWorld.TechLevel-->
+    <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
+    <minFactionTechLevel>enum_value</minFactionTechLevel>
   </SitePartDef>
 </Defs>

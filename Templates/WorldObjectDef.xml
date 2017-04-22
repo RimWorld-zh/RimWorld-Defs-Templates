@@ -17,9 +17,24 @@
     <!--Type: bool-->
     <!--Default Value: true-->
     <saved>true_or_false</saved>
+    <!--Type: List<RimWorld.WorldObjectCompProperties>-->
+    <comps>
+      <!--Type: RimWorld.WorldObjectCompProperties_Timeout-->
+      <li Class="WorldObjectCompProperties_Timeout" />
+      <!--Type: RimWorld.WorldObjectCompProperties_DefeatAllEnemiesQuest-->
+      <li Class="WorldObjectCompProperties_DefeatAllEnemiesQuest" />
+      <!--Type: RimWorld.WorldObjectCompProperties_ItemStashContents-->
+      <li Class="WorldObjectCompProperties_ItemStashContents" />
+      <!--Type: RimWorld.WorldObjectCompProperties_CaravanRequest-->
+      <li Class="WorldObjectCompProperties_CaravanRequest" />
+      <!-- ... -->
+    </comps>
     <!--Type: bool-->
     <!--Default Value: false-->
     <allowCaravanIncidentsWhichGenerateMap>true_or_false</allowCaravanIncidentsWhichGenerateMap>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <isTempIncidentMapOwner>true_or_false</isTempIncidentMapOwner>
     <!--Type: List<System.Type>-->
     <inspectorTabs>
       <!--Type: System.Type-->

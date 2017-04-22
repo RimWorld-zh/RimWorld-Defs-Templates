@@ -369,4 +369,28 @@
       <rainWashes>true</rainWashes>
     </filth>
   </ThingDef>
+  <ThingDef ParentName="BaseFilth">
+    <defName>FilthAsh</defName>
+    <label>ash</label>
+    <statBases>
+      <Beauty>-20</Beauty>
+      <Cleanliness>-15</Cleanliness>
+    </statBases>
+    <altitudeLayer>Filth</altitudeLayer>
+    <thingClass>Filth</thingClass>
+    <category>Filth</category>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Filth/Ash</texPath>
+      <graphicClass>Graphic_Cluster</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <color>(255, 255, 255, 220)</color>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <filth>
+      <cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <rainWashes>true</rainWashes>
+    </filth>
+  </ThingDef>
 </ThingDefs>

@@ -87,6 +87,14 @@
     <color>value</color>
     <!--Type: Verse.TerrainDef-->
     <driesTo>TerrainDef_defName</driesTo>
+    <!--Type: List<string>-->
+    <tags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </tags>
+    <!--Type: Verse.TerrainDef-->
+    <burnedDef>TerrainDef_defName</burnedDef>
     <!--Type: Verse.ThingDef-->
     <terrainFilthDef>ThingDef_defName</terrainFilthDef>
     <!--Type: bool-->

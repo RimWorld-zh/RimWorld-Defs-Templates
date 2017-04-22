@@ -8,10 +8,27 @@
     <fertility>0</fertility>
     <texturePath>Terrain/Surfaces/WaterDeep</texturePath>
     <edgeType>FadeRough</edgeType>
+    <renderPrecedence>396</renderPrecedence>
+    <avoidWander>true</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>false</holdSnow>
+    <acceptFilth>false</acceptFilth>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>WaterMovingDeep</defName>
+    <label>deep moving water</label>
+    <passability>Impassable</passability>
+    <pathCost>300</pathCost>
+    <fertility>0</fertility>
+    <texturePath>Terrain/Surfaces/WaterDeep</texturePath>
+    <edgeType>FadeRough</edgeType>
     <renderPrecedence>395</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
+    <tags>
+      <li ListIndex="0">River</li>
+    </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -26,6 +43,22 @@
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <driesTo>Gravel</driesTo>
+    <acceptFilth>false</acceptFilth>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>WaterMovingShallow</defName>
+    <label>shallow moving water</label>
+    <pathCost>12</pathCost>
+    <fertility>0</fertility>
+    <texturePath>Terrain/Surfaces/WaterShallow</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>394</renderPrecedence>
+    <avoidWander>true</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>false</holdSnow>
+    <tags>
+      <li ListIndex="0">River</li>
+    </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
 </TerrainDefs>

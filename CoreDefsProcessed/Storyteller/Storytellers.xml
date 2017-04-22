@@ -19,28 +19,36 @@
       </li>
       <li Class="StorytellerCompProperties_CategoryMTB" ListIndex="2">
         <minDaysPassed>5</minDaysPassed>
-        <mtbDays>1.60</mtbDays>
+        <allowedTargetTypes>MapPlayerHome</allowedTargetTypes>
+        <mtbDays>3.0</mtbDays>
         <category>Misc</category>
       </li>
-      <li Class="StorytellerCompProperties_AllyInteraction" ListIndex="3">
+      <li Class="StorytellerCompProperties_CategoryMTB" ListIndex="3">
+        <minDaysPassed>15</minDaysPassed>
+        <allowedTargetTypes>World</allowedTargetTypes>
+        <mtbDays>8</mtbDays>
+        <category>Misc</category>
+      </li>
+      <li Class="StorytellerCompProperties_AllyInteraction" ListIndex="4">
         <minDaysPassed>5</minDaysPassed>
+        <allowedTargetTypes>MapPlayerHome</allowedTargetTypes>
         <baseMtb>6</baseMtb>
       </li>
-      <li Class="StorytellerCompProperties_AllyAssistance" ListIndex="4">
+      <li Class="StorytellerCompProperties_AllyAssistance" ListIndex="5">
         <baseMtb>10</baseMtb>
       </li>
-      <li Class="StorytellerCompProperties_SingleMTB" ListIndex="5">
+      <li Class="StorytellerCompProperties_SingleMTB" ListIndex="6">
         <incident>OrbitalTraderArrival</incident>
         <mtbDays>13</mtbDays>
       </li>
-      <li Class="StorytellerCompProperties_ShipChunkDrop" ListIndex="6" />
-      <li Class="StorytellerCompProperties_Disease" ListIndex="7">
+      <li Class="StorytellerCompProperties_ShipChunkDrop" ListIndex="7" />
+      <li Class="StorytellerCompProperties_Disease" ListIndex="8">
         <minDaysPassed>5</minDaysPassed>
       </li>
-      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome" ListIndex="8">
+      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome" ListIndex="9">
         <category>CaravanTarget</category>
       </li>
-      <li Class="StorytellerCompProperties_JourneyOffer" ListIndex="9" />
+      <li Class="StorytellerCompProperties_JourneyOffer" ListIndex="10" />
     </comps>
     <desiredPopulationMin>4</desiredPopulationMin>
     <desiredPopulationMax>13</desiredPopulationMax>
@@ -65,28 +73,35 @@
       </li>
       <li Class="StorytellerCompProperties_CategoryMTB" ListIndex="2">
         <minDaysPassed>5</minDaysPassed>
-        <mtbDays>2.50</mtbDays>
+        <allowedTargetTypes>MapPlayerHome</allowedTargetTypes>
+        <mtbDays>3.0</mtbDays>
         <category>Misc</category>
       </li>
-      <li Class="StorytellerCompProperties_AllyInteraction" ListIndex="3">
+      <li Class="StorytellerCompProperties_CategoryMTB" ListIndex="3">
+        <minDaysPassed>15</minDaysPassed>
+        <allowedTargetTypes>World</allowedTargetTypes>
+        <mtbDays>8</mtbDays>
+        <category>Misc</category>
+      </li>
+      <li Class="StorytellerCompProperties_AllyInteraction" ListIndex="4">
         <minDaysPassed>5</minDaysPassed>
         <baseMtb>6</baseMtb>
       </li>
-      <li Class="StorytellerCompProperties_AllyAssistance" ListIndex="4">
+      <li Class="StorytellerCompProperties_AllyAssistance" ListIndex="5">
         <baseMtb>10</baseMtb>
       </li>
-      <li Class="StorytellerCompProperties_SingleMTB" ListIndex="5">
+      <li Class="StorytellerCompProperties_SingleMTB" ListIndex="6">
         <incident>OrbitalTraderArrival</incident>
         <mtbDays>13</mtbDays>
       </li>
-      <li Class="StorytellerCompProperties_ShipChunkDrop" ListIndex="6" />
-      <li Class="StorytellerCompProperties_Disease" ListIndex="7">
+      <li Class="StorytellerCompProperties_ShipChunkDrop" ListIndex="7" />
+      <li Class="StorytellerCompProperties_Disease" ListIndex="8">
         <minDaysPassed>5</minDaysPassed>
       </li>
-      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome" ListIndex="8">
+      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome" ListIndex="9">
         <category>CaravanTarget</category>
       </li>
-      <li Class="StorytellerCompProperties_JourneyOffer" ListIndex="9" />
+      <li Class="StorytellerCompProperties_JourneyOffer" ListIndex="10" />
     </comps>
     <desiredPopulationMin>4</desiredPopulationMin>
     <desiredPopulationMax>13</desiredPopulationMax>
@@ -102,25 +117,32 @@
     <comps>
       <li Class="StorytellerCompProperties_RandomMain" ListIndex="0">
         <minDaysPassed>1</minDaysPassed>
-        <incidentMtb>0.87</incidentMtb>
+        <allowedTargetTypes>MapPlayerHome</allowedTargetTypes>
+        <mtbDays>1.13</mtbDays>
         <categoryWeights>
           <Misc>5.5</Misc>
           <OrbitalVisitor>1</OrbitalVisitor>
+          <ThreatBig>1</ThreatBig>
+          <ThreatSmall>0.9</ThreatSmall>
           <AllyArrival>1</AllyArrival>
           <AllyAssistance>0.5</AllyAssistance>
           <ShipChunkDrop>0.5</ShipChunkDrop>
-          <ThreatSmall>1</ThreatSmall>
-          <ThreatBig>1</ThreatBig>
         </categoryWeights>
         <maxThreatBigIntervalDays>13</maxThreatBigIntervalDays>
       </li>
-      <li Class="StorytellerCompProperties_Disease" ListIndex="1">
+      <li Class="StorytellerCompProperties_CategoryMTB" ListIndex="1">
+        <minDaysPassed>1</minDaysPassed>
+        <allowedTargetTypes>World</allowedTargetTypes>
+        <mtbDays>8</mtbDays>
+        <category>Misc</category>
+      </li>
+      <li Class="StorytellerCompProperties_Disease" ListIndex="2">
         <minDaysPassed>0</minDaysPassed>
       </li>
-      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome" ListIndex="2">
+      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome" ListIndex="3">
         <category>CaravanTarget</category>
       </li>
-      <li Class="StorytellerCompProperties_JourneyOffer" ListIndex="3" />
+      <li Class="StorytellerCompProperties_JourneyOffer" ListIndex="4" />
     </comps>
     <desiredPopulationMin>4</desiredPopulationMin>
     <desiredPopulationMax>13</desiredPopulationMax>

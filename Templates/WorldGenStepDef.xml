@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorldGenStepDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: float-->
+    <order>float_value</order>
+    <!--Type: RimWorld.Planet.WorldGenStep_Terrain-->
+    <worldGenStep Class="WorldGenStep_Terrain">value</worldGenStep>
+    <!--Type: RimWorld.Planet.WorldGenStep_Components-->
+    <worldGenStep Class="WorldGenStep_Components">value</worldGenStep>
+    <!--Type: RimWorld.Planet.WorldGenStep_Lakes-->
+    <worldGenStep Class="WorldGenStep_Lakes">value</worldGenStep>
+    <!--Type: RimWorld.Planet.WorldGenStep_Rivers-->
+    <worldGenStep Class="WorldGenStep_Rivers">value</worldGenStep>
+    <!--Type: RimWorld.Planet.WorldGenStep_AncientSites-->
+    <worldGenStep Class="WorldGenStep_AncientSites">
+      <!--Type: Verse.FloatRange-->
+      <ancientSitesPer100kTiles>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </ancientSitesPer100kTiles>
+    </worldGenStep>
+    <!--Type: RimWorld.Planet.WorldGenStep_AncientRoads-->
+    <worldGenStep Class="WorldGenStep_AncientRoads">
+      <!--Type: float-->
+      <maximumSiteCurve>float_value</maximumSiteCurve>
+      <!--Type: float-->
+      <minimumChain>float_value</minimumChain>
+      <!--Type: float-->
+      <maximumSegmentCurviness>float_value</maximumSegmentCurviness>
+    </worldGenStep>
+    <!--Type: RimWorld.Planet.WorldGenStep_Factions-->
+    <worldGenStep Class="WorldGenStep_Factions">value</worldGenStep>
+    <!--Type: RimWorld.Planet.WorldGenStep_Roads-->
+    <worldGenStep Class="WorldGenStep_Roads">value</worldGenStep>
+  </WorldGenStepDef>
+</Defs>

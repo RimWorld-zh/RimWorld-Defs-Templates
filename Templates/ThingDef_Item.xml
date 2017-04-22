@@ -323,6 +323,8 @@
       <drawSize>value</drawSize>
       <!--Type: float-->
       <onGroundRandomRotateAngle>float_value</onGroundRandomRotateAngle>
+      <!--Type: float-->
+      <flipExtraRotation>float_value</flipExtraRotation>
       <!--Type: Verse.ShadowData-->
       <shadowData>
         <!--Type: UnityEngine.Vector3-->

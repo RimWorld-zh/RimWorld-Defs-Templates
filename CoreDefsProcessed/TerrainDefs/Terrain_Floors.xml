@@ -182,6 +182,7 @@
     <description>Wood plank flooring. For that warm, homey feeling.</description>
     <statBases>
       <WorkToBuild>85</WorkToBuild>
+      <Flammability>0.22</Flammability>
     </statBases>
     <fertility>0</fertility>
     <costList>
@@ -199,12 +200,14 @@
       <li ListIndex="2">SmoothHard</li>
     </affordances>
     <layerable>true</layerable>
+    <burnedDef>BurnedWoodPlankFloor</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
   <!-- ================= Carpets ================= -->
   <TerrainDef Name="CarpetBase" ParentName="FloorBase" Abstract="True">
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>2</Beauty>
+      <Flammability>0.32</Flammability>
     </statBases>
     <costList>
       <Cloth>7</Cloth>
@@ -213,13 +216,15 @@
       <li>CarpetMaking</li>
     </researchPrerequisites>
     <texturePath>Terrain/Surfaces/Carpet</texturePath>
+    <burnedDef>BurnedCarpet</burnedDef>
   </TerrainDef>
   <TerrainDef ParentName="CarpetBase">
     <defName>CarpetRed</defName>
     <label>red carpet</label>
     <description>Plush carpet in a lovely rose hue.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>2</Beauty>
+      <Flammability>0.32</Flammability>
       <WorkToBuild>135</WorkToBuild>
     </statBases>
     <fertility>0</fertility>
@@ -242,6 +247,7 @@
     </affordances>
     <layerable>true</layerable>
     <color>(118,49,57)</color>
+    <burnedDef>BurnedCarpet</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
   <TerrainDef ParentName="CarpetBase">
@@ -249,7 +255,8 @@
     <label>green carpet</label>
     <description>Naturalistic-feeling green carpet.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>2</Beauty>
+      <Flammability>0.32</Flammability>
       <WorkToBuild>135</WorkToBuild>
     </statBases>
     <fertility>0</fertility>
@@ -272,6 +279,7 @@
     </affordances>
     <layerable>true</layerable>
     <color>(89,105,62)</color>
+    <burnedDef>BurnedCarpet</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
   <TerrainDef ParentName="CarpetBase">
@@ -279,7 +287,8 @@
     <label>blue carpet</label>
     <description>Toe-hugging plush carpet in a cool blue color.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>2</Beauty>
+      <Flammability>0.32</Flammability>
       <WorkToBuild>135</WorkToBuild>
     </statBases>
     <fertility>0</fertility>
@@ -302,6 +311,7 @@
     </affordances>
     <layerable>true</layerable>
     <color>(24,65,121)</color>
+    <burnedDef>BurnedCarpet</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
   <TerrainDef ParentName="CarpetBase">
@@ -309,7 +319,8 @@
     <label>cream carpet</label>
     <description>Inviting cream-colored carpet.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>2</Beauty>
+      <Flammability>0.32</Flammability>
       <WorkToBuild>135</WorkToBuild>
     </statBases>
     <fertility>0</fertility>
@@ -332,6 +343,7 @@
     </affordances>
     <layerable>true</layerable>
     <color>(195,192,176)</color>
+    <burnedDef>BurnedCarpet</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
   <TerrainDef ParentName="CarpetBase">
@@ -339,7 +351,8 @@
     <label>dark carpet</label>
     <description>Professional-looking dark gray carpet.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>2</Beauty>
+      <Flammability>0.32</Flammability>
       <WorkToBuild>135</WorkToBuild>
     </statBases>
     <fertility>0</fertility>
@@ -362,6 +375,7 @@
     </affordances>
     <layerable>true</layerable>
     <color>(81,81,81)</color>
+    <burnedDef>BurnedCarpet</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
 </TerrainDefs>

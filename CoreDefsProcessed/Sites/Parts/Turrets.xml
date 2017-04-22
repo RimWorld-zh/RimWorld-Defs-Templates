@@ -6,7 +6,10 @@
     <siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Turrets</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
-    <workerClass>SitePartWorker_Turrets</workerClass>
+    <showFactionInInspectString>true</showFactionInInspectString>
+    <knownDanger>true</knownDanger>
+    <requiresFaction>true</requiresFaction>
+    <minFactionTechLevel>Industrial</minFactionTechLevel>
   </SitePartDef>
   <GenStepDef>
     <defName>Turrets</defName>
@@ -15,11 +18,11 @@
     <genStep Class="GenStep_Turrets">
       <widthRange>
         <min>3</min>
-        <max>5</max>
+        <max>4</max>
       </widthRange>
       <turretsCountRange>
-        <min>1</min>
-        <max>3</max>
+        <min>4</min>
+        <max>5</max>
       </turretsCountRange>
       <mortarsCountRange>
         <min>0</min>

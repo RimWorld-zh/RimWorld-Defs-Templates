@@ -6,7 +6,9 @@
     <siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
-    <workerClass>SitePartWorker_Outpost</workerClass>
+    <showFactionInInspectString>true</showFactionInInspectString>
+    <knownDanger>true</knownDanger>
+    <requiresFaction>true</requiresFaction>
   </SitePartDef>
   <GenStepDef>
     <defName>Outpost</defName>

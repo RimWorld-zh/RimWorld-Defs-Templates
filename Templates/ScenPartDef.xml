@@ -12,7 +12,7 @@
     <!--Desc: A human-readable description given when the Def is inspected by players.-->
     <description>string_value</description>
     <!--Type: RimWorld.ScenPartCategory-->
-    <!--Available Values: Undefined, Fixed, StartingImportant, PlayerPawnFilter, PlayerPawnModifier, MapCondition, Rule, StartingItem, WorldThing, Misc-->
+    <!--Available Values: Undefined, Fixed, StartingImportant, PlayerPawnFilter, PlayerPawnModifier, GameCondition, Rule, StartingItem, WorldThing, Misc-->
     <category>enum_value</category>
     <!--Type: System.Type-->
     <scenPartClass>class_name</scenPartClass>
@@ -27,8 +27,8 @@
     <maxUses>int_value</maxUses>
     <!--Type: System.Type-->
     <pageClass>class_name</pageClass>
-    <!--Type: Verse.MapConditionDef-->
-    <mapCondition>MapConditionDef_defName</mapCondition>
+    <!--Type: Verse.GameConditionDef-->
+    <gameCondition>GameConditionDef_defName</gameCondition>
     <!--Type: Verse.FloatRange-->
     <!--Default Value: new FloatRange(30f, 100f)-->
     <durationRandomRange>

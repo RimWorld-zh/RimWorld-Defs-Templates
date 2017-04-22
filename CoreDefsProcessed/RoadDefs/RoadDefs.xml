@@ -8,17 +8,30 @@
     <tilesPerSegment>15</tilesPerSegment>
     <pathingMode>Avoid</pathingMode>
     <roadGenSteps>
-      <li ListIndex="0">
+      <li Class="RoadDefGenStep_Place" ListIndex="0">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0.9)</li>
-            <li ListIndex="1">(0.4, 0.8)</li>
-            <li ListIndex="2">(0.6, 0)</li>
+            <li ListIndex="1">(0.6, 0.8)</li>
+            <li ListIndex="2">(0.8, 0)</li>
           </points>
         </chancePerPositionCurve>
         <place>PackedDirt</place>
       </li>
     </roadGenSteps>
+    <worldRenderSteps>
+      <li ListIndex="0">
+        <layer>Outline</layer>
+        <width>0.35</width>
+      </li>
+      <li ListIndex="1">
+        <layer>Dirt</layer>
+        <width>0.2</width>
+      </li>
+    </worldRenderSteps>
+    <worldTransitionGroup>Dirt</worldTransitionGroup>
+    <distortionFrequency>0.5</distortionFrequency>
+    <distortionIntensity>0.2</distortionIntensity>
   </RoadDef>
   <RoadDef>
     <defName>DirtRoad</defName>
@@ -28,17 +41,30 @@
     <tilesPerSegment>15</tilesPerSegment>
     <pathingMode>Avoid</pathingMode>
     <roadGenSteps>
-      <li ListIndex="0">
+      <li Class="RoadDefGenStep_Place" ListIndex="0">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0.9)</li>
-            <li ListIndex="1">(0.8, 0.8)</li>
-            <li ListIndex="2">(1.0, 0)</li>
+            <li ListIndex="1">(1.2, 0.8)</li>
+            <li ListIndex="2">(1.4, 0)</li>
           </points>
         </chancePerPositionCurve>
         <place>PackedDirt</place>
       </li>
     </roadGenSteps>
+    <worldRenderSteps>
+      <li ListIndex="0">
+        <layer>Outline</layer>
+        <width>0.55</width>
+      </li>
+      <li ListIndex="1">
+        <layer>Dirt</layer>
+        <width>0.4</width>
+      </li>
+    </worldRenderSteps>
+    <worldTransitionGroup>Dirt</worldTransitionGroup>
+    <distortionFrequency>0.5</distortionFrequency>
+    <distortionIntensity>0.2</distortionIntensity>
   </RoadDef>
   <RoadDef>
     <defName>StoneRoad</defName>
@@ -48,27 +74,52 @@
     <tilesPerSegment>25</tilesPerSegment>
     <pathingMode>Avoid</pathingMode>
     <roadGenSteps>
-      <li ListIndex="0">
+      <li Class="RoadDefGenStep_Place" ListIndex="0">
         <chancePerPositionCurve>
           <points>
-            <li ListIndex="0">(0, 1.0)</li>
-            <li ListIndex="1">(0.8, 1.0)</li>
-            <li ListIndex="2">(1.0, 0)</li>
+            <li ListIndex="0">(0, 1)</li>
+            <li ListIndex="1">(1.8, 1)</li>
+            <li ListIndex="2">(1.8, 0)</li>
           </points>
         </chancePerPositionCurve>
-        <place>TileSandstone</place>
+        <antialiasingMultiplier>0</antialiasingMultiplier>
+        <place>FlagstoneSandstone</place>
       </li>
     </roadGenSteps>
+    <worldRenderSteps>
+      <li ListIndex="0">
+        <layer>Outline</layer>
+        <width>0.55</width>
+      </li>
+      <li ListIndex="1">
+        <layer>Stone</layer>
+        <width>0.4</width>
+      </li>
+    </worldRenderSteps>
+    <worldTransitionGroup>Stone</worldTransitionGroup>
+    <distortionFrequency>0.2</distortionFrequency>
+    <distortionIntensity>0.10</distortionIntensity>
   </RoadDef>
   <RoadDef>
     <defName>AncientAsphaltRoad</defName>
     <label>ancient asphalt road</label>
     <priority>40</priority>
+    <ancientOnly>true</ancientOnly>
     <movementCostMultiplier>0.5</movementCostMultiplier>
     <tilesPerSegment>100</tilesPerSegment>
     <pathingMode>Bulldoze</pathingMode>
     <roadGenSteps>
-      <li ListIndex="0">
+      <li Class="RoadDefGenStep_DryWithFallback" ListIndex="0">
+        <chancePerPositionCurve>
+          <points>
+            <li ListIndex="0">(0, 1)</li>
+            <li ListIndex="1">(1.4, 1)</li>
+            <li ListIndex="2">(1.8, 0)</li>
+          </points>
+        </chancePerPositionCurve>
+        <fallback>Gravel</fallback>
+      </li>
+      <li Class="RoadDefGenStep_Place" ListIndex="1">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0.8)</li>
@@ -78,7 +129,7 @@
         </chancePerPositionCurve>
         <place>Gravel</place>
       </li>
-      <li ListIndex="1">
+      <li Class="RoadDefGenStep_Place" ListIndex="2">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0.8)</li>
@@ -88,7 +139,7 @@
         </chancePerPositionCurve>
         <place>BrokenAsphalt</place>
       </li>
-      <li ListIndex="2">
+      <li Class="RoadDefGenStep_Place" ListIndex="3">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0.003)</li>
@@ -99,37 +150,65 @@
         </chancePerPositionCurve>
         <place>AncientConcreteBarrier</place>
       </li>
-      <li ListIndex="3">
+      <li Class="RoadDefGenStep_Place" ListIndex="4">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0)</li>
-            <li ListIndex="1">(1.7, 0)</li>
-            <li ListIndex="2">(1.8, 0.3)</li>
-            <li ListIndex="3">(1.9, 0)</li>
+            <li ListIndex="1">(1.8, 0)</li>
+            <li ListIndex="2">(2.3, 0.4)</li>
+            <li ListIndex="3">(2.9, 0)</li>
           </points>
         </chancePerPositionCurve>
+        <periodicSpacing>12</periodicSpacing>
         <place>AncientLamppost</place>
+        <proximitySpacing>4</proximitySpacing>
       </li>
     </roadGenSteps>
+    <worldRenderSteps>
+      <li ListIndex="0">
+        <layer>Outline</layer>
+        <width>0.65</width>
+      </li>
+      <li ListIndex="1">
+        <layer>Gravel</layer>
+        <width>0.5</width>
+      </li>
+      <li ListIndex="2">
+        <layer>Asphalt</layer>
+        <width>0.25</width>
+      </li>
+    </worldRenderSteps>
+    <worldTransitionGroup>Asphalt</worldTransitionGroup>
   </RoadDef>
   <RoadDef>
     <defName>AncientAsphaltHighway</defName>
     <label>ancient asphalt highway</label>
     <priority>50</priority>
+    <ancientOnly>true</ancientOnly>
     <movementCostMultiplier>0.5</movementCostMultiplier>
     <tilesPerSegment>400</tilesPerSegment>
     <pathingMode>Bulldoze</pathingMode>
     <roadGenSteps>
-      <li ListIndex="0">
-        <!-- get a nice wide tunnel -->
+      <li Class="RoadDefGenStep_Bulldoze" ListIndex="0">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 1)</li>
-            <li ListIndex="1">(4, 0)</li>
+            <li ListIndex="1">(4, 1)</li>
+            <li ListIndex="2">(4, 0)</li>
           </points>
         </chancePerPositionCurve>
       </li>
-      <li ListIndex="1">
+      <li Class="RoadDefGenStep_DryWithFallback" ListIndex="1">
+        <chancePerPositionCurve>
+          <points>
+            <li ListIndex="0">(0, 1)</li>
+            <li ListIndex="1">(2.6, 1)</li>
+            <li ListIndex="2">(3.0, 0)</li>
+          </points>
+        </chancePerPositionCurve>
+        <fallback>Gravel</fallback>
+      </li>
+      <li Class="RoadDefGenStep_Place" ListIndex="2">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0.8)</li>
@@ -139,7 +218,7 @@
         </chancePerPositionCurve>
         <place>Gravel</place>
       </li>
-      <li ListIndex="2">
+      <li Class="RoadDefGenStep_Place" ListIndex="3">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0.9)</li>
@@ -149,7 +228,7 @@
         </chancePerPositionCurve>
         <place>BrokenAsphalt</place>
       </li>
-      <li ListIndex="3">
+      <li Class="RoadDefGenStep_Place" ListIndex="4">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0.003)</li>
@@ -160,17 +239,34 @@
         </chancePerPositionCurve>
         <place>AncientConcreteBarrier</place>
       </li>
-      <li ListIndex="4">
+      <li Class="RoadDefGenStep_Place" ListIndex="5">
         <chancePerPositionCurve>
           <points>
             <li ListIndex="0">(0, 0)</li>
-            <li ListIndex="1">(3.5, 0)</li>
-            <li ListIndex="2">(3.6, 0.5)</li>
-            <li ListIndex="3">(3.7, 0)</li>
+            <li ListIndex="1">(3.0, 0)</li>
+            <li ListIndex="2">(3.5, 0.8)</li>
+            <li ListIndex="3">(4.0, 0)</li>
           </points>
         </chancePerPositionCurve>
+        <periodicSpacing>8</periodicSpacing>
         <place>AncientLamppost</place>
+        <proximitySpacing>4</proximitySpacing>
       </li>
     </roadGenSteps>
+    <worldRenderSteps>
+      <li ListIndex="0">
+        <layer>Outline</layer>
+        <width>0.95</width>
+      </li>
+      <li ListIndex="1">
+        <layer>Gravel</layer>
+        <width>0.8</width>
+      </li>
+      <li ListIndex="2">
+        <layer>Asphalt</layer>
+        <width>0.55</width>
+      </li>
+    </worldRenderSteps>
+    <worldTransitionGroup>Asphalt</worldTransitionGroup>
   </RoadDef>
 </Defs>
