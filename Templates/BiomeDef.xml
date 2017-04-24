@@ -23,10 +23,10 @@
     <!--Default Value: true-->
     <canAutoChoose>true_or_false</canAutoChoose>
     <!--Type: bool-->
-    <!--Default Value: false-->
+    <!--Default Value: true-->
     <allowRoads>true_or_false</allowRoads>
     <!--Type: bool-->
-    <!--Default Value: false-->
+    <!--Default Value: true-->
     <allowRivers>true_or_false</allowRivers>
     <!--Type: float-->
     <animalDensity>float_value</animalDensity>

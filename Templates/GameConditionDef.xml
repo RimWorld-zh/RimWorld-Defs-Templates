@@ -12,6 +12,7 @@
     <!--Desc: A human-readable description given when the Def is inspected by players.-->
     <description>string_value</description>
     <!--Type: System.Type-->
+    <!--Default Value: typeof(GameCondition)-->
     <conditionClass>class_name</conditionClass>
     <!--Type: List<Verse.GameConditionDef>-->
     <exclusiveConditions>
@@ -26,6 +27,7 @@
     <canBePermanent>true_or_false</canBePermanent>
     <!--Type: RimWorld.PsychicDroneLevel-->
     <!--Available Values: None, GoodMedium, BadLow, BadMedium, BadHigh, BadExtreme-->
+    <!--Default Value: BadMedium-->
     <droneLevel>enum_value</droneLevel>
     <!--Type: bool-->
     <!--Default Value: false-->

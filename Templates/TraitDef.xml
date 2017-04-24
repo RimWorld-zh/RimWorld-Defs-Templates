@@ -72,6 +72,7 @@
         <!--Default Value: 1.0-->
         <socialFightChanceFactor>float_value</socialFightChanceFactor>
         <!--Type: float-->
+        <!--Default Value: -1.0-->
         <painShockThreshold>float_value</painShockThreshold>
       </li>
       <!-- ... -->

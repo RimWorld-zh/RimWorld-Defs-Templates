@@ -62,6 +62,7 @@
           </points>
         </chancePerPositionCurve>
         <!--Type: float-->
+        <!--Default Value: 1.0-->
         <antialiasingMultiplier>float_value</antialiasingMultiplier>
         <!--Type: int-->
         <periodicSpacing>int_value</periodicSpacing>
@@ -85,8 +86,10 @@
       <!-- ... -->
     </worldRenderSteps>
     <!--Type: string-->
+    <!--Default Value: string.Empty-->
     <worldTransitionGroup>string_value</worldTransitionGroup>
     <!--Type: float-->
+    <!--Default Value: 1.0-->
     <distortionFrequency>float_value</distortionFrequency>
     <!--Type: float-->
     <distortionIntensity>float_value</distortionIntensity>

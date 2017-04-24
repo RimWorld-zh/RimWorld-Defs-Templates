@@ -9,6 +9,7 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: System.Type-->
+    <!--Default Value: typeof(ItemCollectionGenerator)-->
     <workerClass>class_name</workerClass>
     <!--Type: List<Verse.ThingDef>-->
     <allowedDefs>

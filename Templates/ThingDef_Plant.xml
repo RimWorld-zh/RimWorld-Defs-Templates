@@ -43,7 +43,7 @@
     <!--Default Value: true-->
     <useHitPoints>true_or_false</useHitPoints>
     <!--Type: Verse.FloatRange-->
-    <!--Default Value: new FloatRange(1f, 1f)-->
+    <!--Default Value: FloatRange.One-->
     <startingHpRange>
       <!--Type: float-->
       <min>float_value</min>

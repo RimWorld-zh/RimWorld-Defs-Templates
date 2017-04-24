@@ -12,7 +12,6 @@
     <workerClass>class_name</workerClass>
     <!--Type: RimWorld.IncidentCategory-->
     <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, JourneyOffer, Disease, CaravanTarget, AllyAssistance-->
-    <!--Default Value: Misc-->
     <category>enum_value</category>
     <!--Type: RimWorld.IncidentTargetType-->
     <!--Available Values: None, MapPlayerHome, MapTempIncident, MapMisc, Caravan, World, All-->

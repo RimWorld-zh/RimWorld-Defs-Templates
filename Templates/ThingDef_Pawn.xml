@@ -40,6 +40,7 @@
       <!--Type: Verse.CompProperties-->
       <li>
         <!--Type: System.Type-->
+        <!--Default Value: typeof(ThingComp)-->
         <compClass>class_name</compClass>
       </li>
       <!--Type: RimWorld.CompProperties_EggLayer-->

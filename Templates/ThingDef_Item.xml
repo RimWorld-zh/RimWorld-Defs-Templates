@@ -79,6 +79,7 @@
       <!--Type: Verse.CompProperties-->
       <li>
         <!--Type: System.Type-->
+        <!--Default Value: typeof(ThingComp)-->
         <compClass>class_name</compClass>
       </li>
       <!--Type: RimWorld.CompProperties_Art-->
@@ -160,6 +161,7 @@
       <!--Type: RimWorld.CompProperties_Usable-->
       <li Class="CompProperties_Usable">
         <!--Type: System.Type-->
+        <!--Default Value: typeof(ThingComp)-->
         <compClass>class_name</compClass>
         <!--Type: Verse.JobDef-->
         <useJob>JobDef_defName</useJob>
@@ -169,11 +171,13 @@
       <!--Type: RimWorld.CompProperties_UseEffect-->
       <li Class="CompProperties_UseEffect">
         <!--Type: System.Type-->
+        <!--Default Value: typeof(ThingComp)-->
         <compClass>class_name</compClass>
       </li>
       <!--Type: RimWorld.CompProperties_Targetable-->
       <li Class="CompProperties_Targetable">
         <!--Type: System.Type-->
+        <!--Default Value: typeof(ThingComp)-->
         <compClass>class_name</compClass>
         <!--Type: bool-->
         <!--Default Value: false-->
