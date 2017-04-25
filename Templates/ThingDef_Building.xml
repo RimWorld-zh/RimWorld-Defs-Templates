@@ -41,6 +41,7 @@
     <!--Type: int-->
     <!--Default Value: -1-->
     <costStuffCount>int_value</costStuffCount>
+    <!--Reference List-->
     <!--Type: List<RimWorld.StuffCategoryDef>-->
     <stuffCategories>
       <!--Type: RimWorld.StuffCategoryDef-->
@@ -51,6 +52,7 @@
     <!--Available Values: Undefined, Light, Heavy, GrowSoil, Diggable, SmoothHard, SmoothableStone-->
     <!--Default Value: Light-->
     <terrainAffordanceNeeded>enum_value</terrainAffordanceNeeded>
+    <!--Reference List-->
     <!--Type: List<Verse.ResearchProjectDef>-->
     <researchPrerequisites>
       <!--Type: Verse.ResearchProjectDef-->
@@ -74,6 +76,7 @@
     <altitudeLayer>enum_value</altitudeLayer>
     <!--Type: float-->
     <specialDisplayRadius>float_value</specialDisplayRadius>
+    <!--Simple List-->
     <!--Type: List<System.Type>-->
     <placeWorkers>
       <!--Type: System.Type-->
@@ -190,6 +193,7 @@
         <fuelConsumptionPerTickInRain>float_value</fuelConsumptionPerTickInRain>
         <!--Type: Verse.ThingFilter-->
         <fuelFilter>
+          <!--Reference List-->
           <!--Type: List<Verse.ThingDef>-->
           <thingDefs>
             <!--Type: Verse.ThingDef-->
@@ -291,6 +295,7 @@
       </li>
       <!--Type: RimWorld.CompProperties_AffectedByFacilities-->
       <li Class="CompProperties_AffectedByFacilities">
+        <!--Reference List-->
         <!--Type: List<Verse.ThingDef>-->
         <linkableFacilities>
           <!--Type: Verse.ThingDef-->
@@ -487,12 +492,14 @@
       <unfinishedThingDef>ThingDef_defName</unfinishedThingDef>
       <!--Type: Verse.ThingFilter-->
       <defaultIngredientFilter>
+        <!--Simple List-->
         <!--Type: List<string>-->
         <categories>
           <!--Type: string-->
           <li>string_value</li>
           <!-- ... -->
         </categories>
+        <!--Reference List-->
         <!--Type: List<Verse.ThingDef>-->
         <exceptedThingDefs>
           <!--Type: Verse.ThingDef-->
@@ -506,6 +513,7 @@
       <effectWorking>EffecterDef_defName</effectWorking>
       <!--Type: Verse.SoundDef-->
       <soundWorking>SoundDef_defName</soundWorking>
+      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <recipeUsers>
         <!--Type: Verse.ThingDef-->
@@ -614,6 +622,7 @@
       <!--Type: Verse.LinkDrawerType-->
       <!--Available Values: None, Basic, CornerFiller, Transmitter, TransmitterOverlay-->
       <linkType>enum_value</linkType>
+      <!--Flag-->
       <!--Type: Verse.LinkFlags-->
       <!--Available Values: None, MapEdge, Rock, Wall, Sandbags, PowerConduit, Custom1, Custom2, Custom3, Custom4, Custom5, Custom6, Custom7, Custom8, Custom9, Custom10-->
       <linkFlags>
@@ -642,6 +651,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <hasTooltip>true_or_false</hasTooltip>
+    <!--Simple List-->
     <!--Type: List<System.Type>-->
     <inspectorTabs>
       <!--Type: System.Type-->
@@ -694,6 +704,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <blockWind>true_or_false</blockWind>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <tradeTags>
       <!--Type: string-->
@@ -708,6 +719,7 @@
       <!--Type: string-->
       <texPath>string_value</texPath>
     </blueprintGraphicData>
+    <!--Reference List-->
     <!--Type: List<Verse.RecipeDef>-->
     <recipes>
       <!--Type: Verse.RecipeDef-->
@@ -719,6 +731,7 @@
       <!--Type: bool-->
       <!--Default Value: true-->
       <isEdifice>true_or_false</isEdifice>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <buildingTags>
         <!--Type: string-->
@@ -885,12 +898,14 @@
       <fixedStorageSettings>
         <!--Type: Verse.ThingFilter-->
         <filter>
+          <!--Reference List-->
           <!--Type: List<Verse.SpecialThingFilterDef>-->
           <disallowedSpecialFilters>
             <!--Type: Verse.SpecialThingFilterDef-->
             <li>SpecialThingFilterDef_defName</li>
             <!-- ... -->
           </disallowedSpecialFilters>
+          <!--Simple List-->
           <!--Type: List<string>-->
           <categories>
             <!--Type: string-->
@@ -908,18 +923,21 @@
       <defaultStorageSettings>
         <!--Type: Verse.ThingFilter-->
         <filter>
+          <!--Simple List-->
           <!--Type: List<string>-->
           <categories>
             <!--Type: string-->
             <li>string_value</li>
             <!-- ... -->
           </categories>
+          <!--Reference List-->
           <!--Type: List<Verse.ThingDef>-->
           <exceptedThingDefs>
             <!--Type: Verse.ThingDef-->
             <li>ThingDef_defName</li>
             <!-- ... -->
           </exceptedThingDefs>
+          <!--Simple List-->
           <!--Type: List<string>-->
           <specialFiltersToDisallow>
             <!--Type: string-->

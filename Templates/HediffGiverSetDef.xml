@@ -27,6 +27,7 @@
       <li Class="HediffGiver_RandomAgeCurved">
         <!--Type: Verse.HediffDef-->
         <hediff>HediffDef_defName</hediff>
+        <!--Reference List-->
         <!--Type: List<Verse.BodyPartDef>-->
         <partsToAffect>
           <!--Type: Verse.BodyPartDef-->
@@ -35,6 +36,7 @@
         </partsToAffect>
         <!--Type: Verse.SimpleCurve-->
         <ageFractionMtbDaysCurve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->
@@ -47,6 +49,7 @@
       <li Class="HediffGiver_BrainInjury">
         <!--Type: Verse.HediffDef-->
         <hediff>HediffDef_defName</hediff>
+        <!--Reference List-->
         <!--Type: List<Verse.BodyPartDef>-->
         <partsToAffect>
           <!--Type: Verse.BodyPartDef-->
@@ -64,6 +67,7 @@
       <li Class="HediffGiver_Birthday">
         <!--Type: Verse.HediffDef-->
         <hediff>HediffDef_defName</hediff>
+        <!--Reference List-->
         <!--Type: List<Verse.BodyPartDef>-->
         <partsToAffect>
           <!--Type: Verse.BodyPartDef-->
@@ -78,6 +82,7 @@
         <countToAffect>int_value</countToAffect>
         <!--Type: Verse.SimpleCurve-->
         <ageFractionChanceCurve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->

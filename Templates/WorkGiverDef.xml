@@ -27,6 +27,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <emergency>true_or_false</emergency>
+    <!--Reference List-->
     <!--Type: List<Verse.PawnCapacityDef>-->
     <requiredCapacities>
       <!--Type: Verse.PawnCapacityDef-->
@@ -46,6 +47,7 @@
     <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
     <!--Default Value: MiscWork-->
     <tagToGive>enum_value</tagToGive>
+    <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
     <fixedBillGiverDefs>
       <!--Type: Verse.ThingDef-->

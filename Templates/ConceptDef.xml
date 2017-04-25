@@ -23,6 +23,7 @@
     <gameMode>enum_value</gameMode>
     <!--Type: string-->
     <helpText>string_value</helpText>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <highlightTags>
       <!--Type: string-->

@@ -114,6 +114,7 @@
         </li>
         <!--Type: Verse.AI.ThinkNode_ChancePerHour_Constant-->
         <li Class="ThinkNode_ChancePerHour_Constant">
+          <!--Simple List-->
           <!--Type: List<Verse.AI.ThinkNode>-->
           <subNodes>
             <!--Type: RimWorld.JobGiver_MaintainHives-->
@@ -130,6 +131,7 @@
           <subNodes>
             <!--Type: Verse.AI.ThinkNode_ChancePerHour_Constant-->
             <li Class="ThinkNode_ChancePerHour_Constant">
+              <!--Simple List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
                 <!--Type: RimWorld.JobGiver_MineRandom-->
@@ -153,6 +155,7 @@
             <li Class="JobGiver_WanderAnywhere" />
             <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
             <li Class="ThinkNode_PrioritySorter">
+              <!--Simple List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
                 <!--Type: RimWorld.JobGiver_GetFood-->
@@ -324,6 +327,7 @@
           <subNodes>
             <!--Type: RimWorld.ThinkNode_ConditionalHasDutyPawnTarget-->
             <li Class="ThinkNode_ConditionalHasDutyPawnTarget">
+              <!--Simple List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
                 <!--Type: RimWorld.JobGiver_AIFollowEscortee-->
@@ -353,6 +357,7 @@
         </li>
         <!--Type: RimWorld.ThinkNode_ConditionalPrisonerInPrisonCell-->
         <li Class="ThinkNode_ConditionalPrisonerInPrisonCell">
+          <!--Simple List-->
           <!--Type: List<Verse.AI.ThinkNode>-->
           <subNodes>
             <!--Type: Verse.AI.JobGiver_WanderCurrentRoom-->

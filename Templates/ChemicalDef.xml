@@ -24,6 +24,7 @@
       <li>
         <!--Type: Verse.HediffDef-->
         <hediff>HediffDef_defName</hediff>
+        <!--Reference List-->
         <!--Type: List<Verse.BodyPartDef>-->
         <partsToAffect>
           <!--Type: Verse.BodyPartDef-->

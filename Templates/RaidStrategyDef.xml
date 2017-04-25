@@ -21,6 +21,7 @@
     <letterLabelEnemy>string_value</letterLabelEnemy>
     <!--Type: string-->
     <letterLabelFriendly>string_value</letterLabelFriendly>
+    <!--Simple List-->
     <!--Type: List<RimWorld.PawnsArriveMode>-->
     <arriveModes>
       <!--Type: RimWorld.PawnsArriveMode-->

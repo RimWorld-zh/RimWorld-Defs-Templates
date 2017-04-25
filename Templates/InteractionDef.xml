@@ -27,6 +27,7 @@
     <symbol>string_value</symbol>
     <!--Type: Verse.Grammar.RulePack-->
     <logRulesInitiator>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <rulesStrings>
         <!--Type: string-->
@@ -36,6 +37,7 @@
     </logRulesInitiator>
     <!--Type: Verse.Grammar.RulePack-->
     <logRulesRecipient>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <rulesStrings>
         <!--Type: string-->

@@ -39,6 +39,7 @@
     <!--Available Values: Undefined, Light, Heavy, GrowSoil, Diggable, SmoothHard, SmoothableStone-->
     <!--Default Value: Light-->
     <terrainAffordanceNeeded>enum_value</terrainAffordanceNeeded>
+    <!--Reference List-->
     <!--Type: List<Verse.ResearchProjectDef>-->
     <researchPrerequisites>
       <!--Type: Verse.ResearchProjectDef-->
@@ -58,6 +59,7 @@
     <edgeType>enum_value</edgeType>
     <!--Type: int-->
     <renderPrecedence>int_value</renderPrecedence>
+    <!--Simple List-->
     <!--Type: List<Verse.TerrainAffordance>-->
     <affordances>
       <!--Type: Verse.TerrainAffordance-->
@@ -79,6 +81,8 @@
     <!--Type: bool-->
     <!--Default Value: true-->
     <changeable>true_or_false</changeable>
+    <!--Type: Verse.TerrainDef-->
+    <smoothedTerrain>TerrainDef_defName</smoothedTerrain>
     <!--Type: bool-->
     <!--Default Value: true-->
     <holdSnow>true_or_false</holdSnow>
@@ -87,6 +91,7 @@
     <color>value</color>
     <!--Type: Verse.TerrainDef-->
     <driesTo>TerrainDef_defName</driesTo>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <tags>
       <!--Type: string-->

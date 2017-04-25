@@ -111,6 +111,7 @@
       <!--Type: float-->
       <!--Default Value: -1.0-->
       <wildClusterRadius>float_value</wildClusterRadius>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <sowTags>
         <!--Type: string-->
@@ -125,6 +126,7 @@
       <!--Type: bool-->
       <!--Default Value: false-->
       <blockAdjacentSow>true_or_false</blockAdjacentSow>
+      <!--Reference List-->
       <!--Type: List<Verse.ResearchProjectDef>-->
       <sowResearchPrerequisites>
         <!--Type: Verse.ResearchProjectDef-->

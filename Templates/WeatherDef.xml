@@ -36,6 +36,7 @@
     </temperatureRange>
     <!--Type: Verse.SimpleCurve-->
     <commonalityRainfallFactor>
+      <!--Simple List-->
       <!--Type: List<Verse.CurvePoint>-->
       <points>
         <!--Type: Verse.CurvePoint-->
@@ -56,6 +57,7 @@
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <accuracyMultiplier>float_value</accuracyMultiplier>
+    <!--Reference List-->
     <!--Type: List<Verse.SoundDef>-->
     <ambientSounds>
       <!--Type: Verse.SoundDef-->
@@ -75,6 +77,7 @@
       </li>
       <!-- ... -->
     </eventMakers>
+    <!--Simple List-->
     <!--Type: List<System.Type>-->
     <overlayClasses>
       <!--Type: System.Type-->

@@ -16,12 +16,14 @@
     <difficulty>float_value</difficulty>
     <!--Type: float-->
     <minBodySize>float_value</minBodySize>
+    <!--Reference List-->
     <!--Type: List<RimWorld.TrainableDef>-->
     <prerequisites>
       <!--Type: RimWorld.TrainableDef-->
       <li>TrainableDef_defName</li>
       <!-- ... -->
     </prerequisites>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <tags>
       <!--Type: string-->

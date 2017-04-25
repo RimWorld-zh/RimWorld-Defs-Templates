@@ -39,6 +39,7 @@
         <randomMentalState>MentalStateDef_defName</randomMentalState>
         <!--Type: Verse.SimpleCurve-->
         <randomMentalStateMtbDaysMoodCurve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->
@@ -46,12 +47,14 @@
             <!-- ... -->
           </points>
         </randomMentalStateMtbDaysMoodCurve>
+        <!--Reference List-->
         <!--Type: List<Verse.MentalStateDef>-->
         <disallowedMentalStates>
           <!--Type: Verse.MentalStateDef-->
           <li>MentalStateDef_defName</li>
           <!-- ... -->
         </disallowedMentalStates>
+        <!--Reference List-->
         <!--Type: List<Verse.MentalBreakDef>-->
         <allowedMentalBreaks>
           <!--Type: Verse.MentalBreakDef-->
@@ -77,18 +80,21 @@
       </li>
       <!-- ... -->
     </degreeDatas>
+    <!--Reference List-->
     <!--Type: List<RimWorld.TraitDef>-->
     <conflictingTraits>
       <!--Type: RimWorld.TraitDef-->
       <li>TraitDef_defName</li>
       <!-- ... -->
     </conflictingTraits>
+    <!--Reference List-->
     <!--Type: List<Verse.WorkTypeDef>-->
     <requiredWorkTypes>
       <!--Type: Verse.WorkTypeDef-->
       <li>WorkTypeDef_defName</li>
       <!-- ... -->
     </requiredWorkTypes>
+    <!--Flag-->
     <!--Type: Verse.WorkTags-->
     <!--Available Values: None, ManualDumb, ManualSkilled, Violent, Caring, Social, Intellectual, Animals, Artistic, Crafting, Cooking, Firefighting, Cleaning, Hauling, PlantWork, Mining-->
     <requiredWorkTags>

@@ -10,6 +10,7 @@
     <label>string_value</label>
     <!--Type: System.Type-->
     <workerClass>class_name</workerClass>
+    <!--Reference List-->
     <!--Type: List<Verse.RoomStatDef>-->
     <relatedStats>
       <!--Type: Verse.RoomStatDef-->

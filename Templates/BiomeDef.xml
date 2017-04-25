@@ -46,6 +46,7 @@
     <hasVirtualPlants>true_or_false</hasVirtualPlants>
     <!--Type: Verse.SimpleCurve-->
     <pathCost>
+      <!--Simple List-->
       <!--Type: List<Verse.CurvePoint>-->
       <points>
         <!--Type: Verse.CurvePoint-->
@@ -77,6 +78,7 @@
       </li>
       <!-- ... -->
     </terrainsByFertility>
+    <!--Reference List-->
     <!--Type: List<Verse.SoundDef>-->
     <soundsAmbient>
       <!--Type: Verse.SoundDef-->
@@ -139,6 +141,7 @@
       </li>
       <!-- ... -->
     </diseases>
+    <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
     <allowedPackAnimals>
       <!--Type: Verse.ThingDef-->

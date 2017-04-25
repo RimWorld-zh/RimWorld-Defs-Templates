@@ -17,6 +17,7 @@
     <!--Type: bool-->
     <!--Default Value: true-->
     <saved>true_or_false</saved>
+    <!--Simple List-->
     <!--Type: List<RimWorld.WorldObjectCompProperties>-->
     <comps>
       <!--Type: RimWorld.WorldObjectCompProperties_Timeout-->
@@ -35,6 +36,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <isTempIncidentMapOwner>true_or_false</isTempIncidentMapOwner>
+    <!--Simple List-->
     <!--Type: List<System.Type>-->
     <inspectorTabs>
       <!--Type: System.Type-->

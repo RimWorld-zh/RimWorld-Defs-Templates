@@ -46,18 +46,21 @@
     <validWhileDespawned>true_or_false</validWhileDespawned>
     <!--Type: RimWorld.ThoughtDef-->
     <nextThought>ThoughtDef_defName</nextThought>
+    <!--Reference List-->
     <!--Type: List<RimWorld.TraitDef>-->
     <nullifyingTraits>
       <!--Type: RimWorld.TraitDef-->
       <li>TraitDef_defName</li>
       <!-- ... -->
     </nullifyingTraits>
+    <!--Reference List-->
     <!--Type: List<RimWorld.TaleDef>-->
     <nullifyingOwnTales>
       <!--Type: RimWorld.TaleDef-->
       <li>TaleDef_defName</li>
       <!-- ... -->
     </nullifyingOwnTales>
+    <!--Reference List-->
     <!--Type: List<RimWorld.TraitDef>-->
     <requiredTraits>
       <!--Type: RimWorld.TraitDef-->

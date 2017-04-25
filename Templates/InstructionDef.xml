@@ -15,12 +15,14 @@
     <startCentered>true_or_false</startCentered>
     <!--Type: string-->
     <eventTagInitiate>string_value</eventTagInitiate>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <eventTagsEnd>
       <!--Type: string-->
       <li>string_value</li>
       <!-- ... -->
     </eventTagsEnd>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <actionTagsAllowed>
       <!--Type: string-->
@@ -31,6 +33,7 @@
     <rejectInputMessage>string_value</rejectInputMessage>
     <!--Type: RimWorld.ConceptDef-->
     <concept>ConceptDef_defName</concept>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <highlightTags>
       <!--Type: string-->

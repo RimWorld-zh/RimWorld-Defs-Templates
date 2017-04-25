@@ -17,6 +17,7 @@
     <!--Type: UnityEngine.Vector2-->
     <!--Default Value: default(Vector2)-->
     <fixedScale>value</fixedScale>
+    <!--Reference List-->
     <!--Type: List<RimWorld.HistoryAutoRecorderDef>-->
     <historyAutoRecorderDefs>
       <!--Type: RimWorld.HistoryAutoRecorderDef-->

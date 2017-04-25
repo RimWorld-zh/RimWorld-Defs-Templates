@@ -143,12 +143,14 @@
       <!--Type: float-->
       <max>float_value</max>
     </apparelMoney>
+    <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
     <apparelRequired>
       <!--Type: Verse.ThingDef-->
       <li>ThingDef_defName</li>
       <!-- ... -->
     </apparelRequired>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <apparelTags>
       <!--Type: string-->
@@ -169,6 +171,7 @@
       <!--Type: float-->
       <max>float_value</max>
     </weaponMoney>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <weaponTags>
       <!--Type: string-->
@@ -183,6 +186,7 @@
       <!--Type: float-->
       <max>float_value</max>
     </techHediffsMoney>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <techHediffsTags>
       <!--Type: string-->

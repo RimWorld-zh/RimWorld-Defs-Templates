@@ -9,6 +9,7 @@
     <giverClass>class_name</giverClass>
     <!--Type: float-->
     <baseChance>float_value</baseChance>
+    <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
     <thingDefs>
       <!--Type: Verse.ThingDef-->
@@ -28,6 +29,7 @@
     <unroofedOnly>true_or_false</unroofedOnly>
     <!--Type: RimWorld.JoyKindDef-->
     <joyKind>JoyKindDef_defName</joyKind>
+    <!--Reference List-->
     <!--Type: List<Verse.PawnCapacityDef>-->
     <requiredCapacities>
       <!--Type: Verse.PawnCapacityDef-->

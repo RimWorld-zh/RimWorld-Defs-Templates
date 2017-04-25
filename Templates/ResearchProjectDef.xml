@@ -17,6 +17,7 @@
     <!--Type: float-->
     <!--Default Value: 100.0-->
     <baseCost>float_value</baseCost>
+    <!--Reference List-->
     <!--Type: List<Verse.ResearchProjectDef>-->
     <prerequisites>
       <!--Type: Verse.ResearchProjectDef-->
@@ -25,12 +26,14 @@
     </prerequisites>
     <!--Type: Verse.ThingDef-->
     <requiredResearchBuilding>ThingDef_defName</requiredResearchBuilding>
+    <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
     <requiredResearchFacilities>
       <!--Type: Verse.ThingDef-->
       <li>ThingDef_defName</li>
       <!-- ... -->
     </requiredResearchFacilities>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <tags>
       <!--Type: string-->

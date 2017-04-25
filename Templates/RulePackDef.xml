@@ -5,6 +5,7 @@
     <!--Default Value: "UnnamedDef"-->
     <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
     <defName>string_value</defName>
+    <!--Reference List-->
     <!--Type: List<Verse.RulePackDef>-->
     <include>
       <!--Type: Verse.RulePackDef-->
@@ -13,6 +14,7 @@
     </include>
     <!--Type: Verse.Grammar.RulePack-->
     <rulePack>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <rulesStrings>
         <!--Type: string-->
@@ -28,6 +30,7 @@
           <keyword>string_value</keyword>
           <!--Type: string-->
           <path>string_value</path>
+          <!--Simple List-->
           <!--Type: List<string>-->
           <pathList>
             <!--Type: string-->

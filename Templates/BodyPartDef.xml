@@ -8,6 +8,7 @@
     <!--Type: string-->
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <tags>
       <!--Type: string-->

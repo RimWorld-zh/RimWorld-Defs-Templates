@@ -87,12 +87,14 @@
           <!--Type: int-->
           <max>int_value</max>
         </thingDefCountRange>
+        <!--Reference List-->
         <!--Type: List<Verse.ThingDef>-->
         <excludedThingDefs>
           <!--Type: Verse.ThingDef-->
           <li>ThingDef_defName</li>
           <!-- ... -->
         </excludedThingDefs>
+        <!--Reference List-->
         <!--Type: List<Verse.ThingCategoryDef>-->
         <excludedCategories>
           <!--Type: Verse.ThingCategoryDef-->
@@ -121,6 +123,7 @@
       <li Class="StockGenerator_BuyWeirdOrganic" />
       <!--Type: RimWorld.StockGenerator_MultiDef-->
       <li Class="StockGenerator_MultiDef">
+        <!--Reference List-->
         <!--Type: List<Verse.ThingDef>-->
         <thingDefs>
           <!--Type: Verse.ThingDef-->
@@ -214,6 +217,7 @@
         <!--Type: float-->
         <!--Default Value: 1.0-->
         <maxWildness>float_value</maxWildness>
+        <!--Simple List-->
         <!--Type: List<string>-->
         <tradeTags>
           <!--Type: string-->

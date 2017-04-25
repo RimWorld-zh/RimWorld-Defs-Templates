@@ -34,18 +34,21 @@
     <!--Type: float-->
     <!--Default Value: -1.0-->
     <minThreatPoints>float_value</minThreatPoints>
+    <!--Reference List-->
     <!--Type: List<RimWorld.BiomeDef>-->
     <allowedBiomes>
       <!--Type: RimWorld.BiomeDef-->
       <li>BiomeDef_defName</li>
       <!-- ... -->
     </allowedBiomes>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <tags>
       <!--Type: string-->
       <li>string_value</li>
       <!-- ... -->
     </tags>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <refireCheckTags>
       <!--Type: string-->
@@ -78,6 +81,7 @@
       <!--Type: float-->
       <max>float_value</max>
     </diseaseVictimFractionRange>
+    <!--Reference List-->
     <!--Type: List<Verse.BodyPartDef>-->
     <diseasePartsToAffect>
       <!--Type: Verse.BodyPartDef-->

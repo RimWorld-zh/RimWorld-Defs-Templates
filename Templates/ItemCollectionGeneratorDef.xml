@@ -11,6 +11,7 @@
     <!--Type: System.Type-->
     <!--Default Value: typeof(ItemCollectionGenerator)-->
     <workerClass>class_name</workerClass>
+    <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
     <allowedDefs>
       <!--Type: Verse.ThingDef-->

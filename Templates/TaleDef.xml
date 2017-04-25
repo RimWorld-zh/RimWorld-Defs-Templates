@@ -29,6 +29,7 @@
     <expireDays>float_value</expireDays>
     <!--Type: Verse.Grammar.RulePack-->
     <rulePack>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <rulesStrings>
         <!--Type: string-->

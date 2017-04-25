@@ -37,18 +37,21 @@
         <!--Type: Verse.ThingFilter-->
         <!--Default Value: new ThingFilter()-->
         <filter>
+          <!--Reference List-->
           <!--Type: List<Verse.ThingDef>-->
           <thingDefs>
             <!--Type: Verse.ThingDef-->
             <li>ThingDef_defName</li>
             <!-- ... -->
           </thingDefs>
+          <!--Simple List-->
           <!--Type: List<string>-->
           <categories>
             <!--Type: string-->
             <li>string_value</li>
             <!-- ... -->
           </categories>
+          <!--Reference List-->
           <!--Type: List<Verse.ThingDef>-->
           <exceptedThingDefs>
             <!--Type: Verse.ThingDef-->
@@ -65,36 +68,42 @@
     <!--Type: Verse.ThingFilter-->
     <!--Default Value: new ThingFilter()-->
     <fixedIngredientFilter>
+      <!--Reference List-->
       <!--Type: List<Verse.SpecialThingFilterDef>-->
       <disallowedSpecialFilters>
         <!--Type: Verse.SpecialThingFilterDef-->
         <li>SpecialThingFilterDef_defName</li>
         <!-- ... -->
       </disallowedSpecialFilters>
+      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <thingDefs>
         <!--Type: Verse.ThingDef-->
         <li>ThingDef_defName</li>
         <!-- ... -->
       </thingDefs>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <categories>
         <!--Type: string-->
         <li>string_value</li>
         <!-- ... -->
       </categories>
+      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <exceptedThingDefs>
         <!--Type: Verse.ThingDef-->
         <li>ThingDef_defName</li>
         <!-- ... -->
       </exceptedThingDefs>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <exceptedCategories>
         <!--Type: string-->
         <li>string_value</li>
         <!-- ... -->
       </exceptedCategories>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <specialFiltersToDisallow>
         <!--Type: string-->
@@ -104,30 +113,35 @@
     </fixedIngredientFilter>
     <!--Type: Verse.ThingFilter-->
     <defaultIngredientFilter>
+      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <thingDefs>
         <!--Type: Verse.ThingDef-->
         <li>ThingDef_defName</li>
         <!-- ... -->
       </thingDefs>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <categories>
         <!--Type: string-->
         <li>string_value</li>
         <!-- ... -->
       </categories>
+      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <exceptedThingDefs>
         <!--Type: Verse.ThingDef-->
         <li>ThingDef_defName</li>
         <!-- ... -->
       </exceptedThingDefs>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <exceptedCategories>
         <!--Type: string-->
         <li>string_value</li>
         <!-- ... -->
       </exceptedCategories>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <specialFiltersToAllow>
         <!--Type: string-->
@@ -141,6 +155,7 @@
     <!--Type: System.Type-->
     <!--Default Value: typeof(IngredientValueGetter_Volume)-->
     <ingredientValueGetterClass>class_name</ingredientValueGetterClass>
+    <!--Reference List-->
     <!--Type: List<Verse.SpecialThingFilterDef>-->
     <forceHiddenSpecialFilters>
       <!--Type: Verse.SpecialThingFilterDef-->
@@ -155,6 +170,7 @@
       <!--Pattern: <ThingDef_defName>int_value</ThingDef_defName>-->
       <!-- ... -->
     </products>
+    <!--Simple List-->
     <!--Type: List<Verse.SpecialProductType>-->
     <specialProducts>
       <!--Type: Verse.SpecialProductType-->
@@ -162,6 +178,9 @@
       <li>enum_value</li>
       <!-- ... -->
     </specialProducts>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <productHasIngredientStuff>true_or_false</productHasIngredientStuff>
     <!--Type: int-->
     <!--Default Value: 1-->
     <targetCountAdjustment>int_value</targetCountAdjustment>
@@ -188,12 +207,14 @@
     <effectWorking>EffecterDef_defName</effectWorking>
     <!--Type: Verse.SoundDef-->
     <soundWorking>SoundDef_defName</soundWorking>
+    <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
     <recipeUsers>
       <!--Type: Verse.ThingDef-->
       <li>ThingDef_defName</li>
       <!-- ... -->
     </recipeUsers>
+    <!--Reference List-->
     <!--Type: List<Verse.BodyPartDef>-->
     <appliedOnFixedBodyParts>
       <!--Type: Verse.BodyPartDef-->
@@ -220,6 +241,9 @@
     <!--Type: bool-->
     <!--Default Value: true-->
     <targetsBodyPart>true_or_false</targetsBodyPart>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <anesthetize>true_or_false</anesthetize>
     <!--Type: Verse.ResearchProjectDef-->
     <researchPrerequisite>ResearchProjectDef_defName</researchPrerequisite>
     <!--Type: RimWorld.ConceptDef-->

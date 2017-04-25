@@ -28,6 +28,7 @@
       <li Class="RoadDefGenStep_Bulldoze">
         <!--Type: Verse.SimpleCurve-->
         <chancePerPositionCurve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->
@@ -40,6 +41,7 @@
       <li Class="RoadDefGenStep_DryWithFallback">
         <!--Type: Verse.SimpleCurve-->
         <chancePerPositionCurve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->
@@ -54,6 +56,7 @@
       <li Class="RoadDefGenStep_Place">
         <!--Type: Verse.SimpleCurve-->
         <chancePerPositionCurve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->

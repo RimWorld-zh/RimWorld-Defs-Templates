@@ -91,6 +91,7 @@
               <subNodes>
                 <!--Type: Verse.AI.ThinkNode_Tagger-->
                 <li Class="ThinkNode_Tagger">
+                  <!--Simple List-->
                   <!--Type: List<Verse.AI.ThinkNode>-->
                   <subNodes>
                     <!--Type: RimWorld.JobGiver_DoLovin-->
@@ -116,6 +117,7 @@
             <li Class="JobGiver_KeepLyingDown" />
             <!--Type: Verse.AI.ThinkNode_Tagger-->
             <li Class="ThinkNode_Tagger">
+              <!--Simple List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
                 <!--Type: RimWorld.JobGiver_GetJoyInBed-->
@@ -158,6 +160,7 @@
                 </li>
                 <!--Type: RimWorld.ThinkNode_ConditionalNeedPercentageAbove-->
                 <li Class="ThinkNode_ConditionalNeedPercentageAbove">
+                  <!--Simple List-->
                   <!--Type: List<Verse.AI.ThinkNode>-->
                   <subNodes>
                     <!--Type: RimWorld.JobGiver_IdleJoy-->
@@ -311,6 +314,7 @@
                   <subNodes>
                     <!--Type: Verse.AI.ThinkNode_Tagger-->
                     <li Class="ThinkNode_Tagger">
+                      <!--Simple List-->
                       <!--Type: List<Verse.AI.ThinkNode>-->
                       <subNodes>
                         <!--Type: RimWorld.JobGiver_PrisonerEscape-->
@@ -382,6 +386,7 @@
                     <li Class="JobGiver_SatisfyChemicalNeed" />
                     <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
                     <li Class="ThinkNode_Priority_GetJoy">
+                      <!--Simple List-->
                       <!--Type: List<Verse.AI.ThinkNode>-->
                       <subNodes>
                         <!--Type: RimWorld.JobGiver_GetJoy-->
@@ -489,6 +494,7 @@
               <subNodes>
                 <!--Type: Verse.AI.ThinkNode_Tagger-->
                 <li Class="ThinkNode_Tagger">
+                  <!--Simple List-->
                   <!--Type: List<Verse.AI.ThinkNode>-->
                   <subNodes>
                     <!--Type: RimWorld.JobGiver_Mate-->
@@ -509,6 +515,7 @@
               <subNodes>
                 <!--Type: Verse.AI.ThinkNode_Tagger-->
                 <li Class="ThinkNode_Tagger">
+                  <!--Simple List-->
                   <!--Type: List<Verse.AI.ThinkNode>-->
                   <subNodes>
                     <!--Type: RimWorld.JobGiver_Nuzzle-->
@@ -534,6 +541,7 @@
                   <subNodes>
                     <!--Type: Verse.AI.ThinkNode_Tagger-->
                     <li Class="ThinkNode_Tagger">
+                      <!--Simple List-->
                       <!--Type: List<Verse.AI.ThinkNode>-->
                       <subNodes>
                         <!--Type: RimWorld.JobGiver_Haul-->
@@ -620,6 +628,7 @@
           <subNodes>
             <!--Type: Verse.AI.ThinkNode_Tagger-->
             <li Class="ThinkNode_Tagger">
+              <!--Simple List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
                 <!--Type: Verse.AI.JobGiver_ForcedGoto-->
@@ -714,6 +723,7 @@
           <subNodes>
             <!--Type: Verse.AI.ThinkNode_Tagger-->
             <li Class="ThinkNode_Tagger">
+              <!--Simple List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
                 <!--Type: RimWorld.JobGiver_EatRandom-->
@@ -826,6 +836,7 @@
             <li Class="JobGiver_TakeDrugsForDrugPolicy" />
             <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
             <li Class="ThinkNode_Priority_GetJoy">
+              <!--Simple List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
                 <!--Type: RimWorld.JobGiver_GetJoyInBed-->
@@ -947,6 +958,7 @@
                 <li Class="JobGiver_SatisfyChemicalNeed" />
                 <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
                 <li Class="ThinkNode_Priority_GetJoy">
+                  <!--Simple List-->
                   <!--Type: List<Verse.AI.ThinkNode>-->
                   <subNodes>
                     <!--Type: RimWorld.JobGiver_GetJoy-->
@@ -985,6 +997,7 @@
           <subNodes>
             <!--Type: RimWorld.ThinkNode_ConditionalNeedPercentageAbove-->
             <li Class="ThinkNode_ConditionalNeedPercentageAbove">
+              <!--Simple List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
                 <!--Type: RimWorld.JobGiver_GetRest-->
@@ -1010,6 +1023,7 @@
                 <li Class="JobGiver_SatisfyChemicalNeed" />
                 <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
                 <li Class="ThinkNode_Priority_GetJoy">
+                  <!--Simple List-->
                   <!--Type: List<Verse.AI.ThinkNode>-->
                   <subNodes>
                     <!--Type: RimWorld.JobGiver_GetJoy-->
@@ -1028,6 +1042,7 @@
             <li Class="JobGiver_WanderColony" />
             <!-- ... -->
           </subNodes>
+          <!--Reference List-->
           <!--Type: List<Verse.MentalStateDef>-->
           <states>
             <!--Type: Verse.MentalStateDef-->
@@ -1049,6 +1064,7 @@
               <subNodes>
                 <!--Type: Verse.AI.ThinkNode_ConditionalHasFallbackLocation-->
                 <li Class="ThinkNode_ConditionalHasFallbackLocation">
+                  <!--Simple List-->
                   <!--Type: List<Verse.AI.ThinkNode>-->
                   <subNodes>
                     <!--Type: Verse.AI.JobGiver_WanderNearFallbackLocation-->
@@ -1079,6 +1095,7 @@
     </thinkRoot>
     <!--Type: RimWorld.ThinkNode_ConditionalDowned-->
     <thinkRoot Class="ThinkNode_ConditionalDowned">
+      <!--Simple List-->
       <!--Type: List<Verse.AI.ThinkNode>-->
       <subNodes>
         <!--Type: Verse.AI.JobGiver_IdleForever-->

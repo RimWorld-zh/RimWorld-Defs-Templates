@@ -62,6 +62,7 @@
     <!--Type: float-->
     <!--Default Value: 3.40282347E+38-->
     <roundToFiveOver>float_value</roundToFiveOver>
+    <!--Reference List-->
     <!--Type: List<RimWorld.StatDef>-->
     <statFactors>
       <!--Type: RimWorld.StatDef-->
@@ -95,6 +96,7 @@
         <!--Type: bool-->
         <!--Default Value: false-->
         <reportInverse>true_or_false</reportInverse>
+        <!--Simple List-->
         <!--Type: List<float>-->
         <factorsPerLevel>
           <!--Type: float-->
@@ -122,6 +124,7 @@
     </capacityFactors>
     <!--Type: Verse.SimpleCurve-->
     <postProcessCurve>
+      <!--Simple List-->
       <!--Type: List<Verse.CurvePoint>-->
       <points>
         <!--Type: Verse.CurvePoint-->
@@ -169,6 +172,7 @@
       <li Class="StatPart_Health">
         <!--Type: Verse.SimpleCurve-->
         <curve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->
@@ -181,6 +185,7 @@
       <li Class="StatPart_Mood">
         <!--Type: Verse.SimpleCurve-->
         <curve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->
@@ -223,6 +228,7 @@
       <li Class="StatPart_Age">
         <!--Type: Verse.SimpleCurve-->
         <curve>
+          <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
           <points>
             <!--Type: Verse.CurvePoint-->

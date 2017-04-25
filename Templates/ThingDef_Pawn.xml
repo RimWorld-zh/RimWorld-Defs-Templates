@@ -103,6 +103,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <hasTooltip>true_or_false</hasTooltip>
+    <!--Simple List-->
     <!--Type: List<System.Type>-->
     <inspectorTabs>
       <!--Type: System.Type-->
@@ -114,12 +115,14 @@
     <drawGUIOverlay>true_or_false</drawGUIOverlay>
     <!--Type: Verse.SoundDef-->
     <soundImpactDefault>SoundDef_defName</soundImpactDefault>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <tradeTags>
       <!--Type: string-->
       <li>string_value</li>
       <!-- ... -->
     </tradeTags>
+    <!--Reference List-->
     <!--Type: List<Verse.RecipeDef>-->
     <recipes>
       <!--Type: Verse.RecipeDef-->
@@ -195,6 +198,7 @@
       <deathActionWorkerClass>class_name</deathActionWorkerClass>
       <!--Type: Verse.SimpleCurve-->
       <ageGenerationCurve>
+        <!--Simple List-->
         <!--Type: List<Verse.CurvePoint>-->
         <points>
           <!--Type: Verse.CurvePoint-->
@@ -211,6 +215,7 @@
       <!--Type: float-->
       <!--Default Value: 10.0-->
       <lifeExpectancy>float_value</lifeExpectancy>
+      <!--Reference List-->
       <!--Type: List<RimWorld.HediffGiverSetDef>-->
       <hediffGiverSets>
         <!--Type: RimWorld.HediffGiverSetDef-->
@@ -249,6 +254,7 @@
       <gestationPeriodDays>float_value</gestationPeriodDays>
       <!--Type: Verse.SimpleCurve-->
       <litterSizeCurve>
+        <!--Simple List-->
         <!--Type: List<Verse.CurvePoint>-->
         <points>
           <!--Type: Verse.CurvePoint-->

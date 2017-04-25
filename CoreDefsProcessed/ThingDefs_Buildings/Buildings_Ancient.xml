@@ -8,6 +8,7 @@
       <MaxHitPoints>500</MaxHitPoints>
       <Beauty>-10</Beauty>
       <Flammability>0</Flammability>
+      <WorkToBuild>600</WorkToBuild>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>35</pathCost>
@@ -49,6 +50,7 @@
     <description>Road lighting from long ago. No longer functional.</description>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>100</pathCost>

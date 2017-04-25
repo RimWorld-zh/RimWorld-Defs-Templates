@@ -141,6 +141,7 @@
       <!--Type: bool-->
       <!--Default Value: false-->
       <nearMapCenter>true_or_false</nearMapCenter>
+      <!--Reference List-->
       <!--Type: List<RimWorld.ItemCollectionGeneratorDef>-->
       <itemCollectionGeneratorDefs>
         <!--Type: RimWorld.ItemCollectionGeneratorDef-->
@@ -161,6 +162,7 @@
       <!--Type: bool-->
       <!--Default Value: false-->
       <nearMapCenter>true_or_false</nearMapCenter>
+      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <mineables>
         <!--Type: Verse.ThingDef-->

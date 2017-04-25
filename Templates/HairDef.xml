@@ -14,6 +14,7 @@
     <!--Available Values: Male, MaleUsually, Any, FemaleUsually, Female-->
     <!--Default Value: Any-->
     <hairGender>enum_value</hairGender>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <hairTags>
       <!--Type: string-->

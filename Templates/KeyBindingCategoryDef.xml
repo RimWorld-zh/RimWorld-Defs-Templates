@@ -14,6 +14,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <isGameUniversal>true_or_false</isGameUniversal>
+    <!--Reference List-->
     <!--Type: List<Verse.KeyBindingCategoryDef>-->
     <checkForConflicts>
       <!--Type: Verse.KeyBindingCategoryDef-->

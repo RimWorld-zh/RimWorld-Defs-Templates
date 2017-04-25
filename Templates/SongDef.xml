@@ -23,6 +23,7 @@
     <!--Available Values: Night, Day, Any-->
     <!--Default Value: Any-->
     <allowedTimeOfDay>enum_value</allowedTimeOfDay>
+    <!--Simple List-->
     <!--Type: List<RimWorld.Season>-->
     <allowedSeasons>
       <!--Type: RimWorld.Season-->

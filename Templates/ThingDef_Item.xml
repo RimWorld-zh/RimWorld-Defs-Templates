@@ -38,6 +38,7 @@
     <!--Type: int-->
     <!--Default Value: -1-->
     <costStuffCount>int_value</costStuffCount>
+    <!--Reference List-->
     <!--Type: List<RimWorld.StuffCategoryDef>-->
     <stuffCategories>
       <!--Type: RimWorld.StuffCategoryDef-->
@@ -76,6 +77,21 @@
     <comps>
       <!--Type: RimWorld.CompProperties_Forbiddable-->
       <li Class="CompProperties_Forbiddable" />
+      <!--Type: RimWorld.CompProperties_Rottable-->
+      <li Class="CompProperties_Rottable">
+        <!--Type: float-->
+        <!--Default Value: 2.0-->
+        <daysToRotStart>float_value</daysToRotStart>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <rotDestroys>true_or_false</rotDestroys>
+      </li>
+      <!--Type: RimWorld.CompProperties_FoodPoisoningChance-->
+      <li Class="CompProperties_FoodPoisoningChance">
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <humanlikeOnly>true_or_false</humanlikeOnly>
+      </li>
       <!--Type: Verse.CompProperties-->
       <li>
         <!--Type: System.Type-->
@@ -91,21 +107,6 @@
         <!--Type: RimWorld.QualityCategory-->
         <!--Available Values: Awful, Shoddy, Poor, Normal, Good, Superior, Excellent, Masterwork, Legendary-->
         <minQualityForArtistic>enum_value</minQualityForArtistic>
-      </li>
-      <!--Type: RimWorld.CompProperties_Rottable-->
-      <li Class="CompProperties_Rottable">
-        <!--Type: float-->
-        <!--Default Value: 2.0-->
-        <daysToRotStart>float_value</daysToRotStart>
-        <!--Type: bool-->
-        <!--Default Value: false-->
-        <rotDestroys>true_or_false</rotDestroys>
-      </li>
-      <!--Type: RimWorld.CompProperties_FoodPoisoningChance-->
-      <li Class="CompProperties_FoodPoisoningChance">
-        <!--Type: bool-->
-        <!--Default Value: false-->
-        <humanlikeOnly>true_or_false</humanlikeOnly>
       </li>
       <!--Type: RimWorld.CompProperties_Explosive-->
       <li Class="CompProperties_Explosive">
@@ -251,12 +252,14 @@
       <unfinishedThingDef>ThingDef_defName</unfinishedThingDef>
       <!--Type: Verse.ThingFilter-->
       <defaultIngredientFilter>
+        <!--Simple List-->
         <!--Type: List<string>-->
         <categories>
           <!--Type: string-->
           <li>string_value</li>
           <!-- ... -->
         </categories>
+        <!--Reference List-->
         <!--Type: List<Verse.ThingDef>-->
         <exceptedThingDefs>
           <!--Type: Verse.ThingDef-->
@@ -282,6 +285,7 @@
       <effectWorking>EffecterDef_defName</effectWorking>
       <!--Type: Verse.SoundDef-->
       <soundWorking>SoundDef_defName</soundWorking>
+      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <recipeUsers>
         <!--Type: Verse.ThingDef-->
@@ -322,6 +326,9 @@
       <!--Type: UnityEngine.Color-->
       <!--Default Value: Color.white-->
       <color>value</color>
+      <!--Type: UnityEngine.Color-->
+      <!--Default Value: Color.white-->
+      <colorTwo>value</colorTwo>
       <!--Type: UnityEngine.Vector2-->
       <!--Default Value: Vector2.one-->
       <drawSize>value</drawSize>
@@ -368,6 +375,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <selectable>true_or_false</selectable>
+    <!--Simple List-->
     <!--Type: List<System.Type>-->
     <inspectorTabs>
       <!--Type: System.Type-->
@@ -391,6 +399,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <designateHaulable>true_or_false</designateHaulable>
+    <!--Reference List-->
     <!--Type: List<Verse.ThingCategoryDef>-->
     <thingCategories>
       <!--Type: Verse.ThingCategoryDef-->
@@ -416,6 +425,7 @@
     <!--Available Values: Never, Sellable, Stockable-->
     <!--Default Value: Stockable-->
     <tradeability>enum_value</tradeability>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <tradeTags>
       <!--Type: string-->
@@ -523,12 +533,14 @@
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
     <techLevel>enum_value</techLevel>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <weaponTags>
       <!--Type: string-->
       <li>string_value</li>
       <!-- ... -->
     </weaponTags>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <techHediffsTags>
       <!--Type: string-->
@@ -595,6 +607,10 @@
       <useEatingSpeedStat>true_or_false</useEatingSpeedStat>
       <!--Type: RimWorld.ThoughtDef-->
       <tasteThought>ThoughtDef_defName</tasteThought>
+      <!--Type: RimWorld.ThoughtDef-->
+      <specialThoughtDirect>ThoughtDef_defName</specialThoughtDirect>
+      <!--Type: RimWorld.ThoughtDef-->
+      <specialThoughtAsIngredient>ThoughtDef_defName</specialThoughtAsIngredient>
       <!--Type: Verse.EffecterDef-->
       <ingestEffect>EffecterDef_defName</ingestEffect>
       <!--Type: Verse.EffecterDef-->
@@ -664,12 +680,14 @@
     </ingestible>
     <!--Type: RimWorld.ApparelProperties-->
     <apparel>
+      <!--Reference List-->
       <!--Type: List<Verse.BodyPartGroupDef>-->
       <bodyPartGroups>
         <!--Type: Verse.BodyPartGroupDef-->
         <li>BodyPartGroupDef_defName</li>
         <!-- ... -->
       </bodyPartGroups>
+      <!--Simple List-->
       <!--Type: List<RimWorld.ApparelLayer>-->
       <layers>
         <!--Type: RimWorld.ApparelLayer-->
@@ -680,12 +698,14 @@
       <!--Type: string-->
       <!--Default Value: string.Empty-->
       <wornGraphicPath>string_value</wornGraphicPath>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <tags>
         <!--Type: string-->
         <li>string_value</li>
         <!-- ... -->
       </tags>
+      <!--Simple List-->
       <!--Type: List<string>-->
       <defaultOutfitTags>
         <!--Type: string-->
@@ -703,6 +723,7 @@
       <!--Type: float-->
       <!--Default Value: 1.0-->
       <commonality>float_value</commonality>
+      <!--Reference List-->
       <!--Type: List<RimWorld.StuffCategoryDef>-->
       <categories>
         <!--Type: RimWorld.StuffCategoryDef-->

@@ -59,6 +59,7 @@
                       <!--Type: float-->
                       <!--Default Value: 1.0-->
                       <coverage>float_value</coverage>
+                      <!--Reference List-->
                       <!--Type: List<Verse.BodyPartGroupDef>-->
                       <groups>
                         <!--Type: Verse.BodyPartGroupDef-->
@@ -77,6 +78,7 @@
                   <!--Type: float-->
                   <!--Default Value: 1.0-->
                   <coverage>float_value</coverage>
+                  <!--Reference List-->
                   <!--Type: List<Verse.BodyPartGroupDef>-->
                   <groups>
                     <!--Type: Verse.BodyPartGroupDef-->
@@ -95,6 +97,7 @@
               <!--Type: float-->
               <!--Default Value: 1.0-->
               <coverage>float_value</coverage>
+              <!--Reference List-->
               <!--Type: List<Verse.BodyPartGroupDef>-->
               <groups>
                 <!--Type: Verse.BodyPartGroupDef-->
@@ -113,6 +116,7 @@
           <!--Type: float-->
           <!--Default Value: 1.0-->
           <coverage>float_value</coverage>
+          <!--Reference List-->
           <!--Type: List<Verse.BodyPartGroupDef>-->
           <groups>
             <!--Type: Verse.BodyPartGroupDef-->
@@ -128,6 +132,7 @@
       <!--Type: Verse.BodyPartDepth-->
       <!--Available Values: Undefined, Inside, Outside-->
       <depth>enum_value</depth>
+      <!--Reference List-->
       <!--Type: List<Verse.BodyPartGroupDef>-->
       <groups>
         <!--Type: Verse.BodyPartGroupDef-->

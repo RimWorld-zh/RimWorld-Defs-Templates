@@ -36,6 +36,7 @@
         <!--Type: float-->
         <!--Default Value: 100.0-->
         <commonality>float_value</commonality>
+        <!--Reference List-->
         <!--Type: List<RimWorld.RaidStrategyDef>-->
         <disallowedStrategies>
           <!--Type: RimWorld.RaidStrategyDef-->
@@ -103,6 +104,7 @@
     </allowedArrivalTemperatureRange>
     <!--Type: Verse.PawnKindDef-->
     <basicMemberKind>PawnKindDef_defName</basicMemberKind>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <startingResearchTags>
       <!--Type: string-->
@@ -135,6 +137,7 @@
     <techLevel>enum_value</techLevel>
     <!--Type: string-->
     <backstoryCategory>string_value</backstoryCategory>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <hairTags>
       <!--Type: string-->
@@ -143,6 +146,7 @@
     </hairTags>
     <!--Type: Verse.ThingFilter-->
     <apparelStuffFilter>
+      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <thingDefs>
         <!--Type: Verse.ThingDef-->
@@ -150,18 +154,21 @@
         <!-- ... -->
       </thingDefs>
     </apparelStuffFilter>
+    <!--Reference List-->
     <!--Type: List<RimWorld.TraderKindDef>-->
     <caravanTraderKinds>
       <!--Type: RimWorld.TraderKindDef-->
       <li>TraderKindDef_defName</li>
       <!-- ... -->
     </caravanTraderKinds>
+    <!--Reference List-->
     <!--Type: List<RimWorld.TraderKindDef>-->
     <visitorTraderKinds>
       <!--Type: RimWorld.TraderKindDef-->
       <li>TraderKindDef_defName</li>
       <!-- ... -->
     </visitorTraderKinds>
+    <!--Reference List-->
     <!--Type: List<RimWorld.TraderKindDef>-->
     <baseTraderKinds>
       <!--Type: RimWorld.TraderKindDef-->
@@ -194,6 +201,7 @@
     <homeIconPath>string_value</homeIconPath>
     <!--Type: string-->
     <expandingIconTexture>string_value</expandingIconTexture>
+    <!--Simple List-->
     <!--Type: List<UnityEngine.Color>-->
     <colorSpectrum>
       <!--Type: UnityEngine.Color-->

@@ -211,6 +211,7 @@
         <!--Type: float-->
         <!--Default Value: 1.0-->
         <socialFightChanceFactor>float_value</socialFightChanceFactor>
+        <!--Reference List-->
         <!--Type: List<Verse.HediffDef>-->
         <makeImmuneTo>
           <!--Type: Verse.HediffDef-->
@@ -242,6 +243,7 @@
           <li Class="HediffGiver_Random">
             <!--Type: Verse.HediffDef-->
             <hediff>HediffDef_defName</hediff>
+            <!--Reference List-->
             <!--Type: List<Verse.BodyPartDef>-->
             <partsToAffect>
               <!--Type: Verse.BodyPartDef-->
@@ -320,6 +322,7 @@
       <li Class="HediffGiver_RandomDrugEffect">
         <!--Type: Verse.HediffDef-->
         <hediff>HediffDef_defName</hediff>
+        <!--Reference List-->
         <!--Type: List<Verse.BodyPartDef>-->
         <partsToAffect>
           <!--Type: Verse.BodyPartDef-->

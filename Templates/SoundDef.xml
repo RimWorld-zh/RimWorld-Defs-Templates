@@ -14,6 +14,7 @@
     <!--Default Value: Any-->
     <!--Desc: When the sound is allowed to play: only when the map view is active, only when the world view is active, or always (map + world + main menu).-->
     <context>enum_value</context>
+    <!--Simple List-->
     <!--Type: List<string>-->
     <!--Desc: Event names for this sound. \n\nThe code will look up sounds to play them according to their name. If the code finds the event name it wants in this list, it will trigger this sound.\n\nThe Def name is also used as an event name.-->
     <eventNames>

@@ -117,7 +117,7 @@
   <ResearchProjectDef>
     <defName>ShieldBelt</defName>
     <label>shield belt</label>
-    <description>Momenum-repulsion field technology allows you to build shield belts, which block ranged attacks coming in or going out.</description>
+    <description>Momentum-repulsion field technology allows you to build shield belts, which block ranged attacks coming in or going out.</description>
     <techLevel>Spacer</techLevel>
     <baseCost>1500</baseCost>
     <prerequisites>

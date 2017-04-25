@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>Administer_Beer</defName>
+    <label>administer beer</label>
+    <jobString>Administering beer.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Beer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Beer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Ambrosia</defName>
+    <label>administer ambrosia</label>
+    <jobString>Administering ambrosia.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <workAmount>100</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Ambrosia</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Ambrosia</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_GoJuice</defName>
+    <label>administer go-juice</label>
+    <jobString>Administering go-juice.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <workAmount>90</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">GoJuice</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">GoJuice</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Luciferium</defName>
+    <label>administer luciferium</label>
+    <jobString>Administering luciferium.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <workAmount>120</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Luciferium</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Luciferium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Penoxycyline</defName>
+    <label>administer penoxycyline</label>
+    <jobString>Administering penoxycyline.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <workAmount>120</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Penoxycyline</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Penoxycyline</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Flake</defName>
+    <label>administer flake</label>
+    <jobString>Administering flake.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <workAmount>720</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Flake</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Flake</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_Yayo</defName>
+    <label>administer yayo</label>
+    <jobString>Administering yayo.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <workAmount>240</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Yayo</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Yayo</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_SmokeleafJoint</defName>
+    <label>administer smokeleaf joint</label>
+    <jobString>Administering smokeleaf joint.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <workAmount>720</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">SmokeleafJoint</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">SmokeleafJoint</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>Administer_WakeUp</defName>
+    <label>administer wake-up</label>
+    <jobString>Administering wake-up.</jobString>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <workAmount>120</workAmount>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">WakeUp</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">WakeUp</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+  </RecipeDef>
+</Defs>
+<!--Implied RecipeDef from drugs, generated by RimTrans.-->

@@ -17,6 +17,7 @@
     <!--Type: System.Type-->
     <!--Default Value: typeof(RecordWorker)-->
     <workerClass>class_name</workerClass>
+    <!--Reference List-->
     <!--Type: List<Verse.JobDef>-->
     <measuredTimeJobs>
       <!--Type: Verse.JobDef-->
