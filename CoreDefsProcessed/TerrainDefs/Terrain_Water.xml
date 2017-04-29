@@ -6,8 +6,8 @@
     <passability>Impassable</passability>
     <pathCost>300</pathCost>
     <fertility>0</fertility>
-    <texturePath>Terrain/Surfaces/WaterDeep</texturePath>
-    <edgeType>FadeRough</edgeType>
+    <texturePath>Terrain/Surfaces/WaterDeepSolid</texturePath>
+    <edgeType>Water</edgeType>
     <renderPrecedence>396</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
@@ -20,8 +20,8 @@
     <passability>Impassable</passability>
     <pathCost>300</pathCost>
     <fertility>0</fertility>
-    <texturePath>Terrain/Surfaces/WaterDeep</texturePath>
-    <edgeType>FadeRough</edgeType>
+    <texturePath>Terrain/Surfaces/WaterDeepSolid</texturePath>
+    <edgeType>Water</edgeType>
     <renderPrecedence>395</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
@@ -36,8 +36,8 @@
     <label>shallow water</label>
     <pathCost>12</pathCost>
     <fertility>0</fertility>
-    <texturePath>Terrain/Surfaces/WaterShallow</texturePath>
-    <edgeType>FadeRough</edgeType>
+    <texturePath>Terrain/Surfaces/WaterShallowSolid</texturePath>
+    <edgeType>Water</edgeType>
     <renderPrecedence>394</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
@@ -50,8 +50,8 @@
     <label>shallow moving water</label>
     <pathCost>12</pathCost>
     <fertility>0</fertility>
-    <texturePath>Terrain/Surfaces/WaterShallow</texturePath>
-    <edgeType>FadeRough</edgeType>
+    <texturePath>Terrain/Surfaces/WaterShallowSolid</texturePath>
+    <edgeType>Water</edgeType>
     <renderPrecedence>394</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>

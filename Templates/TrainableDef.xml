@@ -33,10 +33,9 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <defaultTrainable>true_or_false</defaultTrainable>
-    <!--Type: Verse.TrainableIntelligence-->
-    <!--Available Values: None, Simple, Intermediate, Advanced, SuperAdvanced-->
-    <!--Default Value: Simple-->
-    <requiredTrainableIntelligence>enum_value</requiredTrainableIntelligence>
+    <!--Type: Verse.TrainableIntelligenceDef-->
+    <!--Default Value: TrainableIntelligence.Simple-->
+    <requiredTrainableIntelligence>TrainableIntelligenceDef_defName</requiredTrainableIntelligence>
     <!--Type: int-->
     <!--Default Value: 1-->
     <steps>int_value</steps>

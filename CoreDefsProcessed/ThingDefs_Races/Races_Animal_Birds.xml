@@ -9,12 +9,12 @@
       <gestationPeriodDays>20</gestationPeriodDays>
       <lifeStageAges>
         <li>
-          <def>AnimalBaby</def>
+          <def>AnimalBabyTiny</def>
           <minAge>0</minAge>
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.2</minAge>
+          <minAge>0.22</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
@@ -145,15 +145,15 @@
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <baseBodySize>0.8</baseBodySize>
       <baseHealthScale>0.8</baseHealthScale>
-      <baseHungerRate>0.37</baseHungerRate>
+      <baseHungerRate>0.40</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
-          <def>AnimalBaby</def>
+          <def>AnimalBabyTiny</def>
           <minAge>0</minAge>
         </li>
         <li ListIndex="1">
           <def>AnimalJuvenile</def>
-          <minAge>0.2</minAge>
+          <minAge>0.22</minAge>
         </li>
         <li ListIndex="2">
           <def>AnimalAdult</def>
@@ -454,17 +454,17 @@
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
       <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
-      <baseBodySize>0.9</baseBodySize>
+      <baseBodySize>0.8</baseBodySize>
       <baseHealthScale>0.9</baseHealthScale>
       <baseHungerRate>0.4</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
-          <def>AnimalBaby</def>
+          <def>AnimalBabyTiny</def>
           <minAge>0</minAge>
         </li>
         <li ListIndex="1">
           <def>AnimalJuvenile</def>
-          <minAge>0.2</minAge>
+          <minAge>0.22</minAge>
         </li>
         <li ListIndex="2">
           <def>AnimalAdult</def>
@@ -720,12 +720,12 @@
       <baseHungerRate>0.55</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
-          <def>AnimalBaby</def>
+          <def>AnimalBabyTiny</def>
           <minAge>0</minAge>
         </li>
         <li ListIndex="1">
           <def>AnimalJuvenile</def>
-          <minAge>0.2</minAge>
+          <minAge>0.22</minAge>
         </li>
         <li ListIndex="2">
           <def>AnimalAdult</def>
@@ -997,15 +997,15 @@
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <baseBodySize>0.6</baseBodySize>
       <baseHealthScale>0.6</baseHealthScale>
-      <baseHungerRate>0.25</baseHungerRate>
+      <baseHungerRate>0.50</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
-          <def>AnimalBaby</def>
+          <def>AnimalBabyTiny</def>
           <minAge>0</minAge>
         </li>
         <li ListIndex="1">
           <def>AnimalJuvenile</def>
-          <minAge>0.2</minAge>
+          <minAge>0.22</minAge>
         </li>
         <li ListIndex="2">
           <def>AnimalAdult</def>

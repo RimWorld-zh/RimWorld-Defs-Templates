@@ -1205,8 +1205,8 @@
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <costList>
-      <Steel>400</Steel>
-      <Component>20</Component>
+      <Steel>200</Steel>
+      <Component>14</Component>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>

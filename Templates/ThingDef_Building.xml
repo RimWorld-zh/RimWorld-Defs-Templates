@@ -957,9 +957,8 @@
       <!--Type: bool-->
       <!--Default Value: false-->
       <isTrap>true_or_false</isTrap>
-      <!--Type: Verse.DamageArmorCategory-->
-      <!--Available Values: IgnoreArmor, Blunt, Sharp, Heat, Electric-->
-      <trapDamageCategory>enum_value</trapDamageCategory>
+      <!--Type: Verse.DamageArmorCategoryDef-->
+      <trapDamageCategory>DamageArmorCategoryDef_defName</trapDamageCategory>
       <!--Type: Verse.GraphicData-->
       <trapUnarmedGraphicData>
         <!--Type: string-->

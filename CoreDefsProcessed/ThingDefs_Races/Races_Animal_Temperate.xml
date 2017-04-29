@@ -1031,11 +1031,11 @@
       <wildness>0.75</wildness>
       <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.003</manhunterOnTameFailChance>
-      <gestationPeriodDays>25</gestationPeriodDays>
+      <gestationPeriodDays>24</gestationPeriodDays>
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
       <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
-      <baseBodySize>2.1</baseBodySize>
+      <baseBodySize>2.2</baseBodySize>
       <baseHealthScale>2.0</baseHealthScale>
       <baseHungerRate>0.90</baseHungerRate>
       <lifeStageAges>
@@ -1333,7 +1333,7 @@
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <baseBodySize>0.8</baseBodySize>
       <baseHealthScale>0.7</baseHealthScale>
-      <baseHungerRate>0.40</baseHungerRate>
+      <baseHungerRate>0.45</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
           <def>AnimalBaby</def>
@@ -1463,8 +1463,8 @@
       <li Class="CompProperties_EggLayer" ListIndex="1">
         <eggLayIntervalDays>20</eggLayIntervalDays>
         <eggCountRange>
-          <min>3</min>
-          <max>7</max>
+          <min>2</min>
+          <max>3</max>
         </eggCountRange>
         <eggFertilizedDef>EggTortoiseFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
@@ -1538,7 +1538,7 @@
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <baseBodySize>0.5</baseBodySize>
       <baseHealthScale>0.6</baseHealthScale>
-      <baseHungerRate>0.3</baseHungerRate>
+      <baseHungerRate>0.33</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
           <def>AnimalBaby</def>

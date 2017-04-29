@@ -142,10 +142,10 @@
       <li Class="RoadDefGenStep_Place" ListIndex="3">
         <chancePerPositionCurve>
           <points>
-            <li ListIndex="0">(0, 0.003)</li>
-            <li ListIndex="1">(1.7, 0.003)</li>
-            <li ListIndex="2">(1.8, 0.5)</li>
-            <li ListIndex="3">(1.9, 0)</li>
+            <li ListIndex="0">(0, 0.001)</li>
+            <li ListIndex="1">(2.2, 0.001)</li>
+            <li ListIndex="2">(2.3, 0.5)</li>
+            <li ListIndex="3">(2.5, 0)</li>
           </points>
         </chancePerPositionCurve>
         <place>AncientConcreteBarrier</place>

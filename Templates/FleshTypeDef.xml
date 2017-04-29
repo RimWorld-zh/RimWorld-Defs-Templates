@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FleshTypeDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: RimWorld.ThoughtDef-->
+    <ateDirect>ThoughtDef_defName</ateDirect>
+    <!--Type: RimWorld.ThoughtDef-->
+    <ateAsIngredient>ThoughtDef_defName</ateAsIngredient>
+    <!--Type: Verse.ThingCategoryDef-->
+    <corpseCategory>ThingCategoryDef_defName</corpseCategory>
+  </FleshTypeDef>
+</Defs>

@@ -25,8 +25,8 @@
     <hasForcefulImpact>false</hasForcefulImpact>
     <canInterruptJobs>false</canInterruptJobs>
     <deathMessage>{0} has died during surgery.</deathMessage>
-    <impactSoundType>None</impactSoundType>
-    <armorCategory>IgnoreArmor</armorCategory>
+    <impactSoundType />
+    <armorCategory />
     <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
     <hediff>SurgicalCut</hediff>
     <hediffSkin>Cut</hediffSkin>
@@ -41,8 +41,8 @@
     <hasForcefulImpact>false</hasForcefulImpact>
     <canInterruptJobs>false</canInterruptJobs>
     <deathMessage>{0} has been executed by cutting.</deathMessage>
-    <impactSoundType>None</impactSoundType>
-    <armorCategory>IgnoreArmor</armorCategory>
+    <impactSoundType />
+    <armorCategory />
     <execution>true</execution>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <hediff>Cut</hediff>

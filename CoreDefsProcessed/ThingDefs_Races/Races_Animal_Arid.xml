@@ -63,7 +63,6 @@
         <meleeDamageDef>Blunt</meleeDamageDef>
         <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
       </li>
-      <li ListIndex="1"></li>
     </verbs>
     <race>
       <hasGenders>true</hasGenders>
@@ -81,7 +80,7 @@
       <nuzzleMtbHours>120</nuzzleMtbHours>
       <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.003</manhunterOnTameFailChance>
-      <gestationPeriodDays>30</gestationPeriodDays>
+      <gestationPeriodDays>25</gestationPeriodDays>
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
       <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
@@ -616,8 +615,8 @@
       <li Class="CompProperties_EggLayer" ListIndex="1">
         <eggLayIntervalDays>10</eggLayIntervalDays>
         <eggCountRange>
-          <min>3</min>
-          <max>5</max>
+          <min>1</min>
+          <max>2</max>
         </eggCountRange>
         <eggFertilizedDef>EggIguanaFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
@@ -703,9 +702,9 @@
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
       <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
-      <baseBodySize>0.25</baseBodySize>
+      <baseBodySize>0.20</baseBodySize>
       <baseHealthScale>0.5</baseHealthScale>
-      <baseHungerRate>0.23</baseHungerRate>
+      <baseHungerRate>0.28</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
           <def>AnimalBaby</def>

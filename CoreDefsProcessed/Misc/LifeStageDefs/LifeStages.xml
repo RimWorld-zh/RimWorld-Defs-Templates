@@ -86,7 +86,7 @@
     <visible>false</visible>
     <milkable>true</milkable>
   </LifeStageDef>
-  <LifeStageDef>
+  <LifeStageDef Name="AnimalBaby">
     <defName>AnimalBaby</defName>
     <label>baby</label>
     <voxPitch>1.6</voxPitch>
@@ -95,6 +95,19 @@
       <MoveSpeed>0.5</MoveSpeed>
     </statFactors>
     <bodySizeFactor>0.2</bodySizeFactor>
+    <healthScaleFactor>0.25</healthScaleFactor>
+    <hungerRateFactor>0.4</hungerRateFactor>
+    <marketValueFactor>0.4</marketValueFactor>
+  </LifeStageDef>
+  <LifeStageDef ParentName="AnimalBaby">
+    <defName>AnimalBabyTiny</defName>
+    <label>baby</label>
+    <voxPitch>1.6</voxPitch>
+    <voxVolume>0.8</voxVolume>
+    <statFactors>
+      <MoveSpeed>0.5</MoveSpeed>
+    </statFactors>
+    <bodySizeFactor>0.1</bodySizeFactor>
     <healthScaleFactor>0.25</healthScaleFactor>
     <hungerRateFactor>0.4</hungerRateFactor>
     <marketValueFactor>0.4</marketValueFactor>

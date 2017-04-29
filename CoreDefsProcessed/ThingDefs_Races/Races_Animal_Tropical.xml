@@ -22,10 +22,10 @@
         <compClass>CompAttachBase</compClass>
       </li>
       <li Class="CompProperties_EggLayer" ListIndex="1">
-        <eggLayIntervalDays>7.5</eggLayIntervalDays>
+        <eggLayIntervalDays>14.0</eggLayIntervalDays>
         <eggCountRange>
-          <min>2</min>
-          <max>5</max>
+          <min>1</min>
+          <max>3</max>
         </eggCountRange>
         <eggFertilizedDef>EggCobraFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>

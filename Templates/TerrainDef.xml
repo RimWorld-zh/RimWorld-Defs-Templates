@@ -55,7 +55,7 @@
     <!--Type: string-->
     <texturePath>string_value</texturePath>
     <!--Type: Verse.TerrainDef+TerrainEdgeType-->
-    <!--Available Values: Hard, Fade, FadeRough-->
+    <!--Available Values: Hard, Fade, FadeRough, Water-->
     <edgeType>enum_value</edgeType>
     <!--Type: int-->
     <renderPrecedence>int_value</renderPrecedence>

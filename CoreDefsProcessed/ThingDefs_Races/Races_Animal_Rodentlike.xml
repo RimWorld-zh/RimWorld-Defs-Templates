@@ -111,11 +111,11 @@
         </li>
         <li ListIndex="1">
           <def>AnimalJuvenile</def>
-          <minAge>0.07</minAge>
+          <minAge>0.11</minAge>
         </li>
         <li ListIndex="2">
           <def>AnimalAdult</def>
-          <minAge>0.22</minAge>
+          <minAge>0.26</minAge>
           <soundCall>Pawn_Rodent_Call</soundCall>
           <soundAngry>Pawn_Rodent_Angry</soundAngry>
           <soundWounded>Pawn_Rodent_Wounded</soundWounded>
@@ -1016,7 +1016,7 @@
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <baseBodySize>0.21</baseBodySize>
       <baseHealthScale>0.4</baseHealthScale>
-      <baseHungerRate>0.20</baseHungerRate>
+      <baseHungerRate>0.30</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
           <def>AnimalBaby</def>

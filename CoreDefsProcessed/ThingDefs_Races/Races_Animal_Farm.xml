@@ -22,7 +22,7 @@
         <compClass>CompAttachBase</compClass>
       </li>
       <li Class="CompProperties_EggLayer" ListIndex="1">
-        <eggLayIntervalDays>1.14</eggLayIntervalDays>
+        <eggLayIntervalDays>1.7</eggLayIntervalDays>
         <eggCountRange>1</eggCountRange>
         <eggUnfertilizedDef>EggChickenUnfertilized</eggUnfertilizedDef>
         <eggFertilizedDef>EggChickenFertilized</eggFertilizedDef>
@@ -95,12 +95,12 @@
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
       <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
-      <baseBodySize>0.25</baseBodySize>
+      <baseBodySize>0.18</baseBodySize>
       <baseHealthScale>0.35</baseHealthScale>
-      <baseHungerRate>0.25</baseHungerRate>
+      <baseHungerRate>0.35</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
-          <def>AnimalBaby</def>
+          <def>AnimalBabyTiny</def>
           <minAge>0</minAge>
           <soundCall>Pawn_Chick_Call</soundCall>
           <soundAngry>Pawn_Chick_Call</soundAngry>
@@ -343,7 +343,7 @@
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <baseBodySize>0.8</baseBodySize>
       <baseHealthScale>0.7</baseHealthScale>
-      <baseHungerRate>0.40</baseHungerRate>
+      <baseHungerRate>0.45</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
           <def>AnimalBaby</def>
@@ -660,7 +660,7 @@
       <wildness>0.05</wildness>
       <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.003</manhunterOnTameFailChance>
-      <gestationPeriodDays>50</gestationPeriodDays>
+      <gestationPeriodDays>20</gestationPeriodDays>
       <litterSizeCurve>
         <points>
           <li ListIndex="0">(0.5, 0)</li>
@@ -675,7 +675,7 @@
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <baseBodySize>2.0</baseBodySize>
       <baseHealthScale>1.5</baseHealthScale>
-      <baseHungerRate>0.8</baseHungerRate>
+      <baseHungerRate>0.85</baseHungerRate>
       <lifeStageAges>
         <li ListIndex="0">
           <def>AnimalBaby</def>
@@ -1007,7 +1007,7 @@
       <nuzzleMtbHours>120</nuzzleMtbHours>
       <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.003</manhunterOnTameFailChance>
-      <gestationPeriodDays>45</gestationPeriodDays>
+      <gestationPeriodDays>25</gestationPeriodDays>
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
       <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>

@@ -171,9 +171,8 @@
       <!--Type: Verse.Intelligence-->
       <!--Available Values: Animal, ToolUser, Humanlike-->
       <intelligence>enum_value</intelligence>
-      <!--Type: RimWorld.FleshType-->
-      <!--Available Values: Normal, Mechanoid, Insectoid-->
-      <fleshType>enum_value</fleshType>
+      <!--Type: RimWorld.FleshTypeDef-->
+      <fleshType>FleshTypeDef_defName</fleshType>
       <!--Type: Verse.ThingDef-->
       <bloodDef>ThingDef_defName</bloodDef>
       <!--Type: bool-->
@@ -265,10 +264,9 @@
       <!--Type: float-->
       <!--Default Value: 12.0-->
       <mateMtbHours>float_value</mateMtbHours>
-      <!--Type: Verse.TrainableIntelligence-->
-      <!--Available Values: None, Simple, Intermediate, Advanced, SuperAdvanced-->
-      <!--Default Value: Intermediate-->
-      <trainableIntelligence>enum_value</trainableIntelligence>
+      <!--Type: Verse.TrainableIntelligenceDef-->
+      <!--Default Value: TrainableIntelligence.Intermediate-->
+      <trainableIntelligence>TrainableIntelligenceDef_defName</trainableIntelligence>
       <!--Type: Verse.RulePackDef-->
       <nameGenerator>RulePackDef_defName</nameGenerator>
       <!--Type: Verse.RulePackDef-->

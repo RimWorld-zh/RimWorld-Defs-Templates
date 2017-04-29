@@ -29,12 +29,10 @@
     <!--Type: string-->
     <!--Default Value: "{0} has been killed."-->
     <deathMessage>string_value</deathMessage>
-    <!--Type: Verse.ImpactSoundType-->
-    <!--Available Values: None, Bullet, Slice, Blunt, Electric-->
-    <impactSoundType>enum_value</impactSoundType>
-    <!--Type: Verse.DamageArmorCategory-->
-    <!--Available Values: IgnoreArmor, Blunt, Sharp, Heat, Electric-->
-    <armorCategory>enum_value</armorCategory>
+    <!--Type: Verse.Sound.ImpactSoundTypeDef-->
+    <impactSoundType>ImpactSoundTypeDef_defName</impactSoundType>
+    <!--Type: Verse.DamageArmorCategoryDef-->
+    <armorCategory>DamageArmorCategoryDef_defName</armorCategory>
     <!--Type: bool-->
     <!--Default Value: false-->
     <spreadOut>true_or_false</spreadOut>

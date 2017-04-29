@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnTableDef>
+    <defName>Work</defName>
+    <columns>
+      <li ListIndex="0">Label</li>
+      <li ListIndex="1">CopyPasteWorkPriorities</li>
+      <li ListIndex="2">WorkPriorities</li>
+      <li ListIndex="3">RemainingSpace</li>
+    </columns>
+  </PawnTableDef>
+  <PawnTableDef>
+    <defName>Assign</defName>
+    <columns>
+      <li ListIndex="0">Label</li>
+      <li ListIndex="1">HostilityResponse</li>
+      <li ListIndex="2">GapTiny</li>
+      <li ListIndex="3">Outfit</li>
+      <li ListIndex="4">GapSmall</li>
+      <li ListIndex="5">DrugPolicy</li>
+      <li ListIndex="6">RemainingSpace</li>
+    </columns>
+  </PawnTableDef>
+  <PawnTableDef>
+    <defName>Restrict</defName>
+    <columns>
+      <li ListIndex="0">Label</li>
+      <li ListIndex="1">CopyPasteTimetable</li>
+      <li ListIndex="2">Timetable</li>
+      <li ListIndex="3">GapTiny</li>
+      <li ListIndex="4">AllowedArea</li>
+      <li ListIndex="5">RemainingSpace</li>
+    </columns>
+  </PawnTableDef>
+  <PawnTableDef>
+    <defName>Animals</defName>
+    <columns>
+      <li ListIndex="0">Label</li>
+      <li ListIndex="1">Gender</li>
+      <li ListIndex="2">LifeStage</li>
+      <li ListIndex="3">GapTiny</li>
+      <li ListIndex="4">GapTiny</li>
+      <li ListIndex="5">FollowDrafted</li>
+      <li ListIndex="6">FollowFieldwork</li>
+      <li ListIndex="7">GapTiny</li>
+      <li ListIndex="8">Master</li>
+      <li ListIndex="9">Slaughter</li>
+      <li ListIndex="10">GapTiny</li>
+      <li ListIndex="11">AllowedAreaWide</li>
+      <li ListIndex="12">Pregnant</li>
+      <li ListIndex="13">RemainingSpace</li>
+    </columns>
+  </PawnTableDef>
+</Defs>
