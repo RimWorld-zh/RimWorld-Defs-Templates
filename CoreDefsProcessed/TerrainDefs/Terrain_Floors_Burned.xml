@@ -2,7 +2,7 @@
 <Defs>
   <TerrainDef Name="BurnedFloorBase" Abstract="True">
     <statBases>
-      <Beauty>-30</Beauty>
+      <Beauty>-6</Beauty>
     </statBases>
     <pathCost>9</pathCost>
     <fertility>0</fertility>
@@ -17,9 +17,9 @@
   <TerrainDef ParentName="BurnedFloorBase">
     <defName>BurnedWoodPlankFloor</defName>
     <label>burned wood floor</label>
-    <description>Burned out wood plank flooring.</description>
+    <description>Burned-out wood plank flooring.</description>
     <statBases>
-      <Beauty>-30</Beauty>
+      <Beauty>-6</Beauty>
     </statBases>
     <pathCost>9</pathCost>
     <fertility>0</fertility>
@@ -37,9 +37,9 @@
   <TerrainDef ParentName="BurnedFloorBase">
     <defName>BurnedCarpet</defName>
     <label>burned carpet</label>
-    <description>Burned out carpet.</description>
+    <description>Burned-out carpet.</description>
     <statBases>
-      <Beauty>-30</Beauty>
+      <Beauty>-6</Beauty>
     </statBases>
     <pathCost>9</pathCost>
     <fertility>0</fertility>

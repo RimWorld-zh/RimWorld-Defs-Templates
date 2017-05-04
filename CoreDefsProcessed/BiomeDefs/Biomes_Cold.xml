@@ -6,7 +6,7 @@
     <description>Forests of coniferous trees. Despite the harsh winters, boreal forests sustain a diverse population of small and large animals, and have warm summers. Snow makes it extremely slow to travel in winter.</description>
     <workerClass>BiomeWorker_BorealForest</workerClass>
     <implemented>true</implemented>
-    <animalDensity>3.0</animalDensity>
+    <animalDensity>1.9</animalDensity>
     <plantDensity>0.30</plantDensity>
     <diseaseMtbDays>50</diseaseMtbDays>
     <factionBaseSelectionWeight>0.9</factionBaseSelectionWeight>
@@ -141,7 +141,7 @@
     <description>These mostly-frozen plains bear almost no trees and little vegetation. There are a few small animals interspersed with large herds of migratory grazers and their predators. Snow makes it extremely slow to travel in winter.</description>
     <workerClass>BiomeWorker_Tundra</workerClass>
     <implemented>true</implemented>
-    <animalDensity>1.0</animalDensity>
+    <animalDensity>0.8</animalDensity>
     <plantDensity>0.14</plantDensity>
     <diseaseMtbDays>80</diseaseMtbDays>
     <factionBaseSelectionWeight>0.32</factionBaseSelectionWeight>
@@ -266,7 +266,7 @@
     <workerClass>BiomeWorker_IceSheet</workerClass>
     <allowRoads>false</allowRoads>
     <allowRivers>false</allowRivers>
-    <animalDensity>0.4</animalDensity>
+    <animalDensity>0.1</animalDensity>
     <plantDensity>0</plantDensity>
     <diseaseMtbDays>90</diseaseMtbDays>
     <factionBaseSelectionWeight>0.15</factionBaseSelectionWeight>
@@ -353,7 +353,7 @@
     <canAutoChoose>false</canAutoChoose>
     <allowRoads>false</allowRoads>
     <allowRivers>false</allowRivers>
-    <animalDensity>0.1</animalDensity>
+    <animalDensity>0.05</animalDensity>
     <plantDensity>0</plantDensity>
     <diseaseMtbDays>80</diseaseMtbDays>
     <factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>

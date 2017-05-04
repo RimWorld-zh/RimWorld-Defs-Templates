@@ -61,10 +61,8 @@
     <beginLetter>string_value</beginLetter>
     <!--Type: string-->
     <beginLetterLabel>string_value</beginLetterLabel>
-    <!--Type: Verse.LetterType-->
-    <!--Available Values: Good, BadNonUrgent, BadUrgent-->
-    <!--Default Value: BadUrgent-->
-    <beginLetterType>enum_value</beginLetterType>
+    <!--Type: Verse.LetterDef-->
+    <beginLetterDef>LetterDef_defName</beginLetterDef>
     <!--Type: UnityEngine.Color-->
     <!--Default Value: Color.green-->
     <nameColor>value</nameColor>

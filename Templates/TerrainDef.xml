@@ -48,6 +48,8 @@
     </researchPrerequisites>
     <!--Type: Verse.EffecterDef-->
     <constructEffect>EffecterDef_defName</constructEffect>
+    <!--Type: float-->
+    <resourcesFractionWhenDeconstructed>float_value</resourcesFractionWhenDeconstructed>
     <!--Type: Verse.DesignationCategoryDef-->
     <designationCategory>DesignationCategoryDef_defName</designationCategory>
     <!--Type: Verse.KeyBindingDef-->
@@ -57,6 +59,8 @@
     <!--Type: Verse.TerrainDef+TerrainEdgeType-->
     <!--Available Values: Hard, Fade, FadeRough, Water-->
     <edgeType>enum_value</edgeType>
+    <!--Type: string-->
+    <waterDepthShader>string_value</waterDepthShader>
     <!--Type: int-->
     <renderPrecedence>int_value</renderPrecedence>
     <!--Simple List-->

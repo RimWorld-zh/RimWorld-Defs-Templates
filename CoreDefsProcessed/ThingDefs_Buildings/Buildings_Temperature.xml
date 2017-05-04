@@ -18,6 +18,7 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructDirt</constructEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
       <li ListIndex="0">PlaceWorker_Heater</li>
@@ -55,7 +56,6 @@
       </li>
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>True</hasInteractionCell>
     <filthLeaving>BuildingRubble</filthLeaving>
@@ -107,6 +107,7 @@
     </researchPrerequisites>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructDirt</constructEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
       <li ListIndex="0">PlaceWorker_CoolerSimple</li>
@@ -126,7 +127,6 @@
       </li>
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <filthLeaving>BuildingRubble</filthLeaving>
     <graphicData>
       <texPath>Things/Building/Misc/PassiveCooler</texPath>

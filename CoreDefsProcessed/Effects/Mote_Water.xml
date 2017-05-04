@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--=============== Bases ==============-->
+  <ThingDef Name="MoteWaterBase" ParentName="MoteBase" Abstract="True">
+    <thingClass>MoteSplash</thingClass>
+    <graphicData>
+      <shaderType>MoteWater</shaderType>
+    </graphicData>
+  </ThingDef>
+  <!--=============== Splash ================-->
+  <ThingDef ParentName="MoteWaterBase">
+    <defName>Mote_WaterSplash</defName>
+    <label>Mote</label>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <thingClass>MoteSplash</thingClass>
+    <category>Mote</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Mote/Horseshoe</texPath>
+      <graphicClass>Graphic_MoteSplash</graphicClass>
+      <!-- actually unused atm, this is just a stub to avoid errors -->
+      <shaderType>MoteWater</shaderType>
+    </graphicData>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0</fadeInTime>
+      <solidTime>500</solidTime>
+      <fadeOutTime>0</fadeOutTime>
+    </mote>
+  </ThingDef>
+</Defs>

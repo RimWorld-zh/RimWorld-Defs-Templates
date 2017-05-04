@@ -12,7 +12,7 @@
     <minTicksBeforeRecovery>3500</minTicksBeforeRecovery>
     <beginLetter>{0} has broken down and is wandering around confused.</beginLetter>
     <beginLetterLabel>confusion</beginLetterLabel>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer confused.</recoveryMessage>
     <baseInspectLine>Mental state: Confused and wandering</baseInspectLine>

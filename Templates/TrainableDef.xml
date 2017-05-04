@@ -34,7 +34,6 @@
     <!--Default Value: false-->
     <defaultTrainable>true_or_false</defaultTrainable>
     <!--Type: Verse.TrainableIntelligenceDef-->
-    <!--Default Value: TrainableIntelligence.Simple-->
     <requiredTrainableIntelligence>TrainableIntelligenceDef_defName</requiredTrainableIntelligence>
     <!--Type: int-->
     <!--Default Value: 1-->

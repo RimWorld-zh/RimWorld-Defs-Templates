@@ -140,11 +140,12 @@
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
   <TerrainDef Abstract="True" ParentName="FloorBase" Name="FlagstoneBase">
-    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways.</description>
+    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways. Deconstructing flagstone yields no resources.</description>
     <statBases>
       <WorkToBuild>500</WorkToBuild>
       <Beauty>0</Beauty>
     </statBases>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <texturePath>Terrain/Surfaces/Flagstone</texturePath>
     <renderPrecedence>220</renderPrecedence>
     <tags>
@@ -154,7 +155,7 @@
   <TerrainDef ParentName="FlagstoneBase">
     <defName>FlagstoneSandstone</defName>
     <label>sandstone flagstone</label>
-    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways.</description>
+    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways. Deconstructing flagstone yields no resources.</description>
     <statBases>
       <WorkToBuild>500</WorkToBuild>
       <Beauty>0</Beauty>
@@ -165,6 +166,7 @@
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <designationCategory>Floors</designationCategory>
     <texturePath>Terrain/Surfaces/Flagstone</texturePath>
     <renderPrecedence>220</renderPrecedence>
@@ -183,7 +185,7 @@
   <TerrainDef ParentName="FlagstoneBase">
     <defName>FlagstoneGranite</defName>
     <label>granite flagstone</label>
-    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways.</description>
+    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways. Deconstructing flagstone yields no resources.</description>
     <statBases>
       <WorkToBuild>500</WorkToBuild>
       <Beauty>0</Beauty>
@@ -194,6 +196,7 @@
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <designationCategory>Floors</designationCategory>
     <texturePath>Terrain/Surfaces/Flagstone</texturePath>
     <renderPrecedence>220</renderPrecedence>
@@ -212,7 +215,7 @@
   <TerrainDef ParentName="FlagstoneBase">
     <defName>FlagstoneLimestone</defName>
     <label>limestone flagstone</label>
-    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways.</description>
+    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways. Deconstructing flagstone yields no resources.</description>
     <statBases>
       <WorkToBuild>500</WorkToBuild>
       <Beauty>0</Beauty>
@@ -223,6 +226,7 @@
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <designationCategory>Floors</designationCategory>
     <texturePath>Terrain/Surfaces/Flagstone</texturePath>
     <renderPrecedence>220</renderPrecedence>
@@ -241,7 +245,7 @@
   <TerrainDef ParentName="FlagstoneBase">
     <defName>FlagstoneSlate</defName>
     <label>slate flagstone</label>
-    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways.</description>
+    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways. Deconstructing flagstone yields no resources.</description>
     <statBases>
       <WorkToBuild>500</WorkToBuild>
       <Beauty>0</Beauty>
@@ -252,6 +256,7 @@
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <designationCategory>Floors</designationCategory>
     <texturePath>Terrain/Surfaces/Flagstone</texturePath>
     <renderPrecedence>220</renderPrecedence>
@@ -270,7 +275,7 @@
   <TerrainDef ParentName="FlagstoneBase">
     <defName>FlagstoneMarble</defName>
     <label>marble flagstone</label>
-    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways.</description>
+    <description>Roughly-cut stone tiles. Not super pretty, but they make good surfaces for roads and outdoor walkways. Deconstructing flagstone yields no resources.</description>
     <statBases>
       <WorkToBuild>500</WorkToBuild>
       <Beauty>0</Beauty>
@@ -281,6 +286,7 @@
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <designationCategory>Floors</designationCategory>
     <texturePath>Terrain/Surfaces/Flagstone</texturePath>
     <renderPrecedence>220</renderPrecedence>

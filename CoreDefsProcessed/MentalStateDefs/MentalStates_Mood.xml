@@ -28,7 +28,7 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} has gone berserk!</beginLetter>
     <beginLetterLabel>berserk</beginLetterLabel>
-    <beginLetterType>BadUrgent</beginLetterType>
+    <beginLetterDef>BadUrgent</beginLetterDef>
     <nameColor>(0.9,0.2,0.5)</nameColor>
     <recoveryMessage>{0}'s berserk rage has come to an end.</recoveryMessage>
     <baseInspectLine>Mental state: Berserk</baseInspectLine>
@@ -56,7 +56,7 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is on a fire starting spree.</beginLetter>
     <beginLetterLabel>fire starting spree</beginLetterLabel>
-    <beginLetterType>BadUrgent</beginLetterType>
+    <beginLetterDef>BadUrgent</beginLetterDef>
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
     <recoveryMessage>{0} is no longer on a fire starting spree.</recoveryMessage>
     <baseInspectLine>Mental state: Fire starting spree</baseInspectLine>
@@ -82,7 +82,7 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is leaving the colony.</beginLetter>
     <beginLetterLabel>gave up</beginLetterLabel>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} has had a change of heart and is coming back to the colony.</recoveryMessage>
     <baseInspectLine>Mental state: Given up and leaving</baseInspectLine>
@@ -160,7 +160,7 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is wandering around in a psychotic state.</beginLetter>
     <beginLetterLabel>daze</beginLetterLabel>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer wandering in a psychotic state.</recoveryMessage>
     <baseInspectLine>Mental state: Psychotic wandering</baseInspectLine>
@@ -189,7 +189,7 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is pigging out on food.</beginLetter>
     <beginLetterLabel>food binge</beginLetterLabel>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
     <recoveryMessage>{0} is no longer pigging out on food.</recoveryMessage>
     <baseInspectLine>Mental state: Pigging out</baseInspectLine>
@@ -217,7 +217,7 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is wandering around in sadness.</beginLetter>
     <beginLetterLabel>sad wander</beginLetterLabel>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer wandering in sadness.</recoveryMessage>
     <baseInspectLine>Mental state: Sad wandering</baseInspectLine>
@@ -245,7 +245,7 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is hiding in HIS room.</beginLetter>
     <beginLetterLabel>hide in room</beginLetterLabel>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer hiding in HIS room.</recoveryMessage>
     <baseInspectLine>Mental state: Hiding in room</baseInspectLine>

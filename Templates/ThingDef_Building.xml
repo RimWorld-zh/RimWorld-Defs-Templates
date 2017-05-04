@@ -68,6 +68,8 @@
     <!--Type: Verse.Rot4-->
     <!--Default Value: Rot4.North-->
     <defaultPlacingRot>value</defaultPlacingRot>
+    <!--Type: float-->
+    <resourcesFractionWhenDeconstructed>float_value</resourcesFractionWhenDeconstructed>
     <!--Type: string-->
     <uiIconPath>string_value</uiIconPath>
     <!--Type: Verse.AltitudeLayer-->
@@ -526,9 +528,6 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <leaveResourcesWhenKilled>true_or_false</leaveResourcesWhenKilled>
-    <!--Type: float-->
-    <!--Default Value: 0.75-->
-    <resourcesFractionWhenDeconstructed>float_value</resourcesFractionWhenDeconstructed>
     <!--Type: Verse.IntVec3-->
     <!--Default Value: IntVec3.Zero-->
     <interactionCellOffset>value</interactionCellOffset>
@@ -561,7 +560,7 @@
       <!--Type: System.Type-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
-      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, MetaOverlay, Mote, MoteGlow-->
+      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, MetaOverlay, Mote, MoteGlow, MoteWater-->
       <shaderType>enum_value</shaderType>
       <!--Type: UnityEngine.Color-->
       <!--Default Value: Color.white-->
@@ -966,7 +965,7 @@
         <!--Type: System.Type-->
         <graphicClass>class_name</graphicClass>
         <!--Type: Verse.ShaderType-->
-        <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, MetaOverlay, Mote, MoteGlow-->
+        <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, MetaOverlay, Mote, MoteGlow, MoteWater-->
         <shaderType>enum_value</shaderType>
       </trapUnarmedGraphicData>
       <!--Type: float-->

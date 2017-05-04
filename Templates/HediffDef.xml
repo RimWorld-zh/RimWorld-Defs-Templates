@@ -121,6 +121,7 @@
           <!--Type: Verse.VerbProperties-->
           <li>
             <!--Type: System.Type-->
+            <!--Default Value: typeof(Verb)-->
             <verbClass>class_name</verbClass>
             <!--Type: float-->
             <defaultCooldownTime>float_value</defaultCooldownTime>

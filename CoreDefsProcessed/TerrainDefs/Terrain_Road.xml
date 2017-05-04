@@ -9,6 +9,7 @@
     </statBases>
     <pathCost>0</pathCost>
     <fertility>0.0</fertility>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <texturePath>Terrain/Surfaces/BrokenAsphalt</texturePath>
     <edgeType>FadeRough</edgeType>
     <renderPrecedence>370</renderPrecedence>
@@ -31,6 +32,7 @@
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0.0</fertility>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <texturePath>Terrain/Surfaces/PackedDirt</texturePath>
     <edgeType>FadeRough</edgeType>
     <renderPrecedence>360</renderPrecedence>
@@ -39,9 +41,9 @@
       <li ListIndex="1">Heavy</li>
     </affordances>
     <scatterType>Rocky</scatterType>
+    <tags>
+      <li ListIndex="0">Road</li>
+    </tags>
     <terrainFilthDef>FilthDirt</terrainFilthDef>
   </TerrainDef>
-  <tags>
-    <li>Road</li>
-  </tags>
 </TerrainDefs>

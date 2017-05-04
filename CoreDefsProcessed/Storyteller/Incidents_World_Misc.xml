@@ -11,7 +11,7 @@
     <minRefireDays>15</minRefireDays>
     <letterText>One of the moons of this planet has orbited in front of the sun. An eclipse has begun.</letterText>
     <letterLabel>Eclipse</letterLabel>
-    <letterType>BadNonUrgent</letterType>
+    <letterDef>BadNonUrgent</letterDef>
     <gameCondition>Eclipse</gameCondition>
     <durationDays>
       <min>0.75</min>
@@ -28,7 +28,7 @@
     <minRefireDays>15</minRefireDays>
     <letterText>A solar flare has begun.\n\nThe intense radiation will shut down all electrical devices.\n\nIt should pass in about a day.</letterText>
     <letterLabel>Solar flare</letterLabel>
-    <letterType>BadNonUrgent</letterType>
+    <letterDef>BadNonUrgent</letterDef>
     <gameCondition>SolarFlare</gameCondition>
     <durationDays>
       <min>0.15</min>
@@ -46,7 +46,7 @@
     <minRefireDays>5</minRefireDays>
     <letterText>{0}, {1} of {2}, has sent us a message.\n\nApparently bandits based in a nearby camp have been raiding their caravans. They've asked us to destroy it, which means eliminating all enemies and turrets.\n\nIf we succeed, their relations will improve, and they'll send us this reward:\n\n{3}</letterText>
     <letterLabel>Bandit camp opportunity</letterLabel>
-    <letterType>Good</letterType>
+    <letterDef>Good</letterDef>
   </IncidentDef>
   <IncidentDef>
     <defName>QuestItemStash</defName>
@@ -58,6 +58,6 @@
     <minRefireDays>5</minRefireDays>
     <letterText>{0}, {1} of {2}, has sent us a message.\n\nThey've learned that a collection of valuable items have been left for the taking not far from us. The collection consists of:\n\n{3}\n\nUnfortunately, it won’t last - others will take the items in {4} days if we don't.\n\nValuables tend to attract danger, so beware.\n\n{5}</letterText>
     <letterLabel>Item stash opportunity</letterLabel>
-    <letterType>Good</letterType>
+    <letterDef>Good</letterDef>
   </IncidentDef>
 </Defs>

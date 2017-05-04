@@ -135,6 +135,7 @@
       <!--Type: Verse.VerbProperties-->
       <li>
         <!--Type: System.Type-->
+        <!--Default Value: typeof(Verb)-->
         <verbClass>class_name</verbClass>
         <!--Type: Verse.SurpriseAttackProps-->
         <surpriseAttack>
@@ -265,7 +266,6 @@
       <!--Default Value: 12.0-->
       <mateMtbHours>float_value</mateMtbHours>
       <!--Type: Verse.TrainableIntelligenceDef-->
-      <!--Default Value: TrainableIntelligence.Intermediate-->
       <trainableIntelligence>TrainableIntelligenceDef_defName</trainableIntelligence>
       <!--Type: Verse.RulePackDef-->
       <nameGenerator>RulePackDef_defName</nameGenerator>

@@ -974,6 +974,7 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructWood</constructEffect>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
       <li ListIndex="0">PlaceWorker_Heater</li>
@@ -1010,7 +1011,6 @@
       </li>
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <filthLeaving>BuildingRubble</filthLeaving>
     <graphicData>
       <texPath>Things/Building/Misc/TorchLamp</texPath>

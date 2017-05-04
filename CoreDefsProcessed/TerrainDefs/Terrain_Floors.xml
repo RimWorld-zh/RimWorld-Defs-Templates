@@ -18,15 +18,95 @@
   </TerrainDef>
   <!-- ================= Misc ================= -->
   <TerrainDef ParentName="FloorBase">
+    <defName>Concrete</defName>
+    <label>concrete</label>
+    <description>Quick-poured concrete. Fast to walk on, cheap, and very quick to pour, but quite ugly.</description>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <WorkToBuild>100</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <texturePath>Terrain/Surfaces/Concrete</texturePath>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>70</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>PavedTile</defName>
+    <label>paved tile</label>
+    <description>Utilitarian concrete tiles. Cheap and quick to move around on, but neutral in terms of looks and slow to build.</description>
+    <statBases>
+      <WorkToBuild>400</WorkToBuild>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <Steel>2</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <texturePath>Terrain/Surfaces/PavedTile</texturePath>
+    <renderPrecedence>230</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>WoodPlankFloor</defName>
+    <label>wood floor</label>
+    <description>Wood plank flooring. For that warm, homey feeling.</description>
+    <statBases>
+      <WorkToBuild>85</WorkToBuild>
+      <Flammability>0.22</Flammability>
+    </statBases>
+    <fertility>0</fertility>
+    <costList>
+      <WoodLog>3</WoodLog>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructWood</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <designationHotKey>Misc7</designationHotKey>
+    <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+    <renderPrecedence>250</renderPrecedence>
+    <affordances>
+      <li ListIndex="0">Light</li>
+      <li ListIndex="1">Heavy</li>
+      <li ListIndex="2">SmoothHard</li>
+    </affordances>
+    <layerable>true</layerable>
+    <burnedDef>BurnedWoodPlankFloor</burnedDef>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+  </TerrainDef>
+  <TerrainDef ParentName="FloorBase">
     <defName>MetalTile</defName>
     <label>metal tile</label>
     <description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</description>
     <statBases>
-      <WorkToBuild>500</WorkToBuild>
+      <WorkToBuild>700</WorkToBuild>
+      <Beauty>1</Beauty>
     </statBases>
     <fertility>0</fertility>
     <costList>
-      <Steel>5</Steel>
+      <Steel>7</Steel>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructMetal</constructEffect>
@@ -46,7 +126,7 @@
   <TerrainDef ParentName="FloorBase">
     <defName>SilverTile</defName>
     <label>silver tile</label>
-    <description>Expensive and slow to build, but very pretty. Fits perfectly into all kinds of luxurious rooms.</description>
+    <description>Expensive and slow to build, but very pretty. Fits perfectly into luxurious rooms.</description>
     <statBases>
       <Beauty>2</Beauty>
       <WorkToBuild>1200</WorkToBuild>
@@ -123,84 +203,6 @@
     </affordances>
     <layerable>true</layerable>
     <color>(0.71, 0.71, 0.71)</color>
-    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
-  </TerrainDef>
-  <TerrainDef ParentName="FloorBase">
-    <defName>PavedTile</defName>
-    <label>paved tile</label>
-    <description>Utilitarian concrete tiles. Cheap and quick to move around on, but neutral in terms of looks and slow to build.</description>
-    <statBases>
-      <WorkToBuild>400</WorkToBuild>
-    </statBases>
-    <fertility>0</fertility>
-    <costList>
-      <Steel>2</Steel>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <constructEffect>ConstructDirt</constructEffect>
-    <designationCategory>Floors</designationCategory>
-    <designationHotKey>Misc5</designationHotKey>
-    <texturePath>Terrain/Surfaces/PavedTile</texturePath>
-    <renderPrecedence>230</renderPrecedence>
-    <affordances>
-      <li ListIndex="0">Light</li>
-      <li ListIndex="1">Heavy</li>
-      <li ListIndex="2">SmoothHard</li>
-    </affordances>
-    <layerable>true</layerable>
-    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
-  </TerrainDef>
-  <TerrainDef ParentName="FloorBase">
-    <defName>Concrete</defName>
-    <label>concrete</label>
-    <description>Quick-poured concrete. Fast to walk on, cheap, and very quick to pour, but quite ugly.</description>
-    <statBases>
-      <WorkToBuild>70</WorkToBuild>
-    </statBases>
-    <fertility>0</fertility>
-    <costList>
-      <Steel>1</Steel>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <constructEffect>ConstructDirt</constructEffect>
-    <designationCategory>Floors</designationCategory>
-    <designationHotKey>Misc6</designationHotKey>
-    <texturePath>Terrain/Surfaces/Concrete</texturePath>
-    <edgeType>Hard</edgeType>
-    <renderPrecedence>70</renderPrecedence>
-    <affordances>
-      <li ListIndex="0">Light</li>
-      <li ListIndex="1">Heavy</li>
-      <li ListIndex="2">SmoothHard</li>
-    </affordances>
-    <layerable>true</layerable>
-    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
-  </TerrainDef>
-  <TerrainDef ParentName="FloorBase">
-    <defName>WoodPlankFloor</defName>
-    <label>wood floor</label>
-    <description>Wood plank flooring. For that warm, homey feeling.</description>
-    <statBases>
-      <WorkToBuild>85</WorkToBuild>
-      <Flammability>0.22</Flammability>
-    </statBases>
-    <fertility>0</fertility>
-    <costList>
-      <WoodLog>3</WoodLog>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <constructEffect>ConstructWood</constructEffect>
-    <designationCategory>Floors</designationCategory>
-    <designationHotKey>Misc7</designationHotKey>
-    <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
-    <renderPrecedence>250</renderPrecedence>
-    <affordances>
-      <li ListIndex="0">Light</li>
-      <li ListIndex="1">Heavy</li>
-      <li ListIndex="2">SmoothHard</li>
-    </affordances>
-    <layerable>true</layerable>
-    <burnedDef>BurnedWoodPlankFloor</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
   <!-- ================= Carpets ================= -->

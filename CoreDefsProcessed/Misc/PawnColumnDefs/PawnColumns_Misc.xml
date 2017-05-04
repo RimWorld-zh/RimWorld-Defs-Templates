@@ -6,10 +6,6 @@
     <widthPriority>100</widthPriority>
   </PawnColumnDef>
   <PawnColumnDef>
-    <defName>WorkPriorities</defName>
-    <workerClass>PawnColumnWorker_WorkPriorities</workerClass>
-  </PawnColumnDef>
-  <PawnColumnDef>
     <defName>Master</defName>
     <label>master</label>
     <workerClass>PawnColumnWorker_Master</workerClass>

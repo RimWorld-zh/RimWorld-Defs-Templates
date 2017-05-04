@@ -12,5 +12,7 @@
     <siteTexture>string_value</siteTexture>
     <!--Type: string-->
     <expandingIconTexture>string_value</expandingIconTexture>
+    <!--Type: float-->
+    <forceExitAndRemoveMapCountdownDurationDays>float_value</forceExitAndRemoveMapCountdownDurationDays>
   </SiteCoreDef>
 </Defs>

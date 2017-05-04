@@ -59,9 +59,8 @@
     <letterText>string_value</letterText>
     <!--Type: string-->
     <letterLabel>string_value</letterLabel>
-    <!--Type: Verse.LetterType-->
-    <!--Available Values: Good, BadNonUrgent, BadUrgent-->
-    <letterType>enum_value</letterType>
+    <!--Type: Verse.LetterDef-->
+    <letterDef>LetterDef_defName</letterDef>
     <!--Type: Verse.GameConditionDef-->
     <gameCondition>GameConditionDef_defName</gameCondition>
     <!--Type: Verse.FloatRange-->

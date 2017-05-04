@@ -6,7 +6,7 @@
     <label>rough sandstone</label>
     <description>Rough, natural sandstone ground.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -29,7 +29,7 @@
     <label>rough-hewn sandstone</label>
     <description>Roughly cut natural sandstone floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -52,7 +52,7 @@
     <label>smooth sandstone</label>
     <description>Smoothed natural sandstone floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>3</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -75,7 +75,7 @@
     <label>rough granite</label>
     <description>Rough, natural granite ground.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -98,7 +98,7 @@
     <label>rough-hewn granite</label>
     <description>Roughly cut natural granite floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -121,7 +121,7 @@
     <label>smooth granite</label>
     <description>Smoothed natural granite floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>3</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -144,7 +144,7 @@
     <label>rough limestone</label>
     <description>Rough, natural limestone ground.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -167,7 +167,7 @@
     <label>rough-hewn limestone</label>
     <description>Roughly cut natural limestone floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -190,7 +190,7 @@
     <label>smooth limestone</label>
     <description>Smoothed natural limestone floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>3</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -213,7 +213,7 @@
     <label>rough slate</label>
     <description>Rough, natural slate ground.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -236,7 +236,7 @@
     <label>rough-hewn slate</label>
     <description>Roughly cut natural slate floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -259,7 +259,7 @@
     <label>smooth slate</label>
     <description>Smoothed natural slate floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>3</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -282,7 +282,7 @@
     <label>rough marble</label>
     <description>Rough, natural marble ground.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -305,7 +305,7 @@
     <label>rough-hewn marble</label>
     <description>Roughly cut natural marble floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>-1</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>
@@ -328,7 +328,7 @@
     <label>smooth marble</label>
     <description>Smoothed natural marble floor.</description>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>3</Beauty>
     </statBases>
     <pathCost>1</pathCost>
     <fertility>0</fertility>

@@ -464,6 +464,7 @@
       <!--Type: Verse.VerbProperties-->
       <li>
         <!--Type: System.Type-->
+        <!--Default Value: typeof(Verb)-->
         <verbClass>class_name</verbClass>
         <!--Type: string-->
         <label>string_value</label>

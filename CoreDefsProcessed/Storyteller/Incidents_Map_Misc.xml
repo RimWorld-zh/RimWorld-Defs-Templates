@@ -45,7 +45,7 @@
     </allowedBiomes>
     <letterText>A grove of the mysterious ambrosia bush has sprouted nearby! If you wait for the plants to grow, you'll be able to harvest the delicious, pleasurable, and slightly addictive fruit.</letterText>
     <letterLabel>Ambrosia sprout</letterLabel>
-    <letterType>Good</letterType>
+    <letterDef>Good</letterDef>
   </IncidentDef>
   <IncidentDef>
     <defName>FarmAnimalsWanderIn</defName>
@@ -101,6 +101,8 @@
     <targetType>MapPlayerHome</targetType>
     <baseChance>2</baseChance>
     <populationEffect>Increase</populationEffect>
+    <letterLabel>Ransom demand</letterLabel>
+    <letterDef>RansomDemand</letterDef>
   </IncidentDef>
   <IncidentDef>
     <defName>CaravanRequest</defName>
@@ -137,7 +139,7 @@
     <minDifficulty>2</minDifficulty>
     <letterText>A distant chemical fire has released a plume of poison over this entire region.\n\nAny person or creature not under a roof will be slowly sickened by the toxic dust settling out of the atmosphere.\n\nIt will last for anywhere between a few days to over a season.</letterText>
     <letterLabel>Toxic fallout</letterLabel>
-    <letterType>BadNonUrgent</letterType>
+    <letterDef>BadNonUrgent</letterDef>
     <gameCondition>ToxicFallout</gameCondition>
     <durationDays>
       <min>2.5</min>
@@ -156,7 +158,7 @@
     <minDifficulty>2</minDifficulty>
     <letterText>A distant supervolcano has erupted and begun spewing millions of cubic kilometers of ash into the atmosphere.\n\nAsh in the atmosphere will obscure the sun. Temperatures will drop and plants will suffer for lack of sunlight. It could pass in a few weeks, or it might last many seasons.</letterText>
     <letterLabel>Volcanic winter</letterLabel>
-    <letterType>BadNonUrgent</letterType>
+    <letterDef>BadNonUrgent</letterDef>
     <gameCondition>VolcanicWinter</gameCondition>
     <durationDays>
       <min>7.5</min>
@@ -173,7 +175,7 @@
     <minRefireDays>15</minRefireDays>
     <letterText>An unusual heat wave has begun. Watch out for heat stroke.</letterText>
     <letterLabel>Heat wave</letterLabel>
-    <letterType>BadNonUrgent</letterType>
+    <letterDef>BadNonUrgent</letterDef>
     <gameCondition>HeatWave</gameCondition>
     <durationDays>
       <min>1.5</min>
@@ -190,7 +192,7 @@
     <minRefireDays>15</minRefireDays>
     <letterText>An unusual cold snap has set in. Watch out for hypothermia and dying crops.</letterText>
     <letterLabel>Cold snap</letterLabel>
-    <letterType>BadNonUrgent</letterType>
+    <letterDef>BadNonUrgent</letterDef>
     <gameCondition>ColdSnap</gameCondition>
     <durationDays>
       <min>1.5</min>
@@ -208,7 +210,7 @@
     <minDifficulty>2</minDifficulty>
     <letterText>Extreme amounts of lightning are hitting a small region. This can cause massive fires.</letterText>
     <letterLabel>Flashstorm</letterLabel>
-    <letterType>BadNonUrgent</letterType>
+    <letterDef>BadNonUrgent</letterDef>
     <durationDays>
       <min>0.075</min>
       <max>0.1</max>

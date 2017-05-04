@@ -6,12 +6,16 @@
     <passability>Impassable</passability>
     <pathCost>300</pathCost>
     <fertility>0</fertility>
-    <texturePath>Terrain/Surfaces/WaterDeepSolid</texturePath>
+    <texturePath>Terrain/Surfaces/WaterDeepRamp</texturePath>
     <edgeType>Water</edgeType>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
     <renderPrecedence>396</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
+    <tags>
+      <li ListIndex="0">CreateSplashes</li>
+    </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -20,14 +24,16 @@
     <passability>Impassable</passability>
     <pathCost>300</pathCost>
     <fertility>0</fertility>
-    <texturePath>Terrain/Surfaces/WaterDeepSolid</texturePath>
+    <texturePath>Terrain/Surfaces/WaterDeepRamp</texturePath>
     <edgeType>Water</edgeType>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
     <renderPrecedence>395</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <tags>
       <li ListIndex="0">River</li>
+      <li ListIndex="1">CreateSplashes</li>
     </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
@@ -36,13 +42,17 @@
     <label>shallow water</label>
     <pathCost>12</pathCost>
     <fertility>0</fertility>
-    <texturePath>Terrain/Surfaces/WaterShallowSolid</texturePath>
+    <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
     <edgeType>Water</edgeType>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
     <renderPrecedence>394</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <driesTo>Gravel</driesTo>
+    <tags>
+      <li ListIndex="0">CreateSplashes</li>
+    </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -50,14 +60,16 @@
     <label>shallow moving water</label>
     <pathCost>12</pathCost>
     <fertility>0</fertility>
-    <texturePath>Terrain/Surfaces/WaterShallowSolid</texturePath>
+    <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
     <edgeType>Water</edgeType>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
     <renderPrecedence>394</renderPrecedence>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <tags>
       <li ListIndex="0">River</li>
+      <li ListIndex="1">CreateSplashes</li>
     </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <LetterDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: System.Type-->
+    <letterClass>class_name</letterClass>
+    <!--Type: UnityEngine.Color-->
+    <color>value</color>
+    <!--Type: UnityEngine.Color-->
+    <flashColor>value</flashColor>
+    <!--Type: float-->
+    <flashInterval>float_value</flashInterval>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <bounce>true_or_false</bounce>
+    <!--Type: Verse.SoundDef-->
+    <arriveSound>SoundDef_defName</arriveSound>
+    <!--Type: string-->
+    <icon>string_value</icon>
+  </LetterDef>
+</Defs>

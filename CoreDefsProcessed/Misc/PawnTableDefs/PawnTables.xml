@@ -5,8 +5,7 @@
     <columns>
       <li ListIndex="0">Label</li>
       <li ListIndex="1">CopyPasteWorkPriorities</li>
-      <li ListIndex="2">WorkPriorities</li>
-      <li ListIndex="3">RemainingSpace</li>
+      <li ListIndex="2">RemainingSpace</li>
     </columns>
   </PawnTableDef>
   <PawnTableDef>
