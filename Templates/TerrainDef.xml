@@ -49,6 +49,7 @@
     <!--Type: Verse.EffecterDef-->
     <constructEffect>EffecterDef_defName</constructEffect>
     <!--Type: float-->
+    <!--Default Value: 0.75-->
     <resourcesFractionWhenDeconstructed>float_value</resourcesFractionWhenDeconstructed>
     <!--Type: Verse.DesignationCategoryDef-->
     <designationCategory>DesignationCategoryDef_defName</designationCategory>
@@ -79,6 +80,9 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <takeFootprints>true_or_false</takeFootprints>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <takeSplashes>true_or_false</takeSplashes>
     <!--Type: bool-->
     <!--Default Value: false-->
     <avoidWander>true_or_false</avoidWander>

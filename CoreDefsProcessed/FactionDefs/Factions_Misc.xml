@@ -11,11 +11,12 @@
         <kindDef>Normal</kindDef>
         <options>
           <Villager>50</Villager>
-          <TownGuard>250</TownGuard>
-          <TownCouncilman>250</TownCouncilman>
           <GrenadierDestructive>50</GrenadierDestructive>
+          <MercenarySlasher>70</MercenarySlasher>
+          <TownGuard>100</TownGuard>
+          <TownCouncilman>100</TownCouncilman>
           <MercenaryGunner>100</MercenaryGunner>
-          <MercenarySlasher>100</MercenarySlasher>
+          <MercenaryElite>100</MercenaryElite>
         </options>
       </li>
       <li ListIndex="1">
@@ -28,21 +29,23 @@
           <Dromedary>1</Dromedary>
         </carriers>
         <guards>
-          <TownGuard>250</TownGuard>
           <GrenadierDestructive>50</GrenadierDestructive>
+          <MercenarySlasher>70</MercenarySlasher>
+          <TownGuard>100</TownGuard>
           <MercenaryGunner>100</MercenaryGunner>
-          <MercenarySlasher>100</MercenarySlasher>
+          <MercenaryElite>100</MercenaryElite>
         </guards>
       </li>
       <li ListIndex="2">
         <kindDef>FactionBase</kindDef>
         <options>
-          <Villager>50</Villager>
-          <TownGuard>250</TownGuard>
-          <TownCouncilman>250</TownCouncilman>
           <GrenadierDestructive>50</GrenadierDestructive>
+          <MercenarySlasher>70</MercenarySlasher>
+          <Villager>100</Villager>
+          <TownGuard>100</TownGuard>
+          <TownCouncilman>100</TownCouncilman>
           <MercenaryGunner>100</MercenaryGunner>
-          <MercenarySlasher>100</MercenarySlasher>
+          <MercenaryElite>100</MercenaryElite>
         </options>
       </li>
     </pawnGroupMakers>
@@ -182,46 +185,49 @@
     <baseNameMaker>NamerFactionBasePirate</baseNameMaker>
     <pawnGroupMakers>
       <li ListIndex="0">
+        <!-- Normal fights, standard mix -->
         <kindDef>Normal</kindDef>
         <commonality>100</commonality>
         <options>
           <Drifter>5</Drifter>
           <Thrasher>70</Thrasher>
-          <GrenadierDestructive>100</GrenadierDestructive>
-          <GrenadierEMP>50</GrenadierEMP>
-          <Scavenger>100</Scavenger>
-          <Pirate>150</Pirate>
-          <MercenaryGunner>200</MercenaryGunner>
-          <MercenarySniper>150</MercenarySniper>
-          <MercenarySlasher>180</MercenarySlasher>
-          <MercenaryElite>200</MercenaryElite>
-          <PirateBoss>200</PirateBoss>
+          <MercenarySlasher>70</MercenarySlasher>
+          <GrenadierDestructive>70</GrenadierDestructive>
           <MercenaryHeavy>60</MercenaryHeavy>
+          <GrenadierEMP>50</GrenadierEMP>
+          <MercenarySniper>80</MercenarySniper>
+          <Scavenger>100</Scavenger>
+          <Pirate>120</Pirate>
+          <MercenaryGunner>100</MercenaryGunner>
+          <MercenaryElite>100</MercenaryElite>
+          <PirateBoss>100</PirateBoss>
         </options>
       </li>
       <li ListIndex="1">
+        <!-- Normal fights, melee-only -->
         <kindDef>Normal</kindDef>
-        <commonality>50</commonality>
+        <commonality>25</commonality>
         <disallowedStrategies>
           <li ListIndex="0">Siege</li>
         </disallowedStrategies>
         <options>
-          <MercenarySlasher>200</MercenarySlasher>
+          <MercenarySlasher>100</MercenarySlasher>
         </options>
       </li>
       <li ListIndex="2">
+        <!-- Base defense -->
         <kindDef>FactionBase</kindDef>
         <options>
           <Drifter>5</Drifter>
           <Thrasher>70</Thrasher>
-          <GrenadierDestructive>100</GrenadierDestructive>
+          <MercenarySlasher>70</MercenarySlasher>
+          <GrenadierDestructive>70</GrenadierDestructive>
+          <MercenarySniper>80</MercenarySniper>
           <Scavenger>100</Scavenger>
-          <Pirate>150</Pirate>
-          <MercenaryGunner>200</MercenaryGunner>
-          <MercenarySniper>150</MercenarySniper>
-          <MercenarySlasher>180</MercenarySlasher>
-          <MercenaryElite>200</MercenaryElite>
-          <PirateBoss>200</PirateBoss>
+          <Pirate>120</Pirate>
+          <MercenaryGunner>100</MercenaryGunner>
+          <MercenaryElite>100</MercenaryElite>
+          <PirateBoss>100</PirateBoss>
         </options>
       </li>
     </pawnGroupMakers>

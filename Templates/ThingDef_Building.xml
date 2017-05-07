@@ -69,6 +69,7 @@
     <!--Default Value: Rot4.North-->
     <defaultPlacingRot>value</defaultPlacingRot>
     <!--Type: float-->
+    <!--Default Value: 0.75-->
     <resourcesFractionWhenDeconstructed>float_value</resourcesFractionWhenDeconstructed>
     <!--Type: string-->
     <uiIconPath>string_value</uiIconPath>

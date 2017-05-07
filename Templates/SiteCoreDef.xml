@@ -13,6 +13,7 @@
     <!--Type: string-->
     <expandingIconTexture>string_value</expandingIconTexture>
     <!--Type: float-->
+    <!--Default Value: 2.5-->
     <forceExitAndRemoveMapCountdownDurationDays>float_value</forceExitAndRemoveMapCountdownDurationDays>
   </SiteCoreDef>
 </Defs>

@@ -9,13 +9,27 @@
     <texturePath>Terrain/Surfaces/WaterDeepRamp</texturePath>
     <edgeType>Water</edgeType>
     <waterDepthShader>Map/WaterDepth</waterDepthShader>
-    <renderPrecedence>396</renderPrecedence>
+    <renderPrecedence>395</renderPrecedence>
+    <takeSplashes>true</takeSplashes>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
-    <tags>
-      <li ListIndex="0">CreateSplashes</li>
-    </tags>
+    <acceptFilth>false</acceptFilth>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>WaterOceanDeep</defName>
+    <label>deep ocean water</label>
+    <passability>Impassable</passability>
+    <pathCost>300</pathCost>
+    <fertility>0</fertility>
+    <texturePath>Terrain/Surfaces/WaterDeepRamp</texturePath>
+    <edgeType>Water</edgeType>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <renderPrecedence>397</renderPrecedence>
+    <takeSplashes>true</takeSplashes>
+    <avoidWander>true</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>false</holdSnow>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -27,13 +41,13 @@
     <texturePath>Terrain/Surfaces/WaterDeepRamp</texturePath>
     <edgeType>Water</edgeType>
     <waterDepthShader>Map/WaterDepth</waterDepthShader>
-    <renderPrecedence>395</renderPrecedence>
+    <renderPrecedence>399</renderPrecedence>
+    <takeSplashes>true</takeSplashes>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <tags>
       <li ListIndex="0">River</li>
-      <li ListIndex="1">CreateSplashes</li>
     </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
@@ -46,13 +60,27 @@
     <edgeType>Water</edgeType>
     <waterDepthShader>Map/WaterDepth</waterDepthShader>
     <renderPrecedence>394</renderPrecedence>
+    <takeSplashes>true</takeSplashes>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <driesTo>Gravel</driesTo>
-    <tags>
-      <li ListIndex="0">CreateSplashes</li>
-    </tags>
+    <acceptFilth>false</acceptFilth>
+  </TerrainDef>
+  <TerrainDef>
+    <defName>WaterOceanShallow</defName>
+    <label>shallow ocean water</label>
+    <pathCost>12</pathCost>
+    <fertility>0</fertility>
+    <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
+    <edgeType>Water</edgeType>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <renderPrecedence>396</renderPrecedence>
+    <takeSplashes>true</takeSplashes>
+    <avoidWander>true</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>false</holdSnow>
+    <driesTo>Gravel</driesTo>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -63,13 +91,13 @@
     <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
     <edgeType>Water</edgeType>
     <waterDepthShader>Map/WaterDepth</waterDepthShader>
-    <renderPrecedence>394</renderPrecedence>
+    <renderPrecedence>398</renderPrecedence>
+    <takeSplashes>true</takeSplashes>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <tags>
       <li ListIndex="0">River</li>
-      <li ListIndex="1">CreateSplashes</li>
     </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>

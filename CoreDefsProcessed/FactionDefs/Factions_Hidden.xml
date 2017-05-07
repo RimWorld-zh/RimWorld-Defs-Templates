@@ -98,6 +98,7 @@
       <max>200</max>
     </allowedArrivalTemperatureRange>
     <pawnsPlural>mechanoids</pawnsPlural>
+    <maxPawnOptionCostFactor>3.0</maxPawnOptionCostFactor>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <techLevel>Ultra</techLevel>
     <startingGoodwill>

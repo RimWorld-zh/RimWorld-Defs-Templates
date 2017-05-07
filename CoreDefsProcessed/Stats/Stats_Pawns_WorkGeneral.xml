@@ -51,7 +51,7 @@
   <StatDef>
     <defName>MiningYield</defName>
     <label>mining yield</label>
-    <description>The percentage yield a miner will achieve. Higher percentages reduce the chance of wasting the yield. This applies to both wall mining and deep drill mining.</description>
+    <description>The percentage yield a miner will achieve. This applies to both wall mining and deep drill mining. This doesn't affect the rate of mining rock chunks.</description>
     <category>PawnWork</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
@@ -61,20 +61,20 @@
       <li Class="SkillNeed_Direct" ListIndex="0">
         <skill>Mining</skill>
         <factorsPerLevel>
-          <li ListIndex="0">0.3</li>
-          <li ListIndex="1">0.4</li>
-          <li ListIndex="2">0.5</li>
-          <li ListIndex="3">0.6</li>
-          <li ListIndex="4">0.7</li>
-          <li ListIndex="5">0.75</li>
-          <li ListIndex="6">0.8</li>
-          <li ListIndex="7">0.85</li>
-          <li ListIndex="8">0.9</li>
-          <li ListIndex="9">0.95</li>
-          <li ListIndex="10">0.96</li>
+          <li ListIndex="0">0.6</li>
+          <li ListIndex="1">0.7</li>
+          <li ListIndex="2">0.8</li>
+          <li ListIndex="3">0.85</li>
+          <li ListIndex="4">0.875</li>
+          <li ListIndex="5">0.9</li>
+          <li ListIndex="6">0.925</li>
+          <li ListIndex="7">0.95</li>
+          <li ListIndex="8">0.96</li>
+          <li ListIndex="9">0.96</li>
+          <li ListIndex="10">0.97</li>
           <li ListIndex="11">0.97</li>
           <li ListIndex="12">0.98</li>
-          <li ListIndex="13">0.99</li>
+          <li ListIndex="13">0.98</li>
           <li ListIndex="14">0.99</li>
           <li ListIndex="15">0.99</li>
           <li ListIndex="16">1</li>

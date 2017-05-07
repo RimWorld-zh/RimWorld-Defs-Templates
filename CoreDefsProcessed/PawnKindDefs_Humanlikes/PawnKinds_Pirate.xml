@@ -85,7 +85,7 @@
       <min>0.2</min>
       <max>0.9</max>
     </gearHealthRange>
-    <combatPower>38</combatPower>
+    <combatPower>40</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>300</min>
@@ -147,7 +147,7 @@
       <max>1.1</max>
     </gearHealthRange>
     <factionLeader>true</factionLeader>
-    <combatPower>36</combatPower>
+    <combatPower>40</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>300</min>
@@ -211,7 +211,7 @@
       <max>1.5</max>
     </gearHealthRange>
     <factionLeader>true</factionLeader>
-    <combatPower>56</combatPower>
+    <combatPower>68</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>500</min>

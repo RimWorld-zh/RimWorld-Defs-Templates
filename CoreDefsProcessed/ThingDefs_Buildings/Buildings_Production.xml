@@ -47,6 +47,7 @@
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
       <sowTag>SupportPlantsOnly</sowTag>
     </building>
   </ThingDef>

@@ -6,10 +6,12 @@
     <hasForcefulImpact>false</hasForcefulImpact>
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
+    <deathMessage>{0} has been killed.</deathMessage>
   </DamageDef>
   <DamageDef>
     <defName>Mining</defName>
     <label>mining</label>
+    <deathMessage>{0} has been killed.</deathMessage>
   </DamageDef>
   <DamageDef>
     <defName>Rotting</defName>
@@ -17,6 +19,7 @@
     <hasForcefulImpact>false</hasForcefulImpact>
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
+    <deathMessage>{0} has been killed.</deathMessage>
   </DamageDef>
   <DamageDef>
     <defName>Extinguish</defName>
@@ -24,6 +27,7 @@
     <workerClass>DamageWorker_Extinguish</workerClass>
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
+    <deathMessage>{0} has been killed.</deathMessage>
     <explosionDamage>999999</explosionDamage>
     <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
     <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
@@ -35,6 +39,7 @@
     <harmsHealth>false</harmsHealth>
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
+    <deathMessage>{0} has been killed.</deathMessage>
     <explosionDamage>0</explosionDamage>
     <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
     <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>

@@ -11,146 +11,13 @@
     <invNutrition>2.55</invNutrition>
     <chemicalAddictionChance>0.1</chemicalAddictionChance>
   </PawnKindDef>
-  <PawnKindDef ParentName="MercenaryBase">
-    <defName>MercenaryGunner</defName>
-    <label>mercenary gunner</label>
-    <race>Human</race>
-    <defaultFactionType>Pirate</defaultFactionType>
-    <backstoryCategory>Raider</backstoryCategory>
-    <labelPlural>mercenary gunners</labelPlural>
-    <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>
-    <maxGenerationAge>65</maxGenerationAge>
-    <gearHealthRange>
-      <min>0.7</min>
-      <max>2.3</max>
-    </gearHealthRange>
-    <combatPower>70</combatPower>
-    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
-    <apparelMoney>
-      <min>1500</min>
-      <max>2800</max>
-    </apparelMoney>
-    <apparelTags>
-      <li ListIndex="0">Outlander</li>
-      <li ListIndex="1">Military</li>
-      <li ListIndex="2">BeltDefensePop</li>
-    </apparelTags>
-    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
-    <weaponMoney>
-      <min>400</min>
-      <max>900</max>
-    </weaponMoney>
-    <weaponTags>
-      <li ListIndex="0">Gun</li>
-    </weaponTags>
-    <techHediffsMoney>
-      <min>1000</min>
-      <max>1500</max>
-    </techHediffsMoney>
-    <techHediffsTags>
-      <li ListIndex="0">Advanced</li>
-    </techHediffsTags>
-    <techHediffsChance>0.003</techHediffsChance>
-    <itemQuality>Normal</itemQuality>
-    <inventoryOptions>
-      <skipChance>0.8</skipChance>
-      <subOptionsChooseOne>
-        <li ListIndex="0">
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>50</min>
-            <max>200</max>
-          </countRange>
-        </li>
-        <li ListIndex="1">
-          <thingDef>Medicine</thingDef>
-          <countRange>
-            <min>1</min>
-            <max>1</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
-    <invNutrition>2.55</invNutrition>
-    <chemicalAddictionChance>0.1</chemicalAddictionChance>
-    <combatEnhancingDrugsCount>
-      <min>0</min>
-      <max>2</max>
-    </combatEnhancingDrugsCount>
-  </PawnKindDef>
-  <PawnKindDef ParentName="MercenaryBase">
-    <defName>MercenarySniper</defName>
-    <label>mercenary sniper</label>
-    <race>Human</race>
-    <defaultFactionType>Pirate</defaultFactionType>
-    <backstoryCategory>Raider</backstoryCategory>
-    <labelPlural>mercenary snipers</labelPlural>
-    <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>
-    <maxGenerationAge>65</maxGenerationAge>
-    <gearHealthRange>
-      <min>0.7</min>
-      <max>2.3</max>
-    </gearHealthRange>
-    <combatPower>90</combatPower>
-    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
-    <apparelMoney>
-      <min>1500</min>
-      <max>2500</max>
-    </apparelMoney>
-    <apparelTags>
-      <li ListIndex="0">Outlander</li>
-      <li ListIndex="1">Military</li>
-    </apparelTags>
-    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
-    <weaponMoney>
-      <min>1200</min>
-      <max>1800</max>
-    </weaponMoney>
-    <weaponTags>
-      <li ListIndex="0">SniperRifle</li>
-    </weaponTags>
-    <techHediffsMoney>
-      <min>1000</min>
-      <max>1500</max>
-    </techHediffsMoney>
-    <techHediffsTags>
-      <li ListIndex="0">Advanced</li>
-    </techHediffsTags>
-    <techHediffsChance>0.003</techHediffsChance>
-    <itemQuality>Normal</itemQuality>
-    <inventoryOptions>
-      <skipChance>0.8</skipChance>
-      <subOptionsChooseOne>
-        <li ListIndex="0">
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>50</min>
-            <max>200</max>
-          </countRange>
-        </li>
-        <li ListIndex="1">
-          <thingDef>Medicine</thingDef>
-          <countRange>
-            <min>1</min>
-            <max>1</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
-    <invNutrition>2.55</invNutrition>
-    <chemicalAddictionChance>0.1</chemicalAddictionChance>
-    <combatEnhancingDrugsCount>
-      <min>0</min>
-      <max>2</max>
-    </combatEnhancingDrugsCount>
-  </PawnKindDef>
   <PawnKindDef Abstract="True" Name="GrenadierBase" ParentName="MercenaryBase">
     <race>Human</race>
     <gearHealthRange>
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <combatPower>60</combatPower>
+    <combatPower>65</combatPower>
     <apparelMoney>
       <min>800</min>
       <max>1400</max>
@@ -210,7 +77,7 @@
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <combatPower>60</combatPower>
+    <combatPower>65</combatPower>
     <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
     <apparelMoney>
       <min>800</min>
@@ -277,7 +144,7 @@
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <combatPower>60</combatPower>
+    <combatPower>65</combatPower>
     <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
     <apparelMoney>
       <min>800</min>
@@ -332,6 +199,139 @@
     </combatEnhancingDrugsCount>
   </PawnKindDef>
   <PawnKindDef ParentName="MercenaryBase">
+    <defName>MercenaryGunner</defName>
+    <label>mercenary gunner</label>
+    <race>Human</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <backstoryCategory>Raider</backstoryCategory>
+    <labelPlural>mercenary gunners</labelPlural>
+    <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>
+    <maxGenerationAge>65</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <combatPower>90</combatPower>
+    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>1500</min>
+      <max>2800</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Outlander</li>
+      <li ListIndex="1">Military</li>
+      <li ListIndex="2">BeltDefensePop</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+    <weaponMoney>
+      <min>400</min>
+      <max>900</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>1500</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li ListIndex="0">Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.003</techHediffsChance>
+    <itemQuality>Normal</itemQuality>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li ListIndex="0">
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li ListIndex="1">
+          <thingDef>Medicine</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <invNutrition>2.55</invNutrition>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MercenaryBase">
+    <defName>MercenarySniper</defName>
+    <label>mercenary sniper</label>
+    <race>Human</race>
+    <defaultFactionType>Pirate</defaultFactionType>
+    <backstoryCategory>Raider</backstoryCategory>
+    <labelPlural>mercenary snipers</labelPlural>
+    <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>
+    <maxGenerationAge>65</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.7</min>
+      <max>2.3</max>
+    </gearHealthRange>
+    <combatPower>95</combatPower>
+    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>1500</min>
+      <max>2500</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Outlander</li>
+      <li ListIndex="1">Military</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+    <weaponMoney>
+      <min>1200</min>
+      <max>1800</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">SniperRifle</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>1000</min>
+      <max>1500</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li ListIndex="0">Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.003</techHediffsChance>
+    <itemQuality>Normal</itemQuality>
+    <inventoryOptions>
+      <skipChance>0.8</skipChance>
+      <subOptionsChooseOne>
+        <li ListIndex="0">
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li ListIndex="1">
+          <thingDef>Medicine</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <invNutrition>2.55</invNutrition>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MercenaryBase">
     <defName>MercenarySlasher</defName>
     <label>mercenary slasher</label>
     <race>Human</race>
@@ -344,7 +344,7 @@
       <min>0.5</min>
       <max>2.3</max>
     </gearHealthRange>
-    <combatPower>135</combatPower>
+    <combatPower>140</combatPower>
     <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
     <apparelMoney>
       <min>1000</min>
@@ -454,7 +454,7 @@
       <min>0.8</min>
       <max>3.5</max>
     </gearHealthRange>
-    <combatPower>220</combatPower>
+    <combatPower>210</combatPower>
     <apparelMoney>
       <min>2500</min>
       <max>4200</max>
@@ -521,7 +521,7 @@
       <max>3.5</max>
     </gearHealthRange>
     <factionLeader>true</factionLeader>
-    <combatPower>220</combatPower>
+    <combatPower>210</combatPower>
     <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
     <apparelMoney>
       <min>2500</min>
@@ -591,7 +591,7 @@
       <min>0.8</min>
       <max>3.5</max>
     </gearHealthRange>
-    <combatPower>220</combatPower>
+    <combatPower>210</combatPower>
     <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
     <apparelMoney>
       <min>2500</min>

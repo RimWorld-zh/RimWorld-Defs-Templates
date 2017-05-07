@@ -63,6 +63,7 @@
     <building>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
       <bed_showSleeperBody>True</bed_showSleeperBody>
+      <ai_chillDestination>false</ai_chillDestination>
       <sowTag>SupportPlantsOnly</sowTag>
     </building>
   </ThingDef>
@@ -420,6 +421,7 @@
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
       <bed_showSleeperBody>True</bed_showSleeperBody>
       <bed_humanlike>false</bed_humanlike>
+      <ai_chillDestination>false</ai_chillDestination>
       <sowTag>SupportPlantsOnly</sowTag>
     </building>
   </ThingDef>

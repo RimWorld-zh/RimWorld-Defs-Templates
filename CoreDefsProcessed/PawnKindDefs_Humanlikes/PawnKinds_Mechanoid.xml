@@ -9,34 +9,6 @@
     </dessicatedBodyGraphicData>
   </PawnKindDef>
   <PawnKindDef>
-    <defName>Centipede</defName>
-    <label>centipede</label>
-    <race>Mechanoid_Centipede</race>
-    <defaultFactionType>Mechanoid</defaultFactionType>
-    <labelPlural>centipedes</labelPlural>
-    <lifeStages>
-      <li ListIndex="0">
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Mechanoid/Centipede</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3</drawSize>
-          <shadowData>
-            <volume>(0.6, 0.8, 0.6)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <combatPower>290</combatPower>
-    <aiAvoidCover>true</aiAvoidCover>
-    <weaponMoney>
-      <min>8000</min>
-      <max>8000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li ListIndex="0">MechanoidGunHeavy</li>
-    </weaponTags>
-  </PawnKindDef>
-  <PawnKindDef>
     <defName>Scyther</defName>
     <label>scyther</label>
     <race>Mechanoid_Scyther</race>
@@ -62,6 +34,34 @@
     </weaponMoney>
     <weaponTags>
       <li ListIndex="0">MechanoidGunMedium</li>
+    </weaponTags>
+  </PawnKindDef>
+  <PawnKindDef>
+    <defName>Centipede</defName>
+    <label>centipede</label>
+    <race>Mechanoid_Centipede</race>
+    <defaultFactionType>Mechanoid</defaultFactionType>
+    <labelPlural>centipedes</labelPlural>
+    <lifeStages>
+      <li ListIndex="0">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Centipede</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <combatPower>290</combatPower>
+    <aiAvoidCover>true</aiAvoidCover>
+    <weaponMoney>
+      <min>8000</min>
+      <max>8000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">MechanoidGunHeavy</li>
     </weaponTags>
   </PawnKindDef>
 </PawnKindDefs>

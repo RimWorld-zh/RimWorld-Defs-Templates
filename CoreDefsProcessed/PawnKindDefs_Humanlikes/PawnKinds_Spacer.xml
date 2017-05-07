@@ -18,7 +18,7 @@
     <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
     <apparelMoney>
       <min>0</min>
-      <max>3000</max>
+      <max>1000</max>
     </apparelMoney>
     <apparelTags>
       <li ListIndex="0">Spacer</li>
@@ -40,7 +40,7 @@
     <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
     <apparelMoney>
       <min>0</min>
-      <max>4000</max>
+      <max>3200</max>
     </apparelMoney>
     <apparelTags>
       <li ListIndex="0">Spacer</li>

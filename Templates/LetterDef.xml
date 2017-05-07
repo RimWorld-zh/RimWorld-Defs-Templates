@@ -6,12 +6,16 @@
     <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
     <defName>string_value</defName>
     <!--Type: System.Type-->
+    <!--Default Value: typeof(StandardLetter)-->
     <letterClass>class_name</letterClass>
     <!--Type: UnityEngine.Color-->
+    <!--Default Value: Color.white-->
     <color>value</color>
     <!--Type: UnityEngine.Color-->
+    <!--Default Value: Color.white-->
     <flashColor>value</flashColor>
     <!--Type: float-->
+    <!--Default Value: 90.0-->
     <flashInterval>float_value</flashInterval>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -19,6 +23,7 @@
     <!--Type: Verse.SoundDef-->
     <arriveSound>SoundDef_defName</arriveSound>
     <!--Type: string-->
+    <!--Default Value: "UI/Letters/LetterUnopened"-->
     <icon>string_value</icon>
   </LetterDef>
 </Defs>

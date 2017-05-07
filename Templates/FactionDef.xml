@@ -120,6 +120,9 @@
     <!--Type: string-->
     <!--Default Value: "leader"-->
     <leaderTitle>string_value</leaderTitle>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <maxPawnOptionCostFactor>float_value</maxPawnOptionCostFactor>
     <!--Type: int-->
     <requiredCountAtGameStart>int_value</requiredCountAtGameStart>
     <!--Type: int-->

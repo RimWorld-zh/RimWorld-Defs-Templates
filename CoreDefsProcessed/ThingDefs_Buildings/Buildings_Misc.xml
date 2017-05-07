@@ -953,6 +953,7 @@
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <building>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
       <sowTag>SupportPlantsOnly</sowTag>
     </building>
   </ThingDef>
@@ -984,6 +985,7 @@
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <building>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
       <sowTag>SupportPlantsOnly</sowTag>
     </building>
   </ThingDef>
@@ -1016,6 +1018,7 @@
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <building>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
       <sowTag>SupportPlantsOnly</sowTag>
     </building>
   </ThingDef>

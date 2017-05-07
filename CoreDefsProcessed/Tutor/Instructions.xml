@@ -557,7 +557,7 @@
     <actionTagsAllowed>
       <li ListIndex="0">Draft</li>
       <li ListIndex="1">Undraft</li>
-      <li ListIndex="2">AllowFiringToggle</li>
+      <li ListIndex="2">FireAtWillToggle</li>
       <li ListIndex="3">VerbTarget</li>
       <li ListIndex="4">ITab-Health-Open</li>
       <li ListIndex="5">ITab-Gear-Open</li>
