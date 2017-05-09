@@ -146,7 +146,7 @@
     </thingCategories>
     <tradeability>Never</tradeability>
   </ThingDef>
-  <ThingDef ParentName="UnfinishedBase">
+  <ThingDef Name="UnfinishedTechArmor" ParentName="UnfinishedBase">
     <defName>UnfinishedTechArmor</defName>
     <label>unfinished armor</label>
     <statBases>
@@ -156,6 +156,43 @@
     </statBases>
     <pathCost>15</pathCost>
     <stuffCategories />
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedTechArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Unfinished</li>
+    </thingCategories>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="UnfinishedTechArmor">
+    <defName>UnfinishedMetallicTechArmor</defName>
+    <label>unfinished armor</label>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+      <li ListIndex="3">Metallic</li>
+    </stuffCategories>
     <altitudeLayer>Item</altitudeLayer>
     <thingClass>UnfinishedThing</thingClass>
     <category>Item</category>

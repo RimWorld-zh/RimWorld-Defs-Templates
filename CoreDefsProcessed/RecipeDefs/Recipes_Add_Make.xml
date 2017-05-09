@@ -711,7 +711,7 @@
     <products>
       <Apparel_AdvancedHelmet>1</Apparel_AdvancedHelmet>
     </products>
-    <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+    <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
     <workSkill>Crafting</workSkill>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
