@@ -7,22 +7,22 @@
       <li ListIndex="0">
         <label>moderate expectations</label>
         <description>This place isn't quite rich. I can't expect to be totally pampered.</description>
-        <baseMoodEffect>5</baseMoodEffect>
+        <baseMoodEffect>6</baseMoodEffect>
       </li>
       <li ListIndex="1">
         <label>low expectations</label>
         <description>This place doesn't have the wealth for many luxuries. I need to keep myself strong.</description>
-        <baseMoodEffect>10</baseMoodEffect>
+        <baseMoodEffect>12</baseMoodEffect>
       </li>
       <li ListIndex="2">
         <label>very low expectations</label>
         <description>This place is poverty-stricken. I can't expect any comfort here; I need to keep myself strong.</description>
-        <baseMoodEffect>15</baseMoodEffect>
+        <baseMoodEffect>18</baseMoodEffect>
       </li>
       <li ListIndex="3">
         <label>extremely low expectations</label>
         <description>I'm out here with little to no shelter. I'd better steel myself to survive.</description>
-        <baseMoodEffect>20</baseMoodEffect>
+        <baseMoodEffect>25</baseMoodEffect>
       </li>
     </stages>
     <validWhileDespawned>true</validWhileDespawned>

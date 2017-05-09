@@ -17,7 +17,7 @@
         <li ListIndex="1">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -25,7 +25,7 @@
         <li ListIndex="2">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -33,7 +33,7 @@
         <li ListIndex="3">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -41,7 +41,7 @@
         <li ListIndex="4">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -49,7 +49,7 @@
         <li ListIndex="5">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -57,7 +57,7 @@
         <li ListIndex="6">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -65,7 +65,7 @@
         <li ListIndex="7">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -73,7 +73,7 @@
         <li ListIndex="8">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -81,7 +81,7 @@
         <li ListIndex="9">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -89,7 +89,7 @@
         <li ListIndex="10">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -97,7 +97,7 @@
         <li ListIndex="11">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -105,7 +105,7 @@
         <li ListIndex="12">
           <def>Rib</def>
           <depth>Inside</depth>
-          <coverage>0.004</coverage>
+          <coverage>0.003</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -122,7 +122,7 @@
         <li ListIndex="14">
           <def>Spine</def>
           <depth>Inside</depth>
-          <coverage>0.03</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -130,7 +130,7 @@
         <li ListIndex="15">
           <def>Stomach</def>
           <depth>Inside</depth>
-          <coverage>0.04</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -138,7 +138,7 @@
         <li ListIndex="16">
           <def>Heart</def>
           <depth>Inside</depth>
-          <coverage>0.03</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -146,7 +146,7 @@
         <li ListIndex="17">
           <def>LeftLung</def>
           <depth>Inside</depth>
-          <coverage>0.04</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -154,7 +154,7 @@
         <li ListIndex="18">
           <def>RightLung</def>
           <depth>Inside</depth>
-          <coverage>0.04</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -162,7 +162,7 @@
         <li ListIndex="19">
           <def>LeftKidney</def>
           <depth>Inside</depth>
-          <coverage>0.03</coverage>
+          <coverage>0.015</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -170,7 +170,7 @@
         <li ListIndex="20">
           <def>RightKidney</def>
           <depth>Inside</depth>
-          <coverage>0.03</coverage>
+          <coverage>0.015</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -178,7 +178,7 @@
         <li ListIndex="21">
           <def>Liver</def>
           <depth>Inside</depth>
-          <coverage>0.05</coverage>
+          <coverage>0.025</coverage>
           <groups>
             <li ListIndex="0">Torso</li>
           </groups>
@@ -210,7 +210,7 @@
                 </li>
                 <li ListIndex="1">
                   <def>LeftEye</def>
-                  <coverage>0.1</coverage>
+                  <coverage>0.07</coverage>
                   <groups>
                     <li ListIndex="0">FullHead</li>
                     <li ListIndex="1">Eyes</li>
@@ -218,7 +218,7 @@
                 </li>
                 <li ListIndex="2">
                   <def>RightEye</def>
-                  <coverage>0.1</coverage>
+                  <coverage>0.07</coverage>
                   <groups>
                     <li ListIndex="0">FullHead</li>
                     <li ListIndex="1">Eyes</li>
@@ -226,7 +226,7 @@
                 </li>
                 <li ListIndex="3">
                   <def>LeftEar</def>
-                  <coverage>0.1</coverage>
+                  <coverage>0.07</coverage>
                   <groups>
                     <li ListIndex="0">UpperHead</li>
                     <li ListIndex="1">FullHead</li>
@@ -234,7 +234,7 @@
                 </li>
                 <li ListIndex="4">
                   <def>RightEar</def>
-                  <coverage>0.1</coverage>
+                  <coverage>0.07</coverage>
                   <groups>
                     <li ListIndex="0">UpperHead</li>
                     <li ListIndex="1">FullHead</li>
@@ -242,7 +242,7 @@
                 </li>
                 <li ListIndex="5">
                   <def>Nose</def>
-                  <coverage>0.12</coverage>
+                  <coverage>0.10</coverage>
                   <groups>
                     <li ListIndex="0">FullHead</li>
                   </groups>
@@ -265,7 +265,7 @@
             </li>
           </parts>
           <height>Top</height>
-          <coverage>0.10</coverage>
+          <coverage>0.08</coverage>
           <groups>
             <li ListIndex="0">Neck</li>
           </groups>
@@ -306,7 +306,7 @@
                   <parts>
                     <li ListIndex="0">
                       <def>LeftHandPinky</def>
-                      <coverage>0.11</coverage>
+                      <coverage>0.06</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">LeftHand</li>
@@ -314,7 +314,7 @@
                     </li>
                     <li ListIndex="1">
                       <def>LeftHandRingFinger</def>
-                      <coverage>0.13</coverage>
+                      <coverage>0.07</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">LeftHand</li>
@@ -322,7 +322,7 @@
                     </li>
                     <li ListIndex="2">
                       <def>LeftHandMiddleFinger</def>
-                      <coverage>0.15</coverage>
+                      <coverage>0.08</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">LeftHand</li>
@@ -330,7 +330,7 @@
                     </li>
                     <li ListIndex="3">
                       <def>LeftHandIndexFinger</def>
-                      <coverage>0.14</coverage>
+                      <coverage>0.07</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">LeftHand</li>
@@ -338,7 +338,7 @@
                     </li>
                     <li ListIndex="4">
                       <def>LeftHandThumb</def>
-                      <coverage>0.15</coverage>
+                      <coverage>0.08</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">LeftHand</li>
@@ -346,7 +346,7 @@
                     </li>
                   </parts>
                   <height>Bottom</height>
-                  <coverage>0.25</coverage>
+                  <coverage>0.18</coverage>
                   <groups>
                     <li ListIndex="0">Hands</li>
                   </groups>
@@ -358,7 +358,7 @@
               </groups>
             </li>
           </parts>
-          <coverage>0.11</coverage>
+          <coverage>0.12</coverage>
           <groups>
             <li ListIndex="0">Shoulders</li>
           </groups>
@@ -399,7 +399,7 @@
                   <parts>
                     <li ListIndex="0">
                       <def>RightHandPinky</def>
-                      <coverage>0.11</coverage>
+                      <coverage>0.06</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">RightHand</li>
@@ -407,7 +407,7 @@
                     </li>
                     <li ListIndex="1">
                       <def>RightHandRingFinger</def>
-                      <coverage>0.13</coverage>
+                      <coverage>0.07</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">RightHand</li>
@@ -415,7 +415,7 @@
                     </li>
                     <li ListIndex="2">
                       <def>RightHandMiddleFinger</def>
-                      <coverage>0.15</coverage>
+                      <coverage>0.08</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">RightHand</li>
@@ -423,7 +423,7 @@
                     </li>
                     <li ListIndex="3">
                       <def>RightHandIndexFinger</def>
-                      <coverage>0.14</coverage>
+                      <coverage>0.07</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">RightHand</li>
@@ -431,7 +431,7 @@
                     </li>
                     <li ListIndex="4">
                       <def>RightHandThumb</def>
-                      <coverage>0.15</coverage>
+                      <coverage>0.08</coverage>
                       <groups>
                         <li ListIndex="0">Hands</li>
                         <li ListIndex="1">RightHand</li>
@@ -439,7 +439,7 @@
                     </li>
                   </parts>
                   <height>Bottom</height>
-                  <coverage>0.25</coverage>
+                  <coverage>0.18</coverage>
                   <groups>
                     <li ListIndex="0">Hands</li>
                   </groups>
@@ -451,7 +451,7 @@
               </groups>
             </li>
           </parts>
-          <coverage>0.11</coverage>
+          <coverage>0.12</coverage>
           <groups>
             <li ListIndex="0">Shoulders</li>
           </groups>
@@ -488,48 +488,48 @@
               <parts>
                 <li ListIndex="0">
                   <def>LeftFootLittleToe</def>
-                  <coverage>0.1</coverage>
+                  <coverage>0.06</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
                 <li ListIndex="1">
                   <def>LeftFootFourthToe</def>
-                  <coverage>0.12</coverage>
+                  <coverage>0.07</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
                 <li ListIndex="2">
                   <def>LeftFootMiddleToe</def>
-                  <coverage>0.14</coverage>
+                  <coverage>0.08</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
                 <li ListIndex="3">
                   <def>LeftFootSecondToe</def>
-                  <coverage>0.15</coverage>
+                  <coverage>0.09</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
                 <li ListIndex="4">
                   <def>LeftFootBigToe</def>
-                  <coverage>0.16</coverage>
+                  <coverage>0.10</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
               </parts>
-              <coverage>0.25</coverage>
+              <coverage>0.15</coverage>
               <groups>
                 <li ListIndex="0">Feet</li>
               </groups>
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.14</coverage>
           <groups>
             <li ListIndex="0">Legs</li>
           </groups>
@@ -558,48 +558,48 @@
               <parts>
                 <li ListIndex="0">
                   <def>RightFootLittleToe</def>
-                  <coverage>0.1</coverage>
+                  <coverage>0.06</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
                 <li ListIndex="1">
                   <def>RightFootFourthToe</def>
-                  <coverage>0.12</coverage>
+                  <coverage>0.07</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
                 <li ListIndex="2">
                   <def>RightFootMiddleToe</def>
-                  <coverage>0.14</coverage>
+                  <coverage>0.08</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
                 <li ListIndex="3">
                   <def>RightFootSecondToe</def>
-                  <coverage>0.15</coverage>
+                  <coverage>0.09</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
                 <li ListIndex="4">
                   <def>RightFootBigToe</def>
-                  <coverage>0.16</coverage>
+                  <coverage>0.10</coverage>
                   <groups>
                     <li ListIndex="0">Feet</li>
                   </groups>
                 </li>
               </parts>
-              <coverage>0.25</coverage>
+              <coverage>0.15</coverage>
               <groups>
                 <li ListIndex="0">Feet</li>
               </groups>
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.14</coverage>
           <groups>
             <li ListIndex="0">Legs</li>
           </groups>

@@ -231,8 +231,8 @@
     <workerClass>IncidentWorker_CropBlight</workerClass>
     <category>Misc</category>
     <targetType>MapPlayerHome</targetType>
-    <baseChance>0.4</baseChance>
-    <minRefireDays>35</minRefireDays>
+    <baseChance>0.35</baseChance>
+    <minRefireDays>30</minRefireDays>
   </IncidentDef>
   <IncidentDef>
     <defName>Alphabeavers</defName>

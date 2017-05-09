@@ -13,6 +13,7 @@
     <cropYieldFactor>1.30</cropYieldFactor>
     <diseaseIntervalFactor>3</diseaseIntervalFactor>
     <enemyReproductionRateFactor>0.1</enemyReproductionRateFactor>
+    <playerPawnInfectionChanceFactor>0.3</playerPawnInfectionChanceFactor>
   </DifficultyDef>
   <DifficultyDef>
     <defName>VeryEasy</defName>
@@ -24,6 +25,7 @@
     <cropYieldFactor>1.30</cropYieldFactor>
     <diseaseIntervalFactor>3</diseaseIntervalFactor>
     <enemyReproductionRateFactor>0.1</enemyReproductionRateFactor>
+    <playerPawnInfectionChanceFactor>0.5</playerPawnInfectionChanceFactor>
   </DifficultyDef>
   <DifficultyDef>
     <defName>Easy</defName>
@@ -36,6 +38,7 @@
     <cropYieldFactor>1.20</cropYieldFactor>
     <diseaseIntervalFactor>1.5</diseaseIntervalFactor>
     <enemyReproductionRateFactor>0.4</enemyReproductionRateFactor>
+    <playerPawnInfectionChanceFactor>0.75</playerPawnInfectionChanceFactor>
   </DifficultyDef>
   <DifficultyDef>
     <defName>Medium</defName>
@@ -72,5 +75,6 @@
     <cropYieldFactor>0.9</cropYieldFactor>
     <diseaseIntervalFactor>0.9</diseaseIntervalFactor>
     <enemyReproductionRateFactor>1</enemyReproductionRateFactor>
+    <playerPawnInfectionChanceFactor>1.1</playerPawnInfectionChanceFactor>
   </DifficultyDef>
 </Defs>

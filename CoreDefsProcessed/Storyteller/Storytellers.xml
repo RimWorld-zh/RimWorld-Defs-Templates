@@ -13,9 +13,9 @@
         <minDaysPassed>5</minDaysPassed>
         <mtbDaysThreatSmall>3.75</mtbDaysThreatSmall>
         <mtbDaysThreatBig>1.20</mtbDaysThreatBig>
-        <threatOffDays>5.8</threatOffDays>
+        <threatOffDays>6.3</threatOffDays>
         <threatOnDays>4.6</threatOnDays>
-        <minDaysBetweenThreatBigs>1.9</minDaysBetweenThreatBigs>
+        <minDaysBetweenThreatBigs>2.1</minDaysBetweenThreatBigs>
       </li>
       <li Class="StorytellerCompProperties_CategoryMTB" ListIndex="2">
         <minDaysPassed>5</minDaysPassed>
@@ -67,9 +67,9 @@
         <minDaysPassed>5</minDaysPassed>
         <mtbDaysThreatSmall>8</mtbDaysThreatSmall>
         <mtbDaysThreatBig>1.25</mtbDaysThreatBig>
-        <threatOffDays>8.5</threatOffDays>
-        <threatOnDays>8.5</threatOnDays>
-        <minDaysBetweenThreatBigs>12.5</minDaysBetweenThreatBigs>
+        <threatOffDays>9.0</threatOffDays>
+        <threatOnDays>9.0</threatOnDays>
+        <minDaysBetweenThreatBigs>13.0</minDaysBetweenThreatBigs>
       </li>
       <li Class="StorytellerCompProperties_CategoryMTB" ListIndex="2">
         <minDaysPassed>5</minDaysPassed>
@@ -118,7 +118,7 @@
       <li Class="StorytellerCompProperties_RandomMain" ListIndex="0">
         <minDaysPassed>1</minDaysPassed>
         <allowedTargetTypes>MapPlayerHome</allowedTargetTypes>
-        <mtbDays>1.13</mtbDays>
+        <mtbDays>1.14</mtbDays>
         <categoryWeights>
           <Misc>5.5</Misc>
           <OrbitalVisitor>1</OrbitalVisitor>

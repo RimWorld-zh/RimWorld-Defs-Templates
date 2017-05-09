@@ -48,6 +48,57 @@
           <!--Available Values: Standing, DropPods-->
           <method>enum_value</method>
         </li>
+        <!--Type: RimWorld.ScenPart_StartingResearch-->
+        <li Class="ScenPart_StartingResearch">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: Verse.ResearchProjectDef-->
+          <project>ResearchProjectDef_defName</project>
+        </li>
+        <!--Type: RimWorld.ScenPart_StartingThing_Defined-->
+        <li Class="ScenPart_StartingThing_Defined">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: Verse.ThingDef-->
+          <thingDef>ThingDef_defName</thingDef>
+          <!--Type: Verse.ThingDef-->
+          <stuff>ThingDef_defName</stuff>
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <count>int_value</count>
+        </li>
+        <!--Type: RimWorld.ScenPart_StartingAnimal-->
+        <li Class="ScenPart_StartingAnimal">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <count>int_value</count>
+          <!--Type: float-->
+          <!--Default Value: 0.5-->
+          <bondToRandomPlayerPawnChance>float_value</bondToRandomPlayerPawnChance>
+        </li>
+        <!--Type: RimWorld.ScenPart_ScatterThingsNearPlayerStart-->
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: Verse.ThingDef-->
+          <thingDef>ThingDef_defName</thingDef>
+          <!--Type: int-->
+          <!--Default Value: 1-->
+          <count>int_value</count>
+        </li>
+        <!--Type: RimWorld.ScenPart_GameStartDialog-->
+        <li Class="ScenPart_GameStartDialog">
+          <!--Type: RimWorld.ScenPartDef-->
+          <def>ScenPartDef_defName</def>
+          <!--Type: string-->
+          <text>string_value</text>
+          <!--Type: string-->
+          <textKey>string_value</textKey>
+          <!--Type: Verse.SoundDef-->
+          <closeSound>SoundDef_defName</closeSound>
+        </li>
         <!--Type: RimWorld.ScenPart_ForcedHediff-->
         <li Class="ScenPart_ForcedHediff">
           <!--Type: RimWorld.ScenPartDef-->
@@ -96,57 +147,6 @@
             <!--Type: float-->
             <max>float_value</max>
           </levelRange>
-        </li>
-        <!--Type: RimWorld.ScenPart_StartingThing_Defined-->
-        <li Class="ScenPart_StartingThing_Defined">
-          <!--Type: RimWorld.ScenPartDef-->
-          <def>ScenPartDef_defName</def>
-          <!--Type: Verse.ThingDef-->
-          <thingDef>ThingDef_defName</thingDef>
-          <!--Type: Verse.ThingDef-->
-          <stuff>ThingDef_defName</stuff>
-          <!--Type: int-->
-          <!--Default Value: 1-->
-          <count>int_value</count>
-        </li>
-        <!--Type: RimWorld.ScenPart_StartingAnimal-->
-        <li Class="ScenPart_StartingAnimal">
-          <!--Type: RimWorld.ScenPartDef-->
-          <def>ScenPartDef_defName</def>
-          <!--Type: int-->
-          <!--Default Value: 1-->
-          <count>int_value</count>
-          <!--Type: float-->
-          <!--Default Value: 0.5-->
-          <bondToRandomPlayerPawnChance>float_value</bondToRandomPlayerPawnChance>
-        </li>
-        <!--Type: RimWorld.ScenPart_ScatterThingsNearPlayerStart-->
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <!--Type: RimWorld.ScenPartDef-->
-          <def>ScenPartDef_defName</def>
-          <!--Type: Verse.ThingDef-->
-          <thingDef>ThingDef_defName</thingDef>
-          <!--Type: int-->
-          <!--Default Value: 1-->
-          <count>int_value</count>
-        </li>
-        <!--Type: RimWorld.ScenPart_GameStartDialog-->
-        <li Class="ScenPart_GameStartDialog">
-          <!--Type: RimWorld.ScenPartDef-->
-          <def>ScenPartDef_defName</def>
-          <!--Type: string-->
-          <text>string_value</text>
-          <!--Type: string-->
-          <textKey>string_value</textKey>
-          <!--Type: Verse.SoundDef-->
-          <closeSound>SoundDef_defName</closeSound>
-        </li>
-        <!--Type: RimWorld.ScenPart_StartingResearch-->
-        <li Class="ScenPart_StartingResearch">
-          <!--Type: RimWorld.ScenPartDef-->
-          <def>ScenPartDef_defName</def>
-          <!--Type: Verse.ResearchProjectDef-->
-          <project>ResearchProjectDef_defName</project>
         </li>
         <!--Type: RimWorld.ScenPart_ScatterThingsAnywhere-->
         <li Class="ScenPart_ScatterThingsAnywhere">

@@ -244,7 +244,7 @@
         <degree>1</degree>
         <statOffsets>
           <AimingDelayFactor>0.25</AimingDelayFactor>
-          <ShootingAccuracy>0.50</ShootingAccuracy>
+          <ShootingAccuracy>0.25</ShootingAccuracy>
         </statOffsets>
         <commonality>0.4</commonality>
         <skillGains>
@@ -260,7 +260,7 @@
         <degree>-1</degree>
         <statOffsets>
           <AimingDelayFactor>-0.5</AimingDelayFactor>
-          <ShootingAccuracy>-0.5</ShootingAccuracy>
+          <ShootingAccuracy>-0.25</ShootingAccuracy>
         </statOffsets>
         <commonality>0.5</commonality>
         <skillGains>

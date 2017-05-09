@@ -257,9 +257,9 @@
       </li>
       <li Class="HediffCompProperties_Immunizable" ListIndex="2">
         <immunityPerDayNotSick>-0.4</immunityPerDayNotSick>
-        <immunityPerDaySick>0.62</immunityPerDaySick>
-        <severityPerDayNotImmune>0.86</severityPerDayNotImmune>
-        <severityPerDayImmune>-0.667</severityPerDayImmune>
+        <immunityPerDaySick>0.66</immunityPerDaySick>
+        <severityPerDayNotImmune>0.84</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.7</severityPerDayImmune>
       </li>
     </comps>
     <initialSeverity>0.001</initialSeverity>
@@ -321,7 +321,7 @@
       </li>
       <li Class="HediffCompProperties_TendDuration" ListIndex="1">
         <tendDuration>30000</tendDuration>
-        <severityPerDayTended>-0.09</severityPerDayTended>
+        <severityPerDayTended>-0.13</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Immunizable" ListIndex="2">
         <immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
@@ -410,7 +410,7 @@
       </li>
       <li Class="HediffCompProperties_TendDuration" ListIndex="1">
         <tendDuration>30000</tendDuration>
-        <severityPerDayTended>-0.30</severityPerDayTended>
+        <severityPerDayTended>-0.38</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Immunizable" ListIndex="2">
         <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
@@ -506,7 +506,7 @@
       </li>
       <li Class="HediffCompProperties_TendDuration" ListIndex="1">
         <tendDuration>30000</tendDuration>
-        <severityPerDayTended>-0.1145</severityPerDayTended>
+        <severityPerDayTended>-0.20</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Immunizable" ListIndex="2">
         <immunityPerDayNotSick>-0.03</immunityPerDayNotSick>
@@ -593,7 +593,7 @@
       </li>
       <li Class="HediffCompProperties_TendDuration" ListIndex="1">
         <tendDuration>80000</tendDuration>
-        <severityPerDayTended>-0.025</severityPerDayTended>
+        <severityPerDayTended>-0.033</severityPerDayTended>
       </li>
       <li Class="HediffCompProperties_Immunizable" ListIndex="2">
         <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>

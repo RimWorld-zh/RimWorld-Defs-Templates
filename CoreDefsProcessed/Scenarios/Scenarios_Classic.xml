@@ -46,12 +46,12 @@
         <li Class="ScenPart_StartingThing_Defined" ListIndex="4">
           <def>StartingThing_Defined</def>
           <thingDef>MealSurvivalPack</thingDef>
-          <count>42</count>
+          <count>44</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined" ListIndex="5">
           <def>StartingThing_Defined</def>
           <thingDef>Medicine</thingDef>
-          <count>24</count>
+          <count>30</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined" ListIndex="6">
           <def>StartingThing_Defined</def>

@@ -38,5 +38,8 @@
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <enemyReproductionRateFactor>float_value</enemyReproductionRateFactor>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <playerPawnInfectionChanceFactor>float_value</playerPawnInfectionChanceFactor>
   </DifficultyDef>
 </Defs>

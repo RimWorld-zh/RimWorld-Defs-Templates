@@ -102,7 +102,7 @@
   <StatDef>
     <defName>MedicalSurgerySuccessChance</defName>
     <label>medical surgery success chance</label>
-    <description>The likelihood that a character will succeed when attempting to perform a medical surgery. Failures can result in simple wasted time and medicine, or catastrophic damage to the patient.</description>
+    <description>The likelihood that a character will succeed when attempting to perform a medical surgery. Failures can result in simple wasted time and medicine, or catastrophic damage to the patient. This base success chance is also affected by the facilities and medicine used in the operation, and the difficulty of the operation.</description>
     <category>PawnWork</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1.00</defaultBaseValue>
