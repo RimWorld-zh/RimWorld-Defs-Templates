@@ -15,6 +15,7 @@
     <healthScaleFactor>0.2</healthScaleFactor>
     <hungerRateFactor>0.2</hungerRateFactor>
     <marketValueFactor>0.5</marketValueFactor>
+    <foodMaxFactor>1.5</foodMaxFactor>
   </LifeStageDef>
   <LifeStageDef>
     <defName>HumanlikeToddler</defName>
@@ -26,6 +27,7 @@
     <healthScaleFactor>0.4</healthScaleFactor>
     <hungerRateFactor>0.4</hungerRateFactor>
     <marketValueFactor>0.7</marketValueFactor>
+    <foodMaxFactor>1.5</foodMaxFactor>
   </LifeStageDef>
   <LifeStageDef>
     <defName>HumanlikeChild</defName>
@@ -67,6 +69,7 @@
     <healthScaleFactor>0.25</healthScaleFactor>
     <hungerRateFactor>0.4</hungerRateFactor>
     <marketValueFactor>0.4</marketValueFactor>
+    <foodMaxFactor>2</foodMaxFactor>
   </LifeStageDef>
   <LifeStageDef>
     <defName>EusocialInsectJuvenile</defName>
@@ -79,6 +82,7 @@
     <healthScaleFactor>0.6</healthScaleFactor>
     <hungerRateFactor>0.75</hungerRateFactor>
     <marketValueFactor>0.75</marketValueFactor>
+    <foodMaxFactor>1.5</foodMaxFactor>
   </LifeStageDef>
   <LifeStageDef>
     <defName>EusocialInsectAdult</defName>
@@ -98,6 +102,7 @@
     <healthScaleFactor>0.25</healthScaleFactor>
     <hungerRateFactor>0.4</hungerRateFactor>
     <marketValueFactor>0.4</marketValueFactor>
+    <foodMaxFactor>2</foodMaxFactor>
   </LifeStageDef>
   <LifeStageDef ParentName="AnimalBaby">
     <defName>AnimalBabyTiny</defName>
@@ -111,6 +116,7 @@
     <healthScaleFactor>0.25</healthScaleFactor>
     <hungerRateFactor>0.4</hungerRateFactor>
     <marketValueFactor>0.4</marketValueFactor>
+    <foodMaxFactor>4</foodMaxFactor>
   </LifeStageDef>
   <LifeStageDef>
     <defName>AnimalJuvenile</defName>
@@ -123,6 +129,7 @@
     <healthScaleFactor>0.6</healthScaleFactor>
     <hungerRateFactor>0.75</hungerRateFactor>
     <marketValueFactor>0.75</marketValueFactor>
+    <foodMaxFactor>1.5</foodMaxFactor>
   </LifeStageDef>
   <LifeStageDef>
     <defName>AnimalAdult</defName>

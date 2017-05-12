@@ -95,6 +95,11 @@
       <thingDef>ThingDef_defName</thingDef>
       <!--Type: int-->
       <clearSpaceSize>int_value</clearSpaceSize>
+      <!--======== Non Matched Elements ========-->
+      <terrainValidationRadius>4</terrainValidationRadius>
+      <terrainValidationDisallowed>
+        <li ListIndex="0">Road</li>
+      </terrainValidationDisallowed>
     </genStep>
     <!--Type: RimWorld.GenStep_FindPlayerStartSpot-->
     <genStep Class="GenStep_FindPlayerStartSpot">value</genStep>

@@ -283,6 +283,10 @@
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>10</Component>
+    </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
@@ -348,6 +352,10 @@
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
+    <costList>
+      <Steel>120</Steel>
+      <Component>12</Component>
+    </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>

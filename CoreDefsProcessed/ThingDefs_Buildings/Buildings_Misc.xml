@@ -316,7 +316,7 @@
     </statBases>
     <pathCost>25</pathCost>
     <costList>
-      <Steel>250</Steel>
+      <Steel>200</Steel>
       <Component>8</Component>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -337,7 +337,7 @@
     <comps>
       <li Class="CompProperties_Power" ListIndex="0">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>500</basePowerConsumption>
+        <basePowerConsumption>200</basePowerConsumption>
         <startElectricalFires>true</startElectricalFires>
         <shortCircuitInRain>false</shortCircuitInRain>
       </li>

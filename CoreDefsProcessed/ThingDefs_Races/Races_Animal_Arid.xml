@@ -27,8 +27,8 @@
         <milkDef>Milk</milkDef>
       </li>
       <li Class="CompProperties_Shearable" ListIndex="2">
-        <shearIntervalDays>30</shearIntervalDays>
-        <woolAmount>125</woolAmount>
+        <shearIntervalDays>25</shearIntervalDays>
+        <woolAmount>100</woolAmount>
         <woolDef>WoolMuffalo</woolDef>
       </li>
     </comps>
@@ -1231,12 +1231,12 @@
       </li>
       <li Class="CompProperties_Milkable" ListIndex="1">
         <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>12</milkAmount>
+        <milkAmount>10</milkAmount>
         <milkDef>Milk</milkDef>
       </li>
       <li Class="CompProperties_Shearable" ListIndex="2">
-        <shearIntervalDays>30</shearIntervalDays>
-        <woolAmount>125</woolAmount>
+        <shearIntervalDays>25</shearIntervalDays>
+        <woolAmount>100</woolAmount>
         <woolDef>WoolCamel</woolDef>
       </li>
     </comps>

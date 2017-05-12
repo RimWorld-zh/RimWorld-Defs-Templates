@@ -123,6 +123,7 @@
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0.01</minValue>
     <maxValue>0.998</maxValue>
+    <noSkillFactor>0.50</noSkillFactor>
     <skillNeedFactors>
       <li Class="SkillNeed_Direct" ListIndex="0">
         <skill>Shooting</skill>
@@ -155,11 +156,13 @@
     <capacityFactors>
       <li ListIndex="0">
         <capacity>Sight</capacity>
-        <weight>0.95</weight>
+        <weight>1</weight>
+        <max>2</max>
       </li>
       <li ListIndex="1">
         <capacity>Manipulation</capacity>
-        <weight>1</weight>
+        <weight>0.7</weight>
+        <max>1</max>
       </li>
     </capacityFactors>
     <postProcessCurve>

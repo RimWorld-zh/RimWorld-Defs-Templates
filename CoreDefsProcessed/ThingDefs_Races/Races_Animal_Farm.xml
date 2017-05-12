@@ -245,7 +245,7 @@
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
-    <combatPower>15</combatPower>
+    <combatPower>22</combatPower>
     <labelMale>rooster</labelMale>
     <labelMalePlural>roosters</labelMalePlural>
     <labelFemale>hen</labelFemale>
@@ -940,7 +940,7 @@
       </li>
       <li Class="CompProperties_Shearable" ListIndex="1">
         <shearIntervalDays>15</shearIntervalDays>
-        <woolAmount>150</woolAmount>
+        <woolAmount>100</woolAmount>
         <woolDef>WoolAlpaca</woolDef>
       </li>
     </comps>

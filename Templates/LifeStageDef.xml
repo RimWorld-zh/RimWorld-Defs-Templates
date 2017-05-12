@@ -48,5 +48,7 @@
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <marketValueFactor>float_value</marketValueFactor>
+    <!--======== Non Matched Elements ========-->
+    <foodMaxFactor>1.5</foodMaxFactor>
   </LifeStageDef>
 </Defs>

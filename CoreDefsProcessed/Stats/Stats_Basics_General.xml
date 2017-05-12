@@ -25,6 +25,7 @@
       <li Class="StatPart_BodySize" ListIndex="0" />
       <li Class="StatPart_NaturalNotMissingBodyPartsCoverage" ListIndex="1" />
       <li Class="StatPart_GearAndInventoryMass" ListIndex="2" />
+      <li Class="StatPart_UnfinishedThingIngredientsMass" ListIndex="3" />
     </parts>
   </StatDef>
   <StatDef>

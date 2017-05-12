@@ -326,7 +326,7 @@
       </li>
       <li Class="CompProperties_Shearable" ListIndex="1">
         <shearIntervalDays>50</shearIntervalDays>
-        <woolAmount>330</woolAmount>
+        <woolAmount>400</woolAmount>
         <woolDef>WoolMegasloth</woolDef>
       </li>
     </comps>

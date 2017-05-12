@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StatDefs>
-  <!-- Artistic recipes - speed not affected by skill.-->
+  <!-- Artistic recipes - speed not affected by skill because skill affects output quality-->
   <StatDef>
     <defName>SculptingSpeed</defName>
     <label>sculpting speed</label>
-    <description>Speed at which this person sculpts.</description>
+    <description>Speed at which this person sculpts. Note: Skill affects the quality of the sculptures created, but not the sculpting speed.</description>
     <category>PawnWork</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
@@ -26,7 +26,7 @@
   <StatDef>
     <defName>TailoringSpeed</defName>
     <label>tailoring speed</label>
-    <description>Speed at which this person makes clothes.</description>
+    <description>Speed at which this person makes clothes. Note: Skill affects the quality of the apparel created, but not the tailoring speed.</description>
     <category>PawnWork</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
@@ -48,7 +48,7 @@
   <StatDef>
     <defName>SmithingSpeed</defName>
     <label>smithing speed</label>
-    <description>Speed at which this person smiths or crafts weapons, machines, ammunition, and tools.</description>
+    <description>Speed at which this person smiths or crafts weapons, machines, ammunition, and tools. Note: Skill affects the quality of the items created, but not the smithing speed.</description>
     <category>PawnWork</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
@@ -67,6 +67,7 @@
       </li>
     </capacityFactors>
   </StatDef>
+  <!-- Production recipes - speed affected by skill because there is no output quality -->
   <StatDef>
     <defName>DrugProductionSpeed</defName>
     <label>drug production speed</label>
@@ -125,29 +126,6 @@
       </li>
     </capacityFactors>
   </StatDef>
-  <StatDef>
-    <defName>SmeltingSpeed</defName>
-    <label>smelting speed</label>
-    <description>Speed at which this person smelts things.</description>
-    <category>PawnWork</category>
-    <toStringStyle>PercentZero</toStringStyle>
-    <defaultBaseValue>1</defaultBaseValue>
-    <statFactors>
-      <li ListIndex="0">WorkSpeedGlobal</li>
-    </statFactors>
-    <capacityFactors>
-      <li ListIndex="0">
-        <capacity>Sight</capacity>
-        <weight>0.3</weight>
-        <max>1</max>
-      </li>
-      <li ListIndex="1">
-        <capacity>Manipulation</capacity>
-        <weight>1</weight>
-      </li>
-    </capacityFactors>
-  </StatDef>
-  <!-- Production recipes - speed affected by skill.-->
   <StatDef>
     <defName>CookSpeed</defName>
     <label>cooking speed</label>
@@ -433,6 +411,29 @@
       <li ListIndex="1">
         <capacity>Manipulation</capacity>
         <weight>0.9</weight>
+      </li>
+    </capacityFactors>
+  </StatDef>
+  <!-- Dumb recipes - not affected by skill because there's no skill component -->
+  <StatDef>
+    <defName>SmeltingSpeed</defName>
+    <label>smelting speed</label>
+    <description>Speed at which this person smelts things. Note: Since this is dumb labor, its speed is not affected by any skill.</description>
+    <category>PawnWork</category>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <statFactors>
+      <li ListIndex="0">WorkSpeedGlobal</li>
+    </statFactors>
+    <capacityFactors>
+      <li ListIndex="0">
+        <capacity>Sight</capacity>
+        <weight>0.3</weight>
+        <max>1</max>
+      </li>
+      <li ListIndex="1">
+        <capacity>Manipulation</capacity>
+        <weight>1</weight>
       </li>
     </capacityFactors>
   </StatDef>

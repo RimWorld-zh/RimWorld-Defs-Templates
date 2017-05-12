@@ -111,6 +111,8 @@
     <category>Misc</category>
     <targetType>MapPlayerHome</targetType>
     <baseChance>1</baseChance>
+    <earliestDay>15</earliestDay>
+    <minPopulation>4</minPopulation>
   </IncidentDef>
   <!--========================== Bad ===============================-->
   <IncidentDef>

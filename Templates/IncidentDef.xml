@@ -97,5 +97,7 @@
       <!--Pattern: <BiomeDef_defName>float_value</BiomeDef_defName>-->
       <!-- ... -->
     </mtbDaysByBiome>
+    <!--======== Non Matched Elements ========-->
+    <minPopulation>4</minPopulation>
   </IncidentDef>
 </Defs>

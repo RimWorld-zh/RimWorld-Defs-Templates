@@ -94,7 +94,7 @@
       <harvestTag>Standard</harvestTag>
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
-      <growDays>6</growDays>
+      <growDays>5.8</growDays>
       <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0.4</fertilitySensitivity>

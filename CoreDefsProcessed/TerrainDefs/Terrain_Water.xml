@@ -14,6 +14,9 @@
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
+    <tags>
+      <li ListIndex="0">Water</li>
+    </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -30,6 +33,9 @@
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
+    <tags>
+      <li ListIndex="0">Water</li>
+    </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -48,6 +54,7 @@
     <holdSnow>false</holdSnow>
     <tags>
       <li ListIndex="0">River</li>
+      <li ListIndex="1">Water</li>
     </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
@@ -65,6 +72,9 @@
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <driesTo>Gravel</driesTo>
+    <tags>
+      <li ListIndex="0">Water</li>
+    </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -81,6 +91,9 @@
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <driesTo>Gravel</driesTo>
+    <tags>
+      <li ListIndex="0">Water</li>
+    </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>
   <TerrainDef>
@@ -98,6 +111,7 @@
     <holdSnow>false</holdSnow>
     <tags>
       <li ListIndex="0">River</li>
+      <li ListIndex="1">Water</li>
     </tags>
     <acceptFilth>false</acceptFilth>
   </TerrainDef>

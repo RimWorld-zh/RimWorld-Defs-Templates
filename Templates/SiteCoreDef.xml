@@ -9,6 +9,9 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: string-->
+    <!--Desc: A human-readable description given when the Def is inspected by players.-->
+    <description>string_value</description>
+    <!--Type: string-->
     <siteTexture>string_value</siteTexture>
     <!--Type: string-->
     <expandingIconTexture>string_value</expandingIconTexture>

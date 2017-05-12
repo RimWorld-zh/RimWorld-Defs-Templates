@@ -87,6 +87,10 @@
       <allowOnWater>false</allowOnWater>
       <thingDef>SteamGeyser</thingDef>
       <clearSpaceSize>30</clearSpaceSize>
+      <terrainValidationRadius>4</terrainValidationRadius>
+      <terrainValidationDisallowed>
+        <li ListIndex="0">Road</li>
+      </terrainValidationDisallowed>
     </genStep>
   </GenStepDef>
   <GenStepDef>
