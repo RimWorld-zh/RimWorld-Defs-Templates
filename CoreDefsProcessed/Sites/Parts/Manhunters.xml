@@ -3,6 +3,7 @@
   <SitePartDef>
     <defName>Manhunters</defName>
     <label>manhunter pack</label>
+    <description>A pack of manhunting animals.</description>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Manhunters</expandingIconTexture>
     <knownDanger>true</knownDanger>

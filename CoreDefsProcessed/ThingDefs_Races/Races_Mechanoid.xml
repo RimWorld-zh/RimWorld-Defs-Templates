@@ -157,14 +157,14 @@
         <defaultCooldownTime>1.65</defaultCooldownTime>
         <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
         <meleeDamageDef>Cut</meleeDamageDef>
-        <meleeDamageBaseAmount>24</meleeDamageBaseAmount>
+        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
       </li>
       <li ListIndex="1">
         <verbClass>Verb_MeleeAttack</verbClass>
         <defaultCooldownTime>1.65</defaultCooldownTime>
         <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
         <meleeDamageDef>Cut</meleeDamageDef>
-        <meleeDamageBaseAmount>24</meleeDamageBaseAmount>
+        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
       </li>
       <li ListIndex="2">
         <verbClass>Verb_MeleeAttack</verbClass>
@@ -172,7 +172,7 @@
         <defaultCooldownTime>1.65</defaultCooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
       </li>
     </verbs>
     <race>

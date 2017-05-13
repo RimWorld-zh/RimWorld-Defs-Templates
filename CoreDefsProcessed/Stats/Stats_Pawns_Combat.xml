@@ -8,7 +8,7 @@
     <category>PawnCombat</category>
     <workerClass>StatWorker_MeleeDPS</workerClass>
     <displayPriorityInCategory>100</displayPriorityInCategory>
-    <toStringStyle>FloatOne</toStringStyle>
+    <toStringStyle>FloatTwo</toStringStyle>
     <defaultBaseValue>0</defaultBaseValue>
     <minValue>0</minValue>
   </StatDef>
@@ -21,45 +21,38 @@
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0.01</minValue>
-    <noSkillFactor>0.60</noSkillFactor>
+    <noSkillFactor>0.20</noSkillFactor>
     <skillNeedFactors>
-      <li Class="SkillNeed_Direct" ListIndex="0">
+      <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Melee</skill>
-        <factorsPerLevel>
-          <li ListIndex="0">0.30</li>
-          <li ListIndex="1">0.35</li>
-          <li ListIndex="2">0.40</li>
-          <li ListIndex="3">0.45</li>
-          <li ListIndex="4">0.50</li>
-          <li ListIndex="5">0.55</li>
-          <li ListIndex="6">0.60</li>
-          <li ListIndex="7">0.633</li>
-          <li ListIndex="8">0.666</li>
-          <li ListIndex="9">0.7</li>
-          <li ListIndex="10">0.733</li>
-          <li ListIndex="11">0.766</li>
-          <li ListIndex="12">0.8</li>
-          <li ListIndex="13">0.825</li>
-          <li ListIndex="14">0.85</li>
-          <li ListIndex="15">0.875</li>
-          <li ListIndex="16">0.9</li>
-          <li ListIndex="17">0.92</li>
-          <li ListIndex="18">0.94</li>
-          <li ListIndex="19">0.96</li>
-          <li ListIndex="20">0.98</li>
-        </factorsPerLevel>
+        <reportInverse>true</reportInverse>
+        <baseFactor>0</baseFactor>
+        <bonusFactor>0.05</bonusFactor>
       </li>
     </skillNeedFactors>
     <capacityFactors>
       <li ListIndex="0">
         <capacity>Manipulation</capacity>
         <weight>1</weight>
+        <max>1.5</max>
       </li>
       <li ListIndex="1">
         <capacity>Sight</capacity>
         <weight>0.4</weight>
+        <max>1.5</max>
       </li>
     </capacityFactors>
+    <postProcessCurve>
+      <points>
+        <li ListIndex="0">(-1.0, 0.05)</li>
+        <li ListIndex="1">(-0.5, 0.10)</li>
+        <li ListIndex="2">(0.0, 0.50)</li>
+        <li ListIndex="3">(0.5, 0.80)</li>
+        <li ListIndex="4">(1.0, 0.90)</li>
+        <li ListIndex="5">(2.0, 0.96)</li>
+        <li ListIndex="6">(3.0, 0.98)</li>
+      </points>
+    </postProcessCurve>
   </StatDef>
   <StatDef>
     <defName>MeleeDodgeChance</defName>
@@ -71,33 +64,12 @@
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0</minValue>
     <maxValue>0.8</maxValue>
-    <noSkillFactor>0.08</noSkillFactor>
+    <noSkillFactor>0</noSkillFactor>
     <skillNeedFactors>
-      <li Class="SkillNeed_Direct" ListIndex="0">
+      <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Melee</skill>
-        <factorsPerLevel>
-          <li ListIndex="0">0</li>
-          <li ListIndex="1">0</li>
-          <li ListIndex="2">0</li>
-          <li ListIndex="3">0.02</li>
-          <li ListIndex="4">0.04</li>
-          <li ListIndex="5">0.06</li>
-          <li ListIndex="6">0.08</li>
-          <li ListIndex="7">0.10</li>
-          <li ListIndex="8">0.12</li>
-          <li ListIndex="9">0.14</li>
-          <li ListIndex="10">0.16</li>
-          <li ListIndex="11">0.18</li>
-          <li ListIndex="12">0.20</li>
-          <li ListIndex="13">0.22</li>
-          <li ListIndex="14">0.24</li>
-          <li ListIndex="15">0.26</li>
-          <li ListIndex="16">0.28</li>
-          <li ListIndex="17">0.30</li>
-          <li ListIndex="18">0.32</li>
-          <li ListIndex="19">0.34</li>
-          <li ListIndex="20">0.36</li>
-        </factorsPerLevel>
+        <baseFactor>0</baseFactor>
+        <bonusFactor>0.05</bonusFactor>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -108,8 +80,16 @@
       <li ListIndex="1">
         <capacity>Sight</capacity>
         <weight>0.7</weight>
+        <max>1</max>
       </li>
     </capacityFactors>
+    <postProcessCurve>
+      <points>
+        <li ListIndex="0">(0.25, 0)</li>
+        <li ListIndex="1">(1.0, 0.30)</li>
+        <li ListIndex="2">(3.0, 0.50)</li>
+      </points>
+    </postProcessCurve>
   </StatDef>
   <!-- ================================== Shooting =======================================-->
   <StatDef>
@@ -125,32 +105,11 @@
     <maxValue>0.998</maxValue>
     <noSkillFactor>0.50</noSkillFactor>
     <skillNeedFactors>
-      <li Class="SkillNeed_Direct" ListIndex="0">
+      <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Shooting</skill>
         <reportInverse>true</reportInverse>
-        <factorsPerLevel>
-          <li ListIndex="0">0.00</li>
-          <li ListIndex="1">0.05</li>
-          <li ListIndex="2">0.10</li>
-          <li ListIndex="3">0.15</li>
-          <li ListIndex="4">0.20</li>
-          <li ListIndex="5">0.25</li>
-          <li ListIndex="6">0.30</li>
-          <li ListIndex="7">0.35</li>
-          <li ListIndex="8">0.40</li>
-          <li ListIndex="9">0.45</li>
-          <li ListIndex="10">0.50</li>
-          <li ListIndex="11">0.55</li>
-          <li ListIndex="12">0.60</li>
-          <li ListIndex="13">0.65</li>
-          <li ListIndex="14">0.70</li>
-          <li ListIndex="15">0.75</li>
-          <li ListIndex="16">0.80</li>
-          <li ListIndex="17">0.85</li>
-          <li ListIndex="18">0.90</li>
-          <li ListIndex="19">0.95</li>
-          <li ListIndex="20">1.00</li>
-        </factorsPerLevel>
+        <baseFactor>0</baseFactor>
+        <bonusFactor>0.05</bonusFactor>
       </li>
     </skillNeedFactors>
     <capacityFactors>

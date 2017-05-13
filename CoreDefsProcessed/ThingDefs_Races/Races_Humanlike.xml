@@ -61,25 +61,25 @@
     <verbs>
       <li ListIndex="0">
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <defaultCooldownTime>1.60</defaultCooldownTime>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
         <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
       </li>
       <li ListIndex="1">
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.85</defaultCooldownTime>
+        <defaultCooldownTime>1.60</defaultCooldownTime>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
         <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
       </li>
       <li ListIndex="2">
         <verbClass>Verb_MeleeAttack</verbClass>
         <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <defaultCooldownTime>1.80</defaultCooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
       </li>
     </verbs>
     <race>

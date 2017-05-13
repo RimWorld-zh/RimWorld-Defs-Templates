@@ -143,8 +143,10 @@
       <li Class="StatPart_Age" ListIndex="3">
         <curve>
           <points>
-            <li ListIndex="0">(0.5,1)</li>
-            <li ListIndex="1">(1,0.8)</li>
+            <li ListIndex="0">(0.65,1)</li>
+            <li ListIndex="1">(0.8,0.95)</li>
+            <li ListIndex="2">(1.2,0.8)</li>
+            <li ListIndex="3">(1.5,0.5)</li>
           </points>
         </curve>
       </li>

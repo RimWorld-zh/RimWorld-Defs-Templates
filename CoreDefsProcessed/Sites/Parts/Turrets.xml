@@ -3,6 +3,7 @@
   <SitePartDef>
     <defName>Turrets</defName>
     <label>turrets</label>
+    <description>A few turrets.</description>
     <siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Turrets</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>

@@ -112,7 +112,7 @@
         <verbs>
           <li ListIndex="0">
             <verbClass>Verb_MeleeAttack</verbClass>
-            <defaultCooldownTime>1.2</defaultCooldownTime>
+            <defaultCooldownTime>1.65</defaultCooldownTime>
             <meleeDamageDef>Scratch</meleeDamageDef>
             <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
           </li>
@@ -138,7 +138,7 @@
         <verbs>
           <li ListIndex="0">
             <verbClass>Verb_MeleeAttack</verbClass>
-            <defaultCooldownTime>1.0</defaultCooldownTime>
+            <defaultCooldownTime>1.65</defaultCooldownTime>
             <meleeDamageDef>Cut</meleeDamageDef>
             <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
           </li>

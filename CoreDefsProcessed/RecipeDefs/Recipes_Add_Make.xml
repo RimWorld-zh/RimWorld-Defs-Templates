@@ -1681,6 +1681,51 @@
     </recipeUsers>
   </RecipeDef>
   <RecipeDef>
+    <defName>Make_MeleeWeapon_Knife</defName>
+    <label>make knife</label>
+    <description>Make knife.</description>
+    <jobString>Making knife.</jobString>
+    <workAmount>4000</workAmount>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Metallic</li>
+          </categories>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Metallic</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li ListIndex="0">Root</li>
+      </categories>
+      <exceptedThingDefs>
+        <li ListIndex="0">Silver</li>
+        <li ListIndex="1">Gold</li>
+        <li ListIndex="2">WoodLog</li>
+      </exceptedThingDefs>
+    </defaultIngredientFilter>
+    <productHasIngredientStuff>true</productHasIngredientStuff>
+    <products>
+      <MeleeWeapon_Knife>1</MeleeWeapon_Knife>
+    </products>
+    <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <recipeUsers>
+      <li ListIndex="0">ElectricSmithy</li>
+      <li ListIndex="1">FueledSmithy</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef>
     <defName>Make_MeleeWeapon_Club</defName>
     <label>make club</label>
     <description>Make club.</description>
@@ -1732,25 +1777,27 @@
     </recipeUsers>
   </RecipeDef>
   <RecipeDef>
-    <defName>Make_MeleeWeapon_Knife</defName>
-    <label>make knife</label>
-    <description>Make knife.</description>
-    <jobString>Making knife.</jobString>
-    <workAmount>4000</workAmount>
+    <defName>Make_MeleeWeapon_Mace</defName>
+    <label>make mace</label>
+    <description>Make mace.</description>
+    <jobString>Making mace.</jobString>
+    <workAmount>10000</workAmount>
     <workSpeedStat>SmithingSpeed</workSpeedStat>
     <ingredients>
       <li ListIndex="0">
         <filter>
           <categories>
             <li ListIndex="0">Metallic</li>
+            <li ListIndex="1">Woody</li>
           </categories>
         </filter>
-        <count>40</count>
+        <count>75</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <categories>
         <li ListIndex="0">Metallic</li>
+        <li ListIndex="1">Woody</li>
       </categories>
     </fixedIngredientFilter>
     <defaultIngredientFilter>
@@ -1760,12 +1807,11 @@
       <exceptedThingDefs>
         <li ListIndex="0">Silver</li>
         <li ListIndex="1">Gold</li>
-        <li ListIndex="2">WoodLog</li>
       </exceptedThingDefs>
     </defaultIngredientFilter>
     <productHasIngredientStuff>true</productHasIngredientStuff>
     <products>
-      <MeleeWeapon_Knife>1</MeleeWeapon_Knife>
+      <MeleeWeapon_Mace>1</MeleeWeapon_Mace>
     </products>
     <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     <workSkill>Crafting</workSkill>
@@ -1813,52 +1859,6 @@
     <productHasIngredientStuff>true</productHasIngredientStuff>
     <products>
       <MeleeWeapon_Gladius>1</MeleeWeapon_Gladius>
-    </products>
-    <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    <workSkill>Crafting</workSkill>
-    <effectWorking>Smith</effectWorking>
-    <soundWorking>Recipe_Smith</soundWorking>
-    <recipeUsers>
-      <li ListIndex="0">ElectricSmithy</li>
-      <li ListIndex="1">FueledSmithy</li>
-    </recipeUsers>
-  </RecipeDef>
-  <RecipeDef>
-    <defName>Make_MeleeWeapon_Mace</defName>
-    <label>make mace</label>
-    <description>Make mace.</description>
-    <jobString>Making mace.</jobString>
-    <workAmount>10000</workAmount>
-    <workSpeedStat>SmithingSpeed</workSpeedStat>
-    <ingredients>
-      <li ListIndex="0">
-        <filter>
-          <categories>
-            <li ListIndex="0">Metallic</li>
-            <li ListIndex="1">Woody</li>
-          </categories>
-        </filter>
-        <count>75</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <categories>
-        <li ListIndex="0">Metallic</li>
-        <li ListIndex="1">Woody</li>
-      </categories>
-    </fixedIngredientFilter>
-    <defaultIngredientFilter>
-      <categories>
-        <li ListIndex="0">Root</li>
-      </categories>
-      <exceptedThingDefs>
-        <li ListIndex="0">Silver</li>
-        <li ListIndex="1">Gold</li>
-      </exceptedThingDefs>
-    </defaultIngredientFilter>
-    <productHasIngredientStuff>true</productHasIngredientStuff>
-    <products>
-      <MeleeWeapon_Mace>1</MeleeWeapon_Mace>
     </products>
     <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     <workSkill>Crafting</workSkill>

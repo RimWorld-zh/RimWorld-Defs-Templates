@@ -82,6 +82,9 @@
       <li Class="SkillNeed_BaseBonus">
         <!--Type: RimWorld.SkillDef-->
         <skill>SkillDef_defName</skill>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <reportInverse>true_or_false</reportInverse>
         <!--Type: float-->
         <!--Default Value: 0.5-->
         <baseFactor>float_value</baseFactor>
@@ -93,9 +96,6 @@
       <li Class="SkillNeed_Direct">
         <!--Type: RimWorld.SkillDef-->
         <skill>SkillDef_defName</skill>
-        <!--Type: bool-->
-        <!--Default Value: false-->
-        <reportInverse>true_or_false</reportInverse>
         <!--Simple List-->
         <!--Type: List<float>-->
         <factorsPerLevel>

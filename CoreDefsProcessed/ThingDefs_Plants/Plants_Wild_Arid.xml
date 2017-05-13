@@ -89,7 +89,7 @@
     <fillPercent>0.35</fillPercent>
     <blockWind>true</blockWind>
     <ingestible>
-      <foodType>Plant</foodType>
+      <foodType>Tree</foodType>
       <nutrition>0.70</nutrition>
       <preferability>RawBad</preferability>
     </ingestible>
