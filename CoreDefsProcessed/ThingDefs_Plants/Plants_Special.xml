@@ -46,7 +46,7 @@
       <growDays>30</growDays>
       <lifespanFraction>0</lifespanFraction>
       <growMinGlow>0</growMinGlow>
-      <fertilityMin>0</fertilityMin>
+      <fertilityMin>0.01</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
       <topWindExposure>0.05</topWindExposure>
       <visualSizeRange>

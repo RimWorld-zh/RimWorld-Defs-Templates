@@ -769,7 +769,7 @@
   </WorkGiverDef>
   <WorkGiverDef>
     <defName>DoBillsProduceDrugs</defName>
-    <label>produce drugs</label>
+    <label>produce drugs at drug lab</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Crafting</workType>
     <priorityInType>95</priorityInType>
@@ -782,6 +782,9 @@
     <fixedBillGiverDefs>
       <li ListIndex="0">DrugLab</li>
     </fixedBillGiverDefs>
+    <workTags>
+      <li ListIndex="0">Intellectual</li>
+    </workTags>
   </WorkGiverDef>
   <WorkGiverDef>
     <defName>DoBillsStonecut</defName>

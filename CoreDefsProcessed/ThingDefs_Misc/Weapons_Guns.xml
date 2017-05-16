@@ -239,6 +239,7 @@
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
     </recipeMaker>
+    <generateCommonality>0.4</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/IncendiaryLauncher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -564,6 +565,7 @@
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
     </recipeMaker>
+    <generateCommonality>1.5</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/SurvivalRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>

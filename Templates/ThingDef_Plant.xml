@@ -161,7 +161,7 @@
       <!--Default Value: 6.0-->
       <lifespanFraction>float_value</lifespanFraction>
       <!--Type: float-->
-      <!--Default Value: 0.5-->
+      <!--Default Value: 0.51-->
       <growMinGlow>float_value</growMinGlow>
       <!--Type: bool-->
       <!--Default Value: false-->

@@ -35,8 +35,8 @@
       </li>
     </comps>
     <recipeMaker>
-      <workSpeedStat>DrugProductionSpeed</workSpeedStat>
-      <workSkill>Intellectual</workSkill>
+      <workSpeedStat></workSpeedStat>
+      <workSkill></workSkill>
       <effectWorking>Cook</effectWorking>
       <soundWorking>Recipe_CookMeal</soundWorking>
       <recipeUsers>

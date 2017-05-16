@@ -29,7 +29,7 @@
   </JobDef>
   <JobDef>
     <defName>WaitDowned</defName>
-    <driverClass>JobDriver_Wait</driverClass>
+    <driverClass>JobDriver_WaitDowned</driverClass>
     <reportString>downed.</reportString>
   </JobDef>
   <JobDef>

@@ -148,7 +148,7 @@
     <description>Make smokeleaf joint.</description>
     <jobString>Making smokeleaf joint.</jobString>
     <workAmount>450</workAmount>
-    <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+    <workSpeedStat></workSpeedStat>
     <ingredients>
       <li ListIndex="0">
         <filter>
@@ -167,7 +167,7 @@
     <products>
       <SmokeleafJoint>1</SmokeleafJoint>
     </products>
-    <workSkill>Intellectual</workSkill>
+    <workSkill></workSkill>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
     <recipeUsers>

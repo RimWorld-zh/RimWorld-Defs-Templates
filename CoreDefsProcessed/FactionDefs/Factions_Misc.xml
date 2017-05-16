@@ -11,7 +11,7 @@
         <kindDef>Normal</kindDef>
         <options>
           <Villager>50</Villager>
-          <GrenadierDestructive>50</GrenadierDestructive>
+          <GrenadierDestructive>15</GrenadierDestructive>
           <MercenarySlasher>70</MercenarySlasher>
           <TownGuard>100</TownGuard>
           <TownCouncilman>100</TownCouncilman>
@@ -29,7 +29,7 @@
           <Dromedary>1</Dromedary>
         </carriers>
         <guards>
-          <GrenadierDestructive>50</GrenadierDestructive>
+          <GrenadierDestructive>15</GrenadierDestructive>
           <MercenarySlasher>70</MercenarySlasher>
           <TownGuard>100</TownGuard>
           <MercenaryGunner>100</MercenaryGunner>
@@ -39,7 +39,7 @@
       <li ListIndex="2">
         <kindDef>FactionBase</kindDef>
         <options>
-          <GrenadierDestructive>50</GrenadierDestructive>
+          <GrenadierDestructive>15</GrenadierDestructive>
           <MercenarySlasher>70</MercenarySlasher>
           <Villager>100</Villager>
           <TownGuard>100</TownGuard>
@@ -190,11 +190,11 @@
         <commonality>100</commonality>
         <options>
           <Drifter>5</Drifter>
+          <GrenadierEMP>5</GrenadierEMP>
+          <GrenadierDestructive>20</GrenadierDestructive>
           <Thrasher>70</Thrasher>
           <MercenarySlasher>70</MercenarySlasher>
-          <GrenadierDestructive>70</GrenadierDestructive>
           <MercenaryHeavy>60</MercenaryHeavy>
-          <GrenadierEMP>50</GrenadierEMP>
           <MercenarySniper>80</MercenarySniper>
           <Scavenger>100</Scavenger>
           <Pirate>120</Pirate>
@@ -219,9 +219,9 @@
         <kindDef>FactionBase</kindDef>
         <options>
           <Drifter>5</Drifter>
+          <GrenadierDestructive>20</GrenadierDestructive>
           <Thrasher>70</Thrasher>
           <MercenarySlasher>70</MercenarySlasher>
-          <GrenadierDestructive>70</GrenadierDestructive>
           <MercenarySniper>80</MercenarySniper>
           <Scavenger>100</Scavenger>
           <Pirate>120</Pirate>
