@@ -493,8 +493,8 @@
   </ThingDef>
   <!-- ============================================== -->
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_SurvivalRifle</defName>
-    <label>survival rifle bullet</label>
+    <defName>Bullet_BoltActionRifle</defName>
+    <label>bolt-action rifle bullet</label>
     <altitudeLayer>Projectile</altitudeLayer>
     <thingClass>Bullet</thingClass>
     <category>Projectile</category>
@@ -513,9 +513,9 @@
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_SurvivalRifle</defName>
-    <label>survival rifle</label>
-    <description>Ancient bolt-action rifle. Good range, good power, low rate of fire.</description>
+    <defName>Gun_BoltActionRifle</defName>
+    <label>bolt-action rifle</label>
+    <description>Ancient pattern bolt-action rifle. Good range, good power, low rate of fire.</description>
     <statBases>
       <WorkToMake>25000</WorkToMake>
       <Mass>3.5</Mass>
@@ -567,7 +567,7 @@
     </recipeMaker>
     <generateCommonality>1.5</generateCommonality>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/SurvivalRifle</texPath>
+      <texPath>Things/Item/Equipment/WeaponRanged/BoltActionRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
@@ -587,10 +587,10 @@
         <range>37</range>
         <hasStandardCommand>true</hasStandardCommand>
         <warmupTime>1.9</warmupTime>
-        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCast>ShotBoltActionRifle</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_SurvivalRifle</projectileDef>
+        <projectileDef>Bullet_BoltActionRifle</projectileDef>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>

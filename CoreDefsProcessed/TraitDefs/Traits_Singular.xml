@@ -309,5 +309,6 @@
       </li>
     </degreeDatas>
     <commonality>0.15</commonality>
+    <allowOnHostileSpawn>false</allowOnHostileSpawn>
   </TraitDef>
 </TraitDefs>

@@ -584,7 +584,7 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>ShotSurvivalRifle</defName>
+    <defName>ShotBoltActionRifle</defName>
     <context>MapOnly</context>
     <eventNames />
     <maxSimultaneous>1</maxSimultaneous>
@@ -592,7 +592,7 @@
       <li ListIndex="0">
         <grains>
           <li Class="AudioGrain_Folder" ListIndex="0">
-            <clipFolderPath>Weapon/SurvivalRifle</clipFolderPath>
+            <clipFolderPath>Weapon/BoltActionRifle</clipFolderPath>
           </li>
         </grains>
         <pitchRange>

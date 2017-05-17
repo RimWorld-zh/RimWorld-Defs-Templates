@@ -61,7 +61,7 @@
     <workerClass>IncidentWorker_WandererJoin</workerClass>
     <category>Misc</category>
     <targetType>MapPlayerHome</targetType>
-    <baseChance>0.2</baseChance>
+    <baseChance>0.4</baseChance>
     <populationEffect>Increase</populationEffect>
   </IncidentDef>
   <IncidentDef>
@@ -70,7 +70,7 @@
     <workerClass>IncidentWorker_RefugeePodCrash</workerClass>
     <category>Misc</category>
     <targetType>MapPlayerHome</targetType>
-    <baseChance>1.0</baseChance>
+    <baseChance>1.5</baseChance>
     <populationEffect>Increase</populationEffect>
   </IncidentDef>
   <!-- =========================== Neutral ============================-->
@@ -80,7 +80,7 @@
     <workerClass>IncidentWorker_RefugeeChased</workerClass>
     <category>Misc</category>
     <targetType>MapPlayerHome</targetType>
-    <baseChance>2.5</baseChance>
+    <baseChance>2</baseChance>
     <populationEffect>Increase</populationEffect>
     <minRefireDays>8</minRefireDays>
   </IncidentDef>

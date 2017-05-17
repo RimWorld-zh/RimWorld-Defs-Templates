@@ -1282,10 +1282,10 @@
     </recipeUsers>
   </RecipeDef>
   <RecipeDef>
-    <defName>Make_Gun_SurvivalRifle</defName>
-    <label>make survival rifle</label>
-    <description>Make survival rifle.</description>
-    <jobString>Making survival rifle.</jobString>
+    <defName>Make_Gun_BoltActionRifle</defName>
+    <label>make bolt-action rifle</label>
+    <description>Make bolt-action rifle.</description>
+    <jobString>Making bolt-action rifle.</jobString>
     <workAmount>25000</workAmount>
     <workSpeedStat>SmithingSpeed</workSpeedStat>
     <ingredients>
@@ -1313,7 +1313,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <Gun_SurvivalRifle>1</Gun_SurvivalRifle>
+      <Gun_BoltActionRifle>1</Gun_BoltActionRifle>
     </products>
     <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     <workSkill>Crafting</workSkill>

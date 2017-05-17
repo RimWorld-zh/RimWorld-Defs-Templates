@@ -134,14 +134,16 @@
       <li Class="StorytellerCompProperties_ShipChunkDrop" />
       <!-- ... -->
     </comps>
-    <!--Type: float-->
-    <!--Default Value: 3.0-->
-    <desiredPopulationMin>float_value</desiredPopulationMin>
-    <!--Type: float-->
-    <!--Default Value: 10.0-->
-    <desiredPopulationMax>float_value</desiredPopulationMax>
-    <!--Type: float-->
-    <!--Default Value: 13.0-->
-    <desiredPopulationCritical>float_value</desiredPopulationCritical>
+    <!--======== Non Matched Elements ========-->
+    <populationIntentFromPopCurve>
+      <points>
+        <li ListIndex="0">0, 0</li>
+      </points>
+    </populationIntentFromPopCurve>
+    <populationIntentFromTimeCurve>
+      <points>
+        <li ListIndex="0">0, 0.15</li>
+      </points>
+    </populationIntentFromTimeCurve>
   </StorytellerDef>
 </Defs>

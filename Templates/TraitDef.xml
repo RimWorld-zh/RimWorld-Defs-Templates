@@ -109,5 +109,7 @@
     <!--Type: float-->
     <!--Default Value: -1.0-->
     <commonalityFemale>float_value</commonalityFemale>
+    <!--======== Non Matched Elements ========-->
+    <allowOnHostileSpawn>false</allowOnHostileSpawn>
   </TraitDef>
 </Defs>

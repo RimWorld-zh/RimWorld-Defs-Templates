@@ -988,6 +988,8 @@
       <!--Type: int-->
       <!--Default Value: 3-->
       <watchBuildingStandRectWidth>int_value</watchBuildingStandRectWidth>
+      <!--======== Non Matched Elements ========-->
+      <allowAutoroof>false</allowAutoroof>
     </building>
   </ThingDef>
 </Defs>

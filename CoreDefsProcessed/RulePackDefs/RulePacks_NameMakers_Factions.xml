@@ -153,8 +153,11 @@
         <li ListIndex="9">subname->[wordname]</li>
         <li ListIndex="10">subname->[direction] [wordname]</li>
         <li ListIndex="11">wordname->[syl][endsyl]</li>
-        <li ListIndex="12">wordname->[syl][syl][endsyl]</li>
-        <li ListIndex="13">wordname->[syl][syl][syl][endsyl]</li>
+        <li ListIndex="12">wordname->[syl][endsyl]</li>
+        <li ListIndex="13">wordname->[syl][endsyl]</li>
+        <li ListIndex="14">wordname->[syl][syl][endsyl]</li>
+        <li ListIndex="15">wordname->[syl][syl][endsyl]</li>
+        <li ListIndex="16">wordname->[syl][syl][syl][endsyl]</li>
       </rulesStrings>
       <rulesRaw>
         <li Class="Rule_File" ListIndex="0">
@@ -251,7 +254,11 @@
         <li ListIndex="5">name->The [tribalword] of the [terrainfeature]</li>
         <li ListIndex="6">tribalword->[tribalwordfile]</li>
         <li ListIndex="7">tribalword->[syl][syl]</li>
-        <li ListIndex="8">tribalword->[syl][syl][syl]</li>
+        <li ListIndex="8">tribalword->[syl][syl]</li>
+        <li ListIndex="9">tribalword->[syl][syl]</li>
+        <li ListIndex="10">tribalword->[syl][syl][syl]</li>
+        <li ListIndex="11">tribalword->[syl][syl][syl]</li>
+        <li ListIndex="12">tribalword->[syl][syl][syl][syl]</li>
       </rulesStrings>
       <rulesRaw>
         <li Class="Rule_File" ListIndex="0">
