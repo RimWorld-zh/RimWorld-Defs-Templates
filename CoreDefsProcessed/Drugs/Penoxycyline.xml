@@ -3,7 +3,7 @@
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>Penoxycyline</defName>
     <label>penoxycyline</label>
-    <description>A drug for blocking various infections. Blocks malaria, sleeping sickness, and plague. Take every five days.</description>
+    <description>A drug for preventing infections from starting. Blocks malaria, sleeping sickness, and plague. Take every five days. Note: This drug does nothing to cure existing infections - it only prevents new ones.</description>
     <statBases>
       <WorkToMake>500</WorkToMake>
       <MarketValue>32</MarketValue>
