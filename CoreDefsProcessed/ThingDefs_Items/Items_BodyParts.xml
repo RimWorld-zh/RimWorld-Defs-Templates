@@ -416,7 +416,7 @@
     <statBases>
       <MarketValue>2000</MarketValue>
       <Mass>4</Mass>
-      <DeteriorationRate>2.0</DeteriorationRate>
+      <DeteriorationRate>0.5</DeteriorationRate>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>-4</Beauty>

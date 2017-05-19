@@ -245,7 +245,7 @@
       <MaxHitPoints>150</MaxHitPoints>
       <Mass>0.4</Mass>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>2</DeteriorationRate>
+      <DeteriorationRate>1</DeteriorationRate>
       <MeleeWeapon_DamageAmount>8</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>2.2</MeleeWeapon_Cooldown>
       <SharpDamageMultiplier>0.3</SharpDamageMultiplier>
@@ -440,7 +440,7 @@
     <label>cloth</label>
     <description>Cloth woven from organic fibers.</description>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>80</MaxHitPoints>
       <MarketValue>1.9</MarketValue>
       <Mass>0.026</Mass>
       <Flammability>1.0</Flammability>
@@ -619,6 +619,7 @@
     <label>hyperweave</label>
     <description>High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. The secrets of its production are known only to the most advanced glitterworld cultures.</description>
     <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
       <MarketValue>16</MarketValue>
       <Mass>0.038</Mass>
       <Flammability>1.0</Flammability>

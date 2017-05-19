@@ -6,7 +6,7 @@
     <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol addiction.</description>
     <statBases>
       <DeteriorationRate>0.5</DeteriorationRate>
-      <MarketValue>9</MarketValue>
+      <MarketValue>12</MarketValue>
       <Mass>0.3</Mass>
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
@@ -128,6 +128,7 @@
       <DeteriorationRate>1.0</DeteriorationRate>
       <MarketValue>2.5</MarketValue>
       <Mass>0.8</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>

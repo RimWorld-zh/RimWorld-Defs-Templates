@@ -23,13 +23,13 @@
   </WorkGiverDef>
   <!-- ============= Doctor ============= -->
   <WorkGiverDef>
-    <defName>DoctorTreatEmergency</defName>
+    <defName>DoctorTendEmergency</defName>
     <label>give emergency treatment</label>
     <giverClass>WorkGiver_TendEmergency</giverClass>
     <workType>Doctor</workType>
     <priorityInType>100</priorityInType>
-    <verb>treat</verb>
-    <gerund>treating</gerund>
+    <verb>tend to</verb>
+    <gerund>tending to</gerund>
     <emergency>true</emergency>
     <requiredCapacities>
       <li ListIndex="0">Manipulation</li>

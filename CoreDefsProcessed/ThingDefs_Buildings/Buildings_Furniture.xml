@@ -32,6 +32,7 @@
     <statBases>
       <WorkToBuild>0</WorkToBuild>
       <Comfort>0.4</Comfort>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Standable</passability>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -80,6 +81,7 @@
       <BedRestEffectiveness>1</BedRestEffectiveness>
       <Comfort>0.75</Comfort>
       <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -154,6 +156,7 @@
       <Beauty>2</Beauty>
       <BedRestEffectiveness>1</BedRestEffectiveness>
       <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -236,6 +239,7 @@
       <BedRestEffectiveness>1.05</BedRestEffectiveness>
       <Comfort>0.90</Comfort>
       <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -321,6 +325,7 @@
       <Comfort>0.80</Comfort>
       <ImmunityGainSpeedFactor>1.144</ImmunityGainSpeedFactor>
       <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -392,6 +397,7 @@
     <description>Designates a spot on the ground where animals should sleep.</description>
     <statBases>
       <WorkToBuild>0</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Standable</passability>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -437,6 +443,7 @@
       <BedRestEffectiveness>0.93</BedRestEffectiveness>
       <Comfort>0.60</Comfort>
       <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>40</pathCost>
@@ -503,6 +510,7 @@
       <BedRestEffectiveness>1</BedRestEffectiveness>
       <Comfort>0.75</Comfort>
       <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>40</pathCost>
@@ -561,6 +569,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>1</Beauty>
       <Comfort>0.5</Comfort>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>30</pathCost>
     <costStuffCount>15</costStuffCount>
@@ -624,6 +633,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>4</Beauty>
       <Comfort>0.70</Comfort>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>30</pathCost>
     <costStuffCount>60</costStuffCount>
@@ -691,6 +701,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>1</Beauty>
       <Comfort>0.8</Comfort>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>30</pathCost>
     <costStuffCount>100</costStuffCount>
@@ -777,6 +788,7 @@
       <Mass>10</Mass>
       <Flammability>1.0</Flammability>
       <Beauty>1</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -843,6 +855,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
       <Beauty>2</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -910,6 +923,7 @@
       <WorkToBuild>495</WorkToBuild>
       <Mass>2</Mass>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <fertility>1.0</fertility>
@@ -967,6 +981,7 @@
       <MaxHitPoints>80</MaxHitPoints>
       <WorkToBuild>200</WorkToBuild>
       <Flammability>0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>8</pathCost>
@@ -1090,6 +1105,7 @@
       <MaxHitPoints>50</MaxHitPoints>
       <WorkToBuild>170</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>8</pathCost>
@@ -1147,6 +1163,7 @@
       <MaxHitPoints>50</MaxHitPoints>
       <WorkToBuild>170</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>8</pathCost>
@@ -1204,6 +1221,7 @@
       <MaxHitPoints>50</MaxHitPoints>
       <WorkToBuild>170</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>8</pathCost>
@@ -1261,6 +1279,7 @@
       <MaxHitPoints>50</MaxHitPoints>
       <WorkToBuild>170</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>8</pathCost>
@@ -1318,6 +1337,7 @@
       <Mass>4.5</Mass>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>8</pathCost>
@@ -1388,6 +1408,7 @@
       <Mass>8</Mass>
       <WorkToBuild>1050</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <costStuffCount>30</costStuffCount>

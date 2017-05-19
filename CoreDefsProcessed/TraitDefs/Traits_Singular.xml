@@ -113,6 +113,7 @@
     </degreeDatas>
     <conflictingTraits>
       <li ListIndex="0">ShootingAccuracy</li>
+      <li ListIndex="1">Wimp</li>
     </conflictingTraits>
     <requiredWorkTags>
       <li ListIndex="0">Violent</li>
@@ -308,6 +309,9 @@
         <painShockThreshold>0.15</painShockThreshold>
       </li>
     </degreeDatas>
+    <conflictingTraits>
+      <li ListIndex="0">Brawler</li>
+    </conflictingTraits>
     <commonality>0.15</commonality>
     <allowOnHostileSpawn>false</allowOnHostileSpawn>
   </TraitDef>

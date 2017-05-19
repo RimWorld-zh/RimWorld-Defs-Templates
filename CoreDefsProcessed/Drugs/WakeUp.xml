@@ -6,7 +6,7 @@
     <description>An addictive stimulant. Fills the need for rest, and allows users to work for extended periods without getting tired. Addiction causes reduced mental performance and, sometimes, psychotic breaks with reality.</description>
     <statBases>
       <WorkToMake>900</WorkToMake>
-      <MarketValue>24</MarketValue>
+      <MarketValue>45</MarketValue>
       <Mass>0.005</Mass>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>

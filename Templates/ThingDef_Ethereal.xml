@@ -16,6 +16,9 @@
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
     <tickerType>enum_value</tickerType>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <useHitPoints>true_or_false</useHitPoints>
     <!--Type: Verse.DrawerType-->
     <!--Available Values: None, RealtimeOnly, MapMeshOnly, MapMeshAndRealTime-->
     <!--Default Value: RealtimeOnly-->

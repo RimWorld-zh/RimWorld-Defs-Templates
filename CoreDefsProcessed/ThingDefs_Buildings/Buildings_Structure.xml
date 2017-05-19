@@ -55,6 +55,7 @@
       <WorkToBuild>850</WorkToBuild>
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <costStuffCount>25</costStuffCount>
     <stuffCategories>
@@ -119,6 +120,7 @@
       <WorkToBuild>1100</WorkToBuild>
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <costList>
       <Steel>40</Steel>
@@ -196,6 +198,7 @@
       <MaxHitPoints>350</MaxHitPoints>
       <WorkToBuild>150</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Impassable</passability>
     <costStuffCount>5</costStuffCount>

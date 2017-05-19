@@ -6,6 +6,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>-4</Beauty>
       <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
     </statBases>
     <pathCost>15</pathCost>
     <altitudeLayer>Item</altitudeLayer>
@@ -93,12 +94,12 @@
     <label>nutrient paste meal</label>
     <description>A synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs, and absolutely disgusting.</description>
     <statBases>
-      <DeteriorationRate>20</DeteriorationRate>
       <MarketValue>12</MarketValue>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>-4</Beauty>
       <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
     </statBases>
     <pathCost>15</pathCost>
     <altitudeLayer>Item</altitudeLayer>
@@ -144,13 +145,13 @@
     <label>simple meal</label>
     <description>A simple meal quickly cooked from a few ingredients.</description>
     <statBases>
-      <DeteriorationRate>20</DeteriorationRate>
       <MarketValue>18</MarketValue>
       <WorkToMake>300</WorkToMake>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>-4</Beauty>
       <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
     </statBases>
     <pathCost>15</pathCost>
     <altitudeLayer>Item</altitudeLayer>
@@ -195,13 +196,13 @@
     <label>fine meal</label>
     <description>A complex dish assembled with care from a wide selection of ingredients.</description>
     <statBases>
-      <DeteriorationRate>20</DeteriorationRate>
       <MarketValue>24</MarketValue>
       <WorkToMake>450</WorkToMake>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>-4</Beauty>
       <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
     </statBases>
     <pathCost>15</pathCost>
     <altitudeLayer>Item</altitudeLayer>
@@ -247,13 +248,13 @@
     <label>lavish meal</label>
     <description>A masterpiece of the culinary arts, this meal nourishes the body, mind, and soul.</description>
     <statBases>
-      <DeteriorationRate>20</DeteriorationRate>
       <MarketValue>30</MarketValue>
       <WorkToMake>800</WorkToMake>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>-4</Beauty>
       <Mass>0.44</Mass>
+      <DeteriorationRate>10</DeteriorationRate>
     </statBases>
     <pathCost>15</pathCost>
     <altitudeLayer>Item</altitudeLayer>
@@ -301,9 +302,9 @@
     <statBases>
       <MarketValue>1.3</MarketValue>
       <Mass>0.015</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -347,9 +348,9 @@
       <MarketValue>1.5</MarketValue>
       <Mass>0.018</Mass>
       <WorkToMake>700</WorkToMake>
-      <MaxHitPoints>100</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>

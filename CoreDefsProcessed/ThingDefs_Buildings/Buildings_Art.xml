@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingBase" Name="SculptureBase" Abstract="True">
     <statBases>
       <Flammability>1.0</Flammability>
-      <SellPriceFactor>1.15</SellPriceFactor>
+      <SellPriceFactor>1.10</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -58,7 +58,7 @@
       <Beauty>50</Beauty>
       <WorkToMake>18000</WorkToMake>
       <Flammability>1.0</Flammability>
-      <SellPriceFactor>1.15</SellPriceFactor>
+      <SellPriceFactor>1.10</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -133,7 +133,7 @@
       <Beauty>100</Beauty>
       <WorkToMake>30000</WorkToMake>
       <Flammability>1.0</Flammability>
-      <SellPriceFactor>1.15</SellPriceFactor>
+      <SellPriceFactor>1.10</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -209,7 +209,7 @@
       <Mass>50</Mass>
       <WorkToMake>65000</WorkToMake>
       <Flammability>1.0</Flammability>
-      <SellPriceFactor>1.15</SellPriceFactor>
+      <SellPriceFactor>1.10</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -286,6 +286,7 @@
       <MaxHitPoints>50</MaxHitPoints>
       <Beauty>4</Beauty>
       <WorkToBuild>1000</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>25</pathCost>

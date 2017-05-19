@@ -8,6 +8,7 @@
       <MaxHitPoints>75</MaxHitPoints>
       <WorkToBuild>1300</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>8</pathCost>
     <costList>
@@ -68,6 +69,7 @@
       <MaxHitPoints>250</MaxHitPoints>
       <WorkToBuild>2200</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Impassable</passability>
     <costList>
@@ -130,6 +132,7 @@
       <Mass>10</Mass>
       <Flammability>1.0</Flammability>
       <Beauty>-8</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>25</pathCost>
     <costList>
@@ -197,6 +200,7 @@
       <WorkToBuild>1500</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-8</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>25</pathCost>
     <costList>
@@ -257,6 +261,7 @@
       <WorkToBuild>1500</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-8</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>25</pathCost>
     <costList>
@@ -313,6 +318,7 @@
       <WorkToBuild>1000</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-8</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>25</pathCost>
     <costList>
@@ -371,6 +377,7 @@
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToBuild>6000</WorkToBuild>
       <Flammability>0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Impassable</passability>
     <costList>
@@ -435,6 +442,7 @@
       <MaxHitPoints>250</MaxHitPoints>
       <WorkToBuild>3000</WorkToBuild>
       <Flammability>0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <costList>
@@ -446,7 +454,7 @@
       <li ListIndex="0">TransportPod</li>
     </researchPrerequisites>
     <repairEffect>Repair</repairEffect>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <placeWorkers>
       <li ListIndex="0">PlaceWorker_NeedsFuelingPort</li>
       <li ListIndex="1">PlaceWorker_NotUnderRoof</li>
@@ -484,6 +492,7 @@
       <WorkToBuild>5000</WorkToBuild>
       <Mass>100</Mass>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <costList>
@@ -547,6 +556,7 @@
       <WorkToBuild>4000</WorkToBuild>
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <costList>
@@ -619,6 +629,7 @@
       <WorkToBuild>1800</WorkToBuild>
       <Mass>40</Mass>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <costList>
@@ -673,6 +684,7 @@
     <description>Place the dead in graves to give them a decent final resting place. Colonists will visit full graves to gain meditative joy.</description>
     <statBases>
       <WorkToBuild>650</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
@@ -734,6 +746,7 @@
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>0</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -823,6 +836,7 @@
       <WorkToBuild>3200</WorkToBuild>
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -876,6 +890,7 @@
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -929,6 +944,7 @@
     <description>Designates a spot where marriage ceremonies will take place. Spectators can watch from either side.</description>
     <statBases>
       <WorkToBuild>0</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Standable</passability>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -963,6 +979,7 @@
     <description>Designates a spot where parties will be centered. Parties use an area around the spot.</description>
     <statBases>
       <WorkToBuild>0</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Standable</passability>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -995,6 +1012,7 @@
     <description>Designates a spot where caravans will be formed.</description>
     <statBases>
       <WorkToBuild>0</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Standable</passability>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>

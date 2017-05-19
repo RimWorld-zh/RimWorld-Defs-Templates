@@ -8,9 +8,9 @@
       <WorkToMake>450</WorkToMake>
       <MarketValue>11</MarketValue>
       <Mass>0.05</Mass>
+      <DeteriorationRate>6</DeteriorationRate>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>2</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>

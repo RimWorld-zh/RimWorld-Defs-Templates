@@ -2,9 +2,9 @@
 <Defs>
   <ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.03</Mass>
     </statBases>
     <tickerType>Rare</tickerType>
@@ -36,9 +36,9 @@
     <description>Raw potatoes.</description>
     <statBases>
       <MarketValue>1.5</MarketValue>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.03</Mass>
       <Beauty>-4</Beauty>
     </statBases>
@@ -87,9 +87,9 @@
     <description>Raw rice.</description>
     <statBases>
       <MarketValue>1.5</MarketValue>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.03</Mass>
       <Beauty>-4</Beauty>
     </statBases>
@@ -140,9 +140,9 @@
     <description>Raw agave fruit.</description>
     <statBases>
       <MarketValue>1.5</MarketValue>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.03</Mass>
       <Beauty>-4</Beauty>
     </statBases>
@@ -191,9 +191,9 @@
     <description>Raw corn.</description>
     <statBases>
       <MarketValue>1.5</MarketValue>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.03</Mass>
       <Beauty>-4</Beauty>
     </statBases>
@@ -245,9 +245,9 @@
     <statBases>
       <MarketValue>2.0</MarketValue>
       <Mass>0.027</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -304,9 +304,9 @@
     <statBases>
       <MarketValue>0.9</MarketValue>
       <Mass>0.014</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -347,9 +347,9 @@
     <description>Raw hops. A flavoring and preserving agent that is necessary for making beer.</description>
     <statBases>
       <MarketValue>1.5</MarketValue>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.03</Mass>
       <Beauty>-4</Beauty>
     </statBases>
@@ -391,9 +391,9 @@
     <description>Raw cut leaves of a psychoid plant.</description>
     <statBases>
       <MarketValue>2.2</MarketValue>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.03</Mass>
       <Beauty>-4</Beauty>
     </statBases>
@@ -435,9 +435,9 @@
     <description>Raw cut leaves of a smokeleaf plant. Can be rolled into smokeable joint at a crafting spot.</description>
     <statBases>
       <MarketValue>2.0</MarketValue>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.03</Mass>
       <Beauty>-4</Beauty>
     </statBases>

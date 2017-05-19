@@ -6,6 +6,7 @@
     <thingClass>RectTrigger</thingClass>
     <category>Ethereal</category>
     <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
     <drawerType>None</drawerType>
   </ThingDef>
   <ThingDef>

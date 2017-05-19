@@ -456,6 +456,7 @@
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
     </recipeMaker>
+    <generateCommonality>0.3</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ChainShotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -6,6 +6,7 @@
     <description>A place for crafting simple things like shivs or bows.</description>
     <statBases>
       <WorkToBuild>0</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Standable</passability>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -78,6 +79,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-5</Cleanliness>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -153,6 +155,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-15</Cleanliness>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -232,6 +235,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -305,6 +309,7 @@
       <WorkToBuild>2500</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -392,6 +397,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-3</Cleanliness>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -475,6 +481,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-3</Cleanliness>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -556,6 +563,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-2</Cleanliness>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -645,6 +653,7 @@
       <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -729,6 +738,7 @@
       <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -812,6 +822,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-5</Cleanliness>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -889,6 +900,7 @@
       <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -958,6 +970,7 @@
       <WorkToBuild>3500</WorkToBuild>
       <MaxHitPoints>120</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -1036,6 +1049,7 @@
       <WorkToBuild>3500</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -1125,6 +1139,7 @@
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToBuild>2000</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -1202,6 +1217,7 @@
       <MaxHitPoints>300</MaxHitPoints>
       <WorkToBuild>5000</WorkToBuild>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -1287,6 +1303,7 @@
       <WorkToBuild>2800</WorkToBuild>
       <Flammability>1.0</Flammability>
       <ResearchSpeedFactor>0.6</ResearchSpeedFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -1352,6 +1369,7 @@
       <WorkToBuild>5000</WorkToBuild>
       <Flammability>1.0</Flammability>
       <ResearchSpeedFactor>1.0</ResearchSpeedFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -1432,6 +1450,7 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>0</Flammability>
       <Cleanliness>-20</Cleanliness>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Impassable</passability>
     <costList>
@@ -1514,6 +1533,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-3</Cleanliness>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -1576,6 +1596,7 @@
       <Mass>10</Mass>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -1626,6 +1647,7 @@
       <WorkToBuild>5000</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-25</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -1687,6 +1709,7 @@
       <WorkToBuild>2200</WorkToBuild>
       <MaxHitPoints>350</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Impassable</passability>
     <costList>
@@ -1750,6 +1773,7 @@
       <WorkToBuild>450</WorkToBuild>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>

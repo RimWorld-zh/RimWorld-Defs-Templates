@@ -10,6 +10,7 @@
       <Mass>3</Mass>
       <Flammability>1.0</Flammability>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <pathCost>10</pathCost>
     <costStuffCount>15</costStuffCount>
@@ -69,6 +70,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>4</Beauty>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -134,6 +136,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>0</Beauty>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -206,6 +209,7 @@
       <Flammability>1.0</Flammability>
       <MarketValue>700</MarketValue>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -280,6 +284,7 @@
       <MarketValue>1200</MarketValue>
       <Mass>5</Mass>
       <EntertainmentStrengthFactor>1.2</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -349,6 +354,7 @@
       <MarketValue>2000</MarketValue>
       <Mass>8</Mass>
       <EntertainmentStrengthFactor>1.35</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -418,6 +424,7 @@
       <MarketValue>350</MarketValue>
       <Mass>7.5</Mass>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>

@@ -63,8 +63,8 @@
       <points>
         <li ListIndex="0">0, 8</li>
         <li ListIndex="1">1, 4</li>
-        <li ListIndex="2">6, 1</li>
-        <li ListIndex="3">10, 0.5</li>
+        <li ListIndex="2">5, 1</li>
+        <li ListIndex="3">9, 0.5</li>
         <li ListIndex="4">13, 0</li>
         <li ListIndex="5">18, -1</li>
       </points>
@@ -130,8 +130,8 @@
       <points>
         <li ListIndex="0">0, 8</li>
         <li ListIndex="1">1, 4</li>
-        <li ListIndex="2">6, 1</li>
-        <li ListIndex="3">10, 0.5</li>
+        <li ListIndex="2">5, 1</li>
+        <li ListIndex="3">9, 0.5</li>
         <li ListIndex="4">13, 0</li>
         <li ListIndex="5">18, -1</li>
       </points>
@@ -166,6 +166,7 @@
           <ShipChunkDrop>0.5</ShipChunkDrop>
         </categoryWeights>
         <maxThreatBigIntervalDays>13</maxThreatBigIntervalDays>
+        <minIncChancePopulationIntentFactor>0.2</minIncChancePopulationIntentFactor>
       </li>
       <li Class="StorytellerCompProperties_CategoryMTB" ListIndex="1">
         <minDaysPassed>1</minDaysPassed>
@@ -185,8 +186,8 @@
       <points>
         <li ListIndex="0">0, 8</li>
         <li ListIndex="1">1, 4</li>
-        <li ListIndex="2">6, 1</li>
-        <li ListIndex="3">10, 0.5</li>
+        <li ListIndex="2">5, 1</li>
+        <li ListIndex="3">9, 0.5</li>
         <li ListIndex="4">13, 0</li>
         <li ListIndex="5">50, -1</li>
       </points>

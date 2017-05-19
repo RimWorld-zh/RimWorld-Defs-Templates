@@ -53,7 +53,7 @@
     <workerClass>IncidentWorker_FarmAnimalsWanderIn</workerClass>
     <category>Misc</category>
     <targetType>MapPlayerHome</targetType>
-    <baseChance>0.2</baseChance>
+    <baseChance>0.25</baseChance>
   </IncidentDef>
   <IncidentDef>
     <defName>WandererJoin</defName>
@@ -113,6 +113,12 @@
     <baseChance>1</baseChance>
     <earliestDay>15</earliestDay>
     <minPopulation>4</minPopulation>
+    <chanceFactorByPopulationCurve>
+      <points>
+        <li ListIndex="0">(2,0)</li>
+        <li ListIndex="1">(7,1)</li>
+      </points>
+    </chanceFactorByPopulationCurve>
   </IncidentDef>
   <!--========================== Bad ===============================-->
   <IncidentDef>
@@ -175,7 +181,7 @@
     <targetType>MapPlayerHome</targetType>
     <baseChance>3</baseChance>
     <minRefireDays>15</minRefireDays>
-    <letterText>An unusual heat wave has begun. Watch out for heat stroke.</letterText>
+    <letterText>An unusual heat wave has begun.\n\nHeat waves can kill quickly if people start getting heatstroke. Stay cool by building a cooler or getting deep under a mountain.</letterText>
     <letterLabel>Heat wave</letterLabel>
     <letterDef>BadNonUrgent</letterDef>
     <gameCondition>HeatWave</gameCondition>
@@ -192,7 +198,7 @@
     <targetType>MapPlayerHome</targetType>
     <baseChance>3</baseChance>
     <minRefireDays>15</minRefireDays>
-    <letterText>An unusual cold snap has set in. Watch out for hypothermia and dying crops.</letterText>
+    <letterText>An unusual cold snap has set in.\n\nCold snaps can quickly kill by hypothermia. Be sure to build a heated space to survive, wear appropriate apparel, and try to harvest crops before they freeze and die.</letterText>
     <letterLabel>Cold snap</letterLabel>
     <letterDef>BadNonUrgent</letterDef>
     <gameCondition>ColdSnap</gameCondition>

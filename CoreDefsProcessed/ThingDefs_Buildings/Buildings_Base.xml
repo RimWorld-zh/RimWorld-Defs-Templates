@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef Name="BuildingBase" Abstract="True">
+    <statBases>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
     <thingClass>Building</thingClass>

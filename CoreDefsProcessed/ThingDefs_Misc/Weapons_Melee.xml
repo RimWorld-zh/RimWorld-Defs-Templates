@@ -70,10 +70,10 @@
       <WorkToMake>400</WorkToMake>
       <Mass>0.4</Mass>
       <MeleeWeapon_DamageAmount>8</MeleeWeapon_DamageAmount>
-      <DeteriorationRate>0.5</DeteriorationRate>
       <MeleeWeapon_Cooldown>1.6</MeleeWeapon_Cooldown>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
       <Beauty>-6</Beauty>
       <SellPriceFactor>0.20</SellPriceFactor>
     </statBases>
@@ -253,10 +253,10 @@
       <WorkToMake>500</WorkToMake>
       <Mass>2</Mass>
       <MeleeWeapon_DamageAmount>12</MeleeWeapon_DamageAmount>
-      <DeteriorationRate>0.5</DeteriorationRate>
       <MeleeWeapon_Cooldown>2.15</MeleeWeapon_Cooldown>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
       <Beauty>-6</Beauty>
       <SellPriceFactor>0.20</SellPriceFactor>
     </statBases>

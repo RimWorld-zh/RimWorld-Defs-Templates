@@ -278,5 +278,7 @@
       <!--Type: int-->
       <max>int_value</max>
     </wildSpawn_GroupSizeRange>
+    <!--======== Non Matched Elements ========-->
+    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
 </Defs>

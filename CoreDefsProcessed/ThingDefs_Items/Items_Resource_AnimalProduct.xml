@@ -10,9 +10,9 @@
     <statBases>
       <MarketValue>3.1</MarketValue>
       <Mass>0.045</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -58,9 +58,9 @@
     <statBases>
       <MarketValue>8.0</MarketValue>
       <Mass>0.025</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -102,6 +102,8 @@
   <ThingDef Abstract="True" Name="EggBase" ParentName="OrganicProductBase">
     <statBases>
       <Mass>0.15</Mass>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
     </statBases>
     <graphicData>
       <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
@@ -160,9 +162,9 @@
     <statBases>
       <MarketValue>7.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -212,9 +214,9 @@
     <statBases>
       <MarketValue>7.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -270,9 +272,9 @@
     <statBases>
       <MarketValue>40.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -328,9 +330,9 @@
     <statBases>
       <MarketValue>25.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -386,9 +388,9 @@
     <statBases>
       <MarketValue>23.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -445,9 +447,9 @@
     <statBases>
       <MarketValue>19.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -504,9 +506,9 @@
     <statBases>
       <MarketValue>18.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -563,9 +565,9 @@
     <statBases>
       <MarketValue>23.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -622,9 +624,9 @@
     <statBases>
       <MarketValue>11.0</MarketValue>
       <Mass>0.15</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>20</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>

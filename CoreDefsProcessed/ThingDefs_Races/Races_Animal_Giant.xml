@@ -902,5 +902,6 @@
     <labelFemale>female thrumbo</labelFemale>
     <labelFemalePlural>female thrumbos</labelFemalePlural>
     <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
 </Defs>

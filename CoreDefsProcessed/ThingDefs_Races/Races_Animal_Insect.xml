@@ -194,6 +194,7 @@
     <labelFemalePlural>female megascarabs</labelFemalePlural>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.25</wildSpawn_EcoSystemWeight>
+    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
   <!-- ====================================================== -->
   <ThingDef ParentName="BaseInsect">
@@ -377,6 +378,7 @@
     <labelFemalePlural>female spelopedes</labelFemalePlural>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
   <!-- ====================================================== -->
   <ThingDef ParentName="BaseInsect">
@@ -612,5 +614,6 @@
     <labelFemalePlural>female megaspiders</labelFemalePlural>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
 </Defs>

@@ -20,7 +20,6 @@
     <baseChance>float_value</baseChance>
     <!--Type: RimWorld.IncidentPopulationEffect-->
     <!--Available Values: Decrease, None, Increase-->
-    <!--Default Value: None-->
     <populationEffect>enum_value</populationEffect>
     <!--Type: int-->
     <earliestDay>int_value</earliestDay>
@@ -99,5 +98,10 @@
     </mtbDaysByBiome>
     <!--======== Non Matched Elements ========-->
     <minPopulation>4</minPopulation>
+    <chanceFactorByPopulationCurve>
+      <points>
+        <li ListIndex="0">(2,0)</li>
+      </points>
+    </chanceFactorByPopulationCurve>
   </IncidentDef>
 </Defs>

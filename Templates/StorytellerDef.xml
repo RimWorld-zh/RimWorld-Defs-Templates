@@ -59,6 +59,8 @@
         <!--Type: float-->
         <!--Default Value: 99999.0-->
         <maxThreatBigIntervalDays>float_value</maxThreatBigIntervalDays>
+        <!--======== Non Matched Elements ========-->
+        <minIncChancePopulationIntentFactor>0.2</minIncChancePopulationIntentFactor>
       </li>
       <!--Type: RimWorld.StorytellerCompProperties_CategoryMTB-->
       <li Class="StorytellerCompProperties_CategoryMTB">

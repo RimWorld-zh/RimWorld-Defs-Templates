@@ -6,7 +6,7 @@
     <description>A synthetic combat drug developed for space marines during the early days of interplanetary warfare. Go-juice blocks pain and increases the user's melee and shooting abilities. It also enhances movement speed.\n\nMilitary chemists who created it were never able to remove its addictiveness. Some saw this as a downside; others saw it as a benefit.</description>
     <statBases>
       <WorkToMake>600</WorkToMake>
-      <MarketValue>45</MarketValue>
+      <MarketValue>53</MarketValue>
       <Mass>0.1</Mass>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>

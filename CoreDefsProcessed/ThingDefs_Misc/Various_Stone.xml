@@ -33,6 +33,7 @@
   <ThingDef ParentName="ResourceBase" Name="StoneBlocksBase" Abstract="True">
     <description>Blocks of stone. Mostly useful for building long-lasting, simple structures.</description>
     <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
       <MarketValue>1.9</MarketValue>
       <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
@@ -211,6 +212,7 @@
       <MarketValue>1.9</MarketValue>
       <Mass>1</Mass>
       <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+      <MaxHitPoints>200</MaxHitPoints>
       <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
       <Beauty>-12</Beauty>
     </statBases>
@@ -394,6 +396,7 @@
       <MarketValue>2.1</MarketValue>
       <Mass>1.25</Mass>
       <SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+      <MaxHitPoints>200</MaxHitPoints>
       <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
       <Beauty>-12</Beauty>
     </statBases>
@@ -575,6 +578,7 @@
     <statBases>
       <MarketValue>1.9</MarketValue>
       <Mass>1.1</Mass>
+      <MaxHitPoints>200</MaxHitPoints>
       <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
       <Beauty>-12</Beauty>
@@ -757,6 +761,7 @@
     <statBases>
       <MarketValue>1.9</MarketValue>
       <Mass>0.9</Mass>
+      <MaxHitPoints>200</MaxHitPoints>
       <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
       <Beauty>-12</Beauty>
@@ -940,6 +945,7 @@
     <statBases>
       <MarketValue>1.9</MarketValue>
       <Mass>1.25</Mass>
+      <MaxHitPoints>200</MaxHitPoints>
       <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
       <Beauty>-12</Beauty>

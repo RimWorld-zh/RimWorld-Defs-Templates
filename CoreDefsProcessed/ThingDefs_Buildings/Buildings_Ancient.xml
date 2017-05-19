@@ -9,6 +9,7 @@
       <Beauty>-10</Beauty>
       <Flammability>0</Flammability>
       <WorkToBuild>600</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>35</pathCost>
@@ -51,6 +52,7 @@
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
       <WorkToBuild>400</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>100</pathCost>

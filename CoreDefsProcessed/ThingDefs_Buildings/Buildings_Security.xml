@@ -9,6 +9,7 @@
       <Beauty>-10</Beauty>
       <WorkToBuild>180</WorkToBuild>
       <Flammability>0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>40</pathCost>
@@ -64,6 +65,7 @@
       <WorkToBuild>2500</WorkToBuild>
       <Mass>100</Mass>
       <Beauty>-20</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -316,6 +318,7 @@
       <WorkToBuild>1900</WorkToBuild>
       <Mass>100</Mass>
       <Beauty>-20</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -462,6 +465,7 @@
       <WorkToBuild>1900</WorkToBuild>
       <Mass>100</Mass>
       <Beauty>-20</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -611,6 +615,7 @@
       <WorkToBuild>1900</WorkToBuild>
       <Mass>100</Mass>
       <Beauty>-20</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -755,6 +760,7 @@
       <Beauty>-4</Beauty>
       <TrapMeleeDamage>60</TrapMeleeDamage>
       <TrapSpringChance>0.8</TrapSpringChance>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <costStuffCount>70</costStuffCount>
     <stuffCategories>
@@ -803,6 +809,7 @@
       <WorkToBuild>2000</WorkToBuild>
       <Beauty>-4</Beauty>
       <TrapSpringChance>0.8</TrapSpringChance>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <costList>
       <MortarShell>1</MortarShell>
@@ -857,6 +864,7 @@
       <WorkToBuild>2000</WorkToBuild>
       <Beauty>-4</Beauty>
       <TrapSpringChance>0.8</TrapSpringChance>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <costList>
       <Chemfuel>25</Chemfuel>

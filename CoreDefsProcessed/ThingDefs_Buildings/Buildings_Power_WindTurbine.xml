@@ -9,6 +9,7 @@
       <WorkToBuild>3300</WorkToBuild>
       <Flammability>0.4</Flammability>
       <Beauty>-12</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <passability>Impassable</passability>
     <costList>

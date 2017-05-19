@@ -1,6 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RecipeDefs>
-  <RecipeDef Name="CookMealSimple">
+  <RecipeDef Name="CookMealBase" Abstract="True">
+    <fixedIngredientFilter>
+      <disallowedSpecialFilters>
+        <li>AllowPlantFood</li>
+      </disallowedSpecialFilters>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <exceptedThingDefs>
+        <li>Human_Meat</li>
+        <li>Megaspider_Meat</li>
+        <li>InsectJelly</li>
+      </exceptedThingDefs>
+      <exceptedCategories>
+        <li>EggsFertilized</li>
+      </exceptedCategories>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+  <RecipeDef Name="CookMealSimple" ParentName="CookMealBase">
     <defName>CookMealSimple</defName>
     <label>cook simple meal</label>
     <description>Cooks a straightforward meal from one ingredient.</description>
@@ -32,6 +56,7 @@
       <exceptedThingDefs>
         <li ListIndex="0">Human_Meat</li>
         <li ListIndex="1">Megaspider_Meat</li>
+        <li ListIndex="2">InsectJelly</li>
       </exceptedThingDefs>
       <exceptedCategories>
         <li ListIndex="0">EggsFertilized</li>
@@ -80,6 +105,7 @@
       <exceptedThingDefs>
         <li ListIndex="0">Human_Meat</li>
         <li ListIndex="1">Megaspider_Meat</li>
+        <li ListIndex="2">InsectJelly</li>
       </exceptedThingDefs>
       <exceptedCategories>
         <li ListIndex="0">EggsFertilized</li>
@@ -94,7 +120,7 @@
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
   </RecipeDef>
-  <RecipeDef>
+  <RecipeDef ParentName="CookMealBase">
     <defName>CookMealFine</defName>
     <label>cook fine meal</label>
     <description>Cooks a somewhat complex meal from a combination of raw meat and raw plant ingredients.</description>
@@ -134,6 +160,7 @@
       <exceptedThingDefs>
         <li ListIndex="0">Human_Meat</li>
         <li ListIndex="1">Megaspider_Meat</li>
+        <li ListIndex="2">InsectJelly</li>
       </exceptedThingDefs>
       <exceptedCategories>
         <li ListIndex="0">EggsFertilized</li>
@@ -154,7 +181,7 @@
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
   </RecipeDef>
-  <RecipeDef>
+  <RecipeDef ParentName="CookMealBase">
     <defName>CookMealLavish</defName>
     <label>cook lavish meal</label>
     <description>Cooks a very complex meal from a combination of raw meat and raw plant ingredients. Much of the ingredients are wasted.</description>
@@ -194,6 +221,7 @@
       <exceptedThingDefs>
         <li ListIndex="0">Human_Meat</li>
         <li ListIndex="1">Megaspider_Meat</li>
+        <li ListIndex="2">InsectJelly</li>
       </exceptedThingDefs>
       <exceptedCategories>
         <li ListIndex="0">EggsFertilized</li>
@@ -214,9 +242,9 @@
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
   </RecipeDef>
-  <RecipeDef>
+  <RecipeDef ParentName="CookMealBase">
     <defName>CookMealSurvival</defName>
-    <label>cook survival meal</label>
+    <label>cook packaged survival meal</label>
     <description>Cooks a packaged survival meal from a combination of raw meat and raw plant ingredients. Much of the ingredients are wasted.</description>
     <jobString>Cooking survival meal.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -254,6 +282,7 @@
       <exceptedThingDefs>
         <li ListIndex="0">Human_Meat</li>
         <li ListIndex="1">Megaspider_Meat</li>
+        <li ListIndex="2">InsectJelly</li>
       </exceptedThingDefs>
       <exceptedCategories>
         <li ListIndex="0">EggsFertilized</li>

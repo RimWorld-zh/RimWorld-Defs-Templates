@@ -15,7 +15,7 @@
     </statBases>
     <pathCost>15</pathCost>
     <costList>
-      <Neutroamine>3</Neutroamine>
+      <Neutroamine>2</Neutroamine>
     </costList>
     <altitudeLayer>Item</altitudeLayer>
     <thingClass>ThingWithComps</thingClass>

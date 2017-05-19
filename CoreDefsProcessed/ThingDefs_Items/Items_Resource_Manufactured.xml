@@ -6,12 +6,12 @@
     <label>herbal medicine</label>
     <description>A pack of herbal concoctions typically extracted from the healroot plant. Less potent than industrial pharmaceuticals, but much better than nothing.</description>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>12</MarketValue>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>10</MarketValue>
       <Mass>0.35</Mass>
       <Flammability>1.0</Flammability>
       <MedicalPotency>0.60</MedicalPotency>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>6</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -48,7 +48,7 @@
     <label>medicine</label>
     <description>Medical staff use these supplies to heal the wounded.</description>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <MarketValue>18</MarketValue>
       <Mass>0.5</Mass>
       <Flammability>1.0</Flammability>
@@ -109,6 +109,7 @@
     <label>glitterworld medicine</label>
     <description>Advanced medical supplies from a high-tech glitterworld.</description>
     <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
       <MarketValue>100</MarketValue>
       <Mass>0.5</Mass>
       <Flammability>1.0</Flammability>
@@ -153,7 +154,7 @@
       <MarketValue>10</MarketValue>
       <Mass>3.5</Mass>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>2</DeteriorationRate>
+      <DeteriorationRate>1.5</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -201,7 +202,7 @@
       <MarketValue>21</MarketValue>
       <Mass>0.6</Mass>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>1.0</DeteriorationRate>
+      <DeteriorationRate>2.0</DeteriorationRate>
       <Beauty>-4</Beauty>
     </statBases>
     <pathCost>15</pathCost>
@@ -236,7 +237,7 @@
     <description>A synthetic precursor chemical. Useless on its own, many drugs require neutroamine as an ingredient.</description>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
-      <MarketValue>10</MarketValue>
+      <MarketValue>6</MarketValue>
       <Mass>0.02</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>1.0</DeteriorationRate>
