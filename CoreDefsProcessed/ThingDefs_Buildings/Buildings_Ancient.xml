@@ -83,7 +83,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <selectable>true</selectable>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.35</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
   </ThingDef>
 </ThingDefs>

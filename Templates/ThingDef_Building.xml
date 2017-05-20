@@ -74,7 +74,7 @@
     <!--Type: string-->
     <uiIconPath>string_value</uiIconPath>
     <!--Type: Verse.AltitudeLayer-->
-    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, FlyingItem, Gas, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, WorldDataOverlay, MetaOverlays-->
+    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, FlyingItem, Gas, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, WorldDataOverlay, MetaOverlays, _Count-->
     <!--Default Value: Item-->
     <altitudeLayer>enum_value</altitudeLayer>
     <!--Type: float-->
@@ -786,6 +786,9 @@
       <!--Default Value: false-->
       <canPlaceOverWall>true_or_false</canPlaceOverWall>
       <!--Type: bool-->
+      <!--Default Value: true-->
+      <allowAutoroof>true_or_false</allowAutoroof>
+      <!--Type: bool-->
       <!--Default Value: false-->
       <preventDeterioration>true_or_false</preventDeterioration>
       <!--Type: bool-->
@@ -988,8 +991,6 @@
       <!--Type: int-->
       <!--Default Value: 3-->
       <watchBuildingStandRectWidth>int_value</watchBuildingStandRectWidth>
-      <!--======== Non Matched Elements ========-->
-      <allowAutoroof>false</allowAutoroof>
     </building>
   </ThingDef>
 </Defs>

@@ -189,7 +189,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <selectable>true</selectable>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.15</fillPercent>
+    <fillPercent>0.30</fillPercent>
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>MoisturePump</defName>
@@ -307,7 +307,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <selectable>true</selectable>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.40</fillPercent>
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>LongRangeMineralScanner</defName>
@@ -366,7 +366,7 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <selectable>true</selectable>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.40</fillPercent>
   </ThingDef>
   <!--========================== Transport pods ============================-->
   <ThingDef ParentName="BuildingBase">

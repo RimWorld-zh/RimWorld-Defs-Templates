@@ -487,7 +487,7 @@
     <castEdgeShadows>true</castEdgeShadows>
     <selectable>true</selectable>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.15</fillPercent>
     <tradeTags>
       <li ListIndex="0">Furniture</li>
     </tradeTags>
@@ -547,7 +547,7 @@
     <castEdgeShadows>true</castEdgeShadows>
     <selectable>true</selectable>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.15</fillPercent>
     <tradeTags>
       <li ListIndex="0">Furniture</li>
     </tradeTags>
@@ -614,7 +614,7 @@
     <selectable>true</selectable>
     <socialPropernessMatters>true</socialPropernessMatters>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.30</fillPercent>
+    <fillPercent>0.20</fillPercent>
     <tradeTags>
       <li ListIndex="0">Furniture</li>
     </tradeTags>

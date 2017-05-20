@@ -897,11 +897,11 @@
       </li>
     </lifeStages>
     <combatPower>600</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
     <labelMale>male thrumbo</labelMale>
     <labelMalePlural>male thrumbos</labelMalePlural>
     <labelFemale>female thrumbo</labelFemale>
     <labelFemalePlural>female thrumbos</labelFemalePlural>
     <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
-    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
 </Defs>

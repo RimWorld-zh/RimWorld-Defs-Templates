@@ -188,13 +188,13 @@
       </li>
     </lifeStages>
     <combatPower>30</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
     <labelMale>male megascarab</labelMale>
     <labelMalePlural>male megascarabs</labelMalePlural>
     <labelFemale>female megascarab</labelFemale>
     <labelFemalePlural>female megascarabs</labelFemalePlural>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.25</wildSpawn_EcoSystemWeight>
-    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
   <!-- ====================================================== -->
   <ThingDef ParentName="BaseInsect">
@@ -372,13 +372,13 @@
       </li>
     </lifeStages>
     <combatPower>65</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
     <labelMale>male spelopede</labelMale>
     <labelMalePlural>male spelopedes</labelMalePlural>
     <labelFemale>female spelopede</labelFemale>
     <labelFemalePlural>female spelopedes</labelFemalePlural>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
-    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
   <!-- ====================================================== -->
   <ThingDef ParentName="BaseInsect">
@@ -608,12 +608,12 @@
       </li>
     </lifeStages>
     <combatPower>150</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
     <labelMale>male megaspider</labelMale>
     <labelMalePlural>male megaspiders</labelMalePlural>
     <labelFemale>female megaspider</labelFemale>
     <labelFemalePlural>female megaspiders</labelFemalePlural>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
-    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
 </Defs>

@@ -76,7 +76,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.43</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
     <ingestible>
       <foodType>Tree</foodType>
@@ -142,7 +142,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.43</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
     <ingestible>
       <foodType>Tree</foodType>

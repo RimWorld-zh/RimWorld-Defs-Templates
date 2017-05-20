@@ -12,6 +12,13 @@
     <giverClass>class_name</giverClass>
     <!--Type: Verse.WorkTypeDef-->
     <workType>WorkTypeDef_defName</workType>
+    <!--Flag-->
+    <!--Type: Verse.WorkTags-->
+    <!--Available Values: None, ManualDumb, ManualSkilled, Violent, Caring, Social, Intellectual, Animals, Artistic, Crafting, Cooking, Firefighting, Cleaning, Hauling, PlantWork, Mining-->
+    <workTags>
+      <li>enum_value</li>
+      <!-- ... -->
+    </workTags>
     <!--Type: int-->
     <priorityInType>int_value</priorityInType>
     <!--Type: string-->
@@ -84,9 +91,5 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <feedAnimalsOnly>true_or_false</feedAnimalsOnly>
-    <!--======== Non Matched Elements ========-->
-    <workTags>
-      <li ListIndex="0">Intellectual</li>
-    </workTags>
   </WorkGiverDef>
 </Defs>

@@ -71,7 +71,7 @@
       <Ostrich>0.5</Ostrich>
       <Rat>1.0</Rat>
       <Megasloth>0.03</Megasloth>
-      <Cougar>0.10</Cougar>
+      <Cougar>0.08</Cougar>
       <WolfTimber>0.01</WolfTimber>
       <FoxFennec>0.03</FoxFennec>
     </wildAnimals>
@@ -159,7 +159,7 @@
       <Boomalope>0.2</Boomalope>
       <Ostrich>0.2</Ostrich>
       <Rat>0.30</Rat>
-      <Cougar>0.04</Cougar>
+      <Cougar>0.02</Cougar>
       <FoxFennec>0.02</FoxFennec>
     </wildAnimals>
     <diseases>

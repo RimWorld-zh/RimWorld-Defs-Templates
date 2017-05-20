@@ -47,6 +47,9 @@
         <!--Default Value: All-->
         <allowedTargetTypes>enum_value</allowedTargetTypes>
         <!--Type: float-->
+        <!--Default Value: 0.05-->
+        <minIncChancePopulationIntentFactor>float_value</minIncChancePopulationIntentFactor>
+        <!--Type: float-->
         <mtbDays>float_value</mtbDays>
         <!--Type: List<RimWorld.IncidentCategoryEntry>-->
         <categoryWeights>
@@ -59,8 +62,6 @@
         <!--Type: float-->
         <!--Default Value: 99999.0-->
         <maxThreatBigIntervalDays>float_value</maxThreatBigIntervalDays>
-        <!--======== Non Matched Elements ========-->
-        <minIncChancePopulationIntentFactor>0.2</minIncChancePopulationIntentFactor>
       </li>
       <!--Type: RimWorld.StorytellerCompProperties_CategoryMTB-->
       <li Class="StorytellerCompProperties_CategoryMTB">
@@ -136,15 +137,24 @@
       <li Class="StorytellerCompProperties_ShipChunkDrop" />
       <!-- ... -->
     </comps>
-    <!--======== Non Matched Elements ========-->
+    <!--Type: Verse.SimpleCurve-->
     <populationIntentFromPopCurve>
+      <!--Simple List-->
+      <!--Type: List<Verse.CurvePoint>-->
       <points>
-        <li ListIndex="0">0, 0</li>
+        <!--Type: Verse.CurvePoint-->
+        <li>value</li>
+        <!-- ... -->
       </points>
     </populationIntentFromPopCurve>
+    <!--Type: Verse.SimpleCurve-->
     <populationIntentFromTimeCurve>
+      <!--Simple List-->
+      <!--Type: List<Verse.CurvePoint>-->
       <points>
-        <li ListIndex="0">0, 0.15</li>
+        <!--Type: Verse.CurvePoint-->
+        <li>value</li>
+        <!-- ... -->
       </points>
     </populationIntentFromTimeCurve>
   </StorytellerDef>

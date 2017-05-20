@@ -239,7 +239,7 @@
     <workerClass>IncidentWorker_CropBlight</workerClass>
     <category>Misc</category>
     <targetType>MapPlayerHome</targetType>
-    <baseChance>0.35</baseChance>
+    <baseChance>0.30</baseChance>
     <minRefireDays>30</minRefireDays>
   </IncidentDef>
   <IncidentDef>

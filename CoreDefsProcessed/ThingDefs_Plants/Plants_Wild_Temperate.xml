@@ -27,7 +27,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.20</fillPercent>
     <ingestible>
       <foodType>Plant</foodType>
       <nutrition>0.35</nutrition>
@@ -86,7 +86,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.20</fillPercent>
     <ingestible>
       <foodType>Plant</foodType>
       <nutrition>0.30</nutrition>
@@ -392,7 +392,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.43</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
     <ingestible>
       <foodType>Tree</foodType>
@@ -458,7 +458,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.43</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
     <ingestible>
       <foodType>Tree</foodType>
@@ -524,7 +524,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.43</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
     <ingestible>
       <foodType>Tree</foodType>
@@ -589,7 +589,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.43</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
     <ingestible>
       <foodType>Tree</foodType>

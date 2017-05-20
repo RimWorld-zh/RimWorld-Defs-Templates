@@ -268,9 +268,9 @@
       <li Class="StatPart_WornByCorpse" />
       <!--Type: RimWorld.StatPart_GearAndInventoryMass-->
       <li Class="StatPart_GearAndInventoryMass" />
+      <!--Type: RimWorld.StatPart_UnfinishedThingIngredientsMass-->
+      <li Class="StatPart_UnfinishedThingIngredientsMass" />
       <!-- ... -->
-      <!--======== Non Matched Elements ========-->
-      <li Class="StatPart_UnfinishedThingIngredientsMass" ListIndex="3" />
     </parts>
   </StatDef>
 </Defs>

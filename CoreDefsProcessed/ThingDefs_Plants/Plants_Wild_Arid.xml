@@ -27,7 +27,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.20</fillPercent>
     <ingestible>
       <foodType>Plant</foodType>
       <nutrition>0.20</nutrition>

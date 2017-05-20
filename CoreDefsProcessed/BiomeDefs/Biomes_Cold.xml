@@ -95,14 +95,14 @@
       <Rat>0.8</Rat>
       <Megasloth>0.03</Megasloth>
       <Raccoon>0.4</Raccoon>
-      <Warg>0.02</Warg>
-      <GrizzlyBear>0.03</GrizzlyBear>
-      <Cougar>0.02</Cougar>
-      <Lynx>0.02</Lynx>
-      <WolfTimber>0.14</WolfTimber>
+      <GrizzlyBear>0.01</GrizzlyBear>
+      <Cougar>0.007</Cougar>
+      <Lynx>0.007</Lynx>
+      <Warg>0.007</Warg>
+      <WolfTimber>0.07</WolfTimber>
+      <FoxRed>0.07</FoxRed>
       <WolfArctic>0.03</WolfArctic>
-      <FoxArctic>0.04</FoxArctic>
-      <FoxRed>0.04</FoxRed>
+      <FoxArctic>0.03</FoxArctic>
     </wildAnimals>
     <diseases>
       <li ListIndex="0">
@@ -208,25 +208,25 @@
       <PlantWildHealroot>0.005</PlantWildHealroot>
     </wildPlants>
     <wildAnimals>
+      <Squirrel>1</Squirrel>
+      <Caribou>0.75</Caribou>
+      <Hare>0.5</Hare>
+      <Snowhare>0.5</Snowhare>
+      <Muffalo>0.5</Muffalo>
+      <Rat>0.4</Rat>
       <Elk>0.25</Elk>
       <Ibex>0.1</Ibex>
-      <Caribou>0.75</Caribou>
-      <Muffalo>0.5</Muffalo>
-      <Squirrel>1</Squirrel>
-      <Hare>1</Hare>
-      <Snowhare>1</Snowhare>
-      <Husky>0.01</Husky>
-      <Rat>0.4</Rat>
+      <WolfArctic>0.06</WolfArctic>
       <Megasloth>0.02</Megasloth>
-      <Warg>0.03</Warg>
-      <PolarBear>0.01</PolarBear>
-      <GrizzlyBear>0.02</GrizzlyBear>
-      <Cougar>0.01</Cougar>
-      <Lynx>0.02</Lynx>
-      <WolfTimber>0.04</WolfTimber>
-      <WolfArctic>0.12</WolfArctic>
-      <FoxArctic>0.04</FoxArctic>
-      <FoxRed>0.01</FoxRed>
+      <FoxArctic>0.03</FoxArctic>
+      <Lynx>0.015</Lynx>
+      <WolfTimber>0.008</WolfTimber>
+      <Cougar>0.008</Cougar>
+      <Warg>0.008</Warg>
+      <PolarBear>0.008</PolarBear>
+      <GrizzlyBear>0.008</GrizzlyBear>
+      <FoxRed>0.008</FoxRed>
+      <Husky>0.008</Husky>
     </wildAnimals>
     <diseases>
       <li ListIndex="0">

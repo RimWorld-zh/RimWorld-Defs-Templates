@@ -20,7 +20,7 @@
     <selectable>true</selectable>
     <designateHaulable>true</designateHaulable>
     <saveCompressible>true</saveCompressible>
-    <fillPercent>0.4</fillPercent>
+    <fillPercent>0.50</fillPercent>
     <tradeability>Never</tradeability>
   </ThingDef>
   <ThingDef ParentName="ChunkBase" Name="ChunkRockBase" Abstract="True">
@@ -114,7 +114,7 @@
     </thingCategories>
     <soundDrop>ChunkSlag_Drop</soundDrop>
     <saveCompressible>true</saveCompressible>
-    <fillPercent>0.4</fillPercent>
+    <fillPercent>0.50</fillPercent>
     <tradeability>Never</tradeability>
   </ThingDef>
   <!-- ================ Sandstone ================ -->
@@ -201,7 +201,7 @@
     </thingCategories>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <saveCompressible>true</saveCompressible>
-    <fillPercent>0.4</fillPercent>
+    <fillPercent>0.50</fillPercent>
     <tradeability>Never</tradeability>
   </ThingDef>
   <ThingDef ParentName="StoneBlocksBase">
@@ -385,7 +385,7 @@
     </thingCategories>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <saveCompressible>true</saveCompressible>
-    <fillPercent>0.4</fillPercent>
+    <fillPercent>0.50</fillPercent>
     <tradeability>Never</tradeability>
   </ThingDef>
   <ThingDef ParentName="StoneBlocksBase">
@@ -568,7 +568,7 @@
     </thingCategories>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <saveCompressible>true</saveCompressible>
-    <fillPercent>0.4</fillPercent>
+    <fillPercent>0.50</fillPercent>
     <tradeability>Never</tradeability>
   </ThingDef>
   <ThingDef ParentName="StoneBlocksBase">
@@ -751,7 +751,7 @@
     </thingCategories>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <saveCompressible>true</saveCompressible>
-    <fillPercent>0.4</fillPercent>
+    <fillPercent>0.50</fillPercent>
     <tradeability>Never</tradeability>
   </ThingDef>
   <ThingDef ParentName="StoneBlocksBase">
@@ -935,7 +935,7 @@
     </thingCategories>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <saveCompressible>true</saveCompressible>
-    <fillPercent>0.4</fillPercent>
+    <fillPercent>0.50</fillPercent>
     <tradeability>Never</tradeability>
   </ThingDef>
   <ThingDef ParentName="StoneBlocksBase">

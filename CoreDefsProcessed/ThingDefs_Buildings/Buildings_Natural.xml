@@ -563,7 +563,7 @@
     </graphicData>
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
-    <fillPercent>0.7</fillPercent>
+    <fillPercent>0.60</fillPercent>
     <blockWind>true</blockWind>
   </ThingDef>
   <ThingDef ParentName="BuildingNaturalBase">

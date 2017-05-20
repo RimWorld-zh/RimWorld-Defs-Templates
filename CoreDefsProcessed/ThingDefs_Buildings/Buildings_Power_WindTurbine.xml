@@ -62,8 +62,8 @@
     <blockWind>true</blockWind>
     <building>
       <ignoreNeedsPower>true</ignoreNeedsPower>
-      <ai_chillDestination>false</ai_chillDestination>
       <allowAutoroof>false</allowAutoroof>
+      <ai_chillDestination>false</ai_chillDestination>
     </building>
   </ThingDef>
 </Buildings>

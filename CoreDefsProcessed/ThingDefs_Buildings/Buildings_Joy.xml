@@ -329,7 +329,7 @@
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <socialPropernessMatters>true</socialPropernessMatters>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.35</fillPercent>
     <tradeTags>
       <li ListIndex="0">Television</li>
     </tradeTags>
@@ -399,7 +399,7 @@
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <socialPropernessMatters>true</socialPropernessMatters>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.35</fillPercent>
     <tradeTags>
       <li ListIndex="0">Television</li>
     </tradeTags>

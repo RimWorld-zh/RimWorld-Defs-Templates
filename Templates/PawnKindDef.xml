@@ -129,6 +129,9 @@
     <!--Type: float-->
     <!--Default Value: -1.0-->
     <combatPower>float_value</combatPower>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <canArriveManhunter>true_or_false</canArriveManhunter>
     <!--Type: float-->
     <!--Default Value: 0.5-->
     <baseRecruitDifficulty>float_value</baseRecruitDifficulty>
@@ -278,7 +281,5 @@
       <!--Type: int-->
       <max>int_value</max>
     </wildSpawn_GroupSizeRange>
-    <!--======== Non Matched Elements ========-->
-    <canArriveManhunter>false</canArriveManhunter>
   </PawnKindDef>
 </Defs>

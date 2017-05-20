@@ -19,10 +19,12 @@
     <!--Type: float-->
     <baseChance>float_value</baseChance>
     <!--Type: RimWorld.IncidentPopulationEffect-->
-    <!--Available Values: Decrease, None, Increase-->
+    <!--Available Values: None, Increase-->
     <populationEffect>enum_value</populationEffect>
     <!--Type: int-->
     <earliestDay>int_value</earliestDay>
+    <!--Type: int-->
+    <minPopulation>int_value</minPopulation>
     <!--Type: float-->
     <minRefireDays>float_value</minRefireDays>
     <!--Type: int-->
@@ -54,6 +56,16 @@
       <li>string_value</li>
       <!-- ... -->
     </refireCheckTags>
+    <!--Type: Verse.SimpleCurve-->
+    <chanceFactorByPopulationCurve>
+      <!--Simple List-->
+      <!--Type: List<Verse.CurvePoint>-->
+      <points>
+        <!--Type: Verse.CurvePoint-->
+        <li>value</li>
+        <!-- ... -->
+      </points>
+    </chanceFactorByPopulationCurve>
     <!--Type: string-->
     <letterText>string_value</letterText>
     <!--Type: string-->
@@ -96,12 +108,5 @@
       <!--Pattern: <BiomeDef_defName>float_value</BiomeDef_defName>-->
       <!-- ... -->
     </mtbDaysByBiome>
-    <!--======== Non Matched Elements ========-->
-    <minPopulation>4</minPopulation>
-    <chanceFactorByPopulationCurve>
-      <points>
-        <li ListIndex="0">(2,0)</li>
-      </points>
-    </chanceFactorByPopulationCurve>
   </IncidentDef>
 </Defs>

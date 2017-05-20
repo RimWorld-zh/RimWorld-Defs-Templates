@@ -772,6 +772,9 @@
     <label>produce drugs at drug lab</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Crafting</workType>
+    <workTags>
+      <li ListIndex="0">Intellectual</li>
+    </workTags>
     <priorityInType>95</priorityInType>
     <verb>produce drugs</verb>
     <gerund>producing drugs at</gerund>
@@ -782,9 +785,6 @@
     <fixedBillGiverDefs>
       <li ListIndex="0">DrugLab</li>
     </fixedBillGiverDefs>
-    <workTags>
-      <li ListIndex="0">Intellectual</li>
-    </workTags>
   </WorkGiverDef>
   <WorkGiverDef>
     <defName>DoBillsStonecut</defName>

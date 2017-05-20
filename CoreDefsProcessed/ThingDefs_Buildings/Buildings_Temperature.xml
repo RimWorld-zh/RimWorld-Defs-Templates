@@ -76,7 +76,7 @@
     </inspectorTabs>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <soundImpactDefault>BulletImpactGround</soundImpactDefault>
-    <fillPercent>0.25</fillPercent>
+    <fillPercent>0.20</fillPercent>
     <recipes>
       <li ListIndex="0">CookMealSimpleCampfire</li>
       <li ListIndex="1">MakePemmicanCampfire</li>

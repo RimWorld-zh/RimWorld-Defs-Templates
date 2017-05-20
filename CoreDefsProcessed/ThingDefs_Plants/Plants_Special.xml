@@ -33,7 +33,7 @@
     <drawerType>MapMeshOnly</drawerType>
     <selectable>true</selectable>
     <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.29</fillPercent>
+    <fillPercent>0.20</fillPercent>
     <plant>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>200</harvestWork>

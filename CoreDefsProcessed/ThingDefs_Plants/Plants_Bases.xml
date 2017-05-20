@@ -48,7 +48,7 @@
       </shadowData>
     </graphicData>
     <selectable>true</selectable>
-    <fillPercent>0.43</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
     <ingestible>
       <foodType>Tree</foodType>
