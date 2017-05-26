@@ -866,9 +866,9 @@
     <label>alpaca wool</label>
     <description>The remarkably soft wool of an alpaca. It is very warm.</description>
     <statBases>
-      <MarketValue>5.2</MarketValue>
       <DeteriorationRate>2.6</DeteriorationRate>
       <MaxHitPoints>90</MaxHitPoints>
+      <MarketValue>2.7</MarketValue>
       <Mass>0.028</Mass>
       <Flammability>1.0</Flammability>
       <Beauty>-4</Beauty>
