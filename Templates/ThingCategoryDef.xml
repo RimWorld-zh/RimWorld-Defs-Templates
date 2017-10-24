@@ -9,8 +9,10 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: Verse.ThingCategoryDef-->
+    <!--Default Value: null-->
     <parent>ThingCategoryDef_defName</parent>
     <!--Type: string-->
+    <!--Default Value: (string)null-->
     <iconPath>string_value</iconPath>
     <!--Type: bool-->
     <!--Default Value: false-->

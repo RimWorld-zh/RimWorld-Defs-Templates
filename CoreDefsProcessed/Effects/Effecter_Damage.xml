@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<EffecterDefs>
+<Defs>
   <EffecterDef>
     <defName>ArmorDeflect</defName>
     <children>
@@ -20,4 +20,4 @@
       </li>
     </children>
   </EffecterDef>
-</EffecterDefs>
+</Defs>

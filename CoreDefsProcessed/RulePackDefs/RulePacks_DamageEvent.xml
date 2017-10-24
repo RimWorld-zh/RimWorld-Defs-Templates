@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>DamageEvent_Include</defName>
+    <include>
+      <li ListIndex="0">Combat_WoundInclude</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry->[damageSource] [recipient_nameShortDef], [destroying] [recipient_possessive] [destroyed_targets].</li>
+        <li ListIndex="1">logentry->[damageSource] [recipient_nameShortDef], [destroying] [recipient_possessive] [destroyed_targets] and [damaging] [recipient_possessive] [damaged_targets].</li>
+        <li ListIndex="2">logentry(recipient_part_destroyed_count==0)->[damageSource] [recipient_nameShortDef], [damaging] [recipient_possessive] [damaged_targets].</li>
+        <li ListIndex="3">logentry(p=0.1)->[damageSource] [recipient_nameShortDef].</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>DamageEvent_Ceiling</defName>
+    <include>
+      <li ListIndex="0">DamageEvent_Include</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">damageSource->the [roof] [collapsed] on</li>
+        <li ListIndex="1">roof->roof</li>
+        <li ListIndex="2">roof->roofing</li>
+        <li ListIndex="3">roof->ceiling</li>
+        <li ListIndex="4">collapsed->collapsed</li>
+        <li ListIndex="5">collapsed->fell</li>
+        <li ListIndex="6">collapsed->caved in</li>
+        <li ListIndex="7">damaging->smashing</li>
+        <li ListIndex="8">damaging->bashing</li>
+        <li ListIndex="9">damaging->clobbering</li>
+        <li ListIndex="10">damaging->bruising</li>
+        <li ListIndex="11">damaging->lacerating</li>
+        <li ListIndex="12">destroying->shattering</li>
+        <li ListIndex="13">destroying->crushing</li>
+        <li ListIndex="14">destroying->obliterating</li>
+        <li ListIndex="15">destroying->annihilating</li>
+        <li ListIndex="16">destroying->breaking</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>DamageEvent_Fire</defName>
+    <include>
+      <li ListIndex="0">DamageEvent_Include</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">damageSource->[fire] burned</li>
+        <li ListIndex="1">fire(p=3)->fire</li>
+        <li ListIndex="2">fire(p=3)->a fire</li>
+        <li ListIndex="3">fire(p=3)->the fire</li>
+        <li ListIndex="4">fire->heat</li>
+        <li ListIndex="5">fire->a conflagration</li>
+        <li ListIndex="6">fire->an inferno</li>
+        <li ListIndex="7">damaging->scorching</li>
+        <li ListIndex="8">damaging->broiling</li>
+        <li ListIndex="9">damaging->searing</li>
+        <li ListIndex="10">damaging->singeing</li>
+        <li ListIndex="11">destroying->charring</li>
+        <li ListIndex="12">destroying->roasting</li>
+        <li ListIndex="13">destroying->cooking</li>
+        <li ListIndex="14">destroying->cremating</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

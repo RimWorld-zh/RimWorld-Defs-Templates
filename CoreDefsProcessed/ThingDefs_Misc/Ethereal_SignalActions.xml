@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="SignalActionBase" ParentName="EtherealThingBase" Abstract="True">
+    <receivesSignals>true</receivesSignals>
+  </ThingDef>
+  <ThingDef ParentName="SignalActionBase">
+    <defName>SignalAction_Letter</defName>
+    <label>signal action - letter</label>
+    <thingClass>SignalAction_Letter</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <receivesSignals>true</receivesSignals>
+    <drawerType>None</drawerType>
+  </ThingDef>
+  <ThingDef ParentName="SignalActionBase">
+    <defName>SignalAction_Ambush</defName>
+    <label>signal action - ambush</label>
+    <thingClass>SignalAction_Ambush</thingClass>
+    <category>Ethereal</category>
+    <useHitPoints>false</useHitPoints>
+    <receivesSignals>true</receivesSignals>
+    <drawerType>None</drawerType>
+  </ThingDef>
+</Defs>

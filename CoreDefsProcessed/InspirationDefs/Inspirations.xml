@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <InspirationDef>
+    <defName>WorkFrenzy</defName>
+    <label>work frenzy</label>
+    <baseDurationDays>1</baseDurationDays>
+    <statFactors>
+      <WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+    </statFactors>
+    <beginLetter>{0} has just been inspired. HECAP will work 2.5 times faster for the next 24 hours.</beginLetter>
+    <beginLetterLabel>Inspiration: work frenzy</beginLetterLabel>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (work frenzy).</endMessage>
+    <baseInspectLine>Inspired: Work frenzy</baseInspectLine>
+  </InspirationDef>
+  <InspirationDef>
+    <defName>GoFrenzy</defName>
+    <label>go frenzy</label>
+    <baseDurationDays>1</baseDurationDays>
+    <requiredCapacities>
+      <li ListIndex="0">Moving</li>
+    </requiredCapacities>
+    <statFactors>
+      <MoveSpeed>1.5</MoveSpeed>
+    </statFactors>
+    <beginLetter>{0} has just been inspired. HECAP will walk 1.5 times faster for the next 24 hours.</beginLetter>
+    <beginLetterLabel>Inspiration: go frenzy</beginLetterLabel>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (go frenzy).</endMessage>
+    <baseInspectLine>Inspired: Go frenzy</baseInspectLine>
+  </InspirationDef>
+  <InspirationDef>
+    <defName>ShootFrenzy</defName>
+    <label>shoot frenzy</label>
+    <baseDurationDays>3</baseDurationDays>
+    <requiredNonDisabledStats>
+      <li ListIndex="0">ShootingAccuracy</li>
+    </requiredNonDisabledStats>
+    <statOffsets>
+      <ShootingAccuracy>10</ShootingAccuracy>
+    </statOffsets>
+    <beginLetter>{0} has just been inspired. HISCAP shooting accuracy will be improved for the next 3 days.</beginLetter>
+    <beginLetterLabel>Inspiration: shoot frenzy</beginLetterLabel>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (shoot frenzy).</endMessage>
+    <baseInspectLine>Inspired: Shoot frenzy</baseInspectLine>
+  </InspirationDef>
+  <InspirationDef>
+    <defName>InspiredTrade</defName>
+    <label>inspired trade</label>
+    <baseDurationDays>8</baseDurationDays>
+    <requiredNonDisabledStats>
+      <li ListIndex="0">TradePriceImprovement</li>
+    </requiredNonDisabledStats>
+    <requiredSkills>
+      <Social>6</Social>
+    </requiredSkills>
+    <statOffsets>
+      <TradePriceImprovement>0.18</TradePriceImprovement>
+    </statOffsets>
+    <beginLetter>{0} has just been inspired. HECAP will get a significant trade price bonus for HIS next trade deal.\n\nThe inspiration will end after 8 days or when the deal is done.</beginLetter>
+    <beginLetterLabel>Inspiration: inspired trade</beginLetterLabel>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (inspired trade).</endMessage>
+    <baseInspectLine>Inspired: Inspired trade</baseInspectLine>
+  </InspirationDef>
+  <InspirationDef>
+    <defName>InspiredRecruitment</defName>
+    <label>inspired recruitment</label>
+    <baseDurationDays>8</baseDurationDays>
+    <requiredNonDisabledStats>
+      <li ListIndex="0">RecruitPrisonerChance</li>
+    </requiredNonDisabledStats>
+    <requiredSkills>
+      <Social>6</Social>
+    </requiredSkills>
+    <requiredNonDisabledWorkTypes>
+      <li ListIndex="0">Warden</li>
+    </requiredNonDisabledWorkTypes>
+    <requiredCapacities>
+      <li ListIndex="0">Talking</li>
+    </requiredCapacities>
+    <beginLetter>{0} has just been inspired. HECAP will successfully recruit the next prisoner regardless of difficulty.\n\nThe inspiration will end after 8 days or when the prisoner is recruited.</beginLetter>
+    <beginLetterLabel>Inspiration: inspired recruitment</beginLetterLabel>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (inspired recruitment).</endMessage>
+    <baseInspectLine>Inspired: Inspired recruitment</baseInspectLine>
+  </InspirationDef>
+  <InspirationDef>
+    <defName>InspiredSurgery</defName>
+    <label>inspired surgery</label>
+    <baseDurationDays>8</baseDurationDays>
+    <requiredNonDisabledStats>
+      <li ListIndex="0">MedicalSurgerySuccessChance</li>
+    </requiredNonDisabledStats>
+    <requiredSkills>
+      <Medicine>6</Medicine>
+    </requiredSkills>
+    <requiredNonDisabledWorkTypes>
+      <li ListIndex="0">Doctor</li>
+    </requiredNonDisabledWorkTypes>
+    <requiredCapacities>
+      <li ListIndex="0">Manipulation</li>
+    </requiredCapacities>
+    <beginLetter>{0} has just been inspired. The surgery failure chance for the next surgery performed by HIM will be 10 times smaller.\n\nThe inspiration will end after 8 days or when the surgery is performed.</beginLetter>
+    <beginLetterLabel>Inspiration: inspired surgery</beginLetterLabel>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (inspired surgery).</endMessage>
+    <baseInspectLine>Inspired: Inspired surgery</baseInspectLine>
+  </InspirationDef>
+  <InspirationDef>
+    <defName>InspiredArt</defName>
+    <label>inspired art</label>
+    <baseDurationDays>8</baseDurationDays>
+    <requiredSkills>
+      <Artistic>6</Artistic>
+    </requiredSkills>
+    <requiredNonDisabledWorkTypes>
+      <li ListIndex="0">Art</li>
+    </requiredNonDisabledWorkTypes>
+    <requiredCapacities>
+      <li ListIndex="0">Manipulation</li>
+    </requiredCapacities>
+    <beginLetter>{0} has just been inspired. Any piece of art completed will be 3 quality levels higher than it would otherwise be.\n\nThe inspiration will end after 8 days or when the piece of art is completed.</beginLetter>
+    <beginLetterLabel>Inspiration: inspired art</beginLetterLabel>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (inspired art).</endMessage>
+    <baseInspectLine>Inspired: Inspired art</baseInspectLine>
+  </InspirationDef>
+</Defs>

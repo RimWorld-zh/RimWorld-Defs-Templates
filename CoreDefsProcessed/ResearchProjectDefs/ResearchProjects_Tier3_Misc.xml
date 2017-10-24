@@ -11,8 +11,9 @@
       <li ListIndex="0">MicroelectronicsBasics</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>Main</tab>
     <researchViewX>7</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewY>2.9</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>MoisturePump</defName>
@@ -24,8 +25,9 @@
       <li ListIndex="0">MicroelectronicsBasics</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>Main</tab>
     <researchViewX>8</researchViewX>
-    <researchViewY>3</researchViewY>
+    <researchViewY>2.9</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>GeothermalPower</defName>
@@ -37,8 +39,9 @@
       <li ListIndex="0">MicroelectronicsBasics</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>Main</tab>
     <researchViewX>8</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewY>3.6</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HospitalBed</defName>
@@ -50,8 +53,9 @@
       <li ListIndex="0">MicroelectronicsBasics</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>Main</tab>
     <researchViewX>7</researchViewX>
-    <researchViewY>0.8</researchViewY>
+    <researchViewY>1.6</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>TransportPod</defName>
@@ -63,8 +67,9 @@
       <li ListIndex="0">MicroelectronicsBasics</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>Main</tab>
     <researchViewX>7</researchViewX>
-    <researchViewY>1.6</researchViewY>
+    <researchViewY>0.8</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>MedicineProduction</defName>
@@ -77,6 +82,7 @@
       <li ListIndex="1">MicroelectronicsBasics</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>Main</tab>
     <researchViewX>7</researchViewX>
     <researchViewY>0</researchViewY>
   </ResearchProjectDef>
@@ -90,6 +96,7 @@
       <li ListIndex="0">MicroelectronicsBasics</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>Main</tab>
     <researchViewX>8</researchViewX>
     <researchViewY>2</researchViewY>
   </ResearchProjectDef>
@@ -103,7 +110,8 @@
       <li ListIndex="0">MicroelectronicsBasics</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <tab>Main</tab>
     <researchViewX>8</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewY>0</researchViewY>
   </ResearchProjectDef>
 </Defs>

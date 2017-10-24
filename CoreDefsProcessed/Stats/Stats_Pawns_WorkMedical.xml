@@ -10,8 +10,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Medicine</skill>
-        <baseFactor>0.4</baseFactor>
-        <bonusFactor>0.06</bonusFactor>
+        <baseValue>0.4</baseValue>
+        <bonusPerLevel>0.06</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -25,6 +25,7 @@
         <weight>1</weight>
       </li>
     </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>MedicalTendQuality</defName>
@@ -36,8 +37,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Medicine</skill>
-        <baseFactor>0.20</baseFactor>
-        <bonusFactor>0.10</bonusFactor>
+        <baseValue>0.20</baseValue>
+        <bonusPerLevel>0.10</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -71,8 +72,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Medicine</skill>
-        <baseFactor>0.4</baseFactor>
-        <bonusFactor>0.06</bonusFactor>
+        <baseValue>0.4</baseValue>
+        <bonusPerLevel>0.06</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -90,36 +91,36 @@
   <StatDef>
     <defName>MedicalSurgerySuccessChance</defName>
     <label>medical surgery success chance</label>
-    <description>The likelihood that a character will succeed when attempting to perform a medical surgery. Failures can result in simple wasted time and medicine, or catastrophic damage to the patient. This base success chance is also affected by the facilities and medicine used in the operation, and the difficulty of the operation.</description>
+    <description>The chance that a character will perform surgery successfully. The success chance is also affected by the bed and area of the operation, medicine used, and the difficulty of the surgery.</description>
     <category>PawnWork</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1.00</defaultBaseValue>
     <skillNeedFactors>
       <li Class="SkillNeed_Direct" ListIndex="0">
         <skill>Medicine</skill>
-        <factorsPerLevel>
-          <li ListIndex="0">0.20</li>
-          <li ListIndex="1">0.30</li>
+        <valuesPerLevel>
+          <li ListIndex="0">0.10</li>
+          <li ListIndex="1">0.25</li>
           <li ListIndex="2">0.40</li>
           <li ListIndex="3">0.50</li>
           <li ListIndex="4">0.60</li>
           <li ListIndex="5">0.70</li>
           <li ListIndex="6">0.80</li>
-          <li ListIndex="7">0.85</li>
-          <li ListIndex="8">0.90</li>
-          <li ListIndex="9">0.92</li>
-          <li ListIndex="10">0.93</li>
-          <li ListIndex="11">0.94</li>
-          <li ListIndex="12">0.95</li>
-          <li ListIndex="13">0.955</li>
-          <li ListIndex="14">0.96</li>
-          <li ListIndex="15">0.965</li>
-          <li ListIndex="16">0.97</li>
-          <li ListIndex="17">0.975</li>
-          <li ListIndex="18">0.98</li>
-          <li ListIndex="19">0.985</li>
-          <li ListIndex="20">0.99</li>
-        </factorsPerLevel>
+          <li ListIndex="7">0.90</li>
+          <li ListIndex="8">1.00</li>
+          <li ListIndex="9">1.05</li>
+          <li ListIndex="10">1.10</li>
+          <li ListIndex="11">1.14</li>
+          <li ListIndex="12">1.18</li>
+          <li ListIndex="13">1.22</li>
+          <li ListIndex="14">1.25</li>
+          <li ListIndex="15">1.28</li>
+          <li ListIndex="16">1.31</li>
+          <li ListIndex="17">1.33</li>
+          <li ListIndex="18">1.35</li>
+          <li ListIndex="19">1.37</li>
+          <li ListIndex="20">1.39</li>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -133,5 +134,6 @@
         <weight>1</weight>
       </li>
     </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
 </Defs>

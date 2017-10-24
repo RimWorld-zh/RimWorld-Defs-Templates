@@ -7,6 +7,12 @@
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Manhunters</expandingIconTexture>
     <knownDanger>true</knownDanger>
+    <tags>
+      <li ListIndex="0">MineralScannerPreciousLumpThreat</li>
+      <li ListIndex="1">ItemStashQuestThreat</li>
+      <li ListIndex="2">DownedRefugeeQuestThreat</li>
+    </tags>
+    <descriptionDialogue>there is a group of manhunting animals wandering nearby</descriptionDialogue>
   </SitePartDef>
   <GenStepDef>
     <defName>Manhunters</defName>

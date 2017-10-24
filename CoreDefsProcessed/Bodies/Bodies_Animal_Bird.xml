@@ -105,7 +105,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.15</coverage>
+          <coverage>0.10</coverage>
         </li>
         <li ListIndex="11">
           <def>RightLeg</def>
@@ -119,7 +119,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.15</coverage>
+          <coverage>0.10</coverage>
         </li>
       </parts>
       <height>Middle</height>

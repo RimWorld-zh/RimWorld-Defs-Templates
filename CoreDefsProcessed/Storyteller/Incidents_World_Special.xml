@@ -5,6 +5,9 @@
     <label>journey offer</label>
     <workerClass>IncidentWorker_JourneyOffer</workerClass>
     <category>JourneyOffer</category>
-    <targetType>World</targetType>
+    <targetTypes>
+      <li ListIndex="0">World</li>
+    </targetTypes>
+    <tale>JourneyOffer</tale>
   </IncidentDef>
 </Defs>

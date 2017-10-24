@@ -13,8 +13,10 @@
     <description>string_value</description>
     <!--Type: RimWorld.ScenPartCategory-->
     <!--Available Values: Undefined, Fixed, StartingImportant, PlayerPawnFilter, PlayerPawnModifier, GameCondition, Rule, StartingItem, WorldThing, Misc-->
+    <!--Default Value: Undefined-->
     <category>enum_value</category>
     <!--Type: System.Type-->
+    <!--Default Value: null-->
     <scenPartClass>class_name</scenPartClass>
     <!--Type: float-->
     <!--Default Value: -1.0-->

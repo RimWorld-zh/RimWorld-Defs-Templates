@@ -23,6 +23,7 @@
     <major>true</major>
     <listPriority>800</listPriority>
     <showForCaravanMembers>true</showForCaravanMembers>
+    <scaleBar>true</scaleBar>
   </NeedDef>
   <NeedDef>
     <defName>Rest</defName>

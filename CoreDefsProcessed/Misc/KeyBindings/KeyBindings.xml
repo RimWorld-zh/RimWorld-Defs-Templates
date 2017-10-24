@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<KeyBindingDefs>
+<Defs>
   <!-- In-game camera -->
   <KeyBindingDef Name="GameMapKeyBinding" Abstract="true">
     <category>GameMapCamera</category>
@@ -207,20 +207,6 @@
     <category>SelectionSpecial</category>
     <defaultKeyCodeA>R</defaultKeyCodeA>
   </KeyBindingDef>
-  <KeyBindingDef ParentName="SelectionSpecialKeyBinding">
-    <defName>ModifierIncrement10x</defName>
-    <label>increment 10x</label>
-    <category>SelectionSpecial</category>
-    <defaultKeyCodeA>LeftControl</defaultKeyCodeA>
-    <defaultKeyCodeB>RightControl</defaultKeyCodeB>
-  </KeyBindingDef>
-  <KeyBindingDef ParentName="SelectionSpecialKeyBinding">
-    <defName>ModifierIncrement100x</defName>
-    <label>increment 100x</label>
-    <category>SelectionSpecial</category>
-    <defaultKeyCodeA>LeftShift</defaultKeyCodeA>
-    <defaultKeyCodeB>RightShift</defaultKeyCodeB>
-  </KeyBindingDef>
   <!-- Architect: Common -->
   <KeyBindingDef Name="ArchitectBase" Abstract="true">
     <category>Architect</category>
@@ -248,6 +234,37 @@
     <label>rotate right</label>
     <category>Architect</category>
     <defaultKeyCodeA>E</defaultKeyCodeA>
+  </KeyBindingDef>
+  <!-- Modifiers -->
+  <KeyBindingDef Name="ModifierKeyBinding" Abstract="true">
+    <category>Modifiers</category>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="ModifierKeyBinding">
+    <defName>ModifierIncrement10x</defName>
+    <label>increment 10x</label>
+    <category>Modifiers</category>
+    <defaultKeyCodeA>LeftControl</defaultKeyCodeA>
+    <defaultKeyCodeB>RightControl</defaultKeyCodeB>
+    <extraConflictTags>
+      <li ListIndex="0">ModifierIncrement</li>
+    </extraConflictTags>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="ModifierKeyBinding">
+    <defName>ModifierIncrement100x</defName>
+    <label>increment 100x</label>
+    <category>Modifiers</category>
+    <defaultKeyCodeA>LeftShift</defaultKeyCodeA>
+    <defaultKeyCodeB>RightShift</defaultKeyCodeB>
+    <extraConflictTags>
+      <li ListIndex="0">ModifierIncrement</li>
+    </extraConflictTags>
+  </KeyBindingDef>
+  <KeyBindingDef ParentName="ModifierKeyBinding">
+    <defName>QueueOrder</defName>
+    <label>queue order</label>
+    <category>Modifiers</category>
+    <defaultKeyCodeA>LeftShift</defaultKeyCodeA>
+    <defaultKeyCodeB>RightShift</defaultKeyCodeB>
   </KeyBindingDef>
   <!-- Debug -->
   <KeyBindingDef Name="DevelopmentKeyBinding" Abstract="true">
@@ -301,4 +318,4 @@
     <defaultKeyCodeA>RightBracket</defaultKeyCodeA>
     <devModeOnly>true</devModeOnly>
   </KeyBindingDef>
-</KeyBindingDefs>
+</Defs>

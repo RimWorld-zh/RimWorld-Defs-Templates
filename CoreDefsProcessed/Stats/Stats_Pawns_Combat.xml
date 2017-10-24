@@ -18,39 +18,39 @@
     <description>Chance to hit a target in melee. The target can still dodge even if we hit.</description>
     <category>PawnCombat</category>
     <showOnPawns>false</showOnPawns>
+    <neverDisabled>true</neverDisabled>
     <toStringStyle>PercentZero</toStringStyle>
-    <defaultBaseValue>1</defaultBaseValue>
-    <minValue>0.01</minValue>
-    <noSkillFactor>0.20</noSkillFactor>
-    <skillNeedFactors>
+    <toStringStyleUnfinalized>FloatOne</toStringStyleUnfinalized>
+    <defaultBaseValue>0</defaultBaseValue>
+    <skillNeedOffsets>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Melee</skill>
-        <reportInverse>true</reportInverse>
-        <baseFactor>0</baseFactor>
-        <bonusFactor>0.05</bonusFactor>
+        <baseValue>0</baseValue>
+        <bonusPerLevel>1</bonusPerLevel>
       </li>
-    </skillNeedFactors>
-    <capacityFactors>
+    </skillNeedOffsets>
+    <noSkillOffset>4</noSkillOffset>
+    <capacityOffsets>
       <li ListIndex="0">
         <capacity>Manipulation</capacity>
-        <weight>1</weight>
+        <scale>12</scale>
         <max>1.5</max>
       </li>
       <li ListIndex="1">
         <capacity>Sight</capacity>
-        <weight>0.4</weight>
+        <scale>12</scale>
         <max>1.5</max>
       </li>
-    </capacityFactors>
+    </capacityOffsets>
     <postProcessCurve>
       <points>
-        <li ListIndex="0">(-1.0, 0.05)</li>
-        <li ListIndex="1">(-0.5, 0.10)</li>
+        <li ListIndex="0">(-20, 0.05)</li>
+        <li ListIndex="1">(-10, 0.10)</li>
         <li ListIndex="2">(0.0, 0.50)</li>
-        <li ListIndex="3">(0.5, 0.80)</li>
-        <li ListIndex="4">(1.0, 0.90)</li>
-        <li ListIndex="5">(2.0, 0.96)</li>
-        <li ListIndex="6">(3.0, 0.98)</li>
+        <li ListIndex="3">(10, 0.80)</li>
+        <li ListIndex="4">(20, 0.90)</li>
+        <li ListIndex="5">(40, 0.96)</li>
+        <li ListIndex="6">(60, 0.98)</li>
       </points>
     </postProcessCurve>
   </StatDef>
@@ -59,35 +59,35 @@
     <label>melee dodge chance</label>
     <description>Chance to dodge a melee attack that would've otherwise hit. Characters will not dodge while aiming or firing a ranged weapon.</description>
     <category>PawnCombat</category>
+    <neverDisabled>true</neverDisabled>
     <displayPriorityInCategory>99</displayPriorityInCategory>
     <toStringStyle>PercentZero</toStringStyle>
-    <defaultBaseValue>1</defaultBaseValue>
-    <minValue>0</minValue>
-    <maxValue>0.8</maxValue>
-    <noSkillFactor>0</noSkillFactor>
-    <skillNeedFactors>
+    <toStringStyleUnfinalized>FloatOne</toStringStyleUnfinalized>
+    <defaultBaseValue>0</defaultBaseValue>
+    <skillNeedOffsets>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Melee</skill>
-        <baseFactor>0</baseFactor>
-        <bonusFactor>0.05</bonusFactor>
+        <baseValue>0</baseValue>
+        <bonusPerLevel>1</bonusPerLevel>
       </li>
-    </skillNeedFactors>
-    <capacityFactors>
+    </skillNeedOffsets>
+    <noSkillOffset>0</noSkillOffset>
+    <capacityOffsets>
       <li ListIndex="0">
         <capacity>Moving</capacity>
-        <weight>1</weight>
+        <scale>18</scale>
       </li>
       <li ListIndex="1">
         <capacity>Sight</capacity>
-        <weight>0.7</weight>
-        <max>1</max>
+        <scale>8</scale>
+        <max>1.4</max>
       </li>
-    </capacityFactors>
+    </capacityOffsets>
     <postProcessCurve>
       <points>
-        <li ListIndex="0">(0.25, 0)</li>
-        <li ListIndex="1">(1.0, 0.30)</li>
-        <li ListIndex="2">(3.0, 0.50)</li>
+        <li ListIndex="0">(5, 0)</li>
+        <li ListIndex="1">(20, 0.30)</li>
+        <li ListIndex="2">(60, 0.50)</li>
       </points>
     </postProcessCurve>
   </StatDef>
@@ -95,58 +95,57 @@
   <StatDef>
     <defName>ShootingAccuracy</defName>
     <label>shooting accuracy</label>
-    <description>Base chance to not miss per square of shot distance.</description>
+    <description>Base chance to not miss per cell of shot distance. Chance to hit is also affected by target, cover, and environmental conditions, and can be viewed by selecting a shooter and mousing over a target.</description>
     <category>PawnCombat</category>
+    <workerClass>StatWorker_ShootingAccuracy</workerClass>
     <showOnAnimals>false</showOnAnimals>
     <displayPriorityInCategory>50</displayPriorityInCategory>
     <toStringStyle>PercentTwo</toStringStyle>
-    <defaultBaseValue>1</defaultBaseValue>
-    <minValue>0.01</minValue>
-    <maxValue>0.998</maxValue>
-    <noSkillFactor>0.50</noSkillFactor>
-    <skillNeedFactors>
+    <toStringStyleUnfinalized>FloatOne</toStringStyleUnfinalized>
+    <defaultBaseValue>0</defaultBaseValue>
+    <skillNeedOffsets>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Shooting</skill>
-        <reportInverse>true</reportInverse>
-        <baseFactor>0</baseFactor>
-        <bonusFactor>0.05</bonusFactor>
+        <baseValue>0</baseValue>
+        <bonusPerLevel>1</bonusPerLevel>
       </li>
-    </skillNeedFactors>
-    <capacityFactors>
+    </skillNeedOffsets>
+    <noSkillOffset>8</noSkillOffset>
+    <capacityOffsets>
       <li ListIndex="0">
         <capacity>Sight</capacity>
-        <weight>1</weight>
+        <scale>12</scale>
         <max>2</max>
       </li>
       <li ListIndex="1">
         <capacity>Manipulation</capacity>
-        <weight>0.7</weight>
+        <scale>8</scale>
         <max>1</max>
       </li>
-    </capacityFactors>
+    </capacityOffsets>
     <postProcessCurve>
       <points>
-        <li ListIndex="0">(-1.0, 0.70)</li>
-        <li ListIndex="1">(-0.5, 0.80)</li>
-        <li ListIndex="2">(-0.3, 0.83)</li>
-        <li ListIndex="3">(-0.2, 0.85)</li>
-        <li ListIndex="4">(-0.1, 0.87)</li>
-        <li ListIndex="5">(0.0, 0.89)</li>
-        <li ListIndex="6">(0.1, 0.93)</li>
-        <li ListIndex="7">(0.2, 0.94)</li>
-        <li ListIndex="8">(0.3, 0.95)</li>
-        <li ListIndex="9">(0.4, 0.96)</li>
-        <li ListIndex="10">(0.5, 0.97)</li>
-        <li ListIndex="11">(0.6, 0.975)</li>
-        <li ListIndex="12">(0.7, 0.98)</li>
-        <li ListIndex="13">(0.8, 0.98333)</li>
-        <li ListIndex="14">(0.9, 0.98666)</li>
-        <li ListIndex="15">(1.0, 0.99)</li>
-        <li ListIndex="16">(1.1, 0.9925)</li>
-        <li ListIndex="17">(1.3, 0.995)</li>
-        <li ListIndex="18">(1.5, 0.9965)</li>
-        <li ListIndex="19">(2.0, 0.998)</li>
-        <li ListIndex="20">(3.0, 0.999)</li>
+        <li ListIndex="0">(-20, 0.70)</li>
+        <li ListIndex="1">(-10, 0.80)</li>
+        <li ListIndex="2">(-6, 0.83)</li>
+        <li ListIndex="3">(-4, 0.85)</li>
+        <li ListIndex="4">(-2, 0.87)</li>
+        <li ListIndex="5">(0, 0.89)</li>
+        <li ListIndex="6">(2, 0.93)</li>
+        <li ListIndex="7">(4, 0.94)</li>
+        <li ListIndex="8">(6, 0.95)</li>
+        <li ListIndex="9">(8, 0.96)</li>
+        <li ListIndex="10">(10, 0.97)</li>
+        <li ListIndex="11">(12, 0.975)</li>
+        <li ListIndex="12">(14, 0.98)</li>
+        <li ListIndex="13">(16, 0.98333)</li>
+        <li ListIndex="14">(18, 0.98666)</li>
+        <li ListIndex="15">(20, 0.99)</li>
+        <li ListIndex="16">(22, 0.9925)</li>
+        <li ListIndex="17">(26, 0.995)</li>
+        <li ListIndex="18">(30, 0.9965)</li>
+        <li ListIndex="19">(40, 0.998)</li>
+        <li ListIndex="20">(60, 0.999)</li>
       </points>
     </postProcessCurve>
   </StatDef>

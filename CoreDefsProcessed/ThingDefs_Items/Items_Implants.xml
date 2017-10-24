@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef Name="ImplantBase" Abstract="True">
     <label>implant</label>
     <statBases>
@@ -49,6 +49,9 @@
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
     </comps>
     <isBodyPartOrImplant>true</isBodyPartOrImplant>
+    <itemGeneratorTags>
+      <li ListIndex="0">SpecialReward</li>
+    </itemGeneratorTags>
     <graphicData>
       <texPath>Things/Item/Implant/Implant</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -87,6 +90,9 @@
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
     </comps>
     <isBodyPartOrImplant>true</isBodyPartOrImplant>
+    <itemGeneratorTags>
+      <li ListIndex="0">SpecialReward</li>
+    </itemGeneratorTags>
     <graphicData>
       <texPath>Things/Item/Implant/Implant</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -103,4 +109,4 @@
       <li ListIndex="0">Advanced</li>
     </techHediffsTags>
   </ThingDef>
-</ThingDefs>
+</Defs>

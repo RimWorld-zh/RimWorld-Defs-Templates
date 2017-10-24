@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TerrainDefs>
+<Defs>
   <TerrainDef>
     <defName>BrokenAsphalt</defName>
     <label>broken asphalt</label>
@@ -46,4 +46,4 @@
     </tags>
     <terrainFilthDef>FilthDirt</terrainFilthDef>
   </TerrainDef>
-</TerrainDefs>
+</Defs>

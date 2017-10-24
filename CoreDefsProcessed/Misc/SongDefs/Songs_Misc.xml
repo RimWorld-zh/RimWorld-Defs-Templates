@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SongDefs>
+<Defs>
   <SongDef>
     <defName>EndCreditsSong</defName>
     <clipPath>Songs/Misc/End_Credits_Song</clipPath>
     <volume>1.05</volume>
     <playOnMap>false</playOnMap>
   </SongDef>
-</SongDefs>
+</Defs>

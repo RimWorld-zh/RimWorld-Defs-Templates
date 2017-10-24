@@ -24,11 +24,10 @@
     <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
     <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
-    <recoverFromDowned>true</recoverFromDowned>
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} has gone berserk!</beginLetter>
     <beginLetterLabel>berserk</beginLetterLabel>
-    <beginLetterDef>BadUrgent</beginLetterDef>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
     <nameColor>(0.9,0.2,0.5)</nameColor>
     <recoveryMessage>{0}'s berserk rage has come to an end.</recoveryMessage>
     <baseInspectLine>Mental state: Berserk</baseInspectLine>
@@ -52,11 +51,10 @@
     <minTicksBeforeRecovery>4000</minTicksBeforeRecovery>
     <maxTicksBeforeRecovery>15000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
-    <recoverFromDowned>true</recoverFromDowned>
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is on a fire starting spree.</beginLetter>
     <beginLetterLabel>fire starting spree</beginLetterLabel>
-    <beginLetterDef>BadUrgent</beginLetterDef>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
     <recoveryMessage>{0} is no longer on a fire starting spree.</recoveryMessage>
     <baseInspectLine>Mental state: Fire starting spree</baseInspectLine>
@@ -82,7 +80,7 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is leaving the colony.</beginLetter>
     <beginLetterLabel>gave up</beginLetterLabel>
-    <beginLetterDef>BadNonUrgent</beginLetterDef>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} has had a change of heart and is coming back to the colony.</recoveryMessage>
     <baseInspectLine>Mental state: Given up and leaving</baseInspectLine>
@@ -104,15 +102,109 @@
     <colonistsOnly>true</colonistsOnly>
     <allowBeatfire>true</allowBeatfire>
     <drugCategory>Hard</drugCategory>
+    <ignoreDrugPolicy>true</ignoreDrugPolicy>
     <recoveryMtbDays>0.6</recoveryMtbDays>
     <minTicksBeforeRecovery>20000</minTicksBeforeRecovery>
     <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
-    <recoverFromDowned>true</recoverFromDowned>
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
     <baseInspectLine>Mental state: Binging on {0}</baseInspectLine>
   </MentalStateDef>
+  <MentalBreakDef>
+    <defName>Catatonic</defName>
+    <label>catatonic</label>
+    <workerClass>MentalBreakWorker_Catatonic</workerClass>
+    <baseCommonality>0.3</baseCommonality>
+    <intensity>Extreme</intensity>
+  </MentalBreakDef>
+  <MentalBreakDef>
+    <defName>Jailbreaker</defName>
+    <mentalState>Jailbreaker</mentalState>
+    <baseCommonality>0.45</baseCommonality>
+    <intensity>Extreme</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>Jailbreaker</defName>
+    <label>inducing prisoner to escape</label>
+    <stateClass>MentalState_Jailbreaker</stateClass>
+    <workerClass>MentalStateWorker_Jailbreaker</workerClass>
+    <category>Misc</category>
+    <colonistsOnly>true</colonistsOnly>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.3</recoveryMtbDays>
+    <minTicksBeforeRecovery>40000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>40000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} has a mental breakdown and is going to induce prisoners to escape.</beginLetter>
+    <beginLetterLabel>jailbreaker</beginLetterLabel>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <nameColor>(0.8,0.36,1)</nameColor>
+    <recoveryMessage>{0} is no longer inducing prisoners to escape.</recoveryMessage>
+    <baseInspectLine>Mental state: Jailbreaker</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>Slaughterer</defName>
+    <mentalState>Slaughterer</mentalState>
+    <baseCommonality>0.68</baseCommonality>
+    <intensity>Extreme</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>Slaughterer</defName>
+    <label>slaughterer</label>
+    <stateClass>MentalState_Slaughterer</stateClass>
+    <workerClass>MentalStateWorker_Slaughterer</workerClass>
+    <category>Aggro</category>
+    <colonistsOnly>true</colonistsOnly>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.12</recoveryMtbDays>
+    <minTicksBeforeRecovery>5000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>15000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} has a mental breakdown and is going to vent HIS anger on your animals.</beginLetter>
+    <beginLetterLabel>slaughterer</beginLetterLabel>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <nameColor>(0.88,0.48,0.16)</nameColor>
+    <recoveryMessage>{0} is no longer slaughtering random animals.</recoveryMessage>
+    <baseInspectLine>Mental state: Slaughterer</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>MurderousRage</defName>
+    <mentalState>MurderousRage</mentalState>
+    <baseCommonality>0.38</baseCommonality>
+    <intensity>Extreme</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>MurderousRage</defName>
+    <label>murderous rage</label>
+    <stateClass>MentalState_MurderousRage</stateClass>
+    <workerClass>MentalStateWorker_MurderousRage</workerClass>
+    <category>Aggro</category>
+    <colonistsOnly>true</colonistsOnly>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.3</recoveryMtbDays>
+    <minTicksBeforeRecovery>100000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>100000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} is in a murderous rage. HECAP is going to kill {1}.</beginLetter>
+    <beginLetterLabel>murderous rage</beginLetterLabel>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <nameColor>(0.9,0.2,0.5)</nameColor>
+    <recoveryMessage>{0} is no longer in a murderous rage.</recoveryMessage>
+    <baseInspectLine>Mental state: Murderous rage</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>RunWild</defName>
+    <label>run wild</label>
+    <workerClass>MentalBreakWorker_RunWild</workerClass>
+    <baseCommonality>0.05</baseCommonality>
+    <intensity>Extreme</intensity>
+  </MentalBreakDef>
   <!-- Mental breaks: major -->
   <MentalBreakDef ParentName="BingingDrugExtremeBreak">
     <defName>BingingDrugMajor</defName>
@@ -131,11 +223,11 @@
     <colonistsOnly>true</colonistsOnly>
     <allowBeatfire>true</allowBeatfire>
     <drugCategory>Social</drugCategory>
+    <ignoreDrugPolicy>true</ignoreDrugPolicy>
     <recoveryMtbDays>0.6</recoveryMtbDays>
     <minTicksBeforeRecovery>20000</minTicksBeforeRecovery>
     <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
-    <recoverFromDowned>true</recoverFromDowned>
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
     <baseInspectLine>Mental state: Binging on {0}</baseInspectLine>
@@ -160,10 +252,147 @@
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is wandering around in a psychotic state.</beginLetter>
     <beginLetterLabel>daze</beginLetterLabel>
-    <beginLetterDef>BadNonUrgent</beginLetterDef>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer wandering in a psychotic state.</recoveryMessage>
     <baseInspectLine>Mental state: Psychotic wandering</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>Tantrum</defName>
+    <mentalState>Tantrum</mentalState>
+    <baseCommonality>0.29</baseCommonality>
+    <intensity>Major</intensity>
+  </MentalBreakDef>
+  <MentalStateDef Name="Tantrum" ParentName="BaseMentalState">
+    <defName>Tantrum</defName>
+    <label>tantrum</label>
+    <stateClass>MentalState_TantrumAll</stateClass>
+    <workerClass>MentalStateWorker_TantrumAll</workerClass>
+    <category>Aggro</category>
+    <colonistsOnly>true</colonistsOnly>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.078</recoveryMtbDays>
+    <minTicksBeforeRecovery>6200</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>9000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} is having a tantrum.</beginLetter>
+    <beginLetterLabel>tantrum</beginLetterLabel>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <nameColor>(0.98,0.48,0.16)</nameColor>
+    <recoveryMessage>{0} is no longer having a tantrum.</recoveryMessage>
+    <baseInspectLine>Mental state: Tantrum</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>TargetedTantrum</defName>
+    <mentalState>TargetedTantrum</mentalState>
+    <baseCommonality>0.23</baseCommonality>
+    <intensity>Major</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="Tantrum">
+    <defName>TargetedTantrum</defName>
+    <label>tantrum</label>
+    <stateClass>MentalState_TargetedTantrum</stateClass>
+    <workerClass>MentalStateWorker_TargetedTantrum</workerClass>
+    <category>Aggro</category>
+    <colonistsOnly>true</colonistsOnly>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.15</recoveryMtbDays>
+    <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>45000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} is having a tantrum. HECAP is going to destroy {1}.</beginLetter>
+    <beginLetterLabel>tantrum</beginLetterLabel>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <nameColor>(0.98,0.48,0.16)</nameColor>
+    <recoveryMessage>{0} is no longer having a tantrum.</recoveryMessage>
+    <baseInspectLine>Mental state: Tantrum</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>BedroomTantrum</defName>
+    <mentalState>BedroomTantrum</mentalState>
+    <baseCommonality>0.29</baseCommonality>
+    <intensity>Major</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="Tantrum">
+    <defName>BedroomTantrum</defName>
+    <label>tantrum</label>
+    <stateClass>MentalState_BedroomTantrum</stateClass>
+    <workerClass>MentalStateWorker_BedroomTantrum</workerClass>
+    <category>Aggro</category>
+    <colonistsOnly>true</colonistsOnly>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.078</recoveryMtbDays>
+    <minTicksBeforeRecovery>6200</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>9000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} is having a tantrum. HECAP is going to smash furniture in HIS room.</beginLetter>
+    <beginLetterLabel>tantrum</beginLetterLabel>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <nameColor>(0.98,0.48,0.16)</nameColor>
+    <recoveryMessage>{0} is no longer having a tantrum.</recoveryMessage>
+    <baseInspectLine>Mental state: Tantrum</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>SadisticRage</defName>
+    <mentalState>SadisticRage</mentalState>
+    <baseCommonality>0.21</baseCommonality>
+    <intensity>Major</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="Tantrum">
+    <defName>SadisticRage</defName>
+    <label>sadistic rage</label>
+    <stateClass>MentalState_SadisticRageTantrum</stateClass>
+    <workerClass>MentalStateWorker_SadisticRageTantrum</workerClass>
+    <category>Aggro</category>
+    <colonistsOnly>true</colonistsOnly>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.078</recoveryMtbDays>
+    <minTicksBeforeRecovery>6200</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>14000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} is in a sadistic rage. HECAP is going to vent HIS anger on the prisoners.</beginLetter>
+    <beginLetterLabel>sadistic rage</beginLetterLabel>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <nameColor>(0.98,0.48,0.16)</nameColor>
+    <recoveryMessage>{0} is no longer in a sadistic rage.</recoveryMessage>
+    <baseInspectLine>Mental state: Sadistic rage</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>CorpseObsession</defName>
+    <mentalState>CorpseObsession</mentalState>
+    <baseCommonality>0.11</baseCommonality>
+    <intensity>Major</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>CorpseObsession</defName>
+    <label>corpse obsession</label>
+    <stateClass>MentalState_CorpseObsession</stateClass>
+    <workerClass>MentalStateWorker_CorpseObsession</workerClass>
+    <category>Misc</category>
+    <colonistsOnly>true</colonistsOnly>
+    <requiredCapacities>
+      <li ListIndex="0">Manipulation</li>
+    </requiredCapacities>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.2</recoveryMtbDays>
+    <minTicksBeforeRecovery>40000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>55000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} is having a corpse obsession. HECAP is going to dig up a corpse.</beginLetter>
+    <beginLetterLabel>corpse obsession</beginLetterLabel>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <nameColor>(0.8,0.36,1)</nameColor>
+    <recoveryMessage>{0} is no longer having a corpse obsession.</recoveryMessage>
+    <baseInspectLine>Mental state: Corpse obsession</baseInspectLine>
   </MentalStateDef>
   <!-- Mental breaks: minor -->
   <MentalBreakDef>
@@ -185,11 +414,10 @@
     <minTicksBeforeRecovery>20000</minTicksBeforeRecovery>
     <maxTicksBeforeRecovery>40000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
-    <recoverFromDowned>true</recoverFromDowned>
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is pigging out on food.</beginLetter>
     <beginLetterLabel>food binge</beginLetterLabel>
-    <beginLetterDef>BadNonUrgent</beginLetterDef>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
     <recoveryMessage>{0} is no longer pigging out on food.</recoveryMessage>
     <baseInspectLine>Mental state: Pigging out</baseInspectLine>
@@ -213,11 +441,10 @@
     <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
     <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
-    <recoverFromDowned>true</recoverFromDowned>
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is wandering around in sadness.</beginLetter>
     <beginLetterLabel>sad wander</beginLetterLabel>
-    <beginLetterDef>BadNonUrgent</beginLetterDef>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer wandering in sadness.</recoveryMessage>
     <baseInspectLine>Mental state: Sad wandering</baseInspectLine>
@@ -241,13 +468,72 @@
     <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
     <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
-    <recoverFromDowned>true</recoverFromDowned>
     <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <beginLetter>{0} is hiding in HIS room.</beginLetter>
     <beginLetterLabel>hide in room</beginLetterLabel>
-    <beginLetterDef>BadNonUrgent</beginLetterDef>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer hiding in HIS room.</recoveryMessage>
     <baseInspectLine>Mental state: Hiding in room</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>InsultingSpree</defName>
+    <mentalState>InsultingSpree</mentalState>
+    <baseCommonality>0.22</baseCommonality>
+    <intensity>Minor</intensity>
+  </MentalBreakDef>
+  <MentalStateDef Name="InsultingSpree" ParentName="BaseMentalState">
+    <defName>InsultingSpree</defName>
+    <label>insulting spree</label>
+    <stateClass>MentalState_InsultingSpreeAll</stateClass>
+    <workerClass>MentalStateWorker_InsultingSpreeAll</workerClass>
+    <category>Misc</category>
+    <colonistsOnly>true</colonistsOnly>
+    <requiredCapacities>
+      <li ListIndex="0">Talking</li>
+    </requiredCapacities>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.1</recoveryMtbDays>
+    <minTicksBeforeRecovery>8300</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>13000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} is on an insulting spree.</beginLetter>
+    <beginLetterLabel>insulting spree</beginLetterLabel>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <nameColor>(0.98,0.48,0.16)</nameColor>
+    <recoveryMessage>{0} is no longer on an insulting spree.</recoveryMessage>
+    <baseInspectLine>Mental state: Insulting spree</baseInspectLine>
+  </MentalStateDef>
+  <MentalBreakDef>
+    <defName>TargetedInsultingSpree</defName>
+    <mentalState>TargetedInsultingSpree</mentalState>
+    <baseCommonality>0.2</baseCommonality>
+    <intensity>Minor</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="InsultingSpree">
+    <defName>TargetedInsultingSpree</defName>
+    <label>insulting spree</label>
+    <stateClass>MentalState_TargetedInsultingSpree</stateClass>
+    <workerClass>MentalStateWorker_TargetedInsultingSpree</workerClass>
+    <category>Misc</category>
+    <colonistsOnly>true</colonistsOnly>
+    <requiredCapacities>
+      <li ListIndex="0">Talking</li>
+    </requiredCapacities>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <allowBeatfire>true</allowBeatfire>
+    <recoveryMtbDays>0.1</recoveryMtbDays>
+    <minTicksBeforeRecovery>8300</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>13000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <beginLetter>{0} is on an insulting spree against {1}.</beginLetter>
+    <beginLetterLabel>insulting spree</beginLetterLabel>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <nameColor>(0.98,0.48,0.16)</nameColor>
+    <recoveryMessage IsNull="True" />
+    <baseInspectLine>Mental state: Insulting spree against {0}</baseInspectLine>
   </MentalStateDef>
 </Defs>

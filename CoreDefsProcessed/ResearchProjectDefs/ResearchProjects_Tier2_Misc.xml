@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ResearchProjectDefs>
+<Defs>
   <!--================================ Tier 2: Non-electric ====================================-->
   <ResearchProjectDef>
     <defName>PsychiteRefining</defName>
@@ -10,6 +10,7 @@
     <prerequisites>
       <li ListIndex="0">DrugProduction</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>2</researchViewX>
     <researchViewY>0.5</researchViewY>
   </ResearchProjectDef>
@@ -22,6 +23,7 @@
     <prerequisites>
       <li ListIndex="0">DrugProduction</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>2</researchViewX>
     <researchViewY>1.25</researchViewY>
   </ResearchProjectDef>
@@ -34,6 +36,7 @@
     <prerequisites>
       <li ListIndex="0">DrugProduction</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>2</researchViewX>
     <researchViewY>2</researchViewY>
   </ResearchProjectDef>
@@ -46,8 +49,36 @@
     <prerequisites>
       <li ListIndex="0">DrugProduction</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>2</researchViewX>
     <researchViewY>2.75</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>LongBlades</defName>
+    <label>long blades</label>
+    <description>Craft longswords and spears.</description>
+    <techLevel>Medieval</techLevel>
+    <baseCost>500</baseCost>
+    <prerequisites>
+      <li ListIndex="0">Smithing</li>
+    </prerequisites>
+    <tab>Main</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Greatbows</defName>
+    <label>greatbows</label>
+    <description>Learn to produce powerful greatbows.</description>
+    <techLevel>Medieval</techLevel>
+    <baseCost>800</baseCost>
+    <prerequisites>
+      <li ListIndex="0">RecurveBow</li>
+      <li ListIndex="1">Smithing</li>
+    </prerequisites>
+    <tab>Main</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>5</researchViewY>
   </ResearchProjectDef>
   <!--================================ Tier 2: Basic electricity ====================================-->
   <ResearchProjectDef>
@@ -62,6 +93,7 @@
     <tags>
       <li ListIndex="0">ClassicStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>4</researchViewX>
     <researchViewY>1.25</researchViewY>
   </ResearchProjectDef>
@@ -74,8 +106,9 @@
     <prerequisites>
       <li ListIndex="0">Electricity</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>4</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewY>3.6</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>NutrientPaste</defName>
@@ -89,6 +122,7 @@
     <tags>
       <li ListIndex="0">ClassicStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>5</researchViewX>
     <researchViewY>0.5</researchViewY>
   </ResearchProjectDef>
@@ -104,6 +138,7 @@
     <tags>
       <li ListIndex="0">ClassicStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>4</researchViewX>
     <researchViewY>2</researchViewY>
   </ResearchProjectDef>
@@ -119,8 +154,9 @@
     <tags>
       <li ListIndex="0">ClassicStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>4</researchViewX>
-    <researchViewY>3</researchViewY>
+    <researchViewY>2.9</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Autodoors</defName>
@@ -131,8 +167,9 @@
     <prerequisites>
       <li ListIndex="0">Electricity</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>5</researchViewX>
-    <researchViewY>3</researchViewY>
+    <researchViewY>2.9</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Hydroponics</defName>
@@ -143,6 +180,7 @@
     <prerequisites>
       <li ListIndex="0">Electricity</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>4</researchViewX>
     <researchViewY>0.5</researchViewY>
   </ResearchProjectDef>
@@ -155,6 +193,7 @@
     <prerequisites>
       <li ListIndex="0">Electricity</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>5</researchViewX>
     <researchViewY>1.25</researchViewY>
   </ResearchProjectDef>
@@ -167,6 +206,7 @@
     <prerequisites>
       <li ListIndex="0">NutrientPaste</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>6</researchViewX>
     <researchViewY>0.5</researchViewY>
   </ResearchProjectDef>
@@ -179,6 +219,7 @@
     <prerequisites>
       <li ListIndex="0">ElectricSmelting</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>6</researchViewX>
     <researchViewY>1.25</researchViewY>
   </ResearchProjectDef>
@@ -191,6 +232,7 @@
     <prerequisites>
       <li ListIndex="0">Electricity</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>5</researchViewX>
     <researchViewY>2</researchViewY>
   </ResearchProjectDef>
@@ -199,37 +241,40 @@
     <label>machining</label>
     <description>Build machining tables to craft guns and machinery or disassemble dead mechanoids.</description>
     <techLevel>Industrial</techLevel>
-    <baseCost>1500</baseCost>
+    <baseCost>800</baseCost>
     <prerequisites>
       <li ListIndex="0">Electricity</li>
       <li ListIndex="1">Smithing</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>4</researchViewX>
     <researchViewY>5</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
-    <defName>IEDBomb</defName>
-    <label>Explosive IEDs</label>
+    <defName>IEDs</defName>
+    <label>IEDs</label>
     <description>Allows colonists to build improvised explosive device-based traps from mortar shells.</description>
     <techLevel>Industrial</techLevel>
     <baseCost>1600</baseCost>
     <prerequisites>
       <li ListIndex="0">Electricity</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>6</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewY>3.6</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>IEDIncendiary</defName>
-    <label>Incendiary IEDs</label>
+    <label>incendiary IEDs</label>
     <description>Allows colonists to build incendiary explosive traps from mortar shells.</description>
     <techLevel>Industrial</techLevel>
     <baseCost>1600</baseCost>
     <prerequisites>
       <li ListIndex="0">Electricity</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>6</researchViewX>
-    <researchViewY>5</researchViewY>
+    <researchViewY>4.3</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Mortars</defName>
@@ -240,7 +285,60 @@
     <prerequisites>
       <li ListIndex="0">Machining</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>5</researchViewX>
+    <researchViewY>4.3</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Gunsmithing</defName>
+    <label>gunsmithing</label>
+    <description>Craft simple manually operated guns like revolvers, pump shotguns, bolt-action rifles, and incendiary launchers.</description>
+    <techLevel>Industrial</techLevel>
+    <baseCost>1000</baseCost>
+    <prerequisites>
+      <li ListIndex="0">Machining</li>
+    </prerequisites>
+    <tab>Main</tab>
+    <researchViewX>5</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>BlowbackOperation</defName>
+    <label>blowback operation</label>
+    <description>Craft simple semi-automatic and automatic guns like autopistols, machine pistols, and heavy SMGs.</description>
+    <techLevel>Industrial</techLevel>
+    <baseCost>1000</baseCost>
+    <prerequisites>
+      <li ListIndex="0">Gunsmithing</li>
+    </prerequisites>
+    <tab>Main</tab>
+    <researchViewX>6</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>GasOperation</defName>
+    <label>gas operation</label>
+    <description>Craft more advanced semi-automatic and automatic guns like chain shotguns and LMGs.</description>
+    <techLevel>Industrial</techLevel>
+    <baseCost>1500</baseCost>
+    <prerequisites>
+      <li ListIndex="0">BlowbackOperation</li>
+    </prerequisites>
+    <tab>Main</tab>
+    <researchViewX>7</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PrecisionRifling</defName>
+    <label>precision rifling</label>
+    <description>Craft assault rifles and sniper rifles.</description>
+    <techLevel>Industrial</techLevel>
+    <baseCost>2000</baseCost>
+    <prerequisites>
+      <li ListIndex="0">GasOperation</li>
+    </prerequisites>
+    <tab>Main</tab>
+    <researchViewX>8</researchViewX>
     <researchViewY>5</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
@@ -253,8 +351,9 @@
       <li ListIndex="0">Machining</li>
       <li ListIndex="1">Refining</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>5</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewY>3.6</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>MicroelectronicsBasics</defName>
@@ -264,7 +363,9 @@
     <baseCost>700</baseCost>
     <prerequisites>
       <li ListIndex="0">Electricity</li>
+      <li ListIndex="1">Machining</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>6</researchViewX>
     <researchViewY>2.5</researchViewY>
   </ResearchProjectDef>
@@ -278,8 +379,9 @@
     <prerequisites>
       <li ListIndex="0">MicroelectronicsBasics</li>
     </prerequisites>
+    <tab>Main</tab>
     <researchViewX>7</researchViewX>
-    <researchViewY>5</researchViewY>
+    <researchViewY>3.6</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>GunTurrets</defName>
@@ -289,8 +391,10 @@
     <baseCost>800</baseCost>
     <prerequisites>
       <li ListIndex="0">MicroelectronicsBasics</li>
+      <li ListIndex="1">BlowbackOperation</li>
     </prerequisites>
-    <researchViewX>8</researchViewX>
-    <researchViewY>5</researchViewY>
+    <tab>Main</tab>
+    <researchViewX>7</researchViewX>
+    <researchViewY>4.3</researchViewY>
   </ResearchProjectDef>
-</ResearchProjectDefs>
+</Defs>

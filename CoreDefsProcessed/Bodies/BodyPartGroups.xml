@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BodyPartGroupDefs>
+<Defs>
   <BodyPartGroupDef>
     <defName>Torso</defName>
     <label>torso</label>
@@ -131,4 +131,4 @@
     <defName>Beak</defName>
     <label>beak</label>
   </BodyPartGroupDef>
-</BodyPartGroupDefs>
+</Defs>

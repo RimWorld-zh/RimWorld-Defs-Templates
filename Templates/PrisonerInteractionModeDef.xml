@@ -5,7 +5,11 @@
     <!--Default Value: "UnnamedDef"-->
     <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
     <defName>string_value</defName>
+    <!--Type: string-->
+    <!--Desc: A human-readable label used to identify this in game.-->
+    <label>string_value</label>
     <!--Type: int-->
+    <!--Default Value: 0-->
     <listOrder>int_value</listOrder>
   </PrisonerInteractionModeDef>
 </Defs>

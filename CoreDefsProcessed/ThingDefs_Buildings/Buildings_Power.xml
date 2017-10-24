@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Buildings>
+<Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>PowerConduit</defName>
     <label>power conduit</label>
@@ -20,6 +20,7 @@
       <li ListIndex="0">Electricity</li>
     </researchPrerequisites>
     <placingDraggableDimensions>1</placingDraggableDimensions>
+    <clearBuildingArea>false</clearBuildingArea>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructMetal</constructEffect>
     <uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
@@ -61,7 +62,6 @@
     <building>
       <isEdifice>false</isEdifice>
       <isInert>true</isInert>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <ai_chillDestination>false</ai_chillDestination>
     </building>
   </ThingDef>
@@ -117,14 +117,13 @@
     <neverMultiSelect>false</neverMultiSelect>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <allowWireConnection>false</allowWireConnection>
       <ai_chillDestination>false</ai_chillDestination>
     </building>
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
-    <defName>FueledGenerator</defName>
-    <label>fueled generator</label>
+    <defName>WoodFiredGenerator</defName>
+    <label>wood-fired generator</label>
     <description>Produces power by consuming wood fuel. Must be fueled by hand.</description>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
@@ -142,6 +141,7 @@
     <researchPrerequisites>
       <li ListIndex="0">Electricity</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructMetal</constructEffect>
     <altitudeLayer>Building</altitudeLayer>
@@ -182,7 +182,7 @@
     <filthLeaving>BuildingRubble</filthLeaving>
     <canOverlapZones>false</canOverlapZones>
     <graphicData>
-      <texPath>Things/Building/Power/FueledGenerator</texPath>
+      <texPath>Things/Building/Power/WoodFiredGenerator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
@@ -193,9 +193,92 @@
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <fillPercent>1.0</fillPercent>
     <blockWind>true</blockWind>
-    <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ChemfuelPoweredGenerator</defName>
+    <label>chemfuel powered generator</label>
+    <description>Produces power by consuming chemfuel. Must be fueled by hand.</description>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>150</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>3</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">Electricity</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <repairEffect>Repair</repairEffect>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerPlant</compClass>
+        <transmitsPower>true</transmitsPower>
+        <basePowerConsumption>-1000</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" ListIndex="1" />
+      <li Class="CompProperties_Refuelable" ListIndex="2">
+        <fuelConsumptionRate>4.0</fuelConsumptionRate>
+        <fuelCapacity>25.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li ListIndex="0">Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="3">
+        <glowRadius>6</glowRadius>
+        <glowColor>(80,112,180,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher" ListIndex="4">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>3</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="5" />
+      <li Class="CompProperties_Explosive" ListIndex="6">
+        <explosiveRadius>0</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>70</min>
+          <max>150</max>
+        </wickTicks>
+        <destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Power/ChemfuelPoweredGenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1.0</fillPercent>
+    <blockWind>true</blockWind>
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>Battery</defName>
@@ -259,9 +342,6 @@
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <fillPercent>0.40</fillPercent>
     <blockWind>true</blockWind>
-    <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-    </building>
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>SolarGenerator</defName>
@@ -284,6 +364,7 @@
       <li ListIndex="0">Electricity</li>
       <li ListIndex="1">SolarPanels</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructMetal</constructEffect>
     <altitudeLayer>Building</altitudeLayer>
@@ -318,9 +399,6 @@
     <selectable>true</selectable>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <fillPercent>0.5</fillPercent>
-    <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-    </building>
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>GeothermalGenerator</defName>
@@ -342,6 +420,7 @@
     <researchPrerequisites>
       <li ListIndex="0">GeothermalPower</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructMetal</constructEffect>
     <altitudeLayer>Building</altitudeLayer>
@@ -385,8 +464,7 @@
     <blockWind>true</blockWind>
     <building>
       <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <ai_chillDestination>false</ai_chillDestination>
     </building>
   </ThingDef>
-</Buildings>
+</Defs>

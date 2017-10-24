@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecipeDefs>
+<Defs>
   <RecipeDef>
     <defName>CremateCorpse</defName>
     <label>cremate corpse</label>
@@ -112,4 +112,4 @@
     <soundWorking>Recipe_Cremate</soundWorking>
     <conceptLearned>DrugBurning</conceptLearned>
   </RecipeDef>
-</RecipeDefs>
+</Defs>

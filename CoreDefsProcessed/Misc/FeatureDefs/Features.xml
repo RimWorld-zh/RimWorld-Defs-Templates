@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- Important named landforms, before everything else -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <FeatureDef>
+    <defName>Island</defName>
+    <workerClass>FeatureWorker_Island</workerClass>
+    <order>10</order>
+    <minSize>15</minSize>
+    <maxSize>350</maxSize>
+    <nameMaker>NamerIsland</nameMaker>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>Archipelago</defName>
+    <workerClass>FeatureWorker_Archipelago</workerClass>
+    <order>20</order>
+    <nameMaker>NamerArchipelago</nameMaker>
+    <minRootGroupSize>3</minRootGroupSize>
+    <maxRootGroupSize>75</maxRootGroupSize>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>Peninsula</defName>
+    <workerClass>FeatureWorker_Peninsula</workerClass>
+    <order>30</order>
+    <minSize>30</minSize>
+    <maxSize>400</maxSize>
+    <nameMaker>NamerPeninsula</nameMaker>
+  </FeatureDef>
+  <!-- - - - - - -  -->
+  <!-- Water bodies -->
+  <!-- - - - - - -  -->
+  <!-- The most specific water body: bay -->
+  <FeatureDef>
+    <defName>Bay</defName>
+    <workerClass>FeatureWorker_Bay</workerClass>
+    <order>100</order>
+    <minSize>30</minSize>
+    <maxSize>1500</maxSize>
+    <canTouchWorldEdge>false</canTouchWorldEdge>
+    <!-- if it does then it's an ocean -->
+    <nameMaker>NamerBay</nameMaker>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>Lake</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>110</order>
+    <minSize>3</minSize>
+    <nameMaker>NamerLake</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">Lake</li>
+    </rootBiomes>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>Sea</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>120</order>
+    <minSize>15</minSize>
+    <maxSize>1500</maxSize>
+    <canTouchWorldEdge>false</canTouchWorldEdge>
+    <!-- if it does then it's an ocean -->
+    <nameMaker>NamerSea</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">Ocean</li>
+    </rootBiomes>
+  </FeatureDef>
+  <!-- This handles oceans reachable from other oceans. -->
+  <!-- its purpose is to handle worlds with 2 or more huge water bodies with only a narrow passage between them, normally this would be 1 huge ocean (because they're too big to be normal bays) -->
+  <FeatureDef>
+    <defName>OceanBay</defName>
+    <workerClass>FeatureWorker_Bay</workerClass>
+    <order>130</order>
+    <minSize>8000</minSize>
+    <nameMaker>NamerOcean</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">Ocean</li>
+    </rootBiomes>
+    <maxPassageWidth>12</maxPassageWidth>
+    <maxPctOfWholeArea>0.5</maxPctOfWholeArea>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>Ocean</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>140</order>
+    <minSize>1500</minSize>
+    <nameMaker>NamerOcean</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">Ocean</li>
+    </rootBiomes>
+  </FeatureDef>
+  <!-- Since some parts of the planet are ungenerated, we assume that all unassigned water tiles reachable from the world edge are the same huge ocean. -->
+  <FeatureDef>
+    <defName>OuterOcean</defName>
+    <workerClass>FeatureWorker_OuterOcean</workerClass>
+    <order>150</order>
+    <minSize>15</minSize>
+    <nameMaker>NamerOcean</nameMaker>
+  </FeatureDef>
+  <!-- - - - - - - - - - - - - -  -->
+  <!-- Important on-land features -->
+  <!-- - - - - - - - - - - - - -  -->
+  <FeatureDef>
+    <defName>MountainRange</defName>
+    <workerClass>FeatureWorker_MountainRange</workerClass>
+    <order>200</order>
+    <minSize>150</minSize>
+    <nameMaker>NamerMountainRange</nameMaker>
+    <maxSpaceBetweenRootGroups>1</maxSpaceBetweenRootGroups>
+    <minRootGroupsInCluster>1</minRootGroupsInCluster>
+    <minRootGroupSize>3</minRootGroupSize>
+  </FeatureDef>
+  <!-- - - - - - - - - - -  -->
+  <!-- High-priority biomes -->
+  <!-- - - - - - - - - - -  -->
+  <FeatureDef>
+    <defName>Desert</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>300</order>
+    <nameMaker>NamerDesert</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">Desert</li>
+      <li ListIndex="1">ExtremeDesert</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">AridShrubland</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <!-- Swamps before forests, because forests can also contain small or medium swamps, so we want to assign names to big swamps first. -->
+  <FeatureDef>
+    <defName>TemperateSwamp</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>310</order>
+    <nameMaker>NamerSwamp</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">TemperateSwamp</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">TropicalSwamp</li>
+      <li ListIndex="1">ColdBog</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>TropicalSwamp</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>320</order>
+    <nameMaker>NamerSwamp</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">TropicalSwamp</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">TemperateSwamp</li>
+      <li ListIndex="1">ColdBog</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>ColdBog</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>330</order>
+    <nameMaker>NamerSwamp</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">ColdBog</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">TemperateSwamp</li>
+      <li ListIndex="1">TropicalSwamp</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <!-- - - - - - - - - - - -->
+  <!-- Low-priority biomes -->
+  <!-- - - - - - - - - - - -->
+  <FeatureDef>
+    <defName>TemperateForest</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>400</order>
+    <nameMaker>NamerForest</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">TemperateForest</li>
+      <li ListIndex="1">TemperateSwamp</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">BorealForest</li>
+      <li ListIndex="1">TropicalRainforest</li>
+      <li ListIndex="2">TropicalSwamp</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>TropicalRainforest</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>410</order>
+    <nameMaker>NamerForest</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">TropicalRainforest</li>
+      <li ListIndex="1">TropicalSwamp</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">BorealForest</li>
+      <li ListIndex="1">TemperateForest</li>
+      <li ListIndex="2">TemperateSwamp</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>BorealForest</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>420</order>
+    <nameMaker>NamerForest</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">BorealForest</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">TemperateForest</li>
+      <li ListIndex="1">TemperateSwamp</li>
+      <li ListIndex="2">TropicalRainforest</li>
+      <li ListIndex="3">TropicalSwamp</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>AridShrubland</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>430</order>
+    <nameMaker>NamerAridShrubland</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">AridShrubland</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">Tundra</li>
+      <li ListIndex="1">Desert</li>
+      <li ListIndex="2">ExtremeDesert</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>IceSheet</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>440</order>
+    <nameMaker>NamerIceSheet</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">IceSheet</li>
+      <li ListIndex="1">SeaIce</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">Tundra</li>
+    </acceptableBiomes>
+  </FeatureDef>
+  <FeatureDef>
+    <defName>Tundra</defName>
+    <workerClass>FeatureWorker_Biome</workerClass>
+    <order>450</order>
+    <nameMaker>NamerTundra</nameMaker>
+    <rootBiomes>
+      <li ListIndex="0">Tundra</li>
+    </rootBiomes>
+    <acceptableBiomes>
+      <li ListIndex="0">AridShrubland</li>
+      <li ListIndex="1">IceSheet</li>
+      <li ListIndex="2">SeaIce</li>
+    </acceptableBiomes>
+  </FeatureDef>
+</Defs>

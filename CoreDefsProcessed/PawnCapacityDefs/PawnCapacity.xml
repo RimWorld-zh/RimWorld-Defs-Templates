@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnCapacityDefs>
+<Defs>
   <PawnCapacityDef>
     <defName>Consciousness</defName>
     <label>consciousness</label>
@@ -89,4 +89,4 @@
     <showOnMechanoids>false</showOnMechanoids>
     <lethalFlesh>true</lethalFlesh>
   </PawnCapacityDef>
-</PawnCapacityDefs>
+</Defs>

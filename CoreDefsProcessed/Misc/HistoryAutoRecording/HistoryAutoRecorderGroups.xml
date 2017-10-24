@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HistoryAutoRecorderGroupDefs>
+<Defs>
   <HistoryAutoRecorderGroupDef>
     <defName>Wealth</defName>
     <label>wealth</label>
-    <graphLabelY>Amount</graphLabelY>
     <historyAutoRecorderDefs>
       <li ListIndex="0">WealthTotal</li>
       <li ListIndex="1">WealthItems</li>
@@ -13,7 +12,7 @@
   <HistoryAutoRecorderGroupDef>
     <defName>Population</defName>
     <label>population</label>
-    <graphLabelY>Colonists</graphLabelY>
+    <integersOnly>true</integersOnly>
     <historyAutoRecorderDefs>
       <li ListIndex="0">FreeColonists</li>
       <li ListIndex="1">Prisoners</li>
@@ -22,7 +21,6 @@
   <HistoryAutoRecorderGroupDef>
     <defName>ColonistMood</defName>
     <label>colonist mood</label>
-    <graphLabelY>Percent</graphLabelY>
     <useFixedScale>true</useFixedScale>
     <fixedScale>(0, 100)</fixedScale>
     <historyAutoRecorderDefs>
@@ -30,4 +28,4 @@
       <!--<li>ColonistFear</li>-->
     </historyAutoRecorderDefs>
   </HistoryAutoRecorderGroupDef>
-</HistoryAutoRecorderGroupDefs>
+</Defs>

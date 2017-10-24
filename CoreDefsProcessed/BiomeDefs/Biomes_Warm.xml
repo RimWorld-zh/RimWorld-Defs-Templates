@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BiomeDef>
+    <defName>TropicalRainforest</defName>
+    <label>tropical rainforest</label>
+    <description>A thick, moist jungle. Despite its visual beauty, this is a very dangerous biome. Choking overgrowth, aggressive animals, and constant disease are why some explorers call this the "green hell".</description>
+    <workerClass>BiomeWorker_TropicalRainforest</workerClass>
+    <animalDensity>4.0</animalDensity>
+    <plantDensity>0.85</plantDensity>
+    <diseaseMtbDays>30</diseaseMtbDays>
+    <factionBaseSelectionWeight>0.7</factionBaseSelectionWeight>
+    <pathCost_spring>11000</pathCost_spring>
+    <pathCost_summer>11000</pathCost_summer>
+    <pathCost_fall>11000</pathCost_fall>
+    <pathCost_winter>11000</pathCost_winter>
+    <baseWeatherCommonalities>
+      <Clear>18</Clear>
+      <Fog>1</Fog>
+      <Rain>2</Rain>
+      <DryThunderstorm>0.3</DryThunderstorm>
+      <RainyThunderstorm>1.7</RainyThunderstorm>
+      <FoggyRain>1</FoggyRain>
+      <SnowGentle>4</SnowGentle>
+      <SnowHard>4</SnowHard>
+    </baseWeatherCommonalities>
+    <terrainsByFertility>
+      <li ListIndex="0">
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.87</max>
+      </li>
+      <li ListIndex="1">
+        <terrain>SoilRich</terrain>
+        <min>0.87</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <soundsAmbient>
+      <li ListIndex="0">AmbientNightInsects_Jungle</li>
+      <li ListIndex="1">AmbientDayInsects_Jungle</li>
+    </soundsAmbient>
+    <terrainPatchMakers>
+      <li ListIndex="0">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>MarshyTerrain</terrain>
+            <min>0.7</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.04</perlinFrequency>
+      </li>
+      <li ListIndex="1">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>MarshyTerrain</terrain>
+            <min>0.64</min>
+            <max>0.87</max>
+          </li>
+          <li ListIndex="1">
+            <terrain>Marsh</terrain>
+            <min>0.87</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.035</perlinFrequency>
+      </li>
+    </terrainPatchMakers>
+    <wildPlants>
+      <PlantTallGrass>2.0</PlantTallGrass>
+      <PlantShrubLow>2.0</PlantShrubLow>
+      <PlantGrass>3.0</PlantGrass>
+      <PlantAlocasia>0.8</PlantAlocasia>
+      <PlantTreeCecropia>0.3</PlantTreeCecropia>
+      <PlantTreePalm>0.3</PlantTreePalm>
+      <PlantTreeBamboo>0.3</PlantTreeBamboo>
+      <PlantTreeTeak>0.2</PlantTreeTeak>
+      <PlantBush>0.15</PlantBush>
+      <PlantClivia>0.07</PlantClivia>
+      <PlantRafflesia>0.0008</PlantRafflesia>
+    </wildPlants>
+    <wildAnimals>
+      <Rat>1</Rat>
+      <Monkey>1</Monkey>
+      <WildBoar>1</WildBoar>
+      <Boomalope>0.7</Boomalope>
+      <Capybara>0.7</Capybara>
+      <Cassowary>0.7</Cassowary>
+      <Tortoise>0.6</Tortoise>
+      <Chinchilla>0.6</Chinchilla>
+      <Alpaca>0.5</Alpaca>
+      <Turkey>0.2</Turkey>
+      <Emu>0.2</Emu>
+      <Cobra>0.17</Cobra>
+      <Panther>0.09</Panther>
+      <Elephant>0.1</Elephant>
+    </wildAnimals>
+    <diseases>
+      <li ListIndex="0">
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="1">
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="2">
+        <diseaseInc>Disease_Malaria</diseaseInc>
+        <commonality>160</commonality>
+      </li>
+      <li ListIndex="3">
+        <diseaseInc>Disease_SleepingSickness</diseaseInc>
+        <commonality>140</commonality>
+      </li>
+      <li ListIndex="4">
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="5">
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="6">
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li ListIndex="7">
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+    </diseases>
+    <allowedPackAnimals>
+      <li ListIndex="0">Muffalo</li>
+      <li ListIndex="1">Elephant</li>
+      <li ListIndex="2">Alpaca</li>
+    </allowedPackAnimals>
+    <texture>World/Biomes/TropicalRainforest</texture>
+  </BiomeDef>
+  <BiomeDef>
+    <defName>TropicalSwamp</defName>
+    <label>tropical swamp</label>
+    <description>A thick jungle with lots of marsh and mud. Difficult movement, little space to build heavy structures, aggresive animals, and constant diseases make living here a nightmare.</description>
+    <workerClass>BiomeWorker_TropicalSwamp</workerClass>
+    <canAutoChoose>false</canAutoChoose>
+    <animalDensity>4.0</animalDensity>
+    <plantDensity>0.85</plantDensity>
+    <diseaseMtbDays>30</diseaseMtbDays>
+    <factionBaseSelectionWeight>0.4</factionBaseSelectionWeight>
+    <pathCost_spring>15000</pathCost_spring>
+    <pathCost_summer>15000</pathCost_summer>
+    <pathCost_fall>15000</pathCost_fall>
+    <pathCost_winter>15000</pathCost_winter>
+    <baseWeatherCommonalities>
+      <Clear>18</Clear>
+      <Fog>1</Fog>
+      <Rain>2</Rain>
+      <DryThunderstorm>0.3</DryThunderstorm>
+      <RainyThunderstorm>1.7</RainyThunderstorm>
+      <FoggyRain>1</FoggyRain>
+      <SnowGentle>4</SnowGentle>
+      <SnowHard>4</SnowHard>
+    </baseWeatherCommonalities>
+    <terrainsByFertility>
+      <li ListIndex="0">
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.87</max>
+      </li>
+      <li ListIndex="1">
+        <terrain>SoilRich</terrain>
+        <min>0.87</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <soundsAmbient>
+      <li ListIndex="0">AmbientNightInsects_Jungle</li>
+      <li ListIndex="1">AmbientDayInsects_Jungle</li>
+    </soundsAmbient>
+    <terrainPatchMakers>
+      <li ListIndex="0">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>MarshyTerrain</terrain>
+            <min>0.35</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.04</perlinFrequency>
+      </li>
+      <li ListIndex="1">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>SoilRich</terrain>
+            <min>-0.1</min>
+            <max>0.32</max>
+          </li>
+          <li ListIndex="1">
+            <terrain>Mud</terrain>
+            <min>0.32</min>
+            <max>0.6</max>
+          </li>
+          <li ListIndex="2">
+            <terrain>WaterShallow</terrain>
+            <min>0.6</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.027</perlinFrequency>
+      </li>
+      <li ListIndex="2">
+        <thresholds>
+          <li ListIndex="0">
+            <terrain>MarshyTerrain</terrain>
+            <min>0.24</min>
+            <max>0.48</max>
+          </li>
+          <li ListIndex="1">
+            <terrain>Marsh</terrain>
+            <min>0.48</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+        <perlinFrequency>0.035</perlinFrequency>
+      </li>
+    </terrainPatchMakers>
+    <wildPlants>
+      <PlantTallGrass>4.8</PlantTallGrass>
+      <PlantChokevine>0.8</PlantChokevine>
+      <PlantShrubLow>2.0</PlantShrubLow>
+      <PlantAlocasia>0.8</PlantAlocasia>
+      <PlantTreeWillow>1.72</PlantTreeWillow>
+      <PlantTreeCypress>1.72</PlantTreeCypress>
+      <PlantTreeMaple>1.72</PlantTreeMaple>
+      <PlantBush>0.15</PlantBush>
+      <PlantClivia>0.07</PlantClivia>
+      <PlantRafflesia>0.0008</PlantRafflesia>
+    </wildPlants>
+    <wildAnimals>
+      <Rat>1</Rat>
+      <Monkey>1</Monkey>
+      <WildBoar>1</WildBoar>
+      <Boomalope>0.7</Boomalope>
+      <Capybara>0.7</Capybara>
+      <Cassowary>0.7</Cassowary>
+      <Tortoise>0.6</Tortoise>
+      <Chinchilla>0.6</Chinchilla>
+      <Alpaca>0.5</Alpaca>
+      <Turkey>0.2</Turkey>
+      <Emu>0.2</Emu>
+      <Cobra>0.17</Cobra>
+      <Panther>0.09</Panther>
+      <Elephant>0.1</Elephant>
+    </wildAnimals>
+    <diseases>
+      <li ListIndex="0">
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="1">
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li ListIndex="2">
+        <diseaseInc>Disease_Malaria</diseaseInc>
+        <commonality>160</commonality>
+      </li>
+      <li ListIndex="3">
+        <diseaseInc>Disease_SleepingSickness</diseaseInc>
+        <commonality>140</commonality>
+      </li>
+      <li ListIndex="4">
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="5">
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li ListIndex="6">
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li ListIndex="7">
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+    </diseases>
+    <allowedPackAnimals>
+      <li ListIndex="0">Muffalo</li>
+      <li ListIndex="1">Elephant</li>
+      <li ListIndex="2">Alpaca</li>
+    </allowedPackAnimals>
+    <texture>World/Biomes/TropicalSwamp</texture>
+  </BiomeDef>
+</Defs>

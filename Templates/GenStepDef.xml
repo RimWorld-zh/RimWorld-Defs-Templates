@@ -13,6 +13,8 @@
     <order>float_value</order>
     <!--Type: RimWorld.GenStep_ElevationFertility-->
     <genStep Class="GenStep_ElevationFertility">value</genStep>
+    <!--Type: RimWorld.GenStep_Caves-->
+    <genStep Class="GenStep_Caves">value</genStep>
     <!--Type: RimWorld.GenStep_ScatterDeepResourceLumps-->
     <genStep Class="GenStep_ScatterDeepResourceLumps">
       <!--Type: Verse.FloatRange-->
@@ -34,6 +36,8 @@
     <genStep Class="GenStep_RocksFromGrid">value</genStep>
     <!--Type: RimWorld.GenStep_Terrain-->
     <genStep Class="GenStep_Terrain">value</genStep>
+    <!--Type: RimWorld.GenStep_CavesTerrain-->
+    <genStep Class="GenStep_CavesTerrain">value</genStep>
     <!--Type: RimWorld.GenStep_Roads-->
     <genStep Class="GenStep_Roads">value</genStep>
     <!--Type: RimWorld.GenStep_RockChunks-->
@@ -66,6 +70,7 @@
       <!--Default Value: 10.0-->
       <minSpacing>float_value</minSpacing>
       <!--Type: int-->
+      <!--Default Value: 0-->
       <extraNoBuildEdgeDist>int_value</extraNoBuildEdgeDist>
       <!--Complex List-->
       <!--Type: List<Verse.ScattererValidator>-->
@@ -96,6 +101,7 @@
       <!--Type: int-->
       <clearSpaceSize>int_value</clearSpaceSize>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <terrainValidationRadius>float_value</terrainValidationRadius>
       <!--Simple List-->
       <!--Type: List<string>-->
@@ -111,12 +117,25 @@
     <genStep Class="GenStep_ScenParts">value</genStep>
     <!--Type: RimWorld.GenStep_Plants-->
     <genStep Class="GenStep_Plants">value</genStep>
+    <!--Type: RimWorld.GenStep_CavePlants-->
+    <genStep Class="GenStep_CavePlants">value</genStep>
     <!--Type: RimWorld.GenStep_Snow-->
     <genStep Class="GenStep_Snow">value</genStep>
     <!--Type: RimWorld.GenStep_Animals-->
     <genStep Class="GenStep_Animals">value</genStep>
+    <!--Type: RimWorld.GenStep_CaveHives-->
+    <genStep Class="GenStep_CaveHives">value</genStep>
     <!--Type: RimWorld.GenStep_Fog-->
     <genStep Class="GenStep_Fog">value</genStep>
+    <!--Type: RimWorld.GenStep_EscapeShip-->
+    <genStep Class="GenStep_EscapeShip">
+      <!--Type: int-->
+      <!--Default Value: -1-->
+      <count>int_value</count>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <nearMapCenter>true_or_false</nearMapCenter>
+    </genStep>
     <!--Type: RimWorld.GenStep_FactionBase-->
     <genStep Class="GenStep_FactionBase">
       <!--Type: int-->
@@ -141,6 +160,15 @@
       <!--Type: bool-->
       <!--Default Value: true-->
       <allowOnWater>true_or_false</allowOnWater>
+    </genStep>
+    <!--Type: RimWorld.GenStep_DownedRefugee-->
+    <genStep Class="GenStep_DownedRefugee">
+      <!--Type: int-->
+      <!--Default Value: -1-->
+      <count>int_value</count>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <nearMapCenter>true_or_false</nearMapCenter>
     </genStep>
     <!--Type: RimWorld.GenStep_ItemStash-->
     <genStep Class="GenStep_ItemStash">
@@ -187,6 +215,37 @@
         <max>float_value</max>
       </totalValueRange>
     </genStep>
+    <!--Type: RimWorld.GenStep_PrisonerWillingToJoin-->
+    <genStep Class="GenStep_PrisonerWillingToJoin">
+      <!--Type: int-->
+      <!--Default Value: -1-->
+      <count>int_value</count>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <nearMapCenter>true_or_false</nearMapCenter>
+    </genStep>
+    <!--Type: RimWorld.GenStep_Ambush_Edge-->
+    <genStep Class="GenStep_Ambush_Edge">
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: new FloatRange(180f, 340f)-->
+      <pointsRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </pointsRange>
+    </genStep>
+    <!--Type: RimWorld.GenStep_Ambush_Hidden-->
+    <genStep Class="GenStep_Ambush_Hidden">
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: new FloatRange(180f, 340f)-->
+      <pointsRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </pointsRange>
+    </genStep>
     <!--Type: RimWorld.GenStep_ManhunterPack-->
     <genStep Class="GenStep_ManhunterPack">
       <!--Type: Verse.FloatRange-->
@@ -200,6 +259,17 @@
     </genStep>
     <!--Type: RimWorld.GenStep_Outpost-->
     <genStep Class="GenStep_Outpost">value</genStep>
+    <!--Type: RimWorld.GenStep_SleepingMechanoids-->
+    <genStep Class="GenStep_SleepingMechanoids">
+      <!--Type: Verse.FloatRange-->
+      <!--Default Value: new FloatRange(340f, 1000f)-->
+      <pointsRange>
+        <!--Type: float-->
+        <min>float_value</min>
+        <!--Type: float-->
+        <max>float_value</max>
+      </pointsRange>
+    </genStep>
     <!--Type: RimWorld.GenStep_Turrets-->
     <genStep Class="GenStep_Turrets">
       <!--Type: Verse.IntRange-->

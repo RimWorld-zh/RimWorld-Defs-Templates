@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkGivers>
+<Defs>
   <!-- ============= Firefighter ============= -->
   <WorkGiverDef>
     <defName>FightFires</defName>
@@ -10,15 +10,24 @@
     <gerund>extinguishing</gerund>
     <emergency>true</emergency>
   </WorkGiverDef>
-  <!-- ============= PatientEmergency ============= -->
+  <!-- ============= Patient ============= -->
   <WorkGiverDef>
-    <defName>PatientGoToBedEmergency</defName>
+    <defName>PatientGoToBedEmergencyTreatment</defName>
     <label>go to bed for emergency treatment</label>
-    <giverClass>WorkGiver_PatientGoToBedEmergency</giverClass>
-    <workType>PatientEmergency</workType>
+    <giverClass>WorkGiver_PatientGoToBedEmergencyTreatment</giverClass>
+    <workType>Patient</workType>
     <verb>receive treatment in</verb>
     <gerund>receiving treatment in</gerund>
     <emergency>true</emergency>
+    <tagToGive>RestingForMedicalReasons</tagToGive>
+  </WorkGiverDef>
+  <WorkGiverDef>
+    <defName>PatientGoToBedTreatment</defName>
+    <label>go to bed for treatment</label>
+    <giverClass>WorkGiver_PatientGoToBedTreatment</giverClass>
+    <workType>Patient</workType>
+    <verb>receive treatment in</verb>
+    <gerund>receiving treatment in</gerund>
     <tagToGive>RestingForMedicalReasons</tagToGive>
   </WorkGiverDef>
   <!-- ============= Doctor ============= -->
@@ -55,7 +64,7 @@
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Doctor</workType>
     <priorityInType>80</priorityInType>
-    <verb>operate</verb>
+    <verb>operate on</verb>
     <gerund>operating on</gerund>
     <requiredCapacities>
       <li ListIndex="0">Manipulation</li>
@@ -111,7 +120,7 @@
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Doctor</workType>
     <priorityInType>50</priorityInType>
-    <verb>operate</verb>
+    <verb>operate on</verb>
     <gerund>operating on</gerund>
     <requiredCapacities>
       <li ListIndex="0">Manipulation</li>
@@ -171,7 +180,7 @@
   </WorkGiverDef>
   <!-- ============= PatientBedRest ============= -->
   <WorkGiverDef>
-    <defName>PatientGoToBed</defName>
+    <defName>PatientGoToBedRecuperate</defName>
     <label>recuperate in bed</label>
     <giverClass>WorkGiver_PatientGoToBedRecuperate</giverClass>
     <workType>PatientBedRest</workType>
@@ -788,12 +797,12 @@
   </WorkGiverDef>
   <WorkGiverDef>
     <defName>DoBillsStonecut</defName>
-    <label>cut stone</label>
+    <label>cut stone blocks</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Crafting</workType>
     <priorityInType>90</priorityInType>
     <verb>stonecut</verb>
-    <gerund>stonecutting at</gerund>
+    <gerund>cutting stone blocks at</gerund>
     <requiredCapacities>
       <li ListIndex="0">Manipulation</li>
     </requiredCapacities>
@@ -1032,4 +1041,4 @@
     <verb>research</verb>
     <gerund>researching at</gerund>
   </WorkGiverDef>
-</WorkGivers>
+</Defs>

@@ -28,18 +28,14 @@
           <path>Words/Nouns/Animals_Badass</path>
         </li>
         <li Class="Rule_File" ListIndex="2">
-          <keyword>badassadjective</keyword>
-          <path>Words/Adjectives/Badass</path>
-        </li>
-        <li Class="Rule_File" ListIndex="3">
           <keyword>badassperson</keyword>
           <path>Words/Nouns/People_Badass</path>
         </li>
-        <li Class="Rule_File" ListIndex="4">
+        <li Class="Rule_File" ListIndex="3">
           <keyword>badassconcept</keyword>
           <path>Words/Nouns/Concepts_Badass</path>
         </li>
-        <li Class="Rule_File" ListIndex="5">
+        <li Class="Rule_File" ListIndex="4">
           <keyword>badasscolor</keyword>
           <path>Words/Nouns/Colors_Badass</path>
         </li>

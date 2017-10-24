@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Yayo>
+<Defs>
   <ThingDef ParentName="MakeableDrugBase">
     <defName>Yayo</defName>
     <label>yayo</label>
@@ -122,9 +122,11 @@
         </capMods>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <labelNoun>a yayo high</labelNoun>
   </HediffDef>
   <ThoughtDef>
     <defName>YayoHigh</defName>
@@ -182,7 +184,8 @@
     <stages>
       <li ListIndex="0">
         <minSeverity>0</minSeverity>
-        <everVisible>false</everVisible>
+        <label>small</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.20</minSeverity>
@@ -197,6 +200,7 @@
         <label>massive</label>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <hediffGivers>
@@ -226,7 +230,7 @@
       <li ListIndex="0"></li>
       <li ListIndex="1">
         <label>withdrawal</label>
-        <restFallFactor>1.3</restFallFactor>
+        <restFallFactorOffset>0.3</restFallFactorOffset>
         <socialFightChanceFactor>3.0</socialFightChanceFactor>
         <capMods>
           <li ListIndex="0">
@@ -275,4 +279,4 @@
     <validWhileDespawned>true</validWhileDespawned>
     <hediff>PsychiteAddiction</hediff>
   </ThoughtDef>
-</Yayo>
+</Defs>

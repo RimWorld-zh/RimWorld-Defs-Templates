@@ -9,7 +9,7 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: Verse.AltitudeLayer-->
-    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, FlyingItem, Gas, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, WorldDataOverlay, MetaOverlays, _Count-->
+    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, Gas, Skyfaller, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, MapDataOverlay, MetaOverlays, _Count-->
     <!--Default Value: Item-->
     <altitudeLayer>enum_value</altitudeLayer>
     <!--Type: System.Type-->
@@ -19,18 +19,23 @@
     <category>Attachment</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
+    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: bool-->
     <!--Default Value: true-->
     <useHitPoints>true_or_false</useHitPoints>
     <!--Type: Verse.GraphicData-->
+    <!--Default Value: null-->
     <graphicData>
       <!--Type: string-->
+      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
       <!--Type: System.Type-->
+      <!--Default Value: null-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
-      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Default Value: None-->
       <shaderType>enum_value</shaderType>
     </graphicData>
   </ThingDef>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Beer>
+<Defs>
   <ThingDef ParentName="DrugBase">
     <defName>Beer</defName>
     <label>beer</label>
@@ -8,8 +8,6 @@
       <DeteriorationRate>0.5</DeteriorationRate>
       <MarketValue>12</MarketValue>
       <Mass>0.3</Mass>
-      <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
       <MaxHitPoints>50</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>-4</Beauty>
@@ -35,6 +33,23 @@
         <compClass>CompEquippable</compClass>
       </li>
     </comps>
+    <tools>
+      <li ListIndex="0">
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>neck</label>
+        <capacities>
+          <li ListIndex="0">Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Drug/Beer</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -47,13 +62,6 @@
     <thingCategories>
       <li ListIndex="0">Drugs</li>
     </thingCategories>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-      </li>
-    </verbs>
     <equippedAngleOffset>-150</equippedAngleOffset>
     <equipmentType>Primary</equipmentType>
     <techLevel>Neolithic</techLevel>
@@ -176,8 +184,8 @@
     </comps>
     <stages>
       <li ListIndex="0">
-        <label>buzzed-hidden</label>
-        <everVisible>false</everVisible>
+        <label>buzzed</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.1</minSeverity>
@@ -264,8 +272,10 @@
         </hediffGivers>
       </li>
     </stages>
+    <isBad>false</isBad>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <labelNoun>drunkenness</labelNoun>
   </HediffDef>
   <HediffDef>
     <defName>Hangover</defName>
@@ -312,6 +322,7 @@
       </li>
     </stages>
     <scenarioCanAdd>true</scenarioCanAdd>
+    <labelNoun>a hangover</labelNoun>
   </HediffDef>
   <ThoughtDef>
     <defName>Inebriated</defName>
@@ -416,7 +427,8 @@
     <stages>
       <li ListIndex="0">
         <minSeverity>0</minSeverity>
-        <everVisible>false</everVisible>
+        <label>small</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.20</minSeverity>
@@ -431,6 +443,7 @@
         <label>massive</label>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <hediffGivers>
@@ -511,4 +524,4 @@
     <validWhileDespawned>true</validWhileDespawned>
     <hediff>AlcoholAddiction</hediff>
   </ThoughtDef>
-</Beer>
+</Defs>

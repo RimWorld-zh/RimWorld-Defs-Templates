@@ -71,6 +71,10 @@
         <!--Default Value: false-->
         <!--Desc: Whether to mute this subSound while the game is paused (either by the pausing in play or by opening a menu)-->
         <muteWhenPaused>true_or_false</muteWhenPaused>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <!--Desc: Whether this subSound's tempo should be affected by the current tick rate.-->
+        <tempoAffectedByGameSpeed>true_or_false</tempoAffectedByGameSpeed>
         <!--Complex List-->
         <!--Type: List<Verse.Sound.AudioGrain>-->
         <!--Desc: The sound grains used for this sample. The game will choose one of these randomly when the sound plays. Sustainers choose one for each sample as it begins.-->
@@ -148,6 +152,9 @@
             <!--Type: Verse.Sound.SoundParamSource_OutdoorTemperature-->
             <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
             <inParam Class="SoundParamSource_OutdoorTemperature">value</inParam>
+            <!--Type: Verse.Sound.SoundParamSource_AmbientVolume-->
+            <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
+            <inParam Class="SoundParamSource_AmbientVolume">value</inParam>
             <!--Type: Verse.Sound.SoundParamSource_AggregateSize-->
             <!--Desc: The independent parameter that the game will change to drive this relationship.\n\nOn the graph, this is the X axis.-->
             <inParam Class="SoundParamSource_AggregateSize">value</inParam>

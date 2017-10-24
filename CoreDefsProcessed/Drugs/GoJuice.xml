@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GoJuice>
+<Defs>
   <ThingDef ParentName="MakeableDrugBase">
     <defName>GoJuice</defName>
     <label>go-juice</label>
@@ -129,9 +129,11 @@
         </capMods>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <labelNoun>a go-juice high</labelNoun>
   </HediffDef>
   <ThoughtDef>
     <defName>GoJuiceHigh</defName>
@@ -179,7 +181,8 @@
     <stages>
       <li ListIndex="0">
         <minSeverity>0</minSeverity>
-        <everVisible>false</everVisible>
+        <label>small</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.20</minSeverity>
@@ -194,6 +197,7 @@
         <label>massive</label>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <hediffGivers>
@@ -223,8 +227,8 @@
       <li ListIndex="1">
         <label>withdrawal</label>
         <painFactor>3</painFactor>
-        <hungerRateFactor>1.5</hungerRateFactor>
-        <restFallFactor>1.3</restFallFactor>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <restFallFactorOffset>0.3</restFallFactorOffset>
         <capMods>
           <li ListIndex="0">
             <capacity>Consciousness</capacity>
@@ -280,4 +284,4 @@
     <validWhileDespawned>true</validWhileDespawned>
     <hediff>GoJuiceAddiction</hediff>
   </ThoughtDef>
-</GoJuice>
+</Defs>

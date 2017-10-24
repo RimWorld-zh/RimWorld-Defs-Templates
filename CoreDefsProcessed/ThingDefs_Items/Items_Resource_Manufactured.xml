@@ -42,6 +42,7 @@
     </thingCategories>
     <soundDrop>Standard_Drop</soundDrop>
     <soundInteract>Standard_Drop</soundInteract>
+    <techLevel>Neolithic</techLevel>
   </ThingDef>
   <ThingDef ParentName="ResourceBase">
     <defName>Medicine</defName>
@@ -75,14 +76,8 @@
     <recipeMaker>
       <workSpeedStat>DrugProductionSpeed</workSpeedStat>
       <skillRequirements>
-        <li ListIndex="0">
-          <skill>Medicine</skill>
-          <minLevel>6</minLevel>
-        </li>
-        <li ListIndex="1">
-          <skill>Crafting</skill>
-          <minLevel>3</minLevel>
-        </li>
+        <Medicine>6</Medicine>
+        <Crafting>3</Crafting>
       </skillRequirements>
       <workSkill>Intellectual</workSkill>
       <recipeUsers>
@@ -103,6 +98,7 @@
     </thingCategories>
     <soundDrop>Standard_Drop</soundDrop>
     <soundInteract>Standard_Drop</soundInteract>
+    <techLevel>Industrial</techLevel>
   </ThingDef>
   <ThingDef ParentName="ResourceBase">
     <defName>GlitterworldMedicine</defName>
@@ -143,54 +139,7 @@
     <tradeTags>
       <li ListIndex="0">Exotic</li>
     </tradeTags>
-  </ThingDef>
-  <!--=============== Shells ====================-->
-  <ThingDef ParentName="ResourceBase">
-    <defName>MortarShell</defName>
-    <label>mortar shell</label>
-    <description>An explosive shell to be fired from mortars. Explodes when damaged.</description>
-    <statBases>
-      <MaxHitPoints>70</MaxHitPoints>
-      <MarketValue>10</MarketValue>
-      <Mass>3.5</Mass>
-      <Flammability>1.0</Flammability>
-      <DeteriorationRate>1.5</DeteriorationRate>
-      <Beauty>-4</Beauty>
-    </statBases>
-    <pathCost>15</pathCost>
-    <altitudeLayer>Item</altitudeLayer>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <tickerType>Normal</tickerType>
-    <stackLimit>25</stackLimit>
-    <rotatable>false</rotatable>
-    <useHitPoints>true</useHitPoints>
-    <comps>
-      <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_Explosive" ListIndex="1">
-        <explosiveRadius>2.9</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
-        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
-        <wickTicks>
-          <min>10</min>
-          <max>30</max>
-        </wickTicks>
-      </li>
-    </comps>
-    <graphicData>
-      <texPath>Things/Item/Resource/Shell</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <alwaysHaulable>true</alwaysHaulable>
-    <thingCategories>
-      <li ListIndex="0">Manufactured</li>
-    </thingCategories>
-    <soundDrop>Standard_Drop</soundDrop>
-    <soundInteract>Metal_Drop</soundInteract>
+    <techLevel>Ultra</techLevel>
   </ThingDef>
   <!--=============== Component ====================-->
   <ThingDef ParentName="ResourceBase">
@@ -218,6 +167,43 @@
     <intricate>true</intricate>
     <graphicData>
       <texPath>Things/Item/Resource/Component</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Manufactured</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>AdvancedComponent</defName>
+    <label>advanced component</label>
+    <description>High-quality electronic equipment, miniaturized and hardened for the most stressful applications.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>80</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>50</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+    </comps>
+    <intricate>true</intricate>
+    <graphicData>
+      <texPath>Things/Item/Resource/AdvancedComponent</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <selectable>true</selectable>

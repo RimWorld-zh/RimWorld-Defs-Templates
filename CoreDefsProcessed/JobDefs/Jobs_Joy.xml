@@ -13,6 +13,7 @@
     <defName>Meditate</defName>
     <driverClass>JobDriver_RelaxAlone</driverClass>
     <reportString>meditating.</reportString>
+    <taleOnCompletion>Meditated</taleOnCompletion>
     <joyDuration>4000</joyDuration>
     <joyGainRate>1</joyGainRate>
     <joyKind>Meditative</joyKind>
@@ -21,6 +22,7 @@
     <defName>Pray</defName>
     <driverClass>JobDriver_RelaxAlone</driverClass>
     <reportString>praying.</reportString>
+    <taleOnCompletion>Prayed</taleOnCompletion>
     <joyDuration>3000</joyDuration>
     <joyGainRate>1</joyGainRate>
     <joyKind>Meditative</joyKind>
@@ -37,6 +39,7 @@
     <defName>BuildSnowman</defName>
     <driverClass>JobDriver_BuildSnowman</driverClass>
     <reportString>building snowman.</reportString>
+    <taleOnCompletion>BuiltSnowman</taleOnCompletion>
     <joyDuration>8000</joyDuration>
     <joyGainRate>1</joyGainRate>
     <joyKind>Meditative</joyKind>
@@ -45,6 +48,7 @@
     <defName>VisitGrave</defName>
     <driverClass>JobDriver_VisitGrave</driverClass>
     <reportString>visiting grave.</reportString>
+    <taleOnCompletion>VisitedGrave</taleOnCompletion>
     <joyDuration>4000</joyDuration>
     <joyGainRate>1</joyGainRate>
     <joyKind>Meditative</joyKind>
@@ -79,6 +83,19 @@
     <defName>PlayHorseshoes</defName>
     <driverClass>JobDriver_PlayHorseshoes</driverClass>
     <reportString>playing horseshoes.</reportString>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>3</joyMaxParticipants>
+    <joyGainRate>1</joyGainRate>
+    <joySkill>Shooting</joySkill>
+    <joyXpPerTick>0.003</joyXpPerTick>
+    <joyKind>GamingDexterity</joyKind>
+  </JobDef>
+  <JobDef>
+    <defName>PlayHoopstone</defName>
+    <driverClass>JobDriver_PlayHoopstone</driverClass>
+    <reportString>playing hoopstone.</reportString>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>3</joyMaxParticipants>
     <joyGainRate>1</joyGainRate>
@@ -90,6 +107,7 @@
     <defName>PlayChess</defName>
     <driverClass>JobDriver_SitFacingBuilding</driverClass>
     <reportString>playing chess.</reportString>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>2</joyMaxParticipants>
     <joyGainRate>1</joyGainRate>
@@ -101,12 +119,25 @@
     <defName>PlayBilliards</defName>
     <driverClass>JobDriver_PlayBilliards</driverClass>
     <reportString>playing billiards.</reportString>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>2</joyMaxParticipants>
     <joyGainRate>1.3</joyGainRate>
     <joySkill>Shooting</joySkill>
     <joyXpPerTick>0.004</joyXpPerTick>
     <joyKind>GamingDexterity</joyKind>
+  </JobDef>
+  <JobDef>
+    <defName>PlayPoker</defName>
+    <driverClass>JobDriver_PlayPoker</driverClass>
+    <reportString>playing poker.</reportString>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>4</joyMaxParticipants>
+    <joyGainRate>1.3</joyGainRate>
+    <joySkill>Intellectual</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyKind>GamingCerebral</joyKind>
   </JobDef>
   <JobDef>
     <defName>WatchTelevision</defName>

@@ -14,8 +14,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>10</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewY>0.5</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>DeepDrilling</defName>
@@ -30,13 +31,14 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>9</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewY>0.5</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>VitalsMonitor</defName>
     <label>vitals monitor</label>
-    <description>Allows colonists to build vitals monitors which increase patients treatment quality if placed next to medical beds.</description>
+    <description>Allows colonists to build vitals monitors which improve medical care when placed next to hospital beds.</description>
     <techLevel>Industrial</techLevel>
     <baseCost>1600</baseCost>
     <prerequisites>
@@ -47,8 +49,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>9</researchViewX>
-    <researchViewY>0</researchViewY>
+    <researchViewY>1.5</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>ComponentAssembly</defName>
@@ -63,8 +66,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>10</researchViewX>
-    <researchViewY>3</researchViewY>
+    <researchViewY>2.9</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>MultibarrelWeapons</defName>
@@ -74,13 +78,15 @@
     <baseCost>3000</baseCost>
     <prerequisites>
       <li ListIndex="0">MultiAnalyzer</li>
+      <li ListIndex="1">GasOperation</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>9</researchViewX>
-    <researchViewY>3</researchViewY>
+    <researchViewY>4.3</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Cryptosleep</defName>
@@ -95,8 +101,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>10</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewY>4.3</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>PoweredArmor</defName>
@@ -111,8 +118,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>9</researchViewX>
-    <researchViewY>5</researchViewY>
+    <researchViewY>3.6</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>ShieldBelt</defName>
@@ -127,8 +135,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>10</researchViewX>
-    <researchViewY>5</researchViewY>
+    <researchViewY>3.6</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>ChargedShot</defName>
@@ -138,12 +147,14 @@
     <baseCost>1500</baseCost>
     <prerequisites>
       <li ListIndex="0">MultiAnalyzer</li>
+      <li ListIndex="1">PrecisionRifling</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>9</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewY>5</researchViewY>
   </ResearchProjectDef>
 </Defs>

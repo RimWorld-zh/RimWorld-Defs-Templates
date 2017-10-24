@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GameData>
+<Defs>
   <ThingDef ParentName="ResourceBase" Name="ArtifactBase" Abstract="True">
     <statBases>
       <Mass>0.5</Mass>
@@ -12,6 +12,9 @@
       </li>
       <li Class="CompProperties_UseEffect">
         <compClass>CompUseEffect_Artifact</compClass>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
       </li>
     </comps>
     <thingCategories>
@@ -47,14 +50,17 @@
       <li Class="CompProperties_UseEffect" ListIndex="2">
         <compClass>CompUseEffect_Artifact</compClass>
       </li>
-      <li Class="CompProperties_Targetable" ListIndex="3">
+      <li Class="CompProperties_UseEffect" ListIndex="3">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+      <li Class="CompProperties_Targetable" ListIndex="4">
         <compClass>CompTargetable_SinglePawn</compClass>
         <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
       </li>
-      <li ListIndex="4">
+      <li ListIndex="5">
         <compClass>CompTargetEffect_Berserk</compClass>
       </li>
-      <li ListIndex="5">
+      <li ListIndex="6">
         <compClass>CompTargetEffect_GoodwillImpact</compClass>
       </li>
     </comps>
@@ -100,17 +106,20 @@
       <li Class="CompProperties_UseEffect" ListIndex="2">
         <compClass>CompUseEffect_Artifact</compClass>
       </li>
-      <li Class="CompProperties_Targetable" ListIndex="3">
+      <li Class="CompProperties_UseEffect" ListIndex="3">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+      <li Class="CompProperties_Targetable" ListIndex="4">
         <compClass>CompTargetable_SinglePawn</compClass>
         <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
       </li>
-      <li ListIndex="4">
+      <li ListIndex="5">
         <compClass>CompTargetEffect_PsychicShock</compClass>
       </li>
-      <li ListIndex="5">
+      <li ListIndex="6">
         <compClass>CompTargetEffect_BrainDamageChance</compClass>
       </li>
-      <li ListIndex="6">
+      <li ListIndex="7">
         <compClass>CompTargetEffect_GoodwillImpact</compClass>
       </li>
     </comps>
@@ -156,15 +165,18 @@
       <li Class="CompProperties_UseEffect" ListIndex="2">
         <compClass>CompUseEffect_Artifact</compClass>
       </li>
-      <li Class="CompProperties_Targetable" ListIndex="3">
+      <li Class="CompProperties_UseEffect" ListIndex="3">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+      <li Class="CompProperties_Targetable" ListIndex="4">
         <compClass>CompTargetable_AllAnimalsOnTheMap</compClass>
         <doCameraShake>true</doCameraShake>
         <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
       </li>
-      <li ListIndex="4">
+      <li ListIndex="5">
         <compClass>CompTargetEffect_Manhunter</compClass>
       </li>
-      <li ListIndex="5">
+      <li ListIndex="6">
         <compClass>CompTargetEffect_GoodwillImpact</compClass>
       </li>
     </comps>
@@ -210,12 +222,15 @@
       <li Class="CompProperties_UseEffect" ListIndex="2">
         <compClass>CompUseEffect_Artifact</compClass>
       </li>
-      <li Class="CompProperties_Targetable" ListIndex="3">
+      <li Class="CompProperties_UseEffect" ListIndex="3">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+      <li Class="CompProperties_Targetable" ListIndex="4">
         <compClass>CompTargetable_AllPawnsOnTheMap</compClass>
         <doCameraShake>true</doCameraShake>
         <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
       </li>
-      <li ListIndex="4">
+      <li ListIndex="5">
         <compClass>CompTargetEffect_MoodBoost</compClass>
       </li>
     </comps>
@@ -235,4 +250,4 @@
     </tradeTags>
     <tradeNeverStack>true</tradeNeverStack>
   </ThingDef>
-</GameData>
+</Defs>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SongDefs>
+<Defs>
   <!-- Day -->
   <SongDef>
     <clipPath>Songs/Relax/Noodles_Planetfall/Noodle_Planetfall_a</clipPath>
@@ -149,4 +149,4 @@
     <clipPath>Songs/Relax/Traces</clipPath>
     <volume>1.00</volume>
   </SongDef>
-</SongDefs>
+</Defs>

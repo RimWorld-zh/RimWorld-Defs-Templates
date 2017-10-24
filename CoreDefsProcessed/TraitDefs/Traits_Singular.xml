@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TraitDefs>
+<Defs>
   <TraitDef>
     <defName>Nudist</defName>
     <degreeDatas>
@@ -63,6 +63,7 @@
       <li ListIndex="0">
         <label>abrasive</label>
         <description>NAME always says exactly what's on HIS mind, especially if it's bugging HIM. That tends to rub people the wrong way.</description>
+        <marketValueFactorOffset>-0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
     <requiredWorkTags>
@@ -77,7 +78,7 @@
         <label>too smart</label>
         <description>NAME is too smart for HIS own good. HECAP learns everything much faster than everyone, but can be quite eccentric.</description>
         <statOffsets>
-          <GlobalLearningFactor>0.8</GlobalLearningFactor>
+          <GlobalLearningFactor>0.75</GlobalLearningFactor>
           <MentalBreakThreshold>0.12</MentalBreakThreshold>
         </statOffsets>
       </li>
@@ -96,9 +97,9 @@
       <li ListIndex="0">
         <label>brawler</label>
         <description>NAME likes to fight up close and personal. HISCAP accuracy is greatly increased in melee combat, but HE'll be very unhappy if asked to carry a ranged weapon.</description>
-        <statFactors>
-          <MeleeHitChance>1.30</MeleeHitChance>
-        </statFactors>
+        <statOffsets>
+          <MeleeHitChance>4</MeleeHitChance>
+        </statOffsets>
         <skillGains>
           <li ListIndex="0">
             <key>Melee</key>
@@ -264,6 +265,7 @@
       <li ListIndex="0">
         <label>annoying voice</label>
         <description>NAME's voice has a particularly grating, nasal quality to it, and HE tends to talk in barked, garbled phrases. This predisposes others to dislike HIM.</description>
+        <marketValueFactorOffset>-0.2</marketValueFactorOffset>
       </li>
     </degreeDatas>
     <commonality>0.1</commonality>
@@ -274,6 +276,7 @@
       <li ListIndex="0">
         <label>creepy breathing</label>
         <description>NAME breathes heavily all the time, and sweats constantly. People find it creepy.</description>
+        <marketValueFactorOffset>-0.1</marketValueFactorOffset>
       </li>
     </degreeDatas>
     <commonality>0.05</commonality>
@@ -283,18 +286,19 @@
     <degreeDatas>
       <li ListIndex="0">
         <label>pyromaniac</label>
-        <description>NAME loves fire. HECAP will occasionaly start fires and will never extinguish them.</description>
+        <description>NAME loves fire. HECAP will never extinguish fires. To relieve stress, HE will occasionally go on random fire starting sprees. This happens more often if HIS mood is low.</description>
         <randomMentalState>FireStartingSpree</randomMentalState>
         <randomMentalStateMtbDaysMoodCurve>
           <points>
             <li ListIndex="0">(0, 15)</li>
-            <li ListIndex="1">(50, 50)</li>
-            <li ListIndex="2">(100, 100)</li>
+            <li ListIndex="1">(50, 70)</li>
+            <li ListIndex="2">(100, 500)</li>
           </points>
         </randomMentalStateMtbDaysMoodCurve>
-        <allowedMentalBreaks>
+        <theOnlyAllowedMentalBreaks>
           <li ListIndex="0">FireStartingSpree</li>
-        </allowedMentalBreaks>
+        </theOnlyAllowedMentalBreaks>
+        <marketValueFactorOffset>-0.2</marketValueFactorOffset>
       </li>
     </degreeDatas>
     <disabledWorkTags>Firefighting</disabledWorkTags>
@@ -306,7 +310,10 @@
       <li ListIndex="0">
         <label>wimp</label>
         <description>NAME is weak and cowardly. Even a little pain will immobilize HIM.</description>
-        <painShockThreshold>0.15</painShockThreshold>
+        <statOffsets>
+          <PainShockThreshold>-0.65</PainShockThreshold>
+        </statOffsets>
+        <marketValueFactorOffset>-0.15</marketValueFactorOffset>
       </li>
     </degreeDatas>
     <conflictingTraits>
@@ -315,4 +322,43 @@
     <commonality>0.15</commonality>
     <allowOnHostileSpawn>false</allowOnHostileSpawn>
   </TraitDef>
-</TraitDefs>
+  <TraitDef>
+    <defName>Nimble</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>nimble</label>
+        <description>NAME has remarkable kinesthetic intelligence. HECAP seems to dance around danger with preternatural grace.</description>
+        <statOffsets>
+          <MeleeDodgeChance>15</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <commonality>0.15</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>FastLearner</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>fast learner</label>
+        <description>NAME has a knack for learning. HECAP picks things up much faster than others.</description>
+        <statOffsets>
+          <GlobalLearningFactor>0.75</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <commonality>0.15</commonality>
+  </TraitDef>
+  <TraitDef>
+    <defName>SuperImmune</defName>
+    <degreeDatas>
+      <li ListIndex="0">
+        <label>super-immune</label>
+        <description>NAME has a naturally powerful immune system. HECAP will gain immunity much faster than a normal person would, and can survive illnesses that would kill others.</description>
+        <statOffsets>
+          <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <commonality>0.15</commonality>
+  </TraitDef>
+</Defs>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TerrainDefs>
+<Defs>
   <TerrainDef>
     <defName>Sand</defName>
     <label>sand</label>
@@ -57,9 +57,8 @@
     <renderPrecedence>337</renderPrecedence>
     <affordances>
       <li ListIndex="0">Light</li>
-      <li ListIndex="1">Heavy</li>
-      <li ListIndex="2">GrowSoil</li>
-      <li ListIndex="3">Diggable</li>
+      <li ListIndex="1">GrowSoil</li>
+      <li ListIndex="2">Diggable</li>
     </affordances>
     <scatterType>Rocky</scatterType>
     <takeFootprints>True</takeFootprints>
@@ -188,4 +187,4 @@
     <takeFootprints>True</takeFootprints>
     <terrainFilthDef>FilthDirt</terrainFilthDef>
   </TerrainDef>
-</TerrainDefs>
+</Defs>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DefPackage-SoundDef>
+<Defs>
   <SoundDef>
     <defName>BuildingComplete</defName>
     <context>MapOnly</context>
@@ -127,6 +127,29 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
+    <defName>StoneImpact</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li ListIndex="0">
+        <grains>
+          <li Class="AudioGrain_Folder" ListIndex="0">
+            <clipFolderPath>Interact/Joy/StoneImpact</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>5</min>
+          <max>7</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.97</min>
+          <max>1.03</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
     <defName>PlayBilliards</defName>
     <context>MapOnly</context>
     <eventNames />
@@ -145,6 +168,29 @@
         <pitchRange>
           <min>0.9</min>
           <max>1.1</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>PokerChips</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li ListIndex="0">
+        <grains>
+          <li Class="AudioGrain_Folder" ListIndex="0">
+            <clipFolderPath>Interact/Joy/PokerChips</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>7</min>
+          <max>7</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.97</min>
+          <max>1.03</max>
         </pitchRange>
       </li>
     </subSounds>
@@ -226,4 +272,4 @@
       </li>
     </subSounds>
   </SoundDef>
-</DefPackage-SoundDef>
+</Defs>

@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerUtility</defName>
+    <include>
+      <li ListIndex="0">TribalWord</li>
+      <li ListIndex="1">OutlanderWord</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">name->[metaprefix] [standardname]</li>
+        <li ListIndex="1">name(p=0.05)->[storyname] [suffix]</li>
+        <li ListIndex="2">standardname->[prefix] [suffix]</li>
+        <li ListIndex="3">metaprefix(p=10)-></li>
+        <li ListIndex="4">metaprefix->[direction]</li>
+        <li ListIndex="5">metaprefix->[derivative]</li>
+        <li ListIndex="6">derivative->great</li>
+        <li ListIndex="7">derivative->greater</li>
+        <li ListIndex="8">derivative->lesser</li>
+        <li ListIndex="9">derivative->grand</li>
+        <li ListIndex="10">derivative->new</li>
+        <li ListIndex="11">derivative->old</li>
+        <li ListIndex="12">prefix(p=0.5)->[animal]</li>
+        <li ListIndex="13">prefix(p=0.5)->[color]</li>
+        <li ListIndex="14">prefix(p=0.3)->[color][animal]</li>
+        <li ListIndex="15">prefix(p=0.2)->[color] [animal]</li>
+        <li ListIndex="16">prefix(p=0.3)->[naturaladjective][animal]</li>
+        <li ListIndex="17">prefix(p=0.2)->[naturaladjective] [animal]</li>
+        <li ListIndex="18">prefix(p=0.3)->[animal][bodypart]</li>
+        <li ListIndex="19">prefix(p=0.2)->[animal] [bodypart]</li>
+        <li ListIndex="20">prefix->[color][naturalobject]</li>
+        <li ListIndex="21">prefix->[naturaladjective][bodypart]</li>
+        <li ListIndex="22">prefix(p=2)->[tribalword]</li>
+        <li ListIndex="23">prefix(p=2)->[outlanderword]</li>
+        <li ListIndex="24">storyname->[subject]'s [storyderivative] folly</li>
+        <li ListIndex="25">storyname->[subject]'s [storyderivative] vice</li>
+        <li ListIndex="26">storyname->[subject]'s [storyderivative] lunacy</li>
+        <li ListIndex="27">storyname->[subject]'s [storyderivative] mistake</li>
+        <li ListIndex="28">storyname->[subject]'s [storyderivative] fault</li>
+        <li ListIndex="29">storyname->[subject]'s [storyderivative] misstep</li>
+        <li ListIndex="30">storyname->[subject]'s [storyderivative] delusion</li>
+        <li ListIndex="31">storyname->[subject]'s [storyderivative] joy</li>
+        <li ListIndex="32">storyname(p=0.5)->[subject]sjoy</li>
+        <li ListIndex="33">storyname->[subject]'s [storyderivative] delight</li>
+        <li ListIndex="34">storyname->[subject]'s [storyderivative] wonder</li>
+        <li ListIndex="35">storyname->[subject]'s [storyderivative] pride</li>
+        <li ListIndex="36">storyname(p=0.5)->[subject]spride</li>
+        <li ListIndex="37">storyname->[subject]'s [storyderivative] jewel</li>
+        <li ListIndex="38">storyname->[subject]'s [storyderivative] prize</li>
+        <li ListIndex="39">storyname->[subject]'s [storyderivative] bounty</li>
+        <li ListIndex="40">storyname->[subject]'s [storyderivative] honor</li>
+        <li ListIndex="41">storyname->[subject]'s [storyderivative] jackpot</li>
+        <li ListIndex="42">storyname->[subject]'s [storyderivative] trophy</li>
+        <li ListIndex="43">storyname->[subject]'s [storyderivative] conceit</li>
+        <li ListIndex="44">storyname->[subject]'s [storyderivative] arrogance</li>
+        <li ListIndex="45">storyname->[subject]'s [storyderivative] stand</li>
+        <li ListIndex="46">storyname->[subject]'s [storyderivative] loss</li>
+        <li ListIndex="47">storyname->[subject]'s [storyderivative] debt</li>
+        <li ListIndex="48">storyname->[subject]'s [storyderivative] collapse</li>
+        <li ListIndex="49">storyname->[subject]'s [storyderivative] destruction</li>
+        <li ListIndex="50">storyname->[subject]'s [storyderivative] cataclysm</li>
+        <li ListIndex="51">storyname->[subject]'s [storyderivative] ruin</li>
+        <li ListIndex="52">storyname->[subject]'s [storyderivative] ruination</li>
+        <li ListIndex="53">storyname->[subject]'s [storyderivative] undoing</li>
+        <li ListIndex="54">storyname->[subject]'s [storyderivative] downfall</li>
+        <li ListIndex="55">storyname->[subject]'s [storyderivative] end</li>
+        <li ListIndex="56">storyname(p=0.5)->[subject]send</li>
+        <li ListIndex="57">storyname->[subject]'s [storyderivative] retirement</li>
+        <li ListIndex="58">storyname->[subject]'s [storyderivative] achievement</li>
+        <li ListIndex="59">storyname->[subject]'s [storyderivative] finale</li>
+        <li ListIndex="60">storyname->[subject]'s [storyderivative] bluff</li>
+        <li ListIndex="61">storyname->[subject]'s [storyderivative] ruse</li>
+        <li ListIndex="62">storyname->[subject]'s [storyderivative] deception</li>
+        <li ListIndex="63">storyname->[subject]'s [storyderivative] facade</li>
+        <li ListIndex="64">storyname->[subject]'s [storyderivative] fraud</li>
+        <li ListIndex="65">storyname(p=0.5)->[subject]'s [gore]</li>
+        <li ListIndex="66">storyname->[subject]'s [bodypart]</li>
+        <li ListIndex="67">storyderivative-></li>
+        <li ListIndex="68">storyderivative(p=0.1)->[derivative]</li>
+        <li ListIndex="69">subject(p=5)->[personname]</li>
+        <li ListIndex="70">subject(p=1)->[animal]</li>
+        <li ListIndex="71">subject(p=1)->[tribalword]</li>
+        <li ListIndex="72">subject(p=1)->[outlanderword]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerMountainRange</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">standardname(p=0.2)->mount [prefix]</li>
+        <li ListIndex="1">suffix(p=5)->mountains</li>
+        <li ListIndex="2">suffix(p=2)->range</li>
+        <li ListIndex="3">suffix->peaks</li>
+        <li ListIndex="4">suffix->hills</li>
+        <li ListIndex="5">suffix->cliffs</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerArchipelago</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">standardname(p=0.2)->isle [prefix]</li>
+        <li ListIndex="1">suffix(p=4)->islands</li>
+        <li ListIndex="2">suffix(p=3)->isles</li>
+        <li ListIndex="3">suffix(p=3)->archipelago</li>
+        <li ListIndex="4">suffix->reef</li>
+        <li ListIndex="5">suffix->atoll</li>
+        <li ListIndex="6">suffix->rocks</li>
+        <li ListIndex="7">suffix->lands</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerIsland</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">mainname(p=0.2)->isle [prefix]</li>
+        <li ListIndex="1">suffix(p=4)->island</li>
+        <li ListIndex="2">suffix(p=2)->isle</li>
+        <li ListIndex="3">suffix->reef</li>
+        <li ListIndex="4">suffix->rock</li>
+        <li ListIndex="5">suffix->point</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerPeninsula</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">standardname(p=0.2)->point [prefix]</li>
+        <li ListIndex="1">standardname(p=0.2)->cape [prefix]</li>
+        <li ListIndex="2">suffix(p=8)->peninsula</li>
+        <li ListIndex="3">suffix(p=2)->point</li>
+        <li ListIndex="4">suffix->cape</li>
+        <li ListIndex="5">suffix->headland</li>
+        <li ListIndex="6">suffix->horn</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerBay</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">standardname(p=0.2)->gulf of [prefix]</li>
+        <li ListIndex="1">suffix(p=6)->bay</li>
+        <li ListIndex="2">suffix->bight</li>
+        <li ListIndex="3">suffix->gulf</li>
+        <li ListIndex="4">suffix->anchorage</li>
+        <li ListIndex="5">suffix->cove</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerLake</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">standardname->lake [prefix]</li>
+        <li ListIndex="1">suffix(p=2)->lake</li>
+        <li ListIndex="2">suffix->sea</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerSea</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">standardname(p=0.1)->lake [prefix]</li>
+        <li ListIndex="1">suffix(p=6)->sea</li>
+        <li ListIndex="2">suffix->ocean</li>
+        <li ListIndex="3">suffix->lake</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerOcean</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">standardname(p=0.1)->deep [prefix]</li>
+        <li ListIndex="1">suffix(p=6)->ocean</li>
+        <li ListIndex="2">suffix->expanse</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerDesert</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">suffix(p=6)->desert</li>
+        <li ListIndex="1">suffix->plateau</li>
+        <li ListIndex="2">suffix->flats</li>
+        <li ListIndex="3">suffix->basin</li>
+        <li ListIndex="4">suffix->wastes</li>
+        <li ListIndex="5">suffix->wasteland</li>
+        <li ListIndex="6">suffix->barrens</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerSwamp</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">standardname(p=0.1)->fen [prefix]</li>
+        <li ListIndex="1">suffix(p=6)->swamp</li>
+        <li ListIndex="2">suffix->basin</li>
+        <li ListIndex="3">suffix->wetlands</li>
+        <li ListIndex="4">suffix->bayou</li>
+        <li ListIndex="5">suffix->bog</li>
+        <li ListIndex="6">suffix->marsh</li>
+        <li ListIndex="7">suffix->fen</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerForest</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">suffix(p=6)->forest</li>
+        <li ListIndex="1">suffix->grove</li>
+        <li ListIndex="2">suffix->wetlands</li>
+        <li ListIndex="3">suffix->taiga</li>
+        <li ListIndex="4">suffix->woodland</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerAridShrubland</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">suffix(p=4)->shrubland</li>
+        <li ListIndex="1">suffix(p=4)->scrubland</li>
+        <li ListIndex="2">suffix(p=2)->plateau</li>
+        <li ListIndex="3">suffix(p=2)->scrub</li>
+        <li ListIndex="4">suffix->desert</li>
+        <li ListIndex="5">suffix->bush</li>
+        <li ListIndex="6">suffix->brush</li>
+        <li ListIndex="7">suffix->barrens</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerIceSheet</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">suffix->sheet</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerTundra</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">suffix(p=4)->plateau</li>
+        <li ListIndex="1">suffix(p=4)->barrens</li>
+        <li ListIndex="2">suffix(p=2)->taiga</li>
+        <li ListIndex="3">suffix->scrub</li>
+        <li ListIndex="4">suffix->shrubland</li>
+        <li ListIndex="5">suffix->scrubland</li>
+        <li ListIndex="6">suffix->bush</li>
+        <li ListIndex="7">suffix->brush</li>
+        <li ListIndex="8">suffix->barrens</li>
+        <li ListIndex="9">suffix->expanse</li>
+        <li ListIndex="10">suffix->prairie</li>
+        <li ListIndex="11">suffix->flats</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

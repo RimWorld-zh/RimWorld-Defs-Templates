@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TaleDef>
+    <defName>LaunchedShip</defName>
+    <label>launched ship</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] escaping the planet</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef] taking off in a spaceship</li>
+        <li ListIndex="2">image->[pawn_nameFull] being launched towards the stars [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] racing towards the heavens [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] accelerating to escape velocity [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] piloting a rocket [circumstance_group]</li>
+        <li ListIndex="6">circumstance_phrase->in front of a [terrainfeature]</li>
+        <li ListIndex="7">circumstance_phrase->with incredible force</li>
+        <li ListIndex="8">circumstance_phrase->in a plume of dust and rocks</li>
+        <li ListIndex="9">circumstance_phrase->with rockets firing dramatically</li>
+        <li ListIndex="10">circumstance_phrase->in a precision takeoff</li>
+        <li ListIndex="11">desc_sentence->[pawn_pronoun] is concentrating intently on the controls.</li>
+        <li ListIndex="12">desc_sentence->[pawn_pronoun] has [pawn_possessive] eyes closed and looks confident.</li>
+        <li ListIndex="13">desc_sentence->[pawn_pronoun] is sleeping, [pawn_possessive] eyes closed peacefully.</li>
+        <li ListIndex="14">desc_sentence->[pawn_pronoun] is smiling with grim joy.</li>
+        <li ListIndex="15">desc_sentence->[pawn_pronoun] seems to be fully in control of the situation.</li>
+        <li ListIndex="16">desc_sentence->There is a flame trail licking off the back of the ship.</li>
+        <li ListIndex="17">desc_sentence->A nearby [animal] is looking up, startled.</li>
+        <li ListIndex="18">desc_sentence->A [animal] is fleeing the launch in fear.</li>
+        <li ListIndex="19">desc_sentence->There is a [terrainfeature] in the background.</li>
+        <li ListIndex="20">desc_sentence->A [outlander] watches silently from afar.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  <TaleDef>
+    <defName>SocialFight</defName>
+    <label>social fight</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawna_nameShortDef] [fight_name_present] [pawnb_nameShortDef]</li>
+        <li ListIndex="1">image->[pawna_nameFull] insulting [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="2">image->[pawna_nameFull] taunting [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="3">image->[pawna_nameFull] threatening [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="4">image->[pawna_nameFull] intimidating [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="5">image->[pawna_nameFull] attacking [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="6">image->[pawna_nameFull] assaulting [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="7">image->[pawna_nameFull] punching [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="8">image->[pawna_nameFull] kicking [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="9">image->[pawna_nameFull] cowering from [pawnb_nameFull] [circumstance_group]</li>
+        <li ListIndex="10">fight_name_present->assaulting</li>
+        <li ListIndex="11">fight_name_present->attacking</li>
+        <li ListIndex="12">fight_name_present->fighting</li>
+        <li ListIndex="13">circumstance_phrase->while [pawnb_nameShortDef] insults [pawna_objective]</li>
+        <li ListIndex="14">circumstance_phrase->while [pawnb_nameShortDef] taunts [pawna_objective]</li>
+        <li ListIndex="15">circumstance_phrase->while [pawnb_nameShortDef] threatens [pawna_objective]</li>
+        <li ListIndex="16">circumstance_phrase->while [pawnb_nameShortDef] intimidates [pawna_objective]</li>
+        <li ListIndex="17">circumstance_phrase->while [pawnb_nameShortDef] attacks [pawna_objective]</li>
+        <li ListIndex="18">circumstance_phrase->while [pawnb_nameShortDef] assaults [pawna_objective]</li>
+        <li ListIndex="19">circumstance_phrase->while [pawnb_nameShortDef] punches [pawna_objective]</li>
+        <li ListIndex="20">circumstance_phrase->while [pawnb_nameShortDef] kicks [pawna_objective]</li>
+        <li ListIndex="21">circumstance_phrase->while [pawnb_nameShortDef] cowers from [pawna_objective]</li>
+        <li ListIndex="22">desc_sentence->[target] appears without remorse.</li>
+        <li ListIndex="23">desc_sentence->[target] is consumed with passionate rage.</li>
+        <li ListIndex="24">desc_sentence->[target] has no emotion or expression.</li>
+        <li ListIndex="25">desc_sentence->[target]'s body is covered in [gore].</li>
+        <li ListIndex="26">desc_sentence->[target] is screaming furiously.</li>
+        <li ListIndex="27">desc_sentence->[target] is visibly wounded.</li>
+        <li ListIndex="28">desc_sentence->[target]'s eyes are glowing [color].</li>
+        <li ListIndex="29">target->[pawna_nameShortDef]</li>
+        <li ListIndex="30">target->[pawnb_nameShortDef]</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>pawna</firstPawnSymbol>
+    <secondPawnSymbol>pawnb</secondPawnSymbol>
+  </TaleDef>
+  <TaleDef>
+    <defName>CollapseDodged</defName>
+    <label>collapse dodged</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] dodging a cavein</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef] nearly crushed by falling objects</li>
+        <li ListIndex="2">image->[pawn_nameFull] leaping away from a collapse of debris [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] narrowly avoiding a cavein [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] avoiding a falling ceiling [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] avoiding certain death by a falling rock [circumstance_group]</li>
+        <li ListIndex="6">circumstance_phrase->that vanishes behind a curtain of debris and dust</li>
+        <li ListIndex="7">circumstance_phrase->that pulverizes everything beneath it</li>
+        <li ListIndex="8">circumstance_phrase->which impacts with incredible force</li>
+        <li ListIndex="9">desc_sentence->[pawn_pronoun] is sweating with exertion.</li>
+        <li ListIndex="10">desc_sentence->[pawn_pronoun] appears to be terrified.</li>
+        <li ListIndex="11">desc_sentence->[pawn_pronoun] is scratched and bleeding.</li>
+        <li ListIndex="12">desc_sentence->[pawn_pronoun] has lost [pawn_possessive] balance.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+</Defs>

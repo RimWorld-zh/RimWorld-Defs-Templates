@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef Name="BaseGrenadeProjectile" Abstract="True">
     <label>projectile</label>
     <altitudeLayer>Projectile</altitudeLayer>
@@ -25,6 +25,7 @@
       <MarketValue>300</MarketValue>
       <Mass>1</Mass>
       <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.2</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -71,7 +72,7 @@
         <warmupTime>1.5</warmupTime>
         <soundCast>ThrowGrenade</soundCast>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-        <projectileDef>Proj_GrenadeFrag</projectileDef>
+        <defaultProjectile>Proj_GrenadeFrag</defaultProjectile>
         <forcedMissRadius>1.0</forcedMissRadius>
       </li>
     </verbs>
@@ -113,6 +114,7 @@
       <MarketValue>200</MarketValue>
       <Mass>1</Mass>
       <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.2</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -155,9 +157,8 @@
         </targetParams>
         <warmupTime>1.5</warmupTime>
         <soundCast>ThrowMolotovCocktail</soundCast>
-        <ai_IsIncendiary>true</ai_IsIncendiary>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-        <projectileDef>Proj_GrenadeMolotov</projectileDef>
+        <defaultProjectile>Proj_GrenadeMolotov</defaultProjectile>
         <forcedMissRadius>2.9</forcedMissRadius>
       </li>
     </verbs>
@@ -188,6 +189,7 @@
       <damageAmountBase>10</damageAmountBase>
       <explosionRadius>1.1</explosionRadius>
       <preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
     </projectile>
   </ThingDef>
   <!-- ==================== EMP grenade ========================== -->
@@ -199,6 +201,7 @@
       <MarketValue>300</MarketValue>
       <Mass>1</Mass>
       <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.2</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -245,7 +248,7 @@
         <warmupTime>1.5</warmupTime>
         <soundCast>ThrowGrenade</soundCast>
         <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
-        <projectileDef>Proj_GrenadeEMP</projectileDef>
+        <defaultProjectile>Proj_GrenadeEMP</defaultProjectile>
         <forcedMissRadius>1.0</forcedMissRadius>
       </li>
     </verbs>
@@ -278,4 +281,4 @@
       <explosionDelay>100</explosionDelay>
     </projectile>
   </ThingDef>
-</ThingDefs>
+</Defs>

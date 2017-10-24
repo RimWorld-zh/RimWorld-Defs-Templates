@@ -11,9 +11,14 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>ConstructMetal</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building_CrashedShipPart</thingClass>
     <tickerType>Normal</tickerType>
     <size>(6,3)</size>
     <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_SnowExpand" />
+      <li Class="CompProperties_SpawnerMechanoidsOnDamaged" />
+    </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <forceDebugSpawnable>true</forceDebugSpawnable>
     <graphicData>
@@ -36,8 +41,8 @@
   </ThingDef>
   <ThingDef ParentName="ShipPartBase">
     <defName>CrashedPsychicEmanatorShipPart</defName>
-    <label>crashed ship part</label>
-    <description>A mysterious crashed piece of a spaceship. It may contain exotic materials, computers, even AI personas. This kind of technology can be dangerous.</description>
+    <label>ancient ship part (psychic)</label>
+    <description>A mysterious crashed piece of a spaceship. It may contain exotic materials and computers. This one seems to be emanating psychic waves.</description>
     <statBases>
       <MaxHitPoints>1200</MaxHitPoints>
       <Flammability>0</Flammability>
@@ -49,13 +54,18 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>ConstructMetal</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
-    <thingClass>Building_PsychicEmanator</thingClass>
+    <thingClass>Building_CrashedShipPart</thingClass>
     <category>Building</category>
     <tickerType>Normal</tickerType>
     <size>(6,3)</size>
     <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_SnowExpand" ListIndex="0" />
+      <li Class="CompProperties_SpawnerMechanoidsOnDamaged" ListIndex="1" />
+      <li Class="CompProperties_PsychicDrone" ListIndex="2" />
+      <li Class="CompProperties_AnimalInsanityPulser" ListIndex="3" />
+    </comps>
     <killedLeavings>
-      <AIPersonaCore>1</AIPersonaCore>
       <Steel>280</Steel>
       <Silver>140</Silver>
       <ChunkSlagSteel>2</ChunkSlagSteel>
@@ -86,8 +96,8 @@
   </ThingDef>
   <ThingDef ParentName="ShipPartBase">
     <defName>CrashedPoisonShipPart</defName>
-    <label>crashed poison ship part</label>
-    <description>A mysterious crashed piece of a spaceship. It may contain exotic materials, computers, even AI personas. This one seems to be poisoning the ground around it.</description>
+    <label>ancient ship part (poison)</label>
+    <description>A mysterious crashed piece of a spaceship. It may contain exotic materials and computers. This one seems to be poisoning the ground around it.</description>
     <statBases>
       <MaxHitPoints>1200</MaxHitPoints>
       <Flammability>0</Flammability>
@@ -99,11 +109,26 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>ConstructMetal</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
-    <thingClass>Building_PoisonShipPart</thingClass>
+    <thingClass>Building_CrashedShipPart</thingClass>
     <category>Building</category>
     <tickerType>Normal</tickerType>
     <size>(6,3)</size>
     <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_SnowExpand" ListIndex="0" />
+      <li Class="CompProperties_SpawnerMechanoidsOnDamaged" ListIndex="1" />
+      <li Class="CompProperties_PlantHarmRadius" ListIndex="2">
+        <radiusPerDayCurve>
+          <points>
+            <li ListIndex="0">0,5</li>
+            <li ListIndex="1">1,40</li>
+            <li ListIndex="2">3,110</li>
+            <li ListIndex="3">7,200</li>
+          </points>
+        </radiusPerDayCurve>
+        <harmFrequencyPerArea>0.015</harmFrequencyPerArea>
+      </li>
+    </comps>
     <killedLeavings>
       <Steel>230</Steel>
       <Silver>120</Silver>
@@ -133,6 +158,7 @@
       <roofCollapseDamageMultiplier>0.2</roofCollapseDamageMultiplier>
     </building>
   </ThingDef>
+  <!-- =============================== Misc ============================ -->
   <ThingDef ParentName="BuildingBase">
     <defName>ShipChunk</defName>
     <label>ship chunk</label>

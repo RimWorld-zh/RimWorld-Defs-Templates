@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ScatterableDefs>
+<Defs>
   <ScatterableDef Abstract="True" Name="StoneRoot">
     <minSize>0.4</minSize>
     <maxSize>1.0</maxSize>
@@ -59,4 +59,4 @@
     <selectionWeight>40</selectionWeight>
     <scatterType>SoftGray</scatterType>
   </ScatterableDef>
-</ScatterableDefs>
+</Defs>

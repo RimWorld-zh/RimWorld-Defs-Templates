@@ -25,5 +25,8 @@
     <!--Type: string-->
     <!--Default Value: "UI/Letters/LetterUnopened"-->
     <icon>string_value</icon>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <pauseIfPauseOnUrgentLetter>true_or_false</pauseIfPauseOnUrgentLetter>
   </LetterDef>
 </Defs>

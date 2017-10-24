@@ -214,31 +214,32 @@
     <rulePack>
       <rulesStrings>
         <!-- note that killer may not be filled in, so this has to be resolvable without any killer_ symbols -->
-        <li ListIndex="0">tale_noun->[victim_nameShortDef]'s killing by [killer_nameShortDef]</li>
-        <li ListIndex="1">tale_noun->the killing of [victim_nameShortDef] by [killer_nameShortDef]</li>
-        <li ListIndex="2">tale_noun->the killing of [victim_nameShortDef]</li>
-        <li ListIndex="3">image->[victim_nameFull] being killed by [killer_nameFull] [circumstance_group]</li>
-        <li ListIndex="4">image->[killer_nameFull] killing [victim_nameFull] [circumstance_group]</li>
-        <li ListIndex="5">image->[killer_nameFull] ending [victim_nameFull]'s life [circumstance_group]</li>
-        <li ListIndex="6">image->[killer_nameFull] brutally murdering [victim_nameFull] [circumstance_group]</li>
-        <li ListIndex="7">image->[victim_nameFull] being killed [circumstance_group]</li>
-        <li ListIndex="8">circumstance_phrase->seemingly without remorse</li>
-        <li ListIndex="9">circumstance_phrase->with cold efficiency</li>
-        <li ListIndex="10">circumstance_phrase->with passionate rage</li>
-        <li ListIndex="11">circumstance_phrase->with quick, efficient movements</li>
-        <li ListIndex="12">circumstance_phrase->without emotion or expression</li>
-        <li ListIndex="13">circumstance_phrase->out of bleak necessity</li>
-        <li ListIndex="14">circumstance_phrase->in a cowardly, halfhearted way</li>
-        <li ListIndex="15">desc_sentence->The sun is setting behind them in a symbolic echo of the event.</li>
-        <li ListIndex="16">desc_sentence->[quantity_adjphrase] [animal]s looks on.</li>
-        <li ListIndex="17">desc_sentence->A [outlander] watches silently [side_position].</li>
-        <li ListIndex="18">desc_sentence->Blood is pooling around [victim_nameShortDef]'s body.</li>
-        <li ListIndex="19">desc_sentence->[victim_nameShortDef]'s eyes are rendered in a realistically lifeless fashion.</li>
-        <li ListIndex="20">desc_sentence->[killer_nameShortDef] is baring [killer_possessive] teeth.</li>
-        <li ListIndex="21">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
-        <li ListIndex="22">desc_sentence->[killer_nameShortDef] looks distressed at what [killer_pronoun] is doing.</li>
-        <li ListIndex="23">desc_sentence->[killer_nameShortDef] looks pleased with the situation.</li>
-        <li ListIndex="24">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
+        <li ListIndex="0">tale_noun->[killer_nameShortDef] killing [victim_nameShortDef]</li>
+        <li ListIndex="1">tale_noun->[victim_nameShortDef]'s killing by [killer_nameShortDef]</li>
+        <li ListIndex="2">tale_noun->the killing of [victim_nameShortDef] by [killer_nameShortDef]</li>
+        <li ListIndex="3">tale_noun->the killing of [victim_nameShortDef]</li>
+        <li ListIndex="4">image->[victim_nameFull] being killed by [killer_nameFull] [circumstance_group]</li>
+        <li ListIndex="5">image->[killer_nameFull] killing [victim_nameFull] [circumstance_group]</li>
+        <li ListIndex="6">image->[killer_nameFull] ending [victim_nameFull]'s life [circumstance_group]</li>
+        <li ListIndex="7">image->[killer_nameFull] brutally murdering [victim_nameFull] [circumstance_group]</li>
+        <li ListIndex="8">image->[victim_nameFull] being killed [circumstance_group]</li>
+        <li ListIndex="9">circumstance_phrase->seemingly without remorse</li>
+        <li ListIndex="10">circumstance_phrase->with cold efficiency</li>
+        <li ListIndex="11">circumstance_phrase->with passionate rage</li>
+        <li ListIndex="12">circumstance_phrase->with quick, efficient movements</li>
+        <li ListIndex="13">circumstance_phrase->without emotion or expression</li>
+        <li ListIndex="14">circumstance_phrase->out of bleak necessity</li>
+        <li ListIndex="15">circumstance_phrase->in a cowardly, halfhearted way</li>
+        <li ListIndex="16">desc_sentence->The sun is setting behind them in a symbolic echo of the event.</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] [animal]s look on.</li>
+        <li ListIndex="18">desc_sentence->A [outlander] watches silently [side_position].</li>
+        <li ListIndex="19">desc_sentence->Blood is pooling around [victim_nameShortDef]'s body.</li>
+        <li ListIndex="20">desc_sentence->[victim_nameShortDef]'s eyes are rendered in a realistically lifeless fashion.</li>
+        <li ListIndex="21">desc_sentence->[killer_nameShortDef] is baring [killer_possessive] teeth.</li>
+        <li ListIndex="22">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
+        <li ListIndex="23">desc_sentence->[killer_nameShortDef] looks distressed at what [killer_pronoun] is doing.</li>
+        <li ListIndex="24">desc_sentence->[killer_nameShortDef] looks pleased with the situation.</li>
+        <li ListIndex="25">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
       </rulesStrings>
     </rulePack>
     <firstPawnSymbol>victim</firstPawnSymbol>
@@ -320,6 +321,7 @@
     <firstPawnSymbol>human</firstPawnSymbol>
     <secondPawnSymbol>animal</secondPawnSymbol>
     <defSymbol>trainable</defSymbol>
+    <defType>TrainableDef</defType>
     <baseInterest>0.5</baseInterest>
   </TaleDef>
   <TaleDef>

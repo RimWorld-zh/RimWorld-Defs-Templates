@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TerrainDefs>
+<Defs>
   <TerrainDef Name="FloorBase" Abstract="True">
     <statBases>
       <WorkToBuild>135</WorkToBuild>
@@ -72,7 +72,7 @@
   <TerrainDef ParentName="FloorBase">
     <defName>WoodPlankFloor</defName>
     <label>wood floor</label>
-    <description>Wood plank flooring. For that warm, homey feeling.</description>
+    <description>Wood plank flooring. For that warm, homey feeling. While it is easy to lay, it is also flammable.</description>
     <statBases>
       <WorkToBuild>85</WorkToBuild>
       <Flammability>0.22</Flammability>
@@ -93,6 +93,7 @@
       <li ListIndex="2">SmoothHard</li>
     </affordances>
     <layerable>true</layerable>
+    <color>(108,78,55)</color>
     <burnedDef>BurnedWoodPlankFloor</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
@@ -191,6 +192,7 @@
       <Silver>15</Silver>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <constructEffect>ConstructMetal</constructEffect>
     <designationCategory>Floors</designationCategory>
     <designationHotKey>Misc4</designationHotKey>
@@ -380,4 +382,4 @@
     <burnedDef>BurnedCarpet</burnedDef>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
   </TerrainDef>
-</TerrainDefs>
+</Defs>

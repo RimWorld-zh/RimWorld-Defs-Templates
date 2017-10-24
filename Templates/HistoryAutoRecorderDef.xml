@@ -16,5 +16,7 @@
     <!--Type: UnityEngine.Color-->
     <!--Default Value: Color.green-->
     <graphColor>value</graphColor>
+    <!--Type: string-->
+    <graphLabelY>string_value</graphLabelY>
   </HistoryAutoRecorderDef>
 </Defs>

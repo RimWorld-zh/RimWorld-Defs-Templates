@@ -352,6 +352,7 @@
       </rulesStrings>
     </rulePack>
     <defSymbol>project</defSymbol>
+    <defType>ResearchProjectDef</defType>
     <baseInterest>1.5</baseInterest>
   </TaleDef>
   <TaleDef>

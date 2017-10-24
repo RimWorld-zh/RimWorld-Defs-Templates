@@ -105,6 +105,16 @@
       <MaxHitPoints>20</MaxHitPoints>
       <DeteriorationRate>2</DeteriorationRate>
     </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance">
+        <humanlikeOnly>true</humanlikeOnly>
+      </li>
+    </comps>
     <graphicData>
       <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -119,15 +129,6 @@
     </ingestible>
   </ThingDef>
   <ThingDef Abstract="True" Name="EggUnfertBase" ParentName="EggBase">
-    <comps>
-      <li Class="CompProperties_Rottable">
-        <daysToRotStart>15</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
-      <li Class="CompProperties_FoodPoisoningChance">
-        <humanlikeOnly>true</humanlikeOnly>
-      </li>
-    </comps>
     <thingCategories>
       <li>EggsUnfertilized</li>
     </thingCategories>
@@ -138,9 +139,6 @@
   <ThingDef Abstract="True" Name="EggFertBase" ParentName="EggBase">
     <tickerType>Normal</tickerType>
     <comps>
-      <li Class="CompProperties_FoodPoisoningChance">
-        <humanlikeOnly>true</humanlikeOnly>
-      </li>
       <li Class="CompProperties_TemperatureRuinable">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
@@ -180,6 +178,7 @@
       <li Class="CompProperties_Rottable" ListIndex="1">
         <daysToRotStart>15</daysToRotStart>
         <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
       </li>
       <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
@@ -229,15 +228,20 @@
     <useHitPoints>true</useHitPoints>
     <comps>
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
       </li>
-      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="3">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
         <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
       </li>
-      <li Class="CompProperties_Hatcher" ListIndex="3">
+      <li Class="CompProperties_Hatcher" ListIndex="4">
         <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
         <hatcherPawn>Chicken</hatcherPawn>
       </li>
@@ -287,15 +291,20 @@
     <useHitPoints>true</useHitPoints>
     <comps>
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
       </li>
-      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="3">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
         <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
       </li>
-      <li Class="CompProperties_Hatcher" ListIndex="3">
+      <li Class="CompProperties_Hatcher" ListIndex="4">
         <hatcherDaystoHatch>4.5</hatcherDaystoHatch>
         <hatcherPawn>Cobra</hatcherPawn>
       </li>
@@ -345,15 +354,20 @@
     <useHitPoints>true</useHitPoints>
     <comps>
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
       </li>
-      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="3">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
         <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
       </li>
-      <li Class="CompProperties_Hatcher" ListIndex="3">
+      <li Class="CompProperties_Hatcher" ListIndex="4">
         <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
         <hatcherPawn>Iguana</hatcherPawn>
       </li>
@@ -403,15 +417,20 @@
     <useHitPoints>true</useHitPoints>
     <comps>
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
       </li>
-      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="3">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
         <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
       </li>
-      <li Class="CompProperties_Hatcher" ListIndex="3">
+      <li Class="CompProperties_Hatcher" ListIndex="4">
         <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
         <hatcherPawn>Tortoise</hatcherPawn>
       </li>
@@ -462,15 +481,20 @@
     <useHitPoints>true</useHitPoints>
     <comps>
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
       </li>
-      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="3">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
         <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
       </li>
-      <li Class="CompProperties_Hatcher" ListIndex="3">
+      <li Class="CompProperties_Hatcher" ListIndex="4">
         <hatcherDaystoHatch>7</hatcherDaystoHatch>
         <hatcherPawn>Cassowary</hatcherPawn>
       </li>
@@ -521,15 +545,20 @@
     <useHitPoints>true</useHitPoints>
     <comps>
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
       </li>
-      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="3">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
         <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
       </li>
-      <li Class="CompProperties_Hatcher" ListIndex="3">
+      <li Class="CompProperties_Hatcher" ListIndex="4">
         <hatcherDaystoHatch>6</hatcherDaystoHatch>
         <hatcherPawn>Emu</hatcherPawn>
       </li>
@@ -580,15 +609,20 @@
     <useHitPoints>true</useHitPoints>
     <comps>
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
       </li>
-      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="3">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
         <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
       </li>
-      <li Class="CompProperties_Hatcher" ListIndex="3">
+      <li Class="CompProperties_Hatcher" ListIndex="4">
         <hatcherDaystoHatch>8</hatcherDaystoHatch>
         <hatcherPawn>Ostrich</hatcherPawn>
       </li>
@@ -639,15 +673,20 @@
     <useHitPoints>true</useHitPoints>
     <comps>
       <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="1">
+      <li Class="CompProperties_Rottable" ListIndex="1">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2">
         <humanlikeOnly>true</humanlikeOnly>
       </li>
-      <li Class="CompProperties_TemperatureRuinable" ListIndex="2">
+      <li Class="CompProperties_TemperatureRuinable" ListIndex="3">
         <minSafeTemperature>0</minSafeTemperature>
         <maxSafeTemperature>50</maxSafeTemperature>
         <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
       </li>
-      <li Class="CompProperties_Hatcher" ListIndex="3">
+      <li Class="CompProperties_Hatcher" ListIndex="4">
         <hatcherDaystoHatch>5</hatcherDaystoHatch>
         <hatcherPawn>Turkey</hatcherPawn>
       </li>

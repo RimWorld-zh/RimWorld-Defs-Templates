@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnKindDefs>
+<Defs>
   <PawnKindDef Abstract="True" Name="BasePlayerPawnKind">
     <race>Human</race>
     <forceNormalGearQuality>true</forceNormalGearQuality>
@@ -52,4 +52,4 @@
     <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
   </PawnKindDef>
-</PawnKindDefs>
+</Defs>

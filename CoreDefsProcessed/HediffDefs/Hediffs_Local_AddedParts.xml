@@ -16,6 +16,7 @@
       <partEfficiency>0.6</partEfficiency>
       <isSolid>true</isSolid>
     </addedPartProps>
+    <labelNoun>a peg leg</labelNoun>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>Denture</defName>
@@ -27,6 +28,7 @@
       <partEfficiency>0.8</partEfficiency>
       <isSolid>true</isSolid>
     </addedPartProps>
+    <labelNoun>a denture</labelNoun>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>SimpleProstheticLeg</defName>
@@ -39,11 +41,26 @@
       <partEfficiency>0.85</partEfficiency>
       <isSolid>true</isSolid>
     </addedPartProps>
+    <labelNoun>a simple prosthetic leg</labelNoun>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>SimpleProstheticArm</defName>
     <label>simple prosthetic arm</label>
     <hediffClass>Hediff_AddedPart</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver" ListIndex="0">
+        <tools>
+          <li ListIndex="0">
+            <label>fist</label>
+            <capacities>
+              <li ListIndex="0">Blunt</li>
+            </capacities>
+            <power>8</power>
+            <cooldownTime>1.65</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
     <isBad>false</isBad>
     <spawnThingOnRemoved>SimpleProstheticArm</spawnThingOnRemoved>
     <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
@@ -51,6 +68,7 @@
       <partEfficiency>0.5</partEfficiency>
       <isSolid>true</isSolid>
     </addedPartProps>
+    <labelNoun>a simple prosthetic arm</labelNoun>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>BionicEye</defName>
@@ -64,6 +82,7 @@
       <isBionic>true</isBionic>
       <isSolid>true</isSolid>
     </addedPartProps>
+    <labelNoun>a bionic eye</labelNoun>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>BionicArm</defName>
@@ -71,14 +90,16 @@
     <hediffClass>Hediff_AddedPart</hediffClass>
     <comps>
       <li Class="HediffCompProperties_VerbGiver" ListIndex="0">
-        <verbs>
+        <tools>
           <li ListIndex="0">
-            <verbClass>Verb_MeleeAttack</verbClass>
-            <defaultCooldownTime>1.65</defaultCooldownTime>
-            <meleeDamageDef>Blunt</meleeDamageDef>
-            <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+            <label>fist</label>
+            <capacities>
+              <li ListIndex="0">Blunt</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>1.65</cooldownTime>
           </li>
-        </verbs>
+        </tools>
       </li>
     </comps>
     <isBad>false</isBad>
@@ -89,6 +110,7 @@
       <isBionic>true</isBionic>
       <isSolid>true</isSolid>
     </addedPartProps>
+    <labelNoun>a bionic arm</labelNoun>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>BionicLeg</defName>
@@ -102,6 +124,7 @@
       <isBionic>true</isBionic>
       <isSolid>true</isSolid>
     </addedPartProps>
+    <labelNoun>a bionic leg</labelNoun>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>PowerClaw</defName>
@@ -109,14 +132,16 @@
     <hediffClass>Hediff_AddedPart</hediffClass>
     <comps>
       <li Class="HediffCompProperties_VerbGiver" ListIndex="0">
-        <verbs>
+        <tools>
           <li ListIndex="0">
-            <verbClass>Verb_MeleeAttack</verbClass>
-            <defaultCooldownTime>1.65</defaultCooldownTime>
-            <meleeDamageDef>Scratch</meleeDamageDef>
-            <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+            <label>claw</label>
+            <capacities>
+              <li ListIndex="0">Scratch</li>
+            </capacities>
+            <power>15</power>
+            <cooldownTime>1.65</cooldownTime>
           </li>
-        </verbs>
+        </tools>
       </li>
     </comps>
     <isBad>false</isBad>
@@ -128,6 +153,7 @@
       <isSolid>true</isSolid>
       <isGoodWeapon>true</isGoodWeapon>
     </addedPartProps>
+    <labelNoun>a power claw</labelNoun>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>ScytherBlade</defName>
@@ -135,14 +161,24 @@
     <hediffClass>Hediff_AddedPart</hediffClass>
     <comps>
       <li Class="HediffCompProperties_VerbGiver" ListIndex="0">
-        <verbs>
+        <tools>
           <li ListIndex="0">
-            <verbClass>Verb_MeleeAttack</verbClass>
-            <defaultCooldownTime>1.65</defaultCooldownTime>
-            <meleeDamageDef>Cut</meleeDamageDef>
-            <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
+            <label>blade</label>
+            <capacities>
+              <li ListIndex="0">Cut</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>1.65</cooldownTime>
           </li>
-        </verbs>
+          <li ListIndex="1">
+            <label>point</label>
+            <capacities>
+              <li ListIndex="0">Stab</li>
+            </capacities>
+            <power>12</power>
+            <cooldownTime>1.65</cooldownTime>
+          </li>
+        </tools>
       </li>
     </comps>
     <isBad>false</isBad>
@@ -154,5 +190,6 @@
       <isSolid>true</isSolid>
       <isGoodWeapon>true</isGoodWeapon>
     </addedPartProps>
+    <labelNoun>a scyther blade</labelNoun>
   </HediffDef>
 </Defs>

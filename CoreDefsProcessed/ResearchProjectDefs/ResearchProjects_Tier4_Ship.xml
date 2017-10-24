@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ResearchProjectDefs>
+<Defs>
   <!--=============================== Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
   <ResearchProjectDef Name="ShipResearchProjectBase" Abstract="True">
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
@@ -20,6 +20,7 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>11</researchViewX>
     <researchViewY>2</researchViewY>
   </ResearchProjectDef>
@@ -37,8 +38,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>12</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewY>4.8</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="ShipResearchProjectBase">
     <defName>ShipReactor</defName>
@@ -53,8 +55,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>12</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewY>1.2</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="ShipResearchProjectBase">
     <defName>ShipEngine</defName>
@@ -69,8 +72,9 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>12</researchViewX>
-    <researchViewY>2</researchViewY>
+    <researchViewY>2.4</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef ParentName="ShipResearchProjectBase">
     <defName>ShipComputerCore</defName>
@@ -85,7 +89,27 @@
     <requiredResearchFacilities>
       <li ListIndex="0">MultiAnalyzer</li>
     </requiredResearchFacilities>
+    <tab>Main</tab>
     <researchViewX>12</researchViewX>
-    <researchViewY>3</researchViewY>
+    <researchViewY>3.6</researchViewY>
   </ResearchProjectDef>
-</ResearchProjectDefs>
+  <ResearchProjectDef ParentName="ShipResearchProjectBase">
+    <defName>ShipSensorCluster</defName>
+    <label>ship sensor cluster</label>
+    <description>Allows you to construct long-range sensors for a ship.</description>
+    <techLevel>Spacer</techLevel>
+    <baseCost>6000</baseCost>
+    <prerequisites>
+      <li ListIndex="0">ShipBasics</li>
+      <li ListIndex="1">GroundPenetratingScanner</li>
+      <li ListIndex="2">LongRangeMineralScanner</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li ListIndex="0">MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>Main</tab>
+    <researchViewX>12</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

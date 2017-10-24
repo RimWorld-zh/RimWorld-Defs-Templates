@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Buildings>
+<Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>OrbitalTradeBeacon</defName>
     <label>orbital trade beacon</label>
@@ -80,6 +80,7 @@
     <researchPrerequisites>
       <li ListIndex="0">MicroelectronicsBasics</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <designationCategory>Misc</designationCategory>
@@ -143,6 +144,7 @@
     <researchPrerequisites>
       <li ListIndex="0">Firefoam</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <specialDisplayRadius>9.9</specialDisplayRadius>
@@ -211,6 +213,7 @@
     <researchPrerequisites>
       <li ListIndex="0">MoisturePump</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <specialDisplayRadius>6.9</specialDisplayRadius>
@@ -272,6 +275,7 @@
     <researchPrerequisites>
       <li ListIndex="0">GroundPenetratingScanner</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <designationCategory>Misc</designationCategory>
@@ -329,6 +333,7 @@
     <researchPrerequisites>
       <li ListIndex="0">LongRangeMineralScanner</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
@@ -388,6 +393,7 @@
     <researchPrerequisites>
       <li ListIndex="0">TransportPod</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
@@ -453,6 +459,7 @@
     <researchPrerequisites>
       <li ListIndex="0">TransportPod</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <placeWorkers>
@@ -462,6 +469,7 @@
     <designationCategory>Misc</designationCategory>
     <thingClass>Building</thingClass>
     <category>Building</category>
+    <tickerType>Normal</tickerType>
     <size>(1,1)</size>
     <rotatable>false</rotatable>
     <comps>
@@ -504,6 +512,7 @@
     <researchPrerequisites>
       <li ListIndex="0">MultiAnalyzer</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
@@ -550,7 +559,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>VitalsMonitor</defName>
     <label>vitals monitor</label>
-    <description>Increases patients treatment quality. Needs to be placed adjacent to a medical bed. One medical bed can be linked to only one vitals monitor.</description>
+    <description>Increases medical tend quality, surgery success chance, and immunity gain speed when placed directly adjacent to a hospital bed. Only works for hospital beds - normal beds will not benefit. Attaching more than one vitals monitor to the same bed will have no effect.</description>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToBuild>4000</WorkToBuild>
@@ -566,6 +575,7 @@
     <researchPrerequisites>
       <li ListIndex="0">VitalsMonitor</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <defaultPlacingRot>South</defaultPlacingRot>
     <altitudeLayer>Building</altitudeLayer>
@@ -588,10 +598,10 @@
         <statOffsets>
           <MedicalTendQualityOffset>0.07</MedicalTendQualityOffset>
           <ImmunityGainSpeedFactor>0.02</ImmunityGainSpeedFactor>
+          <SurgerySuccessChanceFactor>0.10</SurgerySuccessChanceFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
-        <canLinkToMedBedsOnly>true</canLinkToMedBedsOnly>
       </li>
     </comps>
     <minifiedDef>MinifiedFurniture</minifiedDef>
@@ -690,6 +700,7 @@
     <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructDirt</constructEffect>
+    <defaultPlacingRot>South</defaultPlacingRot>
     <altitudeLayer>FloorEmplacement</altitudeLayer>
     <designationCategory>Misc</designationCategory>
     <designationHotKey>Misc8</designationHotKey>
@@ -714,7 +725,7 @@
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <building>
       <isInert>true</isInert>
-      <preventDeterioration>true</preventDeterioration>
+      <preventDeteriorationInside>true</preventDeteriorationInside>
       <fullGraveGraphicData>
         <texPath>Things/Building/Misc/GraveFull</texPath>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -801,7 +812,7 @@
     <fillPercent>0.5</fillPercent>
     <blockWind>true</blockWind>
     <building>
-      <preventDeterioration>true</preventDeterioration>
+      <preventDeteriorationInside>true</preventDeteriorationInside>
       <fullGraveGraphicData>
         <texPath>Things/Building/Misc/SarcophagusFull</texPath>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -849,7 +860,9 @@
     <researchPrerequisites>
       <li ListIndex="0">Cryptosleep</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
+    <defaultPlacingRot>South</defaultPlacingRot>
     <altitudeLayer>Building</altitudeLayer>
     <designationCategory>Misc</designationCategory>
     <thingClass>Building_CryptosleepCasket</thingClass>
@@ -1040,4 +1053,4 @@
       <sowTag>SupportPlantsOnly</sowTag>
     </building>
   </ThingDef>
-</Buildings>
+</Defs>

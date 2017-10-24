@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SpecialThingFilters>
+<Defs>
   <SpecialThingFilterDef>
     <defName>AllowCorpsesColonist</defName>
     <label>allow colonist corpses</label>
@@ -61,4 +61,4 @@
     <allowedByDefault>true</allowedByDefault>
     <workerClass>SpecialThingFilterWorker_NonDeadmansApparel</workerClass>
   </SpecialThingFilterDef>
-</SpecialThingFilters>
+</Defs>

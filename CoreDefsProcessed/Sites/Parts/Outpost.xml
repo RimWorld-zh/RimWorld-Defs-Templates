@@ -10,6 +10,13 @@
     <showFactionInInspectString>true</showFactionInInspectString>
     <knownDanger>true</knownDanger>
     <requiresFaction>true</requiresFaction>
+    <tags>
+      <li ListIndex="0">MineralScannerPreciousLumpThreat</li>
+      <li ListIndex="1">ItemStashQuestThreat</li>
+      <li ListIndex="2">DownedRefugeeQuestThreat</li>
+      <li ListIndex="3">PrisonerWillingToJoinQuestThreat</li>
+    </tags>
+    <descriptionDialogue>there is an enemy outpost at the site</descriptionDialogue>
   </SitePartDef>
   <GenStepDef>
     <defName>Outpost</defName>

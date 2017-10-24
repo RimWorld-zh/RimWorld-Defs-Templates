@@ -52,7 +52,7 @@
         <MaxHitPoints>0.7</MaxHitPoints>
         <Flammability>0.2</Flammability>
         <Beauty>2</Beauty>
-        <MeleeWeapon_Cooldown>1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(180,173,150)</color>
       <constructEffect>ConstructMetal</constructEffect>
@@ -113,7 +113,7 @@
         <Beauty>4</Beauty>
         <WorkToMake>0.9</WorkToMake>
         <WorkToBuild>0.9</WorkToBuild>
-        <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(255,235,122)</color>
       <constructEffect>ConstructMetal</constructEffect>
@@ -170,7 +170,7 @@
         <MaxHitPoints>1</MaxHitPoints>
         <Beauty>1</Beauty>
         <Flammability>0.2</Flammability>
-        <MeleeWeapon_Cooldown>1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(102,102,105)</color>
       <constructEffect>ConstructMetal</constructEffect>
@@ -227,7 +227,7 @@
         <Flammability>0.1</Flammability>
         <WorkToMake>2.2</WorkToMake>
         <WorkToBuild>2.2</WorkToBuild>
-        <MeleeWeapon_Cooldown>0.8</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(160,178,181)</color>
       <constructEffect>ConstructMetal</constructEffect>
@@ -241,13 +241,11 @@
     <label>wood</label>
     <description>Wood from trees or other fibrous plants. Useful for building structures, weapons, and even simple prosthetics. A raw stick of wood can be used as a weapon in a pinch.</description>
     <statBases>
-      <MarketValue>1.4</MarketValue>
+      <MarketValue>1.2</MarketValue>
       <MaxHitPoints>150</MaxHitPoints>
       <Mass>0.4</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>1</DeteriorationRate>
-      <MeleeWeapon_DamageAmount>8</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>2.2</MeleeWeapon_Cooldown>
       <SharpDamageMultiplier>0.3</SharpDamageMultiplier>
       <BluntDamageMultiplier>0.8</BluntDamageMultiplier>
       <Beauty>-4</Beauty>
@@ -266,6 +264,15 @@
       </li>
     </comps>
     <isBodyPartOrImplant>true</isBodyPartOrImplant>
+    <tools>
+      <li ListIndex="0">
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Resource/WoodLog</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -279,13 +286,6 @@
     </thingCategories>
     <soundDrop>Wood_Drop</soundDrop>
     <soundInteract>Wood_Drop</soundInteract>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-      </li>
-    </verbs>
     <equippedAngleOffset>-20</equippedAngleOffset>
     <equipmentType>Primary</equipmentType>
     <techLevel>Neolithic</techLevel>
@@ -305,7 +305,7 @@
         <WorkToMake>0.7</WorkToMake>
         <WorkToBuild>0.7</WorkToBuild>
         <DoorOpenSpeed>1.2</DoorOpenSpeed>
-        <MeleeWeapon_Cooldown>0.9</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(133,97,67)</color>
       <constructEffect>ConstructWood</constructEffect>
@@ -365,7 +365,7 @@
         <Beauty>0.5</Beauty>
         <Flammability>0.0</Flammability>
         <DoorOpenSpeed>0.75</DoorOpenSpeed>
-        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.35</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(100,100,100)</color>
       <constructEffect>ConstructMetal</constructEffect>
@@ -377,7 +377,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>Jade</defName>
     <label>jade</label>
-    <description>A hard, green stone. Because of its beauty and rarity, jade is often used for ornaments and decorations. It's hardness and density also makes it a good material for blunt weapons.</description>
+    <description>A hard, green stone. Because of its beauty and rarity, jade is often used for ornaments and decorations. Its hardness and density also makes it a good material for blunt weapons.</description>
     <statBases>
       <MarketValue>5</MarketValue>
       <Mass>0.5</Mass>
@@ -425,7 +425,7 @@
         <WorkToBuild>5.0</WorkToBuild>
         <Beauty>2.5</Beauty>
         <Flammability>0.2</Flammability>
-        <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(85,118,69)</color>
       <constructEffect>ConstructMetal</constructEffect>
@@ -441,7 +441,7 @@
     <description>Cloth woven from organic fibers.</description>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
-      <MarketValue>1.9</MarketValue>
+      <MarketValue>1.5</MarketValue>
       <Mass>0.026</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>4</DeteriorationRate>
@@ -505,7 +505,7 @@
     <description>Spacer-tech synthetic fabric designed for making ordinary clothes. It is soft, light, strong, and insulates well.</description>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
-      <MarketValue>7</MarketValue>
+      <MarketValue>4</MarketValue>
       <Mass>0.025</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>3</DeteriorationRate>
@@ -561,7 +561,7 @@
     <description>Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth.</description>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>10</MarketValue>
+      <MarketValue>5.5</MarketValue>
       <Mass>0.032</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>3</DeteriorationRate>
@@ -701,7 +701,7 @@
   </ThingDef>
   <ThingDef ParentName="WoolBase">
     <defName>WoolMegasloth</defName>
-    <label>Megasloth wool</label>
+    <label>megasloth wool</label>
     <description>While somewhat coarse, megasloth wool's long fibers make it very strong. It is very warm.</description>
     <statBases>
       <MaxHitPoints>90</MaxHitPoints>
@@ -734,7 +734,7 @@
       <li ListIndex="0">Textiles</li>
     </thingCategories>
     <stuffProps>
-      <stuffAdjective>Megasloth wool</stuffAdjective>
+      <stuffAdjective>megasloth wool</stuffAdjective>
       <commonality>0.12</commonality>
       <categories>
         <li ListIndex="0">Fabric</li>

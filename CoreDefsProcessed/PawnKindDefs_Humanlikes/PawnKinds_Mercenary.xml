@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnKindDefs>
+<Defs>
   <PawnKindDef Name="MercenaryBase" Abstract="True">
     <race>Human</race>
     <defaultFactionType>Pirate</defaultFactionType>
@@ -363,7 +363,7 @@
       <max>2000</max>
     </weaponMoney>
     <weaponTags>
-      <li ListIndex="0">Melee</li>
+      <li ListIndex="0">NonNeolithicOnlyMelee</li>
     </weaponTags>
     <techHediffsMoney>
       <min>2000</min>
@@ -648,4 +648,4 @@
       <max>2</max>
     </combatEnhancingDrugsCount>
   </PawnKindDef>
-</PawnKindDefs>
+</Defs>

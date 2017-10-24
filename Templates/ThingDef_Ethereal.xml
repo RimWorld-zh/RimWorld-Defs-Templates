@@ -15,13 +15,78 @@
     <category>Ethereal</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
+    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: bool-->
     <!--Default Value: true-->
     <useHitPoints>true_or_false</useHitPoints>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <receivesSignals>true_or_false</receivesSignals>
+    <!--Complex List-->
+    <!--Type: List<Verse.CompProperties>-->
+    <comps>
+      <!--Type: Verse.CompProperties_WindSource-->
+      <li Class="CompProperties_WindSource" />
+      <!--Type: Verse.CompProperties_AffectsSky-->
+      <li Class="CompProperties_AffectsSky">
+        <!--Type: Verse.SkyColorSet-->
+        <skyColors>
+          <!--Type: UnityEngine.Color-->
+          <sky>value</sky>
+          <!--Type: UnityEngine.Color-->
+          <shadow>value</shadow>
+          <!--Type: UnityEngine.Color-->
+          <overlay>value</overlay>
+          <!--Type: float-->
+          <saturation>float_value</saturation>
+        </skyColors>
+      </li>
+      <!--Type: RimWorld.CompProperties_CameraShaker-->
+      <li Class="CompProperties_CameraShaker">
+        <!--Type: float-->
+        <!--Default Value: 0.05-->
+        <mag>float_value</mag>
+      </li>
+      <!--Type: RimWorld.CompProperties_OrbitalBeam-->
+      <li Class="CompProperties_OrbitalBeam">
+        <!--Type: float-->
+        <!--Default Value: 8.0-->
+        <width>float_value</width>
+        <!--Type: UnityEngine.Color-->
+        <!--Default Value: Color.white-->
+        <color>value</color>
+        <!--Type: Verse.SoundDef-->
+        <sound>SoundDef_defName</sound>
+      </li>
+      <!-- ... -->
+    </comps>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <alwaysFlee>true_or_false</alwaysFlee>
+    <!--Type: Verse.GraphicData-->
+    <!--Default Value: null-->
+    <graphicData>
+      <!--Type: string-->
+      <!--Default Value: (string)null-->
+      <texPath>string_value</texPath>
+      <!--Type: System.Type-->
+      <!--Default Value: null-->
+      <graphicClass>class_name</graphicClass>
+      <!--Type: Verse.ShaderType-->
+      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Default Value: None-->
+      <shaderType>enum_value</shaderType>
+    </graphicData>
     <!--Type: Verse.DrawerType-->
     <!--Available Values: None, RealtimeOnly, MapMeshOnly, MapMeshAndRealTime-->
     <!--Default Value: RealtimeOnly-->
     <drawerType>enum_value</drawerType>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <drawOffscreen>true_or_false</drawOffscreen>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <seeThroughFog>true_or_false</seeThroughFog>
   </ThingDef>
 </Defs>

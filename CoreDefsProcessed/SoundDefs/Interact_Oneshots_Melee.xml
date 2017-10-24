@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DefPackage-SoundDef>
+<Defs>
   <SoundDef>
     <defName>Pawn_Melee_Punch_HitPawn</defName>
     <context>MapOnly</context>
@@ -456,4 +456,4 @@
       </li>
     </subSounds>
   </SoundDef>
-</DefPackage-SoundDef>
+</Defs>

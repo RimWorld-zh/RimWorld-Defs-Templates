@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Plants>
+<Defs>
   <!--=========================== Food crops ==============================-->
   <ThingDef ParentName="PlantBase">
     <defName>PlantRice</defName>
@@ -42,10 +42,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>3</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <maxMeshCount>4</maxMeshCount>
       <visualSizeRange>
@@ -95,10 +95,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>5.8</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0.4</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -146,10 +146,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>11.3</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.35</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -199,11 +199,11 @@
       <harvestTag>Standard</harvestTag>
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
-      <growDays>4.4</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
+      <growDays>4.62</growDays>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0.6</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -252,10 +252,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>7</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0.6</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <maxMeshCount>4</maxMeshCount>
       <visualSizeRange>
@@ -306,10 +306,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>8</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0.7</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -362,10 +362,11 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>22.5</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
+      <neverBlightable>true</neverBlightable>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -415,10 +416,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>6.5</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <!-- <sowResearchPrerequisites>
         <li>Healroot</li>
       </sowResearchPrerequisites>-->
@@ -472,10 +473,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>5</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0.7</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -525,10 +526,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>7.50</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -578,10 +579,10 @@
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <growDays>9.00</growDays>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -589,4 +590,4 @@
       </visualSizeRange>
     </plant>
   </ThingDef>
-</Plants>
+</Defs>

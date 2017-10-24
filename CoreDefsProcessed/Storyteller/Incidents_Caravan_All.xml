@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<IncidentDefs>
+<Defs>
   <!-- =============================== Threats =============================== -->
   <IncidentDef>
     <defName>Ambush</defName>
     <label>ambush</label>
     <workerClass>IncidentWorker_Ambush_EnemyFaction</workerClass>
-    <category>CaravanTarget</category>
-    <targetType>Caravan, MapTempIncident</targetType>
+    <category>ThreatBig</category>
+    <targetTypes>
+      <li ListIndex="0">Caravan</li>
+      <li ListIndex="1">MapTempIncident</li>
+    </targetTypes>
     <minRefireDays>0.17</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
     <letterText>Your caravan has been ambushed by {0} from {1}!</letterText>
     <letterLabel>Caravan ambushed</letterLabel>
-    <letterDef>BadUrgent</letterDef>
+    <letterDef>ThreatBig</letterDef>
     <mtbDaysByBiome>
       <TemperateForest>20</TemperateForest>
       <BorealForest>20</BorealForest>
@@ -19,22 +22,29 @@
       <AridShrubland>20</AridShrubland>
       <Desert>30</Desert>
       <Tundra>30</Tundra>
+      <TropicalSwamp>30</TropicalSwamp>
+      <TemperateSwamp>30</TemperateSwamp>
+      <ColdBog>35</ColdBog>
       <ExtremeDesert>35</ExtremeDesert>
       <IceSheet>40</IceSheet>
       <SeaIce>60</SeaIce>
     </mtbDaysByBiome>
+    <tale>CaravanAmbushedByHumanlike</tale>
   </IncidentDef>
   <IncidentDef>
     <defName>ManhunterAmbush</defName>
     <label>manhunter ambush</label>
     <workerClass>IncidentWorker_Ambush_ManhunterPack</workerClass>
-    <category>CaravanTarget</category>
-    <targetType>Caravan, MapTempIncident</targetType>
+    <category>ThreatBig</category>
+    <targetTypes>
+      <li ListIndex="0">Caravan</li>
+      <li ListIndex="1">MapTempIncident</li>
+    </targetTypes>
     <minRefireDays>0.17</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
     <letterText>Your caravan has been ambushed by manhunting {0}!</letterText>
     <letterLabel>Caravan ambushed (manhunters)</letterLabel>
-    <letterDef>BadUrgent</letterDef>
+    <letterDef>ThreatBig</letterDef>
     <mtbDaysByBiome>
       <TemperateForest>20</TemperateForest>
       <BorealForest>20</BorealForest>
@@ -42,17 +52,30 @@
       <AridShrubland>20</AridShrubland>
       <Desert>30</Desert>
       <Tundra>30</Tundra>
+      <TropicalSwamp>30</TropicalSwamp>
+      <TemperateSwamp>30</TemperateSwamp>
+      <ColdBog>35</ColdBog>
       <ExtremeDesert>35</ExtremeDesert>
       <IceSheet>40</IceSheet>
       <SeaIce>60</SeaIce>
     </mtbDaysByBiome>
+    <tale>CaravanAmbushedByManhunter</tale>
   </IncidentDef>
   <WorldObjectDef>
     <defName>Ambush</defName>
     <label>ambush</label>
     <description>An ongoing ambush battle.</description>
     <worldObjectClass>CaravansBattlefield</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_FormCaravan" ListIndex="0">
+        <reformCaravan>true</reformCaravan>
+      </li>
+      <li Class="WorldObjectCompProperties_TimedForcedExit" ListIndex="1" />
+    </comps>
     <isTempIncidentMapOwner>true</isTempIncidentMapOwner>
+    <incidentTargetTypes>
+      <li ListIndex="0">MapTempIncident</li>
+    </incidentTargetTypes>
     <expandingIcon>true</expandingIcon>
     <expandingIconTexture>World/WorldObjects/Expanding/Ambush</expandingIconTexture>
     <expandingIconPriority>80</expandingIconPriority>
@@ -64,8 +87,11 @@
     <defName>CaravanMeeting</defName>
     <label>caravan meeting</label>
     <workerClass>IncidentWorker_CaravanMeeting</workerClass>
-    <category>CaravanTarget</category>
-    <targetType>Caravan, MapTempIncident</targetType>
+    <category>Misc</category>
+    <targetTypes>
+      <li ListIndex="0">Caravan</li>
+      <li ListIndex="1">MapTempIncident</li>
+    </targetTypes>
     <minRefireDays>0.17</minRefireDays>
     <mtbDaysByBiome>
       <TemperateForest>10</TemperateForest>
@@ -74,22 +100,25 @@
       <TropicalRainforest>10</TropicalRainforest>
       <Desert>15</Desert>
       <Tundra>15</Tundra>
+      <TropicalSwamp>15</TropicalSwamp>
+      <TemperateSwamp>15</TemperateSwamp>
+      <ColdBog>25</ColdBog>
       <ExtremeDesert>25</ExtremeDesert>
       <IceSheet>35</IceSheet>
       <SeaIce>80</SeaIce>
     </mtbDaysByBiome>
+    <tale>CaravanMeeting</tale>
   </IncidentDef>
   <!--==================================== Bad ==================================-->
   <IncidentDef>
     <defName>CaravanDemand</defName>
     <label>payment demand</label>
     <workerClass>IncidentWorker_CaravanDemand</workerClass>
-    <category>CaravanTarget</category>
-    <targetType>Caravan</targetType>
+    <category>ThreatSmall</category>
+    <targetTypes>
+      <li ListIndex="0">Caravan</li>
+    </targetTypes>
     <pointsScaleable>true</pointsScaleable>
-    <letterText>Your caravan has been ambushed by {0} from {1}!</letterText>
-    <letterLabel>Caravan ambushed</letterLabel>
-    <letterDef>BadUrgent</letterDef>
     <mtbDaysByBiome>
       <TemperateForest>20</TemperateForest>
       <BorealForest>20</BorealForest>
@@ -97,9 +126,13 @@
       <AridShrubland>20</AridShrubland>
       <Desert>30</Desert>
       <Tundra>30</Tundra>
+      <TropicalSwamp>30</TropicalSwamp>
+      <TemperateSwamp>30</TemperateSwamp>
+      <ColdBog>35</ColdBog>
       <ExtremeDesert>35</ExtremeDesert>
       <IceSheet>40</IceSheet>
       <SeaIce>60</SeaIce>
     </mtbDaysByBiome>
+    <tale>CaravanDemand</tale>
   </IncidentDef>
-</IncidentDefs>
+</Defs>

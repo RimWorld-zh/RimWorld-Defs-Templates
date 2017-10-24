@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorldObjectDef>
+    <defName>Debug_Arena</defName>
+    <worldObjectClass>MapParent</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_DebugArena" ListIndex="0" />
+    </comps>
+    <texture>World/WorldObjects/Ambush</texture>
+  </WorldObjectDef>
+</Defs>

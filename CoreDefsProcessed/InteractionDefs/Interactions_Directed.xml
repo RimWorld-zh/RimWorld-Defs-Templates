@@ -36,4 +36,22 @@
       </rulesStrings>
     </logRulesRecipient>
   </InteractionDef>
+  <InteractionDef>
+    <defName>SparkJailbreak</defName>
+    <label>spark jailbreak</label>
+    <workerClass>InteractionWorker_SparkJailbreak</workerClass>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>30</initiatorXpGainAmount>
+    <symbol>Things/Mote/SpeechSymbols/SparkJailbreak</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Induced [other_nameShortIndef] to escape.</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <logRulesRecipient>
+      <rulesStrings>
+        <li ListIndex="0">logentry->Was induced to escape by [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesRecipient>
+  </InteractionDef>
 </Defs>

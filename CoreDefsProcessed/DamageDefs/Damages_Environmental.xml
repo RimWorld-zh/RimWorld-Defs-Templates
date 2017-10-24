@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef ParentName="LocalInjuryBase" Name="Flame">
+    <defName>Flame</defName>
+    <label>flame</label>
+    <workerClass>DamageWorker_Flame</workerClass>
+    <externalViolence>true</externalViolence>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <deathMessage>{0} has burned to death.</deathMessage>
+    <armorCategory>Heat</armorCategory>
+    <spreadOut>true</spreadOut>
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <explosionDamage>10</explosionDamage>
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+    <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <hediff>Burn</hediff>
+  </DamageDef>
+  <!-- Burn is like Flame, but doesn't ignite anything -->
+  <DamageDef ParentName="Flame">
+    <defName>Burn</defName>
+    <label>burn</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <deathMessage>{0} has burned to death.</deathMessage>
+    <armorCategory>Heat</armorCategory>
+    <spreadOut>true</spreadOut>
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <explosionDamage>10</explosionDamage>
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+    <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <hediff>Burn</hediff>
+  </DamageDef>
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>Frostbite</defName>
+    <label>frostbite</label>
+    <workerClass>DamageWorker_Frostbite</workerClass>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has succumbed to frostbite.</deathMessage>
+    <armorCategory>Heat</armorCategory>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <hediff>Frostbite</hediff>
+  </DamageDef>
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>TornadoScratch</defName>
+    <label>scratch</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been killed by a tornado.</deathMessage>
+    <impactSoundType>Tornado</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <hediff>Scratch</hediff>
+    <hediffSolid>Crack</hediffSolid>
+  </DamageDef>
+</Defs>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TaleDef>
+    <defName>CaravanFormed</defName>
+    <label>caravan formed</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] departing for adventure</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef] forming a caravan</li>
+        <li ListIndex="2">image->[pawn_nameFull] striding forward purposefully [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] looking towards the horizon [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] packing supplies for a journey [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] planning a journey [circumstance_group]</li>
+        <li ListIndex="6">circumstance_phrase->and equipped for a fight</li>
+        <li ListIndex="7">circumstance_phrase->and equipped for survival</li>
+        <li ListIndex="8">circumstance_phrase->and equipped for exploration</li>
+        <li ListIndex="9">circumstance_phrase->with an eager look in [pawn_possessive] eyes</li>
+        <li ListIndex="10">circumstance_phrase->with a [adjective] look in [pawn_possessive] eyes</li>
+        <li ListIndex="11">desc_sentence->[quantity_adjphrase] [ally]s watch the preparations.</li>
+        <li ListIndex="12">desc_sentence->[quantity_adjphrase] [ally]s help with the preparations.</li>
+        <li ListIndex="13">desc_sentence->[quantity_adjphrase] [enemy]s shrink away from the scene.</li>
+        <li ListIndex="14">desc_sentence->A [terrainfeature] is visible in the distance.</li>
+        <li ListIndex="15">desc_sentence->[quantity_adjphrase] [outlander]s watch from a distance.</li>
+        <li ListIndex="16">desc_sentence->[quantity_adjphrase] [animal]s wander peacefully.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  <TaleDef>
+    <defName>CaravanFled</defName>
+    <label>caravan fled</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] fleeing for [pawn_possessive] life</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef] escaping danger</li>
+        <li ListIndex="2">tale_noun->[pawn_nameShortDef] narrowly escaping danger</li>
+        <li ListIndex="3">tale_noun->[pawn_nameShortDef] chased away by enemies</li>
+        <li ListIndex="4">image->[pawn_nameFull] running frantically [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] sprinting [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] tucked behind a [terrainfeature], hiding [circumstance_group]</li>
+        <li ListIndex="7">image->[pawn_nameFull] putting up a fighting retreat [circumstance_group]</li>
+        <li ListIndex="8">image->[pawn_nameFull] casually strolling away [circumstance_group]</li>
+        <li ListIndex="9">circumstance_phrase->as [quantity_adjphrase] [enemy]s chase</li>
+        <li ListIndex="10">circumstance_phrase->while [quantity_adjphrase] [enemy]s search</li>
+        <li ListIndex="11">circumstance_phrase->from [quantity_adjphrase] [enemy]s</li>
+        <li ListIndex="12">circumstance_phrase->from [quantity_adjphrase] enemy [animal]s</li>
+        <li ListIndex="13">circumstance_phrase->from a [huge] [enemy]</li>
+        <li ListIndex="14">desc_sentence->[pawn_nameShortDef]'s pursuers are brandishing [weapon]s.</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef]'s pursuers are wreathed in [color] smoke.</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef]'s pursuers wear [angstyadjective] expressions.</li>
+        <li ListIndex="17">desc_sentence->[pawn_nameShortDef]'s pursuers are brandishing [weapon]s.</li>
+        <li ListIndex="18">desc_sentence->[pawn_nameShortDef] is sweating.</li>
+        <li ListIndex="19">desc_sentence->[pawn_nameShortDef] is gasping for breath.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  <TaleDef>
+    <defName>CaravanAmbushDefeated</defName>
+    <label>caravan ambush defeated</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->a successful defense of [pawn_nameShortDef]'s caravan</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef] fighting off an ambush</li>
+        <li ListIndex="2">image->[pawn_nameFull] organizing resistance while [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] wielding a [weapon] defensively while [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] retaliating with [pawn_possessive] [weapon] while [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] standing as tall as a building while [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] wearing a [badassadjective] expression while [circumstance_group]</li>
+        <li ListIndex="7">image->[pawn_nameFull] wearing a [angstyadjective] expression while [circumstance_group]</li>
+        <li ListIndex="8">circumstance_phrase->bracing against the advancing horde</li>
+        <li ListIndex="9">circumstance_phrase->circling the wagons</li>
+        <li ListIndex="10">circumstance_phrase->roaring in victory</li>
+        <li ListIndex="11">circumstance_phrase->brandishing [weapon]s</li>
+        <li ListIndex="12">circumstance_phrase->covered in [gore]</li>
+        <li ListIndex="13">desc_sentence->[quantity_adjphrase] [enemy]s advance, brandishing [weapon]s.</li>
+        <li ListIndex="14">desc_sentence->A huge [enemy] advances, brandishing a [weapon].</li>
+        <li ListIndex="15">desc_sentence->[quantity_adjphrase] [enemy]s advance with a [badassadjective] look in their eyes.</li>
+        <li ListIndex="16">desc_sentence->[quantity_adjphrase] [enemy]s advance with a [angstyadjective] look in their eyes.</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] [animal]s advance with glowing [color] eyes.</li>
+        <li ListIndex="18">desc_sentence->[quantity_adjphrase] [animal]s advance, covered in [gore].</li>
+        <li ListIndex="19">desc_sentence->The ground is coated in [gore].</li>
+        <li ListIndex="20">desc_sentence->[quantity_adjphrase] [outlander]s flee the area.</li>
+        <li ListIndex="21">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  <TaleDef>
+    <defName>CaravanRemoteMining</defName>
+    <label>caravan remote mining</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] mining a rich vein of [material_label] in a foreign land</li>
+        <li ListIndex="1">image->[pawn_nameFull] working a [material_label] wall with mining tools, [circumstance_group]</li>
+        <li ListIndex="2">image->[pawn_nameFull] holding up a chunk of [material_label], [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] resting against a wall of [material_label], [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] coordinating an excavation team against a rich vein of [material_label], [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] carefully inspecting a rich vein of [material_label], [circumstance_group]</li>
+        <li ListIndex="6">circumstance_phrase->sweating heavily</li>
+        <li ListIndex="7">circumstance_phrase->wearing a [friendlyadjective] expression</li>
+        <li ListIndex="8">circumstance_phrase->smiling proudly</li>
+        <li ListIndex="9">circumstance_phrase->a satisfied expression on [pawn_possessive] face</li>
+        <li ListIndex="10">circumstance_phrase->looking around warily for danger</li>
+        <li ListIndex="11">desc_sentence->[quantity_adjphrase] [ally]s assist.</li>
+        <li ListIndex="12">desc_sentence->[quantity_adjphrase] [animal]s wander the area.</li>
+        <li ListIndex="13">desc_sentence->There is a makeshift shelter in the background.</li>
+        <li ListIndex="14">desc_sentence->[quantity_adjphrase] further veins are visible in the distance.</li>
+        <li ListIndex="15">desc_sentence->A [terrainfeature] is visible in the distance.</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef] is sweaty and dirty from work.</li>
+      </rulesStrings>
+    </rulePack>
+    <defSymbol>material</defSymbol>
+  </TaleDef>
+  <TaleDef>
+    <defName>CaravanAssaultSuccessful</defName>
+    <label>caravan assault successful</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef]'s caravan defeating an enemy stronghold</li>
+        <li ListIndex="1">image->[pawn_nameFull] running towards a [enemy], [circumstance_group]</li>
+        <li ListIndex="2">image->[pawn_nameFull] wielding a [weapon], [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] swinging a [weapon], [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] standing as tall as a building, [circumstance_group]</li>
+        <li ListIndex="5">circumstance_phrase->wearing a [badassadjective] look in [pawn_possessive] eyes</li>
+        <li ListIndex="6">circumstance_phrase->wearing a [angstyadjective] look in [pawn_possessive] eyes</li>
+        <li ListIndex="7">circumstance_phrase->roaring in victory</li>
+        <li ListIndex="8">circumstance_phrase->covered in [gore]</li>
+        <li ListIndex="9">desc_sentence->[quantity_adjphrase] [enemy]s cower from the assault.</li>
+        <li ListIndex="10">desc_sentence->[quantity_adjphrase] [enemy]s flee the area.</li>
+        <li ListIndex="11">desc_sentence->[quantity_adjphrase] [enemy]s are visibly wounded.</li>
+        <li ListIndex="12">desc_sentence->A [community] burns in the distance.</li>
+        <li ListIndex="13">desc_sentence->A [community] smokes in the distance.</li>
+        <li ListIndex="14">desc_sentence->The ground is coated in [gore].</li>
+        <li ListIndex="15">desc_sentence->[quantity_adjphrase] [outlander]s flee the area.</li>
+        <li ListIndex="16">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+</Defs>

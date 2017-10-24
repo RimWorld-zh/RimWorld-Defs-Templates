@@ -12,10 +12,8 @@
     <!--Desc: A human-readable description given when the Def is inspected by players.-->
     <description>string_value</description>
     <!--Type: System.Type-->
+    <!--Default Value: typeof(BiomeWorker)-->
     <workerClass>class_name</workerClass>
-    <!--Type: bool-->
-    <!--Default Value: true-->
-    <implemented>true_or_false</implemented>
     <!--Type: bool-->
     <!--Default Value: true-->
     <canBuildBase>true_or_false</canBuildBase>
@@ -29,8 +27,10 @@
     <!--Default Value: true-->
     <allowRivers>true_or_false</allowRivers>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <animalDensity>float_value</animalDensity>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <plantDensity>float_value</plantDensity>
     <!--Type: float-->
     <!--Default Value: 60.0-->
@@ -44,16 +44,18 @@
     <!--Type: bool-->
     <!--Default Value: true-->
     <hasVirtualPlants>true_or_false</hasVirtualPlants>
-    <!--Type: Verse.SimpleCurve-->
-    <pathCost>
-      <!--Simple List-->
-      <!--Type: List<Verse.CurvePoint>-->
-      <points>
-        <!--Type: Verse.CurvePoint-->
-        <li>value</li>
-        <!-- ... -->
-      </points>
-    </pathCost>
+    <!--Type: int-->
+    <!--Default Value: 1650-->
+    <pathCost_spring>int_value</pathCost_spring>
+    <!--Type: int-->
+    <!--Default Value: 1650-->
+    <pathCost_summer>int_value</pathCost_summer>
+    <!--Type: int-->
+    <!--Default Value: 1650-->
+    <pathCost_fall>int_value</pathCost_fall>
+    <!--Type: int-->
+    <!--Default Value: 27500-->
+    <pathCost_winter>int_value</pathCost_winter>
     <!--Type: List<RimWorld.WeatherCommonalityRecord>-->
     <baseWeatherCommonalities>
       <!--Type: RimWorld.WeatherCommonalityRecord-->

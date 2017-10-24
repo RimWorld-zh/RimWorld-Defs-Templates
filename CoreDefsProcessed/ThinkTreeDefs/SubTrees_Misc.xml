@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThinkTrees>
+<Defs>
   <!--============= Main colonist behavior core ============-->
   <ThinkTreeDef>
     <defName>MainColonistBehaviorCore</defName>
@@ -25,6 +25,45 @@
       <tagToGive>SatisfyingNeeds</tagToGive>
     </thinkRoot>
   </ThinkTreeDef>
+  <!--============= Main wild man behavior core ============-->
+  <ThinkTreeDef>
+    <defName>MainWildManBehaviorCore</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Leave the colony -->
+        <li Class="ThinkNode_ConditionalWildManNeedsToReachOutside" ListIndex="0">
+          <subNodes>
+            <li Class="JobGiver_ReachOutside" ListIndex="0" />
+          </subNodes>
+        </li>
+        <!-- Drop random gear or apparel -->
+        <li Class="ThinkNode_ChancePerHour_Constant" ListIndex="1">
+          <subNodes>
+            <li Class="JobGiver_DropRandomGearOrApparel" ListIndex="0" />
+          </subNodes>
+          <mtbHours>10</mtbHours>
+        </li>
+        <!-- Satisfy needs -->
+        <li Class="ThinkNode_Tagger" ListIndex="2">
+          <subNodes>
+            <li Class="ThinkNode_PrioritySorter" ListIndex="0">
+              <subNodes>
+                <li Class="JobGiver_GetFood" ListIndex="0" />
+                <li Class="JobGiver_GetRest" ListIndex="1" />
+                <li Class="JobGiver_SatisfyChemicalNeed" ListIndex="2" />
+                <li Class="ThinkNode_Priority_GetJoy" ListIndex="3">
+                  <subNodes>
+                    <li Class="JobGiver_GetJoy" ListIndex="0" />
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+          <tagToGive>SatisfyingNeeds</tagToGive>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
   <!--============= Downed ============-->
   <ThinkTreeDef>
     <defName>Downed</defName>
@@ -41,8 +80,14 @@
       <subNodes>
         <li Class="ThinkNode_Priority" ListIndex="0">
           <subNodes>
-            <li Class="JobGiver_ExtinguishSelf" ListIndex="0" />
-            <li Class="JobGiver_RunRandom" ListIndex="1">
+            <li Class="ThinkNode_ConditionalIntelligence" ListIndex="0">
+              <subNodes>
+                <li Class="JobGiver_JumpInWater" ListIndex="0" />
+              </subNodes>
+              <minIntelligence>ToolUser</minIntelligence>
+            </li>
+            <li Class="JobGiver_ExtinguishSelf" ListIndex="1" />
+            <li Class="JobGiver_RunRandom" ListIndex="2">
               <maxDanger>Deadly</maxDanger>
             </li>
           </subNodes>
@@ -198,8 +243,7 @@
           <state>BingingFood</state>
         </li>
         <!-- Manhunter -->
-        <!-- Hack: these have to be identical -->
-        <li Class="ThinkNode_ConditionalMentalState" ListIndex="6">
+        <li Class="ThinkNode_ConditionalMentalStateClass" ListIndex="6">
           <subNodes>
             <li Class="ThinkNode_Priority" ListIndex="0">
               <subNodes>
@@ -217,30 +261,10 @@
               </subNodes>
             </li>
           </subNodes>
-          <state>Manhunter</state>
-        </li>
-        <li Class="ThinkNode_ConditionalMentalState" ListIndex="7">
-          <subNodes>
-            <li Class="ThinkNode_Priority" ListIndex="0">
-              <subNodes>
-                <li Class="ThinkNode_PrioritySorter" ListIndex="0">
-                  <subNodes>
-                    <li Class="JobGiver_GetFood" ListIndex="0">
-                      <minCategory>Starving</minCategory>
-                    </li>
-                  </subNodes>
-                </li>
-                <li Class="JobGiver_Manhunter" ListIndex="1" />
-                <li Class="JobGiver_WanderAnywhere" ListIndex="2">
-                  <maxDanger>Deadly</maxDanger>
-                </li>
-              </subNodes>
-            </li>
-          </subNodes>
-          <state>ManhunterPermanent</state>
+          <stateClass>MentalState_Manhunter</stateClass>
         </li>
         <!-- Panic flee -->
-        <li Class="ThinkNode_ConditionalMentalState" ListIndex="8">
+        <li Class="ThinkNode_ConditionalMentalState" ListIndex="7">
           <subNodes>
             <li Class="JobGiver_ExitMapPanic" ListIndex="0" />
             <li Class="JobGiver_WanderAnywhere" ListIndex="1">
@@ -252,7 +276,7 @@
           <state>PanicFlee</state>
         </li>
         <!-- Give up and leave -->
-        <li Class="ThinkNode_ConditionalMentalState" ListIndex="9">
+        <li Class="ThinkNode_ConditionalMentalState" ListIndex="8">
           <subNodes>
             <li Class="JobGiver_ExitMapRandom" ListIndex="0">
               <defaultLocomotion>Walk</defaultLocomotion>
@@ -264,11 +288,59 @@
           <state>GiveUpExit</state>
         </li>
         <!-- Fire starting spree -->
-        <li Class="ThinkNode_ConditionalMentalState" ListIndex="10">
+        <li Class="ThinkNode_ConditionalMentalState" ListIndex="9">
           <subNodes>
-            <li Class="JobGiver_FireStartingSpree" ListIndex="0"></li>
+            <li Class="JobGiver_FireStartingSpree" ListIndex="0" />
           </subNodes>
           <state>FireStartingSpree</state>
+        </li>
+        <!-- Insulting spree -->
+        <li Class="ThinkNode_ConditionalMentalStateClass" ListIndex="10">
+          <subNodes>
+            <li Class="JobGiver_InsultingSpree" ListIndex="0" />
+            <li Class="JobGiver_WanderColony" ListIndex="1" />
+          </subNodes>
+          <stateClass>MentalState_InsultingSpree</stateClass>
+        </li>
+        <!-- Tantrum -->
+        <li Class="ThinkNode_ConditionalMentalStateClass" ListIndex="11">
+          <subNodes>
+            <li Class="JobGiver_Tantrum" ListIndex="0" />
+            <li Class="JobGiver_WanderColony" ListIndex="1" />
+          </subNodes>
+          <stateClass>MentalState_Tantrum</stateClass>
+        </li>
+        <!-- Corpse obsession -->
+        <li Class="ThinkNode_ConditionalMentalState" ListIndex="12">
+          <subNodes>
+            <li Class="JobGiver_HaulCorpseToPublicPlace" ListIndex="0" />
+            <li Class="JobGiver_WanderColony" ListIndex="1" />
+          </subNodes>
+          <state>CorpseObsession</state>
+        </li>
+        <!-- Jailbreaker -->
+        <li Class="ThinkNode_ConditionalMentalState" ListIndex="13">
+          <subNodes>
+            <li Class="JobGiver_InducePrisonerToEscape" ListIndex="0" />
+            <li Class="JobGiver_WanderColony" ListIndex="1" />
+          </subNodes>
+          <state>Jailbreaker</state>
+        </li>
+        <!-- Slaughterer -->
+        <li Class="ThinkNode_ConditionalMentalState" ListIndex="14">
+          <subNodes>
+            <li Class="JobGiver_SlaughterRandomAnimal" ListIndex="0" />
+            <li Class="JobGiver_WanderColony" ListIndex="1" />
+          </subNodes>
+          <state>Slaughterer</state>
+        </li>
+        <!-- Murderous rage -->
+        <li Class="ThinkNode_ConditionalMentalState" ListIndex="15">
+          <subNodes>
+            <li Class="JobGiver_MurderousRage" ListIndex="0" />
+            <li Class="JobGiver_WanderColony" ListIndex="1" />
+          </subNodes>
+          <state>MurderousRage</state>
         </li>
       </subNodes>
       <tagToGive>InMentalState</tagToGive>
@@ -429,4 +501,4 @@
     <thinkRoot Class="JobGiver_Berserk" />
   </ThinkTreeDef>
   -->
-</ThinkTrees>
+</Defs>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FeatureDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: System.Type-->
+    <!--Default Value: typeof(FeatureWorker)-->
+    <workerClass>class_name</workerClass>
+    <!--Type: float-->
+    <order>float_value</order>
+    <!--Type: int-->
+    <!--Default Value: 50-->
+    <minSize>int_value</minSize>
+    <!--Type: int-->
+    <!--Default Value: 2147483647-->
+    <maxSize>int_value</maxSize>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <canTouchWorldEdge>true_or_false</canTouchWorldEdge>
+    <!--Type: Verse.RulePackDef-->
+    <nameMaker>RulePackDef_defName</nameMaker>
+    <!--Reference List-->
+    <!--Type: List<RimWorld.BiomeDef>-->
+    <rootBiomes>
+      <!--Type: RimWorld.BiomeDef-->
+      <li>BiomeDef_defName</li>
+      <!-- ... -->
+    </rootBiomes>
+    <!--Reference List-->
+    <!--Type: List<RimWorld.BiomeDef>-->
+    <acceptableBiomes>
+      <!--Type: RimWorld.BiomeDef-->
+      <li>BiomeDef_defName</li>
+      <!-- ... -->
+    </acceptableBiomes>
+    <!--Type: int-->
+    <!--Default Value: 5-->
+    <maxSpaceBetweenRootGroups>int_value</maxSpaceBetweenRootGroups>
+    <!--Type: int-->
+    <!--Default Value: 3-->
+    <minRootGroupsInCluster>int_value</minRootGroupsInCluster>
+    <!--Type: int-->
+    <!--Default Value: 10-->
+    <minRootGroupSize>int_value</minRootGroupSize>
+    <!--Type: int-->
+    <!--Default Value: 2147483647-->
+    <maxRootGroupSize>int_value</maxRootGroupSize>
+    <!--Type: int-->
+    <!--Default Value: 3-->
+    <maxPassageWidth>int_value</maxPassageWidth>
+    <!--Type: float-->
+    <!--Default Value: 0.1-->
+    <maxPctOfWholeArea>float_value</maxPctOfWholeArea>
+  </FeatureDef>
+</Defs>

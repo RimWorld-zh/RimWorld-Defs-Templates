@@ -10,8 +10,10 @@
     <label>string_value</label>
     <!--Type: RimWorld.TaleType-->
     <!--Available Values: Volatile, Expirable, PermanentHistorical-->
+    <!--Default Value: Volatile-->
     <type>enum_value</type>
     <!--Type: System.Type-->
+    <!--Default Value: null-->
     <taleClass>class_name</taleClass>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -23,6 +25,7 @@
     <!--Default Value: -1-->
     <maxPerPawn>int_value</maxPerPawn>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <ignoreChance>float_value</ignoreChance>
     <!--Type: float-->
     <!--Default Value: -1.0-->
@@ -46,7 +49,11 @@
     <!--Type: string-->
     <!--Default Value: "def"-->
     <defSymbol>string_value</defSymbol>
+    <!--Type: System.Type-->
+    <!--Default Value: typeof(ThingDef)-->
+    <defType>class_name</defType>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <baseInterest>float_value</baseInterest>
     <!--Type: UnityEngine.Color-->
     <!--Default Value: Color.white-->

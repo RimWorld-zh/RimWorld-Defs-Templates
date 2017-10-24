@@ -49,40 +49,96 @@
           <path>Words/Nouns/Animals</path>
         </li>
         <li Class="Rule_File" ListIndex="6">
+          <keyword>animalgroup</keyword>
+          <path>Words/Nouns/AnimalGroups</path>
+        </li>
+        <li Class="Rule_File" ListIndex="7">
           <keyword>weapon</keyword>
           <path>Words/Nouns/Weapons</path>
         </li>
-        <li Class="Rule_File" ListIndex="7">
+        <li Class="Rule_File" ListIndex="8">
           <keyword>romannumeral</keyword>
           <path>Words/Misc/Numbers_SmallRoman</path>
         </li>
-        <li Class="Rule_File" ListIndex="8">
+        <li Class="Rule_File" ListIndex="9">
           <keyword>terrainfeature</keyword>
           <path>Words/Nouns/TerrainFeatures</path>
         </li>
-        <li Class="Rule_File" ListIndex="9">
+        <li Class="Rule_File" ListIndex="10">
+          <keyword>naturalobject</keyword>
+          <path>Words/Nouns/NaturalObject</path>
+        </li>
+        <li Class="Rule_File" ListIndex="11">
+          <keyword>tree</keyword>
+          <path>Words/Nouns/Trees</path>
+        </li>
+        <li Class="Rule_File" ListIndex="12">
           <keyword>outlander</keyword>
           <pathList>
             <li ListIndex="0">Words/Nouns/People_Outlanders</li>
             <li ListIndex="1">Words/Nouns/People_Family</li>
           </pathList>
         </li>
-        <li Class="Rule_PersonName" ListIndex="10">
+        <li Class="Rule_File" ListIndex="13">
+          <keyword>enemy</keyword>
+          <pathList>
+            <li ListIndex="0">Words/Nouns/People_Enemies</li>
+            <li ListIndex="1">Words/Nouns/People_Badass</li>
+          </pathList>
+        </li>
+        <li Class="Rule_PersonName" ListIndex="14">
           <keyword>personname</keyword>
           <selectionWeight>25</selectionWeight>
         </li>
-        <li Class="Rule_File" ListIndex="11">
+        <li Class="Rule_File" ListIndex="15">
           <keyword>apparel</keyword>
           <path>Words/Nouns/Apparel</path>
         </li>
-        <li Class="Rule_File" ListIndex="12">
+        <li Class="Rule_File" ListIndex="16">
+          <keyword>large</keyword>
+          <pathList>
+            <li ListIndex="0">Words/Adjectives/Large</li>
+          </pathList>
+        </li>
+        <li Class="Rule_File" ListIndex="17">
+          <keyword>naturaladjective</keyword>
+          <pathList>
+            <li ListIndex="0">Words/Adjectives/Natural</li>
+          </pathList>
+        </li>
+        <li Class="Rule_File" ListIndex="18">
           <keyword>adjective</keyword>
           <pathList>
             <li ListIndex="0">Words/Adjectives/Badass</li>
             <li ListIndex="1">Words/Adjectives/Angsty</li>
+            <li ListIndex="2">Words/Adjectives/Friendly</li>
           </pathList>
         </li>
-        <li Class="Rule_File" ListIndex="13">
+        <li Class="Rule_File" ListIndex="19">
+          <keyword>badassadjective</keyword>
+          <path>Words/Adjectives/Badass</path>
+        </li>
+        <li Class="Rule_File" ListIndex="20">
+          <keyword>angstyadjective</keyword>
+          <path>Words/Adjectives/Angsty</path>
+        </li>
+        <li Class="Rule_File" ListIndex="21">
+          <keyword>friendlyadjective</keyword>
+          <path>Words/Adjectives/Friendly</path>
+        </li>
+        <li Class="Rule_File" ListIndex="22">
+          <keyword>friendlyverb</keyword>
+          <path>Words/Verbs/Friendly</path>
+        </li>
+        <li Class="Rule_File" ListIndex="23">
+          <keyword>gore</keyword>
+          <path>Words/Nouns/Gore</path>
+        </li>
+        <li Class="Rule_File" ListIndex="24">
+          <keyword>mechanoid</keyword>
+          <path>Words/Nouns/Mechanoid</path>
+        </li>
+        <li Class="Rule_File" ListIndex="25">
           <keyword>concept</keyword>
           <pathList>
             <li ListIndex="0">Words/Nouns/Concepts_Badass</li>
@@ -90,9 +146,19 @@
             <li ListIndex="2">Words/Nouns/Concepts_Angsty</li>
           </pathList>
         </li>
-        <li Class="Rule_File" ListIndex="14">
+        <li Class="Rule_File" ListIndex="26">
           <keyword>community</keyword>
           <path>Words/Nouns/Communities</path>
+        </li>
+        <li Class="Rule_File" ListIndex="27">
+          <keyword>bodypart</keyword>
+          <pathList>
+            <li ListIndex="0">Words/Nouns/Bodyparts</li>
+          </pathList>
+        </li>
+        <li Class="Rule_File" ListIndex="28">
+          <keyword>direction</keyword>
+          <path>Words/Adjectives/CompassDirections</path>
         </li>
       </rulesRaw>
     </rulePack>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingCategoryDefs>
+<Defs>
   <ThingCategoryDef>
     <defName>Root</defName>
     <label>root</label>
@@ -90,6 +90,12 @@
     <parent>Manufactured</parent>
     <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
     <resourceReadoutRoot>true</resourceReadoutRoot>
+  </ThingCategoryDef>
+  <ThingCategoryDef>
+    <defName>MortarShells</defName>
+    <label>mortar shells</label>
+    <parent>Manufactured</parent>
+    <iconPath>UI/Icons/ThingCategories/MortarShells</iconPath>
   </ThingCategoryDef>
   <!-- Raw resources -->
   <ThingCategoryDef>
@@ -226,4 +232,4 @@
     <label>mechanoid corpses</label>
     <parent>Corpses</parent>
   </ThingCategoryDef>
-</ThingCategoryDefs>
+</Defs>

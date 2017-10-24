@@ -489,6 +489,27 @@
     </mote>
   </ThingDef>
   <ThingDef ParentName="MoteBase">
+    <defName>Mote_TornadoDustPuff</defName>
+    <label>Mote</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>MoteThrown</thingClass>
+    <category>Mote</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Mote/MetaPuff</texPath>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0.04</fadeInTime>
+      <solidTime>0.03</solidTime>
+      <fadeOutTime>1</fadeOutTime>
+    </mote>
+  </ThingDef>
+  <ThingDef ParentName="MoteBase">
     <defName>Mote_Smoke</defName>
     <label>Mote</label>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -529,6 +550,97 @@
       <fadeInTime>0.40</fadeInTime>
       <solidTime>2</solidTime>
       <fadeOutTime>2</fadeOutTime>
+    </mote>
+  </ThingDef>
+  <!-- Bombardment -->
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Bombardment</defName>
+    <label>Mote</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>MoteThrown</thingClass>
+    <category>Mote</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Mote/Bombardment</texPath>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <drawOffscreen>true</drawOffscreen>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0.5</fadeInTime>
+      <solidTime>6.8</solidTime>
+      <fadeOutTime>1.0</fadeOutTime>
+    </mote>
+  </ThingDef>
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_PowerBeam</defName>
+    <label>Mote</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>MoteThrown</thingClass>
+    <category>Mote</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Mote/PowerBeam</texPath>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <drawOffscreen>true</drawOffscreen>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0.5</fadeInTime>
+      <solidTime>9.3</solidTime>
+      <fadeOutTime>1.0</fadeOutTime>
+    </mote>
+  </ThingDef>
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GiantExplosion</defName>
+    <label>Mote</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>MoteThrown</thingClass>
+    <category>Mote</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Mote/PowerBeam</texPath>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <drawOffscreen>true</drawOffscreen>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0.01</fadeInTime>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+      <growthRate>325</growthRate>
+    </mote>
+  </ThingDef>
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GiantExplosionInner</defName>
+    <label>Mote</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>MoteThrown</thingClass>
+    <category>Mote</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Mote/PowerBeam</texPath>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <drawOffscreen>true</drawOffscreen>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0.01</fadeInTime>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.4</fadeOutTime>
+      <growthRate>200</growthRate>
     </mote>
   </ThingDef>
 </Defs>

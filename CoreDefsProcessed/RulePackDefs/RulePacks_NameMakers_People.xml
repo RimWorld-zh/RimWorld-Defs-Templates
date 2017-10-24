@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<NameMakerDefs>
+<Defs>
   <RulePackDef>
     <defName>NamerPersonTribal</defName>
     <rulePack>
@@ -32,4 +32,4 @@
       </rulesRaw>
     </rulePack>
   </RulePackDef>
-</NameMakerDefs>
+</Defs>

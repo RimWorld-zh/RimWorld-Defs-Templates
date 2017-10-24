@@ -20,6 +20,7 @@
         <li>Hyperweave</li>
       </thingDefs>
     </apparelStuffFilter>
+    <geneticVariance>1</geneticVariance>
   </FactionDef>
   <FactionDef ParentName="SpacerBase">
     <defName>Spacer</defName>
@@ -42,6 +43,7 @@
         <li ListIndex="1">Hyperweave</li>
       </thingDefs>
     </apparelStuffFilter>
+    <geneticVariance>1</geneticVariance>
   </FactionDef>
   <FactionDef ParentName="SpacerBase">
     <defName>SpacerHostile</defName>
@@ -64,6 +66,7 @@
         <li ListIndex="1">Hyperweave</li>
       </thingDefs>
     </apparelStuffFilter>
+    <geneticVariance>1</geneticVariance>
     <startingGoodwill>
       <min>-100</min>
       <max>-100</max>
@@ -89,7 +92,12 @@
         </options>
       </li>
     </pawnGroupMakers>
-    <raidCommonality>37</raidCommonality>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li ListIndex="0">(1000, 0.4)</li>
+        <li ListIndex="1">(2500, 1)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
     <autoFlee>false</autoFlee>
     <canUseAvoidGrid>false</canUseAvoidGrid>
     <earliestRaidDays>45</earliestRaidDays>
@@ -119,7 +127,11 @@
     <fixedName>insects</fixedName>
     <humanlikeFaction>false</humanlikeFaction>
     <hidden>true</hidden>
-    <raidCommonality>0</raidCommonality>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li ListIndex="0">(0, 0)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
     <autoFlee>false</autoFlee>
     <canUseAvoidGrid>false</canUseAvoidGrid>
     <allowedArrivalTemperatureRange>

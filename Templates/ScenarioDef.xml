@@ -36,6 +36,9 @@
           <!--Type: int-->
           <!--Default Value: 3-->
           <pawnCount>int_value</pawnCount>
+          <!--Type: int-->
+          <!--Default Value: 10-->
+          <pawnChoiceCount>int_value</pawnChoiceCount>
         </li>
         <!--Type: RimWorld.ScenPart_PlayerPawnsArriveMethod-->
         <li Class="ScenPart_PlayerPawnsArriveMethod">
@@ -46,6 +49,7 @@
           <visible>true_or_false</visible>
           <!--Type: RimWorld.PlayerPawnsArriveMethod-->
           <!--Available Values: Standing, DropPods-->
+          <!--Default Value: Standing-->
           <method>enum_value</method>
         </li>
         <!--Type: RimWorld.ScenPart_StartingResearch-->

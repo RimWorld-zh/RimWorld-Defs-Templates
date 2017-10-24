@@ -11,6 +11,7 @@
     <!--Type: System.Type-->
     <workerClass>class_name</workerClass>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <updatePriority>float_value</updatePriority>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -19,6 +20,7 @@
     <!--Default Value: false-->
     <isHidden>true_or_false</isHidden>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <defaultScore>float_value</defaultScore>
     <!--Complex List-->
     <!--Type: List<Verse.RoomStatScoreStage>-->
@@ -29,6 +31,7 @@
         <!--Default Value: -3.40282347E+38-->
         <minScore>float_value</minScore>
         <!--Type: string-->
+        <!--Default Value: (string)null-->
         <label>string_value</label>
       </li>
       <!-- ... -->

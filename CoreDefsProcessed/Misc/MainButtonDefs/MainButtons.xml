@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<MainButtonDefs>
+<Defs>
   <MainButtonDef>
     <defName>Inspect</defName>
     <label>inspect</label>
@@ -53,6 +53,7 @@
     <workerClass>MainButtonWorker_ToggleResearchTab</workerClass>
     <tabWindowClass>MainTabWindow_Research</tabWindowClass>
     <order>50</order>
+    <defaultHotKey>F5</defaultHotKey>
   </MainButtonDef>
   <MainButtonDef>
     <defName>World</defName>
@@ -60,7 +61,7 @@
     <description>Examine the world map.</description>
     <workerClass>MainButtonWorker_ToggleWorld</workerClass>
     <order>60</order>
-    <defaultHotKey>F5</defaultHotKey>
+    <defaultHotKey>F6</defaultHotKey>
     <validWithoutMap>true</validWithoutMap>
   </MainButtonDef>
   <MainButtonDef>
@@ -69,7 +70,7 @@
     <description>Review records of the colony's history.</description>
     <tabWindowClass>MainTabWindow_History</tabWindowClass>
     <order>70</order>
-    <defaultHotKey>F6</defaultHotKey>
+    <defaultHotKey>F7</defaultHotKey>
   </MainButtonDef>
   <MainButtonDef>
     <defName>Factions</defName>
@@ -77,7 +78,7 @@
     <description>Review the factions known to the colony and their relationships.</description>
     <tabWindowClass>MainTabWindow_Factions</tabWindowClass>
     <order>80</order>
-    <defaultHotKey>F7</defaultHotKey>
+    <defaultHotKey>F8</defaultHotKey>
     <validWithoutMap>true</validWithoutMap>
   </MainButtonDef>
   <MainButtonDef>
@@ -89,4 +90,4 @@
     <canBeTutorDenied>false</canBeTutorDenied>
     <validWithoutMap>true</validWithoutMap>
   </MainButtonDef>
-</MainButtonDefs>
+</Defs>

@@ -23,6 +23,9 @@
     <!--Default Value: true-->
     <allowIntroThreats>true_or_false</allowIntroThreats>
     <!--Type: bool-->
+    <!--Default Value: true-->
+    <allowCaveHives>true_or_false</allowCaveHives>
+    <!--Type: bool-->
     <!--Default Value: false-->
     <peacefulTemples>true_or_false</peacefulTemples>
     <!--Type: float-->
@@ -41,5 +44,8 @@
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <playerPawnInfectionChanceFactor>float_value</playerPawnInfectionChanceFactor>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <manhunterChanceOnDamageFactor>float_value</manhunterChanceOnDamageFactor>
   </DifficultyDef>
 </Defs>

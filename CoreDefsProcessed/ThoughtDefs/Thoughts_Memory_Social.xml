@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThoughtDefs>
+<Defs>
   <!-- Random social interactions -->
   <ThoughtDef>
     <defName>Chitchat</defName>
@@ -662,4 +662,17 @@
     <durationDays>80.0</durationDays>
     <stackLimitPerPawn>10</stackLimitPerPawn>
   </ThoughtDef>
-</ThoughtDefs>
+  <ThoughtDef>
+    <defName>KilledMyBondedAnimal</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <stages>
+      <li ListIndex="0">
+        <label>killed my bonded animal</label>
+        <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <stackLimit>300</stackLimit>
+    <durationDays>80.0</durationDays>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+  </ThoughtDef>
+</Defs>

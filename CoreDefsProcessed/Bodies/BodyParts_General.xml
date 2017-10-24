@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BodyPartDefs>
+<Defs>
   <BodyPartDef>
     <defName>Head</defName>
     <label>head</label>
@@ -187,4 +187,4 @@
     <skinCovered>true</skinCovered>
     <frostbiteVulnerability>0.5</frostbiteVulnerability>
   </BodyPartDef>
-</BodyPartDefs>
+</Defs>

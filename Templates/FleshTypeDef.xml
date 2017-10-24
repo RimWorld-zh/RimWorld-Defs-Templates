@@ -6,10 +6,28 @@
     <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
     <defName>string_value</defName>
     <!--Type: RimWorld.ThoughtDef-->
+    <!--Default Value: null-->
     <ateDirect>ThoughtDef_defName</ateDirect>
     <!--Type: RimWorld.ThoughtDef-->
+    <!--Default Value: null-->
     <ateAsIngredient>ThoughtDef_defName</ateAsIngredient>
     <!--Type: Verse.ThingCategoryDef-->
+    <!--Default Value: null-->
     <corpseCategory>ThingCategoryDef_defName</corpseCategory>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <requiresBedForSurgery>true_or_false</requiresBedForSurgery>
+    <!--Complex List-->
+    <!--Type: List<RimWorld.FleshTypeDef+Wound>-->
+    <wounds>
+      <!--Type: RimWorld.FleshTypeDef+Wound-->
+      <li>
+        <!--Type: string-->
+        <texture>string_value</texture>
+        <!--Type: UnityEngine.Color-->
+        <color>value</color>
+      </li>
+      <!-- ... -->
+    </wounds>
   </FleshTypeDef>
 </Defs>

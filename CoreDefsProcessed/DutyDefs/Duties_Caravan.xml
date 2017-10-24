@@ -8,10 +8,16 @@
         <li Class="ThinkNode_Subtree" ListIndex="0">
           <treeDef>SatisfyVeryUrgentNeeds</treeDef>
         </li>
+        <!-- Drop items if you're assigned to unload everything -->
+        <!-- (before loading new items!) -->
+        <li Class="JobGiver_UnloadYourInventory" ListIndex="1" />
+        <!-- Unload carriers if they're assigned to unload everything -->
+        <!-- (before loading new items!) -->
+        <li Class="JobGiver_UnloadMyLordCarriers" ListIndex="2" />
         <!-- Gather items -->
-        <li Class="JobGiver_PrepareCaravan_GatherItems" ListIndex="1" />
+        <li Class="JobGiver_PrepareCaravan_GatherItems" ListIndex="3" />
         <!-- Wander -->
-        <li Class="ThinkNode_Tagger" ListIndex="2">
+        <li Class="ThinkNode_Tagger" ListIndex="4">
           <subNodes>
             <li Class="JobGiver_WanderAnywhere" ListIndex="0" />
           </subNodes>

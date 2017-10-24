@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnKindDefs>
+<Defs>
   <PawnKindDef Name="OutlanderBase" Abstract="True">
     <defaultFactionType>Outlander</defaultFactionType>
     <backstoryCategory>Civil</backstoryCategory>
@@ -23,7 +23,7 @@
       <max>2.0</max>
     </gearHealthRange>
     <isFighter>false</isFighter>
-    <combatPower>25</combatPower>
+    <combatPower>30</combatPower>
     <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
     <apparelMoney>
       <min>300</min>
@@ -39,7 +39,7 @@
     </weaponMoney>
     <weaponTags>
       <li ListIndex="0">Gun</li>
-      <li ListIndex="1">Melee</li>
+      <li ListIndex="1">NonNeolithicOnlyMelee</li>
     </weaponTags>
     <techHediffsMoney>
       <min>200</min>
@@ -90,7 +90,7 @@
     </gearHealthRange>
     <factionLeader>true</factionLeader>
     <isFighter>false</isFighter>
-    <combatPower>25</combatPower>
+    <combatPower>30</combatPower>
     <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
     <apparelMoney>
       <min>300</min>
@@ -108,7 +108,7 @@
     </weaponMoney>
     <weaponTags>
       <li ListIndex="0">Gun</li>
-      <li ListIndex="1">Melee</li>
+      <li ListIndex="1">NonNeolithicOnlyMelee</li>
     </weaponTags>
     <techHediffsMoney>
       <min>200</min>
@@ -156,7 +156,7 @@
       <max>2.0</max>
     </gearHealthRange>
     <isFighter>false</isFighter>
-    <combatPower>25</combatPower>
+    <combatPower>30</combatPower>
     <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
     <apparelMoney>
       <min>300</min>
@@ -172,7 +172,7 @@
     </weaponMoney>
     <weaponTags>
       <li ListIndex="0">Gun</li>
-      <li ListIndex="1">Melee</li>
+      <li ListIndex="1">NonNeolithicOnlyMelee</li>
     </weaponTags>
     <techHediffsMoney>
       <min>200</min>
@@ -221,7 +221,7 @@
       <min>0.5</min>
       <max>1.8</max>
     </gearHealthRange>
-    <combatPower>50</combatPower>
+    <combatPower>53</combatPower>
     <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
     <apparelMoney>
       <min>300</min>
@@ -257,4 +257,4 @@
     <invNutrition>2.55</invNutrition>
     <chemicalAddictionChance>0.045</chemicalAddictionChance>
   </PawnKindDef>
-</PawnKindDefs>
+</Defs>

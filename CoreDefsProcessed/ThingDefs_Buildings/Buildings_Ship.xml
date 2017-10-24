@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GameData>
+<Defs>
   <!-- Beam -->
   <ThingDef ParentName="BuildingBase">
     <defName>Ship_Beam</defName>
@@ -13,7 +13,7 @@
     </statBases>
     <passability>Impassable</passability>
     <costList>
-      <Steel>200</Steel>
+      <Steel>500</Steel>
       <Plasteel>150</Plasteel>
       <Component>10</Component>
     </costList>
@@ -21,6 +21,7 @@
     <researchPrerequisites>
       <li ListIndex="0">ShipBasics</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
@@ -31,7 +32,7 @@
     <thingClass>Building</thingClass>
     <category>Building</category>
     <tickerType>Normal</tickerType>
-    <size>(1,5)</size>
+    <size>(2,6)</size>
     <comps>
       <li Class="CompProperties_Power" ListIndex="0">
         <compClass>CompPowerTransmitter</compClass>
@@ -45,7 +46,7 @@
     <graphicData>
       <texPath>Things/Building/Ship/ShipBeam</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3,7)</drawSize>
+      <drawSize>(6,8.4)</drawSize>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -62,7 +63,6 @@
     <blockLight>true</blockLight>
     <blockWind>true</blockWind>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <shipPart>true</shipPart>
     </building>
   </ThingDef>
@@ -80,15 +80,18 @@
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <costList>
-      <Steel>500</Steel>
-      <Uranium>5</Uranium>
+      <Steel>200</Steel>
+      <Uranium>20</Uranium>
       <Component>10</Component>
+      <AdvancedComponent>5</AdvancedComponent>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li ListIndex="0">ShipCryptosleep</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
+    <defaultPlacingRot>South</defaultPlacingRot>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
       <li ListIndex="0">PlaceWorker_HeadOnShipBeam</li>
@@ -129,7 +132,6 @@
     <fillPercent>0.5</fillPercent>
     <blockWind>true</blockWind>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <shipPart>true</shipPart>
       <isPlayerEjectable>true</isPlayerEjectable>
     </building>
@@ -147,8 +149,8 @@
     </statBases>
     <passability>Impassable</passability>
     <costList>
-      <Steel>600</Steel>
-      <Component>16</Component>
+      <Steel>250</Steel>
+      <AdvancedComponent>20</AdvancedComponent>
       <Gold>100</Gold>
       <AIPersonaCore>1</AIPersonaCore>
     </costList>
@@ -156,6 +158,7 @@
     <researchPrerequisites>
       <li ListIndex="0">ShipComputerCore</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
@@ -166,7 +169,7 @@
     <thingClass>Building_ShipComputerCore</thingClass>
     <category>Building</category>
     <tickerType>Normal</tickerType>
-    <size>(1,1)</size>
+    <size>(3,3)</size>
     <comps>
       <li Class="CompProperties_ShipPart" ListIndex="0" />
       <li Class="CompProperties_Power" ListIndex="1">
@@ -180,7 +183,7 @@
     <graphicData>
       <texPath>Things/Building/Ship/ShipComputerCore</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3,3)</drawSize>
+      <drawSize>(9,9)</drawSize>
     </graphicData>
     <drawerType>MapMeshAndRealTime</drawerType>
     <castEdgeShadows>true</castEdgeShadows>
@@ -191,7 +194,6 @@
     <blockLight>true</blockLight>
     <blockWind>true</blockWind>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <shipPart>true</shipPart>
     </building>
   </ThingDef>
@@ -208,15 +210,16 @@
     </statBases>
     <passability>Impassable</passability>
     <costList>
-      <Steel>300</Steel>
+      <Steel>500</Steel>
       <Plasteel>500</Plasteel>
       <Uranium>150</Uranium>
-      <Component>25</Component>
+      <AdvancedComponent>25</AdvancedComponent>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li ListIndex="0">ShipReactor</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
@@ -227,7 +230,7 @@
     <thingClass>Building</thingClass>
     <category>Building</category>
     <tickerType>Normal</tickerType>
-    <size>(5,5)</size>
+    <size>(6,7)</size>
     <comps>
       <li Class="CompProperties_Power" ListIndex="0">
         <compClass>CompPowerPlant</compClass>
@@ -235,6 +238,7 @@
         <basePowerConsumption>-1000</basePowerConsumption>
       </li>
       <li Class="CompProperties_ShipPart" ListIndex="1" />
+      <li Class="CompProperties_Hibernatable" ListIndex="2" />
     </comps>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <filthLeaving>BuildingRubble</filthLeaving>
@@ -242,7 +246,7 @@
     <graphicData>
       <texPath>Things/Building/Ship/ShipReactor</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(7,7)</drawSize>
+      <drawSize>(8.4,9.8)</drawSize>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -259,7 +263,6 @@
     <blockLight>true</blockLight>
     <blockWind>true</blockWind>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <shipPart>true</shipPart>
     </building>
   </ThingDef>
@@ -276,15 +279,16 @@
     </statBases>
     <passability>Impassable</passability>
     <costList>
-      <Steel>200</Steel>
+      <Steel>500</Steel>
       <Plasteel>300</Plasteel>
       <Uranium>100</Uranium>
-      <Component>25</Component>
+      <AdvancedComponent>25</AdvancedComponent>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li ListIndex="0">ShipEngine</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
@@ -295,7 +299,7 @@
     <thingClass>Building</thingClass>
     <category>Building</category>
     <tickerType>Normal</tickerType>
-    <size>(2,3)</size>
+    <size>(3,4)</size>
     <comps>
       <li Class="CompProperties_Power" ListIndex="0">
         <compClass>CompPowerTransmitter</compClass>
@@ -309,7 +313,7 @@
     <graphicData>
       <texPath>Things/Building/Ship/ShipEngine</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(4,5)</drawSize>
+      <drawSize>(6,6.6666)</drawSize>
     </graphicData>
     <drawerType>MapMeshAndRealTime</drawerType>
     <castEdgeShadows>true</castEdgeShadows>
@@ -320,8 +324,68 @@
     <blockLight>true</blockLight>
     <blockWind>true</blockWind>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <shipPart>true</shipPart>
     </building>
   </ThingDef>
-</GameData>
+  <!-- Sensor cluster -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Ship_SensorCluster</defName>
+    <label>sensor cluster</label>
+    <description>A sensor module, searching the void for dangers and opportunities.</description>
+    <statBases>
+      <WorkToBuild>30000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>200</Steel>
+      <Gold>5</Gold>
+      <Component>15</Component>
+      <AdvancedComponent>15</AdvancedComponent>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li ListIndex="0">ShipSensorCluster</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <placeWorkers>
+      <li ListIndex="0">PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <designationCategory>Ship</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(2,2)</size>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_ShipPart" ListIndex="1" />
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipSensorCluster</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <blockWind>true</blockWind>
+    <building>
+      <shipPart>true</shipPart>
+    </building>
+  </ThingDef>
+</Defs>

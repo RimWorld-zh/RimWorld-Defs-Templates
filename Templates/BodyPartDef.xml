@@ -22,6 +22,7 @@
     <!--Default Value: 0.2-->
     <oldInjuryBaseChance>float_value</oldInjuryBaseChance>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <amputateIfGeneratedInjuredChance>float_value</amputateIfGeneratedInjuredChance>
     <!--Type: float-->
     <!--Default Value: 1.0-->
@@ -33,6 +34,7 @@
     <!--Default Value: false-->
     <useDestroyedOutLabel>true_or_false</useDestroyedOutLabel>
     <!--Type: Verse.ThingDef-->
+    <!--Default Value: null-->
     <spawnThingOnRemoved>ThingDef_defName</spawnThingOnRemoved>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -41,6 +43,7 @@
     <!--Default Value: false-->
     <dontSuggestAmputation>true_or_false</dontSuggestAmputation>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <frostbiteVulnerability>float_value</frostbiteVulnerability>
     <!--Type: bool-->
     <!--Default Value: false-->

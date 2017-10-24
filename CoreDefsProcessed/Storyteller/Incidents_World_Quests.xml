@@ -5,7 +5,9 @@
     <label>bandit camp opportunity</label>
     <workerClass>IncidentWorker_QuestBanditCamp</workerClass>
     <category>Misc</category>
-    <targetType>World</targetType>
+    <targetTypes>
+      <li ListIndex="0">World</li>
+    </targetTypes>
     <baseChance>1.3</baseChance>
     <minRefireDays>5</minRefireDays>
     <chanceFactorByPopulationCurve>
@@ -16,14 +18,16 @@
     </chanceFactorByPopulationCurve>
     <letterText>{0}, {1} of {2}, has sent us a message.\n\nApparently bandits based in a nearby camp have been raiding their caravans. They've asked us to destroy it, which means eliminating all enemies and turrets.\n\nIf we succeed, their relations will improve, and they'll send us this reward:\n\n{3}</letterText>
     <letterLabel>Bandit camp opportunity</letterLabel>
-    <letterDef>Good</letterDef>
+    <letterDef>PositiveEvent</letterDef>
   </IncidentDef>
   <IncidentDef>
     <defName>QuestItemStash</defName>
     <label>item stash opportunity</label>
     <workerClass>IncidentWorker_QuestItemStash</workerClass>
     <category>Misc</category>
-    <targetType>World</targetType>
+    <targetTypes>
+      <li ListIndex="0">World</li>
+    </targetTypes>
     <baseChance>1.3</baseChance>
     <minRefireDays>5</minRefireDays>
     <chanceFactorByPopulationCurve>
@@ -32,8 +36,63 @@
         <li ListIndex="1">(7,1)</li>
       </points>
     </chanceFactorByPopulationCurve>
-    <letterText>{0}, {1} of {2}, has sent us a message.\n\nThey've learned that a collection of valuable items have been left for the taking not far from us. The collection consists of:\n\n{3}\n\nUnfortunately, it won’t last - others will take the items in {4} days if we don't.\n\nValuables tend to attract danger, so beware.\n\n{5}</letterText>
+    <letterText>{0}, {1} of {2}, has informed us of a collection of valuable items not far from us. The collection consists of:\n\n{3}\n\nUnfortunately, it won’t last - others will take the items in {4} days if we don't.\n\nBeware - valuables tend to attract danger. {5}</letterText>
     <letterLabel>Item stash opportunity</letterLabel>
-    <letterDef>Good</letterDef>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>QuestDownedRefugee</defName>
+    <label>incapacitated refugee opportunity</label>
+    <workerClass>IncidentWorker_QuestDownedRefugee</workerClass>
+    <category>Misc</category>
+    <targetTypes>
+      <li ListIndex="0">World</li>
+    </targetTypes>
+    <baseChance>0.7</baseChance>
+    <minRefireDays>5</minRefireDays>
+    <chanceFactorByPopulationCurve>
+      <points>
+        <li ListIndex="0">(2,0)</li>
+        <li ListIndex="1">(7,1)</li>
+      </points>
+    </chanceFactorByPopulationCurve>
+    <letterText>{0} contacts you on radio and requests help. HECAP is wounded and unable to move. Without your help, HE will die within {1} days.\n\nIt may be dangerous there, so beware.</letterText>
+    <letterLabel>Incapacitated refugee opportunity</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>QuestPrisonerWillingToJoin</defName>
+    <label>prisoner rescue opportunity</label>
+    <workerClass>IncidentWorker_QuestPrisonerWillingToJoin</workerClass>
+    <category>Misc</category>
+    <targetTypes>
+      <li ListIndex="0">World</li>
+    </targetTypes>
+    <baseChance>0.7</baseChance>
+    <populationEffect>Increase</populationEffect>
+    <minRefireDays>10</minRefireDays>
+    <chanceFactorByPopulationCurve>
+      <points>
+        <li ListIndex="0">(2,0)</li>
+        <li ListIndex="1">(4,1)</li>
+      </points>
+    </chanceFactorByPopulationCurve>
+    <letterText>A prisoner being held by {0} has managed to steal a radio and call you!\n\nNAME is being held at a camp nearby under armed guard. Rescue HIM, and HE will join your colony. HECAP is a {1}-year-old {2}.</letterText>
+    <letterLabel>Prisoner rescue opportunity</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>QuestPeaceTalks</defName>
+    <label>peace talks opportunity</label>
+    <workerClass>IncidentWorker_QuestPeaceTalks</workerClass>
+    <category>Misc</category>
+    <targetTypes>
+      <li ListIndex="0">World</li>
+    </targetTypes>
+    <baseChance>1</baseChance>
+    <minRefireDays>5</minRefireDays>
+    <letterText>NAME, {0} of {1}, has sent us a message. HECAP wants to talk with us in a nearby location.\n\nIt could be a great opportunity to improve relations with their faction, but beware - a poor negotiator can cause more harm than good and even anger them.\n\nThe offer will expire after {2} days.</letterText>
+    <letterLabel>Peace talks opportunity</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
   </IncidentDef>
 </Defs>

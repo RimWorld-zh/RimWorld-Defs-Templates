@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecipeDefs>
+<Defs>
   <RecipeDef Name="MakeStoneBlocksBase" Abstract="True">
     <jobString>Cutting stone blocks from chunk.</jobString>
     <workAmount>1600</workAmount>
-    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
     <targetCountAdjustment>20</targetCountAdjustment>
-    <workSkill>Construction</workSkill>
-    <workSkillLearnFactor>0.3</workSkillLearnFactor>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
     <recipeUsers>
@@ -20,7 +17,6 @@
     <workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
     <jobString>Cutting stone blocks from chunk.</jobString>
     <workAmount>1600</workAmount>
-    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
     <ingredients>
       <li ListIndex="0">
         <filter>
@@ -40,8 +36,6 @@
       <li ListIndex="0">Butchery</li>
     </specialProducts>
     <targetCountAdjustment>20</targetCountAdjustment>
-    <workSkill>Construction</workSkill>
-    <workSkillLearnFactor>0.3</workSkillLearnFactor>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
     <recipeUsers>
@@ -138,46 +132,6 @@
     </fixedIngredientFilter>
     <effectWorking>Smelt</effectWorking>
     <soundWorking>Recipe_Smelt</soundWorking>
-  </RecipeDef>
-  <RecipeDef>
-    <defName>MakeMortarShell</defName>
-    <label>make mortar shell</label>
-    <description>Craft a mortar shell.</description>
-    <jobString>Making mortar shell.</jobString>
-    <workAmount>800</workAmount>
-    <workSpeedStat>SmithingSpeed</workSpeedStat>
-    <ingredients>
-      <li ListIndex="0">
-        <filter>
-          <thingDefs>
-            <li ListIndex="0">Steel</li>
-          </thingDefs>
-        </filter>
-        <count>5</count>
-      </li>
-      <li ListIndex="1">
-        <filter>
-          <thingDefs>
-            <li ListIndex="0">Chemfuel</li>
-          </thingDefs>
-        </filter>
-        <count>10</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li ListIndex="0">Steel</li>
-        <li ListIndex="1">Chemfuel</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <products>
-      <MortarShell>1</MortarShell>
-    </products>
-    <targetCountAdjustment>5</targetCountAdjustment>
-    <workSkill>Crafting</workSkill>
-    <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_Machining</soundWorking>
   </RecipeDef>
   <RecipeDef>
     <defName>MakeChemfuelFromWood</defName>
@@ -281,13 +235,61 @@
     </products>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <skillRequirements>
-      <li ListIndex="0">
-        <skill>Crafting</skill>
-        <minLevel>10</minLevel>
-      </li>
+      <Crafting>8</Crafting>
     </skillRequirements>
     <workSkill>Crafting</workSkill>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
   </RecipeDef>
-</RecipeDefs>
+  <RecipeDef>
+    <defName>MakeAdvancedComponent</defName>
+    <label>make advanced component</label>
+    <description>Make an advanced component.</description>
+    <jobString>Making advanced component.</jobString>
+    <workAmount>12000</workAmount>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Component</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Gold</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li ListIndex="2">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Component</li>
+        <li ListIndex="1">Gold</li>
+        <li ListIndex="2">Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AdvancedComponent>1</AdvancedComponent>
+    </products>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+  </RecipeDef>
+</Defs>

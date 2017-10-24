@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StuffAppearanceDefs>
+<Defs>
   <StuffAppearanceDef>
     <defName>Smooth</defName>
   </StuffAppearanceDef>
@@ -9,4 +9,4 @@
   <StuffAppearanceDef>
     <defName>Bricks</defName>
   </StuffAppearanceDef>
-</StuffAppearanceDefs>
+</Defs>

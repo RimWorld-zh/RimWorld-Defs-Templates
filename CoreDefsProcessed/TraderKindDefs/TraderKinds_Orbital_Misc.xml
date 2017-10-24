@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DefPackage-TraderKindDef>
+<Defs>
   <TraderKindDef>
     <defName>Orbital_BulkGoods</defName>
     <label>bulk goods trader</label>
@@ -220,12 +220,16 @@
         </countRange>
         <thingDef>Medicine</thingDef>
       </li>
-      <li Class="StockGenerator_SingleDef" ListIndex="3">
+      <li Class="StockGenerator_Tag" ListIndex="3">
         <countRange>
-          <min>30</min>
-          <max>60</max>
+          <min>20</min>
+          <max>40</max>
         </countRange>
-        <thingDef>MortarShell</thingDef>
+        <tradeTag>MortarShell</tradeTag>
+        <thingDefCountRange>
+          <min>1</min>
+          <max>2</max>
+        </thingDefCountRange>
       </li>
       <li Class="StockGenerator_WeaponsRanged" ListIndex="4">
         <countRange>
@@ -527,4 +531,4 @@
     <commonality>1</commonality>
     <orbital>true</orbital>
   </TraderKindDef>
-</DefPackage-TraderKindDef>
+</Defs>

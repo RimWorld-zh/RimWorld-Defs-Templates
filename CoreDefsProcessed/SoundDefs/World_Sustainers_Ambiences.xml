@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DefPackage-SoundDef>
+<Defs>
   <SoundDef>
     <defName>AmbientNightInsects_Standard</defName>
     <sustain>True</sustain>
@@ -125,6 +125,10 @@
                 </li>
               </points>
             </curve>
+          </li>
+          <li ListIndex="4">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
           </li>
         </paramMappings>
         <sustainLoopDurationRange>
@@ -266,6 +270,10 @@
               </points>
             </curve>
           </li>
+          <li ListIndex="4">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
         </paramMappings>
         <sustainLoopDurationRange>
           <min>40</min>
@@ -406,6 +414,10 @@
               </points>
             </curve>
           </li>
+          <li ListIndex="4">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
         </paramMappings>
         <sustainLoopDurationRange>
           <min>40</min>
@@ -492,6 +504,10 @@
               </points>
             </curve>
           </li>
+          <li ListIndex="2">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
         </paramMappings>
       </li>
     </subSounds>
@@ -543,6 +559,10 @@
               </points>
             </curve>
           </li>
+          <li ListIndex="1">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
         </paramMappings>
       </li>
     </subSounds>
@@ -567,6 +587,12 @@
           <min>0.8164706</min>
           <max>1.160588</max>
         </pitchRange>
+        <paramMappings>
+          <li ListIndex="0">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
       </li>
     </subSounds>
   </SoundDef>
@@ -590,6 +616,12 @@
           <min>0.7541547</min>
           <max>1.268195</max>
         </pitchRange>
+        <paramMappings>
+          <li ListIndex="0">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
+        </paramMappings>
       </li>
     </subSounds>
   </SoundDef>
@@ -688,6 +720,10 @@
                 </li>
               </points>
             </curve>
+          </li>
+          <li ListIndex="3">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
           </li>
         </paramMappings>
         <sustainLoopDurationRange>
@@ -795,6 +831,10 @@
               </points>
             </curve>
           </li>
+          <li ListIndex="3">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
         </paramMappings>
       </li>
     </subSounds>
@@ -868,6 +908,10 @@
                 </li>
               </points>
             </curve>
+          </li>
+          <li ListIndex="2">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
           </li>
         </paramMappings>
       </li>
@@ -943,6 +987,10 @@
               </points>
             </curve>
           </li>
+          <li ListIndex="2">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
         </paramMappings>
       </li>
     </subSounds>
@@ -988,6 +1036,10 @@
               </points>
             </curve>
           </li>
+          <li ListIndex="1">
+            <inParam Class="SoundParamSource_AmbientVolume" />
+            <outParam Class="SoundParamTarget_Volume" />
+          </li>
         </paramMappings>
         <sustainLoopDurationRange>
           <min>36</min>
@@ -1002,4 +1054,4 @@
       </li>
     </subSounds>
   </SoundDef>
-</DefPackage-SoundDef>
+</Defs>

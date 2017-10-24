@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DefPackage-SoundDef>
+<Defs>
   <SoundDef>
     <defName>InteractGrenade</defName>
     <context>MapOnly</context>
@@ -114,7 +114,22 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>InteractPistol</defName>
+    <defName>InteractRevolver</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li ListIndex="0">
+        <grains>
+          <li Class="AudioGrain_Clip" ListIndex="0">
+            <clipPath>UI/WeaponHandling/HandleWeapon_SmallA</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>InteractAutopistol</defName>
     <context>MapOnly</context>
     <eventNames />
     <maxSimultaneous>1</maxSimultaneous>
@@ -409,6 +424,28 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
+    <defName>BowRecurve</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <subSounds>
+      <li ListIndex="0">
+        <grains>
+          <li Class="AudioGrain_Clip" ListIndex="0">
+            <clipPath>Weapon/BowB</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>45.70111</min>
+          <max>55.30627</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.55</min>
+          <max>0.65</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
     <defName>BowLarge</defName>
     <context>MapOnly</context>
     <eventNames />
@@ -465,7 +502,7 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>ShotPistol</defName>
+    <defName>ShotRevolver</defName>
     <context>MapOnly</context>
     <eventNames />
     <maxSimultaneous>1</maxSimultaneous>
@@ -473,7 +510,27 @@
       <li ListIndex="0">
         <grains>
           <li Class="AudioGrain_Folder" ListIndex="0">
-            <clipFolderPath>Weapon/Pistol1</clipFolderPath>
+            <clipFolderPath>Weapon/Revolver</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>35</min>
+          <max>35</max>
+        </volumeRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotAutopistol</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li ListIndex="0">
+        <grains>
+          <li Class="AudioGrain_Folder" ListIndex="0">
+            <clipFolderPath>Weapon/Autopistol</clipFolderPath>
           </li>
         </grains>
         <volumeRange>
@@ -701,4 +758,27 @@
       </li>
     </subSounds>
   </SoundDef>
-</DefPackage-SoundDef>
+  <SoundDef>
+    <defName>OrbitalTargeter_Fire</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li ListIndex="0">
+        <grains>
+          <li Class="AudioGrain_Clip" ListIndex="0">
+            <clipPath>Weapon/OrbitalTargeter/OrbitalTargeter_Fire</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>18</min>
+          <max>18</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.99</min>
+          <max>1.01</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>

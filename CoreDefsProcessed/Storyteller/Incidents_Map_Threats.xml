@@ -6,40 +6,51 @@
     <label>enemy raid</label>
     <workerClass>IncidentWorker_RaidEnemy</workerClass>
     <category>ThreatBig</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>7.4</baseChance>
     <pointsScaleable>true</pointsScaleable>
+    <tale>Raid</tale>
   </IncidentDef>
   <IncidentDef>
     <defName>Infestation</defName>
     <label>infestation</label>
     <workerClass>IncidentWorker_Infestation</workerClass>
     <category>ThreatBig</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>2.7</baseChance>
     <minRefireDays>20</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
     <minThreatPoints>400</minThreatPoints>
     <letterText>A bug hive has emerged!\n\nIt will slowly spawn bugs as well as produce additional hives. If you don't want it to infest the whole area, muster your forces and destroy it. But beware - the bugs will defend their hive.</letterText>
     <letterLabel>Infestation</letterLabel>
-    <letterDef>BadUrgent</letterDef>
+    <letterDef>ThreatBig</letterDef>
+    <tale>Infestation</tale>
   </IncidentDef>
   <IncidentDef>
     <defName>ManhunterPack</defName>
     <label>manhunter pack</label>
     <workerClass>IncidentWorker_ManhunterPack</workerClass>
     <category>ThreatBig</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>2.0</baseChance>
     <minRefireDays>8</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
+    <tale>ManhunterPack</tale>
   </IncidentDef>
   <IncidentDef>
     <defName>PsychicEmanatorShipPartCrash</defName>
     <label>ship part crash (psychic)</label>
     <workerClass>IncidentWorker_PsychicEmanatorShipPartCrash</workerClass>
     <category>ThreatBig</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>2.0</baseChance>
     <minRefireDays>15</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
@@ -52,15 +63,18 @@
     </refireCheckTags>
     <letterText>A large piece of an ancient ship has crashed nearby.\n\nYour colonists can feel it in the back of their mind, exhorting unspeakable acts. It must have an onboard AI persona with psychic projection ability. And this AI is not friendly.\n\nDestroy it as soon as possible.</letterText>
     <letterLabel>Psychic ship</letterLabel>
-    <letterDef>BadNonUrgent</letterDef>
+    <letterDef>ThreatSmall</letterDef>
     <shipPart>CrashedPsychicEmanatorShipPart</shipPart>
+    <tale>ShipPartCrash</tale>
   </IncidentDef>
   <IncidentDef>
     <defName>PoisonShipPartCrash</defName>
     <label>ship part crash (poison)</label>
     <workerClass>IncidentWorker_PoisonShipPartCrash</workerClass>
     <category>ThreatBig</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>2.0</baseChance>
     <minRefireDays>15</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
@@ -73,15 +87,18 @@
     </refireCheckTags>
     <letterText>A large piece of an ancient ship has crashed nearby.\n\nIt is leaking toxic material and will kill all plants in an expanding circle around itself.\n\nDestroy it as soon as possible.</letterText>
     <letterLabel>Poison ship</letterLabel>
-    <letterDef>BadNonUrgent</letterDef>
+    <letterDef>ThreatSmall</letterDef>
     <shipPart>CrashedPoisonShipPart</shipPart>
+    <tale>ShipPartCrash</tale>
   </IncidentDef>
   <IncidentDef>
     <defName>AnimalInsanityMass</defName>
     <label>mass animal insanity</label>
     <workerClass>IncidentWorker_AnimalInsanityMass</workerClass>
     <category>ThreatBig</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>1.3</baseChance>
     <minRefireDays>1</minRefireDays>
     <pointsScaleable>true</pointsScaleable>
@@ -92,7 +109,9 @@
     <label>single animal insanity</label>
     <workerClass>IncidentWorker_AnimalInsanitySingle</workerClass>
     <category>ThreatSmall</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>5</baseChance>
     <minRefireDays>2</minRefireDays>
   </IncidentDef>

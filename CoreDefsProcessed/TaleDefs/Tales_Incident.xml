@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TaleDef>
+    <defName>CaravanAmbushedByHumanlike</defName>
+    <label>caravan ambushed</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef]'s caravan ambushed</li>
+        <li ListIndex="1">image->[pawn_nameFull] cowering [circumstance_group]</li>
+        <li ListIndex="2">image->[pawn_nameFull] moving to protect an ally [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] moving to attack [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] attacking [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] shouting loudly [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] running [circumstance_group]</li>
+        <li ListIndex="7">image->[pawn_nameFull] grapping with an opponent [circumstance_group]</li>
+        <li ListIndex="8">image->[pawn_nameFull] defending themself [circumstance_group]</li>
+        <li ListIndex="9">circumstance_phrase->with a [badassadjective] expression</li>
+        <li ListIndex="10">circumstance_phrase->with a [badassadjective] expression</li>
+        <li ListIndex="11">circumstance_phrase->while wielding [pawn_possessive] weapon</li>
+        <li ListIndex="12">circumstance_phrase->while sweating with exertion</li>
+        <li ListIndex="13">desc_sentence->[quantity_adjphrase] distant figures approaches from behind a [terrainfeature].</li>
+        <li ListIndex="14">desc_sentence->[quantity_adjphrase] [enemy]s can be seen in the distance.</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef] is practically surrounded by [enemy]s.</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef] is confronted by a [enemy].</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] [animal]s flee the scene of conflict in fear.</li>
+        <li ListIndex="18">desc_sentence->In the distance, a [outlander] observes.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>CaravanAmbushedByManhunter</defName>
+    <label>caravan ambushed by manhunter</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef]'s caravan ambushed</li>
+        <li ListIndex="1">image->[pawn_nameFull] cowering [circumstance_group]</li>
+        <li ListIndex="2">image->[pawn_nameFull] moving to protect an ally [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] moving to attack [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] attacking [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] shouting loudly [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] running [circumstance_group]</li>
+        <li ListIndex="7">circumstance_phrase->with a [badassadjective] expression</li>
+        <li ListIndex="8">circumstance_phrase->with a [badassadjective] expression</li>
+        <li ListIndex="9">circumstance_phrase->while wielding [pawn_possessive] weapon</li>
+        <li ListIndex="10">circumstance_phrase->while sweating with exertion</li>
+        <li ListIndex="11">circumstance_phrase->while covered with [gore]</li>
+        <li ListIndex="12">desc_sentence->[quantity_adjphrase] distant animals approach from behind a [terrainfeature].</li>
+        <li ListIndex="13">desc_sentence->[gore] covers the ground.</li>
+        <li ListIndex="14">desc_sentence->The ground has been trampled into a mess of [gore].</li>
+        <li ListIndex="15">desc_sentence->[quantity_adjphrase] [animal]s flee the scene of conflict in fear.</li>
+        <li ListIndex="16">desc_sentence->In the distance, a [outlander] observes.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>CaravanMeeting</defName>
+    <label>caravan meeting</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef]'s caravan met by others</li>
+        <li ListIndex="1">image->[pawn_nameFull] greeting a [outlander] [circumstance_group]</li>
+        <li ListIndex="2">image->[pawn_nameFull] inspecting a [outlander] [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] calling out to a [outlander] [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] walking towards a [outlander] [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] talking quietly [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] shouting loudly [circumstance_group]</li>
+        <li ListIndex="7">image->[pawn_nameFull] playing [game] with a [outlander] [circumstance_group]</li>
+        <li ListIndex="8">circumstance_phrase->with a [friendlyadjective] expression</li>
+        <li ListIndex="9">circumstance_phrase->with a [friendlyadjective] expression</li>
+        <li ListIndex="10">circumstance_phrase->while [friendlyverb]</li>
+        <li ListIndex="11">circumstance_phrase->as others look on</li>
+        <li ListIndex="12">desc_sentence->[quantity_adjphrase] [outlander]s are [event].</li>
+        <li ListIndex="13">desc_sentence->[quantity_adjphrase] [outlander]s are [event].</li>
+        <li ListIndex="14">desc_sentence->[quantity_adjphrase] [animal]s surround the group.</li>
+        <li ListIndex="15">desc_sentence->The sun sets over a [terrainfeature].</li>
+        <li ListIndex="16">desc_sentence->The sun rises over a [terrainfeature].</li>
+        <li ListIndex="17">desc_sentence->In the distance, a [outlander] observes.</li>
+        <li ListIndex="18">event->throwing a party</li>
+        <li ListIndex="19">event->eating a communal meal</li>
+        <li ListIndex="20">event->discussing recent events</li>
+        <li ListIndex="21">event->rekindling old friendships</li>
+        <li ListIndex="22">event->talking hesitantly</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>CaravanDemand</defName>
+    <label>caravan demand</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef]'s caravan receiving a demand</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef]'s caravan being threatened</li>
+        <li ListIndex="2">image->[pawn_nameFull] cowering [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] shouting loudly [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] thinking [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] glaring [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull], threatened by a [outlander], [circumstance_group]</li>
+        <li ListIndex="7">image->[pawn_nameFull] brandishing a [weapon] [circumstance_group]</li>
+        <li ListIndex="8">circumstance_phrase->with a [badassadjective] expression</li>
+        <li ListIndex="9">circumstance_phrase->with a [angstyadjective] expression</li>
+        <li ListIndex="10">circumstance_phrase->as others look on</li>
+        <li ListIndex="11">circumstance_phrase->while being threatened by [enemy]s</li>
+        <li ListIndex="12">desc_sentence->[pawn_nameShortDef] is practically surrounded by [enemy]s.</li>
+        <li ListIndex="13">desc_sentence->[quantity_adjphrase] [enemy]s are nearby, [action].</li>
+        <li ListIndex="14">desc_sentence->The sun sets over a [terrainfeature].</li>
+        <li ListIndex="15">desc_sentence->The sun rises over a [terrainfeature].</li>
+        <li ListIndex="16">desc_sentence->In the distance, a [outlander] observes.</li>
+        <li ListIndex="17">action->sharpening their weapons</li>
+        <li ListIndex="18">action->watching for danger</li>
+        <li ListIndex="19">action->guarding hostages</li>
+        <li ListIndex="20">action->waiting for a decision</li>
+        <li ListIndex="21">action->taunting [pawn_nameShortDef]</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>MeteoriteImpact</defName>
+    <label>meteorite impact</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->a meteorite falling near [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">tale_noun->a meteorite impacting near [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="2">image->a [large] rock trailing [color] flames [airborne_circumstance]</li>
+        <li ListIndex="3">image->a brightly-glowing spot [airborne_circumstance]</li>
+        <li ListIndex="4">image->a [large] [color] fireball [airborne_circumstance]</li>
+        <li ListIndex="5">airborne_circumstance->blazing across the sky</li>
+        <li ListIndex="6">airborne_circumstance->falling to the ground in a cloud of ash</li>
+        <li ListIndex="7">airborne_circumstance->shedding rocks and debris as it flies</li>
+        <li ListIndex="8">image->a [large] monolith, [ground_circumstance]</li>
+        <li ListIndex="9">image->a [large] [color] scorched stone, [ground_circumstance]</li>
+        <li ListIndex="10">image->a [color] pillar of rock, [ground_circumstance]</li>
+        <li ListIndex="11">ground_circumstance->surrounded by smoke and ash</li>
+        <li ListIndex="12">ground_circumstance->smoking from heat</li>
+        <li ListIndex="13">ground_circumstance->surrounded by molten debris</li>
+        <li ListIndex="14">ground_circumstance->partially embedded in the ground</li>
+        <li ListIndex="15">ground_circumstance->lying in a cracked crater</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef] looks on in surprise.</li>
+        <li ListIndex="17">desc_sentence->[pawn_nameShortDef] looks on with excitement.</li>
+        <li ListIndex="18">desc_sentence->[pawn_nameShortDef] looks on in shock.</li>
+        <li ListIndex="19">desc_sentence->[quantity_adjphrase] figures approach from a nearby [terrainfeature].</li>
+        <li ListIndex="20">desc_sentence->[quantity_adjphrase] figures prepare tools and equipment.</li>
+        <li ListIndex="21">desc_sentence->[quantity_adjphrase] [animal]s mill around uncertainly.</li>
+        <li ListIndex="22">desc_sentence->The surroundings are muted and dull.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>ToxicFallout</defName>
+    <label>toxic fallout</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->fallout settling over [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">tale_noun->the atmosphere near [pawn_nameShortDef]'s [community] becoming toxic</li>
+        <li ListIndex="2">image->an ominous sky, [circumstance_group]</li>
+        <li ListIndex="3">image->the air becoming thick and [circumstance_group]</li>
+        <li ListIndex="4">image->the ground glowing gently and [circumstance_group]</li>
+        <li ListIndex="5">image->fields of dead plants [circumstance_group]</li>
+        <li ListIndex="6">image->[quantity_adjphrase] graves [circumstance_group]</li>
+        <li ListIndex="7">circumstance_phrase->with no life in sight</li>
+        <li ListIndex="8">circumstance_phrase->covered by a faint sheen of luminous dust</li>
+        <li ListIndex="9">circumstance_phrase->arranged in a pattern that suggests bones</li>
+        <li ListIndex="10">circumstance_phrase->waiting for the poison to stop</li>
+        <li ListIndex="11">desc_sentence->[pawn_nameShortDef] lies on the ground, [pawn_possessive] body twisted at an unusual angle.</li>
+        <li ListIndex="12">desc_sentence->[pawn_nameShortDef] hides near a [terrainfeature], gazing out with a [angstyadjective] look.</li>
+        <li ListIndex="13">desc_sentence->[pawn_nameShortDef] looks on in shock.</li>
+        <li ListIndex="14">desc_sentence->[pawn_nameShortDef] rests quietly with a layer of sweat upon [pawn_possessive] face.</li>
+        <li ListIndex="15">desc_sentence->[quantity_adjphrase] dead [animal]s litter the ground.</li>
+        <li ListIndex="16">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] [animal]s mill around uncertainly.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>VolcanicWinter</defName>
+    <label>volcanic winter</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->volcanic winter beginning at [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">image->a dark and cold sky, [circumstance_group]</li>
+        <li ListIndex="2">image->the air filling with ash, [circumstance_group]</li>
+        <li ListIndex="3">image->a frost-covered barren [terrainfeature] [circumstance_group]</li>
+        <li ListIndex="4">image->[quantity_adjphrase] fields of ash-covered plants [circumstance_group]</li>
+        <li ListIndex="5">circumstance_phrase->with no life in sight</li>
+        <li ListIndex="6">circumstance_phrase->barely illuminated by thin shafts of light</li>
+        <li ListIndex="7">circumstance_phrase->starkly illuminated with chilly blue light</li>
+        <li ListIndex="8">desc_sentence->[pawn_nameShortDef] huddles near a fire.</li>
+        <li ListIndex="9">desc_sentence->To stay warm, [pawn_nameShortDef] wears [quantity_adjphrase] [apparel]s.</li>
+        <li ListIndex="10">desc_sentence->[pawn_nameShortDef] sits nearby, visibly exhausted by the ordeal.</li>
+        <li ListIndex="11">desc_sentence->[pawn_nameShortDef] hides near a [terrainfeature], gazing out with a [angstyadjective] look.</li>
+        <li ListIndex="12">desc_sentence->[quantity_adjphrase] starving [animal]s surround the scene.</li>
+        <li ListIndex="13">desc_sentence->[quantity_adjphrase] shivering [animal]s surround the scene.</li>
+        <li ListIndex="14">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
+        <li ListIndex="15">desc_sentence->[quantity_adjphrase] [animal]s mill around uncertainly.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>Aurora</defName>
+    <label>aurora</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->an aurora visible over [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">tale_noun->the polar lights visible over [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="2">tale_noun->[pawn_nameShortDef]'s [community] illuminated by the light of an aurora</li>
+        <li ListIndex="3">image->the sky illuminated in [color]s and [color]s [circumstance_phrase]</li>
+        <li ListIndex="4">image->a fabulous pattern of [color] rays [circumstance_phrase]</li>
+        <li ListIndex="5">image->a network of [color] lights [circumstance_phrase]</li>
+        <li ListIndex="6">image->[color] swooping arcs with [color] highlights [circumstance_phrase]</li>
+        <li ListIndex="7">image->dancing [color] lights [circumstance_group]</li>
+        <li ListIndex="8">circumstance_phrase->over a [terrainfeature]</li>
+        <li ListIndex="9">circumstance_phrase->illuminating a [terrainfeature]</li>
+        <li ListIndex="10">circumstance_phrase->floating over a [community]</li>
+        <li ListIndex="11">circumstance_phrase->bracketed between a [terrainfeature] and a [terrainfeature]</li>
+        <li ListIndex="12">desc_sentence->Below, [pawn_nameShortDef] plays [game] with a [friendlyadjective] look.</li>
+        <li ListIndex="13">desc_sentence->[pawn_nameShortDef] watches with awe on [pawn_possessive] face.</li>
+        <li ListIndex="14">desc_sentence->[quantity_adjphrase] [outlander]s watch from below.</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef] sits near a [terrainfeature], gazing at the sky.</li>
+        <li ListIndex="16">desc_sentence->[quantity_adjphrase] [animal]s wander peacefully.</li>
+        <li ListIndex="17">desc_sentence->There is no [enemy] in sight.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>Flashstorm</defName>
+    <label>flashstorm</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->a firestorm that threatened [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef]'s [community] menaced by hostile weather</li>
+        <li ListIndex="2">image->[quantity_adjphrase] lightning strikes [circumstance_phrase]</li>
+        <li ListIndex="3">image->[behavior] wall of flames [circumstance_phrase]</li>
+        <li ListIndex="4">image->[behavior] wall of [color] flames [circumstance_phrase]</li>
+        <li ListIndex="5">image->[behavior] cloud of ash and smoke [circumstance_phrase]</li>
+        <li ListIndex="6">image->[behavior] wave of flames [circumstance_phrase]</li>
+        <li ListIndex="7">behavior->a</li>
+        <li ListIndex="8">behavior->an advancing</li>
+        <li ListIndex="9">behavior->an approaching</li>
+        <li ListIndex="10">circumstance_phrase->advancing towards a [community]</li>
+        <li ListIndex="11">circumstance_phrase->underneath an intimidating cloud</li>
+        <li ListIndex="12">circumstance_phrase->nearly enveloping a [terrainfeature]</li>
+        <li ListIndex="13">circumstance_phrase->nearly enveloping [quantity_adjphrase] [terrainfeature]s</li>
+        <li ListIndex="14">desc_sentence->[pawn_nameShortDef] watches with visible fright.</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef] watches with awe on [pawn_possessive] face.</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef] is coordinating defensive measures.</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] [outlander]s rush to prepare.</li>
+        <li ListIndex="18">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
+        <li ListIndex="19">desc_sentence->All animal life has left the area.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>Tornado</defName>
+    <label>tornado</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->a tornado that touched down near [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef]'s [community] menaced by hostile weather</li>
+        <li ListIndex="2">image->[behavior] cone of twisting air [circumstance_phrase]</li>
+        <li ListIndex="3">image->[behavior] tornado [circumstance_phrase]</li>
+        <li ListIndex="4">image->[behavior] hurricane [circumstance_phrase]</li>
+        <li ListIndex="5">image->[behavior] [color] cloud formation [circumstance_phrase]</li>
+        <li ListIndex="6">behavior->an advancing</li>
+        <li ListIndex="7">behavior->an approaching</li>
+        <li ListIndex="8">behavior->a quickly-moving</li>
+        <li ListIndex="9">behavior->a swirling</li>
+        <li ListIndex="10">circumstance_phrase->carrying debris with it</li>
+        <li ListIndex="11">circumstance_phrase->passing over a [terrainfeature]</li>
+        <li ListIndex="12">circumstance_phrase->obscuring a [terrainfeature]</li>
+        <li ListIndex="13">circumstance_phrase->enveloping a [terrainfeature]</li>
+        <li ListIndex="14">desc_sentence->[pawn_nameShortDef] watches with visible fright.</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef] watches with awe on [pawn_possessive] face.</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef] is coordinating defensive measures.</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] [outlander]s rush to prepare.</li>
+        <li ListIndex="18">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
+        <li ListIndex="19">desc_sentence->All animal life has left the area.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>Raid</defName>
+    <label>raid</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->an assault on [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef]'s [community] attacked by [enemy]s</li>
+        <li ListIndex="2">image->[quantity_adjphrase] [enemy]s [circumstance_phrase]</li>
+        <li ListIndex="3">image->an army [circumstance_phrase]</li>
+        <li ListIndex="4">image->an overwhelming force [circumstance_phrase]</li>
+        <li ListIndex="5">image->an invading force [circumstance_phrase]</li>
+        <li ListIndex="6">image->stylized [color] banners [circumstance_phrase]</li>
+        <li ListIndex="7">image->an enormous [enemy] [circumstance_phrase]</li>
+        <li ListIndex="8">circumstance_phrase->advancing over a [terrainfeature]</li>
+        <li ListIndex="9">circumstance_phrase->completely encircling a [community]</li>
+        <li ListIndex="10">circumstance_phrase->attacking [quantity_adjphrase] [outlander]s</li>
+        <li ListIndex="11">circumstance_phrase->roaring in victory</li>
+        <li ListIndex="12">circumstance_phrase->brandishing [weapon]s</li>
+        <li ListIndex="13">circumstance_phrase->covered in [gore]</li>
+        <li ListIndex="14">desc_sentence->[pawn_nameShortDef] organizes a resistance while [defender_circumstance].</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef] wields a [weapon] defensively while [defender_circumstance].</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef] lies on the ground, wounded.</li>
+        <li ListIndex="17">desc_sentence->[pawn_nameShortDef] retaliates with [pawn_possessive] [weapon] while [defender_circumstance].</li>
+        <li ListIndex="18">desc_sentence->[pawn_nameShortDef] stands as tall as a building, [defender_circumstance].</li>
+        <li ListIndex="19">desc_sentence->[pawn_nameShortDef] wears a [badassadjective] expression.</li>
+        <li ListIndex="20">desc_sentence->[pawn_nameShortDef] wears a [angstyadjective] expression.</li>
+        <li ListIndex="21">desc_sentence->The ground is coated in [gore].</li>
+        <li ListIndex="22">desc_sentence->[quantity_adjphrase] [outlander]s flee the area.</li>
+        <li ListIndex="23">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
+        <li ListIndex="24">defender_circumstance->shouting triumphantly</li>
+        <li ListIndex="25">defender_circumstance->glowing [color]</li>
+        <li ListIndex="26">defender_circumstance->raising a fist in defiance</li>
+        <li ListIndex="27">defender_circumstance->flexing [pawn_possessive] muscles</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>Infestation</defName>
+    <label>infestation</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef]'s [community] infested by insects</li>
+        <li ListIndex="1">image->a swarm of beetles [circumstance_phrase]</li>
+        <li ListIndex="2">image->[quantity_adjphrase] megaspiders [circumstance_phrase]</li>
+        <li ListIndex="3">image->an overwhelming tide of [color] insects [circumstance_phrase]</li>
+        <li ListIndex="4">image->a dense fog of black specks [circumstance_phrase]</li>
+        <li ListIndex="5">circumstance_phrase->advancing over a [terrainfeature]</li>
+        <li ListIndex="6">circumstance_phrase->completely encircling a [community]</li>
+        <li ListIndex="7">circumstance_phrase->attacking [quantity_adjphrase] [outlander]s</li>
+        <li ListIndex="8">circumstance_phrase->bursting out of the ground</li>
+        <li ListIndex="9">circumstance_phrase->slaughtering [quantity_adjphrase] [animal]s</li>
+        <li ListIndex="10">desc_sentence->[pawn_nameShortDef] organizes a resistance.</li>
+        <li ListIndex="11">desc_sentence->[pawn_nameShortDef] wields a [weapon] defensively.</li>
+        <li ListIndex="12">desc_sentence->[pawn_nameShortDef] lies on the ground, wounded.</li>
+        <li ListIndex="13">desc_sentence->[pawn_nameShortDef] retaliates with [pawn_possessive] [weapon].</li>
+        <li ListIndex="14">desc_sentence->[pawn_nameShortDef] wears a [badassadjective] expression.</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef] wears a [angstyadjective] expression.</li>
+        <li ListIndex="16">desc_sentence->The ground is coated in [gore].</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] [outlander]s flee the area.</li>
+        <li ListIndex="18">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
+        <li ListIndex="19">desc_sentence->All animal life has left the area.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>ManhunterPack</defName>
+    <label>manhunter pack</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef]'s [community] attacked by animals</li>
+        <li ListIndex="1">image->a herd of [animal]s [circumstance_phrase]</li>
+        <li ListIndex="2">image->[quantity_adjphrase] [animal]s [circumstance_phrase]</li>
+        <li ListIndex="3">image->a [huge] [animal] [circumstance_phrase]</li>
+        <li ListIndex="4">image->[quantity_adjphrase] shadowy figures [circumstance_phrase]</li>
+        <li ListIndex="5">image->[quantity_adjphrase] shadowy quadrupeds [circumstance_phrase]</li>
+        <li ListIndex="6">circumstance_phrase->advancing over a [terrainfeature]</li>
+        <li ListIndex="7">circumstance_phrase->completely encircling a [community]</li>
+        <li ListIndex="8">circumstance_phrase->attacking [quantity_adjphrase] [outlander]s</li>
+        <li ListIndex="9">circumstance_phrase->slaughtering [quantity_adjphrase] [animal]s</li>
+        <li ListIndex="10">circumstance_phrase->possessed by [hate_emotion]</li>
+        <li ListIndex="11">circumstance_phrase->covered in [gore]</li>
+        <li ListIndex="12">hate_emotion->hatred</li>
+        <li ListIndex="13">hate_emotion->anger</li>
+        <li ListIndex="14">hate_emotion->fury</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef] organizes a resistance.</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef] wields a [weapon] defensively.</li>
+        <li ListIndex="17">desc_sentence->[pawn_nameShortDef] lies on the ground, wounded.</li>
+        <li ListIndex="18">desc_sentence->[pawn_nameShortDef] retaliates with [pawn_possessive] [weapon].</li>
+        <li ListIndex="19">desc_sentence->[pawn_nameShortDef] wears a [badassadjective] expression.</li>
+        <li ListIndex="20">desc_sentence->[pawn_nameShortDef] wears a [angstyadjective] expression.</li>
+        <li ListIndex="21">desc_sentence->The ground is coated in [gore].</li>
+        <li ListIndex="22">desc_sentence->[quantity_adjphrase] [outlander]s flee the area.</li>
+        <li ListIndex="23">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>ShipPartCrash</defName>
+    <label>ship part crash</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->a [mechanoid] colony crashlanding near [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">tale_noun->a [mechanoid] base landing near [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="2">tale_noun->a damaged [mechanoid] ship part landing near [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="3">image->a swarm of [mechanoid]s [circumstance_phrase]</li>
+        <li ListIndex="4">image->an army of [mechanoid]s [circumstance_phrase]</li>
+        <li ListIndex="5">image->[quantity_adjphrase] [mechanoid]s [circumstance_phrase]</li>
+        <li ListIndex="6">image->a [huge] [mechanoid] [circumstance_phrase]</li>
+        <li ListIndex="7">image->[quantity_adjphrase] [mechanoid] silhouettes [circumstance_phrase]</li>
+        <li ListIndex="8">image->[quantity_adjphrase] [mechanoid]s with glowing [color] sensors [circumstance_phrase]</li>
+        <li ListIndex="9">circumstance_phrase->advancing over a [terrainfeature]</li>
+        <li ListIndex="10">circumstance_phrase->completely encircling a [community]</li>
+        <li ListIndex="11">circumstance_phrase->attacking [quantity_adjphrase] [outlander]s</li>
+        <li ListIndex="12">circumstance_phrase->slaughtering [quantity_adjphrase] [animal]s</li>
+        <li ListIndex="13">circumstance_phrase->covered in [gore]</li>
+        <li ListIndex="14">circumstance_phrase->dented and sparking</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef] organizes a resistance while [defender_circumstance].</li>
+        <li ListIndex="16">desc_sentence->[pawn_nameShortDef] wields a [weapon] defensively while [defender_circumstance].</li>
+        <li ListIndex="17">desc_sentence->[pawn_nameShortDef] lies on the ground, wounded.</li>
+        <li ListIndex="18">desc_sentence->[pawn_nameShortDef] retaliates with [pawn_possessive] [weapon] while [defender_circumstance].</li>
+        <li ListIndex="19">desc_sentence->[pawn_nameShortDef] stands as tall as a building, [defender_circumstance].</li>
+        <li ListIndex="20">desc_sentence->[pawn_nameShortDef] wears a [badassadjective] expression.</li>
+        <li ListIndex="21">desc_sentence->[pawn_nameShortDef] wears a [angstyadjective] expression.</li>
+        <li ListIndex="22">desc_sentence->The ground is coated in [gore].</li>
+        <li ListIndex="23">desc_sentence->The ground is coated in scrap metal.</li>
+        <li ListIndex="24">desc_sentence->[quantity_adjphrase] [outlander]s flee the area.</li>
+        <li ListIndex="25">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
+        <li ListIndex="26">defender_circumstance->shouting triumphantly</li>
+        <li ListIndex="27">defender_circumstance->glowing [color]</li>
+        <li ListIndex="28">defender_circumstance->raising a fist in defiance</li>
+        <li ListIndex="29">defender_circumstance->flexing [pawn_possessive] muscles</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>Eclipse</defName>
+    <label>eclipse</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->an eclipse over [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="1">image->an unnaturally dark sky, [circumstance_phrase]</li>
+        <li ListIndex="2">image->a crepuscular sky, [circumstance_phrase]</li>
+        <li ListIndex="3">image->a moon, ringed by a faint circle of sunlight, [circumstance_phrase]</li>
+        <li ListIndex="4">image->[quantity_adjphrase] [animal]s milling around uncertainly in darkness, [circumstance_phrase]</li>
+        <li ListIndex="5">circumstance_phrase->the air still and quiet</li>
+        <li ListIndex="6">circumstance_phrase->twilight blanketing a nearby [terrainfeature]</li>
+        <li ListIndex="7">circumstance_phrase->twilight blanketing [quantity_adjphrase] nearby [terrainfeature]s</li>
+        <li ListIndex="8">circumstance_phrase->with stars visible</li>
+        <li ListIndex="9">desc_sentence->Below, [pawn_nameShortDef] plays [game] with a [friendlyadjective] look.</li>
+        <li ListIndex="10">desc_sentence->[pawn_nameShortDef] watches with awe on [pawn_possessive] face.</li>
+        <li ListIndex="11">desc_sentence->[quantity_adjphrase] [outlander]s watch from below.</li>
+        <li ListIndex="12">desc_sentence->[pawn_nameShortDef] sits near a [terrainfeature], gazing at the sky.</li>
+        <li ListIndex="13">desc_sentence->A [community] of spectators watches the sky peacefully.</li>
+        <li ListIndex="14">desc_sentence->There is no [enemy] in sight.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+  <TaleDef>
+    <defName>JourneyOffer</defName>
+    <label>journey offer</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] receiving a message from an old friend</li>
+        <li ListIndex="1">tale_noun->an opportunity arriving for [pawn_nameShortDef]'s [community]</li>
+        <li ListIndex="2">image->[pawn_nameShortDef] opening a letter delivered by [delivery_method] while [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameShortDef] using a datacrystal delivered by [delivery_method] while [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameShortDef] unrolling a scroll delivered by [delivery_method] while [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameShortDef] receiving a transmission from [transmission_source] while [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameShortDef] receiving a message from [transmission_source] while [circumstance_group]</li>
+        <li ListIndex="7">image->[pawn_nameShortDef] tuning in to a message from [transmission_source] while [circumstance_group]</li>
+        <li ListIndex="8">delivery_method->a [animal]</li>
+        <li ListIndex="9">delivery_method->a [outlander]</li>
+        <li ListIndex="10">delivery_method->[quantity_adjphrase] [animal]s</li>
+        <li ListIndex="11">transmission_source->a rarely-used frequency</li>
+        <li ListIndex="12">transmission_source->an ancient transmitter</li>
+        <li ListIndex="13">transmission_source->a low-power signal</li>
+        <li ListIndex="14">transmission_source->a long-range signal</li>
+        <li ListIndex="15">transmission_source->a mysterious signal</li>
+        <li ListIndex="16">circumstance_phrase->standing alone near a [terrainfeature]</li>
+        <li ListIndex="17">circumstance_phrase->exploring a [terrainfeature]</li>
+        <li ListIndex="18">circumstance_phrase->tending crops</li>
+        <li ListIndex="19">circumstance_phrase->a [animal] wanders past</li>
+        <li ListIndex="20">circumstance_phrase->playing [game]</li>
+        <li ListIndex="21">desc_sentence->[quantity_adjphrase] [animal]s wander nearby, unaware.</li>
+        <li ListIndex="22">desc_sentence->As [pawn_pronoun] reads, [pawn_pronoun] starts [friendlyverb].</li>
+        <li ListIndex="23">desc_sentence->A spectral [outlander] watches from the clouds.</li>
+        <li ListIndex="24">desc_sentence->[pawn_nameShortDef] sits near a [terrainfeature].</li>
+        <li ListIndex="25">desc_sentence->A [community] is visible in the far distance.</li>
+        <li ListIndex="26">desc_sentence->A spaceship is visible in the far distance.</li>
+      </rulesStrings>
+    </rulePack>
+    <baseInterest>1.0</baseInterest>
+  </TaleDef>
+</Defs>

@@ -5,7 +5,7 @@
 	Damage "starts" at corePart, and then "goes deeper" until it hits remaining body part coverage or leaf node
   - this body part is then hit.
 -->
-<BodyDefs>
+<Defs>
   <BodyDef>
     <defName>QuadrupedAnimalWithPaws</defName>
     <label>quadruped animal</label>
@@ -119,7 +119,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
         <li ListIndex="10">
           <def>FrontRightLeg</def>
@@ -133,7 +133,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
         <li ListIndex="11">
           <def>RearLeftLeg</def>
@@ -144,7 +144,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
         <li ListIndex="12">
           <def>RearRightLeg</def>
@@ -155,7 +155,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -279,7 +279,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
         <li ListIndex="11">
           <def>FrontRightLeg</def>
@@ -293,7 +293,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
         <li ListIndex="12">
           <def>RearLeftLeg</def>
@@ -304,7 +304,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
         <li ListIndex="13">
           <def>RearRightLeg</def>
@@ -315,7 +315,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -432,7 +432,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
           <groups>
             <li ListIndex="0">FrontLeftLeg</li>
           </groups>
@@ -446,7 +446,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
           <groups>
             <li ListIndex="0">FrontRightLeg</li>
           </groups>
@@ -460,7 +460,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
         <li ListIndex="12">
           <def>RearRightLeg</def>
@@ -471,7 +471,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.1</coverage>
+          <coverage>0.07</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -593,7 +593,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
           <groups>
             <li ListIndex="0">FrontLeftLeg</li>
           </groups>
@@ -607,7 +607,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
           <groups>
             <li ListIndex="0">FrontRightLeg</li>
           </groups>
@@ -621,7 +621,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
         <li ListIndex="13">
           <def>RearRightLeg</def>
@@ -632,7 +632,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -765,7 +765,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
           <groups>
             <li ListIndex="0">FrontLeftLeg</li>
           </groups>
@@ -779,7 +779,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
           <groups>
             <li ListIndex="0">FrontRightLeg</li>
           </groups>
@@ -793,7 +793,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
         <li ListIndex="12">
           <def>RearRightLeg</def>
@@ -804,7 +804,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -937,7 +937,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.08</coverage>
+          <coverage>0.06</coverage>
           <groups>
             <li ListIndex="0">FrontLeftLeg</li>
           </groups>
@@ -951,7 +951,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.08</coverage>
+          <coverage>0.06</coverage>
           <groups>
             <li ListIndex="0">FrontRightLeg</li>
           </groups>
@@ -965,7 +965,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.08</coverage>
+          <coverage>0.06</coverage>
         </li>
         <li ListIndex="12">
           <def>RearRightLeg</def>
@@ -976,7 +976,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.08</coverage>
+          <coverage>0.06</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -1102,7 +1102,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
           <groups>
             <li ListIndex="0">FrontLeftLeg</li>
           </groups>
@@ -1116,7 +1116,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
           <groups>
             <li ListIndex="0">FrontRightLeg</li>
           </groups>
@@ -1130,7 +1130,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
         <li ListIndex="12">
           <def>RearRightLeg</def>
@@ -1141,7 +1141,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -1297,7 +1297,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
         <li ListIndex="11">
           <def>FrontRightLeg</def>
@@ -1339,7 +1339,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
         <li ListIndex="12">
           <def>RearLeftLeg</def>
@@ -1366,7 +1366,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
         <li ListIndex="13">
           <def>RearRightLeg</def>
@@ -1393,7 +1393,7 @@
             </li>
           </parts>
           <height>Bottom</height>
-          <coverage>0.09</coverage>
+          <coverage>0.065</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -1491,22 +1491,22 @@
         <li ListIndex="11">
           <def>FrontLeftLeg</def>
           <height>Bottom</height>
-          <coverage>0.07</coverage>
+          <coverage>0.05</coverage>
         </li>
         <li ListIndex="12">
           <def>FrontRightLeg</def>
           <height>Bottom</height>
-          <coverage>0.07</coverage>
+          <coverage>0.05</coverage>
         </li>
         <li ListIndex="13">
           <def>RearLeftLeg</def>
           <height>Bottom</height>
-          <coverage>0.07</coverage>
+          <coverage>0.05</coverage>
         </li>
         <li ListIndex="14">
           <def>RearRightLeg</def>
           <height>Bottom</height>
-          <coverage>0.07</coverage>
+          <coverage>0.05</coverage>
         </li>
       </parts>
       <height>Middle</height>
@@ -1920,4 +1920,4 @@
       <depth>Outside</depth>
     </corePart>
   </BodyDef>
-</BodyDefs>
+</Defs>

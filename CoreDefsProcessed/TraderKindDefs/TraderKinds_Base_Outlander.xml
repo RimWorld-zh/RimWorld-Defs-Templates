@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DefPackage-TraderKindDef>
+<Defs>
   <TraderKindDef>
     <defName>Base_Outlander_Standard</defName>
     <stockGenerators>
@@ -87,12 +87,16 @@
         </countRange>
         <thingDef>Medicine</thingDef>
       </li>
-      <li Class="StockGenerator_SingleDef" ListIndex="12">
+      <li Class="StockGenerator_Tag" ListIndex="12">
         <countRange>
-          <min>30</min>
-          <max>60</max>
+          <min>20</min>
+          <max>40</max>
         </countRange>
-        <thingDef>MortarShell</thingDef>
+        <tradeTag>MortarShell</tradeTag>
+        <thingDefCountRange>
+          <min>1</min>
+          <max>2</max>
+        </thingDefCountRange>
       </li>
       <li Class="StockGenerator_Category" ListIndex="13">
         <totalPriceRange>
@@ -290,4 +294,4 @@
       <li Class="StockGenerator_BuyWeirdOrganic" ListIndex="35" />
     </stockGenerators>
   </TraderKindDef>
-</DefPackage-TraderKindDef>
+</Defs>

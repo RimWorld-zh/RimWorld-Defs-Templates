@@ -6,65 +6,72 @@
       <ComfyTemperatureMin>-8</ComfyTemperatureMin>
       <MarketValue>650</MarketValue>
     </statBases>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.5</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.5</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.85</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.65</cooldownTime>
+        <commonality>0.2</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <tradeTags>
       <li>StandardAnimal</li>
       <li>BadassAnimal</li>
     </tradeTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.5</defaultCooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
-      </li>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.5</defaultCooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
-      </li>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.85</defaultCooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <meleeDamageDef>Bite</meleeDamageDef>
-        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
-      </li>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
       <body>QuadrupedAnimalWithPawsAndTail</body>
@@ -102,7 +109,7 @@
     </race>
   </ThingDef>
   <PawnKindDef ParentName="AnimalKindBase" Name="BigCatKindBase" Abstract="True">
-    <combatPower>155</combatPower>
+    <combatPower>150</combatPower>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.42</wildSpawn_EcoSystemWeight>
   </PawnKindDef>
@@ -129,6 +136,68 @@
         <compClass>CompAttachBase</compClass>
       </li>
     </comps>
+    <tools>
+      <li ListIndex="0">
+        <label>left claw</label>
+        <capacities>
+          <li ListIndex="0">Scratch</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.5</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="1">
+        <label>right claw</label>
+        <capacities>
+          <li ListIndex="0">Scratch</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.5</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="2">
+        <capacities>
+          <li ListIndex="0">Bite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.85</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="3">
+        <label>head</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.65</cooldownTime>
+        <commonality>0.2</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <selectable>true</selectable>
     <hasTooltip>true</hasTooltip>
     <inspectorTabs>
@@ -140,6 +209,7 @@
       <li ListIndex="5">ITab_Pawn_Guest</li>
       <li ListIndex="6">ITab_Pawn_Prisoner</li>
       <li ListIndex="7">ITab_Pawn_Social</li>
+      <li ListIndex="8">ITab_Pawn_Combat</li>
     </inspectorTabs>
     <drawGUIOverlay>true</drawGUIOverlay>
     <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
@@ -149,65 +219,11 @@
     </tradeTags>
     <recipes>
       <li ListIndex="0">ExciseCarcinoma</li>
-      <li ListIndex="1">RemoveBodyPart</li>
-      <li ListIndex="2">Euthanize</li>
-      <li ListIndex="3">Anesthetize</li>
+      <li ListIndex="1">AdministerMechSerumHealer</li>
+      <li ListIndex="2">RemoveBodyPart</li>
+      <li ListIndex="3">Euthanize</li>
+      <li ListIndex="4">Anesthetize</li>
     </recipes>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.5</defaultCooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="1">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.5</defaultCooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="2">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.85</defaultCooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <meleeDamageDef>Bite</meleeDamageDef>
-        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="3">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <hasGenders>true</hasGenders>
       <thinkTreeMain>Animal</thinkTreeMain>
@@ -254,110 +270,6 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
-  </ThingDef>
-  <ThingDef>
-    <!--Implied ThingDef leather, generated by RimTrans.-->
-    <defName>Cougar_Leather</defName>
-    <label>cougarskin</label>
-    <description>cougarskin</description>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>2.1</MarketValue>
-      <Mass>0.03</Mass>
-      <Flammability>1</Flammability>
-      <Beauty>-20</Beauty>
-      <DeteriorationRate>2</DeteriorationRate>
-    </statBases>
-    <pathCost>15</pathCost>
-    <altitudeLayer>Item</altitudeLayer>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <stackLimit>75</stackLimit>
-    <rotatable>false</rotatable>
-    <useHitPoints>true</useHitPoints>
-    <comps>
-      <li Class="CompProperties_Forbiddable" ListIndex="0" />
-    </comps>
-    <graphicData>
-      <texPath>Things/Item/Resource/Cloth</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <color>(177,136,112)</color>
-      <colorTwo>(177,136,112)</colorTwo>
-    </graphicData>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <alwaysHaulable>true</alwaysHaulable>
-    <thingCategories>
-      <li ListIndex="0">Leathers</li>
-    </thingCategories>
-    <stuffProps>
-      <stuffAdjective>cougarskin</stuffAdjective>
-      <commonality>1.0</commonality>
-      <categories>
-        <li ListIndex="0">Leathery</li>
-      </categories>
-      <statFactors>
-        <MarketValue>1.3</MarketValue>
-        <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-        <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-        <ArmorRating_Heat>1.7</ArmorRating_Heat>
-        <ArmorRating_Electric>4</ArmorRating_Electric>
-        <Insulation_Cold>0.9</Insulation_Cold>
-        <Insulation_Heat>1</Insulation_Heat>
-      </statFactors>
-      <color>(177,136,112)</color>
-    </stuffProps>
-  </ThingDef>
-  <ThingDef>
-    <!--Implied ThingDef meat, generated by RimTrans.-->
-    <defName>Cougar_Meat</defName>
-    <label>cougar meat</label>
-    <description>cougar meat</description>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <MarketValue>2</MarketValue>
-      <Mass>0.03</Mass>
-      <Flammability>0.5</Flammability>
-      <Beauty>-20</Beauty>
-      <DeteriorationRate>10</DeteriorationRate>
-    </statBases>
-    <pathCost>15</pathCost>
-    <altitudeLayer>Item</altitudeLayer>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <stackLimit>75</stackLimit>
-    <rotatable>false</rotatable>
-    <useHitPoints>true</useHitPoints>
-    <comps>
-      <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_Rottable" ListIndex="1">
-        <daysToRotStart>2</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2" />
-    </comps>
-    <graphicData>
-      <texPath>Things/Item/Resource/MeatFoodRaw/MeatSmall</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <color>(141,56,52)</color>
-    </graphicData>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <alwaysHaulable>true</alwaysHaulable>
-    <thingCategories>
-      <li ListIndex="0">MeatRaw</li>
-    </thingCategories>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <ingestible>
-      <tasteThought>AteRawFood</tasteThought>
-      <ingestEffect>EatMeat</ingestEffect>
-      <ingestSound>RawMeat_Eat</ingestSound>
-      <foodType>Meat</foodType>
-      <nutrition>0.05</nutrition>
-      <preferability>RawBad</preferability>
-    </ingestible>
   </ThingDef>
   <PawnKindDef ParentName="BigCatKindBase">
     <defName>Cougar</defName>
@@ -425,7 +337,7 @@
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
-    <combatPower>155</combatPower>
+    <combatPower>150</combatPower>
     <labelMale>male cougar</labelMale>
     <labelMalePlural>male cougars</labelMalePlural>
     <labelFemale>female cougar</labelFemale>
@@ -456,6 +368,68 @@
         <compClass>CompAttachBase</compClass>
       </li>
     </comps>
+    <tools>
+      <li ListIndex="0">
+        <label>left claw</label>
+        <capacities>
+          <li ListIndex="0">Scratch</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.5</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="1">
+        <label>right claw</label>
+        <capacities>
+          <li ListIndex="0">Scratch</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.5</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="2">
+        <capacities>
+          <li ListIndex="0">Bite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.85</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="3">
+        <label>head</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.65</cooldownTime>
+        <commonality>0.2</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <selectable>true</selectable>
     <hasTooltip>true</hasTooltip>
     <inspectorTabs>
@@ -467,6 +441,7 @@
       <li ListIndex="5">ITab_Pawn_Guest</li>
       <li ListIndex="6">ITab_Pawn_Prisoner</li>
       <li ListIndex="7">ITab_Pawn_Social</li>
+      <li ListIndex="8">ITab_Pawn_Combat</li>
     </inspectorTabs>
     <drawGUIOverlay>true</drawGUIOverlay>
     <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
@@ -476,65 +451,11 @@
     </tradeTags>
     <recipes>
       <li ListIndex="0">ExciseCarcinoma</li>
-      <li ListIndex="1">RemoveBodyPart</li>
-      <li ListIndex="2">Euthanize</li>
-      <li ListIndex="3">Anesthetize</li>
+      <li ListIndex="1">AdministerMechSerumHealer</li>
+      <li ListIndex="2">RemoveBodyPart</li>
+      <li ListIndex="3">Euthanize</li>
+      <li ListIndex="4">Anesthetize</li>
     </recipes>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.5</defaultCooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="1">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.5</defaultCooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="2">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.85</defaultCooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <meleeDamageDef>Bite</meleeDamageDef>
-        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="3">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <hasGenders>true</hasGenders>
       <thinkTreeMain>Animal</thinkTreeMain>
@@ -581,110 +502,6 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
-  </ThingDef>
-  <ThingDef>
-    <!--Implied ThingDef leather, generated by RimTrans.-->
-    <defName>Panther_Leather</defName>
-    <label>pantherskin</label>
-    <description>pantherskin</description>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>2.1</MarketValue>
-      <Mass>0.03</Mass>
-      <Flammability>1</Flammability>
-      <Beauty>-20</Beauty>
-      <DeteriorationRate>2</DeteriorationRate>
-    </statBases>
-    <pathCost>15</pathCost>
-    <altitudeLayer>Item</altitudeLayer>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <stackLimit>75</stackLimit>
-    <rotatable>false</rotatable>
-    <useHitPoints>true</useHitPoints>
-    <comps>
-      <li Class="CompProperties_Forbiddable" ListIndex="0" />
-    </comps>
-    <graphicData>
-      <texPath>Things/Item/Resource/Cloth</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <color>(60,60,60)</color>
-      <colorTwo>(60,60,60)</colorTwo>
-    </graphicData>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <alwaysHaulable>true</alwaysHaulable>
-    <thingCategories>
-      <li ListIndex="0">Leathers</li>
-    </thingCategories>
-    <stuffProps>
-      <stuffAdjective>pantherskin</stuffAdjective>
-      <commonality>1.0</commonality>
-      <categories>
-        <li ListIndex="0">Leathery</li>
-      </categories>
-      <statFactors>
-        <MarketValue>1.3</MarketValue>
-        <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-        <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-        <ArmorRating_Heat>1.7</ArmorRating_Heat>
-        <ArmorRating_Electric>4</ArmorRating_Electric>
-        <Insulation_Cold>0.9</Insulation_Cold>
-        <Insulation_Heat>1</Insulation_Heat>
-      </statFactors>
-      <color>(60,60,60)</color>
-    </stuffProps>
-  </ThingDef>
-  <ThingDef>
-    <!--Implied ThingDef meat, generated by RimTrans.-->
-    <defName>Panther_Meat</defName>
-    <label>panther meat</label>
-    <description>panther meat</description>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <MarketValue>2</MarketValue>
-      <Mass>0.03</Mass>
-      <Flammability>0.5</Flammability>
-      <Beauty>-20</Beauty>
-      <DeteriorationRate>10</DeteriorationRate>
-    </statBases>
-    <pathCost>15</pathCost>
-    <altitudeLayer>Item</altitudeLayer>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <stackLimit>75</stackLimit>
-    <rotatable>false</rotatable>
-    <useHitPoints>true</useHitPoints>
-    <comps>
-      <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_Rottable" ListIndex="1">
-        <daysToRotStart>2</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2" />
-    </comps>
-    <graphicData>
-      <texPath>Things/Item/Resource/MeatFoodRaw/MeatSmall</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <color>(141,56,52)</color>
-    </graphicData>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <alwaysHaulable>true</alwaysHaulable>
-    <thingCategories>
-      <li ListIndex="0">MeatRaw</li>
-    </thingCategories>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <ingestible>
-      <tasteThought>AteRawFood</tasteThought>
-      <ingestEffect>EatMeat</ingestEffect>
-      <ingestSound>RawMeat_Eat</ingestSound>
-      <foodType>Meat</foodType>
-      <nutrition>0.05</nutrition>
-      <preferability>RawBad</preferability>
-    </ingestible>
   </ThingDef>
   <PawnKindDef ParentName="BigCatKindBase">
     <defName>Panther</defName>
@@ -752,7 +569,7 @@
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
-    <combatPower>155</combatPower>
+    <combatPower>150</combatPower>
     <labelMale>male panther</labelMale>
     <labelMalePlural>male panthers</labelMalePlural>
     <labelFemale>female panther</labelFemale>
@@ -783,6 +600,68 @@
         <compClass>CompAttachBase</compClass>
       </li>
     </comps>
+    <tools>
+      <li ListIndex="0">
+        <label>left claw</label>
+        <capacities>
+          <li ListIndex="0">Scratch</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="1">
+        <label>right claw</label>
+        <capacities>
+          <li ListIndex="0">Scratch</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="2">
+        <capacities>
+          <li ListIndex="0">Bite</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>1.85</cooldownTime>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li ListIndex="0">
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="3">
+        <label>head</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>1.65</cooldownTime>
+        <commonality>0.2</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <selectable>true</selectable>
     <hasTooltip>true</hasTooltip>
     <inspectorTabs>
@@ -794,6 +673,7 @@
       <li ListIndex="5">ITab_Pawn_Guest</li>
       <li ListIndex="6">ITab_Pawn_Prisoner</li>
       <li ListIndex="7">ITab_Pawn_Social</li>
+      <li ListIndex="8">ITab_Pawn_Combat</li>
     </inspectorTabs>
     <drawGUIOverlay>true</drawGUIOverlay>
     <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
@@ -803,65 +683,11 @@
     </tradeTags>
     <recipes>
       <li ListIndex="0">ExciseCarcinoma</li>
-      <li ListIndex="1">RemoveBodyPart</li>
-      <li ListIndex="2">Euthanize</li>
-      <li ListIndex="3">Anesthetize</li>
+      <li ListIndex="1">AdministerMechSerumHealer</li>
+      <li ListIndex="2">RemoveBodyPart</li>
+      <li ListIndex="3">Euthanize</li>
+      <li ListIndex="4">Anesthetize</li>
     </recipes>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.5</defaultCooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="1">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.5</defaultCooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="2">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li ListIndex="0">
-              <def>Stun</def>
-              <amount>20</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <defaultCooldownTime>1.85</defaultCooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <meleeDamageDef>Bite</meleeDamageDef>
-        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="3">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <hasGenders>true</hasGenders>
       <thinkTreeMain>Animal</thinkTreeMain>
@@ -908,110 +734,6 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
-  </ThingDef>
-  <ThingDef>
-    <!--Implied ThingDef leather, generated by RimTrans.-->
-    <defName>Lynx_Leather</defName>
-    <label>lynxskin</label>
-    <description>lynxskin</description>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>2.1</MarketValue>
-      <Mass>0.03</Mass>
-      <Flammability>1</Flammability>
-      <Beauty>-20</Beauty>
-      <DeteriorationRate>2</DeteriorationRate>
-    </statBases>
-    <pathCost>15</pathCost>
-    <altitudeLayer>Item</altitudeLayer>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <stackLimit>75</stackLimit>
-    <rotatable>false</rotatable>
-    <useHitPoints>true</useHitPoints>
-    <comps>
-      <li Class="CompProperties_Forbiddable" ListIndex="0" />
-    </comps>
-    <graphicData>
-      <texPath>Things/Item/Resource/Cloth</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <color>(173,155,138)</color>
-      <colorTwo>(173,155,138)</colorTwo>
-    </graphicData>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <alwaysHaulable>true</alwaysHaulable>
-    <thingCategories>
-      <li ListIndex="0">Leathers</li>
-    </thingCategories>
-    <stuffProps>
-      <stuffAdjective>lynxskin</stuffAdjective>
-      <commonality>1.0</commonality>
-      <categories>
-        <li ListIndex="0">Leathery</li>
-      </categories>
-      <statFactors>
-        <MarketValue>1.3</MarketValue>
-        <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-        <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-        <ArmorRating_Heat>1.7</ArmorRating_Heat>
-        <ArmorRating_Electric>4</ArmorRating_Electric>
-        <Insulation_Cold>1.15</Insulation_Cold>
-        <Insulation_Heat>1</Insulation_Heat>
-      </statFactors>
-      <color>(173,155,138)</color>
-    </stuffProps>
-  </ThingDef>
-  <ThingDef>
-    <!--Implied ThingDef meat, generated by RimTrans.-->
-    <defName>Lynx_Meat</defName>
-    <label>lynx meat</label>
-    <description>lynx meat</description>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <MarketValue>2</MarketValue>
-      <Mass>0.03</Mass>
-      <Flammability>0.5</Flammability>
-      <Beauty>-20</Beauty>
-      <DeteriorationRate>10</DeteriorationRate>
-    </statBases>
-    <pathCost>15</pathCost>
-    <altitudeLayer>Item</altitudeLayer>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <stackLimit>75</stackLimit>
-    <rotatable>false</rotatable>
-    <useHitPoints>true</useHitPoints>
-    <comps>
-      <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_Rottable" ListIndex="1">
-        <daysToRotStart>2</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2" />
-    </comps>
-    <graphicData>
-      <texPath>Things/Item/Resource/MeatFoodRaw/MeatSmall</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <color>(141,56,52)</color>
-    </graphicData>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <alwaysHaulable>true</alwaysHaulable>
-    <thingCategories>
-      <li ListIndex="0">MeatRaw</li>
-    </thingCategories>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <ingestible>
-      <tasteThought>AteRawFood</tasteThought>
-      <ingestEffect>EatMeat</ingestEffect>
-      <ingestSound>RawMeat_Eat</ingestSound>
-      <foodType>Meat</foodType>
-      <nutrition>0.05</nutrition>
-      <preferability>RawBad</preferability>
-    </ingestible>
   </ThingDef>
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>Lynx</defName>

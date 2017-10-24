@@ -15,6 +15,7 @@
     <needClass>class_name</needClass>
     <!--Type: Verse.Intelligence-->
     <!--Available Values: Animal, ToolUser, Humanlike-->
+    <!--Default Value: Animal-->
     <minIntelligence>enum_value</minIntelligence>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -38,18 +39,25 @@
     <!--Default Value: false-->
     <major>true_or_false</major>
     <!--Type: int-->
+    <!--Default Value: 0-->
     <listPriority>int_value</listPriority>
     <!--Type: string-->
+    <!--Default Value: (string)null-->
     <tutorHighlightTag>string_value</tutorHighlightTag>
     <!--Type: bool-->
     <!--Default Value: false-->
     <showForCaravanMembers>true_or_false</showForCaravanMembers>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <scaleBar>true_or_false</scaleBar>
     <!--Type: float-->
     <!--Default Value: 0.5-->
     <fallPerDay>float_value</fallPerDay>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <seekerRisePerHour>float_value</seekerRisePerHour>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <seekerFallPerHour>float_value</seekerFallPerHour>
     <!--Type: bool-->
     <!--Default Value: false-->

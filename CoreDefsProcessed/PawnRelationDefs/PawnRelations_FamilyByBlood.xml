@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnRelationDefs>
+<Defs>
   <!-- close family -->
   <PawnRelationDef>
     <defName>Parent</defName>
@@ -236,4 +236,4 @@
     <diedThought>MyKinDied</diedThought>
     <killedThought>KilledMyKin</killedThought>
   </PawnRelationDef>
-</PawnRelationDefs>
+</Defs>

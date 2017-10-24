@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DrugBases>
+<Defs>
   <ThingDef Name="DrugBase" Abstract="True">
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
@@ -74,7 +74,8 @@
     <stages>
       <li>
         <minSeverity>0</minSeverity>
-        <everVisible>false</everVisible>
+        <label>small</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li>
         <minSeverity>0.20</minSeverity>
@@ -89,6 +90,7 @@
         <label>massive</label>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(179,86,132)</defaultLabelColor>
@@ -98,4 +100,4 @@
     <tutorHighlightTag>NeedAddiction</tutorHighlightTag>
     <showForCaravanMembers>true</showForCaravanMembers>
   </NeedDef>
-</DrugBases>
+</Defs>

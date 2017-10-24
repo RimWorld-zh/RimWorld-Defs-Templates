@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ManeuverDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: Verse.ToolCapacityDef-->
+    <!--Default Value: null-->
+    <requiredCapacity>ToolCapacityDef_defName</requiredCapacity>
+    <!--Type: Verse.VerbProperties-->
+    <verb>
+      <!--Type: System.Type-->
+      <!--Default Value: typeof(Verb)-->
+      <verbClass>class_name</verbClass>
+      <!--Type: Verse.DamageDef-->
+      <!--Default Value: null-->
+      <meleeDamageDef>DamageDef_defName</meleeDamageDef>
+    </verb>
+    <!--Type: Verse.RulePackDef-->
+    <combatLogRules>RulePackDef_defName</combatLogRules>
+  </ManeuverDef>
+</Defs>

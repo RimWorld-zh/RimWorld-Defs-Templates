@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef>
+    <defName>Slave</defName>
+    <label>slave</label>
+    <race>Human</race>
+    <defaultFactionType>Outlander</defaultFactionType>
+    <backstoryCategory>Slave</backstoryCategory>
+    <labelPlural>slaves</labelPlural>
+    <backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>0.8</max>
+    </gearHealthRange>
+    <isFighter>false</isFighter>
+    <combatPower>30</combatPower>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>150</min>
+      <max>300</max>
+    </apparelMoney>
+    <apparelTags>
+      <li ListIndex="0">Outlander</li>
+    </apparelTags>
+    <apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>35</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li ListIndex="0">Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.01</techHediffsChance>
+    <itemQuality>Shoddy</itemQuality>
+    <invNutrition>1</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef>
+    <defName>WildMan</defName>
+    <label>wild man</label>
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>wild men</labelPlural>
+    <combatPower>70</combatPower>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <techHediffsChance>0</techHediffsChance>
+    <itemQuality>Shoddy</itemQuality>
+    <chemicalAddictionChance>0.03</chemicalAddictionChance>
+    <labelMale>male wild man</labelMale>
+    <labelMalePlural>male wild men</labelMalePlural>
+    <labelFemale>wild woman</labelFemale>
+    <labelFemalePlural>wild women</labelFemalePlural>
+  </PawnKindDef>
+</Defs>

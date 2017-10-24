@@ -27,6 +27,7 @@
     <!--Type: string-->
     <verb>string_value</verb>
     <!--Type: int-->
+    <!--Default Value: 0-->
     <naturalPriority>int_value</naturalPriority>
     <!--Type: bool-->
     <!--Default Value: false-->

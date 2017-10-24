@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef ParentName="BasePawn" Name="BaseMechanoid" Abstract="True">
     <statBases>
       <PsychicSensitivity>0</PsychicSensitivity>
@@ -47,6 +47,17 @@
       <Plasteel>50</Plasteel>
       <Component>2</Component>
     </butcherProducts>
+    <tools>
+      <li ListIndex="0">
+        <label>head</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.4</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <selectable>true</selectable>
     <hasTooltip>true</hasTooltip>
     <inspectorTabs>
@@ -58,21 +69,13 @@
       <li ListIndex="5">ITab_Pawn_Guest</li>
       <li ListIndex="6">ITab_Pawn_Prisoner</li>
       <li ListIndex="7">ITab_Pawn_Social</li>
+      <li ListIndex="8">ITab_Pawn_Combat</li>
     </inspectorTabs>
     <drawGUIOverlay>true</drawGUIOverlay>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <recipes>
       <li ListIndex="0">ShutDownMechanoid</li>
     </recipes>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>2.0</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <intelligence>ToolUser</intelligence>
       <fleshType>Mechanoid</fleshType>
@@ -82,7 +85,7 @@
       <foodType>None</foodType>
       <body>MechanicalCentipede</body>
       <baseBodySize>2.0</baseBodySize>
-      <baseHealthScale>1.2</baseHealthScale>
+      <baseHealthScale>2.5</baseHealthScale>
       <lifeStageAges>
         <li ListIndex="0">
           <def>MechanoidFullyFormed</def>
@@ -133,6 +136,38 @@
       <Plasteel>25</Plasteel>
       <Component>1</Component>
     </butcherProducts>
+    <tools>
+      <li ListIndex="0">
+        <label>left blade</label>
+        <capacities>
+          <li ListIndex="0">Cut</li>
+          <li ListIndex="1">Stab</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>1.65</cooldownTime>
+        <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="1">
+        <label>right blade</label>
+        <capacities>
+          <li ListIndex="0">Cut</li>
+          <li ListIndex="1">Stab</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>1.65</cooldownTime>
+        <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="2">
+        <label>head</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.65</cooldownTime>
+        <commonality>0.2</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <selectable>true</selectable>
     <hasTooltip>true</hasTooltip>
     <inspectorTabs>
@@ -144,6 +179,7 @@
       <li ListIndex="5">ITab_Pawn_Guest</li>
       <li ListIndex="6">ITab_Pawn_Prisoner</li>
       <li ListIndex="7">ITab_Pawn_Social</li>
+      <li ListIndex="8">ITab_Pawn_Combat</li>
     </inspectorTabs>
     <drawGUIOverlay>true</drawGUIOverlay>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
@@ -151,30 +187,6 @@
       <li ListIndex="0">RemoveMechanoidBodyPart</li>
       <li ListIndex="1">ShutDownMechanoid</li>
     </recipes>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
-        <meleeDamageDef>Cut</meleeDamageDef>
-        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="1">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
-        <meleeDamageDef>Cut</meleeDamageDef>
-        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="2">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <intelligence>ToolUser</intelligence>
       <fleshType>Mechanoid</fleshType>
@@ -184,7 +196,7 @@
       <foodType>None</foodType>
       <body>Scyther</body>
       <baseBodySize>1.0</baseBodySize>
-      <baseHealthScale>1.0</baseHealthScale>
+      <baseHealthScale>0.8</baseHealthScale>
       <lifeStageAges>
         <li ListIndex="0">
           <def>MechanoidFullyFormed</def>
@@ -203,4 +215,4 @@
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
     </race>
   </ThingDef>
-</ThingDefs>
+</Defs>

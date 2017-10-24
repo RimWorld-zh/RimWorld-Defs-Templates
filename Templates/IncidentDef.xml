@@ -11,23 +11,34 @@
     <!--Type: System.Type-->
     <workerClass>class_name</workerClass>
     <!--Type: RimWorld.IncidentCategory-->
-    <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, JourneyOffer, Disease, CaravanTarget, AllyAssistance-->
+    <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, Disease, AllyAssistance, JourneyOffer, RaidBeacon-->
+    <!--Default Value: Undefined-->
     <category>enum_value</category>
-    <!--Type: RimWorld.IncidentTargetType-->
-    <!--Available Values: None, MapPlayerHome, MapTempIncident, MapMisc, Caravan, World, All-->
-    <targetType>enum_value</targetType>
+    <!--Reference List-->
+    <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
+    <targetTypes>
+      <!--Type: RimWorld.IncidentTargetTypeDef-->
+      <li>IncidentTargetTypeDef_defName</li>
+      <!-- ... -->
+    </targetTypes>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <baseChance>float_value</baseChance>
     <!--Type: RimWorld.IncidentPopulationEffect-->
     <!--Available Values: None, Increase-->
+    <!--Default Value: None-->
     <populationEffect>enum_value</populationEffect>
     <!--Type: int-->
+    <!--Default Value: 0-->
     <earliestDay>int_value</earliestDay>
     <!--Type: int-->
+    <!--Default Value: 0-->
     <minPopulation>int_value</minPopulation>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <minRefireDays>float_value</minRefireDays>
     <!--Type: int-->
+    <!--Default Value: 0-->
     <minDifficulty>int_value</minDifficulty>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -57,6 +68,7 @@
       <!-- ... -->
     </refireCheckTags>
     <!--Type: Verse.SimpleCurve-->
+    <!--Default Value: null-->
     <chanceFactorByPopulationCurve>
       <!--Simple List-->
       <!--Type: List<Verse.CurvePoint>-->
@@ -82,6 +94,7 @@
       <max>float_value</max>
     </durationDays>
     <!--Type: Verse.HediffDef-->
+    <!--Default Value: null-->
     <diseaseIncident>HediffDef_defName</diseaseIncident>
     <!--Type: Verse.FloatRange-->
     <!--Default Value: new FloatRange(0f, 0.49f)-->
@@ -99,6 +112,7 @@
       <!-- ... -->
     </diseasePartsToAffect>
     <!--Type: Verse.ThingDef-->
+    <!--Default Value: null-->
     <shipPart>ThingDef_defName</shipPart>
     <!--Type: List<RimWorld.MTBByBiome>-->
     <mtbDaysByBiome>
@@ -108,5 +122,8 @@
       <!--Pattern: <BiomeDef_defName>float_value</BiomeDef_defName>-->
       <!-- ... -->
     </mtbDaysByBiome>
+    <!--Type: RimWorld.TaleDef-->
+    <!--Default Value: null-->
+    <tale>TaleDef_defName</tale>
   </IncidentDef>
 </Defs>

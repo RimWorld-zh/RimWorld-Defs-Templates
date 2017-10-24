@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Temporary hack; ranged weapons need to use the old pre-flavorful-combat system to avoid a rebalance cascade. -->
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>RangedStab</defName>
+    <label>stab</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been stabbed to death.</deathMessage>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <hediff>Stab</hediff>
+    <hediffSolid>Crack</hediffSolid>
+  </DamageDef>
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>Bullet</defName>
+    <label>bullet</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <hediff>Gunshot</hediff>
+  </DamageDef>
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>Arrow</defName>
+    <label>arrow</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crack</hediffSolid>
+  </DamageDef>
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>ArrowHighVelocity</defName>
+    <label>arrow</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <hediff>Stab</hediff>
+    <hediffSolid>Crack</hediffSolid>
+  </DamageDef>
+</Defs>

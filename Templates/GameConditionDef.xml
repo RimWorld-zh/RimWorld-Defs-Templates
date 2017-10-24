@@ -22,6 +22,7 @@
       <!-- ... -->
     </exclusiveConditions>
     <!--Type: string-->
+    <!--Default Value: (string)null-->
     <endMessage>string_value</endMessage>
     <!--Type: bool-->
     <!--Default Value: false-->

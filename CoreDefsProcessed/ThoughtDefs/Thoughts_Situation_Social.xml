@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThoughtDefs>
+<Defs>
   <!-- affecting opinion -->
   <ThoughtDef>
     <defName>Affair</defName>
@@ -339,4 +339,4 @@
       </li>
     </stages>
   </ThoughtDef>
-</ThoughtDefs>
+</Defs>

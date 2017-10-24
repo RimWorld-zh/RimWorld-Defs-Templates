@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ImplementOwnerTypeDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <implementOwnerRuleName>string_value</implementOwnerRuleName>
+    <!--Type: string-->
+    <implementOwnerTypeValue>string_value</implementOwnerTypeValue>
+  </ImplementOwnerTypeDef>
+</Defs>

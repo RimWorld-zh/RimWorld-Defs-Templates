@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RoomRoleDefs>
+<Defs>
   <RoomRoleDef>
     <defName>None</defName>
     <label>none</label>
@@ -120,4 +120,4 @@
     <label>barn</label>
     <workerClass>RoomRoleWorker_Barn</workerClass>
   </RoomRoleDef>
-</RoomRoleDefs>
+</Defs>

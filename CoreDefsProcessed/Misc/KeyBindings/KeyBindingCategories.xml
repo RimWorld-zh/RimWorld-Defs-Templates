@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<KeyBindingCategoryDefs>
+<Defs>
   <KeyBindingCategoryDef>
     <defName>GameMapCamera</defName>
     <label>camera</label>
@@ -69,6 +69,18 @@
     </checkForConflicts>
   </KeyBindingCategoryDef>
   <KeyBindingCategoryDef>
+    <defName>Modifiers</defName>
+    <label>modifiers</label>
+    <description>Controls used to modify other actions.</description>
+    <checkForConflicts>
+      <li ListIndex="0">Development</li>
+      <li ListIndex="1">SelectionMisc</li>
+      <li ListIndex="2">GameMapCamera</li>
+      <li ListIndex="3">Game</li>
+    </checkForConflicts>
+    <selfConflicting>false</selfConflicting>
+  </KeyBindingCategoryDef>
+  <KeyBindingCategoryDef>
     <defName>Development</defName>
     <label>developer tools</label>
     <description>Controls for developers and modders. Active in development mode only.</description>
@@ -77,4 +89,4 @@
       <li ListIndex="1">Game</li>
     </checkForConflicts>
   </KeyBindingCategoryDef>
-</KeyBindingCategoryDefs>
+</Defs>

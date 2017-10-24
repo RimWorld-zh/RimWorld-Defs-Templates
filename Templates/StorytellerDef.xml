@@ -30,6 +30,7 @@
     <!--Default Value: false-->
     <disablePermadeath>true_or_false</disablePermadeath>
     <!--Type: RimWorld.DifficultyDef-->
+    <!--Default Value: null-->
     <forcedDifficulty>DifficultyDef_defName</forcedDifficulty>
     <!--Type: string-->
     <portraitLarge>string_value</portraitLarge>
@@ -41,11 +42,15 @@
       <!--Type: RimWorld.StorytellerCompProperties_RandomMain-->
       <li Class="StorytellerCompProperties_RandomMain">
         <!--Type: float-->
+        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
-        <!--Type: RimWorld.IncidentTargetType-->
-        <!--Available Values: None, MapPlayerHome, MapTempIncident, MapMisc, Caravan, World, All-->
-        <!--Default Value: All-->
-        <allowedTargetTypes>enum_value</allowedTargetTypes>
+        <!--Reference List-->
+        <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
+        <allowedTargetTypes>
+          <!--Type: RimWorld.IncidentTargetTypeDef-->
+          <li>IncidentTargetTypeDef_defName</li>
+          <!-- ... -->
+        </allowedTargetTypes>
         <!--Type: float-->
         <!--Default Value: 0.05-->
         <minIncChancePopulationIntentFactor>float_value</minIncChancePopulationIntentFactor>
@@ -66,36 +71,57 @@
       <!--Type: RimWorld.StorytellerCompProperties_CategoryMTB-->
       <li Class="StorytellerCompProperties_CategoryMTB">
         <!--Type: float-->
+        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
-        <!--Type: RimWorld.IncidentTargetType-->
-        <!--Available Values: None, MapPlayerHome, MapTempIncident, MapMisc, Caravan, World, All-->
-        <!--Default Value: All-->
-        <allowedTargetTypes>enum_value</allowedTargetTypes>
+        <!--Reference List-->
+        <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
+        <allowedTargetTypes>
+          <!--Type: RimWorld.IncidentTargetTypeDef-->
+          <li>IncidentTargetTypeDef_defName</li>
+          <!-- ... -->
+        </allowedTargetTypes>
         <!--Type: float-->
         <mtbDays>float_value</mtbDays>
         <!--Type: RimWorld.IncidentCategory-->
-        <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, JourneyOffer, Disease, CaravanTarget, AllyAssistance-->
+        <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, Disease, AllyAssistance, JourneyOffer, RaidBeacon-->
         <category>enum_value</category>
+      </li>
+      <!--Type: RimWorld.StorytellerCompProperties_CategoryIndividualMTBByBiome-->
+      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
+        <!--Reference List-->
+        <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
+        <allowedTargetTypes>
+          <!--Type: RimWorld.IncidentTargetTypeDef-->
+          <li>IncidentTargetTypeDef_defName</li>
+          <!-- ... -->
+        </allowedTargetTypes>
+        <!--Type: RimWorld.IncidentCategory-->
+        <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, Disease, AllyAssistance, JourneyOffer, RaidBeacon-->
+        <category>enum_value</category>
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <applyCaravanStealthFactor>true_or_false</applyCaravanStealthFactor>
       </li>
       <!--Type: RimWorld.StorytellerCompProperties_Disease-->
       <li Class="StorytellerCompProperties_Disease">
         <!--Type: float-->
+        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
-      </li>
-      <!--Type: RimWorld.StorytellerCompProperties_CategoryIndividualMTBByBiome-->
-      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
-        <!--Type: RimWorld.IncidentCategory-->
-        <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, JourneyOffer, Disease, CaravanTarget, AllyAssistance-->
-        <category>enum_value</category>
       </li>
       <!--Type: RimWorld.StorytellerCompProperties_JourneyOffer-->
       <li Class="StorytellerCompProperties_JourneyOffer" />
-      <!--Type: RimWorld.StorytellerCompProperties_ClassicIntro-->
-      <li Class="StorytellerCompProperties_ClassicIntro" />
       <!--Type: RimWorld.StorytellerCompProperties_ThreatCycle-->
       <li Class="StorytellerCompProperties_ThreatCycle">
         <!--Type: float-->
+        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
+        <!--Reference List-->
+        <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
+        <allowedTargetTypes>
+          <!--Type: RimWorld.IncidentTargetTypeDef-->
+          <li>IncidentTargetTypeDef_defName</li>
+          <!-- ... -->
+        </allowedTargetTypes>
         <!--Type: float-->
         <mtbDaysThreatSmall>float_value</mtbDaysThreatSmall>
         <!--Type: float-->
@@ -106,15 +132,32 @@
         <threatOnDays>float_value</threatOnDays>
         <!--Type: float-->
         <minDaysBetweenThreatBigs>float_value</minDaysBetweenThreatBigs>
+        <!--Type: float-->
+        <!--Default Value: 20.0-->
+        <minDaysBeforeNonRaidThreatBig>float_value</minDaysBeforeNonRaidThreatBig>
+        <!--Type: RimWorld.IncidentCategory-->
+        <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, Disease, AllyAssistance, JourneyOffer, RaidBeacon-->
+        <!--Default Value: ThreatSmall-->
+        <threatSmallCategory>enum_value</threatSmallCategory>
+        <!--Type: RimWorld.IncidentCategory-->
+        <!--Available Values: Undefined, Misc, ThreatSmall, ThreatBig, AllyArrival, OrbitalVisitor, ShipChunkDrop, Disease, AllyAssistance, JourneyOffer, RaidBeacon-->
+        <!--Default Value: ThreatBig-->
+        <threatBigCategory>enum_value</threatBigCategory>
       </li>
+      <!--Type: RimWorld.StorytellerCompProperties_ClassicIntro-->
+      <li Class="StorytellerCompProperties_ClassicIntro" />
       <!--Type: RimWorld.StorytellerCompProperties_AllyInteraction-->
       <li Class="StorytellerCompProperties_AllyInteraction">
         <!--Type: float-->
+        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
-        <!--Type: RimWorld.IncidentTargetType-->
-        <!--Available Values: None, MapPlayerHome, MapTempIncident, MapMisc, Caravan, World, All-->
-        <!--Default Value: All-->
-        <allowedTargetTypes>enum_value</allowedTargetTypes>
+        <!--Reference List-->
+        <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
+        <allowedTargetTypes>
+          <!--Type: RimWorld.IncidentTargetTypeDef-->
+          <li>IncidentTargetTypeDef_defName</li>
+          <!-- ... -->
+        </allowedTargetTypes>
         <!--Type: float-->
         <!--Default Value: 99999.0-->
         <baseMtb>float_value</baseMtb>

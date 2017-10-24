@@ -16,6 +16,7 @@
     <workerClass>class_name</workerClass>
     <!--Type: Verse.MentalStateCategory-->
     <!--Available Values: Undefined, Aggro, Sad, Panic, Indulgent, Misc-->
+    <!--Default Value: Undefined-->
     <category>enum_value</category>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -26,6 +27,13 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <colonistsOnly>true_or_false</colonistsOnly>
+    <!--Reference List-->
+    <!--Type: List<Verse.PawnCapacityDef>-->
+    <requiredCapacities>
+      <!--Type: Verse.PawnCapacityDef-->
+      <li>PawnCapacityDef_defName</li>
+      <!-- ... -->
+    </requiredCapacities>
     <!--Type: bool-->
     <!--Default Value: false-->
     <blockNormalThoughts>true_or_false</blockNormalThoughts>
@@ -40,6 +48,9 @@
     <!--Available Values: None, Any, Medical, Social, Hard-->
     <!--Default Value: Any-->
     <drugCategory>enum_value</drugCategory>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <ignoreDrugPolicy>true_or_false</ignoreDrugPolicy>
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <recoveryMtbDays>float_value</recoveryMtbDays>
@@ -52,9 +63,6 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <recoverFromSleep>true_or_false</recoverFromSleep>
-    <!--Type: bool-->
-    <!--Default Value: false-->
-    <recoverFromDowned>true_or_false</recoverFromDowned>
     <!--Type: RimWorld.ThoughtDef-->
     <moodRecoveryThought>ThoughtDef_defName</moodRecoveryThought>
     <!--Type: string-->

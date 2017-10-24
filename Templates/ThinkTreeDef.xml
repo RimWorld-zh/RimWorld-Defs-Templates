@@ -10,10 +10,40 @@
       <!--Complex List-->
       <!--Type: List<Verse.AI.ThinkNode>-->
       <subNodes>
-        <!--Type: Verse.AI.ThinkNode_Subtree-->
-        <li Class="ThinkNode_Subtree">
-          <!--Type: Verse.ThinkTreeDef-->
-          <treeDef>ThinkTreeDef_defName</treeDef>
+        <!--Type: RimWorld.ThinkNode_ConditionalWildManNeedsToReachOutside-->
+        <li Class="ThinkNode_ConditionalWildManNeedsToReachOutside">
+          <!--Simple List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.JobGiver_ReachOutside-->
+            <li Class="JobGiver_ReachOutside" />
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: Verse.AI.ThinkNode_ChancePerHour_Constant-->
+        <li Class="ThinkNode_ChancePerHour_Constant">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Simple List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_EatRandom-->
+                <li Class="JobGiver_EatRandom" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!--Type: RimWorld.JobGiver_DropRandomGearOrApparel-->
+            <li Class="JobGiver_DropRandomGearOrApparel" />
+            <!-- ... -->
+          </subNodes>
+          <!--Type: float-->
+          <mtbHours>float_value</mtbHours>
         </li>
         <!--Type: Verse.AI.ThinkNode_Tagger-->
         <li Class="ThinkNode_Tagger">
@@ -54,12 +84,43 @@
               <!--Available Values: Unspecified, None, Some, Deadly-->
               <maxDanger>enum_value</maxDanger>
             </li>
+            <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
+            <li Class="ThinkNode_PrioritySorter">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_GetFood-->
+                <li Class="JobGiver_GetFood" />
+                <!--Type: RimWorld.JobGiver_GetRest-->
+                <li Class="JobGiver_GetRest" />
+                <!--Type: RimWorld.JobGiver_SatisfyChemicalNeed-->
+                <li Class="JobGiver_SatisfyChemicalNeed" />
+                <!--Type: RimWorld.ThinkNode_Priority_GetJoy-->
+                <li Class="ThinkNode_Priority_GetJoy">
+                  <!--Simple List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_GetJoy-->
+                    <li Class="JobGiver_GetJoy" />
+                    <!-- ... -->
+                  </subNodes>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
             <!-- ... -->
           </subNodes>
           <!--Type: Verse.AI.JobTag-->
           <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
           <tagToGive>enum_value</tagToGive>
         </li>
+        <!--Type: Verse.AI.ThinkNode_Subtree-->
+        <li Class="ThinkNode_Subtree">
+          <!--Type: Verse.ThinkTreeDef-->
+          <treeDef>ThinkTreeDef_defName</treeDef>
+        </li>
+        <!--Type: Verse.AI.ThinkNode_QueuedJob-->
+        <li Class="ThinkNode_QueuedJob" />
         <!--Type: Verse.AI.JobGiver_IdleError-->
         <li Class="JobGiver_IdleError" />
         <!--Type: RimWorld.ThinkNode_ConditionalCanDoConstantThinkTreeJobNow-->
@@ -67,13 +128,26 @@
           <!--Complex List-->
           <!--Type: List<Verse.AI.ThinkNode>-->
           <subNodes>
+            <!--Type: RimWorld.ThinkNode_ConditionalHasFaction-->
+            <li Class="ThinkNode_ConditionalHasFaction">
+              <!--Simple List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_FleeImmediateDanger-->
+                <li Class="JobGiver_FleeImmediateDanger" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <invert>true_or_false</invert>
+            </li>
             <!--Type: Verse.AI.ThinkNode_Subtree-->
             <li Class="ThinkNode_Subtree">
               <!--Type: Verse.ThinkTreeDef-->
               <treeDef>ThinkTreeDef_defName</treeDef>
             </li>
-            <!--Type: RimWorld.JobGiver_FleeExplosion-->
-            <li Class="JobGiver_FleeExplosion" />
+            <!--Type: RimWorld.JobGiver_FleePotentialExplosion-->
+            <li Class="JobGiver_FleePotentialExplosion" />
             <!--Type: RimWorld.JobGiver_ConfigurableHostilityResponse-->
             <li Class="JobGiver_ConfigurableHostilityResponse" />
             <!-- ... -->
@@ -171,8 +245,10 @@
                   <!--Default Value: false-->
                   <invert>true_or_false</invert>
                   <!--Type: RimWorld.NeedDef-->
+                  <!--Default Value: null-->
                   <need>NeedDef_defName</need>
                   <!--Type: float-->
+                  <!--Default Value: 0.0-->
                   <threshold>float_value</threshold>
                 </li>
                 <!--Type: RimWorld.JobGiver_WanderColony-->
@@ -271,8 +347,10 @@
                 <!-- ... -->
               </subNodes>
               <!--Type: RimWorld.NeedDef-->
+              <!--Default Value: null-->
               <need>NeedDef_defName</need>
               <!--Type: float-->
+              <!--Default Value: 0.0-->
               <threshold>float_value</threshold>
             </li>
             <!-- ... -->
@@ -447,6 +525,48 @@
         </li>
         <!--Type: RimWorld.ThinkNode_TraitBehaviors-->
         <li Class="ThinkNode_TraitBehaviors" />
+        <!--Type: RimWorld.ThinkNode_ConditionalPawnKind-->
+        <li Class="ThinkNode_ConditionalPawnKind">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: Verse.AI.ThinkNode_Tagger-->
+            <li Class="ThinkNode_Tagger">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
+                <li Class="JobGiver_WanderAnywhere">
+                  <!--Type: Verse.IntRange-->
+                  <ticksBetweenWandersRange>
+                    <!--Type: int-->
+                    <min>int_value</min>
+                    <!--Type: int-->
+                    <max>int_value</max>
+                  </ticksBetweenWandersRange>
+                  <!--Type: Verse.Danger-->
+                  <!--Available Values: Unspecified, None, Some, Deadly-->
+                  <maxDanger>enum_value</maxDanger>
+                </li>
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.AI.JobTag-->
+              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
+              <tagToGive>enum_value</tagToGive>
+            </li>
+            <!--Type: Verse.AI.ThinkNode_Subtree-->
+            <li Class="ThinkNode_Subtree">
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <leaveJoinableLordIfIssuesJob>true_or_false</leaveJoinableLordIfIssuesJob>
+              <!--Type: Verse.ThinkTreeDef-->
+              <treeDef>ThinkTreeDef_defName</treeDef>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: Verse.PawnKindDef-->
+          <pawnKind>PawnKindDef_defName</pawnKind>
+        </li>
         <!--Type: RimWorld.ThinkNode_ConditionalGuest-->
         <li Class="ThinkNode_ConditionalGuest">
           <!--Complex List-->
@@ -585,6 +705,7 @@
                     <!-- ... -->
                   </subNodes>
                   <!--Type: float-->
+                  <!--Default Value: 0.0-->
                   <min>float_value</min>
                 </li>
                 <!-- ... -->
@@ -644,8 +765,8 @@
         </li>
         <!--Type: RimWorld.JobGiver_LayEgg-->
         <li Class="JobGiver_LayEgg" />
-        <!--Type: RimWorld.ThinkNode_ConditionalColonyFaction-->
-        <li Class="ThinkNode_ConditionalColonyFaction">
+        <!--Type: RimWorld.ThinkNode_ConditionalOfPlayerFaction-->
+        <li Class="ThinkNode_ConditionalOfPlayerFaction">
           <!--Complex List-->
           <!--Type: List<Verse.AI.ThinkNode>-->
           <subNodes>
@@ -715,29 +836,6 @@
             <li Class="JobGiver_SeekSafeTemperature" />
             <!-- ... -->
           </subNodes>
-        </li>
-        <!--Type: Verse.AI.ThinkNode_ChancePerHour_Constant-->
-        <li Class="ThinkNode_ChancePerHour_Constant">
-          <!--Complex List-->
-          <!--Type: List<Verse.AI.ThinkNode>-->
-          <subNodes>
-            <!--Type: Verse.AI.ThinkNode_Tagger-->
-            <li Class="ThinkNode_Tagger">
-              <!--Simple List-->
-              <!--Type: List<Verse.AI.ThinkNode>-->
-              <subNodes>
-                <!--Type: RimWorld.JobGiver_EatRandom-->
-                <li Class="JobGiver_EatRandom" />
-                <!-- ... -->
-              </subNodes>
-              <!--Type: Verse.AI.JobTag-->
-              <!--Available Values: Misc, MiscWork, Fieldwork, Idle, InMentalState, SatisfyingNeeds, DraftedOrder, UnspecifiedLordDuty, WaitingForOthersToFinishGatheringItems, TuckedIntoBed, RestingForMedicalReasons, ChangingApparel, Escaping, JoiningCaravan, TrainedAnimalBehavior, UnloadingOwnInventory-->
-              <tagToGive>enum_value</tagToGive>
-            </li>
-            <!-- ... -->
-          </subNodes>
-          <!--Type: float-->
-          <mtbHours>float_value</mtbHours>
         </li>
         <!--Type: RimWorld.ThinkNode_ConditionalNeutralFaction-->
         <li Class="ThinkNode_ConditionalNeutralFaction">
@@ -822,12 +920,14 @@
             <li Class="JobGiver_GetFood">
               <!--Type: RimWorld.HungerCategory-->
               <!--Available Values: Fed, Hungry, UrgentlyHungry, Starving-->
+              <!--Default Value: Fed-->
               <minCategory>enum_value</minCategory>
             </li>
             <!--Type: RimWorld.JobGiver_GetRest-->
             <li Class="JobGiver_GetRest">
               <!--Type: RimWorld.RestCategory-->
               <!--Available Values: Rested, Tired, VeryTired, Exhausted-->
+              <!--Default Value: Rested-->
               <minCategory>enum_value</minCategory>
             </li>
             <!--Type: RimWorld.JobGiver_SatisfyChemicalNeed-->
@@ -897,35 +997,33 @@
               <!--Complex List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
-                <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
-                <li Class="ThinkNode_PrioritySorter">
-                  <!--Complex List-->
-                  <!--Type: List<Verse.AI.ThinkNode>-->
-                  <subNodes>
-                    <!--Type: RimWorld.JobGiver_GetFood-->
-                    <li Class="JobGiver_GetFood">
-                      <!--Type: RimWorld.HungerCategory-->
-                      <!--Available Values: Fed, Hungry, UrgentlyHungry, Starving-->
-                      <minCategory>enum_value</minCategory>
-                    </li>
-                    <!-- ... -->
-                  </subNodes>
-                </li>
-                <!--Type: RimWorld.JobGiver_Manhunter-->
-                <li Class="JobGiver_Manhunter" />
+                <!--Type: RimWorld.JobGiver_Berserk-->
+                <li Class="JobGiver_Berserk" />
                 <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
                 <li Class="JobGiver_WanderAnywhere">
                   <!--Type: Verse.Danger-->
                   <!--Available Values: Unspecified, None, Some, Deadly-->
                   <maxDanger>enum_value</maxDanger>
                 </li>
-                <!--Type: RimWorld.JobGiver_Berserk-->
-                <li Class="JobGiver_Berserk" />
                 <!--Type: RimWorld.JobGiver_SocialFighting-->
                 <li Class="JobGiver_SocialFighting" />
                 <!-- ... -->
               </subNodes>
             </li>
+            <!--Type: RimWorld.JobGiver_MurderousRage-->
+            <li Class="JobGiver_MurderousRage" />
+            <!--Type: RimWorld.JobGiver_WanderColony-->
+            <li Class="JobGiver_WanderColony">
+              <!--Type: Verse.Danger-->
+              <!--Available Values: Unspecified, None, Some, Deadly-->
+              <maxDanger>enum_value</maxDanger>
+            </li>
+            <!--Type: RimWorld.JobGiver_SlaughterRandomAnimal-->
+            <li Class="JobGiver_SlaughterRandomAnimal" />
+            <!--Type: RimWorld.JobGiver_InducePrisonerToEscape-->
+            <li Class="JobGiver_InducePrisonerToEscape" />
+            <!--Type: RimWorld.JobGiver_HaulCorpseToPublicPlace-->
+            <li Class="JobGiver_HaulCorpseToPublicPlace" />
             <!--Type: RimWorld.JobGiver_FireStartingSpree-->
             <li Class="JobGiver_FireStartingSpree" />
             <!--Type: Verse.AI.JobGiver_ExitMapRandom-->
@@ -973,12 +1071,6 @@
             </li>
             <!--Type: RimWorld.JobGiver_BingeFood-->
             <li Class="JobGiver_BingeFood" />
-            <!--Type: RimWorld.JobGiver_WanderColony-->
-            <li Class="JobGiver_WanderColony">
-              <!--Type: Verse.Danger-->
-              <!--Available Values: Unspecified, None, Some, Deadly-->
-              <maxDanger>enum_value</maxDanger>
-            </li>
             <!--Type: Verse.AI.JobGiver_WanderOwnRoom-->
             <li Class="JobGiver_WanderOwnRoom">
               <!--Type: Verse.Danger-->
@@ -1008,8 +1100,10 @@
               <!--Default Value: false-->
               <invert>true_or_false</invert>
               <!--Type: RimWorld.NeedDef-->
+              <!--Default Value: null-->
               <need>NeedDef_defName</need>
               <!--Type: float-->
+              <!--Default Value: 0.0-->
               <threshold>float_value</threshold>
             </li>
             <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
@@ -1049,6 +1143,53 @@
             <li>MentalStateDef_defName</li>
             <!-- ... -->
           </states>
+        </li>
+        <!--Type: Verse.AI.ThinkNode_ConditionalMentalStateClass-->
+        <li Class="ThinkNode_ConditionalMentalStateClass">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.JobGiver_Tantrum-->
+            <li Class="JobGiver_Tantrum" />
+            <!--Type: RimWorld.JobGiver_WanderColony-->
+            <li Class="JobGiver_WanderColony" />
+            <!--Type: RimWorld.JobGiver_InsultingSpree-->
+            <li Class="JobGiver_InsultingSpree" />
+            <!--Type: Verse.AI.ThinkNode_Priority-->
+            <li Class="ThinkNode_Priority">
+              <!--Complex List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
+                <li Class="ThinkNode_PrioritySorter">
+                  <!--Complex List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_GetFood-->
+                    <li Class="JobGiver_GetFood">
+                      <!--Type: RimWorld.HungerCategory-->
+                      <!--Available Values: Fed, Hungry, UrgentlyHungry, Starving-->
+                      <!--Default Value: Fed-->
+                      <minCategory>enum_value</minCategory>
+                    </li>
+                    <!-- ... -->
+                  </subNodes>
+                </li>
+                <!--Type: RimWorld.JobGiver_Manhunter-->
+                <li Class="JobGiver_Manhunter" />
+                <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
+                <li Class="JobGiver_WanderAnywhere">
+                  <!--Type: Verse.Danger-->
+                  <!--Available Values: Unspecified, None, Some, Deadly-->
+                  <maxDanger>enum_value</maxDanger>
+                </li>
+                <!-- ... -->
+              </subNodes>
+            </li>
+            <!-- ... -->
+          </subNodes>
+          <!--Type: System.Type-->
+          <stateClass>class_name</stateClass>
         </li>
         <!--Type: RimWorld.ThinkNode_ConditionalHasLord-->
         <li Class="ThinkNode_ConditionalHasLord">
@@ -1113,6 +1254,19 @@
           <!--Complex List-->
           <!--Type: List<Verse.AI.ThinkNode>-->
           <subNodes>
+            <!--Type: Verse.AI.ThinkNode_ConditionalIntelligence-->
+            <li Class="ThinkNode_ConditionalIntelligence">
+              <!--Simple List-->
+              <!--Type: List<Verse.AI.ThinkNode>-->
+              <subNodes>
+                <!--Type: RimWorld.JobGiver_JumpInWater-->
+                <li Class="JobGiver_JumpInWater" />
+                <!-- ... -->
+              </subNodes>
+              <!--Type: Verse.Intelligence-->
+              <!--Available Values: Animal, ToolUser, Humanlike-->
+              <minIntelligence>enum_value</minIntelligence>
+            </li>
             <!--Type: RimWorld.JobGiver_ExtinguishSelf-->
             <li Class="JobGiver_ExtinguishSelf" />
             <!--Type: Verse.AI.JobGiver_RunRandom-->

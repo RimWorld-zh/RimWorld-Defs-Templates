@@ -64,6 +64,7 @@
     <defName>SocialRelax</defName>
     <giverClass>JoyGiver_SocialRelax</giverClass>
     <baseChance>4</baseChance>
+    <jobDef>SocialRelax</jobDef>
     <joyKind>Social</joyKind>
   </JoyGiverDef>
   <JoyGiverDef>
@@ -112,6 +113,21 @@
     </requiredCapacities>
   </JoyGiverDef>
   <JoyGiverDef>
+    <defName>PlayHoopstone</defName>
+    <giverClass>JoyGiver_WatchBuilding</giverClass>
+    <baseChance>2.3</baseChance>
+    <thingDefs>
+      <li ListIndex="0">HoopstoneRing</li>
+    </thingDefs>
+    <jobDef>PlayHoopstone</jobDef>
+    <desireSit>false</desireSit>
+    <joyKind>GamingDexterity</joyKind>
+    <requiredCapacities>
+      <li ListIndex="0">Sight</li>
+      <li ListIndex="1">Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  <JoyGiverDef>
     <defName>PlayBilliards</defName>
     <giverClass>JoyGiver_PlayBilliards</giverClass>
     <baseChance>2</baseChance>
@@ -134,6 +150,20 @@
       <li ListIndex="0">ChessTable</li>
     </thingDefs>
     <jobDef>PlayChess</jobDef>
+    <joyKind>GamingCerebral</joyKind>
+    <requiredCapacities>
+      <li ListIndex="0">Sight</li>
+      <li ListIndex="1">Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  <JoyGiverDef>
+    <defName>PlayPoker</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>1.5</baseChance>
+    <thingDefs>
+      <li ListIndex="0">PokerTable</li>
+    </thingDefs>
+    <jobDef>PlayPoker</jobDef>
     <joyKind>GamingCerebral</joyKind>
     <requiredCapacities>
       <li ListIndex="0">Sight</li>

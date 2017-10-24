@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SubcameraDef>
+    <!--Type: string-->
+    <!--Default Value: "UnnamedDef"-->
+    <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
+    <defName>string_value</defName>
+    <!--Type: string-->
+    <layer>string_value</layer>
+    <!--Type: int-->
+    <depth>int_value</depth>
+    <!--Type: UnityEngine.RenderTextureFormat-->
+    <!--Available Values: ARGB32, Depth, ARGBHalf, Shadowmap, RGB565, ARGB4444, ARGB1555, Default, ARGB2101010, DefaultHDR, ARGB64, ARGBFloat, RGFloat, RGHalf, RFloat, RHalf, R8, ARGBInt, RGInt, RInt, BGRA32, RGB111110Float, RG32, RGBAUShort, RG16-->
+    <format>enum_value</format>
+  </SubcameraDef>
+</Defs>

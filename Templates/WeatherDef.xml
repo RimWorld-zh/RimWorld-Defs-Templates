@@ -35,6 +35,7 @@
       <max>float_value</max>
     </temperatureRange>
     <!--Type: Verse.SimpleCurve-->
+    <!--Default Value: null-->
     <commonalityRainfallFactor>
       <!--Simple List-->
       <!--Type: List<Verse.CurvePoint>-->
@@ -45,8 +46,10 @@
       </points>
     </commonalityRainfallFactor>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <rainRate>float_value</rainRate>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <snowRate>float_value</snowRate>
     <!--Type: float-->
     <!--Default Value: 1.0-->
@@ -57,6 +60,8 @@
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <accuracyMultiplier>float_value</accuracyMultiplier>
+    <!--Type: float-->
+    <perceivePriority>float_value</perceivePriority>
     <!--Reference List-->
     <!--Type: List<Verse.SoundDef>-->
     <ambientSounds>
@@ -73,6 +78,7 @@
         <!--Default Value: 100.0-->
         <averageInterval>float_value</averageInterval>
         <!--Type: System.Type-->
+        <!--Default Value: null-->
         <eventClass>class_name</eventClass>
       </li>
       <!-- ... -->

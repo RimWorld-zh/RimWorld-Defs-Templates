@@ -345,6 +345,7 @@
     <altitudeLayer>Item</altitudeLayer>
     <thingClass>MinifiedThing</thingClass>
     <category>Item</category>
+    <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
     <useHitPoints>true</useHitPoints>
     <comps>
@@ -363,6 +364,7 @@
     <altitudeLayer>Item</altitudeLayer>
     <thingClass>MinifiedThing</thingClass>
     <category>Item</category>
+    <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
     <useHitPoints>true</useHitPoints>
     <comps>
@@ -386,6 +388,7 @@
     <altitudeLayer>Item</altitudeLayer>
     <thingClass>MinifiedThing</thingClass>
     <category>Item</category>
+    <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
     <useHitPoints>true</useHitPoints>
     <comps>

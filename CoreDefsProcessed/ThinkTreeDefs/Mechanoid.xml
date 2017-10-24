@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThinkTrees>
+<Defs>
   <ThinkTreeDef>
     <defName>Mechanoid</defName>
     <thinkRoot Class="ThinkNode_Priority">
       <subNodes>
+        <!-- Downed -->
         <li Class="ThinkNode_Subtree" ListIndex="0">
           <treeDef>Downed</treeDef>
         </li>
-        <li Class="ThinkNode_Subtree" ListIndex="1">
+        <!-- Do a queued job -->
+        <li Class="ThinkNode_QueuedJob" ListIndex="1" />
+        <!-- Lord -->
+        <li Class="ThinkNode_Subtree" ListIndex="2">
           <treeDef>LordDuty</treeDef>
         </li>
-        <li Class="ThinkNode_Tagger" ListIndex="2">
+        <!-- Idle -->
+        <li Class="ThinkNode_Tagger" ListIndex="3">
           <subNodes>
             <li Class="JobGiver_WanderAnywhere" ListIndex="0">
               <maxDanger>Deadly</maxDanger>
@@ -18,8 +23,9 @@
           </subNodes>
           <tagToGive>Idle</tagToGive>
         </li>
-        <li Class="JobGiver_IdleError" ListIndex="3" />
+        <!-- Idle error -->
+        <li Class="JobGiver_IdleError" ListIndex="4" />
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>
-</ThinkTrees>
+</Defs>

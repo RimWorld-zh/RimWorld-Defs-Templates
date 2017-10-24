@@ -2,6 +2,19 @@
 <Defs>
   <!--=============================== Tier 1: pre-electricity ===================================-->
   <ResearchProjectDef>
+    <defName>RecurveBow</defName>
+    <label>recurve bow</label>
+    <description>Advanced construction techniques allow for production of the recurve bow, an effective and inexpensive ranged weapon.</description>
+    <techLevel>Neolithic</techLevel>
+    <baseCost>200</baseCost>
+    <tags>
+      <li ListIndex="0">TribalStart</li>
+    </tags>
+    <tab>Main</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>Pemmican</defName>
     <label>pemmican</label>
     <description>Make pemmican, a preserved mixture of meat and plant matter that doesn't go bad for a long time. Great for traveling.</description>
@@ -10,8 +23,9 @@
     <tags>
       <li ListIndex="0">TribalStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>0</researchViewX>
-    <researchViewY>0</researchViewY>
+    <researchViewY>1</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>PassiveCooler</defName>
@@ -22,8 +36,9 @@
     <tags>
       <li ListIndex="0">TribalStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>0</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewY>2</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Devilstrand</defName>
@@ -31,8 +46,22 @@
     <description>Allows colonists to plant devilstrand, a slow-growing mushroom that yields a valuable plant fiber.</description>
     <techLevel>Neolithic</techLevel>
     <baseCost>500</baseCost>
+    <tab>Main</tab>
     <researchViewX>0</researchViewX>
-    <researchViewY>2</researchViewY>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>PsychoidBrewing</defName>
+    <label>psychoid brewing</label>
+    <description>With preparation, psychoid leaves can be boiled in water, producing a mildly euphoric and addictive tea.</description>
+    <techLevel>Neolithic</techLevel>
+    <baseCost>4000</baseCost>
+    <tags>
+      <li ListIndex="0">TribalStart</li>
+    </tags>
+    <tab>Main</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Brewing</defName>
@@ -40,8 +69,35 @@
     <description>Allows you to build a brewery to transform hops into tasty, tasty beer.</description>
     <techLevel>Neolithic</techLevel>
     <baseCost>700</baseCost>
-    <researchViewX>0</researchViewX>
+    <tab>Main</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Bedrolls</defName>
+    <label>bedrolls</label>
+    <description>Allows you to make bedrolls.</description>
+    <techLevel>Neolithic</techLevel>
+    <baseCost>400</baseCost>
+    <tags>
+      <li ListIndex="0">TribalStart</li>
+    </tags>
+    <tab>Main</tab>
+    <researchViewX>1</researchViewX>
     <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Beds</defName>
+    <label>beds</label>
+    <description>Allows you to build beds.</description>
+    <techLevel>Medieval</techLevel>
+    <baseCost>700</baseCost>
+    <tags>
+      <li ListIndex="0">ClassicStart</li>
+    </tags>
+    <tab>Main</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>4</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>CarpetMaking</defName>
@@ -49,17 +105,19 @@
     <description>Allows colonists to build carpets to increase the quality of their environments.</description>
     <techLevel>Medieval</techLevel>
     <baseCost>1200</baseCost>
-    <researchViewX>1</researchViewX>
-    <researchViewY>4</researchViewY>
+    <tab>Main</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>3</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Smithing</defName>
     <label>smithing</label>
-    <description>Build smithies for crafting metal weapons and tools.</description>
+    <description>Build smithies for crafting metal weapons and tools.\n\nAllows you to craft simple weapons like knives, gladii, and maces.</description>
     <techLevel>Medieval</techLevel>
     <baseCost>700</baseCost>
-    <researchViewX>1</researchViewX>
-    <researchViewY>5</researchViewY>
+    <tab>Main</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Stonecutting</defName>
@@ -70,6 +128,7 @@
     <tags>
       <li ListIndex="0">ClassicStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>0</researchViewX>
     <researchViewY>5</researchViewY>
   </ResearchProjectDef>
@@ -82,6 +141,7 @@
     <tags>
       <li ListIndex="0">ClassicStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>0</researchViewX>
     <researchViewY>4</researchViewY>
   </ResearchProjectDef>
@@ -91,6 +151,7 @@
     <description>The basics of drug preparation and synthesis. Allows creation of the drug lab. Further research is required to make specific drugs.</description>
     <techLevel>Industrial</techLevel>
     <baseCost>500</baseCost>
+    <tab>Main</tab>
     <researchViewX>1</researchViewX>
     <researchViewY>0</researchViewY>
   </ResearchProjectDef>
@@ -103,6 +164,7 @@
     <tags>
       <li ListIndex="0">ClassicStart</li>
     </tags>
+    <tab>Main</tab>
     <researchViewX>3</researchViewX>
     <researchViewY>2.5</researchViewY>
   </ResearchProjectDef>

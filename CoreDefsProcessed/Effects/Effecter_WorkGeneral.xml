@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<EffecterDefs>
+<Defs>
   <EffecterDef>
     <defName>ProgressBar</defName>
     <children>
@@ -223,4 +223,4 @@
       </li>
     </children>
   </EffecterDef>
-</EffecterDefs>
+</Defs>

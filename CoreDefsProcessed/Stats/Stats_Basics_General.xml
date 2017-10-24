@@ -11,6 +11,7 @@
     <minValue>1</minValue>
     <roundValue>true</roundValue>
     <roundToFiveOver>200</roundToFiveOver>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>Mass</defName>
@@ -21,11 +22,13 @@
     <formatString>{0} kg</formatString>
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0</minValue>
+    <minifiedThingInherits>true</minifiedThingInherits>
     <parts>
       <li Class="StatPart_BodySize" ListIndex="0" />
       <li Class="StatPart_NaturalNotMissingBodyPartsCoverage" ListIndex="1" />
       <li Class="StatPart_GearAndInventoryMass" ListIndex="2" />
       <li Class="StatPart_UnfinishedThingIngredientsMass" ListIndex="3" />
+      <li Class="StatPart_AddedBodyPartsMass" ListIndex="4" />
     </parts>
   </StatDef>
   <StatDef>
@@ -37,6 +40,8 @@
     <toStringStyle>FloatTwo</toStringStyle>
     <formatString>${0}</formatString>
     <roundToFiveOver>200</roundToFiveOver>
+    <minifiedThingInherits>true</minifiedThingInherits>
+    <scenarioRandomizable>true</scenarioRandomizable>
     <parts>
       <li Class="StatPart_Quality" ListIndex="0">
         <factorAwful>0.4</factorAwful>
@@ -79,6 +84,7 @@
     <defaultBaseValue>0</defaultBaseValue>
     <minValue>0</minValue>
     <maxValue>5</maxValue>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>WorkToMake</defName>
@@ -90,6 +96,7 @@
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0</minValue>
     <roundToFiveOver>300</roundToFiveOver>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>WorkToBuild</defName>
@@ -101,6 +108,7 @@
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0</minValue>
     <roundToFiveOver>300</roundToFiveOver>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>DeteriorationRate</defName>
@@ -112,6 +120,7 @@
     <formatString>{0} / day</formatString>
     <defaultBaseValue>0</defaultBaseValue>
     <minValue>0</minValue>
+    <scenarioRandomizable>true</scenarioRandomizable>
     <parts>
       <li Class="StatPart_Quality" ListIndex="0">
         <factorAwful>2</factorAwful>
@@ -134,10 +143,10 @@
     <hideAtValue>0</hideAtValue>
     <toStringStyle>Integer</toStringStyle>
     <defaultBaseValue>0</defaultBaseValue>
+    <applyFactorsIfNegative>false</applyFactorsIfNegative>
     <minValue>-999999</minValue>
     <roundValue>true</roundValue>
     <roundToFiveOver>100</roundToFiveOver>
-    <applyFactorsIfNegative>false</applyFactorsIfNegative>
     <parts>
       <li Class="StatPart_Quality" ListIndex="0">
         <factorAwful>-0.1</factorAwful>
@@ -160,9 +169,9 @@
     <hideAtValue>0</hideAtValue>
     <toStringStyle>FloatOne</toStringStyle>
     <defaultBaseValue>0</defaultBaseValue>
+    <applyFactorsIfNegative>false</applyFactorsIfNegative>
     <minValue>-1000</minValue>
     <maxValue>1000</maxValue>
-    <applyFactorsIfNegative>false</applyFactorsIfNegative>
   </StatDef>
   <StatDef>
     <defName>Comfort</defName>
@@ -172,9 +181,9 @@
     <showIfUndefined>false</showIfUndefined>
     <toStringStyle>FloatTwo</toStringStyle>
     <defaultBaseValue>0</defaultBaseValue>
+    <applyFactorsIfNegative>false</applyFactorsIfNegative>
     <minValue>-1000</minValue>
     <maxValue>1000</maxValue>
-    <applyFactorsIfNegative>false</applyFactorsIfNegative>
     <parts>
       <li Class="StatPart_Quality" ListIndex="0">
         <factorAwful>0.4</factorAwful>

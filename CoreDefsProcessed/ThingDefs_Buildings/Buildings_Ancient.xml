@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>AncientConcreteBarrier</defName>
     <label>ancient concrete barrier</label>
@@ -86,4 +86,4 @@
     <fillPercent>0.25</fillPercent>
     <blockWind>true</blockWind>
   </ThingDef>
-</ThingDefs>
+</Defs>

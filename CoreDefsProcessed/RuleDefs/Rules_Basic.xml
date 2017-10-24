@@ -45,6 +45,15 @@
     </resolvers>
   </RuleDef>
   <RuleDef>
+    <defName>EnsureCanHoldRoof</defName>
+    <symbol>ensureCanHoldRoof</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_EnsureCanHoldRoof" ListIndex="0">
+        <minRectSize>(0, 0)</minRectSize>
+      </li>
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
     <defName>OutdoorsCampfire</defName>
     <symbol>outdoorsCampfire</symbol>
     <resolvers>
@@ -135,6 +144,20 @@
     <symbol>cultivatedPlants</symbol>
     <resolvers>
       <li Class="SymbolResolver_CultivatedPlants" ListIndex="0" />
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
+    <defName>Bed</defName>
+    <symbol>bed</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_Bed" ListIndex="0" />
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
+    <defName>PrisonerBed</defName>
+    <symbol>prisonerBed</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_PrisonerBed" ListIndex="0" />
     </resolvers>
   </RuleDef>
 </Defs>

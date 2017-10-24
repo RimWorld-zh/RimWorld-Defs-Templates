@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseWeapon">
+    <defName>OrbitalTargeterBombardment</defName>
+    <label>orbital bombardment targeter</label>
+    <description>An ancient targeting apparatus for an orbital bombardment system. This unit designates a target and transmits the coordinates to a network of satellites, which then bombard the target area with kinetic impactors. This unit has been reprogrammed to accept unauthorized users, but once it is used, the network will detect the incursion and cut off the link permanently.</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <Mass>0.2</Mass>
+      <Beauty>-2</Beauty>
+      <Weapon_Bulk>0.1</Weapon_Bulk>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <itemGeneratorTags>
+      <li ListIndex="0">SpecialReward</li>
+    </itemGeneratorTags>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Bombardment</verbClass>
+        <range>45</range>
+        <burstShotCount>1</burstShotCount>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <onlyManualCast>true</onlyManualCast>
+        <warmupTime>3</warmupTime>
+        <soundCast>OrbitalTargeter_Fire</soundCast>
+        <soundAiming>OrbitalTargeter_Aiming</soundAiming>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_AvoidFriendlyFireRadius>23</ai_AvoidFriendlyFireRadius>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeapon">
+    <defName>OrbitalTargeterPowerBeam</defName>
+    <label>orbital power beam targeter</label>
+    <description>An ancient targeting unit for a network of power-collection satellites. Once aimed at a target, it directs ancient satellites to begin beaming power down in a massive column of electromagnetic energy. This power can safely be collected in a giant absorption dish. Since you have no absorption dish, you'll be aiming it at enemies, at which point the power column will turn the area into a thousand-degree inferno. This will last until the satellites detect the unsafe targeting, shut themselves down, and permanently deactivate the targeter.</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <Mass>0.2</Mass>
+      <Beauty>-2</Beauty>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <itemGeneratorTags>
+      <li ListIndex="0">SpecialReward</li>
+    </itemGeneratorTags>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li ListIndex="0">Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_PowerBeam</verbClass>
+        <range>45</range>
+        <burstShotCount>1</burstShotCount>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <onlyManualCast>true</onlyManualCast>
+        <warmupTime>3</warmupTime>
+        <soundCast>OrbitalTargeter_Fire</soundCast>
+        <soundAiming>OrbitalTargeter_Aiming</soundAiming>
+        <ai_AvoidFriendlyFireRadius>15</ai_AvoidFriendlyFireRadius>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Spacer</techLevel>
+  </ThingDef>
+</Defs>

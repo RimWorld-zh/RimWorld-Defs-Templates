@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecipeDefs>
+<Defs>
   <RecipeDef>
     <defName>ButcherCorpseFlesh</defName>
     <label>butcher creature</label>
@@ -71,4 +71,4 @@
     <effectWorking>ButcherMechanoid</effectWorking>
     <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
   </RecipeDef>
-</RecipeDefs>
+</Defs>

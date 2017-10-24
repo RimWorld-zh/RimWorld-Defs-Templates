@@ -27,6 +27,7 @@
       </li>
     </stages>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>trauma</labelNoun>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
     <defName>ChemicalDamageModerate</defName>
@@ -54,7 +55,7 @@
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
     <defName>Cirrhosis</defName>
-    <label>Cirrhosis</label>
+    <label>cirrhosis</label>
     <hediffClass>HediffWithComps</hediffClass>
     <initialSeverity>0.001</initialSeverity>
     <stages>
@@ -67,6 +68,50 @@
           </li>
         </capMods>
         <partEfficiencyOffset>-0.60</partEfficiencyOffset>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+  </HediffDef>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>ResurrectionPsychosis</defName>
+    <label>resurrection psychosis</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Disappears" ListIndex="0">
+        <disappearsAfterTicks>
+          <min>4200000</min>
+          <max>4200000</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay" ListIndex="1">
+        <severityPerDay>0.01</severityPerDay>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <label>early</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li ListIndex="1">
+        <minSeverity>0.1</minSeverity>
+        <label>early</label>
+        <mentalBreakMtbDays>9</mentalBreakMtbDays>
+      </li>
+      <li ListIndex="2">
+        <minSeverity>0.25</minSeverity>
+        <label>moderate</label>
+        <mentalBreakMtbDays>6</mentalBreakMtbDays>
+      </li>
+      <li ListIndex="3">
+        <minSeverity>0.40</minSeverity>
+        <label>advanced</label>
+        <mentalBreakMtbDays>3</mentalBreakMtbDays>
+      </li>
+      <li ListIndex="4">
+        <minSeverity>0.55</minSeverity>
+        <label>total</label>
+        <mentalBreakMtbDays>0.5</mentalBreakMtbDays>
       </li>
     </stages>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>

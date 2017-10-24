@@ -6,8 +6,10 @@
     <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
     <defName>string_value</defName>
     <!--Type: System.Type-->
+    <!--Default Value: null-->
     <thoughtClass>class_name</thoughtClass>
     <!--Type: System.Type-->
+    <!--Default Value: null-->
     <workerClass>class_name</workerClass>
     <!--Complex List-->
     <!--Type: List<RimWorld.ThoughtStage>-->
@@ -15,14 +17,19 @@
       <!--Type: RimWorld.ThoughtStage-->
       <li>
         <!--Type: string-->
+        <!--Default Value: (string)null-->
         <label>string_value</label>
         <!--Type: string-->
+        <!--Default Value: (string)null-->
         <labelSocial>string_value</labelSocial>
         <!--Type: string-->
+        <!--Default Value: (string)null-->
         <description>string_value</description>
         <!--Type: float-->
+        <!--Default Value: 0.0-->
         <baseMoodEffect>float_value</baseMoodEffect>
         <!--Type: float-->
+        <!--Default Value: 0.0-->
         <baseOpinionOffset>float_value</baseOpinionOffset>
         <!--Type: bool-->
         <!--Default Value: true-->
@@ -37,6 +44,7 @@
     <!--Default Value: 0.75-->
     <stackedEffectMultiplier>float_value</stackedEffectMultiplier>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <durationDays>float_value</durationDays>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -45,6 +53,7 @@
     <!--Default Value: false-->
     <validWhileDespawned>true_or_false</validWhileDespawned>
     <!--Type: RimWorld.ThoughtDef-->
+    <!--Default Value: null-->
     <nextThought>ThoughtDef_defName</nextThought>
     <!--Reference List-->
     <!--Type: List<RimWorld.TraitDef>-->
@@ -71,15 +80,20 @@
     <!--Default Value: -2147483648-->
     <requiredTraitsDegree>int_value</requiredTraitsDegree>
     <!--Type: RimWorld.StatDef-->
+    <!--Default Value: null-->
     <effectMultiplyingStat>StatDef_defName</effectMultiplyingStat>
     <!--Type: Verse.HediffDef-->
     <hediff>HediffDef_defName</hediff>
+    <!--Type: Verse.GameConditionDef-->
+    <gameCondition>GameConditionDef_defName</gameCondition>
     <!--Type: bool-->
     <!--Default Value: false-->
     <nullifiedIfNotColonist>true_or_false</nullifiedIfNotColonist>
     <!--Type: RimWorld.ThoughtDef-->
+    <!--Default Value: null-->
     <thoughtToMake>ThoughtDef_defName</thoughtToMake>
     <!--Type: string-->
+    <!--Default Value: (string)null-->
     <icon>string_value</icon>
     <!--Type: bool-->
     <!--Default Value: false-->

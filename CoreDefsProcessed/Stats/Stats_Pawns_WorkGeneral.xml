@@ -8,14 +8,15 @@
     <displayPriorityInCategory>100</displayPriorityInCategory>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
+    <scenarioRandomizable>true</scenarioRandomizable>
     <parts>
-      <li Class="StatPart_Mood" ListIndex="0">
-        <curve>
+      <li Class="StatPart_Glow" ListIndex="0">
+        <factorFromGlowCurve>
           <points>
-            <li ListIndex="0">(0.60,1.00)</li>
-            <li ListIndex="1">(1.00,1.20)</li>
+            <li ListIndex="0">(0,0.80)</li>
+            <li ListIndex="1">(0.30,1.00)</li>
           </points>
-        </curve>
+        </factorFromGlowCurve>
       </li>
     </parts>
   </StatDef>
@@ -32,8 +33,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Mining</skill>
-        <baseFactor>0.04</baseFactor>
-        <bonusFactor>0.12</bonusFactor>
+        <baseValue>0.04</baseValue>
+        <bonusPerLevel>0.12</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -47,6 +48,7 @@
         <max>1</max>
       </li>
     </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>MiningYield</defName>
@@ -55,12 +57,10 @@
     <category>PawnWork</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
-    <minValue>0</minValue>
-    <maxValue>1</maxValue>
     <skillNeedFactors>
       <li Class="SkillNeed_Direct" ListIndex="0">
         <skill>Mining</skill>
-        <factorsPerLevel>
+        <valuesPerLevel>
           <li ListIndex="0">0.6</li>
           <li ListIndex="1">0.7</li>
           <li ListIndex="2">0.8</li>
@@ -82,7 +82,7 @@
           <li ListIndex="18">1.10</li>
           <li ListIndex="19">1.12</li>
           <li ListIndex="20">1.13</li>
-        </factorsPerLevel>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -97,6 +97,8 @@
         <max>1</max>
       </li>
     </capacityFactors>
+    <minValue>0</minValue>
+    <maxValue>1</maxValue>
   </StatDef>
   <StatDef>
     <defName>SmoothingSpeed</defName>
@@ -111,8 +113,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Construction</skill>
-        <baseFactor>0.5</baseFactor>
-        <bonusFactor>0.15</bonusFactor>
+        <baseValue>0.5</baseValue>
+        <bonusPerLevel>0.15</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -140,8 +142,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Intellectual</skill>
-        <baseFactor>0.1</baseFactor>
-        <bonusFactor>0.15</bonusFactor>
+        <baseValue>0.1</baseValue>
+        <bonusPerLevel>0.15</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -156,6 +158,7 @@
         <max>1.1</max>
       </li>
     </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>AnimalGatherSpeed</defName>
@@ -170,8 +173,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Animals</skill>
-        <baseFactor>0.04</baseFactor>
-        <bonusFactor>0.12</bonusFactor>
+        <baseValue>0.04</baseValue>
+        <bonusPerLevel>0.12</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -193,12 +196,10 @@
     <category>PawnWork</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
-    <minValue>0</minValue>
-    <maxValue>1</maxValue>
     <skillNeedFactors>
       <li Class="SkillNeed_Direct" ListIndex="0">
         <skill>Animals</skill>
-        <factorsPerLevel>
+        <valuesPerLevel>
           <li ListIndex="0">0.6</li>
           <li ListIndex="1">0.7</li>
           <li ListIndex="2">0.75</li>
@@ -220,7 +221,7 @@
           <li ListIndex="18">1</li>
           <li ListIndex="19">1</li>
           <li ListIndex="20">1</li>
-        </factorsPerLevel>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -234,12 +235,15 @@
         <max>1</max>
       </li>
     </capacityFactors>
+    <minValue>0</minValue>
+    <maxValue>1</maxValue>
   </StatDef>
   <StatDef>
     <defName>PlantWorkSpeed</defName>
     <label>plant work speed</label>
     <description>Speed at which this person sows and harvests plants.</description>
     <category>PawnWork</category>
+    <neverDisabled>true</neverDisabled>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
     <statFactors>
@@ -248,8 +252,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Growing</skill>
-        <baseFactor>0.20</baseFactor>
-        <bonusFactor>0.12</bonusFactor>
+        <baseValue>0.20</baseValue>
+        <bonusPerLevel>0.12</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -269,12 +273,13 @@
     <label>plant harvest yield</label>
     <description>The yield someone gets when harvesting plants. Low yields give a chance that this person will accidentally waste the harvest.</description>
     <category>PawnWork</category>
+    <neverDisabled>true</neverDisabled>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>1</defaultBaseValue>
     <skillNeedFactors>
       <li Class="SkillNeed_Direct" ListIndex="0">
         <skill>Growing</skill>
-        <factorsPerLevel>
+        <valuesPerLevel>
           <li ListIndex="0">0.6</li>
           <li ListIndex="1">0.7</li>
           <li ListIndex="2">0.75</li>
@@ -296,7 +301,7 @@
           <li ListIndex="18">1</li>
           <li ListIndex="19">1</li>
           <li ListIndex="20">1</li>
-        </factorsPerLevel>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -310,6 +315,7 @@
         <max>1</max>
       </li>
     </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>ConstructionSpeed</defName>
@@ -324,8 +330,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus" ListIndex="0">
         <skill>Construction</skill>
-        <baseFactor>0.5</baseFactor>
-        <bonusFactor>0.15</bonusFactor>
+        <baseValue>0.5</baseValue>
+        <bonusPerLevel>0.15</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -339,6 +345,7 @@
         <max>1</max>
       </li>
     </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>ConstructSuccessChance</defName>
@@ -350,7 +357,7 @@
     <skillNeedFactors>
       <li Class="SkillNeed_Direct" ListIndex="0">
         <skill>Construction</skill>
-        <factorsPerLevel>
+        <valuesPerLevel>
           <li ListIndex="0">0.75</li>
           <li ListIndex="1">0.80</li>
           <li ListIndex="2">0.85</li>
@@ -372,7 +379,7 @@
           <li ListIndex="18">1</li>
           <li ListIndex="19">1</li>
           <li ListIndex="20">1</li>
-        </factorsPerLevel>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -386,6 +393,7 @@
         <max>1</max>
       </li>
     </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
   <StatDef>
     <defName>FixBrokenDownBuildingSuccessChance</defName>
@@ -397,7 +405,7 @@
     <skillNeedFactors>
       <li Class="SkillNeed_Direct" ListIndex="0">
         <skill>Construction</skill>
-        <factorsPerLevel>
+        <valuesPerLevel>
           <li ListIndex="0">0.75</li>
           <li ListIndex="1">0.80</li>
           <li ListIndex="2">0.85</li>
@@ -419,7 +427,7 @@
           <li ListIndex="18">1</li>
           <li ListIndex="19">1</li>
           <li ListIndex="20">1</li>
-        </factorsPerLevel>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>

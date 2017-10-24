@@ -13,6 +13,7 @@
     <description>string_value</description>
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
+    <!--Default Value: Undefined-->
     <techLevel>enum_value</techLevel>
     <!--Type: float-->
     <!--Default Value: 100.0-->
@@ -25,6 +26,7 @@
       <!-- ... -->
     </prerequisites>
     <!--Type: Verse.ThingDef-->
+    <!--Default Value: null-->
     <requiredResearchBuilding>ThingDef_defName</requiredResearchBuilding>
     <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
@@ -40,6 +42,8 @@
       <li>string_value</li>
       <!-- ... -->
     </tags>
+    <!--Type: RimWorld.ResearchTabDef-->
+    <tab>ResearchTabDef_defName</tab>
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <researchViewX>float_value</researchViewX>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThinkTrees>
+<Defs>
   <ThinkTreeDef>
     <defName>Animal</defName>
     <thinkRoot Class="ThinkNode_Priority">
@@ -21,8 +21,10 @@
         </li>
         <!-- React to close melee threat -->
         <li Class="JobGiver_ReactToCloseMeleeThreat" ListIndex="4" />
+        <!-- Do a queued job -->
+        <li Class="ThinkNode_QueuedJob" ListIndex="5" />
         <!-- Wild animals dig out if no path to map edge and starving -->
-        <li Class="ThinkNode_ConditionalHasFaction" ListIndex="5">
+        <li Class="ThinkNode_ConditionalHasFaction" ListIndex="6">
           <subNodes>
             <li Class="ThinkNode_ConditionalStarving" ListIndex="0">
               <subNodes>
@@ -40,7 +42,7 @@
           <invert>true</invert>
         </li>
         <!-- Leave if timed out -->
-        <li Class="ThinkNode_ConditionalExitTimedOut" ListIndex="6">
+        <li Class="ThinkNode_ConditionalExitTimedOut" ListIndex="7">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -53,11 +55,11 @@
           </subNodes>
         </li>
         <!-- Mental state non critical -->
-        <li Class="ThinkNode_Subtree" ListIndex="7">
+        <li Class="ThinkNode_Subtree" ListIndex="8">
           <treeDef>MentalStateNonCritical</treeDef>
         </li>
         <!-- Forced goto -->
-        <li Class="ThinkNode_ConditionalForcedGoto" ListIndex="8">
+        <li Class="ThinkNode_ConditionalForcedGoto" ListIndex="9">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -68,15 +70,15 @@
           </subNodes>
         </li>
         <!-- Lord directives -->
-        <li Class="ThinkNode_Subtree" ListIndex="9">
+        <li Class="ThinkNode_Subtree" ListIndex="10">
           <treeDef>LordDuty</treeDef>
         </li>
         <!-- Insertion hook for modders -->
-        <li Class="ThinkNode_SubtreesByTag" ListIndex="10">
+        <li Class="ThinkNode_SubtreesByTag" ListIndex="11">
           <insertTag>Animal_PreMain</insertTag>
         </li>
         <!-- Wild animals leave map in some conditions -->
-        <li Class="ThinkNode_ConditionalHasFaction" ListIndex="11">
+        <li Class="ThinkNode_ConditionalHasFaction" ListIndex="12">
           <subNodes>
             <li Class="ThinkNode_Subtree" ListIndex="0">
               <treeDef>LeaveIfWrongSeason</treeDef>
@@ -88,9 +90,9 @@
           <invert>true</invert>
         </li>
         <!-- Lay eggs you need to -->
-        <li Class="JobGiver_LayEgg" ListIndex="12" />
+        <li Class="JobGiver_LayEgg" ListIndex="13" />
         <!-- Tame animal -->
-        <li Class="ThinkNode_ConditionalColonyFaction" ListIndex="13">
+        <li Class="ThinkNode_ConditionalOfPlayerFaction" ListIndex="14">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -133,7 +135,7 @@
           </subNodes>
         </li>
         <!-- Eat random things out of curiosity -->
-        <li Class="ThinkNode_ChancePerHour_Constant" ListIndex="14">
+        <li Class="ThinkNode_ChancePerHour_Constant" ListIndex="15">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -145,11 +147,11 @@
           <mtbHours>600</mtbHours>
         </li>
         <!-- Satisfy basic needs -->
-        <li Class="ThinkNode_Subtree" ListIndex="15">
+        <li Class="ThinkNode_Subtree" ListIndex="16">
           <treeDef>SatisfyBasicNeeds</treeDef>
         </li>
         <!-- Tame animal: do useful things for the colony-->
-        <li Class="ThinkNode_ConditionalHasFaction" ListIndex="16">
+        <li Class="ThinkNode_ConditionalHasFaction" ListIndex="17">
           <subNodes>
             <!-- Try to mate -->
             <li Class="ThinkNode_ChancePerHour_Mate" ListIndex="0">
@@ -197,11 +199,11 @@
           </subNodes>
         </li>
         <!-- Insertion hook for modders -->
-        <li Class="ThinkNode_SubtreesByTag" ListIndex="17">
+        <li Class="ThinkNode_SubtreesByTag" ListIndex="18">
           <insertTag>Animal_PreWander</insertTag>
         </li>
         <!-- Tame animal: wander colony -->
-        <li Class="ThinkNode_ConditionalColonyFaction" ListIndex="18">
+        <li Class="ThinkNode_ConditionalOfPlayerFaction" ListIndex="19">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -218,7 +220,7 @@
           </subNodes>
         </li>
         <!-- Of neutral faction: rest and then exit the map -->
-        <li Class="ThinkNode_ConditionalNeutralFaction" ListIndex="19">
+        <li Class="ThinkNode_ConditionalNeutralFaction" ListIndex="20">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -237,7 +239,7 @@
           </subNodes>
         </li>
         <!-- Wander -->
-        <li Class="ThinkNode_Tagger" ListIndex="20">
+        <li Class="ThinkNode_Tagger" ListIndex="21">
           <subNodes>
             <li Class="ThinkNode_ConditionalHerdAnimal" ListIndex="0">
               <subNodes>
@@ -260,7 +262,7 @@
           </subNodes>
           <tagToGive>Idle</tagToGive>
         </li>
-        <li Class="JobGiver_IdleError" ListIndex="21" />
+        <li Class="JobGiver_IdleError" ListIndex="22" />
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>
@@ -270,8 +272,15 @@
       <subNodes>
         <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow" ListIndex="0">
           <subNodes>
+            <!-- Wild animals flee tornados, meteorites, etc. -->
+            <li Class="ThinkNode_ConditionalHasFaction" ListIndex="0">
+              <subNodes>
+                <li Class="JobGiver_FleeImmediateDanger" ListIndex="0" />
+              </subNodes>
+              <invert>true</invert>
+            </li>
             <!-- Lord directives -->
-            <li Class="ThinkNode_Subtree" ListIndex="0">
+            <li Class="ThinkNode_Subtree" ListIndex="1">
               <treeDef>LordDutyConstant</treeDef>
             </li>
           </subNodes>
@@ -279,4 +288,4 @@
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>
-</ThinkTrees>
+</Defs>

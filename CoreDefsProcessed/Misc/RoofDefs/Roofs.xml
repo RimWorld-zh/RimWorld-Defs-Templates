@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Roofs>
+<Defs>
   <RoofDef>
     <defName>RoofConstructed</defName>
     <label>constructed roof</label>
@@ -23,4 +23,4 @@
     <collapseLeavingThingDef>CollapsedRocks</collapseLeavingThingDef>
     <filthLeaving>RockRubble</filthLeaving>
   </RoofDef>
-</Roofs>
+</Defs>

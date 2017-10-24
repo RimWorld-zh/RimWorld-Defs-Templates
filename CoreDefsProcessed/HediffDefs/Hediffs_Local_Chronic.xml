@@ -20,6 +20,7 @@
       </li>
     </stages>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>a bad back</labelNoun>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
     <defName>Frail</defName>
@@ -41,6 +42,7 @@
       </li>
     </stages>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>frailty</labelNoun>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
     <defName>Cataract</defName>
@@ -52,6 +54,21 @@
         <partEfficiencyOffset>-0.5</partEfficiencyOffset>
       </li>
     </stages>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>a cataract</labelNoun>
+  </HediffDef>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>Blindness</defName>
+    <label>blindness</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <partEfficiencyOffset>-1</partEfficiencyOffset>
+      </li>
+    </stages>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
@@ -64,6 +81,7 @@
         <partEfficiencyOffset>-0.5</partEfficiencyOffset>
       </li>
     </stages>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
@@ -192,6 +210,7 @@
     <tendable>true</tendable>
     <minSeverity>0.001</minSeverity>
     <maxSeverity>0.5</maxSeverity>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
@@ -282,6 +301,7 @@
       </li>
     </stages>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>an artery blockage</labelNoun>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
     <defName>Carcinoma</defName>
@@ -347,5 +367,6 @@
     <tendable>true</tendable>
     <chanceToCauseNoPain>0.3</chanceToCauseNoPain>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>a carcinoma</labelNoun>
   </HediffDef>
 </Defs>

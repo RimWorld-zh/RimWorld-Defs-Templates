@@ -8,15 +8,15 @@
     <!--Type: string-->
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
-    <!--Type: string-->
-    <!--Default Value: "Value"-->
-    <graphLabelY>string_value</graphLabelY>
     <!--Type: bool-->
     <!--Default Value: false-->
     <useFixedScale>true_or_false</useFixedScale>
     <!--Type: UnityEngine.Vector2-->
     <!--Default Value: default(Vector2)-->
     <fixedScale>value</fixedScale>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <integersOnly>true_or_false</integersOnly>
     <!--Reference List-->
     <!--Type: List<RimWorld.HistoryAutoRecorderDef>-->
     <historyAutoRecorderDefs>

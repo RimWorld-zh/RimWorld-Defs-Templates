@@ -17,6 +17,7 @@
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns" ListIndex="0">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>3</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
         </li>
         <!-- Player starting stuff spawn method-->
         <li Class="ScenPart_PlayerPawnsArriveMethod" ListIndex="1">
@@ -64,7 +65,7 @@
         </li>
         <li Class="ScenPart_StartingThing_Defined" ListIndex="8">
           <def>StartingThing_Defined</def>
-          <thingDef>Gun_Pistol</thingDef>
+          <thingDef>Gun_Revolver</thingDef>
         </li>
         <li Class="ScenPart_StartingThing_Defined" ListIndex="9">
           <def>StartingThing_Defined</def>
@@ -129,6 +130,7 @@
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns" ListIndex="0">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>5</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
         </li>
         <!-- Player starting stuff spawn method-->
         <li Class="ScenPart_PlayerPawnsArriveMethod" ListIndex="1">
@@ -235,6 +237,7 @@
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns" ListIndex="0">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>1</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
         </li>
         <!-- Player starting stuff spawn method-->
         <li Class="ScenPart_PlayerPawnsArriveMethod" ListIndex="1">

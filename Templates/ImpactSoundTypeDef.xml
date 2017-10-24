@@ -5,5 +5,8 @@
     <!--Default Value: "UnnamedDef"-->
     <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
     <defName>string_value</defName>
+    <!--Type: bool-->
+    <!--Default Value: false-->
+    <playOnlyIfHitPawn>true_or_false</playOnlyIfHitPawn>
   </ImpactSoundTypeDef>
 </Defs>

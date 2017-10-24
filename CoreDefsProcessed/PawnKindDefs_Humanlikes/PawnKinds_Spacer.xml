@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnKindDefs>
+<Defs>
   <PawnKindDef>
     <defName>SpaceRefugee</defName>
     <label>space refugee</label>
@@ -70,4 +70,4 @@
       <max>2</max>
     </combatEnhancingDrugsCount>
   </PawnKindDef>
-</PawnKindDefs>
+</Defs>

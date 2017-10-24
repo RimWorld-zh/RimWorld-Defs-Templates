@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>Transition_Include</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">duetoa->due to</li>
+        <li ListIndex="1">duetoa(p=0.5)->because of</li>
+        <li ListIndex="2">duetoa(p=0.5)->thanks to</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Transition_Downed</defName>
+    <include>
+      <li ListIndex="0">Transition_Include</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry->[culpritHediff_labelNoun] caused [subject_nameShortDef] to [collapsemeta].</li>
+        <li ListIndex="1">logentry->[culpritHediff_labelNoun] in the [culpritHediff_target_label] caused [subject_nameShortDef] to [collapsemeta].</li>
+        <li ListIndex="2">logentry->[subject_nameShortDef] [collapsedmeta] [duetoa] [culpritHediff_labelNoun].</li>
+        <li ListIndex="3">logentry->[subject_nameShortDef] [collapsedmeta] [duetoa] [culpritHediff_labelNoun] in the [culpritHediff_target_label].</li>
+        <li ListIndex="4">logentry->[subject_nameShortDef] [collapsedmeta] [duetoa] [culpritHediff_labelNoun] in [subject_possessive] [culpritHediff_target_label].</li>
+        <li ListIndex="5">logentry(p=0.1)->[subject_nameShortDef] [collapsedmeta].</li>
+        <li ListIndex="6">collapse->collapse</li>
+        <li ListIndex="7">collapse->crumple</li>
+        <li ListIndex="8">collapse->drop</li>
+        <li ListIndex="9">collapse->faint</li>
+        <li ListIndex="10">collapsed->collapsed</li>
+        <li ListIndex="11">collapsed->crumpled</li>
+        <li ListIndex="12">collapsed->dropped</li>
+        <li ListIndex="13">collapsed->fainted</li>
+        <li ListIndex="14">helplessly->helplessly</li>
+        <li ListIndex="15">helplessly->unconscious</li>
+        <li ListIndex="16">helplessly->in exhaustion</li>
+        <li ListIndex="17">helplessly->weakly</li>
+        <li ListIndex="18">helplessly->feebly</li>
+        <li ListIndex="19">collapsemeta->[collapse]</li>
+        <li ListIndex="20">collapsemeta(p=0.5)->[collapse] [helplessly]</li>
+        <li ListIndex="21">collapsedmeta->[collapsed]</li>
+        <li ListIndex="22">collapsedmeta(p=0.5)->[collapsed] [helplessly]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Transition_DiedInclude</defName>
+    <include>
+      <li ListIndex="0">Transition_Include</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry(p=1.5)->[culpritHediff_labelNoun] caused [subject_nameShortDef] to [die].</li>
+        <li ListIndex="1">logentry(p=1.5)->[culpritHediff_labelNoun] in the [culpritHediff_target_label] caused [subject_nameShortDef] to [die].</li>
+        <li ListIndex="2">logentry->[subject_nameShortDef] [died] [duetoa] [culpritHediff_labelNoun] [flavorsuffix].</li>
+        <li ListIndex="3">logentry->[subject_nameShortDef] [died] [duetoa] [culpritHediff_labelNoun] in the [culpritHediff_target_label] [flavorsuffix].</li>
+        <li ListIndex="4">logentry->[subject_nameShortDef] [died] [duetoa] [culpritHediff_labelNoun] in [subject_possessive] [culpritHediff_target_label] [flavorsuffix].</li>
+        <li ListIndex="5">logentry(p=0.1)->[subject_nameShortDef] [died] [suffixflavor].</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Transition_Died</defName>
+    <include>
+      <li ListIndex="0">Transition_DiedInclude</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">die(p=2)->die</li>
+        <li ListIndex="1">die->perish</li>
+        <li ListIndex="2">die->expire</li>
+        <li ListIndex="3">die(p=0.5)->give in to [subject_possessive] wounds</li>
+        <li ListIndex="4">died(p=2)->died</li>
+        <li ListIndex="5">died->perished</li>
+        <li ListIndex="6">died->expired</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Transition_DiedExplosive</defName>
+    <include>
+      <li ListIndex="0">Transition_DiedInclude</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">die(p=3)->explode [flavor]</li>
+        <li ListIndex="1">die(p=3)->explode [flavorsuffix]</li>
+        <li ListIndex="2">die->detonate [flavor]</li>
+        <li ListIndex="3">die->detonate [flavorsuffix]</li>
+        <li ListIndex="4">die->burst [flavor]</li>
+        <li ListIndex="5">die->burst [flavorsuffix]</li>
+        <li ListIndex="6">died(p=3)->exploded [flavor]</li>
+        <li ListIndex="7">died->detonated [flavor]</li>
+        <li ListIndex="8">died->burst [flavor]</li>
+        <li ListIndex="9">flavor(p=0.2)->in a chemical [fireball]</li>
+        <li ListIndex="10">flavor->in a [color] [fireball]</li>
+        <li ListIndex="11">flavor->in a [large] [fireball]</li>
+        <li ListIndex="12">flavor(p=4)->in a [fireball]</li>
+        <li ListIndex="13">flavor(p=4)-></li>
+        <li ListIndex="14">flavorsuffix->, scattering [pieces] [everywhere]</li>
+        <li ListIndex="15">flavorsuffix(p=2)->, scattering [gore] [everywhere]</li>
+        <li ListIndex="16">flavorsuffix->, leaving a small pile of [gore]</li>
+        <li ListIndex="17">flavorsuffix->, leaving a small crater</li>
+        <li ListIndex="18">flavorsuffix(p=4)-></li>
+        <li ListIndex="19">fireball(p=3)->fireball</li>
+        <li ListIndex="20">fireball->flameball</li>
+        <li ListIndex="21">fireball->shockwave</li>
+        <li ListIndex="22">fireball->conflagration</li>
+        <li ListIndex="23">pieces->pieces</li>
+        <li ListIndex="24">pieces->fragments</li>
+        <li ListIndex="25">everywhere->everywhere</li>
+        <li ListIndex="26">everywhere->far and wide</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

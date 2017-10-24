@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>Combat_General</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry->[action], [result].</li>
+        <li ListIndex="1">logentry(p=0.2)->[action].</li>
+        <li ListIndex="2">implement(implementOwnerType==weapon,p=2)->[initiator_possessive] [weapon_label]'s [tool_label]</li>
+        <li ListIndex="3">implement(implementOwnerType==weapon,p=1)->[initiator_possessive] [weapon_label]</li>
+        <li ListIndex="4">implement(implementOwnerType==weapon,p=1)->a [weapon_label]'s [tool_label]</li>
+        <li ListIndex="5">implement(implementOwnerType==weapon,p=0.5)->a [weapon_label]</li>
+        <li ListIndex="6">implement(implementOwnerType==bodypart,p=2)->[initiator_possessive] [tool_label]</li>
+        <li ListIndex="7">implement(implementOwnerType==bodypart,p=1)->[initiator_possessive] [bodypart_adjective] [tool_label]</li>
+        <li ListIndex="8">implement(implementOwnerType==hediff,p=2)->[initiator_possessive] [weapon_label]'s [tool_label]</li>
+        <li ListIndex="9">implement(implementOwnerType==hediff,p=1)->[initiator_possessive] [weapon_label]</li>
+        <li ListIndex="10">implement(implementOwnerType==hediff,p=1)->[initiator_possessive] [tool_label]</li>
+        <li ListIndex="11">bodypart_adjective->hard</li>
+        <li ListIndex="12">bodypart_adjective->strong</li>
+        <li ListIndex="13">bodypart_adjective->powerful</li>
+        <li ListIndex="14">bodypart_adjective->forceful</li>
+        <li ListIndex="15">bodypart_adjective->mighty</li>
+        <li ListIndex="16">bodypart_adjective->rugged</li>
+        <li ListIndex="17">bodypart_adjective->stout</li>
+        <li ListIndex="18">bodypart_adjective->sturdy</li>
+        <li ListIndex="19">bodypart_adjective->solid</li>
+        <li ListIndex="20">bodypart_adjective->tough</li>
+        <li ListIndex="21">bodypart_adjective->calloused</li>
+        <li ListIndex="22">bodypart_adjective->firm</li>
+        <li ListIndex="23">targetlist(recipient_part_count==1)->[recipient_part0_label]</li>
+        <li ListIndex="24">targetlist(recipient_part_count==2)->[recipient_part0_label] and [recipient_part1_label]</li>
+        <li ListIndex="25">targetlist(recipient_part_count==3)->[recipient_part0_label], [recipient_part1_label], and [recipient_part2_label]</li>
+        <li ListIndex="26">targetlist->[recipient_part0_label], [recipient_part1_label], [recipient_part2_label], and [recipient_part3_label]</li>
+        <!-- don't include constraint; this acts as a fallback for >=4-->
+        <li ListIndex="27">maneuverresult_present->wounding</li>
+        <li ListIndex="28">maneuverresult_present->injuring</li>
+        <li ListIndex="29">destroyed(p=0.5)->destroyed</li>
+        <li ListIndex="30">destroyed(p=0.5)->demolished</li>
+        <li ListIndex="31">destroyed(p=0.5)->ruined</li>
+        <li ListIndex="32">destroyed(p=0.5)->wrecked</li>
+        <li ListIndex="33">result(p=0.5)->[maneuverresult_present] [recipient_possessive] [targetlist]</li>
+        <li ListIndex="34">result(p=0.2)->[maneuverresult_present] [recipient_possessive] [targetlist] [flavortextadverb]</li>
+        <li ListIndex="35">result(p=0.2)->[maneuverresult_present] [recipient_possessive] [targetlist] [flavortextsituation]</li>
+        <li ListIndex="36">result(p=0.2)->[maneuverresult_present] [recipient_possessive] [targetlist] and [flavortextconsequence]</li>
+        <li ListIndex="37">flavortextadverb->painfully</li>
+        <li ListIndex="38">flavortextadverb->brutally</li>
+        <li ListIndex="39">flavortextadverb->horribly</li>
+        <li ListIndex="40">flavortextadverb->agonizingly</li>
+        <li ListIndex="41">flavortextadverb->fiercely</li>
+        <li ListIndex="42">flavortextadverb->ruthlessly</li>
+        <li ListIndex="43">flavortextadverb->savagely</li>
+        <li ListIndex="44">flavortextadverb->viciously</li>
+        <li ListIndex="45">flavortextadverb->mercilessly</li>
+        <li ListIndex="46">flavortextadverb->heartlessly</li>
+        <li ListIndex="47">flavortextsituation->in an explosion of gore</li>
+        <li ListIndex="48">flavortextsituation->leaving a disgusting wound</li>
+        <li ListIndex="49">flavortextsituation->without emotion</li>
+        <li ListIndex="50">flavortextsituation->while wearing a blank look</li>
+        <li ListIndex="51">flavortextsituation->while wearing a savage look</li>
+        <li ListIndex="52">flavortextsituation->while wearing a [badassadjective] look</li>
+        <li ListIndex="53">flavortextsituation->while grimacing</li>
+        <li ListIndex="54">flavortextsituation->while laughing</li>
+        <li ListIndex="55">flavortextsituation->while smirking</li>
+        <li ListIndex="56">flavortextconsequence->making [recipient_objective] [wince] [painevent]</li>
+        <li ListIndex="57">flavortextconsequence(p=0.2)->throwing [recipient_objective] off balance</li>
+        <li ListIndex="58">wince->wince</li>
+        <li ListIndex="59">wince->grimace</li>
+        <li ListIndex="60">wince->cringe</li>
+        <li ListIndex="61">wince->groan</li>
+        <li ListIndex="62">wince->scream</li>
+        <li ListIndex="63">wince->shout</li>
+        <li ListIndex="64">wince->recoil</li>
+        <li ListIndex="65">wince->stumble</li>
+        <li ListIndex="66">painstate->in</li>
+        <li ListIndex="67">painstate->with</li>
+        <li ListIndex="68">painstate->from the</li>
+        <li ListIndex="69">painevent->[painstate] pain</li>
+        <li ListIndex="70">painevent->[painstate] agony</li>
+        <li ListIndex="71">painevent->with misery</li>
+        <li ListIndex="72">painevent->from the injury</li>
+        <li ListIndex="73">painevent->from the wound</li>
+        <li ListIndex="74">mortarshell->shell</li>
+        <li ListIndex="75">mortarshell->shot</li>
+        <li ListIndex="76">mortarshell->projectile</li>
+        <li ListIndex="77">mortarshell->explosive</li>
+        <li ListIndex="78">mortarshell->bomb</li>
+        <li ListIndex="79">mortarshell(p=0.3)->ballistic shell</li>
+        <li ListIndex="80">mortarshell(p=0.3)->ballistic shot</li>
+        <li ListIndex="81">mortarshell(p=0.3)->ballistic projectile</li>
+        <li ListIndex="82">to->to</li>
+        <li ListIndex="83">to->into</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_WoundInclude</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">destroyed_targets(recipient_part_destroyed_count==1)->[recipient_part_destroyed0_label]</li>
+        <li ListIndex="1">destroyed_targets(recipient_part_destroyed_count==2)->[recipient_part_destroyed0_label] and [recipient_part_destroyed1_label]</li>
+        <li ListIndex="2">destroyed_targets(recipient_part_destroyed_count==3)->[recipient_part_destroyed0_label], [recipient_part_destroyed1_label], and [recipient_part_destroyed2_label]</li>
+        <li ListIndex="3">destroyed_targets->[recipient_part_destroyed0_label], [recipient_part_destroyed1_label], [recipient_part_destroyed2_label], and [recipient_part_destroyed3_label]</li>
+        <!-- fallback for 4+ -->
+        <li ListIndex="4">damaged_targets(recipient_part_damaged_count==1)->[recipient_part_damaged0_label]</li>
+        <li ListIndex="5">damaged_targets(recipient_part_damaged_count==2)->[recipient_part_damaged0_label] and [recipient_part_damaged1_label]</li>
+        <li ListIndex="6">damaged_targets(recipient_part_damaged_count==3)->[recipient_part_damaged0_label], [recipient_part_damaged1_label], and [recipient_part_damaged2_label]</li>
+        <li ListIndex="7">damaged_targets->[recipient_part_damaged0_label], [recipient_part_damaged1_label], [recipient_part_damaged2_label], and [recipient_part_damaged3_label]</li>
+        <!-- fallback for 4+ -->
+        <li ListIndex="8">expertly->expertly</li>
+        <li ListIndex="9">expertly->adeptly</li>
+        <li ListIndex="10">expertly->adroitly</li>
+        <li ListIndex="11">expertly->deftly</li>
+        <li ListIndex="12">expertly->skillfully</li>
+        <li ListIndex="13">expertly->slickly</li>
+        <li ListIndex="14">expertly->professionally</li>
+        <li ListIndex="15">expertly->aptly</li>
+        <li ListIndex="16">expertly->dexterously</li>
+        <li ListIndex="17">expertly->cleverly</li>
+        <li ListIndex="18">expertly->masterfully</li>
+        <li ListIndex="19">expertly->artistically</li>
+        <li ListIndex="20">expertly->with skill</li>
+        <li ListIndex="21">expertly->with impressive experience</li>
+        <li ListIndex="22">expertly->with flair</li>
+        <li ListIndex="23">expertly->with care</li>
+        <li ListIndex="24">expertly->with precision</li>
+        <li ListIndex="25">expertly->with proficiency</li>
+        <li ListIndex="26">expertly->with strength</li>
+        <li ListIndex="27">expertly->with dexterity</li>
+        <li ListIndex="28">expertly->with mastery</li>
+        <li ListIndex="29">expertly->with artistry</li>
+        <li ListIndex="30">expertly->with professionalism</li>
+        <li ListIndex="31">expertly->like a virtuoso</li>
+        <li ListIndex="32">expertly->like an expert</li>
+        <li ListIndex="33">expertly->like a master</li>
+        <li ListIndex="34">expertly->like an artist</li>
+        <li ListIndex="35">expertly->like a pro</li>
+        <li ListIndex="36">expert->expert</li>
+        <li ListIndex="37">expert->adept</li>
+        <li ListIndex="38">expert->adroit</li>
+        <li ListIndex="39">expert->deft</li>
+        <li ListIndex="40">expert->skillful</li>
+        <li ListIndex="41">expert->slick</li>
+        <li ListIndex="42">expert->professional</li>
+        <li ListIndex="43">expert->apt</li>
+        <li ListIndex="44">expert->dexterous</li>
+        <li ListIndex="45">expert->clever</li>
+        <li ListIndex="46">expert->masterful</li>
+        <li ListIndex="47">expert->artistic</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_Hit</defName>
+    <include>
+      <li ListIndex="0">Combat_General</li>
+      <li ListIndex="1">Combat_WoundInclude</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry(p=0.3)->[initiator_nameShortDef] [maneuver_past] [recipient_nameShortDef] in the [recipient_part0_label].</li>
+        <li ListIndex="1">logentry(p=0.1)->[initiator_nameShortDef] [maneuver_past] [recipient_nameShortDef] in the [recipient_part0_label] [flavortextadverb].</li>
+        <li ListIndex="2">logentry(p=0.1)->[initiator_nameShortDef] [maneuver_past] [recipient_nameShortDef] in the [recipient_part0_label] [flavortextsituation].</li>
+        <li ListIndex="3">logentry(p=0.1)->[initiator_nameShortDef] [maneuver_past] [recipient_nameShortDef] in the [recipient_part0_label], [flavortextconsequence].</li>
+        <li ListIndex="4">logentry(p=0.4)->[initiator_nameShortDef], wielding [initiator_possessive] [weapon_label] [expertly], [flavortextadverb] [maneuver_past] [recipient_nameShortDef] in the [recipient_part0_label].</li>
+        <!-- combined high priority, if we destroyed something -->
+        <li ListIndex="5">logentry(p=0.3)->[initiator_nameShortDef] [destroyed_past] [recipient_nameShortDef]'s [destroyed_targets].</li>
+        <li ListIndex="6">logentry(p=0.3)->[initiator_nameShortDef] [destroyed_past] [recipient_nameShortDef]'s [destroyed_targets] [destroyed_suffix].</li>
+        <li ListIndex="7">logentry(p=0.3)->[initiator_nameShortDef] [destroyed_past] [recipient_nameShortDef]'s [destroyed_targets] [expertly].</li>
+        <li ListIndex="8">logentry(p=0.3)->[initiator_nameShortDef] [destroyed_past] [recipient_nameShortDef]'s [destroyed_targets] with [implement].</li>
+        <li ListIndex="9">result(p=1,recipient_part_damaged_count==0)->[destroyed_present] [recipient_possessive] [destroyed_targets]</li>
+        <li ListIndex="10">result(p=1,recipient_part_destroyed_count==0)->[maneuverresult_present] [recipient_possessive] [damaged_targets]</li>
+        <li ListIndex="11">result(p=1)->[destroyed_present] [recipient_possessive] [destroyed_targets] and [maneuverresult_present] [recipient_possessive] [damaged_targets]</li>
+        <li ListIndex="12">action(p=0.3)->[initiator_nameShortDef] hit [recipient_nameShortDef] with a [maneuver_inf] from [implement]</li>
+        <li ListIndex="13">action(p=0.3)->[initiator_nameShortDef] used [implement] to [maneuver_inf] [recipient_nameShortDef]</li>
+        <li ListIndex="14">action->[initiator_nameShortDef] [maneuver_past] [recipient_nameShortDef] with [implement]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_FailIncludes</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">action->[initiator_nameShortDef] [tried] to [maneuver_inf] [recipient_nameShortDef]</li>
+        <li ListIndex="1">action->[initiator_nameShortDef] [tried] to [maneuver_inf] [recipient_nameShortDef] with [implement]</li>
+        <li ListIndex="2">action->[initiator_nameShortDef] [tried] to use [implement] to [maneuver_inf] [recipient_nameShortDef]</li>
+        <li ListIndex="3">action->[initiator_nameShortDef] swung [initiator_possessive] [weapon_label] at [recipient_nameShortDef]</li>
+        <li ListIndex="4">action(p=0.3)->[initiator_nameShortDef] [genericattackverb] [towardsat] [recipient_nameShortDef] with [implement]</li>
+        <li ListIndex="5">action(p=0.3)->[initiator_nameShortDef] [genericattackverb] [towardsat] [recipient_nameShortDef]</li>
+        <li ListIndex="6">action(p=0.3)->[initiator_nameShortDef] [genericattackverb] with [implement]</li>
+        <li ListIndex="7">towardsat->towards</li>
+        <li ListIndex="8">towardsat->at</li>
+        <li ListIndex="9">genericattackverb->swung</li>
+        <li ListIndex="10">genericattackverb->flailed</li>
+        <li ListIndex="11">genericattackverb->thrashed</li>
+        <li ListIndex="12">tried->tried</li>
+        <li ListIndex="13">tried->attempted</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_Miss</defName>
+    <include>
+      <li ListIndex="0">Combat_General</li>
+      <li ListIndex="1">Combat_FailIncludes</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry(p=0.2)->[recipient_nameShortDef] avoided [initiator_nameShortDef]'s [weapon_label] [maneuver_inf].</li>
+        <li ListIndex="1">logentry(p=0.2)->[initiator_nameShortDef] missed [recipient_nameShortDef] with a [maneuver_inf] from [implement].</li>
+        <li ListIndex="2">logentry(p=0.2)->[initiator_nameShortDef] [failtype] while trying to [maneuver_inf] [recipient_nameShortDef] with [implement].</li>
+        <li ListIndex="3">logentry(p=0.2)->[initiator_nameShortDef] [failtype] while trying to [maneuver_inf] [recipient_nameShortDef].</li>
+        <li ListIndex="4">logentry(p=0.2)->[initiator_nameShortDef] [failtype].</li>
+        <li ListIndex="5">failtype->stumbled</li>
+        <li ListIndex="6">failtype->tripped</li>
+        <li ListIndex="7">failtype->flailed</li>
+        <li ListIndex="8">failtype->floundered</li>
+        <li ListIndex="9">failtype->missed</li>
+        <li ListIndex="10">result->but missed</li>
+        <li ListIndex="11">result->but hit only air</li>
+        <li ListIndex="12">result->but the swing went wide</li>
+        <li ListIndex="13">result->but stumbled at the last second</li>
+        <li ListIndex="14">result->but hesitated at the last second</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_Dodge</defName>
+    <include>
+      <li ListIndex="0">Combat_General</li>
+      <li ListIndex="1">Combat_FailIncludes</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry(p=0.2)->[recipient_nameShortDef] dodged [initiator_nameShortDef]'s [maneuver_inf] from [implement].</li>
+        <li ListIndex="1">logentry(p=0.2)->[recipient_nameShortDef] dodged [initiator_nameShortDef]'s [maneuver_inf].</li>
+        <li ListIndex="2">result->but [recipient_nameShortDef] leapt out of the way</li>
+        <li ListIndex="3">result->but was deceived by [recipient_nameShortDef]'s feint</li>
+        <li ListIndex="4">result->but the attack was cleverly avoided</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_RangedIncludes</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">initiator_definite->[initiator_labelDefinite]</li>
+        <li ListIndex="1">initiator_definite->[initiator_nameShortDef]</li>
+        <li ListIndex="2">recipient_definite->[recipient_labelDefinite]</li>
+        <li ListIndex="3">recipient_definite->[recipient_nameShortDef]</li>
+        <li ListIndex="4">originalTarget_definite->[originalTarget_labelDefinite]</li>
+        <li ListIndex="5">originalTarget_definite->[originalTarget_nameShortDef]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_RangedFire</defName>
+    <include>
+      <li ListIndex="0">Combat_RangedIncludes</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry->[initiator_definite] [shotat] [recipient_definite] with [initiator_possessive] [weapon_label].</li>
+        <li ListIndex="1">logentry->[initiator_definite] [shot] [initiator_possessive] [weapon_label] at [recipient_definite].</li>
+        <li ListIndex="2">logentry->[initiator_definite] [shotat] [recipient_definite].</li>
+        <li ListIndex="3">logentry->[initiator_definite] [shot_a] [weapon_projectile_label] [burst] at [recipient_definite].</li>
+        <li ListIndex="4">logentry(recipient_missing==True)->[initiator_definite] [shot_a] [weapon_projectile_label].</li>
+        <li ListIndex="5">logentry(recipient_missing==True)->[initiator_definite] [shot] [initiator_possessive] [weapon_label].</li>
+        <li ListIndex="6">shot_a->[shotadverb] [shotverb] a</li>
+        <li ListIndex="7">shot_a(p=2)->[shotverb] a</li>
+        <li ListIndex="8">shot(p=2)->[shotverb]</li>
+        <li ListIndex="9">shot->[shotadverb] [shotverb]</li>
+        <li ListIndex="10">shotat->shot [aburst] at</li>
+        <li ListIndex="11">shotat->[shotadverb] shot [aburst] at</li>
+        <li ListIndex="12">shotat(p=0.5)->tried to shoot [aburst] at</li>
+        <li ListIndex="13">shotat(p=0.3)->took a shot at</li>
+        <li ListIndex="14">shotat(p=0.2)->took a [shotadjective] shot at</li>
+        <li ListIndex="15">shotat->fired [aburst] at</li>
+        <li ListIndex="16">shotat->fired [aburst] [shotadverb] at</li>
+        <li ListIndex="17">shotat(p=0.5)->aimed and fired [aburst] at</li>
+        <li ListIndex="18">shotat(p=0.3)->opened fire at</li>
+        <li ListIndex="19">aburst-></li>
+        <li ListIndex="20">aburst(burst==True,p=3)->a burst</li>
+        <li ListIndex="21">burst-></li>
+        <li ListIndex="22">burst(burst==True,p=3)->burst</li>
+        <li ListIndex="23">shotverb->shot</li>
+        <li ListIndex="24">shotverb->fired</li>
+        <li ListIndex="25">shotverb->discharged</li>
+        <li ListIndex="26">shotadverb->carefully</li>
+        <li ListIndex="27">shotadverb->quickly</li>
+        <li ListIndex="28">shotadverb->precisely</li>
+        <li ListIndex="29">shotadverb->deliberately</li>
+        <li ListIndex="30">shotadverb->gingerly</li>
+        <li ListIndex="31">shotadverb->precisely</li>
+        <li ListIndex="32">shotadverb->warily</li>
+        <li ListIndex="33">shotadjective->careful</li>
+        <li ListIndex="34">shotadjective->quick</li>
+        <li ListIndex="35">shotadjective->deliberate</li>
+        <li ListIndex="36">shotadjective->precise</li>
+        <li ListIndex="37">shotadjective->wary</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_RangedDamage</defName>
+    <include>
+      <li ListIndex="0">Combat_RangedIncludes</li>
+      <li ListIndex="1">Combat_WoundInclude</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- various destroyed options; we allow these even if we could use hybrid, to cut down a bit on clutter -->
+        <li ListIndex="0">logentry->[initiator_definite]'s [weapon_projectile_label] [destroyed_past] [recipient_definite]'s [destroyed_targets].</li>
+        <li ListIndex="1">logentry->[initiator_definite]'s [weapon_projectile_label] [destroyed_past] [recipient_definite]'s [destroyed_targets] [to] [destroyed_suffix].</li>
+        <li ListIndex="2">logentry->[initiator_definite]'s [weapon_projectile_label] [destroyed_past] [recipient_definite]'s [destroyed_targets] [expertly].</li>
+        <li ListIndex="3">logentry(p=2)->[initiator_definite]'s [weapon_projectile_label] [missed] [originalTarget_definite] and [destroyed_past] [recipient_definite]'s [destroyed_targets].</li>
+        <li ListIndex="4">logentry(p=2)->[initiator_definite]'s [weapon_projectile_label] [missed] [originalTarget_definite], [destroyed_present] [recipient_definite]'s [destroyed_targets].</li>
+        <li ListIndex="5">logentry->[recipient_definite]'s [destroyed_targets] was [destroyed_past] by [initiator_definite]'s [weapon_projectile_label].</li>
+        <li ListIndex="6">logentry->[recipient_definite]'s [destroyed_targets] was [destroyed_past] by [initiator_definite]'s [expert] [weapon_projectile_label].</li>
+        <li ListIndex="7">logentry->[recipient_definite]'s [destroyed_targets] was [destroyed_past] into [destroyed_suffix] by [initiator_definite]'s [weapon_projectile_label].</li>
+        <!-- various damaged options; don't show if something was destroyed -->
+        <li ListIndex="8">logentry(recipient_partDestroyed_count==0)->[initiator_definite]'s [weapon_projectile_label] [damaged_past] [recipient_definite]'s [damaged_targets].</li>
+        <li ListIndex="9">logentry(recipient_partDestroyed_count==0)->[initiator_definite]'s [weapon_projectile_label] [damaged_past] [recipient_definite]'s [damaged_targets] [expertly].</li>
+        <li ListIndex="10">logentry(recipient_partDestroyed_count==0,p=2)->[initiator_definite]'s [weapon_projectile_label] [missed] [originalTarget_definite] and [damaged_past] [recipient_definite]'s [damaged_targets].</li>
+        <li ListIndex="11">logentry(recipient_partDestroyed_count==0,p=2)->[initiator_definite]'s [weapon_projectile_label] [missed] [originalTarget_definite], [damaged_present] [recipient_definite]'s [damaged_targets].</li>
+        <li ListIndex="12">logentry(recipient_partDestroyed_count==0)->[recipient_definite]'s [damaged_targets] was [damagedverb_past] by [initiator_definite]'s [weapon_projectile_label].</li>
+        <li ListIndex="13">logentry(recipient_partDestroyed_count==0)->[recipient_definite]'s [damaged_targets] was [damagedverb_past] by [initiator_definite]'s [expert] [weapon_projectile_label].</li>
+        <!-- damaged/destroyed hybrid -->
+        <li ListIndex="14">logentry(p=3)->[initiator_definite]'s [weapon_projectile_label] [destroyed_past] [recipient_definite]'s [destroyed_targets] and [damaged_past] [recipient_possessive] [damaged_targets].</li>
+        <li ListIndex="15">logentry(p=6)->[initiator_definite]'s [weapon_projectile_label] [missed] [originalTarget_definite], [destroyed_present] [recipient_definite]'s [destroyed_targets] and [damaged_present] [recipient_possessive] [damaged_targets].</li>
+        <!-- don't mention damage or destruction; uncommon, but intended as a fallback -->
+        <li ListIndex="16">logentry(p=0.2)->[initiator_definite] hit [recipient_definite] with a [weapon_projectile_label].</li>
+        <li ListIndex="17">logentry(p=0.2)->[initiator_definite]'s [weapon_projectile_label] hit [recipient_definite].</li>
+        <li ListIndex="18">logentry(p=0.4)->[initiator_definite] [missed] [originalTarget_definite] and hit [recipient_definite] with a [weapon_projectile_label].</li>
+        <li ListIndex="19">logentry(p=0.4)->[initiator_definite]'s [weapon_projectile_label] [missed] [originalTarget_definite] and hit [recipient_definite].</li>
+        <li ListIndex="20">logentry(p=0.2)->[initiator_definite] hit [recipient_definite] with a [weapon_projectile_label] intended for [originalTarget_definite].</li>
+        <!-- fallback, also a little variety -->
+        <li ListIndex="21">weapon_projectile_label(p=0.05)->shot</li>
+        <li ListIndex="22">destroyed_past->shattered</li>
+        <li ListIndex="23">destroyed_past->crushed</li>
+        <li ListIndex="24">destroyed_past->obliterated</li>
+        <li ListIndex="25">destroyed_past->annihilated</li>
+        <li ListIndex="26">destroyed_past->pierced</li>
+        <li ListIndex="27">destroyed_past->perforated</li>
+        <li ListIndex="28">destroyed_past->punctured</li>
+        <li ListIndex="29">destroyed_present->shattering</li>
+        <li ListIndex="30">destroyed_present->crushing</li>
+        <li ListIndex="31">destroyed_present->obliterating</li>
+        <li ListIndex="32">destroyed_present->annihilating</li>
+        <li ListIndex="33">destroyed_present->piercing</li>
+        <li ListIndex="34">destroyed_present->perforating</li>
+        <li ListIndex="35">destroyed_present->puncturing</li>
+        <li ListIndex="36">destroyed_suffix->pieces</li>
+        <li ListIndex="37">destroyed_suffix->bits</li>
+        <li ListIndex="38">destroyed_suffix->a fine mist</li>
+        <li ListIndex="39">destroyed_suffix->fragments</li>
+        <li ListIndex="40">destroyed_suffix(p=0.5)->a holey mess</li>
+        <li ListIndex="41">destroyed_suffix(p=0.2)->ground beef</li>
+        <li ListIndex="42">damaged_past->wounded</li>
+        <li ListIndex="43">damaged_past->injured</li>
+        <li ListIndex="44">damaged_past->pierced</li>
+        <li ListIndex="45">damaged_past->damaged</li>
+        <li ListIndex="46">damaged_past->shot</li>
+        <li ListIndex="47">damaged_present->wounding</li>
+        <li ListIndex="48">damaged_present->injuring</li>
+        <li ListIndex="49">damaged_present->piercing</li>
+        <li ListIndex="50">damaged_present->damaging</li>
+        <li ListIndex="51">damaged_present->shooting</li>
+        <li ListIndex="52">damaged_suffix->in an ugly fashion</li>
+        <li ListIndex="53">damaged_suffix->with visible blood</li>
+        <li ListIndex="54">damaged_suffix->with the flesh visible</li>
+        <li ListIndex="55">to->to</li>
+        <li ListIndex="56">to->into</li>
+        <li ListIndex="57">missed->missed</li>
+        <li ListIndex="58">missed->narrowly missed</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_RangedMiss</defName>
+    <include>
+      <li ListIndex="0">Combat_RangedIncludes</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">logentry->[initiator_definite]'s [weapon_projectile_label] [missed].</li>
+        <li ListIndex="1">logentry->[initiator_definite] missed [originalTarget_definite].</li>
+        <li ListIndex="2">logentry->[originalTarget_definite] [avoidance], [initiator_definite]'s [weapon_projectile_label] [missing].</li>
+        <li ListIndex="3">missed(p=4)->missed</li>
+        <li ListIndex="4">missed(p=2)->missed by a small margin</li>
+        <li ListIndex="5">missed(p=2)->missed by a wide margin</li>
+        <li ListIndex="6">missed->went wide</li>
+        <li ListIndex="7">missed->flew into the air</li>
+        <li ListIndex="8">missed->flew high into the air</li>
+        <li ListIndex="9">missed->dug into the ground</li>
+        <li ListIndex="10">missed->caromed off [originalTarget_definite]'s cover</li>
+        <li ListIndex="11">missed->skipped off the ground and was lost</li>
+        <li ListIndex="12">missed->dug a divot out of the ground</li>
+        <li ListIndex="13">missed(p=0.2)->passed within millimeters of [originalTarget_definite]</li>
+        <li ListIndex="14">missed->passed within centimeters of [originalTarget_definite]</li>
+        <li ListIndex="15">missed->passed within a meter of [originalTarget_definite]</li>
+        <li ListIndex="16">missed->was blown offcourse</li>
+        <li ListIndex="17">missing->missing</li>
+        <li ListIndex="18">missing->missing by a small margin</li>
+        <li ListIndex="19">missing->missing by a wide margin</li>
+        <li ListIndex="20">missing->going wide</li>
+        <li ListIndex="21">missing->flying into the air</li>
+        <li ListIndex="22">missing->flying high into the air</li>
+        <li ListIndex="23">missing->digging into the ground</li>
+        <li ListIndex="24">missing->skipping off the ground and becoming lost</li>
+        <li ListIndex="25">missing->digging a divot out of the ground</li>
+        <li ListIndex="26">missing(p=0.2)->passing within millimeters of [originalTarget_definite]</li>
+        <li ListIndex="27">missing->passing within centimeters of [originalTarget_definite]</li>
+        <li ListIndex="28">missing->passing within a meter of [originalTarget_definite]</li>
+        <li ListIndex="29">missing->blowing offcourse</li>
+        <li ListIndex="30">avoidance->jerked aside at the last second</li>
+        <li ListIndex="31">avoidance->stumbled in an attempt to escape</li>
+        <li ListIndex="32">avoidance->threw [originalTarget_objective]self to the ground</li>
+        <li ListIndex="33">avoidance(p=0.3)->ducked behind the nearest piece of cover</li>
+        <li ListIndex="34">avoidance(p=0.3)->leaped behind the nearest piece of cover</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Combat_ExplosionImpact</defName>
+    <include>
+      <li ListIndex="0">Combat_RangedIncludes</li>
+      <li ListIndex="1">Combat_WoundInclude</li>
+      <li ListIndex="2">Combat_General</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">prefix->The [blast] [fromof] [initiator_definite]'s [weapon_projectile_label]</li>
+        <li ListIndex="1">prefix->The [blast] [fromof] [initiator_definite]'s [weapon_label]</li>
+        <li ListIndex="2">prefix->The [blast] [fromof] [initiator_definite]'s [mortarshell]</li>
+        <li ListIndex="3">prefix->The [blast] [fromof] [initiator_definite]'s [weapon_projectile_label]</li>
+        <li ListIndex="4">prefix->The [blast] [fromof] [initiator_definite]'s [weapon_label]</li>
+        <li ListIndex="5">prefix->The [blast] [fromof] [initiator_definite]'s [mortarshell]</li>
+        <li ListIndex="6">prefix->[initiator_definite]'s [blast]</li>
+        <li ListIndex="7">prefix->[initiator_definite]'s [weapon_projectile_label] [blast]</li>
+        <li ListIndex="8">prefix->[initiator_definite]'s [mortarshell] [blast]</li>
+        <li ListIndex="9">prefix->[initiator_definite]'s [weapon_label] [blast]</li>
+        <li ListIndex="10">prefix->[initiator_definite]'s [weapon_projectile_label]</li>
+        <li ListIndex="11">prefix->[initiator_definite]'s [mortarshell]</li>
+        <li ListIndex="12">prefix->[initiator_definite]'s [weapon_label]</li>
+        <li ListIndex="13">logentry->[prefix] [injured] [recipient_definite].</li>
+        <li ListIndex="14">logentry->[prefix] [destroyed] [recipient_definite]'s [destroyed_targets].</li>
+        <li ListIndex="15">logentry->[prefix] [destroyed] [recipient_definite]'s [destroyed_targets] [flavortextadverb].</li>
+        <li ListIndex="16">logentry->[prefix] [flavortextadverb] [destroyed] [recipient_definite]'s [destroyed_targets].</li>
+        <li ListIndex="17">logentry->[prefix] [destroyed] [recipient_definite]'s [destroyed_targets] and [damaged_past] [recipient_possessive] [damaged_targets].</li>
+        <li ListIndex="18">logentry(recipient_part_destroyed_count==0)->[prefix] [damaged_past] [recipient_definite]'s [damaged_targets].</li>
+        <li ListIndex="19">logentry(recipient_part_destroyed_count==0)->[prefix] [damaged_past] [recipient_definite]'s [damaged_targets] [flavortextadverb].</li>
+        <li ListIndex="20">logentry(recipient_part_destroyed_count==0)->[prefix] [flavortextadverb] [damaged_past] [recipient_definite]'s [damaged_targets].</li>
+        <li ListIndex="21">logentry->[recipient_definite] was [damaged_past] by [initiator_definite].</li>
+        <li ListIndex="22">logentry->[recipient_definite] was [damaged_past] [flavortextadverb] by [initiator_definite].</li>
+        <li ListIndex="23">logentry->[recipient_definite] was [damaged_past].</li>
+        <li ListIndex="24">blast->explosion</li>
+        <li ListIndex="25">blast->blast</li>
+        <li ListIndex="26">blast->shockwave</li>
+        <li ListIndex="27">blast->detonation</li>
+        <li ListIndex="28">blast->discharge</li>
+        <li ListIndex="29">blast->impact</li>
+        <li ListIndex="30">fromof->from</li>
+        <li ListIndex="31">fromof->of</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

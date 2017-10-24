@@ -21,5 +21,8 @@
       <li>KeyBindingCategoryDef_defName</li>
       <!-- ... -->
     </checkForConflicts>
+    <!--Type: bool-->
+    <!--Default Value: true-->
+    <selfConflicting>true_or_false</selfConflicting>
   </KeyBindingCategoryDef>
 </Defs>

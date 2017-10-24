@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--======================= Install natural parts =========================-->
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallNaturalKidney</defName>
+    <label>install kidney</label>
+    <description>Installs kidney.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing kidney.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Kidney</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Kidney</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftKidney</li>
+      <li ListIndex="1">RightKidney</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallNaturalLiver</defName>
+    <label>install liver</label>
+    <description>Installs liver.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing liver.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Liver</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Liver</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">Liver</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallNaturalLung</defName>
+    <label>install lung</label>
+    <description>Installs lung.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing lung.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Lung</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Lung</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftLung</li>
+      <li ListIndex="1">RightLung</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallNaturalHeart</defName>
+    <label>install heart</label>
+    <description>Installs heart.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing heart.</jobString>
+    <workAmount>3700</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Heart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Heart</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">Heart</li>
+    </appliedOnFixedBodyParts>
+    <surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.15</deathOnFailedSurgeryChance>
+  </RecipeDef>
+  <!--==================== Install artificial parts =======================-->
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallPegLeg</defName>
+    <label>install peg leg</label>
+    <description>Installs peg leg.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing peg leg.</jobString>
+    <workAmount>1300</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">WoodLog</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftLeg</li>
+      <li ListIndex="1">RightLeg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PegLeg</addsHediff>
+    <surgerySuccessChanceFactor>1.30</surgerySuccessChanceFactor>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallDenture</defName>
+    <label>install denture</label>
+    <description>Installs denture.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing denture.</jobString>
+    <workAmount>1500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>2</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Denture</addsHediff>
+    <surgerySuccessChanceFactor>1.3</surgerySuccessChanceFactor>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallSimpleProstheticLeg</defName>
+    <label>install simple prosthetic leg</label>
+    <description>Installs simple prosthetic leg.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing simple prosthetic leg.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">SimpleProstheticLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">SimpleProstheticLeg</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftLeg</li>
+      <li ListIndex="1">RightLeg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SimpleProstheticLeg</addsHediff>
+    <surgerySuccessChanceFactor>1.1</surgerySuccessChanceFactor>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallSimpleProstheticArm</defName>
+    <label>install simple prosthetic arm</label>
+    <description>Installs simple prosthetic arm.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing simple prosthetic arm.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">SimpleProstheticArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">SimpleProstheticArm</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftShoulder</li>
+      <li ListIndex="1">RightShoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SimpleProstheticArm</addsHediff>
+    <surgerySuccessChanceFactor>1.1</surgerySuccessChanceFactor>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBionicArm</defName>
+    <label>install bionic arm</label>
+    <description>Installs bionic arm.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing bionic arm.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">BionicArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">BionicArm</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftShoulder</li>
+      <li ListIndex="1">RightShoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BionicArm</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBionicLeg</defName>
+    <label>install bionic leg</label>
+    <description>Installs bionic leg.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing bionic leg.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">BionicLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">BionicLeg</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftLeg</li>
+      <li ListIndex="1">RightLeg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BionicLeg</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallPowerClaw</defName>
+    <label>install power claw</label>
+    <description>Installs power claw.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing power claw.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">PowerClaw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">PowerClaw</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftHand</li>
+      <li ListIndex="1">RightHand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PowerClaw</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallScytherBlade</defName>
+    <label>install scyther blade</label>
+    <description>Installs scyther blade.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing scyther blade.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">ScytherBlade</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">ScytherBlade</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftHand</li>
+      <li ListIndex="1">RightHand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ScytherBlade</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBionicEye</defName>
+    <label>install bionic eye</label>
+    <description>Installs bionic eye.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing bionic eye.</jobString>
+    <workAmount>3500</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">BionicEye</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">BionicEye</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>7</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">LeftEye</li>
+      <li ListIndex="1">RightEye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BionicEye</addsHediff>
+    <surgerySuccessChanceFactor>0.85</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallJoywire</defName>
+    <label>install joywire</label>
+    <description>Installs joywire.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing joywire.</jobString>
+    <workAmount>3700</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Joywire</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Joywire</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Joywire</addsHediff>
+    <surgerySuccessChanceFactor>0.80</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallPainstopper</defName>
+    <label>install painstopper</label>
+    <description>Installs painstopper.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing painstopper.</jobString>
+    <workAmount>3700</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <ingredients>
+      <li ListIndex="0">
+        <filter>
+          <categories>
+            <li ListIndex="0">Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Painstopper</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li ListIndex="0">Painstopper</li>
+      </thingDefs>
+      <categories>
+        <li ListIndex="0">Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <appliedOnFixedBodyParts>
+      <li ListIndex="0">Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Painstopper</addsHediff>
+    <surgerySuccessChanceFactor>0.80</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+  </RecipeDef>
+</Defs>

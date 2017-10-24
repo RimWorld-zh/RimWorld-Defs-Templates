@@ -49,4 +49,9 @@
     <order>600</order>
     <worldGenStep Class="WorldGenStep_Roads" />
   </WorldGenStepDef>
+  <WorldGenStepDef>
+    <defName>Features</defName>
+    <order>1000</order>
+    <worldGenStep Class="WorldGenStep_Features" />
+  </WorldGenStepDef>
 </Defs>

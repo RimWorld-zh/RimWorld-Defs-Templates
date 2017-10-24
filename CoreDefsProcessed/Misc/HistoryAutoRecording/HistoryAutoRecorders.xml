@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HistoryAutoRecorderDefs>
+<Defs>
   <HistoryAutoRecorderDef>
     <defName>WealthTotal</defName>
     <label>wealth (total)</label>
     <workerClass>HistoryAutoRecorderWorker_WealthTotal</workerClass>
     <recordTicksFrequency>30000</recordTicksFrequency>
     <graphColor>RGBA(1, 1, 0, 1)</graphColor>
+    <graphLabelY>Amount</graphLabelY>
   </HistoryAutoRecorderDef>
   <HistoryAutoRecorderDef>
     <defName>WealthItems</defName>
@@ -13,6 +14,7 @@
     <workerClass>HistoryAutoRecorderWorker_WealthItems</workerClass>
     <recordTicksFrequency>30000</recordTicksFrequency>
     <graphColor>RGBA(0.9, 0.7, 0, 1)</graphColor>
+    <graphLabelY>Amount</graphLabelY>
   </HistoryAutoRecorderDef>
   <HistoryAutoRecorderDef>
     <defName>WealthBuildings</defName>
@@ -20,6 +22,7 @@
     <workerClass>HistoryAutoRecorderWorker_WealthBuildings</workerClass>
     <recordTicksFrequency>30000</recordTicksFrequency>
     <graphColor>RGBA(0.5, 0.7, 0, 1)</graphColor>
+    <graphLabelY>Amount</graphLabelY>
   </HistoryAutoRecorderDef>
   <HistoryAutoRecorderDef>
     <defName>FreeColonists</defName>
@@ -27,6 +30,7 @@
     <workerClass>HistoryAutoRecorderWorker_FreeColonists</workerClass>
     <recordTicksFrequency>30000</recordTicksFrequency>
     <graphColor>RGBA(0, 1, 0, 1)</graphColor>
+    <graphLabelY>Colonists</graphLabelY>
   </HistoryAutoRecorderDef>
   <HistoryAutoRecorderDef>
     <defName>Prisoners</defName>
@@ -34,6 +38,7 @@
     <workerClass>HistoryAutoRecorderWorker_Prisoners</workerClass>
     <recordTicksFrequency>30000</recordTicksFrequency>
     <graphColor>RGBA(1, 0, 0, 1)</graphColor>
+    <graphLabelY>Prisoners</graphLabelY>
   </HistoryAutoRecorderDef>
   <HistoryAutoRecorderDef>
     <defName>ColonistMood</defName>
@@ -41,5 +46,6 @@
     <workerClass>HistoryAutoRecorderWorker_ColonistMood</workerClass>
     <recordTicksFrequency>30000</recordTicksFrequency>
     <graphColor>RGBA(0, 1, 0, 1)</graphColor>
+    <graphLabelY>Percent</graphLabelY>
   </HistoryAutoRecorderDef>
-</HistoryAutoRecorderDefs>
+</Defs>

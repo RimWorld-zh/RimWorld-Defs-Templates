@@ -6,8 +6,8 @@
     <lethalSeverity>1</lethalSeverity>
     <stages>
       <li ListIndex="0">
-        <label>hidden</label>
-        <everVisible>false</everVisible>
+        <label>minor</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.15</minSeverity>
@@ -83,6 +83,35 @@
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
+    <defName>CatatonicBreakdown</defName>
+    <label>catatonic breakdown</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Disappears" ListIndex="0">
+        <disappearsAfterTicks>
+          <min>100000</min>
+          <max>300000</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_RecoveryThought" ListIndex="1">
+        <thought>Catharsis</thought>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>a catatonic breakdown</labelNoun>
+  </HediffDef>
+  <HediffDef ParentName="DiseaseBase">
     <defName>PsychicShock</defName>
     <label>psychic shock</label>
     <hediffClass>HediffWithComps</hediffClass>
@@ -106,6 +135,7 @@
       </li>
     </stages>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>a psychic shock</labelNoun>
   </HediffDef>
   <HediffDef ParentName="DiseaseBase">
     <defName>CryptosleepSickness</defName>
@@ -182,8 +212,8 @@
     <lethalSeverity>1</lethalSeverity>
     <stages>
       <li ListIndex="0">
-        <label>initial-hidden</label>
-        <everVisible>false</everVisible>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.04</minSeverity>
@@ -283,6 +313,7 @@
     </stages>
     <makesSickThought>true</makesSickThought>
     <scenarioCanAdd>true</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
   </HediffDef>
   <HediffDef>
@@ -299,8 +330,8 @@
     <initialSeverity>0.001</initialSeverity>
     <stages>
       <li ListIndex="0">
-        <label>early-stage-hidden</label>
-        <everVisible>false</everVisible>
+        <label>early-stage</label>
+        <becomeVisible>false</becomeVisible>
         <vomitMtbDays>2.5</vomitMtbDays>
       </li>
       <li ListIndex="1">
@@ -326,6 +357,7 @@
       </li>
     </stages>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <labelNoun>pregnancy</labelNoun>
   </HediffDef>
   <HediffDef>
     <defName>HeartAttack</defName>
@@ -364,6 +396,7 @@
     </stages>
     <tendable>true</tendable>
     <defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+    <labelNoun>a heart attack</labelNoun>
   </HediffDef>
   <HediffDef>
     <defName>DrugOverdose</defName>
@@ -382,8 +415,8 @@
     <lethalSeverity>1</lethalSeverity>
     <stages>
       <li ListIndex="0">
-        <label>hidden</label>
-        <everVisible>false</everVisible>
+        <label>minor</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.50</minSeverity>
@@ -392,7 +425,7 @@
         <capMods>
           <li ListIndex="0">
             <capacity>Consciousness</capacity>
-            <offset>-0.50</offset>
+            <setMax>0.5</setMax>
           </li>
         </capMods>
       </li>
@@ -418,5 +451,36 @@
       </li>
     </stages>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <labelNoun>a drug overdose</labelNoun>
+  </HediffDef>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>ResurrectionSickness</defName>
+    <label>resurrection sickness</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Disappears" ListIndex="0">
+        <disappearsAfterTicks>
+          <min>90000</min>
+          <max>150000</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+    <initialSeverity>0.001</initialSeverity>
+    <stages>
+      <li ListIndex="0">
+        <vomitMtbDays>0.5</vomitMtbDays>
+        <capMods>
+          <li ListIndex="0">
+            <capacity>Moving</capacity>
+            <postFactor>0.1</postFactor>
+          </li>
+          <li ListIndex="1">
+            <capacity>Manipulation</capacity>
+            <postFactor>0.1</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
 </Defs>

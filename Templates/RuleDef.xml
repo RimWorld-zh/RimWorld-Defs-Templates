@@ -10,6 +10,16 @@
     <!--Complex List-->
     <!--Type: List<RimWorld.BaseGen.SymbolResolver>-->
     <resolvers>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Ship_Populate-->
+      <li Class="SymbolResolver_Ship_Populate" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Ship_Spine-->
+      <li Class="SymbolResolver_Ship_Spine" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Ship_Pregen-->
+      <li Class="SymbolResolver_Ship_Pregen" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Ship_Core-->
+      <li Class="SymbolResolver_Ship_Core" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_PrisonCell-->
+      <li Class="SymbolResolver_Interior_PrisonCell" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_DiningRoom-->
       <li Class="SymbolResolver_Interior_DiningRoom">
         <!--Type: Verse.IntVec2-->
@@ -31,10 +41,7 @@
         <minRectSize>value</minRectSize>
       </li>
       <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_Barracks-->
-      <li Class="SymbolResolver_Interior_Barracks">
-        <!--Type: Verse.IntVec2-->
-        <minRectSize>value</minRectSize>
-      </li>
+      <li Class="SymbolResolver_Interior_Barracks" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_Interior_Storage-->
       <li Class="SymbolResolver_Interior_Storage" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_AncientTemple-->
@@ -42,31 +49,17 @@
         <!--Type: Verse.IntVec2-->
         <minRectSize>value</minRectSize>
       </li>
-      <!--Type: RimWorld.BaseGen.SymbolResolver_Barracks-->
-      <li Class="SymbolResolver_Barracks">
+      <!--Type: RimWorld.BaseGen.SymbolResolver_GenericRoom-->
+      <li Class="SymbolResolver_GenericRoom">
         <!--Type: Verse.IntVec2-->
         <minRectSize>value</minRectSize>
+        <!--Type: string-->
+        <interior>string_value</interior>
       </li>
-      <!--Type: RimWorld.BaseGen.SymbolResolver_Storage-->
-      <li Class="SymbolResolver_Storage">
-        <!--Type: Verse.IntVec2-->
-        <minRectSize>value</minRectSize>
-      </li>
-      <!--Type: RimWorld.BaseGen.SymbolResolver_BatteryRoom-->
-      <li Class="SymbolResolver_BatteryRoom">
-        <!--Type: Verse.IntVec2-->
-        <minRectSize>value</minRectSize>
-      </li>
-      <!--Type: RimWorld.BaseGen.SymbolResolver_DiningRoom-->
-      <li Class="SymbolResolver_DiningRoom">
-        <!--Type: Verse.IntVec2-->
-        <minRectSize>value</minRectSize>
-      </li>
-      <!--Type: RimWorld.BaseGen.SymbolResolver_Brewery-->
-      <li Class="SymbolResolver_Brewery">
-        <!--Type: Verse.IntVec2-->
-        <minRectSize>value</minRectSize>
-      </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_InnerStockpile-->
+      <li Class="SymbolResolver_InnerStockpile" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_OutdoorLighting-->
+      <li Class="SymbolResolver_OutdoorLighting" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_IndoorLighting-->
       <li Class="SymbolResolver_IndoorLighting" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeStreet-->
@@ -133,6 +126,10 @@
         <!--Type: Verse.IntVec2-->
         <minRectSize>value</minRectSize>
       </li>
+      <!--Type: RimWorld.BaseGen.SymbolResolver_PrisonerBed-->
+      <li Class="SymbolResolver_PrisonerBed" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_Bed-->
+      <li Class="SymbolResolver_Bed" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_CultivatedPlants-->
       <li Class="SymbolResolver_CultivatedPlants" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_EdgeThing-->
@@ -162,6 +159,11 @@
       <li Class="SymbolResolver_FirefoamPopper" />
       <!--Type: RimWorld.BaseGen.SymbolResolver_OutdoorsCampfire-->
       <li Class="SymbolResolver_OutdoorsCampfire" />
+      <!--Type: RimWorld.BaseGen.SymbolResolver_EnsureCanHoldRoof-->
+      <li Class="SymbolResolver_EnsureCanHoldRoof">
+        <!--Type: Verse.IntVec2-->
+        <minRectSize>value</minRectSize>
+      </li>
       <!--Type: RimWorld.BaseGen.SymbolResolver_EnsureCanReachMapEdge-->
       <li Class="SymbolResolver_EnsureCanReachMapEdge">
         <!--Type: Verse.IntVec2-->

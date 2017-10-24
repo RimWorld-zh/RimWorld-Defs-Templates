@@ -17,15 +17,33 @@
     <!--Type: bool-->
     <!--Default Value: true-->
     <saved>true_or_false</saved>
-    <!--Simple List-->
+    <!--Complex List-->
     <!--Type: List<RimWorld.WorldObjectCompProperties>-->
     <comps>
+      <!--Type: RimWorld.WorldObjectCompProperties_DebugArena-->
+      <li Class="WorldObjectCompProperties_DebugArena" />
       <!--Type: RimWorld.WorldObjectCompProperties_Timeout-->
       <li Class="WorldObjectCompProperties_Timeout" />
       <!--Type: RimWorld.WorldObjectCompProperties_DefeatAllEnemiesQuest-->
       <li Class="WorldObjectCompProperties_DefeatAllEnemiesQuest" />
       <!--Type: RimWorld.WorldObjectCompProperties_ItemStashContents-->
       <li Class="WorldObjectCompProperties_ItemStashContents" />
+      <!--Type: RimWorld.WorldObjectCompProperties_DownedRefugee-->
+      <li Class="WorldObjectCompProperties_DownedRefugee" />
+      <!--Type: RimWorld.WorldObjectCompProperties_PrisonerWillingToJoin-->
+      <li Class="WorldObjectCompProperties_PrisonerWillingToJoin" />
+      <!--Type: RimWorld.WorldObjectCompProperties_FormCaravan-->
+      <li Class="WorldObjectCompProperties_FormCaravan">
+        <!--Type: bool-->
+        <!--Default Value: false-->
+        <reformCaravan>true_or_false</reformCaravan>
+      </li>
+      <!--Type: RimWorld.WorldObjectCompProperties_TimedForcedExit-->
+      <li Class="WorldObjectCompProperties_TimedForcedExit" />
+      <!--Type: RimWorld.WorldObjectCompProperties_Abandon-->
+      <li Class="WorldObjectCompProperties_Abandon" />
+      <!--Type: RimWorld.WorldObjectCompProperties_EscapeShip-->
+      <li Class="WorldObjectCompProperties_EscapeShip" />
       <!--Type: RimWorld.WorldObjectCompProperties_CaravanRequest-->
       <li Class="WorldObjectCompProperties_CaravanRequest" />
       <!-- ... -->
@@ -36,6 +54,16 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <isTempIncidentMapOwner>true_or_false</isTempIncidentMapOwner>
+    <!--Reference List-->
+    <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
+    <incidentTargetTypes>
+      <!--Type: RimWorld.IncidentTargetTypeDef-->
+      <li>IncidentTargetTypeDef_defName</li>
+      <!-- ... -->
+    </incidentTargetTypes>
+    <!--Type: Verse.MapGeneratorDef-->
+    <!--Default Value: null-->
+    <mapGenerator>MapGeneratorDef_defName</mapGenerator>
     <!--Simple List-->
     <!--Type: List<System.Type>-->
     <inspectorTabs>

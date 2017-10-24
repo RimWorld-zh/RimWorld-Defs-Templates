@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GameConditionDefs>
+<Defs>
   <GameConditionDef>
     <defName>SolarFlare</defName>
     <label>solar flare</label>
@@ -98,4 +98,12 @@
     <description>An interstellar planetkiller weapon is approaching this planet. When it hits, it will destroy all life.</description>
     <conditionClass>GameCondition_Planetkiller</conditionClass>
   </GameConditionDef>
-</GameConditionDefs>
+  <GameConditionDef>
+    <defName>Aurora</defName>
+    <label>aurora</label>
+    <description>A bright aurora has lit up the sky. The undulating colors will boost the mood of anyone outside to see them.</description>
+    <conditionClass>GameCondition_Aurora</conditionClass>
+    <endMessage>The aurora is ending.</endMessage>
+    <canBePermanent>true</canBePermanent>
+  </GameConditionDef>
+</Defs>

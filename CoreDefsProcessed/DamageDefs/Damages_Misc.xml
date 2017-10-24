@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <DamageDef Name="LocalInjuryBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
   <DamageDef>
     <defName>Deterioration</defName>
     <label>deterioration</label>
@@ -25,6 +28,7 @@
     <defName>Extinguish</defName>
     <label>extinguish</label>
     <workerClass>DamageWorker_Extinguish</workerClass>
+    <harmsHealth>false</harmsHealth>
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
     <deathMessage>{0} has been killed.</deathMessage>
@@ -32,6 +36,29 @@
     <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
     <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
     <soundExplosion>Explosion_Stun</soundExplosion>
+  </DamageDef>
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>Bomb</defName>
+    <label>bomb</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+    <spreadOut>true</spreadOut>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+    <isExplosive>true</isExplosive>
+    <explosionDamage>50</explosionDamage>
+    <explosionBuildingDamageFactor>2</explosionBuildingDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+    <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
   </DamageDef>
   <DamageDef>
     <defName>Smoke</defName>

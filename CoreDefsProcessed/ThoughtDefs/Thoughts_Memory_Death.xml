@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThoughtDefs>
+<Defs>
   <ThoughtDef Name="DeathMemory" Abstract="True">
     <stackLimit>5</stackLimit>
     <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
@@ -442,4 +442,4 @@
     <durationDays>30.0</durationDays>
     <showBubble>true</showBubble>
   </ThoughtDef>
-</ThoughtDefs>
+</Defs>

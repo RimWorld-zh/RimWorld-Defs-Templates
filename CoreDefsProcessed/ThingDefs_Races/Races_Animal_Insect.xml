@@ -39,6 +39,26 @@
         <compClass>CompAttachBase</compClass>
       </li>
     </comps>
+    <tools>
+      <li ListIndex="0">
+        <capacities>
+          <li ListIndex="0">Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2.5</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="1">
+        <label>head</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.65</cooldownTime>
+        <commonality>0.2</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <selectable>true</selectable>
     <hasTooltip>true</hasTooltip>
     <inspectorTabs>
@@ -50,6 +70,7 @@
       <li ListIndex="5">ITab_Pawn_Guest</li>
       <li ListIndex="6">ITab_Pawn_Prisoner</li>
       <li ListIndex="7">ITab_Pawn_Social</li>
+      <li ListIndex="8">ITab_Pawn_Combat</li>
     </inspectorTabs>
     <drawGUIOverlay>true</drawGUIOverlay>
     <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
@@ -58,27 +79,11 @@
     </tradeTags>
     <recipes>
       <li ListIndex="0">ExciseCarcinoma</li>
-      <li ListIndex="1">RemoveBodyPart</li>
-      <li ListIndex="2">Euthanize</li>
-      <li ListIndex="3">Anesthetize</li>
+      <li ListIndex="1">AdministerMechSerumHealer</li>
+      <li ListIndex="2">RemoveBodyPart</li>
+      <li ListIndex="3">Euthanize</li>
+      <li ListIndex="4">Anesthetize</li>
     </recipes>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.85</defaultCooldownTime>
-        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
-        <meleeDamageDef>Bite</meleeDamageDef>
-        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="1">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <fleshType>Insectoid</fleshType>
       <bloodDef>FilthBloodInsect</bloodDef>
@@ -187,7 +192,7 @@
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
-    <combatPower>30</combatPower>
+    <combatPower>40</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     <labelMale>male megascarab</labelMale>
     <labelMalePlural>male megascarabs</labelMalePlural>
@@ -222,6 +227,26 @@
         <compClass>CompAttachBase</compClass>
       </li>
     </comps>
+    <tools>
+      <li ListIndex="0">
+        <capacities>
+          <li ListIndex="0">Cut</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="1">
+        <label>head</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.65</cooldownTime>
+        <commonality>0.2</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <selectable>true</selectable>
     <hasTooltip>true</hasTooltip>
     <inspectorTabs>
@@ -233,6 +258,7 @@
       <li ListIndex="5">ITab_Pawn_Guest</li>
       <li ListIndex="6">ITab_Pawn_Prisoner</li>
       <li ListIndex="7">ITab_Pawn_Social</li>
+      <li ListIndex="8">ITab_Pawn_Combat</li>
     </inspectorTabs>
     <drawGUIOverlay>true</drawGUIOverlay>
     <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
@@ -241,27 +267,11 @@
     </tradeTags>
     <recipes>
       <li ListIndex="0">ExciseCarcinoma</li>
-      <li ListIndex="1">RemoveBodyPart</li>
-      <li ListIndex="2">Euthanize</li>
-      <li ListIndex="3">Anesthetize</li>
+      <li ListIndex="1">AdministerMechSerumHealer</li>
+      <li ListIndex="2">RemoveBodyPart</li>
+      <li ListIndex="3">Euthanize</li>
+      <li ListIndex="4">Anesthetize</li>
     </recipes>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.9</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Cut</meleeDamageDef>
-        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="1">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <fleshType>Insectoid</fleshType>
       <bloodDef>FilthBloodInsect</bloodDef>
@@ -371,7 +381,7 @@
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
-    <combatPower>65</combatPower>
+    <combatPower>75</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     <labelMale>male spelopede</labelMale>
     <labelMalePlural>male spelopedes</labelMalePlural>
@@ -406,6 +416,26 @@
         <compClass>CompAttachBase</compClass>
       </li>
     </comps>
+    <tools>
+      <li ListIndex="0">
+        <capacities>
+          <li ListIndex="0">Cut</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>2.4</cooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+      </li>
+      <li ListIndex="1">
+        <label>head</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.65</cooldownTime>
+        <commonality>0.2</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <selectable>true</selectable>
     <hasTooltip>true</hasTooltip>
     <inspectorTabs>
@@ -417,6 +447,7 @@
       <li ListIndex="5">ITab_Pawn_Guest</li>
       <li ListIndex="6">ITab_Pawn_Prisoner</li>
       <li ListIndex="7">ITab_Pawn_Social</li>
+      <li ListIndex="8">ITab_Pawn_Combat</li>
     </inspectorTabs>
     <drawGUIOverlay>true</drawGUIOverlay>
     <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
@@ -425,27 +456,11 @@
     </tradeTags>
     <recipes>
       <li ListIndex="0">ExciseCarcinoma</li>
-      <li ListIndex="1">RemoveBodyPart</li>
-      <li ListIndex="2">Euthanize</li>
-      <li ListIndex="3">Anesthetize</li>
+      <li ListIndex="1">AdministerMechSerumHealer</li>
+      <li ListIndex="2">RemoveBodyPart</li>
+      <li ListIndex="3">Euthanize</li>
+      <li ListIndex="4">Anesthetize</li>
     </recipes>
-    <verbs>
-      <li ListIndex="0">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.9</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
-        <meleeDamageDef>Cut</meleeDamageDef>
-        <meleeDamageBaseAmount>13</meleeDamageBaseAmount>
-      </li>
-      <li ListIndex="1">
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <commonality>0.01</commonality>
-        <defaultCooldownTime>1.65</defaultCooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
-      </li>
-    </verbs>
     <race>
       <fleshType>Insectoid</fleshType>
       <bloodDef>FilthBloodInsect</bloodDef>
@@ -492,58 +507,6 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
-  </ThingDef>
-  <ThingDef>
-    <!--Implied ThingDef meat, generated by RimTrans.-->
-    <defName>Megaspider_Meat</defName>
-    <label>insect meat</label>
-    <description>insect meat</description>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <MarketValue>2</MarketValue>
-      <Mass>0.03</Mass>
-      <Flammability>0.5</Flammability>
-      <Beauty>-20</Beauty>
-      <DeteriorationRate>10</DeteriorationRate>
-    </statBases>
-    <pathCost>15</pathCost>
-    <altitudeLayer>Item</altitudeLayer>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <stackLimit>75</stackLimit>
-    <rotatable>false</rotatable>
-    <useHitPoints>true</useHitPoints>
-    <comps>
-      <li Class="CompProperties_Forbiddable" ListIndex="0" />
-      <li Class="CompProperties_Rottable" ListIndex="1">
-        <daysToRotStart>2</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
-      <li Class="CompProperties_FoodPoisoningChance" ListIndex="2" />
-    </comps>
-    <graphicData>
-      <texPath>Things/Item/Resource/MeatFoodRaw/MeatSmall</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <color>(160,150,140)</color>
-    </graphicData>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <alwaysHaulable>true</alwaysHaulable>
-    <thingCategories>
-      <li ListIndex="0">MeatRaw</li>
-    </thingCategories>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <ingestible>
-      <tasteThought>AteRawFood</tasteThought>
-      <ingestEffect>EatMeat</ingestEffect>
-      <ingestSound>RawMeat_Eat</ingestSound>
-      <foodType>Meat</foodType>
-      <nutrition>0.05</nutrition>
-      <preferability>RawBad</preferability>
-      <specialThoughtDirect>AteInsectMeatDirect</specialThoughtDirect>
-      <specialThoughtAsIngredient>AteInsectMeatAsIngredient</specialThoughtAsIngredient>
-    </ingestible>
   </ThingDef>
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>Megaspider</defName>

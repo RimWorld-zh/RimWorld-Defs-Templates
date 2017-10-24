@@ -11,6 +11,7 @@
       <!--Type: Verse.SubEffecterDef-->
       <li>
         <!--Type: System.Type-->
+        <!--Default Value: null-->
         <subEffecterClass>class_name</subEffecterClass>
         <!--Type: Verse.IntRange-->
         <!--Default Value: new IntRange(1, 1)-->
@@ -34,8 +35,10 @@
         <!--Default Value: 0.5-->
         <positionLerpFactor>float_value</positionLerpFactor>
         <!--Type: float-->
+        <!--Default Value: 0.0-->
         <positionRadius>float_value</positionRadius>
         <!--Type: Verse.ThingDef-->
+        <!--Default Value: null-->
         <moteDef>ThingDef_defName</moteDef>
         <!--Type: Verse.FloatRange-->
         <!--Default Value: new FloatRange(0f, 360f)-->
@@ -81,8 +84,18 @@
           <max>float_value</max>
         </airTime>
         <!--Type: Verse.SoundDef-->
+        <!--Default Value: null-->
         <soundDef>SoundDef_defName</soundDef>
+        <!--Type: Verse.IntRange-->
+        <!--Default Value: new IntRange(300, 600)-->
+        <intermittentSoundInterval>
+          <!--Type: int-->
+          <min>int_value</min>
+          <!--Type: int-->
+          <max>int_value</max>
+        </intermittentSoundInterval>
         <!--Type: int-->
+        <!--Default Value: 0-->
         <ticksBeforeSustainerStart>int_value</ticksBeforeSustainerStart>
       </li>
       <!-- ... -->

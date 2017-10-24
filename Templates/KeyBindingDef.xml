@@ -19,5 +19,12 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <devModeOnly>true_or_false</devModeOnly>
+    <!--Simple List-->
+    <!--Type: List<string>-->
+    <extraConflictTags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </extraConflictTags>
   </KeyBindingDef>
 </Defs>

@@ -9,7 +9,7 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: Verse.AltitudeLayer-->
-    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, FlyingItem, Gas, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, WorldDataOverlay, MetaOverlays, _Count-->
+    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, Gas, Skyfaller, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, MapDataOverlay, MetaOverlays, _Count-->
     <!--Default Value: Item-->
     <altitudeLayer>enum_value</altitudeLayer>
     <!--Type: System.Type-->
@@ -19,6 +19,7 @@
     <category>Mote</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
+    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -27,13 +28,17 @@
     <!--Default Value: true-->
     <useHitPoints>true_or_false</useHitPoints>
     <!--Type: Verse.GraphicData-->
+    <!--Default Value: null-->
     <graphicData>
       <!--Type: string-->
+      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
       <!--Type: System.Type-->
+      <!--Default Value: null-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
-      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Default Value: None-->
       <shaderType>enum_value</shaderType>
       <!--Type: UnityEngine.Color-->
       <!--Default Value: Color.white-->
@@ -44,21 +49,27 @@
     </graphicData>
     <!--Type: bool-->
     <!--Default Value: false-->
+    <drawOffscreen>true_or_false</drawOffscreen>
+    <!--Type: bool-->
+    <!--Default Value: false-->
     <drawGUIOverlay>true_or_false</drawGUIOverlay>
     <!--Type: bool-->
     <!--Default Value: true-->
     <isSaveable>true_or_false</isSaveable>
     <!--Type: Verse.MoteProperties-->
+    <!--Default Value: null-->
     <mote>
       <!--Type: bool-->
       <!--Default Value: false-->
       <realTime>true_or_false</realTime>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <fadeInTime>float_value</fadeInTime>
       <!--Type: float-->
       <!--Default Value: 1.0-->
       <solidTime>float_value</solidTime>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <fadeOutTime>float_value</fadeOutTime>
       <!--Type: UnityEngine.Vector3-->
       <!--Default Value: Vector3.zero-->
@@ -66,6 +77,7 @@
       <!--Type: float-->
       <speedPerTime>float_value</speedPerTime>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <growthRate>float_value</growthRate>
       <!--Type: bool-->
       <!--Default Value: false-->
@@ -77,6 +89,9 @@
       <!--Type: bool-->
       <!--Default Value: false-->
       <needsMaintenance>true_or_false</needsMaintenance>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <rotateTowardsTarget>true_or_false</rotateTowardsTarget>
     </mote>
   </ThingDef>
 </Defs>

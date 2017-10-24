@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef Name="BuildingNaturalBase" Abstract="True">
     <category>Building</category>
     <filthLeaving>RockRubble</filthLeaving>
@@ -610,4 +610,4 @@
     <selectable>true</selectable>
     <fillPercent>0.20</fillPercent>
   </ThingDef>
-</ThingDefs>
+</Defs>

@@ -12,6 +12,8 @@
     <description>Your own community.</description>
     <isPlayer>true</isPlayer>
     <baseNameMaker>NamerFactionBasePlayerColony</baseNameMaker>
+    <factionNameMakerPlayer>NamerFactionBasePlayerColonyRandomized</factionNameMakerPlayer>
+    <baseNameMakerPlayer>NamerFactionPlayerColonyRandomized</baseNameMakerPlayer>
     <basicMemberKind>Colonist</basicMemberKind>
     <startingResearchTags>
       <li ListIndex="0">ClassicStart</li>
@@ -27,6 +29,7 @@
         <li ListIndex="0">Synthread</li>
       </thingDefs>
     </apparelStuffFilter>
+    <geneticVariance>1</geneticVariance>
     <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
     <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
     <colorSpectrum>
@@ -39,10 +42,15 @@
     <description>Your own tribe.</description>
     <isPlayer>true</isPlayer>
     <baseNameMaker>NamerFactionBasePlayerTribe</baseNameMaker>
+    <factionNameMakerPlayer>NamerFactionBaseTribal</factionNameMakerPlayer>
+    <baseNameMakerPlayer>NamerFactionTribal</baseNameMakerPlayer>
     <basicMemberKind>Tribesperson</basicMemberKind>
     <startingResearchTags>
       <li ListIndex="0">TribalStart</li>
     </startingResearchTags>
+    <recipePrerequisiteTags>
+      <li ListIndex="0">Tribal</li>
+    </recipePrerequisiteTags>
     <pawnsPlural>tribespeople</pawnsPlural>
     <pawnNameMaker>NamerPersonTribal</pawnNameMaker>
     <techLevel>Neolithic</techLevel>
@@ -55,6 +63,7 @@
         <li ListIndex="0">Cloth</li>
       </thingDefs>
     </apparelStuffFilter>
+    <geneticVariance>1</geneticVariance>
     <homeIconPath>World/WorldObjects/TribalFactionBase</homeIconPath>
     <expandingIconTexture>World/WorldObjects/Expanding/Village</expandingIconTexture>
     <colorSpectrum>

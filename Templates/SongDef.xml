@@ -27,7 +27,7 @@
     <!--Type: List<RimWorld.Season>-->
     <allowedSeasons>
       <!--Type: RimWorld.Season-->
-      <!--Available Values: Undefined, Spring, Summer, Fall, Winter-->
+      <!--Available Values: Undefined, Spring, Summer, Fall, Winter, PermanentSummer, PermanentWinter-->
       <li>enum_value</li>
       <!-- ... -->
     </allowedSeasons>

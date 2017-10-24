@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="ShellBase" ParentName="ResourceBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>3.5</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <stackLimit>25</stackLimit>
+    <thingCategories>
+      <li>MortarShells</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+    <tradeTags>
+      <li>MortarShell</li>
+    </tradeTags>
+    <techLevel>Industrial</techLevel>
+  </ThingDef>
+  <ThingDef Name="MakeableShellBase" ParentName="ShellBase" Abstract="True">
+    <recipeMaker>
+      <targetCountAdjustment>5</targetCountAdjustment>
+      <workAmount>800</workAmount>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <!-- High-explosive -->
+  <ThingDef ParentName="MakeableShellBase">
+    <defName>Shell_HighExplosive</defName>
+    <label>high-explosive shell</label>
+    <description>A shell filled with high explosives. Can be fired from mortars or installed as a trap. Explodes when damaged.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>3.5</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <Steel>20</Steel>
+      <Chemfuel>10</Chemfuel>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>25</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Explosive" ListIndex="1">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>10</min>
+          <max>30</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <recipeMaker>
+      <targetCountAdjustment>5</targetCountAdjustment>
+      <workAmount>800</workAmount>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_HighExplosive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">MortarShells</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+    <tradeTags>
+      <li ListIndex="0">MortarShell</li>
+    </tradeTags>
+    <techLevel>Industrial</techLevel>
+    <projectileWhenLoaded>Bullet_Shell_HighExplosive</projectileWhenLoaded>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_HighExplosive</defName>
+    <label>high-explosive shell</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/ShellHighExplosive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>41</speed>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <explosionRadius>3.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <!-- Incendiary -->
+  <ThingDef ParentName="MakeableShellBase">
+    <defName>Shell_Incendiary</defName>
+    <label>incendiary shell</label>
+    <description>A shell filled with flammable gel and a small explosive charge. Starts fires when detonated. Can be fired from mortars or installed as a trap. Explodes when damaged.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>3.5</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <Steel>5</Steel>
+      <Chemfuel>30</Chemfuel>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>25</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Explosive" ListIndex="1">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>10</min>
+          <max>30</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <recipeMaker>
+      <targetCountAdjustment>5</targetCountAdjustment>
+      <workAmount>800</workAmount>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_Incendiary</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">MortarShells</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+    <tradeTags>
+      <li ListIndex="0">MortarShell</li>
+    </tradeTags>
+    <techLevel>Industrial</techLevel>
+    <projectileWhenLoaded>Bullet_Shell_Incendiary</projectileWhenLoaded>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_Incendiary</defName>
+    <label>incendiary shell</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/ShellIncendiary</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>41</speed>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarIncendiary_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <explosionRadius>2.9</explosionRadius>
+      <preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.25</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+  <!-- EMP -->
+  <ThingDef ParentName="MakeableShellBase">
+    <defName>Shell_EMP</defName>
+    <label>EMP shell</label>
+    <description>A shell filled with batteries and antennas, for generating an EMP pulse when detonated. Electromagnetic pulses temporarily disable electrical circuits. Can be fired from mortars or installed as a trap. Explodes when damaged.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>3.5</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <Steel>5</Steel>
+      <Component>1</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>25</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Explosive" ListIndex="1">
+        <explosiveRadius>8.5</explosiveRadius>
+        <explosiveDamageType>EMP</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>10</min>
+          <max>30</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <recipeMaker>
+      <targetCountAdjustment>5</targetCountAdjustment>
+      <workAmount>800</workAmount>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_EMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">MortarShells</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+    <tradeTags>
+      <li ListIndex="0">MortarShell</li>
+    </tradeTags>
+    <techLevel>Industrial</techLevel>
+    <projectileWhenLoaded>Bullet_Shell_EMP</projectileWhenLoaded>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_EMP</defName>
+    <label>EMP shell</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/ShellEMP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>41</speed>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>EMP</damageDef>
+      <damageAmountBase>360</damageAmountBase>
+      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_EMP</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <explosionRadius>8.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <!-- Firefoam -->
+  <ThingDef ParentName="MakeableShellBase">
+    <defName>Shell_Firefoam</defName>
+    <label>firefoam shell</label>
+    <description>A pressurized shell filled with fire-extinguishing foam. Can be fired from mortars or installed as a trap. Explodes when damaged.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>3.5</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>25</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Explosive" ListIndex="1">
+        <explosiveRadius>5</explosiveRadius>
+        <explosiveDamageType>Extinguish</explosiveDamageType>
+        <postExplosionSpawnThingDef>FilthFireFoam</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>10</min>
+          <max>30</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <recipeMaker>
+      <targetCountAdjustment>5</targetCountAdjustment>
+      <workAmount>800</workAmount>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_Firefoam</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">MortarShells</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+    <tradeTags>
+      <li ListIndex="0">MortarShell</li>
+    </tradeTags>
+    <techLevel>Industrial</techLevel>
+    <projectileWhenLoaded>Bullet_Shell_Firefoam</projectileWhenLoaded>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_Firefoam</defName>
+    <label>firefoam shell</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/ShellFirefoam</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>41</speed>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Extinguish</damageDef>
+      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_EMP</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <explosionRadius>5</explosionRadius>
+      <postExplosionSpawnThingDef>FilthFireFoam</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      <explosionEffect>ExtinguisherExplosion</explosionEffect>
+    </projectile>
+  </ThingDef>
+  <!-- Antigrain warhead -->
+  <ThingDef ParentName="ShellBase">
+    <defName>Shell_AntigrainWarhead</defName>
+    <label>antigrain warhead</label>
+    <description>A tiny ultra-tech warhead usually used by spacecraft or glitterworld war machines. Powered by a grain of antimatter, it creates a huge explosion and starts fires around the target. Can be fired from mortars or installed as a trap. Explodes when damaged.</description>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <MaxHitPoints>70</MaxHitPoints>
+      <Mass>3.5</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Normal</tickerType>
+    <stackLimit>25</stackLimit>
+    <rotatable>false</rotatable>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li Class="CompProperties_Explosive" ListIndex="1">
+        <explosiveRadius>15</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <damageAmountBase>400</damageAmountBase>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <dealMoreDamageAtCenter>true</dealMoreDamageAtCenter>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <explosionEffect>GiantExplosion</explosionEffect>
+        <explosionSound>Explosion_GiantBomb</explosionSound>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <wickTicks>
+          <min>10</min>
+          <max>30</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <itemGeneratorTags>
+      <li ListIndex="0">SpecialReward</li>
+    </itemGeneratorTags>
+    <graphicData>
+      <texPath>Things/Item/Resource/Shell/Shell_AntigrainWarhead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">MortarShells</li>
+    </thingCategories>
+    <soundDrop>Standard_Drop</soundDrop>
+    <soundInteract>Metal_Drop</soundInteract>
+    <tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li ListIndex="0">MortarShell</li>
+    </tradeTags>
+    <techLevel>Industrial</techLevel>
+    <projectileWhenLoaded>Bullet_Shell_AntigrainWarhead</projectileWhenLoaded>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_AntigrainWarhead</defName>
+    <label>antigrain warhead</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/ShellAntigrainWarhead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>41</speed>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>400</damageAmountBase>
+      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_GiantBomb</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <explosionRadius>15</explosionRadius>
+      <explosionChanceToStartFire>0.22</explosionChanceToStartFire>
+      <explosionDealMoreDamageAtCenter>true</explosionDealMoreDamageAtCenter>
+      <explosionEffect>GiantExplosion</explosionEffect>
+    </projectile>
+  </ThingDef>
+</Defs>

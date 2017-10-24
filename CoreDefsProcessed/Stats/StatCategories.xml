@@ -57,6 +57,12 @@
     <displayOrder>80</displayOrder>
     <displayAllByDefault>true</displayAllByDefault>
   </StatCategoryDef>
+  <StatCategoryDef>
+    <defName>Surgery</defName>
+    <label>Surgical</label>
+    <displayOrder>90</displayOrder>
+    <displayAllByDefault>true</displayAllByDefault>
+  </StatCategoryDef>
   <!--================ Pawn ================-->
   <StatCategoryDef>
     <defName>PawnCombat</defName>

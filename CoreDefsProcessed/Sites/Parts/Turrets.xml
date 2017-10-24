@@ -11,6 +11,13 @@
     <knownDanger>true</knownDanger>
     <requiresFaction>true</requiresFaction>
     <minFactionTechLevel>Industrial</minFactionTechLevel>
+    <tags>
+      <li ListIndex="0">MineralScannerPreciousLumpThreat</li>
+      <li ListIndex="1">ItemStashQuestThreat</li>
+      <li ListIndex="2">DownedRefugeeQuestThreat</li>
+      <li ListIndex="3">PrisonerWillingToJoinQuestThreat</li>
+    </tags>
+    <descriptionDialogue>a ring of enemy turrets defends the site</descriptionDialogue>
   </SitePartDef>
   <GenStepDef>
     <defName>Turrets</defName>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThinkTrees>
+<Defs>
   <!--============= AI Duty ============-->
   <ThinkTreeDef>
     <defName>LordDuty</defName>
@@ -43,4 +43,4 @@
       <tagToGive>UnspecifiedLordDuty</tagToGive>
     </thinkRoot>
   </ThinkTreeDef>
-</ThinkTrees>
+</Defs>

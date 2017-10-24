@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnKindDefs>
+<Defs>
   <PawnKindDef Name="TribalBase" Abstract="True">
     <race>Human</race>
     <defaultFactionType>Tribe</defaultFactionType>
@@ -21,7 +21,7 @@
       <min>0.5</min>
       <max>1.8</max>
     </gearHealthRange>
-    <combatPower>38</combatPower>
+    <combatPower>40</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>180</min>
@@ -35,7 +35,7 @@
       <max>400</max>
     </weaponMoney>
     <weaponTags>
-      <li ListIndex="0">NeolithicMelee</li>
+      <li ListIndex="0">NeolithicMeleeBasic</li>
     </weaponTags>
     <invNutrition>2.55</invNutrition>
     <invFoodDef>Pemmican</invFoodDef>
@@ -53,12 +53,15 @@
       <min>0.5</min>
       <max>1.8</max>
     </gearHealthRange>
-    <combatPower>38</combatPower>
+    <combatPower>40</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>180</min>
       <max>350</max>
     </apparelMoney>
+    <apparelRequired>
+      <li ListIndex="0">Apparel_TribalHeaddress</li>
+    </apparelRequired>
     <apparelTags>
       <li ListIndex="0">Tribal</li>
     </apparelTags>
@@ -67,7 +70,7 @@
       <max>400</max>
     </weaponMoney>
     <weaponTags>
-      <li ListIndex="0">NeolithicMelee</li>
+      <li ListIndex="0">NeolithicMeleeBasic</li>
     </weaponTags>
     <invNutrition>2.55</invNutrition>
     <invFoodDef>Pemmican</invFoodDef>
@@ -100,7 +103,112 @@
       <max>400</max>
     </weaponMoney>
     <weaponTags>
-      <li ListIndex="0">NeolithicRanged</li>
+      <li ListIndex="0">NeolithicRangedBasic</li>
+    </weaponTags>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>TribalHunter</defName>
+    <label>hunter</label>
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>hunters</labelPlural>
+    <maxGenerationAge>40</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>1.8</max>
+    </gearHealthRange>
+    <combatPower>65</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>180</min>
+      <max>450</max>
+    </apparelMoney>
+    <apparelRequired>
+      <li ListIndex="0">Apparel_WarVeil</li>
+    </apparelRequired>
+    <apparelTags>
+      <li ListIndex="0">Tribal</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>400</min>
+      <max>700</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">NeolithicRangedHunter</li>
+    </weaponTags>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>TribalHeavyArcher</defName>
+    <label>heavy archer</label>
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>heavy archers</labelPlural>
+    <maxGenerationAge>40</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>2.2</max>
+    </gearHealthRange>
+    <combatPower>90</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>200</min>
+      <max>550</max>
+    </apparelMoney>
+    <apparelRequired>
+      <li ListIndex="0">Apparel_WarMask</li>
+    </apparelRequired>
+    <apparelTags>
+      <li ListIndex="0">Tribal</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>600</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">NeolithicRangedHeavy</li>
+    </weaponTags>
+    <invNutrition>2.55</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>TribalBerserker</defName>
+    <label>berserker</label>
+    <race>Human</race>
+    <defaultFactionType>Tribe</defaultFactionType>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <labelPlural>berserkers</labelPlural>
+    <maxGenerationAge>40</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>2.2</max>
+    </gearHealthRange>
+    <combatPower>90</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <apparelMoney>
+      <min>200</min>
+      <max>550</max>
+    </apparelMoney>
+    <apparelRequired>
+      <li ListIndex="0">Apparel_WarMask</li>
+    </apparelRequired>
+    <apparelTags>
+      <li ListIndex="0">Tribal</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>600</min>
+      <max>750</max>
+    </weaponMoney>
+    <weaponTags>
+      <li ListIndex="0">NeolithicMeleeAdvanced</li>
     </weaponTags>
     <invNutrition>2.55</invNutrition>
     <invFoodDef>Pemmican</invFoodDef>
@@ -119,12 +227,15 @@
       <max>3.0</max>
     </gearHealthRange>
     <factionLeader>true</factionLeader>
-    <combatPower>70</combatPower>
+    <combatPower>90</combatPower>
     <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
     <apparelMoney>
       <min>600</min>
       <max>1600</max>
     </apparelMoney>
+    <apparelRequired>
+      <li ListIndex="0">Apparel_TribalHeaddress</li>
+    </apparelRequired>
     <apparelTags>
       <li ListIndex="0">Tribal</li>
     </apparelTags>
@@ -133,11 +244,11 @@
       <max>1000</max>
     </weaponMoney>
     <weaponTags>
-      <li ListIndex="0">NeolithicRanged</li>
+      <li ListIndex="0">NeolithicRangedChief</li>
     </weaponTags>
     <itemQuality>Superior</itemQuality>
     <invNutrition>2.55</invNutrition>
     <invFoodDef>Pemmican</invFoodDef>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
   </PawnKindDef>
-</PawnKindDefs>
+</Defs>

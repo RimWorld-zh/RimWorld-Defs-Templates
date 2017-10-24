@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Buildings>
+<Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>WindTurbine</defName>
     <label>wind turbine</label>
@@ -20,6 +20,7 @@
     <researchPrerequisites>
       <li ListIndex="0">Electricity</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructMetal</constructEffect>
     <altitudeLayer>Building</altitudeLayer>
@@ -61,9 +62,8 @@
     <fillPercent>0.5</fillPercent>
     <blockWind>true</blockWind>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <allowAutoroof>false</allowAutoroof>
       <ai_chillDestination>false</ai_chillDestination>
     </building>
   </ThingDef>
-</Buildings>
+</Defs>

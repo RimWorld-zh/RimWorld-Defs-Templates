@@ -65,6 +65,23 @@
           <!--Type: float-->
           <wanderRadius>float_value</wanderRadius>
         </li>
+        <!--Type: Verse.AI.ThinkNode_PrioritySorter-->
+        <li Class="ThinkNode_PrioritySorter">
+          <!--Complex List-->
+          <!--Type: List<Verse.AI.ThinkNode>-->
+          <subNodes>
+            <!--Type: RimWorld.JobGiver_GetFood-->
+            <li Class="JobGiver_GetFood">
+              <!--Type: RimWorld.HungerCategory-->
+              <!--Available Values: Fed, Hungry, UrgentlyHungry, Starving-->
+              <!--Default Value: Fed-->
+              <minCategory>enum_value</minCategory>
+            </li>
+            <!-- ... -->
+          </subNodes>
+        </li>
+        <!--Type: RimWorld.JobGiver_ForceSleepNow-->
+        <li Class="JobGiver_ForceSleepNow" />
         <!--Type: Verse.AI.ThinkNode_Subtree-->
         <li Class="ThinkNode_Subtree">
           <!--Type: Verse.ThinkTreeDef-->
@@ -78,16 +95,15 @@
         </li>
         <!--Type: RimWorld.JobGiver_LoadTransporters-->
         <li Class="JobGiver_LoadTransporters" />
+        <!--Type: RimWorld.JobGiver_UnloadYourInventory-->
+        <li Class="JobGiver_UnloadYourInventory" />
         <!--Type: RimWorld.JobGiver_EnterTransporter-->
         <li Class="JobGiver_EnterTransporter" />
-        <!--Type: RimWorld.JobGiver_AIDefendSelf-->
-        <li Class="JobGiver_AIDefendSelf">
-          <!--Type: float-->
-          <!--Default Value: 56.0-->
-          <targetAcquireRadius>float_value</targetAcquireRadius>
-          <!--Type: float-->
-          <!--Default Value: 65.0-->
-          <targetKeepRadius>float_value</targetKeepRadius>
+        <!--Type: Verse.AI.JobGiver_ExitMapNearDutyTarget-->
+        <li Class="JobGiver_ExitMapNearDutyTarget">
+          <!--Type: Verse.AI.LocomotionUrgency-->
+          <!--Available Values: None, Amble, Walk, Jog, Sprint-->
+          <defaultLocomotion>enum_value</defaultLocomotion>
         </li>
         <!--Type: Verse.AI.JobGiver_ExitMapBest-->
         <li Class="JobGiver_ExitMapBest">
@@ -99,6 +115,21 @@
           <!--Type: bool-->
           <!--Default Value: false-->
           <forceCanDig>true_or_false</forceCanDig>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <forceCanDigIfAnyHostileActiveThreat>true_or_false</forceCanDigIfAnyHostileActiveThreat>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <forceCanDigIfCantReachMapEdge>true_or_false</forceCanDigIfCantReachMapEdge>
+        </li>
+        <!--Type: RimWorld.JobGiver_AIDefendSelf-->
+        <li Class="JobGiver_AIDefendSelf">
+          <!--Type: float-->
+          <!--Default Value: 56.0-->
+          <targetAcquireRadius>float_value</targetAcquireRadius>
+          <!--Type: float-->
+          <!--Default Value: 65.0-->
+          <targetKeepRadius>float_value</targetKeepRadius>
         </li>
         <!--Type: RimWorld.JobGiver_HiveDefense-->
         <li Class="JobGiver_HiveDefense">
@@ -129,21 +160,30 @@
           <!--Complex List-->
           <!--Type: List<Verse.AI.ThinkNode>-->
           <subNodes>
-            <!--Type: Verse.AI.ThinkNode_ChancePerHour_Constant-->
-            <li Class="ThinkNode_ChancePerHour_Constant">
-              <!--Simple List-->
+            <!--Type: RimWorld.ThinkNode_ConditionalHiveCanReproduce-->
+            <li Class="ThinkNode_ConditionalHiveCanReproduce">
+              <!--Complex List-->
               <!--Type: List<Verse.AI.ThinkNode>-->
               <subNodes>
-                <!--Type: RimWorld.JobGiver_MineRandom-->
-                <li Class="JobGiver_MineRandom" />
+                <!--Type: Verse.AI.ThinkNode_ChancePerHour_Constant-->
+                <li Class="ThinkNode_ChancePerHour_Constant">
+                  <!--Simple List-->
+                  <!--Type: List<Verse.AI.ThinkNode>-->
+                  <subNodes>
+                    <!--Type: RimWorld.JobGiver_MineRandom-->
+                    <li Class="JobGiver_MineRandom" />
+                    <!-- ... -->
+                  </subNodes>
+                  <!--Type: float-->
+                  <mtbHours>float_value</mtbHours>
+                </li>
                 <!-- ... -->
               </subNodes>
-              <!--Type: float-->
-              <mtbHours>float_value</mtbHours>
             </li>
             <!-- ... -->
           </subNodes>
           <!--Type: float-->
+          <!--Default Value: 0.0-->
           <min>float_value</min>
         </li>
         <!--Type: Verse.AI.ThinkNode_Tagger-->
@@ -198,7 +238,11 @@
         <!--Type: RimWorld.JobGiver_AITrashColonyClose-->
         <li Class="JobGiver_AITrashColonyClose" />
         <!--Type: RimWorld.JobGiver_AITrashBuildingsDistant-->
-        <li Class="JobGiver_AITrashBuildingsDistant" />
+        <li Class="JobGiver_AITrashBuildingsDistant">
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <attackAllInert>true_or_false</attackAllInert>
+        </li>
         <!--Type: RimWorld.JobGiver_AIGotoNearestHostile-->
         <li Class="JobGiver_AIGotoNearestHostile" />
         <!--Type: RimWorld.JobGiver_AIFollowEscortee-->
@@ -240,6 +284,8 @@
           <!--Default Value: false-->
           <exactCell>true_or_false</exactCell>
         </li>
+        <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
+        <li Class="JobGiver_WanderAnywhere" />
         <!--Type: Verse.AI.JobGiver_ExitMapRandom-->
         <li Class="JobGiver_ExitMapRandom">
           <!--Type: Verse.AI.LocomotionUrgency-->
@@ -365,8 +411,6 @@
             <!-- ... -->
           </subNodes>
         </li>
-        <!--Type: Verse.AI.JobGiver_WanderAnywhere-->
-        <li Class="JobGiver_WanderAnywhere" />
         <!--Type: RimWorld.ThinkNode_ConditionalHasDutyPawnTarget-->
         <li Class="ThinkNode_ConditionalHasDutyPawnTarget">
           <!--Complex List-->
@@ -393,6 +437,8 @@
             <!-- ... -->
           </subNodes>
         </li>
+        <!--Type: RimWorld.JobGiver_UnloadMyLordCarriers-->
+        <li Class="JobGiver_UnloadMyLordCarriers" />
         <!--Type: RimWorld.JobGiver_PrepareCaravan_GatherItems-->
         <li Class="JobGiver_PrepareCaravan_GatherItems" />
         <!-- ... -->

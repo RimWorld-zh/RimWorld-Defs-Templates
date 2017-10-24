@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef Name="BaseGas" Abstract="True">
     <label>gas</label>
     <altitudeLayer>Gas</altitudeLayer>
@@ -37,4 +37,4 @@
       <rotationSpeed>10</rotationSpeed>
     </gas>
   </ThingDef>
-</ThingDefs>
+</Defs>

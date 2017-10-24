@@ -18,7 +18,12 @@
     <factionNameMaker>RulePackDef_defName</factionNameMaker>
     <!--Type: Verse.RulePackDef-->
     <baseNameMaker>RulePackDef_defName</baseNameMaker>
+    <!--Type: Verse.RulePackDef-->
+    <factionNameMakerPlayer>RulePackDef_defName</factionNameMakerPlayer>
+    <!--Type: Verse.RulePackDef-->
+    <baseNameMakerPlayer>RulePackDef_defName</baseNameMakerPlayer>
     <!--Type: string-->
+    <!--Default Value: (string)null-->
     <fixedName>string_value</fixedName>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -47,39 +52,48 @@
         <options>
           <!--Type: RimWorld.PawnGenOption-->
           <!--Tag Field: kind, Tag Type: Verse.PawnKindDef-->
-          <!--Value Field: selectionWeight, Value Type: int-->
-          <!--Pattern: <PawnKindDef_defName>int_value</PawnKindDef_defName>-->
+          <!--Value Field: selectionWeight, Value Type: float-->
+          <!--Pattern: <PawnKindDef_defName>float_value</PawnKindDef_defName>-->
           <!-- ... -->
         </options>
         <!--Type: List<RimWorld.PawnGenOption>-->
         <traders>
           <!--Type: RimWorld.PawnGenOption-->
           <!--Tag Field: kind, Tag Type: Verse.PawnKindDef-->
-          <!--Value Field: selectionWeight, Value Type: int-->
-          <!--Pattern: <PawnKindDef_defName>int_value</PawnKindDef_defName>-->
+          <!--Value Field: selectionWeight, Value Type: float-->
+          <!--Pattern: <PawnKindDef_defName>float_value</PawnKindDef_defName>-->
           <!-- ... -->
         </traders>
         <!--Type: List<RimWorld.PawnGenOption>-->
         <carriers>
           <!--Type: RimWorld.PawnGenOption-->
           <!--Tag Field: kind, Tag Type: Verse.PawnKindDef-->
-          <!--Value Field: selectionWeight, Value Type: int-->
-          <!--Pattern: <PawnKindDef_defName>int_value</PawnKindDef_defName>-->
+          <!--Value Field: selectionWeight, Value Type: float-->
+          <!--Pattern: <PawnKindDef_defName>float_value</PawnKindDef_defName>-->
           <!-- ... -->
         </carriers>
         <!--Type: List<RimWorld.PawnGenOption>-->
         <guards>
           <!--Type: RimWorld.PawnGenOption-->
           <!--Tag Field: kind, Tag Type: Verse.PawnKindDef-->
-          <!--Value Field: selectionWeight, Value Type: int-->
-          <!--Pattern: <PawnKindDef_defName>int_value</PawnKindDef_defName>-->
+          <!--Value Field: selectionWeight, Value Type: float-->
+          <!--Pattern: <PawnKindDef_defName>float_value</PawnKindDef_defName>-->
           <!-- ... -->
         </guards>
       </li>
       <!-- ... -->
     </pawnGroupMakers>
-    <!--Type: float-->
-    <raidCommonality>float_value</raidCommonality>
+    <!--Type: Verse.SimpleCurve-->
+    <!--Default Value: null-->
+    <raidCommonalityFromPointsCurve>
+      <!--Simple List-->
+      <!--Type: List<Verse.CurvePoint>-->
+      <points>
+        <!--Type: Verse.CurvePoint-->
+        <li>value</li>
+        <!-- ... -->
+      </points>
+    </raidCommonalityFromPointsCurve>
     <!--Type: bool-->
     <!--Default Value: true-->
     <autoFlee>true_or_false</autoFlee>
@@ -93,6 +107,7 @@
     <!--Default Value: true-->
     <canUseAvoidGrid>true_or_false</canUseAvoidGrid>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <earliestRaidDays>float_value</earliestRaidDays>
     <!--Type: Verse.FloatRange-->
     <!--Default Value: new FloatRange(-1000f, 1000f)-->
@@ -111,6 +126,13 @@
       <li>string_value</li>
       <!-- ... -->
     </startingResearchTags>
+    <!--Simple List-->
+    <!--Type: List<string>-->
+    <recipePrerequisiteTags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </recipePrerequisiteTags>
     <!--Type: bool-->
     <!--Default Value: false-->
     <rescueesCanJoin>true_or_false</rescueesCanJoin>
@@ -124,6 +146,7 @@
     <!--Default Value: 1.0-->
     <maxPawnOptionCostFactor>float_value</maxPawnOptionCostFactor>
     <!--Type: int-->
+    <!--Default Value: 0-->
     <requiredCountAtGameStart>int_value</requiredCountAtGameStart>
     <!--Type: int-->
     <!--Default Value: 9999-->
@@ -132,13 +155,16 @@
     <!--Default Value: false-->
     <canMakeRandomly>true_or_false</canMakeRandomly>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <baseSelectionWeight>float_value</baseSelectionWeight>
     <!--Type: Verse.RulePackDef-->
     <pawnNameMaker>RulePackDef_defName</pawnNameMaker>
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
+    <!--Default Value: Undefined-->
     <techLevel>enum_value</techLevel>
     <!--Type: string-->
+    <!--Default Value: (string)null-->
     <backstoryCategory>string_value</backstoryCategory>
     <!--Simple List-->
     <!--Type: List<string>-->
@@ -148,6 +174,7 @@
       <!-- ... -->
     </hairTags>
     <!--Type: Verse.ThingFilter-->
+    <!--Default Value: null-->
     <apparelStuffFilter>
       <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
@@ -178,6 +205,9 @@
       <li>TraderKindDef_defName</li>
       <!-- ... -->
     </baseTraderKinds>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <geneticVariance>float_value</geneticVariance>
     <!--Type: Verse.FloatRange-->
     <!--Default Value: FloatRange.Zero-->
     <startingGoodwill>

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>PsychicEmanator</defName>
+    <label>psychic emanator</label>
+    <description>An ancient device that projects a soothing psychic field around itself. This improves the mood of anyone nearby. Works through walls.</description>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+      <Mass>15</Mass>
+      <WorkToBuild>2000</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>25</pathCost>
+    <costList>
+      <Steel>50</Steel>
+      <Component>7</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <specialDisplayRadius>15</specialDisplayRadius>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="1" />
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <itemGeneratorTags>
+      <li ListIndex="0">SpecialReward</li>
+    </itemGeneratorTags>
+    <graphicData>
+      <texPath>Things/Building/Special/PsychicEmanator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0.0, 0.0, -0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0,0.75,1.0,0.5)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.2</fillPercent>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>VanometricPowerCell</defName>
+    <label>vanometric power cell</label>
+    <description>Generates free energy, forever, without using fuel. This technology is developed by archotech AIs, and is beyond even most glitterworld societies. While nobody knows exactly how it works, scholars believe it somehow extracts energy directly from fluctuations in the quantum foam.</description>
+    <statBases>
+      <MarketValue>1750</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Mass>20</Mass>
+      <WorkToBuild>3000</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>70</pathCost>
+    <costList>
+      <Steel>100</Steel>
+      <Component>7</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(1, 2)</size>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerPlant</compClass>
+        <transmitsPower>true</transmitsPower>
+        <basePowerConsumption>-500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower" ListIndex="1">
+        <glowRadius>3</glowRadius>
+        <glowColor>(227,233,168,0)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <itemGeneratorTags>
+      <li ListIndex="0">SpecialReward</li>
+    </itemGeneratorTags>
+    <graphicData>
+      <texPath>Things/Building/Special/VanometricPowerCell</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2, 3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.4</fillPercent>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>InfiniteChemreactor</defName>
+    <label>infinite chemreactor</label>
+    <description>Slowly generates chemfuel by a complex series of chemical reactions, using atoms extracted from the air.</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+      <Mass>35</Mass>
+      <WorkToBuild>8000</WorkToBuild>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <passability>Impassable</passability>
+    <costList>
+      <Steel>200</Steel>
+      <Component>8</Component>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <size>(2, 2)</size>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Power" ListIndex="0">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+        <startElectricalFires>true</startElectricalFires>
+      </li>
+      <li Class="CompProperties_Breakdownable" ListIndex="1" />
+      <li Class="CompProperties_Flickable" ListIndex="2" />
+      <li Class="CompProperties_Spawner" ListIndex="3">
+        <thingToSpawn>Chemfuel</thingToSpawn>
+        <spawnCount>75</spawnCount>
+        <spawnIntervalRange>
+          <min>600000</min>
+          <max>600000</max>
+        </spawnIntervalRange>
+        <requiresPower>true</requiresPower>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <showMessageIfOwned>true</showMessageIfOwned>
+      </li>
+      <li Class="CompProperties_Explosive" ListIndex="4">
+        <explosiveRadius>8</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <itemGeneratorTags>
+      <li ListIndex="0">SpecialReward</li>
+    </itemGeneratorTags>
+    <graphicData>
+      <texPath>Things/Building/Special/InfiniteChemreactor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 3)</drawSize>
+      <shadowData>
+        <volume>(1.8, 1.0, 0.2)</volume>
+        <offset>(0.0, 0.0, -0.4)</offset>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>1.0</fillPercent>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+</Defs>

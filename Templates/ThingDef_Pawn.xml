@@ -20,7 +20,7 @@
       <!-- ... -->
     </statBases>
     <!--Type: Verse.AltitudeLayer-->
-    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, FlyingItem, Gas, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, WorldDataOverlay, MetaOverlays, _Count-->
+    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, Gas, Skyfaller, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, MapDataOverlay, MetaOverlays, _Count-->
     <!--Default Value: Item-->
     <altitudeLayer>enum_value</altitudeLayer>
     <!--Type: System.Type-->
@@ -30,6 +30,7 @@
     <category>Pawn</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
+    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -42,6 +43,19 @@
         <!--Type: System.Type-->
         <!--Default Value: typeof(ThingComp)-->
         <compClass>class_name</compClass>
+      </li>
+      <!--Type: RimWorld.CompProperties_Milkable-->
+      <li Class="CompProperties_Milkable">
+        <!--Type: int-->
+        <milkIntervalDays>int_value</milkIntervalDays>
+        <!--Type: int-->
+        <!--Default Value: 1-->
+        <milkAmount>int_value</milkAmount>
+        <!--Type: Verse.ThingDef-->
+        <milkDef>ThingDef_defName</milkDef>
+        <!--Type: bool-->
+        <!--Default Value: true-->
+        <milkFemaleOnly>true_or_false</milkFemaleOnly>
       </li>
       <!--Type: RimWorld.CompProperties_EggLayer-->
       <li Class="CompProperties_EggLayer">
@@ -67,16 +81,6 @@
         <!--Default Value: 1.0-->
         <eggProgressUnfertilizedMax>float_value</eggProgressUnfertilizedMax>
       </li>
-      <!--Type: RimWorld.CompProperties_Milkable-->
-      <li Class="CompProperties_Milkable">
-        <!--Type: int-->
-        <milkIntervalDays>int_value</milkIntervalDays>
-        <!--Type: int-->
-        <!--Default Value: 1-->
-        <milkAmount>int_value</milkAmount>
-        <!--Type: Verse.ThingDef-->
-        <milkDef>ThingDef_defName</milkDef>
-      </li>
       <!--Type: RimWorld.CompProperties_Shearable-->
       <li Class="CompProperties_Shearable">
         <!--Type: int-->
@@ -97,6 +101,49 @@
       <!--Pattern: <ThingDef_defName>int_value</ThingDef_defName>-->
       <!-- ... -->
     </butcherProducts>
+    <!--Complex List-->
+    <!--Type: List<Verse.Tool>-->
+    <tools>
+      <!--Type: Verse.Tool-->
+      <li>
+        <!--Type: string-->
+        <id>string_value</id>
+        <!--Type: string-->
+        <label>string_value</label>
+        <!--Reference List-->
+        <!--Type: List<Verse.ToolCapacityDef>-->
+        <capacities>
+          <!--Type: Verse.ToolCapacityDef-->
+          <li>ToolCapacityDef_defName</li>
+          <!-- ... -->
+        </capacities>
+        <!--Type: float-->
+        <power>float_value</power>
+        <!--Type: float-->
+        <cooldownTime>float_value</cooldownTime>
+        <!--Type: Verse.SurpriseAttackProps-->
+        <surpriseAttack>
+          <!--Complex List-->
+          <!--Type: List<Verse.ExtraMeleeDamage>-->
+          <extraMeleeDamages>
+            <!--Type: Verse.ExtraMeleeDamage-->
+            <li>
+              <!--Type: Verse.DamageDef-->
+              <def>DamageDef_defName</def>
+              <!--Type: int-->
+              <amount>int_value</amount>
+            </li>
+            <!-- ... -->
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <!--Type: float-->
+        <!--Default Value: 1.0-->
+        <commonality>float_value</commonality>
+        <!--Type: Verse.BodyPartGroupDef-->
+        <linkedBodyPartsGroup>BodyPartGroupDef_defName</linkedBodyPartsGroup>
+      </li>
+      <!-- ... -->
+    </tools>
     <!--Type: bool-->
     <!--Default Value: false-->
     <selectable>true_or_false</selectable>
@@ -129,52 +176,18 @@
       <li>RecipeDef_defName</li>
       <!-- ... -->
     </recipes>
-    <!--Complex List-->
-    <!--Type: List<Verse.VerbProperties>-->
-    <verbs>
-      <!--Type: Verse.VerbProperties-->
-      <li>
-        <!--Type: System.Type-->
-        <!--Default Value: typeof(Verb)-->
-        <verbClass>class_name</verbClass>
-        <!--Type: Verse.SurpriseAttackProps-->
-        <surpriseAttack>
-          <!--Complex List-->
-          <!--Type: List<Verse.ExtraMeleeDamage>-->
-          <extraMeleeDamages>
-            <!--Type: Verse.ExtraMeleeDamage-->
-            <li>
-              <!--Type: Verse.DamageDef-->
-              <def>DamageDef_defName</def>
-              <!--Type: int-->
-              <amount>int_value</amount>
-            </li>
-            <!-- ... -->
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <!--Type: float-->
-        <!--Default Value: 1.0-->
-        <commonality>float_value</commonality>
-        <!--Type: float-->
-        <defaultCooldownTime>float_value</defaultCooldownTime>
-        <!--Type: Verse.BodyPartGroupDef-->
-        <linkedBodyPartsGroup>BodyPartGroupDef_defName</linkedBodyPartsGroup>
-        <!--Type: Verse.DamageDef-->
-        <meleeDamageDef>DamageDef_defName</meleeDamageDef>
-        <!--Type: int-->
-        <!--Default Value: 1-->
-        <meleeDamageBaseAmount>int_value</meleeDamageBaseAmount>
-      </li>
-      <!-- ... -->
-    </verbs>
     <!--Type: Verse.RaceProperties-->
+    <!--Default Value: null-->
     <race>
       <!--Type: Verse.Intelligence-->
       <!--Available Values: Animal, ToolUser, Humanlike-->
+      <!--Default Value: Animal-->
       <intelligence>enum_value</intelligence>
       <!--Type: RimWorld.FleshTypeDef-->
+      <!--Default Value: null-->
       <fleshType>FleshTypeDef_defName</fleshType>
       <!--Type: Verse.ThingDef-->
+      <!--Default Value: null-->
       <bloodDef>ThingDef_defName</bloodDef>
       <!--Type: bool-->
       <!--Default Value: true-->
@@ -188,15 +201,19 @@
       <thinkTreeConstant>ThinkTreeDef_defName</thinkTreeConstant>
       <!--Type: RimWorld.PawnNameCategory-->
       <!--Available Values: NoName, HumanStandard-->
+      <!--Default Value: NoName-->
       <nameCategory>enum_value</nameCategory>
       <!--Type: RimWorld.FoodTypeFlags-->
       <!--Available Values: None, VegetableOrFruit, Meat, Fluid, Corpse, CarnivoreAnimalStrict, Seed, AnimalProduct, Plant, Tree, Meal, Processed, Liquor, Kibble, DendrovoreAnimal, CarnivoreAnimal, OvivoreAnimal, VegetarianAnimal, OmnivoreAnimal, OmnivoreHuman, VegetarianRoughAnimal, OmnivoreRoughAnimal-->
+      <!--Default Value: None-->
       <foodType>enum_value</foodType>
       <!--Type: Verse.BodyDef-->
+      <!--Default Value: null-->
       <body>BodyDef_defName</body>
       <!--Type: System.Type-->
       <deathActionWorkerClass>class_name</deathActionWorkerClass>
       <!--Type: Verse.SimpleCurve-->
+      <!--Default Value: null-->
       <ageGenerationCurve>
         <!--Simple List-->
         <!--Type: List<Verse.CurvePoint>-->
@@ -223,6 +240,7 @@
         <!-- ... -->
       </hediffGiverSets>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <petness>float_value</petness>
       <!--Type: bool-->
       <!--Default Value: false-->
@@ -243,8 +261,10 @@
       <!--Default Value: -1.0-->
       <nuzzleMtbHours>float_value</nuzzleMtbHours>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <manhunterOnDamageChance>float_value</manhunterOnDamageChance>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <manhunterOnTameFailChance>float_value</manhunterOnTameFailChance>
       <!--Type: bool-->
       <!--Default Value: true-->
@@ -253,6 +273,7 @@
       <!--Default Value: 10.0-->
       <gestationPeriodDays>float_value</gestationPeriodDays>
       <!--Type: Verse.SimpleCurve-->
+      <!--Default Value: null-->
       <litterSizeCurve>
         <!--Simple List-->
         <!--Type: List<Verse.CurvePoint>-->
@@ -266,14 +287,17 @@
       <!--Default Value: 12.0-->
       <mateMtbHours>float_value</mateMtbHours>
       <!--Type: Verse.TrainableIntelligenceDef-->
+      <!--Default Value: null-->
       <trainableIntelligence>TrainableIntelligenceDef_defName</trainableIntelligence>
       <!--Type: Verse.RulePackDef-->
       <nameGenerator>RulePackDef_defName</nameGenerator>
       <!--Type: Verse.RulePackDef-->
       <nameGeneratorFemale>RulePackDef_defName</nameGeneratorFemale>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <nameOnTameChance>float_value</nameOnTameChance>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <nameOnNuzzleChance>float_value</nameOnNuzzleChance>
       <!--Type: float-->
       <!--Default Value: 1.0-->
@@ -292,14 +316,19 @@
           <!--Type: RimWorld.LifeStageDef-->
           <def>LifeStageDef_defName</def>
           <!--Type: float-->
+          <!--Default Value: 0.0-->
           <minAge>float_value</minAge>
           <!--Type: Verse.SoundDef-->
+          <!--Default Value: null-->
           <soundCall>SoundDef_defName</soundCall>
           <!--Type: Verse.SoundDef-->
+          <!--Default Value: null-->
           <soundAngry>SoundDef_defName</soundAngry>
           <!--Type: Verse.SoundDef-->
+          <!--Default Value: null-->
           <soundWounded>SoundDef_defName</soundWounded>
           <!--Type: Verse.SoundDef-->
+          <!--Default Value: null-->
           <soundDeath>SoundDef_defName</soundDeath>
         </li>
         <!-- ... -->
@@ -308,6 +337,7 @@
       <!--Default Value: ColorLibrary.Leather-->
       <leatherColor>value</leatherColor>
       <!--Type: string-->
+      <!--Default Value: (string)null-->
       <leatherLabel>string_value</leatherLabel>
       <!--Type: float-->
       <!--Default Value: 1.0-->
@@ -327,14 +357,19 @@
       <!--Default Value: 1.0-->
       <leatherMarketValueFactor>float_value</leatherMarketValueFactor>
       <!--Type: string-->
+      <!--Default Value: (string)null-->
       <meatLabel>string_value</meatLabel>
       <!--Type: UnityEngine.Color-->
+      <!--Default Value: new ColorInt(141, 56, 52).ToColor-->
       <meatColor>value</meatColor>
       <!--Type: Verse.ThingDef-->
+      <!--Default Value: null-->
       <useMeatFrom>ThingDef_defName</useMeatFrom>
       <!--Type: Verse.ThingDef-->
+      <!--Default Value: null-->
       <useLeatherFrom>ThingDef_defName</useLeatherFrom>
       <!--Type: Verse.ShadowData-->
+      <!--Default Value: null-->
       <specialShadowData>
         <!--Type: UnityEngine.Vector3-->
         <!--Default Value: Vector3.one-->
@@ -344,6 +379,7 @@
         <offset>value</offset>
       </specialShadowData>
       <!--Type: Verse.IntRange-->
+      <!--Default Value: new IntRange(2000, 4000)-->
       <soundCallIntervalRange>
         <!--Type: int-->
         <min>int_value</min>
@@ -351,10 +387,13 @@
         <max>int_value</max>
       </soundCallIntervalRange>
       <!--Type: Verse.SoundDef-->
+      <!--Default Value: null-->
       <soundMeleeHitPawn>SoundDef_defName</soundMeleeHitPawn>
       <!--Type: Verse.SoundDef-->
+      <!--Default Value: null-->
       <soundMeleeHitBuilding>SoundDef_defName</soundMeleeHitBuilding>
       <!--Type: Verse.SoundDef-->
+      <!--Default Value: null-->
       <soundMeleeMiss>SoundDef_defName</soundMeleeMiss>
     </race>
   </ThingDef>

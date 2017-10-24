@@ -11,9 +11,7 @@
     <defName>Interior_Barracks</defName>
     <symbol>interior_barracks</symbol>
     <resolvers>
-      <li Class="SymbolResolver_Interior_Barracks" ListIndex="0">
-        <minRectSize>(2, 2)</minRectSize>
-      </li>
+      <li Class="SymbolResolver_Interior_Barracks" ListIndex="0" />
     </resolvers>
   </RuleDef>
   <RuleDef>
@@ -50,6 +48,13 @@
       <li Class="SymbolResolver_Interior_DiningRoom" ListIndex="0">
         <minRectSize>(3, 3)</minRectSize>
       </li>
+    </resolvers>
+  </RuleDef>
+  <RuleDef>
+    <defName>Interior_PrisonCell</defName>
+    <symbol>interior_prisonCell</symbol>
+    <resolvers>
+      <li Class="SymbolResolver_Interior_PrisonCell" ListIndex="0" />
     </resolvers>
   </RuleDef>
 </Defs>

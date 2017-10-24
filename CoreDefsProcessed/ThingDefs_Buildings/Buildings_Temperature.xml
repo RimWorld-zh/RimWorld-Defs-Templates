@@ -17,6 +17,7 @@
       <!-- just the intial wood -->
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructDirt</constructEffect>
     <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
@@ -107,6 +108,7 @@
     <researchPrerequisites>
       <li ListIndex="0">PassiveCooler</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructDirt</constructEffect>
     <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
@@ -166,6 +168,7 @@
     <researchPrerequisites>
       <li ListIndex="0">Electricity</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>

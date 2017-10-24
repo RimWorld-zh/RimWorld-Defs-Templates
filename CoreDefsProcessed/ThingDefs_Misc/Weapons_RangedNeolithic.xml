@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef Name="BaseWeaponNeolithic" Abstract="True" ParentName="BaseWeapon">
     <comps>
       <li>
@@ -55,13 +55,13 @@
       <speed>44</speed>
       <flyOverhead>false</flyOverhead>
       <damageDef>Arrow</damageDef>
-      <damageAmountBase>10</damageAmountBase>
+      <damageAmountBase>11</damageAmountBase>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>Bow_Short</defName>
     <label>short bow</label>
-    <description>A simple short bow, made with skill, but using only the most primitive technologies.</description>
+    <description>A simple short selfbow made from a single piece of wood.</description>
     <statBases>
       <WorkToMake>9000</WorkToMake>
       <Mass>0.8</Mass>
@@ -70,6 +70,7 @@
       <AccuracyMedium>0.41</AccuracyMedium>
       <AccuracyLong>0.22</AccuracyLong>
       <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -107,6 +108,16 @@
         <li ListIndex="4">CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/BowShort</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -126,7 +137,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <warmupTime>1.35</warmupTime>
         <soundCast>BowSmall</soundCast>
-        <projectileDef>Arrow_Short</projectileDef>
+        <defaultProjectile>Arrow_Short</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -134,11 +145,12 @@
     <weaponTags>
       <li ListIndex="0">Neolithic</li>
       <li ListIndex="1">NeolithicRanged</li>
+      <li ListIndex="2">NeolithicRangedBasic</li>
     </weaponTags>
   </ThingDef>
   <ThingDef ParentName="BaseProjectileNeolithic">
     <defName>Pilum_Thrown</defName>
-    <label>pilum (thrown)</label>
+    <label>pilum</label>
     <altitudeLayer>Projectile</altitudeLayer>
     <thingClass>Bullet</thingClass>
     <category>Projectile</category>
@@ -153,14 +165,14 @@
     <projectile>
       <speed>26</speed>
       <flyOverhead>false</flyOverhead>
-      <damageDef>Stab</damageDef>
+      <damageDef>RangedStab</damageDef>
       <damageAmountBase>30</damageAmountBase>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>Pila</defName>
     <label>pila</label>
-    <description>A bundle of pila, non-reusable throwing spears.</description>
+    <description>Pila are spears for throwing. They take a long time to throw, and move slowly, but one hit can do heavy damage. The singular of pila is pilum.</description>
     <statBases>
       <WorkToMake>13000</WorkToMake>
       <Mass>4</Mass>
@@ -169,6 +181,7 @@
       <AccuracyMedium>0.50</AccuracyMedium>
       <AccuracyLong>0.32</AccuracyLong>
       <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -203,6 +216,24 @@
         <li ListIndex="1">FueledSmithy</li>
       </recipeUsers>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>shaft</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>point</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Pilum</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -222,7 +253,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <warmupTime>4.0</warmupTime>
         <soundCast>Interact_BeatFire</soundCast>
-        <projectileDef>Pilum_Thrown</projectileDef>
+        <defaultProjectile>Pilum_Thrown</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -230,6 +261,119 @@
     <weaponTags>
       <li ListIndex="0">Neolithic</li>
       <li ListIndex="1">NeolithicRanged</li>
+      <li ListIndex="2">NeolithicRangedHeavy</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_Recurve</defName>
+    <label>recurve bow arrow</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>56</speed>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>ArrowHighVelocity</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>Bow_Recurve</defName>
+    <label>recurve bow</label>
+    <description>An advanced recurve bow. Its construction behaves like a tuned spring, storing energy more efficiently and delivering a faster shot.</description>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>0.85</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.78</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricSmithy</li>
+        <li ListIndex="1">FueledSmithy</li>
+        <li ListIndex="2">ElectricSmithy</li>
+        <li ListIndex="3">FueledSmithy</li>
+        <li ListIndex="4">CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>RecurveBow</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/BowRecurve</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>BowRecurve</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>32</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.45</warmupTime>
+        <soundCast>BowRecurve</soundCast>
+        <defaultProjectile>Arrow_Recurve</defaultProjectile>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Neolithic</li>
+      <li ListIndex="1">NeolithicRanged</li>
+      <li ListIndex="2">NeolithicRangedHunter</li>
     </weaponTags>
   </ThingDef>
   <ThingDef ParentName="BaseProjectileNeolithic">
@@ -255,7 +399,7 @@
   </ThingDef>
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>Bow_Great</defName>
-    <label>great bow</label>
+    <label>greatbow</label>
     <description>A powerful greatbow. Fires a heavy arrow long distances.</description>
     <statBases>
       <WorkToMake>18000</WorkToMake>
@@ -264,7 +408,8 @@
       <AccuracyShort>0.85</AccuracyShort>
       <AccuracyMedium>0.75</AccuracyMedium>
       <AccuracyLong>0.50</AccuracyLong>
-      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -298,7 +443,18 @@
         <li ListIndex="0">ElectricSmithy</li>
         <li ListIndex="1">FueledSmithy</li>
       </recipeUsers>
+      <researchPrerequisite>Greatbows</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/BowGreat</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -316,9 +472,9 @@
         <verbClass>Verb_Shoot</verbClass>
         <range>32</range>
         <hasStandardCommand>true</hasStandardCommand>
-        <warmupTime>1.8</warmupTime>
+        <warmupTime>1.5</warmupTime>
         <soundCast>BowLarge</soundCast>
-        <projectileDef>Arrow_Great</projectileDef>
+        <defaultProjectile>Arrow_Great</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -326,6 +482,8 @@
     <weaponTags>
       <li ListIndex="0">Neolithic</li>
       <li ListIndex="1">NeolithicRanged</li>
+      <li ListIndex="2">NeolithicRangedHeavy</li>
+      <li ListIndex="3">NeolithicRangedChief</li>
     </weaponTags>
   </ThingDef>
-</ThingDefs>
+</Defs>

@@ -6,6 +6,9 @@
     <description>A group of traveling people.</description>
     <worldObjectClass>Caravan</worldObjectClass>
     <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <incidentTargetTypes>
+      <li ListIndex="0">Caravan</li>
+    </incidentTargetTypes>
     <inspectorTabs>
       <li ListIndex="0">WITab_Caravan_Health</li>
       <li ListIndex="1">WITab_Caravan_Needs</li>
@@ -25,7 +28,10 @@
     <description>A base of one of the factions.</description>
     <worldObjectClass>FactionBase</worldObjectClass>
     <comps>
-      <li Class="WorldObjectCompProperties_CaravanRequest" ListIndex="0" />
+      <li Class="WorldObjectCompProperties_Abandon" ListIndex="0" />
+      <li Class="WorldObjectCompProperties_CaravanRequest" ListIndex="1" />
+      <li Class="WorldObjectCompProperties_FormCaravan" ListIndex="2" />
+      <li Class="WorldObjectCompProperties_TimedForcedExit" ListIndex="3" />
     </comps>
     <expandingIcon>true</expandingIcon>
     <expandingIconPriority>10</expandingIconPriority>
@@ -41,15 +47,31 @@
     <label>destroyed faction base</label>
     <description>A destroyed faction base.</description>
     <worldObjectClass>DestroyedFactionBase</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_FormCaravan" ListIndex="0">
+        <reformCaravan>true</reformCaravan>
+      </li>
+      <li Class="WorldObjectCompProperties_TimedForcedExit" ListIndex="1" />
+    </comps>
     <expandingIcon>true</expandingIcon>
     <expandingIconTexture>World/WorldObjects/Expanding/DestroyedFactionBase</expandingIconTexture>
     <expandingIconPriority>20</expandingIconPriority>
     <texture>World/WorldObjects/TribalFactionBase</texture>
   </WorldObjectDef>
   <WorldObjectDef>
-    <defName>JourneyDestination</defName>
-    <label>journey destination</label>
+    <defName>EscapeShip</defName>
+    <label>landed ship</label>
     <description>The location of a hidden ship which can help you escape the planet.</description>
+    <worldObjectClass>MapParent</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_Abandon" ListIndex="0" />
+      <li Class="WorldObjectCompProperties_EscapeShip" ListIndex="1" />
+      <li Class="WorldObjectCompProperties_FormCaravan" ListIndex="2" />
+    </comps>
+    <incidentTargetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </incidentTargetTypes>
+    <mapGenerator>EscapeShipMap</mapGenerator>
     <expandingIcon>true</expandingIcon>
     <expandingIconTexture>World/WorldObjects/Expanding/JourneyDestination</expandingIconTexture>
     <expandingIconPriority>50</expandingIconPriority>
@@ -60,7 +82,16 @@
     <label>attacked caravan</label>
     <description>A caravan under attack.</description>
     <worldObjectClass>CaravansBattlefield</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_FormCaravan" ListIndex="0">
+        <reformCaravan>true</reformCaravan>
+      </li>
+      <li Class="WorldObjectCompProperties_TimedForcedExit" ListIndex="1" />
+    </comps>
     <isTempIncidentMapOwner>true</isTempIncidentMapOwner>
+    <incidentTargetTypes>
+      <li ListIndex="0">MapTempIncident</li>
+    </incidentTargetTypes>
     <expandingIcon>true</expandingIcon>
     <expandingIconTexture>World/WorldObjects/Expanding/Ambush</expandingIconTexture>
     <expandingIconPriority>80</expandingIconPriority>
@@ -97,8 +128,30 @@
       <li Class="WorldObjectCompProperties_Timeout" ListIndex="0" />
       <li Class="WorldObjectCompProperties_DefeatAllEnemiesQuest" ListIndex="1" />
       <li Class="WorldObjectCompProperties_ItemStashContents" ListIndex="2" />
+      <li Class="WorldObjectCompProperties_DownedRefugee" ListIndex="3" />
+      <li Class="WorldObjectCompProperties_PrisonerWillingToJoin" ListIndex="4" />
+      <li Class="WorldObjectCompProperties_FormCaravan" ListIndex="5">
+        <reformCaravan>true</reformCaravan>
+      </li>
+      <li Class="WorldObjectCompProperties_TimedForcedExit" ListIndex="6" />
     </comps>
+    <incidentTargetTypes>
+      <li ListIndex="0">MapMisc</li>
+    </incidentTargetTypes>
     <expandingIcon>true</expandingIcon>
     <expandingIconPriority>70</expandingIconPriority>
+  </WorldObjectDef>
+  <WorldObjectDef>
+    <defName>PeaceTalks</defName>
+    <label>peace talks</label>
+    <description>A site designated for peace talks.</description>
+    <worldObjectClass>PeaceTalks</worldObjectClass>
+    <comps>
+      <li Class="WorldObjectCompProperties_Timeout" ListIndex="0" />
+    </comps>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/PeaceTalks</expandingIconTexture>
+    <expandingIconPriority>70</expandingIconPriority>
+    <texture>World/WorldObjects/PeaceTalks</texture>
   </WorldObjectDef>
 </Defs>

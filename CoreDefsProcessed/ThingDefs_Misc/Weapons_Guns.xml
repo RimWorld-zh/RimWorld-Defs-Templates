@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef Name="BaseGun" Abstract="True" ParentName="BaseWeapon">
     <comps>
       <li>
@@ -30,6 +30,7 @@
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
     </recipeMaker>
   </ThingDef>
   <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
@@ -56,8 +57,8 @@
   </ThingDef>
   <!-- ============================================================== -->
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Pistol</defName>
-    <label>pistol bullet</label>
+    <defName>Bullet_Revolver</defName>
+    <label>revolver bullet</label>
     <altitudeLayer>Projectile</altitudeLayer>
     <thingClass>Bullet</thingClass>
     <category>Projectile</category>
@@ -73,21 +74,22 @@
       <speed>55</speed>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>9</damageAmountBase>
+      <damageAmountBase>11</damageAmountBase>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_Pistol</defName>
-    <label>pistol</label>
-    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <defName>Gun_Revolver</defName>
+    <label>revolver</label>
+    <description>Ancient pattern double-action revolver. Somewhat weak, medium range, quick.</description>
     <statBases>
       <WorkToMake>15000</WorkToMake>
-      <Mass>1.2</Mass>
+      <Mass>1.4</Mass>
       <AccuracyTouch>0.91</AccuracyTouch>
       <AccuracyShort>0.71</AccuracyShort>
       <AccuracyMedium>0.50</AccuracyMedium>
       <AccuracyLong>0.32</AccuracyLong>
-      <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.38</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -128,9 +130,29 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>grip</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/Pistol</texPath>
+      <texPath>Things/Item/Equipment/WeaponRanged/Revolver</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
@@ -143,23 +165,154 @@
     <thingCategories>
       <li ListIndex="0">WeaponsRanged</li>
     </thingCategories>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>InteractRevolver</soundInteract>
     <verbs>
       <li ListIndex="0">
         <verbClass>Verb_Shoot</verbClass>
-        <range>24</range>
+        <range>26</range>
         <hasStandardCommand>true</hasStandardCommand>
         <warmupTime>0.3</warmupTime>
-        <soundCast>ShotPistol</soundCast>
+        <soundCast>ShotRevolver</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_Pistol</projectileDef>
+        <defaultProjectile>Bullet_Revolver</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
     <techLevel>Industrial</techLevel>
     <weaponTags>
       <li ListIndex="0">Gun</li>
+      <li ListIndex="1">SimpleGun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ============================================================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Autopistol</defName>
+    <label>autopistol bullet</label>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <speed>55</speed>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Autopistol</defName>
+    <label>autopistol</label>
+    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>0.91</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-6</Beauty>
+      <SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costList>
+      <Steel>30</Steel>
+      <Component>2</Component>
+    </costList>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art" ListIndex="3">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltable>true</smeltable>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>grip</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Autopistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>true</selectable>
+    <inspectorTabs>
+      <li ListIndex="0">ITab_Art</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <verbs>
+      <li ListIndex="0">
+        <verbClass>Verb_Shoot</verbClass>
+        <range>22</range>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.3</warmupTime>
+        <soundCast>ShotAutopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <defaultProjectile>Bullet_Autopistol</defaultProjectile>
+      </li>
+    </verbs>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li ListIndex="0">Gun</li>
+      <li ListIndex="1">SimpleGun</li>
     </weaponTags>
   </ThingDef>
   <!-- ==================== T-9 incendiary launcher ========================== -->
@@ -183,7 +336,8 @@
       <damageAmountBase>10</damageAmountBase>
       <explosionRadius>1.1</explosionRadius>
       <preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
-      <explosionSpawnChance>0.6</explosionSpawnChance>
+      <preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -198,6 +352,7 @@
       <AccuracyMedium>0.18</AccuracyMedium>
       <AccuracyLong>0.06</AccuracyLong>
       <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -238,8 +393,28 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
     </recipeMaker>
     <generateCommonality>0.4</generateCommonality>
+    <tools>
+      <li ListIndex="0">
+        <label>stock</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/IncendiaryLauncher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -265,8 +440,7 @@
         <soundCast>ShotIncendiaryLauncher</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>14</muzzleFlashScale>
-        <ai_IsIncendiary>true</ai_IsIncendiary>
-        <projectileDef>Bullet_IncendiaryLauncher</projectileDef>
+        <defaultProjectile>Bullet_IncendiaryLauncher</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -293,7 +467,7 @@
     <projectile>
       <speed>55</speed>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>20</damageAmountBase>
+      <damageAmountBase>18</damageAmountBase>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -308,6 +482,7 @@
       <AccuracyMedium>0.77</AccuracyMedium>
       <AccuracyLong>0.64</AccuracyLong>
       <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -348,7 +523,27 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>stock</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Shotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -373,7 +568,7 @@
         <soundCast>ShotShotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_PumpShotgun</projectileDef>
+        <defaultProjectile>Bullet_PumpShotgun</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -383,30 +578,10 @@
     </weaponTags>
   </ThingDef>
   <!-- ============================================================== -->
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_ChainShotgun</defName>
-    <label>shotgun blast</label>
-    <altitudeLayer>Projectile</altitudeLayer>
-    <thingClass>Bullet</thingClass>
-    <category>Projectile</category>
-    <tickerType>Normal</tickerType>
-    <useHitPoints>False</useHitPoints>
-    <graphicData>
-      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>Transparent</shaderType>
-    </graphicData>
-    <neverMultiSelect>True</neverMultiSelect>
-    <projectile>
-      <speed>55</speed>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>20</damageAmountBase>
-    </projectile>
-  </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_ChainShotgun</defName>
     <label>chain shotgun</label>
-    <description>A magazine-fed fully automatic shotgun. Short range and very low accuracy, but extraordinarily dangerous.</description>
+    <description>A magazine-fed fully automatic shotgun. Short range and very low accuracy, but extraordinarily dangerous due to burst fire.</description>
     <statBases>
       <WorkToMake>45000</WorkToMake>
       <Mass>4.5</Mass>
@@ -414,7 +589,8 @@
       <AccuracyShort>0.43</AccuracyShort>
       <AccuracyMedium>0.38</AccuracyMedium>
       <AccuracyLong>0.32</AccuracyLong>
-      <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -455,8 +631,28 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
     </recipeMaker>
     <generateCommonality>0.3</generateCommonality>
+    <tools>
+      <li ListIndex="0">
+        <label>stock</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ChainShotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -475,15 +671,15 @@
     <verbs>
       <li ListIndex="0">
         <verbClass>Verb_Shoot</verbClass>
-        <range>10</range>
+        <range>9</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <hasStandardCommand>true</hasStandardCommand>
-        <warmupTime>1.1</warmupTime>
+        <warmupTime>1.2</warmupTime>
         <soundCast>ShotShotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_ChainShotgun</projectileDef>
+        <defaultProjectile>Bullet_PumpShotgun</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -525,6 +721,7 @@
       <AccuracyMedium>0.96</AccuracyMedium>
       <AccuracyLong>0.90</AccuracyLong>
       <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -565,8 +762,28 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
     </recipeMaker>
     <generateCommonality>1.5</generateCommonality>
+    <tools>
+      <li ListIndex="0">
+        <label>stock</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/BoltActionRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -591,7 +808,7 @@
         <soundCast>ShotBoltActionRifle</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_BoltActionRifle</projectileDef>
+        <defaultProjectile>Bullet_BoltActionRifle</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -618,7 +835,7 @@
     <projectile>
       <speed>55</speed>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>5</damageAmountBase>
+      <damageAmountBase>6</damageAmountBase>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -633,6 +850,7 @@
       <AccuracyMedium>0.43</AccuracyMedium>
       <AccuracyLong>0.15</AccuracyLong>
       <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -673,7 +891,27 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>grip</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/MachinePistol</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -692,7 +930,7 @@
     <verbs>
       <li ListIndex="0">
         <verbClass>Verb_Shoot</verbClass>
-        <range>24</range>
+        <range>22</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
         <hasStandardCommand>true</hasStandardCommand>
@@ -700,7 +938,7 @@
         <soundCast>ShotMachinePistol</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_MachinePistol</projectileDef>
+        <defaultProjectile>Bullet_MachinePistol</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -727,7 +965,7 @@
     <projectile>
       <speed>48</speed>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>13</damageAmountBase>
+      <damageAmountBase>12</damageAmountBase>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -742,6 +980,7 @@
       <AccuracyMedium>0.37</AccuracyMedium>
       <AccuracyLong>0.22</AccuracyLong>
       <RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -782,7 +1021,27 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>grip</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -809,7 +1068,7 @@
         <soundCast>ShotHeavySMG</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_HeavySMG</projectileDef>
+        <defaultProjectile>Bullet_HeavySMG</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -851,6 +1110,7 @@
       <AccuracyMedium>0.41</AccuracyMedium>
       <AccuracyLong>0.22</AccuracyLong>
       <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -891,7 +1151,27 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>stock</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/LMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -918,7 +1198,7 @@
         <soundCast>ShotMinigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_LMG</projectileDef>
+        <defaultProjectile>Bullet_LMG</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -961,6 +1241,7 @@
       <AccuracyMedium>0.77</AccuracyMedium>
       <AccuracyLong>0.64</AccuracyLong>
       <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1001,7 +1282,27 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>stock</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1028,7 +1329,7 @@
         <soundCast>ShotAssaultRifle</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_AssaultRifle</projectileDef>
+        <defaultProjectile>Bullet_AssaultRifle</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -1056,7 +1357,7 @@
     <projectile>
       <speed>70</speed>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>12</damageAmountBase>
+      <damageAmountBase>11</damageAmountBase>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -1115,6 +1416,25 @@
       <researchPrerequisite>ChargedShot</researchPrerequisite>
     </recipeMaker>
     <generateCommonality>0.30</generateCommonality>
+    <tools>
+      <li ListIndex="0">
+        <label>stock</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1133,15 +1453,15 @@
     <verbs>
       <li ListIndex="0">
         <verbClass>Verb_Shoot</verbClass>
-        <range>23</range>
+        <range>22</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <hasStandardCommand>true</hasStandardCommand>
-        <warmupTime>1.0</warmupTime>
+        <warmupTime>1.1</warmupTime>
         <soundCast>ShotChargeRifle</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_ChargeRifle</projectileDef>
+        <defaultProjectile>Bullet_ChargeRifle</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -1184,6 +1504,7 @@
       <AccuracyMedium>0.86</AccuracyMedium>
       <AccuracyLong>0.88</AccuracyLong>
       <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1224,7 +1545,27 @@
       <recipeUsers>
         <li ListIndex="0">TableMachining</li>
       </recipeUsers>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>stock</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li ListIndex="1">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/SniperRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1249,7 +1590,7 @@
         <soundCast>ShotSniperRifle</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_SniperRifle</projectileDef>
+        <defaultProjectile>Bullet_SniperRifle</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -1292,6 +1633,7 @@
       <AccuracyMedium>0.18</AccuracyMedium>
       <AccuracyLong>0.06</AccuracyLong>
       <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1334,6 +1676,16 @@
       </recipeUsers>
       <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
     </recipeMaker>
+    <tools>
+      <li ListIndex="0">
+        <label>barrels</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1360,7 +1712,7 @@
         <soundCast>ShotMinigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_Minigun</projectileDef>
+        <defaultProjectile>Bullet_Minigun</defaultProjectile>
         <forcedMissRadius>2.4</forcedMissRadius>
       </li>
     </verbs>
@@ -1409,6 +1761,7 @@
       <AccuracyMedium>0.92</AccuracyMedium>
       <AccuracyLong>0.88</AccuracyLong>
       <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1436,6 +1789,16 @@
       </li>
     </comps>
     <smeltable>true</smeltable>
+    <tools>
+      <li ListIndex="0">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/RocketLauncher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1470,7 +1833,7 @@
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>14</muzzleFlashScale>
         <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
-        <projectileDef>Bullet_Rocket</projectileDef>
+        <defaultProjectile>Bullet_Rocket</defaultProjectile>
         <forcedMissRadius>2.0</forcedMissRadius>
       </li>
     </verbs>
@@ -1522,6 +1885,7 @@
       <AccuracyMedium>1.0</AccuracyMedium>
       <AccuracyLong>1.0</AccuracyLong>
       <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1549,6 +1913,16 @@
       </li>
     </comps>
     <smeltable>true</smeltable>
+    <tools>
+      <li ListIndex="0">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/DoomsdayLauncher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1581,7 +1955,7 @@
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>14</muzzleFlashScale>
         <ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
-        <projectileDef>Bullet_DoomsdayRocket</projectileDef>
+        <defaultProjectile>Bullet_DoomsdayRocket</defaultProjectile>
         <forcedMissRadius>0.0</forcedMissRadius>
       </li>
     </verbs>
@@ -1634,6 +2008,7 @@
       <AccuracyMedium>0.92</AccuracyMedium>
       <AccuracyLong>0.88</AccuracyLong>
       <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1662,6 +2037,17 @@
       </li>
     </comps>
     <smeltable>true</smeltable>
+    <tools>
+      <li ListIndex="0">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+          <li ListIndex="1">Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ChargeLance</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1687,7 +2073,7 @@
         <soundCast>ChargeLance_Fire</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_ChargeLance</projectileDef>
+        <defaultProjectile>Bullet_ChargeLance</defaultProjectile>
       </li>
     </verbs>
     <equipmentType>Primary</equipmentType>
@@ -1717,7 +2103,8 @@
       <damageAmountBase>13</damageAmountBase>
       <explosionRadius>2.4</explosionRadius>
       <preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
-      <explosionSpawnChance>0.27</explosionSpawnChance>
+      <preExplosionSpawnChance>0.27</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseGun">
@@ -1732,6 +2119,7 @@
       <AccuracyMedium>0.18</AccuracyMedium>
       <AccuracyLong>0.06</AccuracyLong>
       <RangedWeapon_Cooldown>8.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1760,6 +2148,16 @@
       </li>
     </comps>
     <smeltable>true</smeltable>
+    <tools>
+      <li ListIndex="0">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1785,9 +2183,8 @@
         <soundCast>InfernoCannon_Fire</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>14</muzzleFlashScale>
-        <ai_IsIncendiary>true</ai_IsIncendiary>
         <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
-        <projectileDef>Bullet_InfernoCannon</projectileDef>
+        <defaultProjectile>Bullet_InfernoCannon</defaultProjectile>
         <forcedMissRadius>3.5</forcedMissRadius>
       </li>
     </verbs>
@@ -1830,6 +2227,7 @@
       <AccuracyMedium>0.59</AccuracyMedium>
       <AccuracyLong>0.42</AccuracyLong>
       <RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1858,6 +2256,16 @@
       </li>
     </comps>
     <smeltable>true</smeltable>
+    <tools>
+      <li ListIndex="0">
+        <label>barrel</label>
+        <capacities>
+          <li ListIndex="0">Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ChargeBlasterHeavy</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1884,7 +2292,7 @@
         <soundCast>ShotChargeBlaster</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <projectileDef>Bullet_ChargeBlasterHeavy</projectileDef>
+        <defaultProjectile>Bullet_ChargeBlasterHeavy</defaultProjectile>
         <forcedMissRadius>2.9</forcedMissRadius>
       </li>
     </verbs>
@@ -1895,4 +2303,4 @@
     </weaponTags>
     <destroyOnDrop>True</destroyOnDrop>
   </ThingDef>
-</ThingDefs>
+</Defs>

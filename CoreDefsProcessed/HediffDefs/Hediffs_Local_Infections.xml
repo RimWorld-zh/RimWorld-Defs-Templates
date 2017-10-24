@@ -28,11 +28,12 @@
       <li ListIndex="0">
         <vomitMtbDays>1.0</vomitMtbDays>
         <painOffset>0.2</painOffset>
-        <hungerRateFactor>2</hungerRateFactor>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
       </li>
     </stages>
     <tendable>true</tendable>
     <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="InfectionBase">
@@ -52,7 +53,7 @@
     <stages>
       <li ListIndex="0">
         <painOffset>0.2</painOffset>
-        <restFallFactor>2</restFallFactor>
+        <restFallFactorOffset>1</restFallFactorOffset>
         <capMods>
           <li ListIndex="0">
             <capacity>Manipulation</capacity>
@@ -67,6 +68,7 @@
     </stages>
     <tendable>true</tendable>
     <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef Abstract="True" ParentName="InfectionBase" Name="MechanitesBase">
@@ -120,7 +122,7 @@
       <li ListIndex="0">
         <label>mild pain</label>
         <painOffset>0.2</painOffset>
-        <restFallFactor>1.7</restFallFactor>
+        <restFallFactorOffset>0.7</restFallFactorOffset>
         <capMods>
           <li ListIndex="0">
             <capacity>Manipulation</capacity>
@@ -140,7 +142,7 @@
         <minSeverity>0.5</minSeverity>
         <label>intense pain</label>
         <painOffset>0.6</painOffset>
-        <restFallFactor>2.0</restFallFactor>
+        <restFallFactorOffset>1.0</restFallFactorOffset>
         <capMods>
           <li ListIndex="0">
             <capacity>Manipulation</capacity>
@@ -162,6 +164,7 @@
     <makesAlert>false</makesAlert>
     <minSeverity>0.001</minSeverity>
     <maxSeverity>1</maxSeverity>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="MechanitesBase">
@@ -191,7 +194,7 @@
       <li ListIndex="0">
         <label>mild pain</label>
         <painOffset>0.2</painOffset>
-        <restFallFactor>1.7</restFallFactor>
+        <restFallFactorOffset>0.7</restFallFactorOffset>
         <capMods>
           <li ListIndex="0">
             <capacity>Sight</capacity>
@@ -215,7 +218,7 @@
         <minSeverity>0.5</minSeverity>
         <label>intense pain</label>
         <painOffset>0.6</painOffset>
-        <restFallFactor>2.0</restFallFactor>
+        <restFallFactorOffset>1.0</restFallFactorOffset>
         <capMods>
           <li ListIndex="0">
             <capacity>Sight</capacity>
@@ -241,6 +244,7 @@
     <makesAlert>false</makesAlert>
     <minSeverity>0.001</minSeverity>
     <maxSeverity>1</maxSeverity>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="InfectionBase">
@@ -309,7 +313,9 @@
     </stages>
     <tendable>true</tendable>
     <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>an infection</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InfectionBase">
     <defName>Flu</defName>
@@ -334,8 +340,8 @@
     <lethalSeverity>1</lethalSeverity>
     <stages>
       <li ListIndex="0">
-        <label>minor-hidden</label>
-        <everVisible>false</everVisible>
+        <label>minor</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.333</minSeverity>
@@ -398,6 +404,7 @@
     </stages>
     <tendable>true</tendable>
     <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="InfectionBase">
@@ -424,7 +431,7 @@
     <stages>
       <li ListIndex="0">
         <label>minor</label>
-        <everVisible>false</everVisible>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.4</minSeverity>
@@ -494,6 +501,7 @@
     </stages>
     <tendable>true</tendable>
     <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="InfectionBase">
@@ -519,8 +527,8 @@
     <lethalSeverity>1</lethalSeverity>
     <stages>
       <li ListIndex="0">
-        <label>hidden</label>
-        <everVisible>false</everVisible>
+        <label>minor</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.63</minSeverity>
@@ -581,6 +589,7 @@
     <tendable>true</tendable>
     <makesSickThought>true</makesSickThought>
     <scenarioCanAdd>true</scenarioCanAdd>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef ParentName="InfectionBase">
@@ -606,8 +615,8 @@
     <lethalSeverity>1</lethalSeverity>
     <stages>
       <li ListIndex="0">
-        <label>minor-hidden</label>
-        <everVisible>false</everVisible>
+        <label>minor</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.29</minSeverity>
@@ -692,6 +701,7 @@
     </stages>
     <tendable>true</tendable>
     <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
 </Defs>

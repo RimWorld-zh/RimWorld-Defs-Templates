@@ -29,6 +29,19 @@
     <requiresFaction>true_or_false</requiresFaction>
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
+    <!--Default Value: Undefined-->
     <minFactionTechLevel>enum_value</minFactionTechLevel>
+    <!--Simple List-->
+    <!--Type: List<string>-->
+    <tags>
+      <!--Type: string-->
+      <li>string_value</li>
+      <!-- ... -->
+    </tags>
+    <!--Type: System.Type-->
+    <!--Default Value: typeof(SitePartWorker)-->
+    <workerClass>class_name</workerClass>
+    <!--Type: string-->
+    <descriptionDialogue>string_value</descriptionDialogue>
   </SitePartDef>
 </Defs>

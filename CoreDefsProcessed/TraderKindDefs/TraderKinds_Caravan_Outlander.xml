@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DefPackage-TraderKindDef>
+<Defs>
   <TraderKindDef>
     <defName>Caravan_Outlander_BulkGoods</defName>
     <label>bulk goods trader</label>
@@ -150,12 +150,16 @@
         </countRange>
         <thingDef>Medicine</thingDef>
       </li>
-      <li Class="StockGenerator_SingleDef" ListIndex="5">
+      <li Class="StockGenerator_Tag" ListIndex="5">
         <countRange>
-          <min>5</min>
-          <max>20</max>
+          <min>3</min>
+          <max>15</max>
         </countRange>
-        <thingDef>MortarShell</thingDef>
+        <tradeTag>MortarShell</tradeTag>
+        <thingDefCountRange>
+          <min>1</min>
+          <max>2</max>
+        </thingDefCountRange>
       </li>
       <li Class="StockGenerator_BuyArt" ListIndex="6" />
       <li Class="StockGenerator_BuyWeirdOrganic" ListIndex="7" />
@@ -187,12 +191,16 @@
         <price>Expensive</price>
         <thingDef>Medicine</thingDef>
       </li>
-      <li Class="StockGenerator_SingleDef" ListIndex="3">
+      <li Class="StockGenerator_Tag" ListIndex="3">
         <countRange>
-          <min>-4</min>
+          <min>1</min>
           <max>10</max>
         </countRange>
-        <thingDef>MortarShell</thingDef>
+        <tradeTag>MortarShell</tradeTag>
+        <thingDefCountRange>
+          <min>-1</min>
+          <max>2</max>
+        </thingDefCountRange>
       </li>
       <li Class="StockGenerator_Category" ListIndex="4">
         <totalPriceRange>
@@ -345,4 +353,4 @@
     </stockGenerators>
     <commonality>1</commonality>
   </TraderKindDef>
-</DefPackage-TraderKindDef>
+</Defs>

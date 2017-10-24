@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef Name="BaseFilth" Abstract="True">
     <statBases>
       <Beauty>-15</Beauty>
@@ -393,4 +393,4 @@
       <rainWashes>true</rainWashes>
     </filth>
   </ThingDef>
-</ThingDefs>
+</Defs>

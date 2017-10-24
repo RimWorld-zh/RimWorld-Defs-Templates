@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef Name="HatBase" ParentName="ApparelBase" Abstract="True">
     <thingCategories>
       <li>Headgear</li>
@@ -20,7 +20,7 @@
     <label>cowboy hat</label>
     <description>Stylish yet rugged, this hat keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
     <statBases>
-      <WorkToMake>5000</WorkToMake>
+      <WorkToMake>7000</WorkToMake>
       <Mass>0.14</Mass>
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
@@ -115,7 +115,7 @@
     <label>bowler hat</label>
     <description>A good-looking hat which projects a slightly urban, money-loving style. Improves social impact.</description>
     <statBases>
-      <WorkToMake>4500</WorkToMake>
+      <WorkToMake>6500</WorkToMake>
       <Mass>0.14</Mass>
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
@@ -206,11 +206,89 @@
     </apparel>
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_TribalHeaddress</defName>
+    <label>tribal headdress</label>
+    <description>Elegant traditional garb, often with religious significance. Improves social impact.</description>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>0.11</Mass>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <Insulation_Heat>0</Insulation_Heat>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>15</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+        <li ListIndex="2">ElectricTailoringBench</li>
+        <li ListIndex="3">HandTailoringBench</li>
+        <li ListIndex="4">CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite />
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/TribalHeaddress/TribalHeaddress</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Headgear</li>
+    </thingCategories>
+    <techLevel>Neolithic</techLevel>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">UpperHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">Overhead</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/TribalHeaddress/TribalHeaddress</wornGraphicPath>
+      <defaultOutfitTags>
+        <li ListIndex="0">Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_Tuque</defName>
     <label>tuque</label>
     <description>A soft, thick cap. Great for keeping warm in winter.</description>
     <statBases>
-      <WorkToMake>1500</WorkToMake>
+      <WorkToMake>2200</WorkToMake>
       <Mass>0.07</Mass>
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
@@ -301,6 +379,168 @@
         <li ListIndex="0">Worker</li>
         <li ListIndex="1">Soldier</li>
       </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_WarMask</defName>
+    <label>war mask</label>
+    <description>An artistically terrifying war mask. Hides the wearer's face and makes them more confident.</description>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>1.4</Mass>
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Woody</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+        <li ListIndex="2">CraftingSpot</li>
+      </recipeUsers>
+      <factionPrerequisiteTags>
+        <li ListIndex="0">Tribal</li>
+      </factionPrerequisiteTags>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/WarMask/WarMask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Headgear</li>
+    </thingCategories>
+    <techLevel>Neolithic</techLevel>
+    <equippedStatOffsets>
+      <PainShockThreshold>0.10</PainShockThreshold>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">Overhead</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/WarMask/WarMask</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Neolithic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Soldier</li>
+      </defaultOutfitTags>
+      <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Apparel_WarVeil</defName>
+    <label>war veil</label>
+    <description>A war veil, made out of reinforced cloth torn to appear damaged in combat. Some believe this functions as a talisman of courage.</description>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.08</Mass>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-4</Beauty>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>20</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Fabric</li>
+    </stuffCategories>
+    <altitudeLayer>Item</altitudeLayer>
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <tickerType>Never</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <comps>
+      <li Class="CompProperties_Forbiddable" ListIndex="0" />
+      <li ListIndex="1">
+        <compClass>CompColorable</compClass>
+      </li>
+      <li ListIndex="2">
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li ListIndex="0">ElectricTailoringBench</li>
+        <li ListIndex="1">HandTailoringBench</li>
+        <li ListIndex="2">CraftingSpot</li>
+      </recipeUsers>
+      <factionPrerequisiteTags>
+        <li ListIndex="0">Tribal</li>
+      </factionPrerequisiteTags>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/WarVeil/WarVeil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <selectable>True</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>True</alwaysHaulable>
+    <thingCategories>
+      <li ListIndex="0">Headgear</li>
+    </thingCategories>
+    <techLevel>Neolithic</techLevel>
+    <equippedStatOffsets>
+      <PainShockThreshold>0.05</PainShockThreshold>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li ListIndex="0">FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li ListIndex="0">Overhead</li>
+      </layers>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/WarVeil/WarVeil</wornGraphicPath>
+      <tags>
+        <li ListIndex="0">Neolithic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li ListIndex="0">Soldier</li>
+      </defaultOutfitTags>
+      <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
     </apparel>
   </ThingDef>
   <!-- ================================== Helmets ====================================-->
@@ -662,4 +902,4 @@
       </tags>
     </apparel>
   </ThingDef>
-</ThingDefs>
+</Defs>

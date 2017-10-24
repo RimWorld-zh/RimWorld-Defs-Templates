@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TaleDef>
+    <defName>Wounded</defName>
+    <label>wounded</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <!-- Killer and/or weapon may not be listed, make sure there's valid options -->
+        <li ListIndex="0">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef]</li>
+        <li ListIndex="1">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="2">tale_noun->the [wound_name_present] of [victim_nameShortDef] by [killer_nameShortDef]</li>
+        <li ListIndex="3">tale_noun->the [wound_name_present] of [victim_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="4">tale_noun->the [wound_name_present] of [victim_nameShortDef]</li>
+        <li ListIndex="5">image->[victim_nameFull] being [wound_name_past] by [killer_nameFull] [weapon_optional]</li>
+        <li ListIndex="6">image->[killer_nameFull] [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="7">image->[killer_nameFull] brutally [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="8">image->[victim_nameFull] being [wound_name_past] [weapon_optional]</li>
+        <li ListIndex="9">wound_name_past->wounded</li>
+        <li ListIndex="10">wound_name_past->harmed</li>
+        <li ListIndex="11">wound_name_past->hurt</li>
+        <li ListIndex="12">wound_name_past->assaulted</li>
+        <li ListIndex="13">wound_name_past->attacked</li>
+        <li ListIndex="14">wound_name_present->wounding</li>
+        <li ListIndex="15">wound_name_present->harming</li>
+        <li ListIndex="16">wound_name_present->hurting</li>
+        <li ListIndex="17">wound_name_present->assaulting</li>
+        <li ListIndex="18">wound_name_present->attacking</li>
+        <li ListIndex="19">weapon_optional->with a [weapon_label] [circumstance_group]</li>
+        <li ListIndex="20">weapon_optional->[circumstance_group]</li>
+        <li ListIndex="21">circumstance_phrase->seemingly without remorse</li>
+        <li ListIndex="22">circumstance_phrase->with cold efficiency</li>
+        <li ListIndex="23">circumstance_phrase->with passionate rage</li>
+        <li ListIndex="24">circumstance_phrase->with quick, efficient movements</li>
+        <li ListIndex="25">circumstance_phrase->without emotion or expression</li>
+        <li ListIndex="26">circumstance_phrase->out of bleak necessity</li>
+        <li ListIndex="27">circumstance_phrase->in a cowardly, halfhearted way</li>
+        <li ListIndex="28">desc_sentence->[quantity_adjphrase] [animal]s look on.</li>
+        <li ListIndex="29">desc_sentence->A [outlander] watches silently [side_position].</li>
+        <li ListIndex="30">desc_sentence->Blood is pooling around [victim_nameShortDef]'s body.</li>
+        <li ListIndex="31">desc_sentence->[victim_nameShortDef] is covered in [gore].</li>
+        <li ListIndex="32">desc_sentence->[victim_nameShortDef] looks [angstyadjective].</li>
+        <li ListIndex="33">desc_sentence->[victim_nameShortDef] is wincing in pain.</li>
+        <li ListIndex="34">desc_sentence->[victim_nameShortDef] is wincing in agony.</li>
+        <li ListIndex="35">desc_sentence->[killer_nameShortDef] is baring [killer_possessive] teeth.</li>
+        <li ListIndex="36">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
+        <li ListIndex="37">desc_sentence->[killer_nameShortDef] looks distressed at what [killer_pronoun] is doing.</li>
+        <li ListIndex="38">desc_sentence->[killer_nameShortDef] looks pleased with the situation.</li>
+        <li ListIndex="39">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>victim</firstPawnSymbol>
+    <secondPawnSymbol>killer</secondPawnSymbol>
+    <defSymbol>weapon</defSymbol>
+  </TaleDef>
+  <TaleDef>
+    <defName>Downed</defName>
+    <label>downed</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <!-- Killer and/or weapon may not be listed, make sure there's valid options -->
+        <li ListIndex="0">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef]</li>
+        <li ListIndex="1">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="2">tale_noun->the [wound_name_present] of [victim_nameShortDef] by [killer_nameShortDef]</li>
+        <li ListIndex="3">tale_noun->the [wound_name_present] of [victim_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="4">tale_noun->the [wound_name_present] of [victim_nameShortDef]</li>
+        <li ListIndex="5">image->[victim_nameFull] being [wound_name_past] by [killer_nameFull] [weapon_optional]</li>
+        <li ListIndex="6">image->[killer_nameFull] [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="7">image->[killer_nameFull] brutally [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="8">image->[victim_nameFull] being [wound_name_past] [weapon_optional]</li>
+        <li ListIndex="9">wound_name_past->incapacitated</li>
+        <li ListIndex="10">wound_name_past->crippled</li>
+        <li ListIndex="11">wound_name_past->knocked unconscious</li>
+        <li ListIndex="12">wound_name_past->disabled</li>
+        <li ListIndex="13">wound_name_present->incapacitating</li>
+        <li ListIndex="14">wound_name_present->harming</li>
+        <li ListIndex="15">wound_name_present->knocking unconscious</li>
+        <li ListIndex="16">wound_name_present->disabling</li>
+        <li ListIndex="17">weapon_optional->with a [weapon_label] [circumstance_group]</li>
+        <li ListIndex="18">weapon_optional->[circumstance_group]</li>
+        <li ListIndex="19">circumstance_phrase->seemingly without remorse</li>
+        <li ListIndex="20">circumstance_phrase->with cold efficiency</li>
+        <li ListIndex="21">circumstance_phrase->with passionate rage</li>
+        <li ListIndex="22">circumstance_phrase->with quick, efficient movements</li>
+        <li ListIndex="23">circumstance_phrase->without emotion or expression</li>
+        <li ListIndex="24">circumstance_phrase->out of bleak necessity</li>
+        <li ListIndex="25">circumstance_phrase->in a cowardly, halfhearted way</li>
+        <li ListIndex="26">desc_sentence->[quantity_adjphrase] [animal]s look on.</li>
+        <li ListIndex="27">desc_sentence->A [outlander] watches silently [side_position].</li>
+        <li ListIndex="28">desc_sentence->[victim_nameShortDef] looks [angstyadjective].</li>
+        <li ListIndex="29">desc_sentence->[victim_nameShortDef]'s eyes are closed.</li>
+        <li ListIndex="30">desc_sentence->[killer_nameShortDef] is baring [killer_possessive] teeth.</li>
+        <li ListIndex="31">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
+        <li ListIndex="32">desc_sentence->[killer_nameShortDef] looks distressed at what [killer_pronoun] is doing.</li>
+        <li ListIndex="33">desc_sentence->[killer_nameShortDef] looks pleased with the situation.</li>
+        <li ListIndex="34">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>victim</firstPawnSymbol>
+    <secondPawnSymbol>killer</secondPawnSymbol>
+    <defSymbol>weapon</defSymbol>
+  </TaleDef>
+  <TaleDef>
+    <defName>KilledLongRange</defName>
+    <label>killed at distance</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <!-- weapon may not be listed, make sure there's valid options -->
+        <li ListIndex="0">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] at extreme distance</li>
+        <li ListIndex="1">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] at extreme distance with a [weapon_label]</li>
+        <li ListIndex="2">tale_noun->long distance [wound_name_present] of [victim_nameShortDef] by [killer_nameShortDef]</li>
+        <li ListIndex="3">tale_noun->long distance [wound_name_present] of [victim_nameShortDef] by [killer_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="4">image->[killer_nameFull] aiming at [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="5">image->[killer_nameFull] [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="6">image->[killer_nameFull] coldly [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="7">wound_name_past->murdered</li>
+        <li ListIndex="8">wound_name_past->slain</li>
+        <li ListIndex="9">wound_name_past->slaughtered</li>
+        <li ListIndex="10">wound_name_past->eliminated</li>
+        <li ListIndex="11">wound_name_present->murdering</li>
+        <li ListIndex="12">wound_name_present->slaying</li>
+        <li ListIndex="13">wound_name_present->slaughtering</li>
+        <li ListIndex="14">wound_name_present->eliminating</li>
+        <li ListIndex="15">weapon_optional->with a [weapon_label] [circumstance_group]</li>
+        <li ListIndex="16">weapon_optional->[circumstance_group]</li>
+        <li ListIndex="17">circumstance_phrase->seemingly without remorse</li>
+        <li ListIndex="18">circumstance_phrase->with cold efficiency</li>
+        <li ListIndex="19">circumstance_phrase->from a long distance</li>
+        <li ListIndex="20">circumstance_phrase->from a great height</li>
+        <li ListIndex="21">circumstance_phrase->without emotion or expression</li>
+        <li ListIndex="22">circumstance_phrase->in a cowardly, halfhearted way</li>
+        <li ListIndex="23">desc_sentence->[quantity_adjphrase] [animal]s look on.</li>
+        <li ListIndex="24">desc_sentence->A [outlander] watches silently [side_position].</li>
+        <li ListIndex="25">desc_sentence->[victim_nameShortDef] looks [angstyadjective].</li>
+        <li ListIndex="26">desc_sentence->[victim_nameShortDef]'s eyes are closed.</li>
+        <li ListIndex="27">desc_sentence->[victim_nameShortDef] is covered in [gore].</li>
+        <li ListIndex="28">desc_sentence->[killer_nameShortDef] is baring [killer_possessive] teeth.</li>
+        <li ListIndex="29">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
+        <li ListIndex="30">desc_sentence->[killer_nameShortDef] looks distressed at what [killer_pronoun] is doing.</li>
+        <li ListIndex="31">desc_sentence->[killer_nameShortDef] looks pleased with the situation.</li>
+        <li ListIndex="32">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>killer</firstPawnSymbol>
+    <secondPawnSymbol>victim</secondPawnSymbol>
+    <defSymbol>weapon</defSymbol>
+  </TaleDef>
+  <TaleDef>
+    <defName>KilledMelee</defName>
+    <label>killed in melee</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <!-- weapon may not be listed, make sure there's valid options -->
+        <li ListIndex="0">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] in close combat</li>
+        <li ListIndex="1">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] in melee with a [weapon_label]</li>
+        <li ListIndex="2">tale_noun->melee [wound_name_present] of [victim_nameShortDef] by [killer_nameShortDef]</li>
+        <li ListIndex="3">tale_noun->close combat [wound_name_present] of [victim_nameShortDef] by [killer_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="4">image->[victim_nameFull] being [wound_name_past] by [killer_nameFull] [weapon_optional]</li>
+        <li ListIndex="5">image->[killer_nameFull] [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="6">image->[killer_nameFull] brutally [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="7">image->[victim_nameFull] being [wound_name_past] [weapon_optional]</li>
+        <li ListIndex="8">wound_name_past->murdered</li>
+        <li ListIndex="9">wound_name_past->slain</li>
+        <li ListIndex="10">wound_name_past->slaughtered</li>
+        <li ListIndex="11">wound_name_past->mutilated</li>
+        <li ListIndex="12">wound_name_present->murdering</li>
+        <li ListIndex="13">wound_name_present->slaying</li>
+        <li ListIndex="14">wound_name_present->slaughtering</li>
+        <li ListIndex="15">wound_name_present->mutilating</li>
+        <li ListIndex="16">weapon_optional->with a [weapon_label] [circumstance_group]</li>
+        <li ListIndex="17">weapon_optional->[circumstance_group]</li>
+        <li ListIndex="18">circumstance_phrase->seemingly without remorse</li>
+        <li ListIndex="19">circumstance_phrase->with cold efficiency</li>
+        <li ListIndex="20">circumstance_phrase->with quick, efficient movements</li>
+        <li ListIndex="21">circumstance_phrase->without emotion or expression</li>
+        <li ListIndex="22">circumstance_phrase->in a cowardly, halfhearted way</li>
+        <li ListIndex="23">desc_sentence->[quantity_adjphrase] [animal]s look on.</li>
+        <li ListIndex="24">desc_sentence->A [outlander] watches silently [side_position].</li>
+        <li ListIndex="25">desc_sentence->[victim_nameShortDef] looks [angstyadjective].</li>
+        <li ListIndex="26">desc_sentence->[victim_nameShortDef]'s eyes are closed.</li>
+        <li ListIndex="27">desc_sentence->[victim_nameShortDef] is covered in [gore].</li>
+        <li ListIndex="28">desc_sentence->[victim_nameShortDef] and [killer_nameShortDef] are both covered in [gore].</li>
+        <li ListIndex="29">desc_sentence->[killer_nameShortDef] is covered in [gore].</li>
+        <li ListIndex="30">desc_sentence->[killer_nameShortDef] is baring [killer_possessive] teeth.</li>
+        <li ListIndex="31">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
+        <li ListIndex="32">desc_sentence->[killer_nameShortDef] looks distressed at what [killer_pronoun] is doing.</li>
+        <li ListIndex="33">desc_sentence->[killer_nameShortDef] looks pleased with the situation.</li>
+        <li ListIndex="34">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
+        <li ListIndex="35">desc_sentence->[killer_nameShortDef] wears a feral expression.</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>killer</firstPawnSymbol>
+    <secondPawnSymbol>victim</secondPawnSymbol>
+    <defSymbol>weapon</defSymbol>
+  </TaleDef>
+  <TaleDef>
+    <defName>KilledMajorThreat</defName>
+    <label>killed major threat</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <!-- weapon may not be listed, make sure there's valid options -->
+        <li ListIndex="0">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef]</li>
+        <li ListIndex="1">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="2">tale_noun->[wound_name_present] of [victim_nameShortDef] by [killer_nameShortDef]</li>
+        <li ListIndex="3">tale_noun->[wound_name_present] of [victim_nameShortDef] by [killer_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="4">image->[victim_nameFull] being [wound_name_past] by [killer_nameFull] [weapon_optional]</li>
+        <li ListIndex="5">image->[killer_nameFull] [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="6">image->[killer_nameFull] brutally [wound_name_present] [victim_nameFull] [weapon_optional]</li>
+        <li ListIndex="7">image->[victim_nameFull] being [wound_name_past] [weapon_optional]</li>
+        <li ListIndex="8">wound_name_past->slain</li>
+        <li ListIndex="9">wound_name_past->defeated</li>
+        <li ListIndex="10">wound_name_past->overcome</li>
+        <li ListIndex="11">wound_name_present->slaying</li>
+        <li ListIndex="12">wound_name_present->defeating</li>
+        <li ListIndex="13">wound_name_present->overcoming</li>
+        <li ListIndex="14">weapon_optional->with a [weapon_label] [circumstance_group]</li>
+        <li ListIndex="15">weapon_optional->[circumstance_group]</li>
+        <li ListIndex="16">circumstance_phrase->with cold efficiency</li>
+        <li ListIndex="17">circumstance_phrase->with quick, efficient movements</li>
+        <li ListIndex="18">circumstance_phrase->without emotion or expression</li>
+        <li ListIndex="19">circumstance_phrase->with great heroism</li>
+        <li ListIndex="20">circumstance_phrase->with incredible strength</li>
+        <li ListIndex="21">desc_sentence->[quantity_adjphrase] [animal]s look on.</li>
+        <li ListIndex="22">desc_sentence->A [outlander] watches silently [side_position].</li>
+        <li ListIndex="23">desc_sentence->[victim_nameShortDef] looks [angstyadjective].</li>
+        <li ListIndex="24">desc_sentence->[victim_nameShortDef]'s eyes are closed.</li>
+        <li ListIndex="25">desc_sentence->[victim_nameShortDef] is covered in [gore].</li>
+        <li ListIndex="26">desc_sentence->[victim_nameShortDef] and [killer_nameShortDef] are both covered in [gore].</li>
+        <li ListIndex="27">desc_sentence->[victim_nameShortDef]'s corpse towers over [killer_nameShortDef].</li>
+        <li ListIndex="28">desc_sentence->[victim_nameShortDef]'s massive corpse covers a [terrainfeature].</li>
+        <li ListIndex="29">desc_sentence->[victim_nameShortDef]'s eyes glow [color].</li>
+        <li ListIndex="30">desc_sentence->[killer_nameShortDef] is covered in [gore].</li>
+        <li ListIndex="31">desc_sentence->[killer_nameShortDef] is baring [killer_possessive] teeth.</li>
+        <li ListIndex="32">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
+        <li ListIndex="33">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
+        <li ListIndex="34">desc_sentence->[killer_nameShortDef] looks [badassadjective].</li>
+        <li ListIndex="35">desc_sentence->[killer_nameShortDef] is glowing with a heroic aura.</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>killer</firstPawnSymbol>
+    <secondPawnSymbol>victim</secondPawnSymbol>
+    <defSymbol>weapon</defSymbol>
+  </TaleDef>
+  <TaleDef>
+    <defName>KilledCapacity</defName>
+    <label>killed</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef]</li>
+        <li ListIndex="1">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] with a [weapon_label]</li>
+        <li ListIndex="2">image->[killer_nameFull] [cap_removal] [victim_nameFull]'s capacity for [capacity_label] [weapon_optional]</li>
+        <li ListIndex="3">image->[killer_nameFull] [wound_name_present] [victim_nameFull] by [cap_removal] their [capacity_label] [weapon_optional]</li>
+        <li ListIndex="4">cap_removal->destroying</li>
+        <li ListIndex="5">cap_removal->eliminating</li>
+        <li ListIndex="6">cap_removal->ending</li>
+        <li ListIndex="7">wound_name_past->slayed</li>
+        <li ListIndex="8">wound_name_past->executed</li>
+        <li ListIndex="9">wound_name_past->assassinated</li>
+        <li ListIndex="10">wound_name_past->eliminated</li>
+        <li ListIndex="11">wound_name_present->slaying</li>
+        <li ListIndex="12">wound_name_present->executing</li>
+        <li ListIndex="13">wound_name_present->assassinating</li>
+        <li ListIndex="14">wound_name_present->eliminating</li>
+        <li ListIndex="15">weapon_optional->with a [weapon_label] [circumstance_group]</li>
+        <li ListIndex="16">weapon_optional->[circumstance_group]</li>
+        <li ListIndex="17">circumstance_phrase->seemingly without remorse</li>
+        <li ListIndex="18">circumstance_phrase->with cold efficiency</li>
+        <li ListIndex="19">circumstance_phrase->with quick, efficient movements</li>
+        <li ListIndex="20">circumstance_phrase->without emotion or expression</li>
+        <li ListIndex="21">desc_sentence->[quantity_adjphrase] [animal]s look on.</li>
+        <li ListIndex="22">desc_sentence->A [outlander] watches silently [side_position].</li>
+        <li ListIndex="23">desc_sentence->[victim_nameShortDef] looks [angstyadjective].</li>
+        <li ListIndex="24">desc_sentence->[victim_nameShortDef]'s eyes are closed.</li>
+        <li ListIndex="25">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
+        <li ListIndex="26">desc_sentence->[killer_nameShortDef] looks distressed at what [killer_pronoun] is doing.</li>
+        <li ListIndex="27">desc_sentence->[killer_nameShortDef] looks pleased with the situation.</li>
+        <li ListIndex="28">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>killer</firstPawnSymbol>
+    <secondPawnSymbol>victim</secondPawnSymbol>
+    <defSymbol>capacity</defSymbol>
+    <defType>PawnCapacityDef</defType>
+  </TaleDef>
+  <TaleDef>
+    <defName>KilledMortar</defName>
+    <label>killed with mortar</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] with a mortar</li>
+        <li ListIndex="1">tale_noun->artillery kill of [victim_nameShortDef] by [killer_nameShortDef]</li>
+        <li ListIndex="2">image->[killer_nameFull] carefully adjusting a firing tube [circumstance_group]</li>
+        <li ListIndex="3">image->[killer_nameFull] looking into the distance [circumstance_group]</li>
+        <li ListIndex="4">image->[killer_nameFull] doing calculations on paper [circumstance_group]</li>
+        <li ListIndex="5">image->[killer_nameFull] testing wind direction [circumstance_group]</li>
+        <li ListIndex="6">circumstance_phrase->while [victim_nameFull] is consumed in a massive explosion</li>
+        <li ListIndex="7">circumstance_phrase->as a shell arcs down towards [victim_nameFull]</li>
+        <li ListIndex="8">circumstance_phrase->while [victim_nameFull] walks around obliviously</li>
+        <li ListIndex="9">circumstance_phrase->as [victim_nameFull] sprints</li>
+        <li ListIndex="10">desc_sentence->[quantity_adjphrase] [animal]s look on.</li>
+        <li ListIndex="11">desc_sentence->A [outlander] watches silently [side_position].</li>
+        <li ListIndex="12">desc_sentence->[victim_nameShortDef] looks [angstyadjective].</li>
+        <li ListIndex="13">desc_sentence->[victim_nameShortDef] is covered in [gore].</li>
+        <li ListIndex="14">desc_sentence->[victim_nameShortDef] is surrounded by explosions.</li>
+        <li ListIndex="15">desc_sentence->[victim_nameShortDef] is surrounded by craters.</li>
+        <li ListIndex="16">desc_sentence->[killer_nameShortDef] seems satisfied.</li>
+        <li ListIndex="17">desc_sentence->[killer_nameShortDef] looks distressed at what [killer_pronoun] is doing.</li>
+        <li ListIndex="18">desc_sentence->[killer_nameShortDef] looks pleased with the situation.</li>
+        <li ListIndex="19">desc_sentence->[killer_nameShortDef] looks triumphant.</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>killer</firstPawnSymbol>
+    <secondPawnSymbol>victim</secondPawnSymbol>
+    <defSymbol>weapon</defSymbol>
+  </TaleDef>
+  <TaleDef>
+    <defName>Exhausted</defName>
+    <label>exhausted</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] collapsing from exhaustion</li>
+        <li ListIndex="1">image->[pawn_nameFull] collapsing on the ground [circumstance_group]</li>
+        <li ListIndex="2">image->[pawn_nameFull] lying on the ground [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] lying in bed [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] collapsed in a chair [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] peacefully sleeping [circumstance_group]</li>
+        <li ListIndex="6">circumstance_phrase->with eyes closed</li>
+        <li ListIndex="7">circumstance_phrase->with a visible look of exhaustion</li>
+        <li ListIndex="8">circumstance_phrase->while covered in sweat</li>
+        <li ListIndex="9">circumstance_phrase->and unable to move a muscle</li>
+        <li ListIndex="10">desc_sentence->[pawn_nameShortDef]'s last project sits nearby, complete.</li>
+        <li ListIndex="11">desc_sentence->A marvelous construction surrounds [pawn_nameShortDef].</li>
+        <li ListIndex="12">desc_sentence->[quantity_adjphrase] [outlander]s look grateful for [pawn_nameShortDef]'s heroic effort.</li>
+        <li ListIndex="13">desc_sentence->[quantity_adjphrase] [outlander]s lie nearby in a similar state.</li>
+        <li ListIndex="14">desc_sentence->The scene takes place inside a newly-built [community].</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  <TaleDef>
+    <defName>IllnessRevealed</defName>
+    <label>illness revealed</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] stricken with [illness_label]</li>
+        <li ListIndex="1">image->[pawn_nameFull] staggering through a field [circumstance_group]</li>
+        <li ListIndex="2">image->[pawn_nameFull] lying on the ground [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] lying in bed [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] lying in a hospital bed [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] collapsed in a chair [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] crouching next to a fire [circumstance_group]</li>
+        <li ListIndex="7">circumstance_phrase->and sweating uncontrollably</li>
+        <li ListIndex="8">circumstance_phrase->and shivering uncontrollably</li>
+        <li ListIndex="9">circumstance_phrase->while both sweating and shivering</li>
+        <li ListIndex="10">circumstance_phrase->with cracked dry lips</li>
+        <li ListIndex="11">circumstance_phrase->while vomiting</li>
+        <li ListIndex="12">circumstance_phrase->with a visible rash</li>
+        <li ListIndex="13">circumstance_phrase->while being tended to by a doctor</li>
+        <li ListIndex="14">desc_sentence->[quantity_adjphrase] fly-ridden [animal] corpses surround the area.</li>
+        <li ListIndex="15">desc_sentence->[quantity_adjphrase] twisted [color] [terrainfeature]s surround the scene.</li>
+        <li ListIndex="16">desc_sentence->[quantity_adjphrase] [outlander]s are stricken with the same afflication.</li>
+        <li ListIndex="17">desc_sentence->The scene takes place inside a [tree] forest.</li>
+        <li ListIndex="18">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
+      </rulesStrings>
+    </rulePack>
+    <defSymbol>illness</defSymbol>
+    <defType>HediffDef</defType>
+  </TaleDef>
+  <TaleDef>
+    <defName>HeatstrokeRevealed</defName>
+    <label>heatstroke revealed</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] getting heatstroke</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef] overheating</li>
+        <li ListIndex="2">image->[pawn_nameFull] trudging through sand [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] huddled in the shade of a [terrainfeature] [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] searching for water [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] searching for shade [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] crawling across sun-baked dirt [circumstance_group]</li>
+        <li ListIndex="7">circumstance_phrase->with red dry skin</li>
+        <li ListIndex="8">circumstance_phrase->and covered in sweat</li>
+        <li ListIndex="9">circumstance_phrase->with cracked dry lips</li>
+        <li ListIndex="10">circumstance_phrase->while vomiting</li>
+        <li ListIndex="11">desc_sentence->[quantity_adjphrase] dessicated [animal] corpses surround the area.</li>
+        <li ListIndex="12">desc_sentence->[pawn_nameShortDef]'s clothes are tattered and torn.</li>
+        <li ListIndex="13">desc_sentence->A blazing sun looms in the background.</li>
+        <li ListIndex="14">desc_sentence->The scene takes place inside a blazing desert.</li>
+        <li ListIndex="15">desc_sentence->The scene appears to take place inside, next to a heater.</li>
+        <li ListIndex="16">desc_sentence->[quantity_adjphrase] unmoving [animal]s surround the scene.</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  <TaleDef>
+    <defName>HypothermiaRevealed</defName>
+    <label>hypothermia revealed</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef] getting hypothermia</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef] freezing to death</li>
+        <li ListIndex="2">image->[pawn_nameFull] trudging through snow [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] huddled beside a [terrainfeature] [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] searching for a warm [apparel] [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] crouching next to a fire [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] trying to light a fire [circumstance_group]</li>
+        <li ListIndex="7">circumstance_phrase->while their face slowly turns blue</li>
+        <li ListIndex="8">circumstance_phrase->and shivering uncontrollably</li>
+        <li ListIndex="9">circumstance_phrase->while covered in frost</li>
+        <li ListIndex="10">circumstance_phrase->while exhaling clouds of fog</li>
+        <li ListIndex="11">desc_sentence->[quantity_adjphrase] frozen [animal] corpses surround the area.</li>
+        <li ListIndex="12">desc_sentence->[pawn_nameShortDef]'s clothes are tattered and worn.</li>
+        <li ListIndex="13">desc_sentence->A cold blue moon looms in the background.</li>
+        <li ListIndex="14">desc_sentence->The scene takes place inside a snow-covered [tree] forest.</li>
+        <li ListIndex="15">desc_sentence->The scene appears to take place inside a freezer.</li>
+        <li ListIndex="16">desc_sentence->[quantity_adjphrase] shivering [animal]s surround the scene.</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  <TaleDef>
+    <defName>ToxicityRevealed</defName>
+    <label>toxicity revealed</label>
+    <type>Volatile</type>
+    <taleClass>Tale_SinglePawnAndDef</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[pawn_nameShortDef]'s body becoming toxic</li>
+        <li ListIndex="1">tale_noun->[pawn_nameShortDef] receiving toxins from an outside source</li>
+        <li ListIndex="2">image->[pawn_nameFull] staggering through a field [circumstance_group]</li>
+        <li ListIndex="3">image->[pawn_nameFull] lying on the ground [circumstance_group]</li>
+        <li ListIndex="4">image->[pawn_nameFull] lying in bed [circumstance_group]</li>
+        <li ListIndex="5">image->[pawn_nameFull] crouching next to a fire [circumstance_group]</li>
+        <li ListIndex="6">image->[pawn_nameFull] trying to light a fire [circumstance_group]</li>
+        <li ListIndex="7">image->[pawn_nameFull] mindlessly removing [pawn_possessive] clothes [circumstance_group]</li>
+        <li ListIndex="8">circumstance_phrase->and sweating uncontrollably</li>
+        <li ListIndex="9">circumstance_phrase->and shivering uncontrollably</li>
+        <li ListIndex="10">circumstance_phrase->while both sweating and shivering</li>
+        <li ListIndex="11">circumstance_phrase->with cracked dry lips</li>
+        <li ListIndex="12">circumstance_phrase->while vomiting</li>
+        <li ListIndex="13">circumstance_phrase->with a visible rash</li>
+        <li ListIndex="14">desc_sentence->[quantity_adjphrase] twisted [animal] corpses surround the area.</li>
+        <li ListIndex="15">desc_sentence->[pawn_nameShortDef]'s clothes are falling apart.</li>
+        <li ListIndex="16">desc_sentence->The sky is a murky [color].</li>
+        <li ListIndex="17">desc_sentence->[quantity_adjphrase] twisted [color] [terrainfeature]s surround the scene.</li>
+        <li ListIndex="18">desc_sentence->The scene takes place inside a twisted [tree] forest.</li>
+        <li ListIndex="19">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  <TaleDef>
+    <defName>GaveBirth</defName>
+    <label>gave birth</label>
+    <type>Volatile</type>
+    <taleClass>Tale_DoublePawn</taleClass>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">tale_noun->[mother_nameShortDef] giving birth to [child_nameShortDef]</li>
+        <li ListIndex="1">image->[mother_nameFull] giving birth to [circumstance_group]</li>
+        <li ListIndex="2">image->[mother_nameFull] holding [mother_possessive] [baby], [circumstance_group]</li>
+        <li ListIndex="3">image->[mother_nameFull] lying in bed next to [mother_possessive] [baby], [circumstance_group]</li>
+        <li ListIndex="4">image->[mother_nameFull] collapsed in a chair with [mother_possessive] [baby] [circumstance_group]</li>
+        <li ListIndex="5">baby->infant</li>
+        <li ListIndex="6">baby->newborn</li>
+        <li ListIndex="7">baby->baby</li>
+        <li ListIndex="8">circumstance_phrase->[child_nameFull], who is bloody and crying</li>
+        <li ListIndex="9">circumstance_phrase->[child_nameFull], who is glowing softly [color]</li>
+        <li ListIndex="10">circumstance_phrase->[child_nameFull], who is already trying to pull [child_objective]self around</li>
+        <li ListIndex="11">circumstance_phrase->[child_nameFull], who is looking around with an expression of serenity</li>
+        <li ListIndex="12">desc_sentence->[quantity_adjphrase] [animal]s sleep peacefully nearby.</li>
+        <li ListIndex="13">desc_sentence->[quantity_adjphrase] [outlander]s gaze upon the scene.</li>
+        <li ListIndex="14">desc_sentence->A [outlander]s watches from a distance.</li>
+        <li ListIndex="15">desc_sentence->The scene takes place inside a newly-built [community].</li>
+      </rulesStrings>
+    </rulePack>
+    <firstPawnSymbol>mother</firstPawnSymbol>
+    <secondPawnSymbol>child</secondPawnSymbol>
+  </TaleDef>
+</Defs>

@@ -118,9 +118,11 @@
         <restFallFactor>0.33</restFallFactor>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <labelNoun>a flake high</labelNoun>
   </HediffDef>
   <ThoughtDef>
     <defName>FlakeHigh</defName>

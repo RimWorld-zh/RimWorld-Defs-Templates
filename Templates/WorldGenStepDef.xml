@@ -38,5 +38,7 @@
     <worldGenStep Class="WorldGenStep_Factions">value</worldGenStep>
     <!--Type: RimWorld.Planet.WorldGenStep_Roads-->
     <worldGenStep Class="WorldGenStep_Roads">value</worldGenStep>
+    <!--Type: RimWorld.Planet.WorldGenStep_Features-->
+    <worldGenStep Class="WorldGenStep_Features">value</worldGenStep>
   </WorldGenStepDef>
 </Defs>

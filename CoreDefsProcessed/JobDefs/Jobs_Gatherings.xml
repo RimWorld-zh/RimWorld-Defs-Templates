@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<JobDefs>
+<Defs>
   <JobDef>
     <defName>MarryAdjacentPawn</defName>
     <driverClass>JobDriver_MarryAdjacentPawn</driverClass>
@@ -16,4 +16,4 @@
     <driverClass>JobDriver_StandAndBeSociallyActive</driverClass>
     <reportString>relaxing socially.</reportString>
   </JobDef>
-</JobDefs>
+</Defs>

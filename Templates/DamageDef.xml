@@ -30,8 +30,10 @@
     <!--Default Value: "{0} has been killed."-->
     <deathMessage>string_value</deathMessage>
     <!--Type: Verse.Sound.ImpactSoundTypeDef-->
+    <!--Default Value: null-->
     <impactSoundType>ImpactSoundTypeDef_defName</impactSoundType>
     <!--Type: Verse.DamageArmorCategoryDef-->
+    <!--Default Value: null-->
     <armorCategory>DamageArmorCategoryDef_defName</armorCategory>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -39,6 +41,9 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <execution>true_or_false</execution>
+    <!--Type: Verse.RulePackDef-->
+    <!--Default Value: null-->
+    <combatLogRules>RulePackDef_defName</combatLogRules>
     <!--Type: bool-->
     <!--Default Value: false-->
     <isExplosive>true_or_false</isExplosive>
@@ -55,6 +60,7 @@
     <!--Default Value: true-->
     <explosionAffectOutsidePartsOnly>true_or_false</explosionAffectOutsidePartsOnly>
     <!--Type: Verse.ThingDef-->
+    <!--Default Value: null-->
     <explosionCellMote>ThingDef_defName</explosionCellMote>
     <!--Type: UnityEngine.Color-->
     <!--Default Value: Color.white-->
@@ -65,27 +71,71 @@
     <!--Type: Verse.ThingDef-->
     <explosionInteriorMote>ThingDef_defName</explosionInteriorMote>
     <!--Type: float-->
+    <!--Default Value: 0.0-->
     <explosionHeatEnergyPerCell>float_value</explosionHeatEnergyPerCell>
     <!--Type: Verse.SoundDef-->
+    <!--Default Value: null-->
     <soundExplosion>SoundDef_defName</soundExplosion>
     <!--Type: bool-->
     <!--Default Value: false-->
     <harmAllLayersUntilOutside>true_or_false</harmAllLayersUntilOutside>
-    <!--Type: bool-->
-    <!--Default Value: false-->
-    <hasChanceToAdditionallyDamageInnerSolidParts>true_or_false</hasChanceToAdditionallyDamageInnerSolidParts>
     <!--Type: Verse.HediffDef-->
+    <!--Default Value: null-->
     <hediff>HediffDef_defName</hediff>
     <!--Type: Verse.HediffDef-->
+    <!--Default Value: null-->
     <hediffSkin>HediffDef_defName</hediffSkin>
     <!--Type: Verse.HediffDef-->
+    <!--Default Value: null-->
     <hediffSolid>HediffDef_defName</hediffSolid>
+    <!--Type: float-->
+    <!--Default Value: 0.0-->
+    <stabChanceOfForcedInternal>float_value</stabChanceOfForcedInternal>
+    <!--Type: float-->
+    <!--Default Value: 0.0-->
+    <stabPierceBonus>float_value</stabPierceBonus>
+    <!--Type: Verse.SimpleCurve-->
+    <cutExtraTargetsCurve>
+      <!--Simple List-->
+      <!--Type: List<Verse.CurvePoint>-->
+      <points>
+        <!--Type: Verse.CurvePoint-->
+        <li>value</li>
+        <!-- ... -->
+      </points>
+    </cutExtraTargetsCurve>
+    <!--Type: float-->
+    <cutCleaveBonus>float_value</cutCleaveBonus>
+    <!--Type: float-->
+    <!--Default Value: 0.0-->
+    <bluntInnerHitFrequency>float_value</bluntInnerHitFrequency>
+    <!--Type: Verse.FloatRange-->
+    <bluntInnerHitConverted>
+      <!--Type: float-->
+      <min>float_value</min>
+      <!--Type: float-->
+      <max>float_value</max>
+    </bluntInnerHitConverted>
+    <!--Type: Verse.FloatRange-->
+    <bluntInnerHitAdded>
+      <!--Type: float-->
+      <min>float_value</min>
+      <!--Type: float-->
+      <max>float_value</max>
+    </bluntInnerHitAdded>
+    <!--Type: float-->
+    <!--Default Value: 0.5-->
+    <scratchSplitPercentage>float_value</scratchSplitPercentage>
+    <!--Type: float-->
+    <!--Default Value: 1.0-->
+    <biteDamageMultiplier>float_value</biteDamageMultiplier>
     <!--Complex List-->
     <!--Type: List<Verse.DamageDefAdditionalHediff>-->
     <additionalHediffs>
       <!--Type: Verse.DamageDefAdditionalHediff-->
       <li>
         <!--Type: Verse.HediffDef-->
+        <!--Default Value: null-->
         <hediff>HediffDef_defName</hediff>
         <!--Type: float-->
         <!--Default Value: 0.1-->

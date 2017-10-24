@@ -41,10 +41,10 @@
       <growDays>1.5</growDays>
       <lifespanFraction>8</lifespanFraction>
       <growMinGlow>0.3</growMinGlow>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>
@@ -93,10 +93,10 @@
       <growDays>1.5</growDays>
       <lifespanFraction>5</lifespanFraction>
       <growMinGlow>0.3</growMinGlow>
-      <dieIfLeafless>true</dieIfLeafless>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>1</fertilitySensitivity>
       <reproduces>false</reproduces>
+      <dieIfLeafless>true</dieIfLeafless>
       <topWindExposure>0.1</topWindExposure>
       <visualSizeRange>
         <min>0.3</min>

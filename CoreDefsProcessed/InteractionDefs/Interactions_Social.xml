@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<InteractionDefs>
+<Defs>
   <!-- Random social interactions -->
   <InteractionDef>
     <defName>Chitchat</defName>
@@ -84,4 +84,4 @@
       </rulesStrings>
     </logRulesRecipient>
   </InteractionDef>
-</InteractionDefs>
+</Defs>

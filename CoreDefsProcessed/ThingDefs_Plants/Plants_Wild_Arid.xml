@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
-  <!--===========================  Wild - clustering bushes (some harvestable) ==============================-->
+<Defs>
+  <!--===========================  Bushes ==============================-->
   <ThingDef ParentName="PlantBase">
     <defName>PlantAgave</defName>
     <label>agave</label>
@@ -58,63 +58,6 @@
       </visualSizeRange>
     </plant>
   </ThingDef>
-  <!--============================ Wild - Cacti ============================-->
-  <ThingDef ParentName="PlantBase">
-    <defName>PlantSaguaroCactus</defName>
-    <label>saguaro cactus</label>
-    <description>A large cactus native to arid Earth environments.</description>
-    <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <Flammability>0.8</Flammability>
-    </statBases>
-    <passability>PassThroughOnly</passability>
-    <pathCost>130</pathCost>
-    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
-    <altitudeLayer>Building</altitudeLayer>
-    <thingClass>Plant</thingClass>
-    <category>Plant</category>
-    <tickerType>Long</tickerType>
-    <useHitPoints>True</useHitPoints>
-    <graphicData>
-      <texPath>Things/Plant/SaguaroCactus</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-      <shaderType>CutoutPlant</shaderType>
-      <shadowData>
-        <volume>(0.3, 0.3, 0.3)</volume>
-      </shadowData>
-    </graphicData>
-    <drawerType>MapMeshOnly</drawerType>
-    <selectable>true</selectable>
-    <neverMultiSelect>True</neverMultiSelect>
-    <fillPercent>0.35</fillPercent>
-    <blockWind>true</blockWind>
-    <ingestible>
-      <foodType>Tree</foodType>
-      <nutrition>0.70</nutrition>
-      <preferability>RawBad</preferability>
-    </ingestible>
-    <plant>
-      <sowWork>260</sowWork>
-      <harvestWork>300</harvestWork>
-      <harvestYield>10</harvestYield>
-      <harvestedThingDef>WoodLog</harvestedThingDef>
-      <harvestTag>Wood</harvestTag>
-      <harvestMinGrowth>0.2</harvestMinGrowth>
-      <harvestFailable>false</harvestFailable>
-      <soundHarvesting>Harvest_Tree</soundHarvesting>
-      <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
-      <growDays>5</growDays>
-      <fertilityMin>0.05</fertilityMin>
-      <fertilitySensitivity>0</fertilitySensitivity>
-      <reproduceRadius>42</reproduceRadius>
-      <topWindExposure>0.08</topWindExposure>
-      <visualSizeRange>
-        <min>1.3</min>
-        <max>2.0</max>
-      </visualSizeRange>
-      <leaflessGraphicPath>Things/Plant/SaguaroCactus_Leafless</leaflessGraphicPath>
-    </plant>
-  </ThingDef>
   <ThingDef ParentName="PlantBase">
     <defName>PlantPincushionCactus</defName>
     <label>pincushion cactus</label>
@@ -167,4 +110,128 @@
       </visualSizeRange>
     </plant>
   </ThingDef>
-</ThingDefs>
+  <!--============================ Trees ============================-->
+  <ThingDef ParentName="PlantBase">
+    <defName>PlantSaguaroCactus</defName>
+    <label>saguaro cactus</label>
+    <description>A large cactus native to arid Earth environments.</description>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>130</pathCost>
+    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Plant</thingClass>
+    <category>Plant</category>
+    <tickerType>Long</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <graphicData>
+      <texPath>Things/Plant/SaguaroCactus</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutPlant</shaderType>
+      <shadowData>
+        <volume>(0.24, 0.3, 0.15)</volume>
+        <offset>(0,0,-0.38)</offset>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <neverMultiSelect>True</neverMultiSelect>
+    <fillPercent>0.35</fillPercent>
+    <blockWind>true</blockWind>
+    <ingestible>
+      <foodType>Tree</foodType>
+      <nutrition>0.70</nutrition>
+      <preferability>RawBad</preferability>
+    </ingestible>
+    <plant>
+      <sowWork>260</sowWork>
+      <harvestWork>300</harvestWork>
+      <harvestYield>10</harvestYield>
+      <harvestedThingDef>WoodLog</harvestedThingDef>
+      <harvestTag>Wood</harvestTag>
+      <harvestMinGrowth>0.2</harvestMinGrowth>
+      <harvestFailable>false</harvestFailable>
+      <soundHarvesting>Harvest_Tree</soundHarvesting>
+      <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+      <growDays>5</growDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <reproduceRadius>42</reproduceRadius>
+      <topWindExposure>0.08</topWindExposure>
+      <visualSizeRange>
+        <min>1.3</min>
+        <max>2.0</max>
+      </visualSizeRange>
+      <leaflessGraphicPath>Things/Plant/SaguaroCactus_Leafless</leaflessGraphicPath>
+    </plant>
+  </ThingDef>
+  <ThingDef ParentName="TreeBase">
+    <defName>PlantTreeDrago</defName>
+    <label>drago tree</label>
+    <description>A hardy desert tree topped with thick, pointed leaves.</description>
+    <statBases>
+      <Beauty>1</Beauty>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>130</pathCost>
+    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+    <altitudeLayer>Building</altitudeLayer>
+    <thingClass>Plant</thingClass>
+    <category>Plant</category>
+    <tickerType>Long</tickerType>
+    <useHitPoints>True</useHitPoints>
+    <graphicData>
+      <texPath>Things/Plant/TreeDrago</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutPlant</shaderType>
+      <shadowData>
+        <volume>(0.24, 0.35, 0.13)</volume>
+        <offset>(0,0,-0.38)</offset>
+      </shadowData>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>true</selectable>
+    <neverMultiSelect>True</neverMultiSelect>
+    <fillPercent>0.25</fillPercent>
+    <blockWind>true</blockWind>
+    <ingestible>
+      <foodType>Tree</foodType>
+      <nutrition>1.0</nutrition>
+      <preferability>RawBad</preferability>
+    </ingestible>
+    <plant>
+      <wildClusterSizeRange>
+        <min>1</min>
+        <max>4</max>
+      </wildClusterSizeRange>
+      <wildClusterRadius>6</wildClusterRadius>
+      <sowTags>
+        <li ListIndex="0">Ground</li>
+      </sowTags>
+      <sowWork>1500</sowWork>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <harvestWork>650</harvestWork>
+      <harvestYield>25</harvestYield>
+      <harvestedThingDef>WoodLog</harvestedThingDef>
+      <harvestTag>Wood</harvestTag>
+      <harvestMinGrowth>0.40</harvestMinGrowth>
+      <harvestFailable>false</harvestFailable>
+      <soundHarvesting>Harvest_Tree</soundHarvesting>
+      <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+      <growDays>15</growDays>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <reproduceRadius>30</reproduceRadius>
+      <topWindExposure>0.25</topWindExposure>
+      <visualSizeRange>
+        <min>1.3</min>
+        <max>2.0</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+</Defs>

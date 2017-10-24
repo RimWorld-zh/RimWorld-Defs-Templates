@@ -141,4 +141,24 @@
       <solidTime>120</solidTime>
     </mote>
   </ThingDef>
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Cards</defName>
+    <label>Mote</label>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <thingClass>MoteDualAttached</thingClass>
+    <category>Mote</category>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Mote/Cards</texPath>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <solidTime>120</solidTime>
+      <rotateTowardsTarget>true</rotateTowardsTarget>
+    </mote>
+  </ThingDef>
 </Defs>

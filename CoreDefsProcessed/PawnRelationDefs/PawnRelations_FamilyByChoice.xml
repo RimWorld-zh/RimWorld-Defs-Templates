@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnRelationDefs>
+<Defs>
   <!-- spouse / lover -->
   <PawnRelationDef>
     <defName>Spouse</defName>
@@ -106,4 +106,4 @@
     <opinionOffset>-15</opinionOffset>
     <generationChanceFactor>0.1</generationChanceFactor>
   </PawnRelationDef>
-</PawnRelationDefs>
+</Defs>

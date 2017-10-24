@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<JobDefs>
+<Defs>
   <!--========= General ============-->
   <JobDef>
     <defName>Goto</defName>
@@ -21,6 +21,7 @@
     <defName>Wait</defName>
     <driverClass>JobDriver_Wait</driverClass>
     <reportString>standing.</reportString>
+    <isIdle>true</isIdle>
   </JobDef>
   <JobDef>
     <defName>WaitMaintainPosture</defName>
@@ -49,6 +50,7 @@
     <reportString>watching for targets.</reportString>
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <suspendable>false</suspendable>
+    <isIdle>true</isIdle>
   </JobDef>
   <JobDef>
     <defName>AttackStatic</defName>
@@ -111,6 +113,7 @@
     <defName>Strip</defName>
     <driverClass>JobDriver_Strip</driverClass>
     <reportString>stripping TargetA.</reportString>
+    <taleOnCompletion>Stripped</taleOnCompletion>
   </JobDef>
   <JobDef>
     <defName>Open</defName>
@@ -126,11 +129,13 @@
     <defName>Refuel</defName>
     <driverClass>JobDriver_Refuel</driverClass>
     <reportString>refueling TargetA.</reportString>
+    <suspendable>false</suspendable>
   </JobDef>
   <JobDef>
     <defName>FillFermentingBarrel</defName>
     <driverClass>JobDriver_FillFermentingBarrel</driverClass>
     <reportString>filling TargetA.</reportString>
+    <suspendable>false</suspendable>
   </JobDef>
   <JobDef>
     <defName>TakeBeerOutOfFermentingBarrel</defName>
@@ -157,6 +162,7 @@
     <defName>EnterCryptosleepCasket</defName>
     <driverClass>JobDriver_EnterCryptosleepCasket</driverClass>
     <reportString>entering cryptosleep casket.</reportString>
+    <taleOnCompletion>EnteredCryptosleep</taleOnCompletion>
   </JobDef>
   <JobDef>
     <defName>UseNeurotrainer</defName>
@@ -167,6 +173,11 @@
     <defName>UseArtifact</defName>
     <driverClass>JobDriver_UseItem</driverClass>
     <reportString>activating artifact.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>UseItem</defName>
+    <driverClass>JobDriver_UseItem</driverClass>
+    <reportString>using TargetA.</reportString>
   </JobDef>
   <JobDef>
     <defName>TriggerFirefoamPopper</defName>
@@ -201,17 +212,39 @@
     <driverClass>JobDriver_Flee</driverClass>
     <reportString>fleeing.</reportString>
     <checkOverrideOnDamage>OnlyIfInstigatorNotJobTarget</checkOverrideOnDamage>
+    <isIdle>true</isIdle>
   </JobDef>
   <JobDef>
     <defName>FleeAndCower</defName>
     <driverClass>JobDriver_FleeAndCower</driverClass>
     <reportString>fleeing.</reportString>
     <checkOverrideOnDamage>OnlyIfInstigatorNotJobTarget</checkOverrideOnDamage>
+    <isIdle>true</isIdle>
   </JobDef>
   <JobDef>
     <defName>EnterTransporter</defName>
     <driverClass>JobDriver_EnterTransporter</driverClass>
     <reportString>entering TargetA.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>Resurrect</defName>
+    <driverClass>JobDriver_Resurrect</driverClass>
+    <reportString>resurrecting TargetA.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>Insult</defName>
+    <driverClass>JobDriver_Insult</driverClass>
+    <reportString>insulting TargetA.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>HaulCorpseToPublicPlace</defName>
+    <driverClass>JobDriver_HaulCorpseToPublicPlace</driverClass>
+    <reportString>hauling TargetA.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>InducePrisonerToEscape</defName>
+    <driverClass>JobDriver_SingleInteraction</driverClass>
+    <reportString>inducing TargetA to escape.</reportString>
   </JobDef>
   <!--============ Fire ============-->
   <JobDef>
@@ -253,4 +286,4 @@
     <reportString>lovin'.</reportString>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
-</JobDefs>
+</Defs>

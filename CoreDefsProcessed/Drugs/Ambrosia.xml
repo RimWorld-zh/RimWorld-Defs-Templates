@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Ambrosia>
+<Defs>
   <ThingDef ParentName="DrugBase">
     <defName>Ambrosia</defName>
     <label>ambrosia</label>
@@ -87,6 +87,7 @@
     <stages>
       <li ListIndex="0" />
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
@@ -137,7 +138,8 @@
     <stages>
       <li ListIndex="0">
         <minSeverity>0</minSeverity>
-        <everVisible>false</everVisible>
+        <label>small</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.20</minSeverity>
@@ -152,6 +154,7 @@
         <label>massive</label>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(179,86,132)</defaultLabelColor>
@@ -193,4 +196,4 @@
     <validWhileDespawned>true</validWhileDespawned>
     <hediff>AmbrosiaAddiction</hediff>
   </ThoughtDef>
-</Ambrosia>
+</Defs>

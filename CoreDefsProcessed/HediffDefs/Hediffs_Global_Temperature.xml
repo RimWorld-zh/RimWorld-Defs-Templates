@@ -6,8 +6,8 @@
     <lethalSeverity>1</lethalSeverity>
     <stages>
       <li ListIndex="0">
-        <label>initial-hidden</label>
-        <everVisible>false</everVisible>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.04</minSeverity>
@@ -61,6 +61,7 @@
         </capMods>
       </li>
     </stages>
+    <taleOnVisible>HeatstrokeRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
   <HediffDef>
@@ -69,8 +70,8 @@
     <lethalSeverity>1</lethalSeverity>
     <stages>
       <li ListIndex="0">
-        <label>shivering-hidden</label>
-        <everVisible>false</everVisible>
+        <label>shivering</label>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li ListIndex="1">
         <minSeverity>0.04</minSeverity>
@@ -136,6 +137,7 @@
         </capMods>
       </li>
     </stages>
+    <taleOnVisible>HypothermiaRevealed</taleOnVisible>
     <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
   </HediffDef>
 </Defs>

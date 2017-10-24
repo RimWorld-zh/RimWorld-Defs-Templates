@@ -24,11 +24,15 @@
     <tradeability>Never</tradeability>
   </ThingDef>
   <ThingDef ParentName="ChunkBase" Name="ChunkRockBase" Abstract="True">
+    <description>A chunk of rock. It's possible to cut usable stone blocks from it.</description>
     <graphicData>
       <texPath>Things/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <flipExtraRotation>80</flipExtraRotation>
     </graphicData>
+    <thingCategories>
+      <li>StoneChunks</li>
+    </thingCategories>
   </ThingDef>
   <ThingDef ParentName="ResourceBase" Name="StoneBlocksBase" Abstract="True">
     <description>Blocks of stone. Mostly useful for building long-lasting, simple structures.</description>
@@ -65,7 +69,7 @@
         <WorkToMake>1.3</WorkToMake>
         <DoorOpenSpeed>0.45</DoorOpenSpeed>
         <BedRestEffectiveness>0.9</BedRestEffectiveness>
-        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.35</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <!-- because there are so many stone types -->
       <appearance>Bricks</appearance>
@@ -84,6 +88,7 @@
   <ThingDef ParentName="ChunkBase">
     <defName>ChunkSlagSteel</defName>
     <label>steel slag chunk</label>
+    <description>A chunk of steel slag. Not very useful in its current form but it's possible to smelt steel from it.</description>
     <statBases>
       <Mass>5</Mass>
       <MaxHitPoints>300</MaxHitPoints>
@@ -169,6 +174,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkSandstone</defName>
     <label>sandstone chunk</label>
+    <description>A chunk of rock. It's possible to cut usable stone blocks from it.</description>
     <statBases>
       <Mass>20</Mass>
       <MaxHitPoints>300</MaxHitPoints>
@@ -258,7 +264,7 @@
         <Flammability>0</Flammability>
         <DoorOpenSpeed>0.45</DoorOpenSpeed>
         <BedRestEffectiveness>0.9</BedRestEffectiveness>
-        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.35</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(126,104,94)</color>
       <appearance>Bricks</appearance>
@@ -273,7 +279,6 @@
     <description>Cuts sandstone chunks into usable blocks.</description>
     <jobString>Cutting stone blocks from chunk.</jobString>
     <workAmount>1600</workAmount>
-    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
     <ingredients>
       <li ListIndex="0">
         <filter>
@@ -293,8 +298,6 @@
       <BlocksSandstone>20</BlocksSandstone>
     </products>
     <targetCountAdjustment>20</targetCountAdjustment>
-    <workSkill>Construction</workSkill>
-    <workSkillLearnFactor>0.3</workSkillLearnFactor>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
     <recipeUsers>
@@ -353,6 +356,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkGranite</defName>
     <label>granite chunk</label>
+    <description>A chunk of rock. It's possible to cut usable stone blocks from it.</description>
     <statBases>
       <Mass>25</Mass>
       <MaxHitPoints>300</MaxHitPoints>
@@ -441,7 +445,7 @@
         <WorkToMake>1.3</WorkToMake>
         <DoorOpenSpeed>0.45</DoorOpenSpeed>
         <BedRestEffectiveness>0.9</BedRestEffectiveness>
-        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.35</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(105,95,97)</color>
       <appearance>Bricks</appearance>
@@ -456,7 +460,6 @@
     <description>Cuts granite chunks into usable blocks.</description>
     <jobString>Cutting stone blocks from chunk.</jobString>
     <workAmount>1600</workAmount>
-    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
     <ingredients>
       <li ListIndex="0">
         <filter>
@@ -476,8 +479,6 @@
       <BlocksGranite>20</BlocksGranite>
     </products>
     <targetCountAdjustment>20</targetCountAdjustment>
-    <workSkill>Construction</workSkill>
-    <workSkillLearnFactor>0.3</workSkillLearnFactor>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
     <recipeUsers>
@@ -536,6 +537,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkLimestone</defName>
     <label>limestone chunk</label>
+    <description>A chunk of rock. It's possible to cut usable stone blocks from it.</description>
     <statBases>
       <Mass>22</Mass>
       <MaxHitPoints>300</MaxHitPoints>
@@ -624,7 +626,7 @@
         <WorkToMake>1.3</WorkToMake>
         <DoorOpenSpeed>0.45</DoorOpenSpeed>
         <BedRestEffectiveness>0.9</BedRestEffectiveness>
-        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.35</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(158,153,135)</color>
       <appearance>Bricks</appearance>
@@ -639,7 +641,6 @@
     <description>Cuts limestone chunks into usable blocks.</description>
     <jobString>Cutting stone blocks from chunk.</jobString>
     <workAmount>1600</workAmount>
-    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
     <ingredients>
       <li ListIndex="0">
         <filter>
@@ -659,8 +660,6 @@
       <BlocksLimestone>20</BlocksLimestone>
     </products>
     <targetCountAdjustment>20</targetCountAdjustment>
-    <workSkill>Construction</workSkill>
-    <workSkillLearnFactor>0.3</workSkillLearnFactor>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
     <recipeUsers>
@@ -719,6 +718,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkSlate</defName>
     <label>slate chunk</label>
+    <description>A chunk of rock. It's possible to cut usable stone blocks from it.</description>
     <statBases>
       <Mass>18</Mass>
       <MaxHitPoints>300</MaxHitPoints>
@@ -808,7 +808,7 @@
         <WorkToMake>1.3</WorkToMake>
         <DoorOpenSpeed>0.45</DoorOpenSpeed>
         <BedRestEffectiveness>0.9</BedRestEffectiveness>
-        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.35</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(70,70,70)</color>
       <appearance>Bricks</appearance>
@@ -823,7 +823,6 @@
     <description>Cuts slate chunks into usable blocks.</description>
     <jobString>Cutting stone blocks from chunk.</jobString>
     <workAmount>1600</workAmount>
-    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
     <ingredients>
       <li ListIndex="0">
         <filter>
@@ -843,8 +842,6 @@
       <BlocksSlate>20</BlocksSlate>
     </products>
     <targetCountAdjustment>20</targetCountAdjustment>
-    <workSkill>Construction</workSkill>
-    <workSkillLearnFactor>0.3</workSkillLearnFactor>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
     <recipeUsers>
@@ -903,6 +900,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkMarble</defName>
     <label>marble chunk</label>
+    <description>A chunk of rock. It's possible to cut usable stone blocks from it.</description>
     <statBases>
       <Mass>25</Mass>
       <MaxHitPoints>300</MaxHitPoints>
@@ -992,7 +990,7 @@
         <Flammability>0</Flammability>
         <DoorOpenSpeed>0.45</DoorOpenSpeed>
         <BedRestEffectiveness>0.9</BedRestEffectiveness>
-        <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>1.35</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <color>(132,135,132)</color>
       <appearance>Bricks</appearance>
@@ -1007,7 +1005,6 @@
     <description>Cuts marble chunks into usable blocks.</description>
     <jobString>Cutting stone blocks from chunk.</jobString>
     <workAmount>1600</workAmount>
-    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
     <ingredients>
       <li ListIndex="0">
         <filter>
@@ -1027,8 +1024,6 @@
       <BlocksMarble>20</BlocksMarble>
     </products>
     <targetCountAdjustment>20</targetCountAdjustment>
-    <workSkill>Construction</workSkill>
-    <workSkillLearnFactor>0.3</workSkillLearnFactor>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
     <recipeUsers>

@@ -7,5 +7,6 @@
     <initialSeverity>0.001</initialSeverity>
     <lethalSeverity>0</lethalSeverity>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <labelNoun>a shutdown command</labelNoun>
   </HediffDef>
 </Defs>

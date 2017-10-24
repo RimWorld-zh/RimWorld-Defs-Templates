@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<IncidentDefs>
+<Defs>
   <!--=============== ShipChunkDrop =============-->
   <IncidentDef>
     <defName>ShipChunkDrop</defName>
     <label>ship chunk drop</label>
     <workerClass>IncidentWorker_ShipChunkDrop</workerClass>
     <category>ShipChunkDrop</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>3</baseChance>
   </IncidentDef>
   <!--=============== OrbitalVisitor =============-->
@@ -15,7 +17,9 @@
     <label>orbital trader arrival</label>
     <workerClass>IncidentWorker_OrbitalTraderArrival</workerClass>
     <category>OrbitalVisitor</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>3</baseChance>
   </IncidentDef>
   <!--================= AllyArrival ================-->
@@ -24,7 +28,9 @@
     <label>trader caravan arrival</label>
     <workerClass>IncidentWorker_TraderCaravanArrival</workerClass>
     <category>AllyArrival</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>4</baseChance>
   </IncidentDef>
   <IncidentDef>
@@ -32,7 +38,9 @@
     <label>visitor group</label>
     <workerClass>IncidentWorker_VisitorGroup</workerClass>
     <category>AllyArrival</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>4</baseChance>
     <pointsScaleable>true</pointsScaleable>
   </IncidentDef>
@@ -41,7 +49,9 @@
     <label>traveler group</label>
     <workerClass>IncidentWorker_TravelerGroup</workerClass>
     <category>AllyArrival</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>4</baseChance>
     <pointsScaleable>true</pointsScaleable>
   </IncidentDef>
@@ -51,8 +61,23 @@
     <label>friendly raid</label>
     <workerClass>IncidentWorker_RaidFriendly</workerClass>
     <category>AllyAssistance</category>
-    <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li ListIndex="0">MapPlayerHome</li>
+    </targetTypes>
     <baseChance>3.0</baseChance>
     <pointsScaleable>true</pointsScaleable>
   </IncidentDef>
-</IncidentDefs>
+  <!--================= Raid-beacon-attracted events ================-->
+  <IncidentDef>
+    <defName>RaidEnemyEscapeShip</defName>
+    <label>enemy raid</label>
+    <workerClass>IncidentWorker_RaidEnemy</workerClass>
+    <category>RaidBeacon</category>
+    <targetTypes>
+      <li ListIndex="0">MapRaidBeacon</li>
+    </targetTypes>
+    <baseChance>1</baseChance>
+    <pointsScaleable>true</pointsScaleable>
+    <tale>Raid</tale>
+  </IncidentDef>
+</Defs>

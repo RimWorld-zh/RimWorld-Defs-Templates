@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Buildings>
+<Defs>
   <!--========================= Doors =============================-->
   <ThingDef ParentName="BuildingBase" Name="DoorBase" Abstract="True">
     <statBases>
@@ -39,7 +39,6 @@
     </blueprintGraphicData>
     <building>
       <isInert>true</isInert>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <canPlaceOverWall>true</canPlaceOverWall>
       <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
       <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
@@ -104,7 +103,6 @@
     </blueprintGraphicData>
     <building>
       <isInert>true</isInert>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <canPlaceOverWall>true</canPlaceOverWall>
       <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
       <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
@@ -136,6 +134,7 @@
     <researchPrerequisites>
       <li ListIndex="0">Autodoors</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
     <altitudeLayer>DoorMoveable</altitudeLayer>
@@ -181,7 +180,6 @@
     </blueprintGraphicData>
     <building>
       <isInert>true</isInert>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <canPlaceOverWall>true</canPlaceOverWall>
       <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
       <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
@@ -262,7 +260,6 @@
     </blueprintGraphicData>
     <building>
       <isInert>true</isInert>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
     </building>
   </ThingDef>
-</Buildings>
+</Defs>

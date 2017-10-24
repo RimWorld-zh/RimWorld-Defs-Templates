@@ -22,6 +22,7 @@
     <!--Default Value: true-->
     <configurable>true_or_false</configurable>
     <!--Type: System.Type-->
+    <!--Default Value: null-->
     <workerClass>class_name</workerClass>
   </SpecialThingFilterDef>
 </Defs>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThinkTrees>
+<Defs>
   <ThinkTreeDef>
     <defName>Humanlike</defName>
     <thinkRoot Class="ThinkNode_Priority">
@@ -52,8 +52,10 @@
         <li Class="ThinkNode_SubtreesByTag" ListIndex="7">
           <insertTag>Humanlike_PostMentalState</insertTag>
         </li>
-        <!-- Take direct orders when drafted -->
-        <li Class="ThinkNode_ConditionalColonist" ListIndex="8">
+        <!-- Do a queued job -->
+        <li Class="ThinkNode_QueuedJob" ListIndex="8" />
+        <!-- Wait if drafted -->
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="9">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -64,7 +66,7 @@
           </subNodes>
         </li>
         <!-- Lord directives (high priority) -->
-        <li Class="ThinkNode_JoinVoluntarilyJoinableLord" ListIndex="9">
+        <li Class="ThinkNode_JoinVoluntarilyJoinableLord" ListIndex="10">
           <subNodes>
             <li Class="ThinkNode_Subtree" ListIndex="0">
               <treeDef>LordDuty</treeDef>
@@ -73,11 +75,11 @@
           <dutyHook>HighPriority</dutyHook>
         </li>
         <!-- Insertion hook for modders -->
-        <li Class="ThinkNode_SubtreesByTag" ListIndex="10">
+        <li Class="ThinkNode_SubtreesByTag" ListIndex="11">
           <insertTag>Humanlike_PostDuty</insertTag>
         </li>
         <!-- Prisoner -->
-        <li Class="ThinkNode_ConditionalPrisoner" ListIndex="11">
+        <li Class="ThinkNode_ConditionalPrisoner" ListIndex="12">
           <subNodes>
             <!-- If it's the player home map... -->
             <li Class="ThinkNode_ConditionalInNonPlayerHomeMap" ListIndex="0">
@@ -185,7 +187,7 @@
           <leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
         </li>
         <!-- If on colonist team, do forced and emergency work -->
-        <li Class="ThinkNode_ConditionalColonist" ListIndex="12">
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="13">
           <subNodes>
             <!-- Seek allowed area -->
             <li Class="JobGiver_SeekAllowedArea" ListIndex="0" />
@@ -249,13 +251,13 @@
           </subNodes>
         </li>
         <!-- Behavior from traits -->
-        <li Class="ThinkNode_TraitBehaviors" ListIndex="13" />
+        <li Class="ThinkNode_TraitBehaviors" ListIndex="14" />
         <!-- Insertion hook for modders -->
-        <li Class="ThinkNode_SubtreesByTag" ListIndex="14">
+        <li Class="ThinkNode_SubtreesByTag" ListIndex="15">
           <insertTag>Humanlike_PreMain</insertTag>
         </li>
         <!-- Main colonist behavior core -->
-        <li Class="ThinkNode_ConditionalColonist" ListIndex="15">
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="16">
           <subNodes>
             <li Class="ThinkNode_Subtree" ListIndex="0">
               <leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
@@ -263,12 +265,22 @@
             </li>
           </subNodes>
         </li>
+        <!-- Main wild man behavior core -->
+        <li Class="ThinkNode_ConditionalPawnKind" ListIndex="17">
+          <subNodes>
+            <li Class="ThinkNode_Subtree" ListIndex="0">
+              <leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+              <treeDef>MainWildManBehaviorCore</treeDef>
+            </li>
+          </subNodes>
+          <pawnKind>WildMan</pawnKind>
+        </li>
         <!-- Insertion hook for modders -->
-        <li Class="ThinkNode_SubtreesByTag" ListIndex="16">
+        <li Class="ThinkNode_SubtreesByTag" ListIndex="18">
           <insertTag>Humanlike_PostMain</insertTag>
         </li>
         <!-- Idle colonist -->
-        <li Class="ThinkNode_ConditionalColonist" ListIndex="17">
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="19">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -290,8 +302,27 @@
             </li>
           </subNodes>
         </li>
+        <!-- Idle wild man -->
+        <li Class="ThinkNode_ConditionalPawnKind" ListIndex="20">
+          <subNodes>
+            <li Class="ThinkNode_Tagger" ListIndex="0">
+              <subNodes>
+                <!-- Wander -->
+                <li Class="JobGiver_WanderAnywhere" ListIndex="0">
+                  <ticksBetweenWandersRange>
+                    <min>120</min>
+                    <max>240</max>
+                  </ticksBetweenWandersRange>
+                  <maxDanger>Deadly</maxDanger>
+                </li>
+              </subNodes>
+              <tagToGive>Idle</tagToGive>
+            </li>
+          </subNodes>
+          <pawnKind>WildMan</pawnKind>
+        </li>
         <!-- If you're a neutral guest, if you're not hurt exit the map, otherwise use a medical bed -->
-        <li Class="ThinkNode_ConditionalGuest" ListIndex="18">
+        <li Class="ThinkNode_ConditionalGuest" ListIndex="21">
           <subNodes>
             <li Class="ThinkNode_ConditionalNeutralFaction" ListIndex="0">
               <subNodes>
@@ -315,7 +346,7 @@
         </li>
         <!-- Final backup: If you're just here for no apparent reason, and not a colonist, leave the map
 						 e.g. This happens for pawns who are downed during combat, then later self-heal -->
-        <li Class="ThinkNode_ConditionalColonist" ListIndex="19">
+        <li Class="ThinkNode_ConditionalColonist" ListIndex="22">
           <subNodes>
             <li Class="ThinkNode_Tagger" ListIndex="0">
               <subNodes>
@@ -329,7 +360,7 @@
           <invert>true</invert>
         </li>
         <!-- If you can't leave, just wander -->
-        <li Class="ThinkNode_Tagger" ListIndex="20">
+        <li Class="ThinkNode_Tagger" ListIndex="23">
           <subNodes>
             <li Class="JobGiver_WanderAnywhere" ListIndex="0">
               <maxDanger>Deadly</maxDanger>
@@ -337,7 +368,7 @@
           </subNodes>
           <tagToGive>Idle</tagToGive>
         </li>
-        <li Class="JobGiver_IdleError" ListIndex="21" />
+        <li Class="JobGiver_IdleError" ListIndex="24" />
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>
@@ -348,7 +379,7 @@
         <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow" ListIndex="0">
           <subNodes>
             <!-- Flee explosion -->
-            <li Class="JobGiver_FleeExplosion" ListIndex="0" />
+            <li Class="JobGiver_FleePotentialExplosion" ListIndex="0" />
             <!-- Hostility response -->
             <li Class="JobGiver_ConfigurableHostilityResponse" ListIndex="1" />
             <!-- Lord directives -->
@@ -360,4 +391,4 @@
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>
-</ThinkTrees>
+</Defs>

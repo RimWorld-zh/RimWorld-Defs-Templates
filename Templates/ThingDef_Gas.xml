@@ -9,7 +9,7 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: Verse.AltitudeLayer-->
-    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, FlyingItem, Gas, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, WorldDataOverlay, MetaOverlays, _Count-->
+    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, Gas, Skyfaller, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, MapDataOverlay, MetaOverlays, _Count-->
     <!--Default Value: Item-->
     <altitudeLayer>enum_value</altitudeLayer>
     <!--Type: System.Type-->
@@ -19,18 +19,23 @@
     <category>Gas</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
+    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: bool-->
     <!--Default Value: true-->
     <useHitPoints>true_or_false</useHitPoints>
     <!--Type: Verse.GraphicData-->
+    <!--Default Value: null-->
     <graphicData>
       <!--Type: string-->
+      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
       <!--Type: System.Type-->
+      <!--Default Value: null-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
-      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Default Value: None-->
       <shaderType>enum_value</shaderType>
       <!--Type: UnityEngine.Color-->
       <!--Default Value: Color.white-->
@@ -40,11 +45,13 @@
       <drawSize>value</drawSize>
     </graphicData>
     <!--Type: RimWorld.GasProperties-->
+    <!--Default Value: null-->
     <gas>
       <!--Type: bool-->
       <!--Default Value: false-->
       <blockTurretTracking>true_or_false</blockTurretTracking>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <accuracyPenalty>float_value</accuracyPenalty>
       <!--Type: Verse.FloatRange-->
       <!--Default Value: new FloatRange(30f, 30f)-->
@@ -55,6 +62,7 @@
         <max>float_value</max>
       </expireSeconds>
       <!--Type: float-->
+      <!--Default Value: 0.0-->
       <rotationSpeed>float_value</rotationSpeed>
     </gas>
   </ThingDef>

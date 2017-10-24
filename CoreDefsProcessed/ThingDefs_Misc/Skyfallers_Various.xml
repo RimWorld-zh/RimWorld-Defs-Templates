@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="SkyfallerBase" Abstract="True">
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <thingClass>Skyfaller</thingClass>
+    <category>Skyfaller</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <skyfaller />
+  </ThingDef>
+  <ThingDef ParentName="SkyfallerBase" Name="DropPodIncoming">
+    <defName>DropPodIncoming</defName>
+    <label>drop pod (incoming)</label>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <thingClass>DropPodIncoming</thingClass>
+    <category>Skyfaller</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPodFall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+  <ThingDef ParentName="DropPodIncoming">
+    <defName>ExplosiveDropPodIncoming</defName>
+    <label>drop pod (incoming)</label>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <thingClass>DropPodIncoming</thingClass>
+    <category>Skyfaller</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <skyfaller>
+      <explosionRadius>2</explosionRadius>
+      <explosionDamage>Bomb</explosionDamage>
+      <movementType>Accelerate</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPodFall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>DropPodLeaving</defName>
+    <label>drop pod (leaving)</label>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <thingClass>DropPodLeaving</thingClass>
+    <category>Skyfaller</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <skyfaller>
+      <ticksToImpactRange>
+        <min>-40</min>
+        <max>-15</max>
+      </ticksToImpactRange>
+      <reversed>true</reversed>
+      <movementType>Decelerate</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPodLeaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+    </skyfaller>
+  </ThingDef>
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>ShipChunkIncoming</defName>
+    <label>ship chunk (incoming)</label>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <thingClass>Skyfaller</thingClass>
+    <category>Skyfaller</category>
+    <tickerType>Normal</tickerType>
+    <size>(2, 2)</size>
+    <useHitPoints>false</useHitPoints>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <skyfaller>
+      <explosionRadius>2</explosionRadius>
+      <explosionDamage>Bomb</explosionDamage>
+      <explosionDamageFactor>0.5</explosionDamageFactor>
+      <shadowSize>(2.5, 2.5)</shadowSize>
+    </skyfaller>
+  </ThingDef>
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>CrashedShipPartIncoming</defName>
+    <label>crashed ship part (incoming)</label>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <thingClass>Skyfaller</thingClass>
+    <category>Skyfaller</category>
+    <tickerType>Normal</tickerType>
+    <size>(6, 3)</size>
+    <useHitPoints>false</useHitPoints>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <skyfaller>
+      <explosionRadius>5</explosionRadius>
+      <explosionDamage>Flame</explosionDamage>
+      <metalShrapnelCountRange>
+        <min>6</min>
+        <max>10</max>
+      </metalShrapnelCountRange>
+      <rubbleShrapnelCountRange>
+        <min>300</min>
+        <max>400</max>
+      </rubbleShrapnelCountRange>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(7, 3.5)</shadowSize>
+      <cameraShake>1</cameraShake>
+    </skyfaller>
+  </ThingDef>
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>MeteoriteIncoming</defName>
+    <label>meteorite (incoming)</label>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <thingClass>Skyfaller</thingClass>
+    <category>Skyfaller</category>
+    <tickerType>Normal</tickerType>
+    <size>(2, 2)</size>
+    <useHitPoints>false</useHitPoints>
+    <graphicData>
+      <texPath>Things/Skyfaller/Meteorite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(10, 10)</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <skyfaller>
+      <explosionRadius>4</explosionRadius>
+      <explosionDamage>Bomb</explosionDamage>
+      <speed>1.2</speed>
+      <shadowSize>(3, 3)</shadowSize>
+      <rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
+    </skyfaller>
+  </ThingDef>
+</Defs>

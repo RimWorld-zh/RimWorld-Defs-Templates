@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PawnKindDefs>
+<Defs>
   <PawnKindDef Name="PirateBase" Abstract="True">
     <race>Human</race>
     <defaultFactionType>Pirate</defaultFactionType>
@@ -24,7 +24,7 @@
       <min>0.2</min>
       <max>0.6</max>
     </gearHealthRange>
-    <combatPower>25</combatPower>
+    <combatPower>30</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>90</min>
@@ -36,11 +36,11 @@
     <apparelAllowHeadwearChance>0.2</apparelAllowHeadwearChance>
     <weaponMoney>
       <min>60</min>
-      <max>100</max>
+      <max>200</max>
     </weaponMoney>
     <weaponTags>
-      <li ListIndex="0">Gun</li>
-      <li ListIndex="1">Melee</li>
+      <li ListIndex="0">SimpleGun</li>
+      <li ListIndex="1">NonNeolithicOnlySimpleMelee</li>
     </weaponTags>
     <techHediffsMoney>
       <min>0</min>
@@ -85,7 +85,7 @@
       <min>0.2</min>
       <max>0.9</max>
     </gearHealthRange>
-    <combatPower>40</combatPower>
+    <combatPower>45</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>300</min>
@@ -97,7 +97,7 @@
     <apparelAllowHeadwearChance>0.3</apparelAllowHeadwearChance>
     <weaponMoney>
       <min>250</min>
-      <max>450</max>
+      <max>312</max>
     </weaponMoney>
     <weaponTags>
       <li ListIndex="0">Gun</li>
@@ -147,7 +147,7 @@
       <max>1.1</max>
     </gearHealthRange>
     <factionLeader>true</factionLeader>
-    <combatPower>40</combatPower>
+    <combatPower>45</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>300</min>
@@ -164,7 +164,7 @@
       <max>150</max>
     </weaponMoney>
     <weaponTags>
-      <li ListIndex="0">Melee</li>
+      <li ListIndex="0">NonNeolithicOnlyMelee</li>
     </weaponTags>
     <techHediffsMoney>
       <min>0</min>
@@ -210,8 +210,7 @@
       <min>0.4</min>
       <max>1.5</max>
     </gearHealthRange>
-    <factionLeader>true</factionLeader>
-    <combatPower>68</combatPower>
+    <combatPower>65</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <apparelMoney>
       <min>500</min>
@@ -259,4 +258,4 @@
     <invNutrition>2.55</invNutrition>
     <chemicalAddictionChance>0.10</chemicalAddictionChance>
   </PawnKindDef>
-</PawnKindDefs>
+</Defs>

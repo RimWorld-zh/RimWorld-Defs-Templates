@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<HediffDefs>
+<Defs>
   <!-- Missing body part -->
   <HediffDef>
     <defName>MissingBodyPart</defName>
@@ -15,6 +15,7 @@
       <painPerSeverity>0.0125</painPerSeverity>
       <bleedRate>0.05</bleedRate>
     </injuryProps>
+    <labelNoun>a missing body part</labelNoun>
   </HediffDef>
   <!-- Injuries -->
   <HediffDef Name="InjuryBase" Abstract="True">
@@ -41,6 +42,7 @@
       <canMerge>false</canMerge>
       <destroyedLabel>Destroyed</destroyedLabel>
     </injuryProps>
+    <labelNoun>an injury</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Burn</defName>
@@ -68,6 +70,7 @@
       <destroyedLabel>Burned off</destroyedLabel>
       <destroyedOutLabel>Burned out</destroyedOutLabel>
     </injuryProps>
+    <labelNoun>a burn</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Crush</defName>
@@ -95,6 +98,7 @@
       <canMerge>true</canMerge>
       <destroyedLabel>Crushed</destroyedLabel>
     </injuryProps>
+    <labelNoun>a crush wound</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Crack</defName>
@@ -114,6 +118,7 @@
       <averagePainPerSeverityOld>0.00625</averagePainPerSeverityOld>
       <destroyedLabel>Shattered</destroyedLabel>
     </injuryProps>
+    <labelNoun>a crack wound</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Cut</defName>
@@ -142,6 +147,7 @@
       <destroyedLabel>Cut off</destroyedLabel>
       <destroyedOutLabel>Cut out</destroyedOutLabel>
     </injuryProps>
+    <labelNoun>a cut</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>SurgicalCut</defName>
@@ -166,6 +172,7 @@
       <canMerge>false</canMerge>
       <useRemovedLabel>true</useRemovedLabel>
     </injuryProps>
+    <labelNoun>a surgical cut</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Scratch</defName>
@@ -194,6 +201,7 @@
       <destroyedLabel>Torn off</destroyedLabel>
       <destroyedOutLabel>Torn out</destroyedOutLabel>
     </injuryProps>
+    <labelNoun>a scratch</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Bite</defName>
@@ -222,6 +230,7 @@
       <destroyedLabel>Bitten off</destroyedLabel>
       <destroyedOutLabel>Bitten out</destroyedOutLabel>
     </injuryProps>
+    <labelNoun>a bite wound</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Stab</defName>
@@ -250,6 +259,7 @@
       <destroyedLabel>Cut off</destroyedLabel>
       <destroyedOutLabel>Cut out</destroyedOutLabel>
     </injuryProps>
+    <labelNoun>a stab wound</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Gunshot</defName>
@@ -279,6 +289,7 @@
       <destroyedLabel>Shot off</destroyedLabel>
       <destroyedOutLabel>Shot out</destroyedOutLabel>
     </injuryProps>
+    <labelNoun>a gunshot wound</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Shredded</defName>
@@ -307,6 +318,7 @@
       <destroyedLabel>Torn off</destroyedLabel>
       <destroyedOutLabel>Torn out</destroyedOutLabel>
     </injuryProps>
+    <labelNoun>a shredded wound</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Bruise</defName>
@@ -327,6 +339,7 @@
       <canMerge>false</canMerge>
       <destroyedLabel>Destroyed</destroyedLabel>
     </injuryProps>
+    <labelNoun>a bruise</labelNoun>
   </HediffDef>
   <HediffDef ParentName="InjuryBase">
     <defName>Frostbite</defName>
@@ -354,4 +367,4 @@
       <destroyedLabel>Lost to frostbite</destroyedLabel>
     </injuryProps>
   </HediffDef>
-</HediffDefs>
+</Defs>

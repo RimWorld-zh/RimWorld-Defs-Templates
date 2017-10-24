@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SitePartDef>
+    <defName>AmbushEdge</defName>
+    <label>ambush</label>
+    <description>An ambush.</description>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Ambush</expandingIconTexture>
+    <knownDanger>true</knownDanger>
+    <tags>
+      <li ListIndex="0">MineralScannerPreciousLumpThreat</li>
+      <li ListIndex="1">ItemStashQuestThreat</li>
+      <li ListIndex="2">DownedRefugeeQuestThreat</li>
+    </tags>
+    <descriptionDialogue>an enemy force is waiting to ambush anyone who comes near</descriptionDialogue>
+  </SitePartDef>
+  <GenStepDef>
+    <defName>AmbushEdge</defName>
+    <linkWithSite>AmbushEdge</linkWithSite>
+    <order>1600</order>
+    <genStep Class="GenStep_Ambush_Edge">
+      <pointsRange>
+        <min>180</min>
+        <max>340</max>
+      </pointsRange>
+    </genStep>
+  </GenStepDef>
+</Defs>

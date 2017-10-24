@@ -105,6 +105,7 @@
         </capMods>
       </li>
     </stages>
+    <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(1,1,0.5)</defaultLabelColor>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DesignationDefs>
+<Defs>
   <DesignationDef>
     <defName>Plan</defName>
     <texturePath>Designations/Plan</texturePath>
@@ -83,4 +83,4 @@
     <texturePath>Designations/Open</texturePath>
     <targetType>Thing</targetType>
   </DesignationDef>
-</DesignationDefs>
+</Defs>

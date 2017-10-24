@@ -7,7 +7,7 @@
     <stages>
       <li ListIndex="0">
         <label>trivial</label>
-        <hungerRateFactor>1.5</hungerRateFactor>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
         <socialFightChanceFactor>1.5</socialFightChanceFactor>
         <capMods>
           <li ListIndex="0">
@@ -19,7 +19,7 @@
       <li ListIndex="1">
         <minSeverity>0.2</minSeverity>
         <label>minor</label>
-        <hungerRateFactor>1.6</hungerRateFactor>
+        <hungerRateFactorOffset>0.6</hungerRateFactorOffset>
         <socialFightChanceFactor>2</socialFightChanceFactor>
         <capMods>
           <li ListIndex="0">
@@ -31,7 +31,7 @@
       <li ListIndex="2">
         <minSeverity>0.4</minSeverity>
         <label>moderate</label>
-        <hungerRateFactor>1.6</hungerRateFactor>
+        <hungerRateFactorOffset>0.6</hungerRateFactorOffset>
         <socialFightChanceFactor>2.5</socialFightChanceFactor>
         <capMods>
           <li ListIndex="0">
@@ -43,7 +43,7 @@
       <li ListIndex="3">
         <minSeverity>0.6</minSeverity>
         <label>severe</label>
-        <hungerRateFactor>1.6</hungerRateFactor>
+        <hungerRateFactorOffset>0.6</hungerRateFactorOffset>
         <socialFightChanceFactor>3</socialFightChanceFactor>
         <capMods>
           <li ListIndex="0">
@@ -56,7 +56,7 @@
         <minSeverity>0.8</minSeverity>
         <label>extreme</label>
         <lifeThreatening>true</lifeThreatening>
-        <hungerRateFactor>1.6</hungerRateFactor>
+        <hungerRateFactorOffset>0.6</hungerRateFactorOffset>
         <capMods>
           <li ListIndex="0">
             <capacity>Consciousness</capacity>

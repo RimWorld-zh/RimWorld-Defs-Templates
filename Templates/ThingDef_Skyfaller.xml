@@ -9,7 +9,7 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: Verse.AltitudeLayer-->
-    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, FlyingItem, Gas, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, WorldDataOverlay, MetaOverlays, _Count-->
+    <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, Gas, Skyfaller, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, MapDataOverlay, MetaOverlays, _Count-->
     <!--Default Value: Item-->
     <altitudeLayer>enum_value</altitudeLayer>
     <!--Type: System.Type-->
@@ -19,25 +19,102 @@
     <category>Skyfaller</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
+    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
+    <!--Type: Verse.IntVec2-->
+    <!--Default Value: new IntVec2(1, 1)-->
+    <size>value</size>
     <!--Type: bool-->
     <!--Default Value: true-->
     <useHitPoints>true_or_false</useHitPoints>
     <!--Type: Verse.GraphicData-->
+    <!--Default Value: null-->
     <graphicData>
       <!--Type: string-->
+      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
       <!--Type: System.Type-->
+      <!--Default Value: null-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
-      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
+      <!--Default Value: None-->
       <shaderType>enum_value</shaderType>
       <!--Type: UnityEngine.Vector2-->
       <!--Default Value: Vector2.one-->
       <drawSize>value</drawSize>
     </graphicData>
+    <!--Type: Verse.DrawerType-->
+    <!--Available Values: None, RealtimeOnly, MapMeshOnly, MapMeshAndRealTime-->
+    <!--Default Value: RealtimeOnly-->
+    <drawerType>enum_value</drawerType>
     <!--Type: bool-->
     <!--Default Value: false-->
     <drawOffscreen>true_or_false</drawOffscreen>
+    <!--Type: Verse.SkyfallerProperties-->
+    <!--Default Value: null-->
+    <skyfaller>
+      <!--Type: Verse.IntRange-->
+      <!--Default Value: new IntRange(120, 200)-->
+      <ticksToImpactRange>
+        <!--Type: int-->
+        <min>int_value</min>
+        <!--Type: int-->
+        <max>int_value</max>
+      </ticksToImpactRange>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <reversed>true_or_false</reversed>
+      <!--Type: float-->
+      <!--Default Value: 3.0-->
+      <explosionRadius>float_value</explosionRadius>
+      <!--Type: Verse.DamageDef-->
+      <explosionDamage>DamageDef_defName</explosionDamage>
+      <!--Type: float-->
+      <!--Default Value: 1.0-->
+      <explosionDamageFactor>float_value</explosionDamageFactor>
+      <!--Type: Verse.IntRange-->
+      <!--Default Value: IntRange.zero-->
+      <metalShrapnelCountRange>
+        <!--Type: int-->
+        <min>int_value</min>
+        <!--Type: int-->
+        <max>int_value</max>
+      </metalShrapnelCountRange>
+      <!--Type: Verse.IntRange-->
+      <!--Default Value: IntRange.zero-->
+      <rubbleShrapnelCountRange>
+        <!--Type: int-->
+        <min>int_value</min>
+        <!--Type: int-->
+        <max>int_value</max>
+      </rubbleShrapnelCountRange>
+      <!--Type: Verse.SkyfallerMovementType-->
+      <!--Available Values: Accelerate, ConstantSpeed, Decelerate-->
+      <!--Default Value: Accelerate-->
+      <movementType>enum_value</movementType>
+      <!--Type: float-->
+      <!--Default Value: 1.0-->
+      <speed>float_value</speed>
+      <!--Type: string-->
+      <!--Default Value: "Things/Skyfaller/SkyfallerShadowCircle"-->
+      <shadow>string_value</shadow>
+      <!--Type: UnityEngine.Vector2-->
+      <!--Default Value: Vector2.one-->
+      <shadowSize>value</shadowSize>
+      <!--Type: float-->
+      <cameraShake>float_value</cameraShake>
+      <!--Type: bool-->
+      <!--Default Value: false-->
+      <rotateGraphicTowardsDirection>true_or_false</rotateGraphicTowardsDirection>
+      <!--Type: Verse.SoundDef-->
+      <anticipationSound>SoundDef_defName</anticipationSound>
+      <!--Type: int-->
+      <!--Default Value: 100-->
+      <anticipationSoundTicks>int_value</anticipationSoundTicks>
+      <!--Type: int-->
+      <!--Default Value: 3-->
+      <motesPerCell>int_value</motesPerCell>
+    </skyfaller>
   </ThingDef>
 </Defs>

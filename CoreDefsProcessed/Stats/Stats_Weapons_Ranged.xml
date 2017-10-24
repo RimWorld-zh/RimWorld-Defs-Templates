@@ -172,5 +172,6 @@
     <formatString>{0} s</formatString>
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0.01</minValue>
+    <scenarioRandomizable>true</scenarioRandomizable>
   </StatDef>
 </Defs>

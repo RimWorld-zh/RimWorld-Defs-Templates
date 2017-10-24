@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>CraftingSpot</defName>
     <label>crafting spot</label>
@@ -637,7 +637,6 @@
     <surfaceType>Item</surfaceType>
     <recipes>
       <li ListIndex="0">ButcherCorpseMechanoid</li>
-      <li ListIndex="1">MakeMortarShell</li>
     </recipes>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
@@ -1286,6 +1285,7 @@
     <surfaceType>Item</surfaceType>
     <recipes>
       <li ListIndex="0">MakeComponent</li>
+      <li ListIndex="1">MakeAdvancedComponent</li>
     </recipes>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
@@ -1841,4 +1841,4 @@
       </defaultStorageSettings>
     </building>
   </ThingDef>
-</ThingDefs>
+</Defs>

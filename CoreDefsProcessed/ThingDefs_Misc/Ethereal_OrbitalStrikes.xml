@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Abstract="True" Name="OrbitalStrikeBase" ParentName="EtherealThingBase">
+    <thingClass>OrbitalStrike</thingClass>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_AffectsSky">
+        <skyColors>
+          <sky>(255, 230, 200)</sky>
+          <shadow>(225, 220, 185)</shadow>
+          <overlay>(255, 255, 255)</overlay>
+          <saturation>1.3</saturation>
+        </skyColors>
+      </li>
+      <li Class="CompProperties_CameraShaker">
+        <mag>0.03</mag>
+      </li>
+    </comps>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <seeThroughFog>true</seeThroughFog>
+  </ThingDef>
+  <ThingDef ParentName="OrbitalStrikeBase">
+    <defName>Bombardment</defName>
+    <label>bombardment</label>
+    <thingClass>Bombardment</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li Class="CompProperties_AffectsSky" ListIndex="0">
+        <skyColors>
+          <sky>(255, 230, 200)</sky>
+          <shadow>(225, 220, 185)</shadow>
+          <overlay>(255, 255, 255)</overlay>
+          <saturation>1.3</saturation>
+        </skyColors>
+      </li>
+      <li Class="CompProperties_CameraShaker" ListIndex="1">
+        <mag>0.03</mag>
+      </li>
+      <li Class="CompProperties_OrbitalBeam" ListIndex="2">
+        <width>0.5</width>
+        <color>(255, 77, 77, 242)</color>
+        <sound>OrbitalBeamSubtle</sound>
+      </li>
+    </comps>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <seeThroughFog>true</seeThroughFog>
+  </ThingDef>
+  <ThingDef ParentName="OrbitalStrikeBase">
+    <defName>PowerBeam</defName>
+    <label>power beam</label>
+    <thingClass>PowerBeam</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <comps>
+      <li Class="CompProperties_AffectsSky" ListIndex="0">
+        <skyColors>
+          <sky>(255, 230, 200)</sky>
+          <shadow>(225, 220, 185)</shadow>
+          <overlay>(255, 255, 255)</overlay>
+          <saturation>1.3</saturation>
+        </skyColors>
+      </li>
+      <li Class="CompProperties_CameraShaker" ListIndex="1">
+        <mag>0.03</mag>
+      </li>
+      <li Class="CompProperties_OrbitalBeam" ListIndex="2">
+        <width>8</width>
+        <color>(255, 245, 214, 242)</color>
+        <sound>OrbitalBeam</sound>
+      </li>
+    </comps>
+    <drawerType>RealtimeOnly</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <seeThroughFog>true</seeThroughFog>
+  </ThingDef>
+</Defs>

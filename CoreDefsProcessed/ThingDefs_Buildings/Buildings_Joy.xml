@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ThingDefs>
+<Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>HorseshoesPin</defName>
     <label>horseshoes pin</label>
@@ -24,6 +24,7 @@
     <altitudeLayer>Building</altitudeLayer>
     <designationCategory>Joy</designationCategory>
     <designationHotKey>Misc1</designationHotKey>
+    <minTechLevelToBuild>Medieval</minTechLevelToBuild>
     <thingClass>Building</thingClass>
     <category>Building</category>
     <rotatable>false</rotatable>
@@ -59,7 +60,64 @@
       <watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
     </building>
   </ThingDef>
-  <ThingDef ParentName="FurnitureBase">
+  <ThingDef ParentName="BuildingBase">
+    <defName>HoopstoneRing</defName>
+    <label>hoopstone ring</label>
+    <description>A simple ancient game played with a few stones and a large ring in the ground. Players toss stones from a distance and attempt to get them to land inside the ring. It's relaxing, and even trains hand-eye coordination.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Mass>4</Mass>
+      <Flammability>1.0</Flammability>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <pathCost>10</pathCost>
+    <costStuffCount>10</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc1</designationHotKey>
+    <maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="0">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Things/Building/Joy/HoopstoneRing</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.3,0.3,0.4,0.4)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <building>
+      <isJoySource>true</isJoySource>
+      <watchBuildingStandDistanceRange>
+        <min>5</min>
+        <max>5</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>ChessTable</defName>
     <label>chess table</label>
     <description>The ancient game of kings. Fun for a few hours here and there, even playing alone.</description>
@@ -125,7 +183,7 @@
       <isJoySource>true</isJoySource>
     </building>
   </ThingDef>
-  <ThingDef ParentName="FurnitureBase">
+  <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>BilliardsTable</defName>
     <label>billiards table</label>
     <description>A soft-topped bounded table for playing a variety of billiards-type games.</description>
@@ -151,6 +209,7 @@
       <li ListIndex="2">Stony</li>
     </stuffCategories>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
@@ -198,6 +257,71 @@
       <isJoySource>true</isJoySource>
     </building>
   </ThingDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>PokerTable</defName>
+    <label>poker table</label>
+    <description>A table designed for playing gambling card games, mainly poker. A great way to test your strategic skills and a bit of luck.</description>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Mass>120</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <SellPriceFactor>0.70</SellPriceFactor>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <costList>
+      <Cloth>80</Cloth>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li ListIndex="0">Metallic</li>
+      <li ListIndex="1">Woody</li>
+      <li ListIndex="2">Stony</li>
+    </stuffCategories>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Joy</designationCategory>
+    <designationHotKey>Misc5</designationHotKey>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <size>(2,2)</size>
+    <comps>
+      <li ListIndex="0">
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_RoomIdentifier" ListIndex="1">
+        <roomStat>Impressiveness</roomStat>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <canOverlapZones>false</canOverlapZones>
+    <graphicData>
+      <texPath>Things/Building/Joy/PokerTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <fillPercent>0.40</fillPercent>
+    <tradeTags>
+      <li ListIndex="0">Furniture</li>
+    </tradeTags>
+    <building>
+      <isJoySource>true</isJoySource>
+    </building>
+  </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>TubeTelevision</defName>
     <label>tube television</label>
@@ -221,8 +345,10 @@
     <researchPrerequisites>
       <li ListIndex="0">TubeTelevision</li>
     </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <repairEffect>Repair</repairEffect>
     <constructEffect>ConstructMetal</constructEffect>
+    <defaultPlacingRot>South</defaultPlacingRot>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
       <li ListIndex="0">PlaceWorker_WatchArea</li>
@@ -294,6 +420,7 @@
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
+    <defaultPlacingRot>South</defaultPlacingRot>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
       <li ListIndex="0">PlaceWorker_WatchArea</li>
@@ -364,6 +491,7 @@
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
+    <defaultPlacingRot>South</defaultPlacingRot>
     <altitudeLayer>Building</altitudeLayer>
     <placeWorkers>
       <li ListIndex="0">PlaceWorker_WatchArea</li>
@@ -428,6 +556,10 @@
     </statBases>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
+    <costList>
+      <Steel>50</Steel>
+      <Component>1</Component>
+    </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <repairEffect>Repair</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
@@ -460,4 +592,4 @@
       <isJoySource>true</isJoySource>
     </building>
   </ThingDef>
-</ThingDefs>
+</Defs>

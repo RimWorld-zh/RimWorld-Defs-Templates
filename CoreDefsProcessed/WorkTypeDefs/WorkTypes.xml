@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkTypeDefs>
+<Defs>
   <WorkTypeDef>
     <defName>Firefighter</defName>
     <label>Firefight</label>
@@ -9,19 +9,19 @@
     </workTags>
     <labelShort>Firefight</labelShort>
     <pawnLabel>Firefighter</pawnLabel>
-    <gerundLabel>Firefighting</gerundLabel>
+    <gerundLabel>firefighting</gerundLabel>
     <verb>Extinguish</verb>
     <naturalPriority>1400</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
     <requireCapableColonist>true</requireCapableColonist>
   </WorkTypeDef>
   <WorkTypeDef>
-    <defName>PatientEmergency</defName>
+    <defName>Patient</defName>
     <label>Patient</label>
     <description>Go to a medical bed for treatment if you have an immediately life-threatening health condition.</description>
     <labelShort>Patient</labelShort>
     <pawnLabel>Patient</pawnLabel>
-    <gerundLabel>Patienting</gerundLabel>
+    <gerundLabel>patienting</gerundLabel>
     <verb>Become patient</verb>
     <naturalPriority>1350</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
@@ -35,7 +35,7 @@
     </workTags>
     <labelShort>Doctor</labelShort>
     <pawnLabel>Doctor</pawnLabel>
-    <gerundLabel>Doctoring</gerundLabel>
+    <gerundLabel>doctoring</gerundLabel>
     <verb>Care for</verb>
     <naturalPriority>1300</naturalPriority>
     <relevantSkills>
@@ -48,7 +48,7 @@
     <description>Rest in bed to recuperate from not-immediately-life-threatening medical problems.</description>
     <labelShort>Bed rest</labelShort>
     <pawnLabel>Bed rester</pawnLabel>
-    <gerundLabel>Resting in bed</gerundLabel>
+    <gerundLabel>resting in bed</gerundLabel>
     <verb>Become patient</verb>
     <naturalPriority>1200</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
@@ -59,7 +59,7 @@
     <description>Flick switches. For example, when you designate toggling power on a turret, a flicker must manually flick it to toggle the power.</description>
     <labelShort>Flick</labelShort>
     <pawnLabel>Flicker</pawnLabel>
-    <gerundLabel>Flicking</gerundLabel>
+    <gerundLabel>flicking</gerundLabel>
     <verb>Flick</verb>
     <naturalPriority>1150</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
@@ -73,7 +73,7 @@
     </workTags>
     <labelShort>Warden</labelShort>
     <pawnLabel>Warden</pawnLabel>
-    <gerundLabel>Wardening</gerundLabel>
+    <gerundLabel>wardening</gerundLabel>
     <verb>Handle</verb>
     <naturalPriority>1100</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
@@ -90,7 +90,7 @@
     </workTags>
     <labelShort>Handle</labelShort>
     <pawnLabel>Handler</pawnLabel>
-    <gerundLabel>Handling</gerundLabel>
+    <gerundLabel>handling</gerundLabel>
     <verb>Handle</verb>
     <naturalPriority>1050</naturalPriority>
     <relevantSkills>
@@ -107,7 +107,7 @@
     </workTags>
     <labelShort>Cook</labelShort>
     <pawnLabel>Cook</pawnLabel>
-    <gerundLabel>Cooking</gerundLabel>
+    <gerundLabel>cooking</gerundLabel>
     <verb>Cook</verb>
     <naturalPriority>1000</naturalPriority>
     <relevantSkills>
@@ -123,7 +123,7 @@
     </workTags>
     <labelShort>Hunt</labelShort>
     <pawnLabel>Hunter</pawnLabel>
-    <gerundLabel>Hunting</gerundLabel>
+    <gerundLabel>hunting</gerundLabel>
     <verb>Hunt</verb>
     <naturalPriority>950</naturalPriority>
     <relevantSkills>
@@ -139,7 +139,7 @@
     </workTags>
     <labelShort>Construct</labelShort>
     <pawnLabel>Constructor</pawnLabel>
-    <gerundLabel>Constructing</gerundLabel>
+    <gerundLabel>constructing</gerundLabel>
     <verb>Construct</verb>
     <naturalPriority>900</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
@@ -157,7 +157,7 @@
     </workTags>
     <labelShort>Grow</labelShort>
     <pawnLabel>Grower</pawnLabel>
-    <gerundLabel>Growing</gerundLabel>
+    <gerundLabel>growing</gerundLabel>
     <verb>Grow</verb>
     <naturalPriority>700</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
@@ -175,7 +175,7 @@
     </workTags>
     <labelShort>Mine</labelShort>
     <pawnLabel>Miner</pawnLabel>
-    <gerundLabel>Mining</gerundLabel>
+    <gerundLabel>mining</gerundLabel>
     <verb>Mine</verb>
     <naturalPriority>600</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
@@ -193,7 +193,7 @@
     </workTags>
     <labelShort>Plant cut</labelShort>
     <pawnLabel>Plant cutter</pawnLabel>
-    <gerundLabel>Plant cutting</gerundLabel>
+    <gerundLabel>plant cutting</gerundLabel>
     <verb>Cut</verb>
     <naturalPriority>500</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
@@ -208,7 +208,7 @@
     </workTags>
     <labelShort>Smith</labelShort>
     <pawnLabel>Smith</pawnLabel>
-    <gerundLabel>Smithing</gerundLabel>
+    <gerundLabel>smithing</gerundLabel>
     <verb>Smith at</verb>
     <naturalPriority>470</naturalPriority>
     <relevantSkills>
@@ -225,7 +225,7 @@
     </workTags>
     <labelShort>Tailor</labelShort>
     <pawnLabel>Tailor</pawnLabel>
-    <gerundLabel>Tailoring</gerundLabel>
+    <gerundLabel>tailoring</gerundLabel>
     <verb>Tailor at</verb>
     <naturalPriority>450</naturalPriority>
     <relevantSkills>
@@ -241,7 +241,7 @@
     </workTags>
     <labelShort>Art</labelShort>
     <pawnLabel>Artist</pawnLabel>
-    <gerundLabel>Art</gerundLabel>
+    <gerundLabel>art</gerundLabel>
     <verb>Do art at</verb>
     <naturalPriority>430</naturalPriority>
     <relevantSkills>
@@ -258,7 +258,7 @@
     </workTags>
     <labelShort>Craft</labelShort>
     <pawnLabel>Crafter</pawnLabel>
-    <gerundLabel>Crafting</gerundLabel>
+    <gerundLabel>crafting</gerundLabel>
     <verb>Craft at</verb>
     <naturalPriority>400</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
@@ -276,7 +276,7 @@
     </workTags>
     <labelShort>Haul</labelShort>
     <pawnLabel>Hauler</pawnLabel>
-    <gerundLabel>Hauling</gerundLabel>
+    <gerundLabel>hauling</gerundLabel>
     <verb>Haul</verb>
     <naturalPriority>300</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
@@ -292,7 +292,7 @@
     </workTags>
     <labelShort>Clean</labelShort>
     <pawnLabel>Cleaner</pawnLabel>
-    <gerundLabel>Cleaning</gerundLabel>
+    <gerundLabel>cleaning</gerundLabel>
     <verb>Clean</verb>
     <naturalPriority>200</naturalPriority>
     <alwaysStartActive>true</alwaysStartActive>
@@ -307,11 +307,11 @@
     </workTags>
     <labelShort>Research</labelShort>
     <pawnLabel>Researcher</pawnLabel>
-    <gerundLabel>Researching</gerundLabel>
+    <gerundLabel>researching</gerundLabel>
     <verb>Research at</verb>
     <naturalPriority>100</naturalPriority>
     <relevantSkills>
       <li ListIndex="0">Intellectual</li>
     </relevantSkills>
   </WorkTypeDef>
-</WorkTypeDefs>
+</Defs>

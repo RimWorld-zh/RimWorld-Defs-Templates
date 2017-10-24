@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WeatherDefs>
+<Defs>
   <WeatherDef>
     <defName>Clear</defName>
     <label>clear</label>
     <description>A clear day. No penalties or modifiers.</description>
     <repeatable>true</repeatable>
     <favorability>Good</favorability>
+    <perceivePriority>0</perceivePriority>
     <ambientSounds>
       <li ListIndex="0">AmbientWind_Clear</li>
     </ambientSounds>
@@ -48,6 +49,7 @@
     </commonalityRainfallFactor>
     <windSpeedFactor>0.5</windSpeedFactor>
     <accuracyMultiplier>0.5</accuracyMultiplier>
+    <perceivePriority>1</perceivePriority>
     <ambientSounds>
       <li ListIndex="0">AmbientWind_Fog</li>
     </ambientSounds>
@@ -100,6 +102,7 @@
     <windSpeedFactor>1.5</windSpeedFactor>
     <moveSpeedMultiplier>0.9</moveSpeedMultiplier>
     <accuracyMultiplier>0.8</accuracyMultiplier>
+    <perceivePriority>1</perceivePriority>
     <ambientSounds>
       <li ListIndex="0">AmbientRain</li>
     </ambientSounds>
@@ -146,6 +149,7 @@
       <max>999</max>
     </temperatureRange>
     <windSpeedFactor>1.5</windSpeedFactor>
+    <perceivePriority>2</perceivePriority>
     <ambientSounds>
       <li ListIndex="0">AmbientWind_Storm</li>
     </ambientSounds>
@@ -209,6 +213,7 @@
     <windSpeedFactor>1.5</windSpeedFactor>
     <moveSpeedMultiplier>0.8</moveSpeedMultiplier>
     <accuracyMultiplier>0.8</accuracyMultiplier>
+    <perceivePriority>2</perceivePriority>
     <ambientSounds>
       <li ListIndex="0">AmbientWind_Storm</li>
       <li ListIndex="1">AmbientRain</li>
@@ -271,6 +276,7 @@
     <windSpeedFactor>1.5</windSpeedFactor>
     <moveSpeedMultiplier>0.9</moveSpeedMultiplier>
     <accuracyMultiplier>0.5</accuracyMultiplier>
+    <perceivePriority>1</perceivePriority>
     <ambientSounds>
       <li ListIndex="0">AmbientWind_Fog</li>
       <li ListIndex="1">AmbientRain</li>
@@ -326,6 +332,7 @@
     <windSpeedFactor>1.5</windSpeedFactor>
     <moveSpeedMultiplier>0.8</moveSpeedMultiplier>
     <accuracyMultiplier>0.8</accuracyMultiplier>
+    <perceivePriority>1</perceivePriority>
     <ambientSounds>
       <li ListIndex="0">AmbientWind_Storm</li>
     </ambientSounds>
@@ -378,6 +385,7 @@
     <snowRate>0.8</snowRate>
     <windSpeedFactor>1.5</windSpeedFactor>
     <accuracyMultiplier>0.8</accuracyMultiplier>
+    <perceivePriority>1</perceivePriority>
     <ambientSounds>
       <li ListIndex="0">AmbientWind_Clear</li>
     </ambientSounds>
@@ -410,4 +418,4 @@
       <saturation>0.9</saturation>
     </skyColorsDusk>
   </WeatherDef>
-</WeatherDefs>
+</Defs>
