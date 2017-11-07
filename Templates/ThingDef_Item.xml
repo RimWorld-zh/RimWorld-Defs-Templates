@@ -406,6 +406,8 @@
         <power>float_value</power>
         <!--Type: float-->
         <cooldownTime>float_value</cooldownTime>
+        <!--======== Non Matched Elements ========-->
+        <labelUsedInLogging>false</labelUsedInLogging>
       </li>
       <!-- ... -->
     </tools>

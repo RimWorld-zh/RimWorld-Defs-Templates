@@ -27,6 +27,7 @@
       </rulesStrings>
     </rulePack>
     <defSymbol>material</defSymbol>
+    <baseInterest>1</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CompletedLongConstructionProject</defName>
@@ -53,6 +54,7 @@
       </rulesStrings>
     </rulePack>
     <defSymbol>object</defSymbol>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CompletedLongCraftingProject</defName>
@@ -79,6 +81,7 @@
       </rulesStrings>
     </rulePack>
     <defSymbol>object</defSymbol>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>AttendedParty</defName>
@@ -106,6 +109,7 @@
     </rulePack>
     <firstPawnSymbol>attender</firstPawnSymbol>
     <secondPawnSymbol>organizer</secondPawnSymbol>
+    <baseInterest>1</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Meditated</defName>
@@ -130,6 +134,7 @@
         <li ListIndex="13">desc_sentence->[quantity_adjphrase] [enemy]s are awestruck by the scene.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>1</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Prayed</defName>
@@ -155,6 +160,7 @@
         <li ListIndex="14">desc_sentence->[quantity_adjphrase] [enemy]s are awestruck by the scene.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>1</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>BuiltSnowman</defName>
@@ -179,6 +185,7 @@
         <li ListIndex="13">desc_sentence->A snow-covered [terrainfeature] can be seen far away.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>1</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>VisitedGrave</defName>
@@ -209,6 +216,7 @@
     </rulePack>
     <firstPawnSymbol>pawn</firstPawnSymbol>
     <secondPawnSymbol>corpse</secondPawnSymbol>
+    <baseInterest>1</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>PlayedGame</defName>
@@ -243,6 +251,7 @@
       </rulesStrings>
     </rulePack>
     <defSymbol>object</defSymbol>
+    <baseInterest>0.5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>BuriedCorpse</defName>
@@ -272,6 +281,7 @@
         <li ListIndex="18">desc_sentence->[quantity_adjphrase] [animal]s rest near the scene.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>2</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>EnteredCryptosleep</defName>
@@ -297,6 +307,7 @@
         <li ListIndex="14">desc_sentence->[quantity_adjphrase] filled cryptosleep caskets surround the scene.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>PutIntoCryptosleep</defName>
@@ -328,6 +339,7 @@
     </rulePack>
     <firstPawnSymbol>pawn</firstPawnSymbol>
     <secondPawnSymbol>sleeper</secondPawnSymbol>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Stripped</defName>
@@ -355,6 +367,7 @@
     </rulePack>
     <firstPawnSymbol>stripper</firstPawnSymbol>
     <secondPawnSymbol>stripped</secondPawnSymbol>
+    <baseInterest>2</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>GainedMasterSkillWithPassion</defName>
@@ -385,6 +398,7 @@
     </rulePack>
     <defSymbol>skill</defSymbol>
     <defType>SkillDef</defType>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>GainedMasterSkillWithoutPassion</defName>
@@ -413,6 +427,7 @@
     </rulePack>
     <defSymbol>skill</defSymbol>
     <defType>SkillDef</defType>
+    <baseInterest>10</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>IncreasedMenagerie</defName>
@@ -442,5 +457,6 @@
     </rulePack>
     <firstPawnSymbol>human</firstPawnSymbol>
     <secondPawnSymbol>animal</secondPawnSymbol>
+    <baseInterest>2</baseInterest>
   </TaleDef>
 </Defs>

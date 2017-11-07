@@ -12,6 +12,7 @@
     <makesBlood>false</makesBlood>
     <deathMessage>{0} has been stunned to death.</deathMessage>
     <armorCategory>Blunt</armorCategory>
+    <combatLogRules>Damage_Stun</combatLogRules>
     <explosionDamage>35</explosionDamage>
     <explosionCellMote>Mote_BlastDry</explosionCellMote>
     <soundExplosion>Explosion_Stun</soundExplosion>
@@ -25,6 +26,7 @@
     <deathMessage>{0} has been EMPed to death.</deathMessage>
     <impactSoundType>Electric</impactSoundType>
     <armorCategory>Electric</armorCategory>
+    <combatLogRules>Damage_EMP</combatLogRules>
     <explosionDamage>60</explosionDamage>
     <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
     <explosionCellMote>Mote_BlastEMP</explosionCellMote>

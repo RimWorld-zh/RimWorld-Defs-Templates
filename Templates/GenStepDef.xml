@@ -199,11 +199,9 @@
       <!--Type: bool-->
       <!--Default Value: false-->
       <nearMapCenter>true_or_false</nearMapCenter>
-      <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
       <mineables>
         <!--Type: Verse.ThingDef-->
-        <li>ThingDef_defName</li>
         <!-- ... -->
       </mineables>
       <!--Type: Verse.FloatRange-->

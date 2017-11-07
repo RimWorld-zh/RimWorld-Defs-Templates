@@ -243,6 +243,22 @@
     </rulePack>
   </RulePackDef>
   <RulePackDef>
+    <defName>NamerTropicalRainforest</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">suffix(p=6)->rainforest</li>
+        <li ListIndex="1">suffix(p=3)->jungle</li>
+        <li ListIndex="2">suffix->forest</li>
+        <li ListIndex="3">suffix->grove</li>
+        <li ListIndex="4">suffix->woodland</li>
+        <li ListIndex="5">suffix->tangle</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
     <defName>NamerForest</defName>
     <include>
       <li ListIndex="0">NamerUtility</li>
@@ -251,9 +267,24 @@
       <rulesStrings>
         <li ListIndex="0">suffix(p=6)->forest</li>
         <li ListIndex="1">suffix->grove</li>
-        <li ListIndex="2">suffix->wetlands</li>
-        <li ListIndex="3">suffix->taiga</li>
-        <li ListIndex="4">suffix->woodland</li>
+        <li ListIndex="2">suffix->woodland</li>
+        <li ListIndex="3">suffix->thicket</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerBorealForest</defName>
+    <include>
+      <li ListIndex="0">NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">suffix(p=6)->forest</li>
+        <li ListIndex="1">suffix(p=3)->taiga</li>
+        <li ListIndex="2">suffix->grove</li>
+        <li ListIndex="3">suffix->woodland</li>
+        <li ListIndex="4">suffix->tangle</li>
+        <li ListIndex="5">suffix->thicket</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

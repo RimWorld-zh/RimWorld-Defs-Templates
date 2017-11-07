@@ -28,7 +28,7 @@
         <li ListIndex="18">desc_sentence->In the distance, a [outlander] observes.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>10</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CaravanAmbushedByManhunter</defName>
@@ -56,7 +56,7 @@
         <li ListIndex="16">desc_sentence->In the distance, a [outlander] observes.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>10</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CaravanMeeting</defName>
@@ -90,7 +90,7 @@
         <li ListIndex="22">event->talking hesitantly</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>10</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CaravanDemand</defName>
@@ -123,7 +123,7 @@
         <li ListIndex="21">action->taunting [pawn_nameShortDef]</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>10</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>MeteoriteImpact</defName>
@@ -157,7 +157,7 @@
         <li ListIndex="22">desc_sentence->The surroundings are muted and dull.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>50</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>ToxicFallout</defName>
@@ -186,7 +186,7 @@
         <li ListIndex="17">desc_sentence->[quantity_adjphrase] [animal]s mill around uncertainly.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>50</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>VolcanicWinter</defName>
@@ -213,7 +213,7 @@
         <li ListIndex="15">desc_sentence->[quantity_adjphrase] [animal]s mill around uncertainly.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>50</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Aurora</defName>
@@ -242,7 +242,7 @@
         <li ListIndex="17">desc_sentence->There is no [enemy] in sight.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>20</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Flashstorm</defName>
@@ -273,7 +273,7 @@
         <li ListIndex="19">desc_sentence->All animal life has left the area.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>20</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Tornado</defName>
@@ -304,7 +304,7 @@
         <li ListIndex="19">desc_sentence->All animal life has left the area.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>50</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Raid</defName>
@@ -343,7 +343,7 @@
         <li ListIndex="27">defender_circumstance->flexing [pawn_possessive] muscles</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Infestation</defName>
@@ -374,7 +374,7 @@
         <li ListIndex="19">desc_sentence->All animal life has left the area.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>ManhunterPack</defName>
@@ -409,7 +409,7 @@
         <li ListIndex="23">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>ShipPartCrash</defName>
@@ -450,7 +450,7 @@
         <li ListIndex="29">defender_circumstance->flexing [pawn_possessive] muscles</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Eclipse</defName>
@@ -476,7 +476,7 @@
         <li ListIndex="14">desc_sentence->There is no [enemy] in sight.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>JourneyOffer</defName>
@@ -514,6 +514,6 @@
         <li ListIndex="26">desc_sentence->A spaceship is visible in the far distance.</li>
       </rulesStrings>
     </rulePack>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>20</baseInterest>
   </TaleDef>
 </Defs>

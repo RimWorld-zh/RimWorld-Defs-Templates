@@ -267,7 +267,7 @@
       <sowWork>1500</sowWork>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>1200</harvestWork>
-      <harvestYield>60</harvestYield>
+      <harvestYield>54</harvestYield>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestTag>Wood</harvestTag>
       <harvestMinGrowth>0.40</harvestMinGrowth>
@@ -334,7 +334,7 @@
       <sowWork>1500</sowWork>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>550</harvestWork>
-      <harvestYield>20</harvestYield>
+      <harvestYield>18</harvestYield>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestTag>Wood</harvestTag>
       <harvestMinGrowth>0.40</harvestMinGrowth>
@@ -400,7 +400,7 @@
       <sowWork>1500</sowWork>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>550</harvestWork>
-      <harvestYield>20</harvestYield>
+      <harvestYield>18</harvestYield>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestTag>Wood</harvestTag>
       <harvestMinGrowth>0.40</harvestMinGrowth>
@@ -465,7 +465,7 @@
       <sowWork>1500</sowWork>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>500</harvestWork>
-      <harvestYield>14</harvestYield>
+      <harvestYield>13</harvestYield>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestTag>Wood</harvestTag>
       <harvestMinGrowth>0.40</harvestMinGrowth>

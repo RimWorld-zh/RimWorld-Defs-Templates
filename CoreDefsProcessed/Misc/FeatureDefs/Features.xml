@@ -187,30 +187,27 @@
     <defName>TropicalRainforest</defName>
     <workerClass>FeatureWorker_Biome</workerClass>
     <order>410</order>
-    <nameMaker>NamerForest</nameMaker>
+    <nameMaker>NamerTropicalRainforest</nameMaker>
     <rootBiomes>
       <li ListIndex="0">TropicalRainforest</li>
       <li ListIndex="1">TropicalSwamp</li>
     </rootBiomes>
     <acceptableBiomes>
-      <li ListIndex="0">BorealForest</li>
-      <li ListIndex="1">TemperateForest</li>
-      <li ListIndex="2">TemperateSwamp</li>
+      <li ListIndex="0">TemperateForest</li>
+      <li ListIndex="1">TemperateSwamp</li>
     </acceptableBiomes>
   </FeatureDef>
   <FeatureDef>
     <defName>BorealForest</defName>
     <workerClass>FeatureWorker_Biome</workerClass>
     <order>420</order>
-    <nameMaker>NamerForest</nameMaker>
+    <nameMaker>NamerBorealForest</nameMaker>
     <rootBiomes>
       <li ListIndex="0">BorealForest</li>
     </rootBiomes>
     <acceptableBiomes>
       <li ListIndex="0">TemperateForest</li>
       <li ListIndex="1">TemperateSwamp</li>
-      <li ListIndex="2">TropicalRainforest</li>
-      <li ListIndex="3">TropicalSwamp</li>
     </acceptableBiomes>
   </FeatureDef>
   <FeatureDef>

@@ -3,13 +3,13 @@
   <RulePackDef>
     <defName>DamageEvent_Include</defName>
     <include>
-      <li ListIndex="0">Combat_WoundInclude</li>
+      <li ListIndex="0">Combat_WoundIncludes</li>
     </include>
     <rulePack>
       <rulesStrings>
-        <li ListIndex="0">logentry->[damageSource] [recipient_nameShortDef], [destroying] [recipient_possessive] [destroyed_targets].</li>
-        <li ListIndex="1">logentry->[damageSource] [recipient_nameShortDef], [destroying] [recipient_possessive] [destroyed_targets] and [damaging] [recipient_possessive] [damaged_targets].</li>
-        <li ListIndex="2">logentry(recipient_part_destroyed_count==0)->[damageSource] [recipient_nameShortDef], [damaging] [recipient_possessive] [damaged_targets].</li>
+        <li ListIndex="0">logentry->[damageSource] [recipient_nameShortDef], [destroyed_present] [recipient_possessive] [destroyed_targets].</li>
+        <li ListIndex="1">logentry->[damageSource] [recipient_nameShortDef], [destroyed_present] [recipient_possessive] [destroyed_targets] and [damaged_present] [recipient_possessive] [damaged_targets].</li>
+        <li ListIndex="2">logentry(recipient_part_destroyed_count==0)->[damageSource] [recipient_nameShortDef], [damaged_present] [recipient_possessive] [damaged_targets].</li>
         <li ListIndex="3">logentry(p=0.1)->[damageSource] [recipient_nameShortDef].</li>
       </rulesStrings>
     </rulePack>
@@ -28,16 +28,16 @@
         <li ListIndex="4">collapsed->collapsed</li>
         <li ListIndex="5">collapsed->fell</li>
         <li ListIndex="6">collapsed->caved in</li>
-        <li ListIndex="7">damaging->smashing</li>
-        <li ListIndex="8">damaging->bashing</li>
-        <li ListIndex="9">damaging->clobbering</li>
-        <li ListIndex="10">damaging->bruising</li>
-        <li ListIndex="11">damaging->lacerating</li>
-        <li ListIndex="12">destroying->shattering</li>
-        <li ListIndex="13">destroying->crushing</li>
-        <li ListIndex="14">destroying->obliterating</li>
-        <li ListIndex="15">destroying->annihilating</li>
-        <li ListIndex="16">destroying->breaking</li>
+        <li ListIndex="7">damaged_present->smashing</li>
+        <li ListIndex="8">damaged_present->bashing</li>
+        <li ListIndex="9">damaged_present->clobbering</li>
+        <li ListIndex="10">damaged_present->bruising</li>
+        <li ListIndex="11">damaged_present->lacerating</li>
+        <li ListIndex="12">destroyed_present->shattering</li>
+        <li ListIndex="13">destroyed_present->crushing</li>
+        <li ListIndex="14">destroyed_present->obliterating</li>
+        <li ListIndex="15">destroyed_present->annihilating</li>
+        <li ListIndex="16">destroyed_present->breaking</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -55,14 +55,59 @@
         <li ListIndex="4">fire->heat</li>
         <li ListIndex="5">fire->a conflagration</li>
         <li ListIndex="6">fire->an inferno</li>
-        <li ListIndex="7">damaging->scorching</li>
-        <li ListIndex="8">damaging->broiling</li>
-        <li ListIndex="9">damaging->searing</li>
-        <li ListIndex="10">damaging->singeing</li>
-        <li ListIndex="11">destroying->charring</li>
-        <li ListIndex="12">destroying->roasting</li>
-        <li ListIndex="13">destroying->cooking</li>
-        <li ListIndex="14">destroying->cremating</li>
+        <li ListIndex="7">damaged_present->scorching</li>
+        <li ListIndex="8">damaged_present->broiling</li>
+        <li ListIndex="9">damaged_present->searing</li>
+        <li ListIndex="10">damaged_present->singeing</li>
+        <li ListIndex="11">destroyed_present->charring</li>
+        <li ListIndex="12">destroyed_present->roasting</li>
+        <li ListIndex="13">destroyed_present->cooking</li>
+        <li ListIndex="14">destroyed_present->cremating</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>DamageEvent_PowerBeam</defName>
+    <include>
+      <li ListIndex="0">DamageEvent_Include</li>
+      <li ListIndex="1">Damage_Flame</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">damageSource->The [sky] opened up on</li>
+        <li ListIndex="1">damageSource->A beam of incredible [power] [damaged_past]</li>
+        <li ListIndex="2">damageSource->A column of [light] [damaged_past]</li>
+        <li ListIndex="3">sky->sky</li>
+        <li ListIndex="4">sky->clouds</li>
+        <li ListIndex="5">sky->heavens</li>
+        <li ListIndex="6">power->power</li>
+        <li ListIndex="7">power->energy</li>
+        <li ListIndex="8">power->heat</li>
+        <li ListIndex="9">light->light</li>
+        <li ListIndex="10">light->heat</li>
+        <li ListIndex="11">light->flame</li>
+        <li ListIndex="12">light(p=0.2)->incandescence</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>DamageEvent_Tornado</defName>
+    <include>
+      <li ListIndex="0">DamageEvent_Include</li>
+      <li ListIndex="1">Maneuver_Scratch_Damage</li>
+      <li ListIndex="2">Maneuver_Smash_Damage</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">damageSource->A [spiraling] tornado [enveloped]</li>
+        <li ListIndex="1">destroyed_present(p=3)->tearing off</li>
+        <li ListIndex="2">spiraling->spiraling</li>
+        <li ListIndex="3">spiraling->whirling</li>
+        <li ListIndex="4">spiraling->spinning</li>
+        <li ListIndex="5">spiraling(p=10)-></li>
+        <li ListIndex="6">enveloped(p=8)->enveloped</li>
+        <li ListIndex="7">enveloped->engulfed</li>
+        <li ListIndex="8">enveloped->surrounded</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

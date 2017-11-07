@@ -64,6 +64,7 @@
     <highlightTags>
       <li ListIndex="0">RandomizePawn</li>
     </highlightTags>
+    <eventTagInitiateSource>ReorderCharacters</eventTagInitiateSource>
   </InstructionDef>
   <InstructionDef>
     <defName>AcceptStartingPawns</defName>

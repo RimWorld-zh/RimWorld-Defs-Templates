@@ -32,6 +32,7 @@
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
     <deathMessage>{0} has been killed.</deathMessage>
+    <combatLogRules>Damage_Extinguish</combatLogRules>
     <explosionDamage>999999</explosionDamage>
     <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
     <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
@@ -67,6 +68,7 @@
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
     <deathMessage>{0} has been killed.</deathMessage>
+    <combatLogRules>Damage_Smoke</combatLogRules>
     <explosionDamage>0</explosionDamage>
     <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
     <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>

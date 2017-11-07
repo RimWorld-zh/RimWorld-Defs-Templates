@@ -22,15 +22,19 @@
         <!-- If we HAVE to keep lying down... -->
         <li Class="ThinkNode_ConditionalMustKeepLyingDown" ListIndex="1">
           <subNodes>
+            <!-- Do a queued job if possible (e.g. watch tv in bed) -->
+            <li Class="ThinkNode_QueuedJob" ListIndex="0">
+              <inBedOnly>true</inBedOnly>
+            </li>
             <!-- Get joy -->
-            <li Class="ThinkNode_Tagger" ListIndex="0">
+            <li Class="ThinkNode_Tagger" ListIndex="1">
               <subNodes>
                 <li Class="JobGiver_GetJoyInBed" ListIndex="0" />
               </subNodes>
               <tagToGive>SatisfyingNeeds</tagToGive>
             </li>
             <!-- Keep lying down -->
-            <li Class="JobGiver_KeepLyingDown" ListIndex="1" />
+            <li Class="JobGiver_KeepLyingDown" ListIndex="2" />
           </subNodes>
         </li>
         <li Class="ThinkNode_Subtree" ListIndex="2">
@@ -103,19 +107,32 @@
               </subNodes>
               <invert>true</invert>
             </li>
-            <li Class="ThinkNode_Tagger" ListIndex="1">
+            <!-- Exit map if released -->
+            <li Class="ThinkNode_ConditionalReleased" ListIndex="1">
+              <subNodes>
+                <li Class="ThinkNode_Tagger" ListIndex="0">
+                  <subNodes>
+                    <li Class="JobGiver_ExitMapBest" ListIndex="0">
+                      <defaultLocomotion>Walk</defaultLocomotion>
+                    </li>
+                  </subNodes>
+                  <tagToGive>Misc</tagToGive>
+                </li>
+              </subNodes>
+            </li>
+            <li Class="ThinkNode_Tagger" ListIndex="2">
               <subNodes>
                 <li Class="JobGiver_PatientGoToBed" ListIndex="0" />
               </subNodes>
               <tagToGive>RestingForMedicalReasons</tagToGive>
             </li>
-            <li Class="ThinkNode_Tagger" ListIndex="2">
+            <li Class="ThinkNode_Tagger" ListIndex="3">
               <subNodes>
                 <li Class="JobGiver_PrisonerGetDressed" ListIndex="0" />
               </subNodes>
               <tagToGive>ChangingApparel</tagToGive>
             </li>
-            <li Class="ThinkNode_Tagger" ListIndex="3">
+            <li Class="ThinkNode_Tagger" ListIndex="4">
               <subNodes>
                 <li Class="ThinkNode_PrioritySorter" ListIndex="0">
                   <subNodes>
@@ -131,18 +148,6 @@
                 </li>
               </subNodes>
               <tagToGive>SatisfyingNeeds</tagToGive>
-            </li>
-            <li Class="ThinkNode_ConditionalReleased" ListIndex="4">
-              <subNodes>
-                <li Class="ThinkNode_Tagger" ListIndex="0">
-                  <subNodes>
-                    <li Class="JobGiver_ExitMapBest" ListIndex="0">
-                      <defaultLocomotion>Walk</defaultLocomotion>
-                    </li>
-                  </subNodes>
-                  <tagToGive>Misc</tagToGive>
-                </li>
-              </subNodes>
             </li>
             <!-- Join auto joinable caravan -->
             <li Class="ThinkNode_Subtree" ListIndex="5">

@@ -7,7 +7,12 @@
         <!-- Keep lying down if we have to -->
         <li Class="ThinkNode_ConditionalMustKeepLyingDown" ListIndex="0">
           <subNodes>
-            <li Class="JobGiver_KeepLyingDown" ListIndex="0" />
+            <!-- Do a queued job if possible -->
+            <li Class="ThinkNode_QueuedJob" ListIndex="0">
+              <inBedOnly>true</inBedOnly>
+            </li>
+            <!-- Keep lying down -->
+            <li Class="JobGiver_KeepLyingDown" ListIndex="1" />
           </subNodes>
         </li>
         <li Class="ThinkNode_Subtree" ListIndex="1">

@@ -26,6 +26,7 @@
         <li ListIndex="16">desc_sentence->[quantity_adjphrase] [animal]s wander peacefully.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>10</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CaravanFled</defName>
@@ -56,6 +57,7 @@
         <li ListIndex="19">desc_sentence->[pawn_nameShortDef] is gasping for breath.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>20</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CaravanAmbushDefeated</defName>
@@ -88,6 +90,7 @@
         <li ListIndex="21">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>20</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CaravanRemoteMining</defName>
@@ -116,6 +119,7 @@
       </rulesStrings>
     </rulePack>
     <defSymbol>material</defSymbol>
+    <baseInterest>1</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CaravanAssaultSuccessful</defName>
@@ -143,5 +147,6 @@
         <li ListIndex="16">desc_sentence->[quantity_adjphrase] [animal]s flee the area.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>50</baseInterest>
   </TaleDef>
 </Defs>

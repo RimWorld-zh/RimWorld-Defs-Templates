@@ -10,11 +10,11 @@
         <li ListIndex="3">damaged_past->damaged</li>
         <li ListIndex="4">damaged_past->wounded</li>
         <li ListIndex="5">damaged_past->hurt</li>
-        <li ListIndex="6">destroyed->shattered</li>
-        <li ListIndex="7">destroyed->crushed</li>
-        <li ListIndex="8">destroyed->obliterated</li>
-        <li ListIndex="9">destroyed->annihilated</li>
-        <li ListIndex="10">destroyed->detonated</li>
+        <li ListIndex="6">destroyed_past->shattered</li>
+        <li ListIndex="7">destroyed_past->crushed</li>
+        <li ListIndex="8">destroyed_past->obliterated</li>
+        <li ListIndex="9">destroyed_past->annihilated</li>
+        <li ListIndex="10">destroyed_past->detonated</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -32,12 +32,75 @@
         <li ListIndex="7">damaged_past->damaged</li>
         <li ListIndex="8">damaged_past->wounded</li>
         <li ListIndex="9">damaged_past->hurt</li>
-        <li ListIndex="10">destroyed->cremated</li>
-        <li ListIndex="11">destroyed->incinerated</li>
-        <li ListIndex="12">destroyed->charred</li>
-        <li ListIndex="13">destroyed->obliterated</li>
-        <li ListIndex="14">destroyed->annihilated</li>
-        <li ListIndex="15">destroyed->detonated</li>
+        <li ListIndex="10">damaged_present(p=2)->blasting</li>
+        <li ListIndex="11">damaged_present(p=2)->scorching</li>
+        <li ListIndex="12">damaged_present(p=2)->burning</li>
+        <li ListIndex="13">damaged_present(p=2)->blistering</li>
+        <li ListIndex="14">damaged_present(p=2)->igniting</li>
+        <li ListIndex="15">damaged_present(p=2)->searing</li>
+        <li ListIndex="16">damaged_present->injuring</li>
+        <li ListIndex="17">damaged_present->damaging</li>
+        <li ListIndex="18">damaged_present->wounding</li>
+        <li ListIndex="19">damaged_present->hurting</li>
+        <li ListIndex="20">destroyed_past->cremated</li>
+        <li ListIndex="21">destroyed_past->incinerated</li>
+        <li ListIndex="22">destroyed_past->charred</li>
+        <li ListIndex="23">destroyed_past->obliterated</li>
+        <li ListIndex="24">destroyed_past->annihilated</li>
+        <li ListIndex="25">destroyed_past->detonated</li>
+        <li ListIndex="26">destroyed_present->cremating</li>
+        <li ListIndex="27">destroyed_present->incinerating</li>
+        <li ListIndex="28">destroyed_present->charring</li>
+        <li ListIndex="29">destroyed_present->obliterating</li>
+        <li ListIndex="30">destroyed_present->annihilating</li>
+        <li ListIndex="31">destroyed_present->detonating</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <!-- Weird damage types that don't really destroy anything -->
+  <RulePackDef>
+    <defName>Damage_Extinguish</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">damaged_past->extinguished</li>
+        <li ListIndex="1">damaged_past->swamped</li>
+        <li ListIndex="2">damaged_past->foamed</li>
+        <li ListIndex="3">damaged_past->quenched</li>
+        <li ListIndex="4">destroyed_past->damaged_past</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Damage_Stun</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">damaged_past->stunned</li>
+        <li ListIndex="1">damaged_past->confused</li>
+        <li ListIndex="2">damaged_past->stopped</li>
+        <li ListIndex="3">damaged_past->dizzied</li>
+        <li ListIndex="4">destroyed_past->damaged_past</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Damage_EMP</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">damaged_past->electrified</li>
+        <li ListIndex="1">damaged_past->shocked</li>
+        <li ListIndex="2">damaged_past->zapped</li>
+        <li ListIndex="3">destroyed_past->damaged_past</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Damage_Smoke</defName>
+    <rulePack>
+      <rulesStrings>
+        <li ListIndex="0">damaged_past->smoked</li>
+        <li ListIndex="1">damaged_past->fogged</li>
+        <li ListIndex="2">damaged_past->clouded</li>
+        <li ListIndex="3">destroyed_past->damaged_past</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

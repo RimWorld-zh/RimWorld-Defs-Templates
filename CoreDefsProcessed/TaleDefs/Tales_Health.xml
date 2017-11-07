@@ -53,6 +53,7 @@
     <firstPawnSymbol>victim</firstPawnSymbol>
     <secondPawnSymbol>killer</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>0.25</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Downed</defName>
@@ -102,6 +103,7 @@
     <firstPawnSymbol>victim</firstPawnSymbol>
     <secondPawnSymbol>killer</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>KilledLongRange</defName>
@@ -149,6 +151,7 @@
     <firstPawnSymbol>killer</firstPawnSymbol>
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>KilledMelee</defName>
@@ -199,6 +202,7 @@
     <firstPawnSymbol>killer</firstPawnSymbol>
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>KilledMajorThreat</defName>
@@ -249,6 +253,7 @@
     <firstPawnSymbol>killer</firstPawnSymbol>
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>10</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>KilledCapacity</defName>
@@ -292,6 +297,7 @@
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>capacity</defSymbol>
     <defType>PawnCapacityDef</defType>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>KilledMortar</defName>
@@ -325,6 +331,7 @@
     <firstPawnSymbol>killer</firstPawnSymbol>
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>Exhausted</defName>
@@ -350,6 +357,7 @@
         <li ListIndex="14">desc_sentence->The scene takes place inside a newly-built [community].</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>IllnessRevealed</defName>
@@ -381,6 +389,7 @@
     </rulePack>
     <defSymbol>illness</defSymbol>
     <defType>HediffDef</defType>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>HeatstrokeRevealed</defName>
@@ -409,6 +418,7 @@
         <li ListIndex="17">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>HypothermiaRevealed</defName>
@@ -437,6 +447,7 @@
         <li ListIndex="17">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>ToxicityRevealed</defName>
@@ -467,6 +478,7 @@
         <li ListIndex="19">desc_sentence->[quantity_adjphrase] dying [animal]s litter the ground.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>4</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>GaveBirth</defName>
@@ -495,5 +507,6 @@
     </rulePack>
     <firstPawnSymbol>mother</firstPawnSymbol>
     <secondPawnSymbol>child</secondPawnSymbol>
+    <baseInterest>4</baseInterest>
   </TaleDef>
 </Defs>

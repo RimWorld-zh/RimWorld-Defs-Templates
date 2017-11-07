@@ -459,7 +459,7 @@
   <ThingDef ParentName="BedBase">
     <defName>Bedroll</defName>
     <label>bedroll</label>
-    <description>A cloth bed that sits on the floor. It is lightweight and can be rolled up for easy transport, but it is not quite as comfortable as a typical bed.</description>
+    <description>A simple bed that sits on the floor, usually made of cloth or leather, often lined with fur. It is lightweight and can be rolled up for easy transport, but it is not quite as comfortable as a typical bed.</description>
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
       <Flammability>1.0</Flammability>

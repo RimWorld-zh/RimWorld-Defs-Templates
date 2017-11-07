@@ -395,6 +395,8 @@
       <!--Type: Verse.SoundDef-->
       <!--Default Value: null-->
       <soundMeleeMiss>SoundDef_defName</soundMeleeMiss>
+      <!--======== Non Matched Elements ========-->
+      <herdMigrationAllowed>false</herdMigrationAllowed>
     </race>
   </ThingDef>
 </Defs>

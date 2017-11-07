@@ -55,7 +55,7 @@
     <label>psychoid brewing</label>
     <description>With preparation, psychoid leaves can be boiled in water, producing a mildly euphoric and addictive tea.</description>
     <techLevel>Neolithic</techLevel>
-    <baseCost>4000</baseCost>
+    <baseCost>400</baseCost>
     <tags>
       <li ListIndex="0">TribalStart</li>
     </tags>

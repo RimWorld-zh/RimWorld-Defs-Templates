@@ -69,7 +69,11 @@
     <defName>Downed</defName>
     <thinkRoot Class="ThinkNode_ConditionalDowned">
       <subNodes>
-        <li Class="JobGiver_IdleForever" ListIndex="0" />
+        <!-- Do a queued job if possible -->
+        <li Class="ThinkNode_QueuedJob" ListIndex="0">
+          <inBedOnly>true</inBedOnly>
+        </li>
+        <li Class="JobGiver_IdleForever" ListIndex="1" />
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>

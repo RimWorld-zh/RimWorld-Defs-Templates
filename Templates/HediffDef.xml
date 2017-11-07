@@ -441,5 +441,7 @@
     <!--Type: string-->
     <!--Default Value: (string)null-->
     <labelNoun>string_value</labelNoun>
+    <!--======== Non Matched Elements ========-->
+    <everCurableByItem>false</everCurableByItem>
   </HediffDef>
 </Defs>

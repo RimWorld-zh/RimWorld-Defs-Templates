@@ -586,6 +586,7 @@
       <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <herdMigrationAllowed>false</herdMigrationAllowed>
     </race>
   </ThingDef>
   <PawnKindDef ParentName="AnimalKindBase">

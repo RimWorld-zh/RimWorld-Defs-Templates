@@ -347,11 +347,13 @@
         <cooldownTime>2.15</cooldownTime>
       </li>
       <li ListIndex="1">
+        <label>head</label>
         <capacities>
           <li ListIndex="0">Blunt</li>
         </capacities>
         <power>14.2</power>
         <cooldownTime>2.15</cooldownTime>
+        <labelUsedInLogging>false</labelUsedInLogging>
       </li>
     </tools>
     <graphicData>
@@ -448,11 +450,13 @@
         <cooldownTime>2.0</cooldownTime>
       </li>
       <li ListIndex="1">
+        <label>head</label>
         <capacities>
           <li ListIndex="0">Blunt</li>
         </capacities>
         <power>14.3</power>
         <cooldownTime>2.0</cooldownTime>
+        <labelUsedInLogging>false</labelUsedInLogging>
       </li>
     </tools>
     <graphicData>

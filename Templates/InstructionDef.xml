@@ -63,5 +63,7 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <resetBuildDesignatorStuffs>true_or_false</resetBuildDesignatorStuffs>
+    <!--======== Non Matched Elements ========-->
+    <eventTagInitiateSource>ReorderCharacters</eventTagInitiateSource>
   </InstructionDef>
 </Defs>

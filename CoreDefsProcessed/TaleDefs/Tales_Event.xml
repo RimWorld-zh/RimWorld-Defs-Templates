@@ -30,6 +30,7 @@
         <li ListIndex="20">desc_sentence->A [outlander] watches silently from afar.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>50</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>SocialFight</defName>
@@ -73,6 +74,7 @@
     </rulePack>
     <firstPawnSymbol>pawna</firstPawnSymbol>
     <secondPawnSymbol>pawnb</secondPawnSymbol>
+    <baseInterest>10</baseInterest>
   </TaleDef>
   <TaleDef>
     <defName>CollapseDodged</defName>
@@ -96,5 +98,6 @@
         <li ListIndex="12">desc_sentence->[pawn_pronoun] has lost [pawn_possessive] balance.</li>
       </rulesStrings>
     </rulePack>
+    <baseInterest>10</baseInterest>
   </TaleDef>
 </Defs>

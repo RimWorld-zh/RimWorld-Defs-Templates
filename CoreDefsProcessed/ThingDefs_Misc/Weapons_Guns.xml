@@ -1372,6 +1372,7 @@
       <AccuracyMedium>0.68</AccuracyMedium>
       <AccuracyLong>0.53</AccuracyLong>
       <RangedWeapon_Cooldown>1.16</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
@@ -1708,6 +1709,9 @@
         <burstShotCount>30</burstShotCount>
         <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
         <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
         <warmupTime>3.0</warmupTime>
         <soundCast>ShotMinigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>

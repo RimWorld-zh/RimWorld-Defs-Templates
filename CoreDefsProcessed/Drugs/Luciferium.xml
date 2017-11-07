@@ -158,5 +158,6 @@
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
     <defaultLabelColor>(255,0,127)</defaultLabelColor>
+    <everCurableByItem>false</everCurableByItem>
   </HediffDef>
 </Defs>

@@ -261,7 +261,7 @@
       <sowWork>1500</sowWork>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>1000</harvestWork>
-      <harvestYield>50</harvestYield>
+      <harvestYield>45</harvestYield>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestTag>Wood</harvestTag>
       <harvestMinGrowth>0.40</harvestMinGrowth>
@@ -328,7 +328,7 @@
       <sowWork>1500</sowWork>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>650</harvestWork>
-      <harvestYield>30</harvestYield>
+      <harvestYield>27</harvestYield>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestTag>Wood</harvestTag>
       <harvestMinGrowth>0.40</harvestMinGrowth>
@@ -395,7 +395,7 @@
       <sowWork>1500</sowWork>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>700</harvestWork>
-      <harvestYield>30</harvestYield>
+      <harvestYield>27</harvestYield>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestTag>Wood</harvestTag>
       <harvestMinGrowth>0.40</harvestMinGrowth>
@@ -461,7 +461,7 @@
       <sowWork>1500</sowWork>
       <blockAdjacentSow>true</blockAdjacentSow>
       <harvestWork>700</harvestWork>
-      <harvestYield>30</harvestYield>
+      <harvestYield>27</harvestYield>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestTag>Wood</harvestTag>
       <harvestMinGrowth>0.40</harvestMinGrowth>
@@ -477,7 +477,6 @@
         <min>1.3</min>
         <max>2.0</max>
       </visualSizeRange>
-      <leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>
       <leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>
     </plant>
   </ThingDef>
