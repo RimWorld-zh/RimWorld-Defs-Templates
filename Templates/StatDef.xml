@@ -12,7 +12,6 @@
     <!--Desc: A human-readable description given when the Def is inspected by players.-->
     <description>string_value</description>
     <!--Type: RimWorld.StatCategoryDef-->
-    <!--Default Value: null-->
     <category>StatCategoryDef_defName</category>
     <!--Type: System.Type-->
     <!--Default Value: typeof(StatWorker)-->
@@ -45,7 +44,6 @@
     <!--Default Value: false-->
     <neverDisabled>true_or_false</neverDisabled>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <displayPriorityInCategory>int_value</displayPriorityInCategory>
     <!--Type: Verse.ToStringNumberSense-->
     <!--Available Values: Undefined, Absolute, Factor, Offset-->
@@ -53,12 +51,10 @@
     <toStringNumberSense>enum_value</toStringNumberSense>
     <!--Type: Verse.ToStringStyle-->
     <!--Available Values: Integer, FloatOne, FloatTwo, FloatMaxTwo, PercentZero, PercentOne, PercentTwo, Temperature, TemperatureOffset, WorkAmount-->
-    <!--Default Value: Integer-->
     <toStringStyle>enum_value</toStringStyle>
     <!--Type: System.Nullable`1[[Verse.ToStringStyle, Assembly-CSharp, Version=0.18.6505.24525, Culture=neutral, PublicKeyToken=null]]<Verse.ToStringStyle>-->
     <toStringStyleUnfinalized>value</toStringStyleUnfinalized>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <formatString>string_value</formatString>
     <!--Type: float-->
     <!--Default Value: 1.0-->
@@ -80,7 +76,6 @@
       <!-- ... -->
     </skillNeedOffsets>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <noSkillOffset>float_value</noSkillOffset>
     <!--Complex List-->
     <!--Type: List<RimWorld.PawnCapacityOffset>-->
@@ -155,7 +150,6 @@
       <!-- ... -->
     </capacityFactors>
     <!--Type: Verse.SimpleCurve-->
-    <!--Default Value: null-->
     <postProcessCurve>
       <!--Simple List-->
       <!--Type: List<Verse.CurvePoint>-->
@@ -222,7 +216,6 @@
       <!--Type: RimWorld.StatPart_Health-->
       <li Class="StatPart_Health">
         <!--Type: Verse.SimpleCurve-->
-        <!--Default Value: null-->
         <curve>
           <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
@@ -239,7 +232,6 @@
         <!--Default Value: false-->
         <humanlikeOnly>true_or_false</humanlikeOnly>
         <!--Type: Verse.SimpleCurve-->
-        <!--Default Value: null-->
         <factorFromGlowCurve>
           <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
@@ -278,13 +270,11 @@
       <!--Type: RimWorld.StatPart_BedStat-->
       <li Class="StatPart_BedStat">
         <!--Type: RimWorld.StatDef-->
-        <!--Default Value: null-->
         <stat>StatDef_defName</stat>
       </li>
       <!--Type: RimWorld.StatPart_Age-->
       <li Class="StatPart_Age">
         <!--Type: Verse.SimpleCurve-->
-        <!--Default Value: null-->
         <curve>
           <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
@@ -303,10 +293,8 @@
       <!--Type: RimWorld.StatPart_RoomStat-->
       <li Class="StatPart_RoomStat">
         <!--Type: Verse.RoomStatDef-->
-        <!--Default Value: null-->
         <roomStat>RoomStatDef_defName</roomStat>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <customLabel>string_value</customLabel>
       </li>
       <!--Type: RimWorld.StatPart_Outdoors-->

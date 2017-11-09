@@ -141,7 +141,6 @@
     <label>tropical swamp</label>
     <description>A thick jungle with lots of marsh and mud. Difficult movement, little space to build heavy structures, aggresive animals, and constant diseases make living here a nightmare.</description>
     <workerClass>BiomeWorker_TropicalSwamp</workerClass>
-    <canAutoChoose>false</canAutoChoose>
     <animalDensity>4.0</animalDensity>
     <plantDensity>0.85</plantDensity>
     <diseaseMtbDays>30</diseaseMtbDays>

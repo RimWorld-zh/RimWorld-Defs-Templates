@@ -6,7 +6,6 @@
     <!--Desc: The name of this Def. It is used as an identifier by the game code.-->
     <defName>string_value</defName>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <order>int_value</order>
     <!--Type: UnityEngine.Color-->
     <color>value</color>

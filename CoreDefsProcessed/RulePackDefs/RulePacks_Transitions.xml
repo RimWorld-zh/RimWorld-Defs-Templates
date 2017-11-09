@@ -65,7 +65,7 @@
         <li ListIndex="3">logentry->[subject_definite] [died] [duetoa] [culpritHediff_labelNoun] in the [culpritHediff_target_label] [flavorsuffix].</li>
         <li ListIndex="4">logentry->[subject_definite] [died] [duetoa] [culpritHediff_labelNoun] in [subject_possessive] [culpritHediff_target_label] [flavorsuffix].</li>
         <li ListIndex="5">logentry->[subject_definite] [died].</li>
-        <li ListIndex="6">logentry->[subject_definite] [died] [suffixflavor].</li>
+        <li ListIndex="6">logentry->[subject_definite] [died] [flavorsuffix].</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

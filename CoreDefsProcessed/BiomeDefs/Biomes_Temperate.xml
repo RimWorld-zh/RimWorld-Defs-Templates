@@ -142,7 +142,6 @@
     <label>temperate swamp</label>
     <description>Extremely dense vegetation and marshy terrain make it very difficult to move around here and build big structures. Many species of animals live in this area.</description>
     <workerClass>BiomeWorker_TemperateSwamp</workerClass>
-    <canAutoChoose>false</canAutoChoose>
     <animalDensity>2.8</animalDensity>
     <plantDensity>0.55</plantDensity>
     <diseaseMtbDays>45</diseaseMtbDays>

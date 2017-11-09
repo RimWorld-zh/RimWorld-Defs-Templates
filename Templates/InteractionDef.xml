@@ -14,7 +14,6 @@
     <!--Type: Verse.ThingDef-->
     <interactionMote>ThingDef_defName</interactionMote>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <socialFightBaseChance>float_value</socialFightBaseChance>
     <!--Type: RimWorld.ThoughtDef-->
     <initiatorThought>ThoughtDef_defName</initiatorThought>

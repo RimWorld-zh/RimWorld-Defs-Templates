@@ -17,7 +17,6 @@
     <baseCommonality>float_value</baseCommonality>
     <!--Type: Verse.MentalBreakIntensity-->
     <!--Available Values: Extreme, Major, Minor-->
-    <!--Default Value: Extreme-->
     <intensity>enum_value</intensity>
     <!--Type: RimWorld.TraitDef-->
     <requiredTrait>TraitDef_defName</requiredTrait>

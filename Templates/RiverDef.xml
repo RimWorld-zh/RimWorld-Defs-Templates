@@ -15,10 +15,8 @@
     <!--Default Value: 1.0-->
     <spawnChance>float_value</spawnChance>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <degradeThreshold>int_value</degradeThreshold>
     <!--Type: RimWorld.RiverDef-->
-    <!--Default Value: null-->
     <degradeChild>RiverDef_defName</degradeChild>
     <!--Complex List-->
     <!--Type: List<RimWorld.RiverDef+Branch>-->
@@ -41,7 +39,6 @@
     <!--Default Value: 10.0-->
     <widthOnMap>float_value</widthOnMap>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <debugOpacity>float_value</debugOpacity>
   </RiverDef>
 </Defs>

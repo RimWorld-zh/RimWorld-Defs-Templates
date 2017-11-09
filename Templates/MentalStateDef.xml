@@ -16,7 +16,6 @@
     <workerClass>class_name</workerClass>
     <!--Type: Verse.MentalStateCategory-->
     <!--Available Values: Undefined, Aggro, Sad, Panic, Indulgent, Misc-->
-    <!--Default Value: Undefined-->
     <category>enum_value</category>
     <!--Type: bool-->
     <!--Default Value: true-->

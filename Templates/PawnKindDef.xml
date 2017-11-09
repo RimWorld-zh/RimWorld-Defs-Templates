@@ -9,24 +9,19 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <race>ThingDef_defName</race>
     <!--Type: RimWorld.FactionDef-->
     <defaultFactionType>FactionDef_defName</defaultFactionType>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <backstoryCategory>string_value</backstoryCategory>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <labelPlural>string_value</labelPlural>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <backstoryCryptosleepCommonality>float_value</backstoryCryptosleepCommonality>
     <!--Type: bool-->
     <!--Default Value: false-->
     <forceNormalGearQuality>true_or_false</forceNormalGearQuality>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <minGenerationAge>int_value</minGenerationAge>
     <!--Type: int-->
     <!--Default Value: 999999-->
@@ -48,35 +43,25 @@
       <!--Type: Verse.PawnKindLifeStage-->
       <li>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <label>string_value</label>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <labelPlural>string_value</labelPlural>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <labelMale>string_value</labelMale>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <labelMalePlural>string_value</labelMalePlural>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <labelFemale>string_value</labelFemale>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <labelFemalePlural>string_value</labelFemalePlural>
         <!--Type: Verse.GraphicData-->
-        <!--Default Value: null-->
         <bodyGraphicData>
           <!--Type: string-->
-          <!--Default Value: (string)null-->
           <texPath>string_value</texPath>
           <!--Type: System.Type-->
-          <!--Default Value: null-->
           <graphicClass>class_name</graphicClass>
           <!--Type: Verse.ShaderType-->
           <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
-          <!--Default Value: None-->
           <shaderType>enum_value</shaderType>
           <!--Type: UnityEngine.Color-->
           <!--Default Value: Color.white-->
@@ -85,7 +70,6 @@
           <!--Default Value: Vector2.one-->
           <drawSize>value</drawSize>
           <!--Type: Verse.ShadowData-->
-          <!--Default Value: null-->
           <shadowData>
             <!--Type: UnityEngine.Vector3-->
             <!--Default Value: Vector3.one-->
@@ -96,14 +80,11 @@
           </shadowData>
         </bodyGraphicData>
         <!--Type: Verse.GraphicData-->
-        <!--Default Value: null-->
         <femaleGraphicData>
           <!--Type: string-->
-          <!--Default Value: (string)null-->
           <texPath>string_value</texPath>
           <!--Type: Verse.ShaderType-->
           <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
-          <!--Default Value: None-->
           <shaderType>enum_value</shaderType>
           <!--Type: UnityEngine.Color-->
           <!--Default Value: Color.white-->
@@ -112,7 +93,6 @@
           <!--Default Value: Vector2.one-->
           <drawSize>value</drawSize>
           <!--Type: Verse.ShadowData-->
-          <!--Default Value: null-->
           <shadowData>
             <!--Type: UnityEngine.Vector3-->
             <!--Default Value: Vector3.one-->
@@ -123,17 +103,14 @@
           </shadowData>
         </femaleGraphicData>
         <!--Type: Verse.GraphicData-->
-        <!--Default Value: null-->
         <dessicatedBodyGraphicData>
           <!--Type: string-->
-          <!--Default Value: (string)null-->
           <texPath>string_value</texPath>
           <!--Type: UnityEngine.Vector2-->
           <!--Default Value: Vector2.one-->
           <drawSize>value</drawSize>
         </dessicatedBodyGraphicData>
         <!--Type: Verse.BodyPartToDrop-->
-        <!--Default Value: null-->
         <butcherBodyPart>
           <!--Type: Verse.BodyPartGroupDef-->
           <bodyPartGroup>BodyPartGroupDef_defName</bodyPartGroup>
@@ -227,7 +204,6 @@
     <!--Default Value: Normal-->
     <itemQuality>enum_value</itemQuality>
     <!--Type: Verse.PawnInventoryOption-->
-    <!--Default Value: null-->
     <inventoryOptions>
       <!--Type: Verse.ThingDef-->
       <thingDef>ThingDef_defName</thingDef>
@@ -264,13 +240,10 @@
       </subOptionsChooseOne>
     </inventoryOptions>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <invNutrition>float_value</invNutrition>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <invFoodDef>ThingDef_defName</invFoodDef>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <chemicalAddictionChance>float_value</chemicalAddictionChance>
     <!--Type: float-->
     <!--Default Value: 0.04-->
@@ -287,16 +260,12 @@
     <!--Default Value: false-->
     <trader>true_or_false</trader>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <labelMale>string_value</labelMale>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <labelMalePlural>string_value</labelMalePlural>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <labelFemale>string_value</labelFemale>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <labelFemalePlural>string_value</labelFemalePlural>
     <!--Type: bool-->
     <!--Default Value: false-->

@@ -5,7 +5,7 @@
       <WorkToBuild>135</WorkToBuild>
     </statBases>
     <fertility>0</fertility>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
     <designationCategory>Floors</designationCategory>
     <affordances>
@@ -29,7 +29,7 @@
     <costList>
       <Steel>1</Steel>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
     <designationCategory>Floors</designationCategory>
     <designationHotKey>Misc6</designationHotKey>
@@ -55,7 +55,7 @@
     <costList>
       <Steel>2</Steel>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
     <designationCategory>Floors</designationCategory>
     <designationHotKey>Misc5</designationHotKey>
@@ -81,7 +81,7 @@
     <costList>
       <WoodLog>3</WoodLog>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructEffect>ConstructWood</constructEffect>
     <designationCategory>Floors</designationCategory>
     <designationHotKey>Misc7</designationHotKey>
@@ -109,7 +109,7 @@
     <costList>
       <Steel>7</Steel>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructEffect>ConstructMetal</constructEffect>
     <designationCategory>Floors</designationCategory>
     <designationHotKey>Misc1</designationHotKey>
@@ -136,7 +136,7 @@
     <costList>
       <Silver>85</Silver>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructEffect>ConstructMetal</constructEffect>
     <designationCategory>Floors</designationCategory>
     <designationHotKey>Misc2</designationHotKey>
@@ -163,7 +163,7 @@
     <costList>
       <Gold>85</Gold>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructEffect>ConstructMetal</constructEffect>
     <designationCategory>Floors</designationCategory>
     <designationHotKey>Misc3</designationHotKey>
@@ -191,7 +191,7 @@
       <Steel>3</Steel>
       <Silver>15</Silver>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <constructEffect>ConstructMetal</constructEffect>
     <designationCategory>Floors</designationCategory>
@@ -235,7 +235,7 @@
     <costList>
       <Cloth>7</Cloth>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li ListIndex="0">CarpetMaking</li>
     </researchPrerequisites>
@@ -267,7 +267,7 @@
     <costList>
       <Cloth>7</Cloth>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li ListIndex="0">CarpetMaking</li>
     </researchPrerequisites>
@@ -299,7 +299,7 @@
     <costList>
       <Cloth>7</Cloth>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li ListIndex="0">CarpetMaking</li>
     </researchPrerequisites>
@@ -331,7 +331,7 @@
     <costList>
       <Cloth>7</Cloth>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li ListIndex="0">CarpetMaking</li>
     </researchPrerequisites>
@@ -363,7 +363,7 @@
     <costList>
       <Cloth>7</Cloth>
     </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <researchPrerequisites>
       <li ListIndex="0">CarpetMaking</li>
     </researchPrerequisites>

@@ -21,7 +21,6 @@
     <pawnCreatorSummaryVisible>true_or_false</pawnCreatorSummaryVisible>
     <!--Type: Verse.WorkTags-->
     <!--Available Values: None, ManualDumb, ManualSkilled, Violent, Caring, Social, Intellectual, Animals, Artistic, Crafting, Cooking, Firefighting, Cleaning, Hauling, PlantWork, Mining-->
-    <!--Default Value: None-->
     <disablingWorkTags>enum_value</disablingWorkTags>
   </SkillDef>
 </Defs>

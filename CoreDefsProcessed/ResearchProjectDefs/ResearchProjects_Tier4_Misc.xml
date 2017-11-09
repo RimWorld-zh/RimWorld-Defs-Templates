@@ -75,7 +75,7 @@
     <label>multibarrel weapons</label>
     <description>Allows you to build miniguns.</description>
     <techLevel>Industrial</techLevel>
-    <baseCost>3000</baseCost>
+    <baseCost>2100</baseCost>
     <prerequisites>
       <li ListIndex="0">MultiAnalyzer</li>
       <li ListIndex="1">GasOperation</li>
@@ -144,7 +144,7 @@
     <label>charged shot</label>
     <description>Understand the secrets of pulse-charged energy/projectile munitions. Allows you to build the charge rifle.</description>
     <techLevel>Spacer</techLevel>
-    <baseCost>1500</baseCost>
+    <baseCost>1000</baseCost>
     <prerequisites>
       <li ListIndex="0">MultiAnalyzer</li>
       <li ListIndex="1">PrecisionRifling</li>

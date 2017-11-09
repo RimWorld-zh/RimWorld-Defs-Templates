@@ -179,6 +179,7 @@
       <li Class="CompProperties_Targetable" ListIndex="2">
         <compClass>CompTargetable_SingleCorpse</compClass>
         <fleshCorpsesOnly>true</fleshCorpsesOnly>
+        <nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
       </li>
       <li ListIndex="3">
         <compClass>CompTargetEffect_Resurrect</compClass>

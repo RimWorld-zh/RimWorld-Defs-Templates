@@ -27,10 +27,8 @@
     <!--Default Value: true-->
     <allowRivers>true_or_false</allowRivers>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <animalDensity>float_value</animalDensity>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <plantDensity>float_value</plantDensity>
     <!--Type: float-->
     <!--Default Value: 60.0-->

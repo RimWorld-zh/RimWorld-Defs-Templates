@@ -253,7 +253,7 @@
   <ResearchProjectDef>
     <defName>IEDs</defName>
     <label>IEDs</label>
-    <description>Allows colonists to build improvised explosive device-based traps from mortar shells.</description>
+    <description>Allows colonists to build improvised traps from explosive, EMP, firefoam, and antigrain warhead mortar shells.</description>
     <techLevel>Industrial</techLevel>
     <baseCost>1600</baseCost>
     <prerequisites>
@@ -294,7 +294,7 @@
     <label>gunsmithing</label>
     <description>Craft simple manually operated guns like revolvers, pump shotguns, bolt-action rifles, and incendiary launchers.</description>
     <techLevel>Industrial</techLevel>
-    <baseCost>1000</baseCost>
+    <baseCost>700</baseCost>
     <prerequisites>
       <li ListIndex="0">Machining</li>
     </prerequisites>
@@ -307,7 +307,7 @@
     <label>blowback operation</label>
     <description>Craft simple semi-automatic and automatic guns like autopistols, machine pistols, and heavy SMGs.</description>
     <techLevel>Industrial</techLevel>
-    <baseCost>1000</baseCost>
+    <baseCost>700</baseCost>
     <prerequisites>
       <li ListIndex="0">Gunsmithing</li>
     </prerequisites>
@@ -320,7 +320,7 @@
     <label>gas operation</label>
     <description>Craft more advanced semi-automatic and automatic guns like chain shotguns and LMGs.</description>
     <techLevel>Industrial</techLevel>
-    <baseCost>1500</baseCost>
+    <baseCost>1000</baseCost>
     <prerequisites>
       <li ListIndex="0">BlowbackOperation</li>
     </prerequisites>
@@ -333,7 +333,7 @@
     <label>precision rifling</label>
     <description>Craft assault rifles and sniper rifles.</description>
     <techLevel>Industrial</techLevel>
-    <baseCost>2000</baseCost>
+    <baseCost>1400</baseCost>
     <prerequisites>
       <li ListIndex="0">GasOperation</li>
     </prerequisites>

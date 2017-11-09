@@ -15,10 +15,8 @@
     <!--Default Value: false-->
     <isThickRoof>true_or_false</isThickRoof>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <collapseLeavingThingDef>ThingDef_defName</collapseLeavingThingDef>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <filthLeaving>ThingDef_defName</filthLeaving>
     <!--Type: Verse.SoundDef-->
     <soundPunchThrough>SoundDef_defName</soundPunchThrough>

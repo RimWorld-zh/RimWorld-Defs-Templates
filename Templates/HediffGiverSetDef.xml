@@ -35,7 +35,6 @@
           <!-- ... -->
         </partsToAffect>
         <!--Type: Verse.SimpleCurve-->
-        <!--Default Value: null-->
         <ageFractionMtbDaysCurve>
           <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
@@ -82,7 +81,6 @@
         <!--Default Value: 1-->
         <countToAffect>int_value</countToAffect>
         <!--Type: Verse.SimpleCurve-->
-        <!--Default Value: null-->
         <ageFractionChanceCurve>
           <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
@@ -93,7 +91,6 @@
           </points>
         </ageFractionChanceCurve>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <averageSeverityPerDayBeforeGeneration>float_value</averageSeverityPerDayBeforeGeneration>
       </li>
       <!-- ... -->

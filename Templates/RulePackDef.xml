@@ -13,7 +13,6 @@
       <!-- ... -->
     </include>
     <!--Type: Verse.Grammar.RulePack-->
-    <!--Default Value: null-->
     <rulePack>
       <!--Simple List-->
       <!--Type: List<string>-->

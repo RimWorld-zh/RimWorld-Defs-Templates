@@ -9,7 +9,6 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <intelligenceOrder>int_value</intelligenceOrder>
   </TrainableIntelligenceDef>
 </Defs>

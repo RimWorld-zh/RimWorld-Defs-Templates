@@ -212,7 +212,7 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
-    <combatPower>280</combatPower>
+    <combatPower>200</combatPower>
     <labelMale>male elephant</labelMale>
     <labelMalePlural>male elephants</labelMalePlural>
     <labelFemale>female elephant</labelFemale>
@@ -430,7 +430,7 @@
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
-    <combatPower>350</combatPower>
+    <combatPower>150</combatPower>
     <labelMale>male megasloth</labelMale>
     <labelMalePlural>male megasloths</labelMalePlural>
     <labelFemale>female megasloth</labelFemale>
@@ -660,7 +660,7 @@
         </butcherBodyPart>
       </li>
     </lifeStages>
-    <combatPower>700</combatPower>
+    <combatPower>440</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     <labelMale>male thrumbo</labelMale>
     <labelMalePlural>male thrumbos</labelMalePlural>

@@ -9,7 +9,6 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <priority>int_value</priority>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -21,7 +20,6 @@
     <!--Default Value: 15-->
     <tilesPerSegment>int_value</tilesPerSegment>
     <!--Type: RimWorld.RoadPathingDef-->
-    <!--Default Value: null-->
     <pathingMode>RoadPathingDef_defName</pathingMode>
     <!--Complex List-->
     <!--Type: List<RimWorld.RoadDefGenStep>-->
@@ -70,12 +68,10 @@
         <!--Default Value: 1.0-->
         <antialiasingMultiplier>float_value</antialiasingMultiplier>
         <!--Type: int-->
-        <!--Default Value: 0-->
         <periodicSpacing>int_value</periodicSpacing>
         <!--Type: Verse.BuildableDef-->
         <place>BuildableDef_defName</place>
         <!--Type: int-->
-        <!--Default Value: 0-->
         <proximitySpacing>int_value</proximitySpacing>
       </li>
       <!-- ... -->
@@ -93,13 +89,12 @@
       <!-- ... -->
     </worldRenderSteps>
     <!--Type: string-->
-    <!--Default Value: ""-->
+    <!--Default Value: string.Empty-->
     <worldTransitionGroup>string_value</worldTransitionGroup>
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <distortionFrequency>float_value</distortionFrequency>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <distortionIntensity>float_value</distortionIntensity>
   </RoadDef>
 </Defs>

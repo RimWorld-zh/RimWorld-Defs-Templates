@@ -30,7 +30,6 @@
     <!--Default Value: false-->
     <disablePermadeath>true_or_false</disablePermadeath>
     <!--Type: RimWorld.DifficultyDef-->
-    <!--Default Value: null-->
     <forcedDifficulty>DifficultyDef_defName</forcedDifficulty>
     <!--Type: string-->
     <portraitLarge>string_value</portraitLarge>
@@ -42,7 +41,6 @@
       <!--Type: RimWorld.StorytellerCompProperties_RandomMain-->
       <li Class="StorytellerCompProperties_RandomMain">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
         <!--Reference List-->
         <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
@@ -71,7 +69,6 @@
       <!--Type: RimWorld.StorytellerCompProperties_CategoryMTB-->
       <li Class="StorytellerCompProperties_CategoryMTB">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
         <!--Reference List-->
         <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
@@ -105,7 +102,6 @@
       <!--Type: RimWorld.StorytellerCompProperties_Disease-->
       <li Class="StorytellerCompProperties_Disease">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
       </li>
       <!--Type: RimWorld.StorytellerCompProperties_JourneyOffer-->
@@ -113,7 +109,6 @@
       <!--Type: RimWorld.StorytellerCompProperties_ThreatCycle-->
       <li Class="StorytellerCompProperties_ThreatCycle">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
         <!--Reference List-->
         <!--Type: List<RimWorld.IncidentTargetTypeDef>-->
@@ -149,7 +144,6 @@
       <!--Type: RimWorld.StorytellerCompProperties_AllyInteraction-->
       <li Class="StorytellerCompProperties_AllyInteraction">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minDaysPassed>float_value</minDaysPassed>
         <!--Reference List-->
         <!--Type: List<RimWorld.IncidentTargetTypeDef>-->

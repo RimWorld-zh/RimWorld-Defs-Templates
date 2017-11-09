@@ -19,7 +19,6 @@
     <category>Mote</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
-    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -28,17 +27,13 @@
     <!--Default Value: true-->
     <useHitPoints>true_or_false</useHitPoints>
     <!--Type: Verse.GraphicData-->
-    <!--Default Value: null-->
     <graphicData>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
       <!--Type: System.Type-->
-      <!--Default Value: null-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
       <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
-      <!--Default Value: None-->
       <shaderType>enum_value</shaderType>
       <!--Type: UnityEngine.Color-->
       <!--Default Value: Color.white-->
@@ -57,19 +52,16 @@
     <!--Default Value: true-->
     <isSaveable>true_or_false</isSaveable>
     <!--Type: Verse.MoteProperties-->
-    <!--Default Value: null-->
     <mote>
       <!--Type: bool-->
       <!--Default Value: false-->
       <realTime>true_or_false</realTime>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <fadeInTime>float_value</fadeInTime>
       <!--Type: float-->
       <!--Default Value: 1.0-->
       <solidTime>float_value</solidTime>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <fadeOutTime>float_value</fadeOutTime>
       <!--Type: UnityEngine.Vector3-->
       <!--Default Value: Vector3.zero-->
@@ -77,7 +69,6 @@
       <!--Type: float-->
       <speedPerTime>float_value</speedPerTime>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <growthRate>float_value</growthRate>
       <!--Type: bool-->
       <!--Default Value: false-->

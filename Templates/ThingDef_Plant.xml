@@ -21,10 +21,8 @@
     </statBases>
     <!--Type: Verse.Traversability-->
     <!--Available Values: Standable, PassThroughOnly, Impassable-->
-    <!--Default Value: Standable-->
     <passability>enum_value</passability>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <pathCost>int_value</pathCost>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -40,7 +38,6 @@
     <category>Plant</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
-    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -68,23 +65,18 @@
       <max>float_value</max>
     </startingHpRange>
     <!--Type: Verse.GraphicData-->
-    <!--Default Value: null-->
     <graphicData>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
       <!--Type: System.Type-->
-      <!--Default Value: null-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
       <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
-      <!--Default Value: None-->
       <shaderType>enum_value</shaderType>
       <!--Type: UnityEngine.Vector2-->
       <!--Default Value: Vector2.one-->
       <drawSize>value</drawSize>
       <!--Type: Verse.ShadowData-->
-      <!--Default Value: null-->
       <shadowData>
         <!--Type: UnityEngine.Vector3-->
         <!--Default Value: Vector3.one-->
@@ -108,28 +100,22 @@
     <!--Default Value: false-->
     <neverMultiSelect>true_or_false</neverMultiSelect>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <fillPercent>float_value</fillPercent>
     <!--Type: bool-->
     <!--Default Value: false-->
     <blockWind>true_or_false</blockWind>
     <!--Type: RimWorld.IngestibleProperties-->
-    <!--Default Value: null-->
     <ingestible>
       <!--Type: RimWorld.FoodTypeFlags-->
       <!--Available Values: None, VegetableOrFruit, Meat, Fluid, Corpse, CarnivoreAnimalStrict, Seed, AnimalProduct, Plant, Tree, Meal, Processed, Liquor, Kibble, DendrovoreAnimal, CarnivoreAnimal, OvivoreAnimal, VegetarianAnimal, OmnivoreAnimal, OmnivoreHuman, VegetarianRoughAnimal, OmnivoreRoughAnimal-->
-      <!--Default Value: None-->
       <foodType>enum_value</foodType>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <nutrition>float_value</nutrition>
       <!--Type: RimWorld.FoodPreferability-->
       <!--Available Values: Undefined, NeverForNutrition, DesperateOnly, DesperateOnlyForHumanlikes, RawBad, RawTasty, MealAwful, MealSimple, MealFine, MealLavish-->
-      <!--Default Value: Undefined-->
       <preferability>enum_value</preferability>
     </ingestible>
     <!--Type: RimWorld.PlantProperties-->
-    <!--Default Value: null-->
     <plant>
       <!--Type: float-->
       <!--Default Value: 1.25-->
@@ -156,7 +142,6 @@
       <!--Default Value: 250.0-->
       <sowWork>float_value</sowWork>
       <!--Type: int-->
-      <!--Default Value: 0-->
       <sowMinSkill>int_value</sowMinSkill>
       <!--Type: bool-->
       <!--Default Value: false-->
@@ -172,10 +157,8 @@
       <!--Default Value: 150.0-->
       <harvestWork>float_value</harvestWork>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <harvestYield>float_value</harvestYield>
       <!--Type: Verse.ThingDef-->
-      <!--Default Value: null-->
       <harvestedThingDef>ThingDef_defName</harvestedThingDef>
       <!--Type: string-->
       <harvestTag>string_value</harvestTag>
@@ -183,16 +166,13 @@
       <!--Default Value: 0.65-->
       <harvestMinGrowth>float_value</harvestMinGrowth>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <harvestAfterGrowth>float_value</harvestAfterGrowth>
       <!--Type: bool-->
       <!--Default Value: true-->
       <harvestFailable>true_or_false</harvestFailable>
       <!--Type: Verse.SoundDef-->
-      <!--Default Value: null-->
       <soundHarvesting>SoundDef_defName</soundHarvesting>
       <!--Type: Verse.SoundDef-->
-      <!--Default Value: null-->
       <soundHarvestFinish>SoundDef_defName</soundHarvestFinish>
       <!--Type: float-->
       <!--Default Value: 2.0-->
@@ -245,10 +225,8 @@
         <max>float_value</max>
       </visualSizeRange>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <leaflessGraphicPath>string_value</leaflessGraphicPath>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <immatureGraphicPath>string_value</immatureGraphicPath>
     </plant>
   </ThingDef>

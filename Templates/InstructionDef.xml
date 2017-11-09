@@ -30,10 +30,8 @@
       <!-- ... -->
     </actionTagsAllowed>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <rejectInputMessage>string_value</rejectInputMessage>
     <!--Type: RimWorld.ConceptDef-->
-    <!--Default Value: null-->
     <concept>ConceptDef_defName</concept>
     <!--Simple List-->
     <!--Type: List<string>-->

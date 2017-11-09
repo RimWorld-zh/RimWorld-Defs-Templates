@@ -22,7 +22,6 @@
     <!--Default Value: Playing-->
     <gameMode>enum_value</gameMode>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <helpText>string_value</helpText>
     <!--Simple List-->
     <!--Type: List<string>-->

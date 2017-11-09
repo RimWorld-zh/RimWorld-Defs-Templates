@@ -253,7 +253,6 @@
     <label>cold bog</label>
     <description>A wetland with few animals but lush vegetation. There's much more undergrowth and less trees than in typical swamps. Most of the land here can't support heavy structures which makes it difficult to survive.</description>
     <workerClass>BiomeWorker_ColdBog</workerClass>
-    <canAutoChoose>false</canAutoChoose>
     <animalDensity>0.8</animalDensity>
     <plantDensity>0.52</plantDensity>
     <diseaseMtbDays>80</diseaseMtbDays>

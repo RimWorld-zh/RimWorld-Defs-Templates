@@ -21,16 +21,13 @@
     <!--Default Value: "Doing an unknown recipe."-->
     <jobString>string_value</jobString>
     <!--Type: Verse.WorkTypeDef-->
-    <!--Default Value: null-->
     <requiredGiverWorkType>WorkTypeDef_defName</requiredGiverWorkType>
     <!--Type: float-->
     <!--Default Value: -1.0-->
     <workAmount>float_value</workAmount>
     <!--Type: RimWorld.StatDef-->
-    <!--Default Value: null-->
     <workSpeedStat>StatDef_defName</workSpeedStat>
     <!--Type: RimWorld.StatDef-->
-    <!--Default Value: null-->
     <efficiencyStat>StatDef_defName</efficiencyStat>
     <!--Complex List-->
     <!--Type: List<Verse.IngredientCount>-->
@@ -115,7 +112,6 @@
       </specialFiltersToDisallow>
     </fixedIngredientFilter>
     <!--Type: Verse.ThingFilter-->
-    <!--Default Value: null-->
     <defaultIngredientFilter>
       <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
@@ -186,7 +182,6 @@
     <!--Default Value: 1-->
     <targetCountAdjustment>int_value</targetCountAdjustment>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <unfinishedThingDef>ThingDef_defName</unfinishedThingDef>
     <!--Type: List<Verse.SkillRequirement>-->
     <skillRequirements>
@@ -197,16 +192,13 @@
       <!-- ... -->
     </skillRequirements>
     <!--Type: RimWorld.SkillDef-->
-    <!--Default Value: null-->
     <workSkill>SkillDef_defName</workSkill>
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <workSkillLearnFactor>float_value</workSkillLearnFactor>
     <!--Type: Verse.EffecterDef-->
-    <!--Default Value: null-->
     <effectWorking>EffecterDef_defName</effectWorking>
     <!--Type: Verse.SoundDef-->
-    <!--Default Value: null-->
     <soundWorking>SoundDef_defName</soundWorking>
     <!--Reference List-->
     <!--Type: List<Verse.ThingDef>-->
@@ -223,10 +215,8 @@
       <!-- ... -->
     </appliedOnFixedBodyParts>
     <!--Type: Verse.HediffDef-->
-    <!--Default Value: null-->
     <addsHediff>HediffDef_defName</addsHediff>
     <!--Type: Verse.HediffDef-->
-    <!--Default Value: null-->
     <removesHediff>HediffDef_defName</removesHediff>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -235,13 +225,11 @@
     <!--Default Value: false-->
     <isViolation>true_or_false</isViolation>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <successfullyRemovedHediffMessage>string_value</successfullyRemovedHediffMessage>
     <!--Type: float-->
     <!--Default Value: 1.0-->
     <surgerySuccessChanceFactor>float_value</surgerySuccessChanceFactor>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <deathOnFailedSurgeryChance>float_value</deathOnFailedSurgeryChance>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -253,10 +241,8 @@
     <!--Default Value: true-->
     <requireBed>true_or_false</requireBed>
     <!--Type: Verse.ResearchProjectDef-->
-    <!--Default Value: null-->
     <researchPrerequisite>ResearchProjectDef_defName</researchPrerequisite>
     <!--Type: RimWorld.ConceptDef-->
-    <!--Default Value: null-->
     <conceptLearned>ConceptDef_defName</conceptLearned>
     <!--Type: bool-->
     <!--Default Value: false-->

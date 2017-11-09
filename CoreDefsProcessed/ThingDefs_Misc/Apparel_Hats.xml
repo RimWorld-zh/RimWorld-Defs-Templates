@@ -54,6 +54,18 @@
     <recipeMaker>
       <workSpeedStat>TailoringSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Tailor</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
@@ -149,6 +161,18 @@
     <recipeMaker>
       <workSpeedStat>TailoringSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Tailor</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
@@ -243,6 +267,18 @@
     <recipeMaker>
       <workSpeedStat>TailoringSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Tailor</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
@@ -322,6 +358,18 @@
     <recipeMaker>
       <workSpeedStat>TailoringSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Tailor</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
@@ -418,6 +466,18 @@
     <recipeMaker>
       <workSpeedStat>SculptingSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Sculpt</effectWorking>
       <soundWorking>Recipe_Sculpt</soundWorking>
@@ -499,6 +559,18 @@
     <recipeMaker>
       <workSpeedStat>TailoringSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Tailor</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
@@ -581,6 +653,18 @@
     <recipeMaker>
       <workSpeedStat>SmithingSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Machining</soundWorking>
@@ -661,6 +745,18 @@
     <recipeMaker>
       <workSpeedStat>SmithingSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Machining</soundWorking>
@@ -761,6 +857,18 @@
     <recipeMaker>
       <workSpeedStat>SmithingSpeed</workSpeedStat>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li ListIndex="0">Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li ListIndex="0">Gold</li>
+          <li ListIndex="1">Silver</li>
+          <li ListIndex="2">Plasteel</li>
+          <li ListIndex="3">Jade</li>
+          <li ListIndex="4">Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Machining</soundWorking>

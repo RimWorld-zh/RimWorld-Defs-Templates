@@ -28,7 +28,6 @@
       <!--Type: Verse.HediffCompProperties_SeverityPerDay-->
       <li Class="HediffCompProperties_SeverityPerDay">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <severityPerDay>float_value</severityPerDay>
       </li>
       <!--Type: Verse.HediffCompProperties_TendDuration-->
@@ -43,18 +42,14 @@
         <!--Default Value: -1-->
         <disappearsAtTendedCount>int_value</disappearsAtTendedCount>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <severityPerDayTended>float_value</severityPerDayTended>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <!--Alias: labelTreatedWell-->
         <labelTendedWell>string_value</labelTendedWell>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <!--Alias: labelTreatedWellInner-->
         <labelTendedWellInner>string_value</labelTendedWellInner>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <!--Alias: labelSolidTreatedWell-->
         <labelSolidTendedWell>string_value</labelSolidTendedWell>
       </li>
@@ -67,10 +62,8 @@
       <!--Type: Verse.HediffCompProperties_GetsOld-->
       <li Class="HediffCompProperties_GetsOld">
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <oldLabel>string_value</oldLabel>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <instantlyOldLabel>string_value</instantlyOldLabel>
       </li>
       <!--Type: Verse.HediffCompProperties_Discoverable-->
@@ -79,25 +72,19 @@
         <!--Default Value: false-->
         <sendLetterWhenDiscovered>true_or_false</sendLetterWhenDiscovered>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <discoverLetterLabel>string_value</discoverLetterLabel>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <discoverLetterText>string_value</discoverLetterText>
       </li>
       <!--Type: Verse.HediffCompProperties_Immunizable-->
       <li Class="HediffCompProperties_Immunizable">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <immunityPerDayNotSick>float_value</immunityPerDayNotSick>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <immunityPerDaySick>float_value</immunityPerDaySick>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <severityPerDayNotImmune>float_value</severityPerDayNotImmune>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <severityPerDayImmune>float_value</severityPerDayImmune>
         <!--Type: Verse.FloatRange-->
         <!--Default Value: new FloatRange(1f, 1f)-->
@@ -111,10 +98,8 @@
       <!--Type: Verse.HediffCompProperties_GrowthMode-->
       <li Class="HediffCompProperties_GrowthMode">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <severityPerDayGrowing>float_value</severityPerDayGrowing>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <severityPerDayRemission>float_value</severityPerDayRemission>
         <!--Type: Verse.FloatRange-->
         <!--Default Value: new FloatRange(1f, 1f)-->
@@ -172,7 +157,6 @@
       <!--Type: Verse.HediffCompProperties_Effecter-->
       <li Class="HediffCompProperties_Effecter">
         <!--Type: Verse.EffecterDef-->
-        <!--Default Value: null-->
         <stateEffecter>EffecterDef_defName</stateEffecter>
         <!--Type: Verse.IntRange-->
         <!--Default Value: new IntRange(-1, -1)-->
@@ -197,10 +181,8 @@
       <!--Type: Verse.HediffStage-->
       <li>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minSeverity>float_value</minSeverity>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <label>string_value</label>
         <!--Type: bool-->
         <!--Default Value: true-->
@@ -209,7 +191,6 @@
         <!--Default Value: false-->
         <lifeThreatening>true_or_false</lifeThreatening>
         <!--Type: RimWorld.TaleDef-->
-        <!--Default Value: null-->
         <tale>TaleDef_defName</tale>
         <!--Type: float-->
         <!--Default Value: -1.0-->
@@ -221,25 +202,21 @@
         <!--Default Value: 1.0-->
         <painFactor>float_value</painFactor>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <painOffset>float_value</painOffset>
         <!--Type: float-->
         <!--Default Value: -1.0-->
         <forgetMemoryThoughtMtbDays>float_value</forgetMemoryThoughtMtbDays>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <pctConditionalThoughtsNullified>float_value</pctConditionalThoughtsNullified>
         <!--Type: float-->
         <!--Default Value: 1.0-->
         <opinionOfOthersFactor>float_value</opinionOfOthersFactor>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <hungerRateFactorOffset>float_value</hungerRateFactorOffset>
         <!--Type: float-->
         <!--Default Value: 1.0-->
         <restFallFactor>float_value</restFallFactor>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <restFallFactorOffset>float_value</restFallFactorOffset>
         <!--Type: float-->
         <!--Default Value: 1.0-->
@@ -262,7 +239,6 @@
             <!--Type: Verse.PawnCapacityDef-->
             <capacity>PawnCapacityDef_defName</capacity>
             <!--Type: float-->
-            <!--Default Value: 0.0-->
             <offset>float_value</offset>
             <!--Type: float-->
             <!--Default Value: 999.0-->
@@ -291,7 +267,6 @@
             <!--Default Value: false-->
             <canAffectAnyLivePart>true_or_false</canAffectAnyLivePart>
             <!--Type: float-->
-            <!--Default Value: 0.0-->
             <mtbDays>float_value</mtbDays>
           </li>
           <!-- ... -->
@@ -304,7 +279,6 @@
             <!--Type: Verse.MentalStateDef-->
             <mentalState>MentalStateDef_defName</mentalState>
             <!--Type: float-->
-            <!--Default Value: 0.0-->
             <mtbDays>float_value</mtbDays>
           </li>
           <!-- ... -->
@@ -318,7 +292,6 @@
           <!-- ... -->
         </statOffsets>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <partEfficiencyOffset>float_value</partEfficiencyOffset>
         <!--Type: bool-->
         <!--Default Value: false-->
@@ -336,10 +309,8 @@
     <!--Default Value: true-->
     <isBad>true_or_false</isBad>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <spawnThingOnRemoved>ThingDef_defName</spawnThingOnRemoved>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <chanceToCauseNoPain>float_value</chanceToCauseNoPain>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -348,10 +319,8 @@
     <!--Default Value: true-->
     <makesAlert>true_or_false</makesAlert>
     <!--Type: RimWorld.NeedDef-->
-    <!--Default Value: null-->
     <causesNeed>NeedDef_defName</causesNeed>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <minSeverity>float_value</minSeverity>
     <!--Type: float-->
     <!--Default Value: 3.40282347E+38-->
@@ -377,10 +346,8 @@
         <!--Default Value: 1-->
         <countToAffect>int_value</countToAffect>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <baseMtbDays>float_value</baseMtbDays>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minSeverity>float_value</minSeverity>
       </li>
       <!-- ... -->
@@ -389,7 +356,6 @@
     <!--Default Value: false-->
     <cureAllAtOnceIfCuredByItem>true_or_false</cureAllAtOnceIfCuredByItem>
     <!--Type: RimWorld.TaleDef-->
-    <!--Default Value: null-->
     <taleOnVisible>TaleDef_defName</taleOnVisible>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -398,7 +364,6 @@
     <!--Default Value: Color.white-->
     <defaultLabelColor>value</defaultLabelColor>
     <!--Type: Verse.InjuryProps-->
-    <!--Default Value: null-->
     <injuryProps>
       <!--Type: float-->
       <!--Default Value: 1.0-->
@@ -407,23 +372,19 @@
       <!--Default Value: 0.5-->
       <averagePainPerSeverityOld>float_value</averagePainPerSeverityOld>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <bleedRate>float_value</bleedRate>
       <!--Type: bool-->
       <!--Default Value: false-->
       <canMerge>true_or_false</canMerge>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <destroyedLabel>string_value</destroyedLabel>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <destroyedOutLabel>string_value</destroyedOutLabel>
       <!--Type: bool-->
       <!--Default Value: false-->
       <useRemovedLabel>true_or_false</useRemovedLabel>
     </injuryProps>
     <!--Type: Verse.AddedBodyPartProps-->
-    <!--Default Value: null-->
     <addedPartProps>
       <!--Type: float-->
       <!--Default Value: 1.0-->
@@ -439,7 +400,6 @@
       <isGoodWeapon>true_or_false</isGoodWeapon>
     </addedPartProps>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <labelNoun>string_value</labelNoun>
     <!--======== Non Matched Elements ========-->
     <everCurableByItem>false</everCurableByItem>

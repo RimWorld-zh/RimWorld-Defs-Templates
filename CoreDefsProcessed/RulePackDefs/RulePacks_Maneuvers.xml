@@ -200,11 +200,11 @@
         <li ListIndex="7">damaged_past->prodded</li>
         <li ListIndex="8">damaged_past->shoved</li>
         <li ListIndex="9">damaged_past->stabbed</li>
-        <li ListIndex="10">maneuver_present(p=2)->poking</li>
-        <li ListIndex="11">maneuver_present(p=2)->jabbing</li>
-        <li ListIndex="12">maneuver_present->prodding</li>
-        <li ListIndex="13">maneuver_present->shoving</li>
-        <li ListIndex="14">maneuver_present->stabbing</li>
+        <li ListIndex="10">damaged_present(p=2)->poking</li>
+        <li ListIndex="11">damaged_present(p=2)->jabbing</li>
+        <li ListIndex="12">damaged_present->prodding</li>
+        <li ListIndex="13">damaged_present->shoving</li>
+        <li ListIndex="14">damaged_present->stabbing</li>
         <li ListIndex="15">flavortextconsequence(recipient_flesh!=Mechanoid)->leaving an enormous bruise</li>
         <li ListIndex="16">flavortextconsequence->leaving the area visibly deformed</li>
         <li ListIndex="17">flavortextconsequence->knocking [recipient_objective] off balance</li>
@@ -238,11 +238,11 @@
         <li ListIndex="5">damaged_past->nipped</li>
         <li ListIndex="6">damaged_past->gnawed</li>
         <li ListIndex="7">damaged_past->tore</li>
-        <li ListIndex="8">maneuver_present->biting</li>
-        <li ListIndex="9">maneuver_present->chomping</li>
-        <li ListIndex="10">maneuver_present->nipped</li>
-        <li ListIndex="11">maneuver_present->gnawing</li>
-        <li ListIndex="12">maneuver_present->tearing</li>
+        <li ListIndex="8">damaged_present->biting</li>
+        <li ListIndex="9">damaged_present->chomping</li>
+        <li ListIndex="10">damaged_present->nipped</li>
+        <li ListIndex="11">damaged_present->gnawing</li>
+        <li ListIndex="12">damaged_present->tearing</li>
         <li ListIndex="13">flavortextconsequence(recipient_flesh!=Mechanoid)->exposing the flesh underneath</li>
         <li ListIndex="14">flavortextconsequence(recipient_flesh==Mechanoid)->exposing the machinery underneath</li>
         <li ListIndex="15">flavortextconsequence(recipient_flesh!=Mechanoid)->leaving grisly tears in the skin</li>

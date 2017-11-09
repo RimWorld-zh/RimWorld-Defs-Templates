@@ -16,7 +16,6 @@
     <!--Default Value: true-->
     <canBinge>true_or_false</canBinge>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <onGeneratedAddictedToleranceChance>float_value</onGeneratedAddictedToleranceChance>
     <!--Complex List-->
     <!--Type: List<Verse.HediffGiver_Event>-->

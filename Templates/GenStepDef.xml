@@ -70,7 +70,6 @@
       <!--Default Value: 10.0-->
       <minSpacing>float_value</minSpacing>
       <!--Type: int-->
-      <!--Default Value: 0-->
       <extraNoBuildEdgeDist>int_value</extraNoBuildEdgeDist>
       <!--Complex List-->
       <!--Type: List<Verse.ScattererValidator>-->
@@ -101,7 +100,6 @@
       <!--Type: int-->
       <clearSpaceSize>int_value</clearSpaceSize>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <terrainValidationRadius>float_value</terrainValidationRadius>
       <!--Simple List-->
       <!--Type: List<string>-->

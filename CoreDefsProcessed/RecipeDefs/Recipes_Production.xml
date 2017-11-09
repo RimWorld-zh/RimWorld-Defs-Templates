@@ -246,7 +246,7 @@
     <label>make advanced component</label>
     <description>Make an advanced component.</description>
     <jobString>Making advanced component.</jobString>
-    <workAmount>12000</workAmount>
+    <workAmount>9000</workAmount>
     <workSpeedStat>SmithingSpeed</workSpeedStat>
     <ingredients>
       <li ListIndex="0">
@@ -255,30 +255,39 @@
             <li ListIndex="0">Component</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>1</count>
       </li>
       <li ListIndex="1">
+        <filter>
+          <thingDefs>
+            <li ListIndex="0">Steel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li ListIndex="2">
         <filter>
           <thingDefs>
             <li ListIndex="0">Gold</li>
           </thingDefs>
         </filter>
-        <count>0.5</count>
+        <count>0.3</count>
       </li>
-      <li ListIndex="2">
+      <li ListIndex="3">
         <filter>
           <thingDefs>
             <li ListIndex="0">Uranium</li>
           </thingDefs>
         </filter>
-        <count>0.5</count>
+        <count>0.3</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li ListIndex="0">Component</li>
-        <li ListIndex="1">Gold</li>
-        <li ListIndex="2">Uranium</li>
+        <li ListIndex="0">Steel</li>
+        <li ListIndex="1">Component</li>
+        <li ListIndex="2">Gold</li>
+        <li ListIndex="3">Uranium</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>

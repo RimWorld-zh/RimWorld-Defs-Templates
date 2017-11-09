@@ -29,7 +29,6 @@
     <requiresFaction>true_or_false</requiresFaction>
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
-    <!--Default Value: Undefined-->
     <minFactionTechLevel>enum_value</minFactionTechLevel>
     <!--Simple List-->
     <!--Type: List<string>-->

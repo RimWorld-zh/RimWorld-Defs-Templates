@@ -15,7 +15,6 @@
     <category>Ethereal</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
-    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -65,17 +64,13 @@
     <!--Default Value: false-->
     <alwaysFlee>true_or_false</alwaysFlee>
     <!--Type: Verse.GraphicData-->
-    <!--Default Value: null-->
     <graphicData>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
       <!--Type: System.Type-->
-      <!--Default Value: null-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
       <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
-      <!--Default Value: None-->
       <shaderType>enum_value</shaderType>
     </graphicData>
     <!--Type: Verse.DrawerType-->

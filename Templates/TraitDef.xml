@@ -15,7 +15,6 @@
         <!--Type: string-->
         <description>string_value</description>
         <!--Type: int-->
-        <!--Default Value: 0-->
         <degree>int_value</degree>
         <!--Type: List<RimWorld.StatModifier>-->
         <statOffsets>
@@ -29,10 +28,8 @@
         <!--Default Value: -1.0-->
         <commonality>float_value</commonality>
         <!--Type: Verse.MentalStateDef-->
-        <!--Default Value: null-->
         <randomMentalState>MentalStateDef_defName</randomMentalState>
         <!--Type: Verse.SimpleCurve-->
-        <!--Default Value: null-->
         <randomMentalStateMtbDaysMoodCurve>
           <!--Simple List-->
           <!--Type: List<Verse.CurvePoint>-->
@@ -70,7 +67,6 @@
         <!--Default Value: 1.0-->
         <socialFightChanceFactor>float_value</socialFightChanceFactor>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <marketValueFactorOffset>float_value</marketValueFactorOffset>
       </li>
       <!-- ... -->
@@ -100,7 +96,6 @@
     <!--Available Values: None, ManualDumb, ManualSkilled, Violent, Caring, Social, Intellectual, Animals, Artistic, Crafting, Cooking, Firefighting, Cleaning, Hauling, PlantWork, Mining-->
     <disabledWorkTags>enum_value</disabledWorkTags>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <commonality>float_value</commonality>
     <!--Type: float-->
     <!--Default Value: -1.0-->

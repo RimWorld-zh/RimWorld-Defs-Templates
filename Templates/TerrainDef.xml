@@ -21,10 +21,8 @@
     </statBases>
     <!--Type: Verse.Traversability-->
     <!--Available Values: Standable, PassThroughOnly, Impassable-->
-    <!--Default Value: Standable-->
     <passability>enum_value</passability>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <pathCost>int_value</pathCost>
     <!--Type: float-->
     <!--Default Value: -1.0-->
@@ -49,28 +47,22 @@
       <!-- ... -->
     </researchPrerequisites>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <constructionSkillPrerequisite>int_value</constructionSkillPrerequisite>
     <!--Type: Verse.EffecterDef-->
-    <!--Default Value: null-->
     <constructEffect>EffecterDef_defName</constructEffect>
     <!--Type: float-->
     <!--Default Value: 0.75-->
     <resourcesFractionWhenDeconstructed>float_value</resourcesFractionWhenDeconstructed>
     <!--Type: Verse.DesignationCategoryDef-->
-    <!--Default Value: null-->
     <designationCategory>DesignationCategoryDef_defName</designationCategory>
     <!--Type: Verse.KeyBindingDef-->
-    <!--Default Value: null-->
     <designationHotKey>KeyBindingDef_defName</designationHotKey>
     <!--Type: string-->
     <texturePath>string_value</texturePath>
     <!--Type: Verse.TerrainDef+TerrainEdgeType-->
     <!--Available Values: Hard, Fade, FadeRough, Water-->
-    <!--Default Value: Hard-->
     <edgeType>enum_value</edgeType>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <waterDepthShader>string_value</waterDepthShader>
     <!--Type: List<Verse.ShaderParameter>-->
     <waterDepthShaderParameters>
@@ -81,7 +73,6 @@
       <!-- ... -->
     </waterDepthShaderParameters>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <renderPrecedence>int_value</renderPrecedence>
     <!--Simple List-->
     <!--Type: List<Verse.TerrainAffordance>-->
@@ -95,7 +86,6 @@
     <!--Default Value: false-->
     <layerable>true_or_false</layerable>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <scatterType>string_value</scatterType>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -119,7 +109,6 @@
     <!--Default Value: Color.white-->
     <color>value</color>
     <!--Type: Verse.TerrainDef-->
-    <!--Default Value: null-->
     <driesTo>TerrainDef_defName</driesTo>
     <!--Simple List-->
     <!--Type: List<string>-->
@@ -129,10 +118,8 @@
       <!-- ... -->
     </tags>
     <!--Type: Verse.TerrainDef-->
-    <!--Default Value: null-->
     <burnedDef>TerrainDef_defName</burnedDef>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <terrainFilthDef>ThingDef_defName</terrainFilthDef>
     <!--Type: bool-->
     <!--Default Value: false-->

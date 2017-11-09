@@ -15,7 +15,7 @@
     <!--Default Value: 100.0-->
     <selectionWeight>float_value</selectionWeight>
     <!--Type: string-->
-    <!--Default Value: ""-->
+    <!--Default Value: string.Empty-->
     <scatterType>string_value</scatterType>
   </ScatterableDef>
 </Defs>

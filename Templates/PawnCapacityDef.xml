@@ -9,13 +9,12 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <listOrder>int_value</listOrder>
     <!--Type: System.Type-->
     <!--Default Value: typeof(PawnCapacityWorker)-->
     <workerClass>class_name</workerClass>
     <!--Type: string-->
-    <!--Default Value: ""-->
+    <!--Default Value: string.Empty-->
     <labelMechanoids>string_value</labelMechanoids>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -30,10 +29,8 @@
     <!--Default Value: false-->
     <lethalMechanoids>true_or_false</lethalMechanoids>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <minForCapable>float_value</minForCapable>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <minValue>float_value</minValue>
     <!--Type: bool-->
     <!--Default Value: false-->

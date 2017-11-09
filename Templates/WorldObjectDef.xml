@@ -62,7 +62,6 @@
       <!-- ... -->
     </incidentTargetTypes>
     <!--Type: Verse.MapGeneratorDef-->
-    <!--Default Value: null-->
     <mapGenerator>MapGeneratorDef_defName</mapGenerator>
     <!--Simple List-->
     <!--Type: List<System.Type>-->

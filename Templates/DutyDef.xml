@@ -74,7 +74,6 @@
             <li Class="JobGiver_GetFood">
               <!--Type: RimWorld.HungerCategory-->
               <!--Available Values: Fed, Hungry, UrgentlyHungry, Starving-->
-              <!--Default Value: Fed-->
               <minCategory>enum_value</minCategory>
             </li>
             <!-- ... -->
@@ -183,7 +182,6 @@
             <!-- ... -->
           </subNodes>
           <!--Type: float-->
-          <!--Default Value: 0.0-->
           <min>float_value</min>
         </li>
         <!--Type: Verse.AI.ThinkNode_Tagger-->

@@ -19,7 +19,6 @@
       <!-- ... -->
     </specialDesignatorClasses>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <order>int_value</order>
     <!--Type: bool-->
     <!--Default Value: false-->

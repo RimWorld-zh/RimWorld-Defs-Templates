@@ -33,7 +33,6 @@
     <!--Default Value: 1.0-->
     <minPawns>float_value</minPawns>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <minDaysPassed>float_value</minDaysPassed>
   </RaidStrategyDef>
 </Defs>

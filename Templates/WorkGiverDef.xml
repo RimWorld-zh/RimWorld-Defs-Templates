@@ -9,10 +9,8 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: System.Type-->
-    <!--Default Value: null-->
     <giverClass>class_name</giverClass>
     <!--Type: Verse.WorkTypeDef-->
-    <!--Default Value: null-->
     <workType>WorkTypeDef_defName</workType>
     <!--Flag-->
     <!--Type: Verse.WorkTags-->
@@ -22,7 +20,6 @@
       <!-- ... -->
     </workTags>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <priorityInType>int_value</priorityInType>
     <!--Type: string-->
     <verb>string_value</verb>

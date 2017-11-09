@@ -9,10 +9,8 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: Verse.BodyPartRecord-->
-    <!--Default Value: null-->
     <corePart>
       <!--Type: Verse.BodyPartDef-->
-      <!--Default Value: null-->
       <def>BodyPartDef_defName</def>
       <!--Complex List-->
       <!--Type: List<Verse.BodyPartRecord>-->
@@ -20,7 +18,6 @@
         <!--Type: Verse.BodyPartRecord-->
         <li>
           <!--Type: Verse.BodyPartDef-->
-          <!--Default Value: null-->
           <def>BodyPartDef_defName</def>
           <!--Complex List-->
           <!--Type: List<Verse.BodyPartRecord>-->
@@ -28,7 +25,6 @@
             <!--Type: Verse.BodyPartRecord-->
             <li>
               <!--Type: Verse.BodyPartDef-->
-              <!--Default Value: null-->
               <def>BodyPartDef_defName</def>
               <!--Complex List-->
               <!--Type: List<Verse.BodyPartRecord>-->
@@ -36,7 +32,6 @@
                 <!--Type: Verse.BodyPartRecord-->
                 <li>
                   <!--Type: Verse.BodyPartDef-->
-                  <!--Default Value: null-->
                   <def>BodyPartDef_defName</def>
                   <!--Complex List-->
                   <!--Type: List<Verse.BodyPartRecord>-->
@@ -44,7 +39,6 @@
                     <!--Type: Verse.BodyPartRecord-->
                     <li>
                       <!--Type: Verse.BodyPartDef-->
-                      <!--Default Value: null-->
                       <def>BodyPartDef_defName</def>
                       <!--Complex List-->
                       <!--Type: List<Verse.BodyPartRecord>-->
@@ -52,7 +46,6 @@
                         <!--Type: Verse.BodyPartRecord-->
                         <li>
                           <!--Type: Verse.BodyPartDef-->
-                          <!--Default Value: null-->
                           <def>BodyPartDef_defName</def>
                           <!--Type: float-->
                           <!--Default Value: 1.0-->
@@ -62,7 +55,6 @@
                       </parts>
                       <!--Type: Verse.BodyPartDepth-->
                       <!--Available Values: Undefined, Inside, Outside-->
-                      <!--Default Value: Undefined-->
                       <depth>enum_value</depth>
                       <!--Type: float-->
                       <!--Default Value: 1.0-->
@@ -79,11 +71,9 @@
                   </parts>
                   <!--Type: Verse.BodyPartHeight-->
                   <!--Available Values: Undefined, Bottom, Middle, Top-->
-                  <!--Default Value: Undefined-->
                   <height>enum_value</height>
                   <!--Type: Verse.BodyPartDepth-->
                   <!--Available Values: Undefined, Inside, Outside-->
-                  <!--Default Value: Undefined-->
                   <depth>enum_value</depth>
                   <!--Type: float-->
                   <!--Default Value: 1.0-->
@@ -100,11 +90,9 @@
               </parts>
               <!--Type: Verse.BodyPartHeight-->
               <!--Available Values: Undefined, Bottom, Middle, Top-->
-              <!--Default Value: Undefined-->
               <height>enum_value</height>
               <!--Type: Verse.BodyPartDepth-->
               <!--Available Values: Undefined, Inside, Outside-->
-              <!--Default Value: Undefined-->
               <depth>enum_value</depth>
               <!--Type: float-->
               <!--Default Value: 1.0-->
@@ -121,11 +109,9 @@
           </parts>
           <!--Type: Verse.BodyPartHeight-->
           <!--Available Values: Undefined, Bottom, Middle, Top-->
-          <!--Default Value: Undefined-->
           <height>enum_value</height>
           <!--Type: Verse.BodyPartDepth-->
           <!--Available Values: Undefined, Inside, Outside-->
-          <!--Default Value: Undefined-->
           <depth>enum_value</depth>
           <!--Type: float-->
           <!--Default Value: 1.0-->
@@ -142,11 +128,9 @@
       </parts>
       <!--Type: Verse.BodyPartHeight-->
       <!--Available Values: Undefined, Bottom, Middle, Top-->
-      <!--Default Value: Undefined-->
       <height>enum_value</height>
       <!--Type: Verse.BodyPartDepth-->
       <!--Available Values: Undefined, Inside, Outside-->
-      <!--Default Value: Undefined-->
       <depth>enum_value</depth>
       <!--Reference List-->
       <!--Type: List<Verse.BodyPartGroupDef>-->

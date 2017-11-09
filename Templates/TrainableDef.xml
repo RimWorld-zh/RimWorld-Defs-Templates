@@ -15,7 +15,6 @@
     <!--Default Value: -1.0-->
     <difficulty>float_value</difficulty>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <minBodySize>float_value</minBodySize>
     <!--Reference List-->
     <!--Type: List<RimWorld.TrainableDef>-->
@@ -40,7 +39,6 @@
     <!--Default Value: 1-->
     <steps>int_value</steps>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <listPriority>float_value</listPriority>
     <!--Type: string-->
     <icon>string_value</icon>

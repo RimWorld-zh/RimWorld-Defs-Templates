@@ -9,7 +9,6 @@
     <!--Desc: A human-readable label used to identify this in game.-->
     <label>string_value</label>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <adjective>string_value</adjective>
     <!--Type: bool-->
     <!--Default Value: true-->

@@ -23,7 +23,6 @@
     <!--Type: Verse.RulePackDef-->
     <baseNameMakerPlayer>RulePackDef_defName</baseNameMakerPlayer>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <fixedName>string_value</fixedName>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -84,7 +83,6 @@
       <!-- ... -->
     </pawnGroupMakers>
     <!--Type: Verse.SimpleCurve-->
-    <!--Default Value: null-->
     <raidCommonalityFromPointsCurve>
       <!--Simple List-->
       <!--Type: List<Verse.CurvePoint>-->
@@ -107,7 +105,6 @@
     <!--Default Value: true-->
     <canUseAvoidGrid>true_or_false</canUseAvoidGrid>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <earliestRaidDays>float_value</earliestRaidDays>
     <!--Type: Verse.FloatRange-->
     <!--Default Value: new FloatRange(-1000f, 1000f)-->
@@ -146,7 +143,6 @@
     <!--Default Value: 1.0-->
     <maxPawnOptionCostFactor>float_value</maxPawnOptionCostFactor>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <requiredCountAtGameStart>int_value</requiredCountAtGameStart>
     <!--Type: int-->
     <!--Default Value: 9999-->
@@ -155,16 +151,13 @@
     <!--Default Value: false-->
     <canMakeRandomly>true_or_false</canMakeRandomly>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <baseSelectionWeight>float_value</baseSelectionWeight>
     <!--Type: Verse.RulePackDef-->
     <pawnNameMaker>RulePackDef_defName</pawnNameMaker>
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
-    <!--Default Value: Undefined-->
     <techLevel>enum_value</techLevel>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <backstoryCategory>string_value</backstoryCategory>
     <!--Simple List-->
     <!--Type: List<string>-->
@@ -174,7 +167,6 @@
       <!-- ... -->
     </hairTags>
     <!--Type: Verse.ThingFilter-->
-    <!--Default Value: null-->
     <apparelStuffFilter>
       <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->

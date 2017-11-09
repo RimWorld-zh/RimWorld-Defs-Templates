@@ -34,7 +34,6 @@
         <!--Default Value: Normal-->
         <price>enum_value</price>
         <!--Type: Verse.ThingDef-->
-        <!--Default Value: null-->
         <thingDef>ThingDef_defName</thingDef>
       </li>
       <!--Type: RimWorld.StockGenerator_WeaponsRanged-->
@@ -79,7 +78,6 @@
         <!--Default Value: Normal-->
         <price>enum_value</price>
         <!--Type: Verse.ThingCategoryDef-->
-        <!--Default Value: null-->
         <categoryDef>ThingCategoryDef_defName</categoryDef>
         <!--Type: Verse.IntRange-->
         <!--Default Value: IntRange.one-->
@@ -170,7 +168,6 @@
         <!--Default Value: Normal-->
         <price>enum_value</price>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <tradeTag>string_value</tradeTag>
         <!--Type: Verse.IntRange-->
         <!--Default Value: IntRange.one-->
@@ -184,7 +181,6 @@
       <!--Type: RimWorld.StockGenerator_BuySingleDef-->
       <li Class="StockGenerator_BuySingleDef">
         <!--Type: Verse.ThingDef-->
-        <!--Default Value: null-->
         <thingDef>ThingDef_defName</thingDef>
       </li>
       <!--Type: RimWorld.StockGenerator_Art-->
@@ -217,7 +213,6 @@
           <max>int_value</max>
         </kindCountRange>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minWildness>float_value</minWildness>
         <!--Type: float-->
         <!--Default Value: 1.0-->

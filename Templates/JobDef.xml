@@ -36,7 +36,6 @@
     <!--Default Value: false-->
     <isIdle>true_or_false</isIdle>
     <!--Type: RimWorld.TaleDef-->
-    <!--Default Value: null-->
     <taleOnCompletion>TaleDef_defName</taleOnCompletion>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -51,13 +50,10 @@
     <!--Default Value: 1.0-->
     <joyGainRate>float_value</joyGainRate>
     <!--Type: RimWorld.SkillDef-->
-    <!--Default Value: null-->
     <joySkill>SkillDef_defName</joySkill>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <joyXpPerTick>float_value</joyXpPerTick>
     <!--Type: RimWorld.JoyKindDef-->
-    <!--Default Value: null-->
     <joyKind>JoyKindDef_defName</joyKind>
   </JobDef>
 </Defs>

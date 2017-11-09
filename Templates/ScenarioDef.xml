@@ -49,7 +49,6 @@
           <visible>true_or_false</visible>
           <!--Type: RimWorld.PlayerPawnsArriveMethod-->
           <!--Available Values: Standing, DropPods-->
-          <!--Default Value: Standing-->
           <method>enum_value</method>
         </li>
         <!--Type: RimWorld.ScenPart_StartingResearch-->

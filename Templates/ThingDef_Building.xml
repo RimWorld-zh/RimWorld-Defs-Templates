@@ -21,10 +21,8 @@
     </statBases>
     <!--Type: Verse.Traversability-->
     <!--Available Values: Standable, PassThroughOnly, Impassable-->
-    <!--Default Value: Standable-->
     <passability>enum_value</passability>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <pathCost>int_value</pathCost>
     <!--Type: bool-->
     <!--Default Value: true-->
@@ -62,19 +60,15 @@
       <!-- ... -->
     </researchPrerequisites>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <constructionSkillPrerequisite>int_value</constructionSkillPrerequisite>
     <!--Type: int-->
-    <!--Default Value: 0-->
     <placingDraggableDimensions>int_value</placingDraggableDimensions>
     <!--Type: bool-->
     <!--Default Value: true-->
     <clearBuildingArea>true_or_false</clearBuildingArea>
     <!--Type: Verse.EffecterDef-->
-    <!--Default Value: null-->
     <repairEffect>EffecterDef_defName</repairEffect>
     <!--Type: Verse.EffecterDef-->
-    <!--Default Value: null-->
     <constructEffect>EffecterDef_defName</constructEffect>
     <!--Type: Verse.Rot4-->
     <!--Default Value: Rot4.North-->
@@ -83,14 +77,12 @@
     <!--Default Value: 0.75-->
     <resourcesFractionWhenDeconstructed>float_value</resourcesFractionWhenDeconstructed>
     <!--Type: string-->
-    <!--Default Value: (string)null-->
     <uiIconPath>string_value</uiIconPath>
     <!--Type: Verse.AltitudeLayer-->
     <!--Available Values: Terrain, TerrainScatter, Floor, FloorEmplacement, Filth, Zone, SmallWire, LowPlant, MoteLow, Shadows, DoorMoveable, Building, BuildingOnTop, Item, ItemImportant, LayingPawn, Projectile, Pawn, PawnUnused, PawnState, Blueprint, MoteOverhead, Gas, Skyfaller, Weather, LightingOverlay, VisEffects, FogOfWar, WorldClipper, MapDataOverlay, MetaOverlays, _Count-->
     <!--Default Value: Item-->
     <altitudeLayer>enum_value</altitudeLayer>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <specialDisplayRadius>float_value</specialDisplayRadius>
     <!--Simple List-->
     <!--Type: List<System.Type>-->
@@ -100,18 +92,14 @@
       <!-- ... -->
     </placeWorkers>
     <!--Type: Verse.DesignationCategoryDef-->
-    <!--Default Value: null-->
     <designationCategory>DesignationCategoryDef_defName</designationCategory>
     <!--Type: Verse.KeyBindingDef-->
-    <!--Default Value: null-->
     <designationHotKey>KeyBindingDef_defName</designationHotKey>
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
-    <!--Default Value: Undefined-->
     <minTechLevelToBuild>enum_value</minTechLevelToBuild>
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
-    <!--Default Value: Undefined-->
     <maxTechLevelToBuild>enum_value</maxTechLevelToBuild>
     <!--Type: System.Type-->
     <thingClass>class_name</thingClass>
@@ -120,7 +108,6 @@
     <category>Building</category>
     <!--Type: Verse.TickerType-->
     <!--Available Values: Never, Normal, Rare, Long-->
-    <!--Default Value: Never-->
     <tickerType>enum_value</tickerType>
     <!--Type: Verse.IntVec2-->
     <!--Default Value: new IntVec2(1, 1)-->
@@ -158,7 +145,6 @@
         <!--Default Value: false-->
         <transmitsPower>true_or_false</transmitsPower>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <basePowerConsumption>float_value</basePowerConsumption>
         <!--Type: bool-->
         <!--Default Value: false-->
@@ -178,7 +164,6 @@
       <!--Type: RimWorld.CompProperties_Glower-->
       <li Class="CompProperties_Glower">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <overlightRadius>float_value</overlightRadius>
         <!--Type: float-->
         <!--Default Value: 14.0-->
@@ -193,7 +178,6 @@
         <!--Default Value: typeof(ThingComp)-->
         <compClass>class_name</compClass>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <heatPerSecond>float_value</heatPerSecond>
         <!--Type: float-->
         <!--Default Value: 99999.0-->
@@ -336,7 +320,6 @@
         <!--Type: Verse.SoundDef-->
         <explosionSound>SoundDef_defName</explosionSound>
         <!--Type: Verse.DamageDef-->
-        <!--Default Value: null-->
         <startWickOnDamageTaken>DamageDef_defName</startWickOnDamageTaken>
         <!--Type: float-->
         <!--Default Value: 0.2-->
@@ -350,10 +333,8 @@
           <max>int_value</max>
         </wickTicks>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <chanceNeverExplodeFromDamage>float_value</chanceNeverExplodeFromDamage>
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <destroyThingOnExplosionSize>float_value</destroyThingOnExplosionSize>
       </li>
       <!--Type: RimWorld.CompProperties_ShipPart-->
@@ -364,13 +345,11 @@
       <li Class="CompProperties_Mannable">
         <!--Type: Verse.WorkTags-->
         <!--Available Values: None, ManualDumb, ManualSkilled, Violent, Caring, Social, Intellectual, Animals, Artistic, Crafting, Cooking, Firefighting, Cleaning, Hauling, PlantWork, Mining-->
-        <!--Default Value: None-->
         <manWorkType>enum_value</manWorkType>
       </li>
       <!--Type: RimWorld.CompProperties_TemperatureRuinable-->
       <li Class="CompProperties_TemperatureRuinable">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <minSafeTemperature>float_value</minSafeTemperature>
         <!--Type: float-->
         <!--Default Value: 100.0-->
@@ -423,7 +402,6 @@
       <!--Type: RimWorld.CompProperties_SpawnerFilth-->
       <li Class="CompProperties_SpawnerFilth">
         <!--Type: Verse.ThingDef-->
-        <!--Default Value: null-->
         <filthDef>ThingDef_defName</filthDef>
         <!--Type: int-->
         <!--Default Value: 5-->
@@ -455,7 +433,6 @@
         <descriptionMaker>RulePackDef_defName</descriptionMaker>
         <!--Type: RimWorld.QualityCategory-->
         <!--Available Values: Awful, Shoddy, Poor, Normal, Good, Superior, Excellent, Masterwork, Legendary-->
-        <!--Default Value: Awful-->
         <minQualityForArtistic>enum_value</minQualityForArtistic>
         <!--Type: bool-->
         <!--Default Value: false-->
@@ -523,13 +500,11 @@
       <!--Type: RimWorld.CompProperties_Schedule-->
       <li Class="CompProperties_Schedule">
         <!--Type: float-->
-        <!--Default Value: 0.0-->
         <startTime>float_value</startTime>
         <!--Type: float-->
         <!--Default Value: 1.0-->
         <endTime>float_value</endTime>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <offMessage>string_value</offMessage>
       </li>
       <!--Type: RimWorld.CompProperties_SnowExpand-->
@@ -572,7 +547,6 @@
       <!--Type: Verse.DamageMultiplier-->
       <li>
         <!--Type: Verse.DamageDef-->
-        <!--Default Value: null-->
         <damageDef>DamageDef_defName</damageDef>
         <!--Type: float-->
         <!--Default Value: 1.0-->
@@ -581,16 +555,12 @@
       <!-- ... -->
     </damageMultipliers>
     <!--Type: Verse.RecipeMakerProperties-->
-    <!--Default Value: null-->
     <recipeMaker>
       <!--Type: RimWorld.StatDef-->
-      <!--Default Value: null-->
       <workSpeedStat>StatDef_defName</workSpeedStat>
       <!--Type: Verse.ThingDef-->
-      <!--Default Value: null-->
       <unfinishedThingDef>ThingDef_defName</unfinishedThingDef>
       <!--Type: Verse.ThingFilter-->
-      <!--Default Value: null-->
       <defaultIngredientFilter>
         <!--Simple List-->
         <!--Type: List<string>-->
@@ -608,13 +578,10 @@
         </exceptedThingDefs>
       </defaultIngredientFilter>
       <!--Type: RimWorld.SkillDef-->
-      <!--Default Value: null-->
       <workSkill>SkillDef_defName</workSkill>
       <!--Type: Verse.EffecterDef-->
-      <!--Default Value: null-->
       <effectWorking>EffecterDef_defName</effectWorking>
       <!--Type: Verse.SoundDef-->
-      <!--Default Value: null-->
       <soundWorking>SoundDef_defName</soundWorking>
       <!--Reference List-->
       <!--Type: List<Verse.ThingDef>-->
@@ -625,7 +592,6 @@
       </recipeUsers>
     </recipeMaker>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <minifiedDef>ThingDef_defName</minifiedDef>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -637,7 +603,6 @@
     <!--Default Value: false-->
     <hasInteractionCell>true_or_false</hasInteractionCell>
     <!--Type: Verse.ThingDef-->
-    <!--Default Value: null-->
     <filthLeaving>ThingDef_defName</filthLeaving>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -664,17 +629,13 @@
       <!-- ... -->
     </itemGeneratorTags>
     <!--Type: Verse.GraphicData-->
-    <!--Default Value: null-->
     <graphicData>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
       <!--Type: System.Type-->
-      <!--Default Value: null-->
       <graphicClass>class_name</graphicClass>
       <!--Type: Verse.ShaderType-->
       <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
-      <!--Default Value: None-->
       <shaderType>enum_value</shaderType>
       <!--Type: UnityEngine.Color-->
       <!--Default Value: Color.white-->
@@ -692,7 +653,6 @@
       <!--Default Value: true-->
       <allowFlip>true_or_false</allowFlip>
       <!--Type: Verse.ShadowData-->
-      <!--Default Value: null-->
       <shadowData>
         <!--Type: UnityEngine.Vector3-->
         <!--Default Value: Vector3.one-->
@@ -702,7 +662,6 @@
         <offset>value</offset>
       </shadowData>
       <!--Type: Verse.DamageGraphicData-->
-      <!--Default Value: null-->
       <damageData>
         <!--Type: bool-->
         <!--Default Value: true-->
@@ -736,7 +695,6 @@
       </damageData>
       <!--Type: Verse.LinkDrawerType-->
       <!--Available Values: None, Basic, CornerFiller, Transmitter, TransmitterOverlay-->
-      <!--Default Value: None-->
       <linkType>enum_value</linkType>
       <!--Flag-->
       <!--Type: Verse.LinkFlags-->
@@ -757,7 +715,6 @@
     <!--Default Value: false-->
     <castEdgeShadows>true_or_false</castEdgeShadows>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <staticSunShadowHeight>float_value</staticSunShadowHeight>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -802,7 +759,6 @@
     <!--Default Value: false-->
     <holdsRoof>true_or_false</holdsRoof>
     <!--Type: float-->
-    <!--Default Value: 0.0-->
     <fillPercent>float_value</fillPercent>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -812,7 +768,6 @@
     <neverOverlapFloors>true_or_false</neverOverlapFloors>
     <!--Type: Verse.SurfaceType-->
     <!--Available Values: None, Item, Eat-->
-    <!--Default Value: None-->
     <surfaceType>enum_value</surfaceType>
     <!--Type: bool-->
     <!--Default Value: false-->
@@ -838,10 +793,8 @@
     <!--Default Value: typeof(Blueprint_Build)-->
     <blueprintClass>class_name</blueprintClass>
     <!--Type: Verse.GraphicData-->
-    <!--Default Value: null-->
     <blueprintGraphicData>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <texPath>string_value</texPath>
     </blueprintGraphicData>
     <!--Reference List-->
@@ -853,10 +806,8 @@
     </recipes>
     <!--Type: RimWorld.TechLevel-->
     <!--Available Values: Undefined, Animal, Neolithic, Medieval, Industrial, Spacer, Ultra, Transcendent-->
-    <!--Default Value: Undefined-->
     <techLevel>enum_value</techLevel>
     <!--Type: RimWorld.BuildingProperties-->
-    <!--Default Value: null-->
     <building>
       <!--Type: bool-->
       <!--Default Value: true-->
@@ -886,10 +837,8 @@
       <!--Type: Verse.SoundDef-->
       <soundAmbient>SoundDef_defName</soundAmbient>
       <!--Type: RimWorld.ConceptDef-->
-      <!--Default Value: null-->
       <spawnedConceptLearnOpportunity>ConceptDef_defName</spawnedConceptLearnOpportunity>
       <!--Type: RimWorld.ConceptDef-->
-      <!--Default Value: null-->
       <boughtConceptLearnOpportunity>ConceptDef_defName</boughtConceptLearnOpportunity>
       <!--Type: bool-->
       <!--Default Value: true-->
@@ -907,7 +856,6 @@
       <!--Default Value: true-->
       <canPlaceOverImpassablePlant>true_or_false</canPlaceOverImpassablePlant>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <heatPerTickWhileWorking>float_value</heatPerTickWhileWorking>
       <!--Type: bool-->
       <!--Default Value: true-->
@@ -949,20 +897,16 @@
       <!--Default Value: false-->
       <isPlayerEjectable>true_or_false</isPlayerEjectable>
       <!--Type: Verse.GraphicData-->
-      <!--Default Value: null-->
       <fullGraveGraphicData>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <texPath>string_value</texPath>
         <!--Type: System.Type-->
-        <!--Default Value: null-->
         <graphicClass>class_name</graphicClass>
         <!--Type: UnityEngine.Vector2-->
         <!--Default Value: Vector2.one-->
         <drawSize>value</drawSize>
       </fullGraveGraphicData>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <bed_healPerDay>float_value</bed_healPerDay>
       <!--Type: bool-->
       <!--Default Value: false-->
@@ -983,13 +927,11 @@
       <!--Type: Verse.ThingDef-->
       <turretGunDef>ThingDef_defName</turretGunDef>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <turretBurstWarmupTime>float_value</turretBurstWarmupTime>
       <!--Type: float-->
       <!--Default Value: -1.0-->
       <turretBurstCooldownTime>float_value</turretBurstCooldownTime>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <turretTopGraphicPath>string_value</turretTopGraphicPath>
       <!--Type: bool-->
       <!--Default Value: false-->
@@ -1010,13 +952,10 @@
       <!--Default Value: SoundDefOf.DoorCloseManual-->
       <soundDoorCloseManual>SoundDef_defName</soundDoorCloseManual>
       <!--Type: string-->
-      <!--Default Value: (string)null-->
       <sowTag>string_value</sowTag>
       <!--Type: Verse.ThingDef-->
-      <!--Default Value: null-->
       <defaultPlantToGrow>ThingDef_defName</defaultPlantToGrow>
       <!--Type: Verse.ThingDef-->
-      <!--Default Value: null-->
       <mineableThing>ThingDef_defName</mineableThing>
       <!--Type: int-->
       <!--Default Value: 1-->
@@ -1028,7 +967,6 @@
       <!--Default Value: true-->
       <mineableYieldWasteable>true_or_false</mineableYieldWasteable>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <mineableScatterCommonality>float_value</mineableScatterCommonality>
       <!--Type: Verse.IntRange-->
       <!--Default Value: new IntRange(20, 40)-->
@@ -1039,7 +977,6 @@
         <max>int_value</max>
       </mineableScatterLumpSizeRange>
       <!--Type: RimWorld.StorageSettings-->
-      <!--Default Value: null-->
       <fixedStorageSettings>
         <!--Type: Verse.ThingFilter-->
         <filter>
@@ -1065,7 +1002,6 @@
         <priorityInt>enum_value</priorityInt>
       </fixedStorageSettings>
       <!--Type: RimWorld.StorageSettings-->
-      <!--Default Value: null-->
       <defaultStorageSettings>
         <!--Type: Verse.ThingFilter-->
         <filter>
@@ -1108,18 +1044,14 @@
       <!--Type: Verse.GraphicData-->
       <trapUnarmedGraphicData>
         <!--Type: string-->
-        <!--Default Value: (string)null-->
         <texPath>string_value</texPath>
         <!--Type: System.Type-->
-        <!--Default Value: null-->
         <graphicClass>class_name</graphicClass>
         <!--Type: Verse.ShaderType-->
         <!--Available Values: None, Cutout, CutoutFlying, CutoutPlant, CutoutComplex, CutoutSkin, Transparent, TransparentPostLight, TransparentPlant, MetaOverlay, Mote, MoteGlow, MoteWater-->
-        <!--Default Value: None-->
         <shaderType>enum_value</shaderType>
       </trapUnarmedGraphicData>
       <!--Type: float-->
-      <!--Default Value: 0.0-->
       <unpoweredWorkTableWorkSpeedFactor>float_value</unpoweredWorkTableWorkSpeedFactor>
       <!--Type: bool-->
       <!--Default Value: false-->
