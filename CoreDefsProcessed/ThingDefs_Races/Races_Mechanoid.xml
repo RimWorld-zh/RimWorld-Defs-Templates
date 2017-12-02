@@ -145,8 +145,8 @@
         </capacities>
         <power>20</power>
         <cooldownTime>1.65</cooldownTime>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
       <li ListIndex="1">
         <label>right blade</label>
@@ -156,8 +156,8 @@
         </capacities>
         <power>20</power>
         <cooldownTime>1.65</cooldownTime>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
       <li ListIndex="2">
         <label>head</label>

@@ -44,7 +44,7 @@
     <!--Default Value: false-->
     <allowBeatfire>true_or_false</allowBeatfire>
     <!--Type: RimWorld.DrugCategory-->
-    <!--Available Values: None, Medical, Social, Hard, Any-->
+    <!--Available Values: None, Any, Medical, Social, Hard-->
     <!--Default Value: Any-->
     <drugCategory>enum_value</drugCategory>
     <!--Type: bool-->

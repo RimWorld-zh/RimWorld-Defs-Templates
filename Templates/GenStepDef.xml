@@ -197,12 +197,9 @@
       <!--Type: bool-->
       <!--Default Value: false-->
       <nearMapCenter>true_or_false</nearMapCenter>
-      <!--Type: List<Verse.ThingOption>-->
+      <!--Type: List<Verse.ThingDef>-->
       <mineables>
-        <!--Type: Verse.ThingOption-->
-        <!--Tag Field: thingDef, Tag Type: Verse.ThingDef-->
-        <!--Value Field: weight, Value Type: float-->
-        <!--Pattern: <ThingDef_defName>float_value</ThingDef_defName>-->
+        <!--Type: Verse.ThingDef-->
         <!-- ... -->
       </mineables>
       <!--Type: Verse.FloatRange-->

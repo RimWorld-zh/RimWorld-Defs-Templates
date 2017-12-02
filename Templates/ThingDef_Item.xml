@@ -217,9 +217,8 @@
         <!--Type: bool-->
         <!--Default Value: false-->
         <fleshCorpsesOnly>true_or_false</fleshCorpsesOnly>
-        <!--Type: bool-->
-        <!--Default Value: false-->
-        <nonDessicatedCorpsesOnly>true_or_false</nonDessicatedCorpsesOnly>
+        <!--======== Non Matched Elements ========-->
+        <nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
       </li>
       <!--Type: RimWorld.CompProperties_ChangeableProjectile-->
       <li Class="CompProperties_ChangeableProjectile" />
@@ -376,9 +375,6 @@
       <li>
         <!--Type: string-->
         <label>string_value</label>
-        <!--Type: bool-->
-        <!--Default Value: true-->
-        <labelUsedInLogging>true_or_false</labelUsedInLogging>
         <!--Reference List-->
         <!--Type: List<Verse.ToolCapacityDef>-->
         <capacities>
@@ -390,6 +386,8 @@
         <power>float_value</power>
         <!--Type: float-->
         <cooldownTime>float_value</cooldownTime>
+        <!--======== Non Matched Elements ========-->
+        <labelUsedInLogging>false</labelUsedInLogging>
       </li>
       <!-- ... -->
     </tools>
@@ -751,7 +749,7 @@
       <!--Type: float-->
       <optimalityOffsetFeedingAnimals>float_value</optimalityOffsetFeedingAnimals>
       <!--Type: RimWorld.DrugCategory-->
-      <!--Available Values: None, Medical, Social, Hard, Any-->
+      <!--Available Values: None, Any, Medical, Social, Hard-->
       <drugCategory>enum_value</drugCategory>
     </ingestible>
     <!--Type: RimWorld.BuildingProperties-->

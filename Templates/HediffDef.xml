@@ -358,9 +358,6 @@
     <!--Type: RimWorld.TaleDef-->
     <taleOnVisible>TaleDef_defName</taleOnVisible>
     <!--Type: bool-->
-    <!--Default Value: true-->
-    <everCurableByItem>true_or_false</everCurableByItem>
-    <!--Type: bool-->
     <!--Default Value: false-->
     <displayWound>true_or_false</displayWound>
     <!--Type: UnityEngine.Color-->
@@ -404,5 +401,7 @@
     </addedPartProps>
     <!--Type: string-->
     <labelNoun>string_value</labelNoun>
+    <!--======== Non Matched Elements ========-->
+    <everCurableByItem>false</everCurableByItem>
   </HediffDef>
 </Defs>
