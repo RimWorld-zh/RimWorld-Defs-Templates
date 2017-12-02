@@ -238,7 +238,7 @@
         </capacities>
         <power>6</power>
         <cooldownTime>1.65</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
       </li>
       <li ListIndex="2">
         <capacities>
@@ -893,7 +893,7 @@
         </capacities>
         <power>11</power>
         <cooldownTime>1.65</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
       </li>
       <li ListIndex="2">
         <capacities>

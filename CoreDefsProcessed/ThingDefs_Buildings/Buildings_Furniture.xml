@@ -498,6 +498,7 @@
       <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
         <linkableFacilities>
           <li ListIndex="0">Dresser</li>
+          <li ListIndex="1">EndTable</li>
         </linkableFacilities>
       </li>
     </comps>
@@ -564,6 +565,7 @@
       <li Class="CompProperties_AffectedByFacilities" ListIndex="1">
         <linkableFacilities>
           <li ListIndex="0">Dresser</li>
+          <li ListIndex="1">EndTable</li>
         </linkableFacilities>
       </li>
     </comps>

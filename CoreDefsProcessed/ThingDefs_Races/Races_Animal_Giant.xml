@@ -547,6 +547,7 @@
       <wildness>0.985</wildness>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
+      <herdMigrationAllowed>false</herdMigrationAllowed>
       <gestationPeriodDays>80</gestationPeriodDays>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
@@ -586,7 +587,6 @@
       <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-      <herdMigrationAllowed>false</herdMigrationAllowed>
     </race>
   </ThingDef>
   <PawnKindDef ParentName="AnimalKindBase">

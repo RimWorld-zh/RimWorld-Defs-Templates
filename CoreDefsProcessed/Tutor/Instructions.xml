@@ -52,6 +52,7 @@
     <defName>RandomizeCharacter</defName>
     <text>If you don't like a character, you can regenerate it!\n\nTry randomizing a character with the RANDOMIZE button.</text>
     <eventTagInitiate>ReorderPawn</eventTagInitiate>
+    <eventTagInitiateSource>ReorderCharacters</eventTagInitiateSource>
     <eventTagsEnd>
       <li ListIndex="0">RandomizePawn</li>
     </eventTagsEnd>
@@ -64,7 +65,6 @@
     <highlightTags>
       <li ListIndex="0">RandomizePawn</li>
     </highlightTags>
-    <eventTagInitiateSource>ReorderCharacters</eventTagInitiateSource>
   </InstructionDef>
   <InstructionDef>
     <defName>AcceptStartingPawns</defName>

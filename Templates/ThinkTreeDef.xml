@@ -189,8 +189,9 @@
           <subNodes>
             <!--Type: Verse.AI.ThinkNode_QueuedJob-->
             <li Class="ThinkNode_QueuedJob">
-              <!--======== Non Matched Elements ========-->
-              <inBedOnly>true</inBedOnly>
+              <!--Type: bool-->
+              <!--Default Value: false-->
+              <inBedOnly>true_or_false</inBedOnly>
             </li>
             <!--Type: RimWorld.JobGiver_KeepLyingDown-->
             <li Class="JobGiver_KeepLyingDown" />
@@ -1236,8 +1237,9 @@
       <subNodes>
         <!--Type: Verse.AI.ThinkNode_QueuedJob-->
         <li Class="ThinkNode_QueuedJob">
-          <!--======== Non Matched Elements ========-->
-          <inBedOnly>true</inBedOnly>
+          <!--Type: bool-->
+          <!--Default Value: false-->
+          <inBedOnly>true_or_false</inBedOnly>
         </li>
         <!--Type: Verse.AI.JobGiver_IdleForever-->
         <li Class="JobGiver_IdleForever" />

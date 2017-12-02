@@ -15,6 +15,8 @@
     <startCentered>true_or_false</startCentered>
     <!--Type: string-->
     <eventTagInitiate>string_value</eventTagInitiate>
+    <!--Type: RimWorld.InstructionDef-->
+    <eventTagInitiateSource>InstructionDef_defName</eventTagInitiateSource>
     <!--Simple List-->
     <!--Type: List<string>-->
     <eventTagsEnd>
@@ -61,7 +63,5 @@
     <!--Type: bool-->
     <!--Default Value: false-->
     <resetBuildDesignatorStuffs>true_or_false</resetBuildDesignatorStuffs>
-    <!--======== Non Matched Elements ========-->
-    <eventTagInitiateSource>ReorderCharacters</eventTagInitiateSource>
   </InstructionDef>
 </Defs>

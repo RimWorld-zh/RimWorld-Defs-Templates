@@ -157,7 +157,7 @@
     <causesNeed>Chemical_Luciferium</causesNeed>
     <maxSeverity>1.0</maxSeverity>
     <scenarioCanAdd>true</scenarioCanAdd>
-    <defaultLabelColor>(255,0,127)</defaultLabelColor>
     <everCurableByItem>false</everCurableByItem>
+    <defaultLabelColor>(255,0,127)</defaultLabelColor>
   </HediffDef>
 </Defs>

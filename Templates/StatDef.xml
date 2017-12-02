@@ -52,7 +52,7 @@
     <!--Type: Verse.ToStringStyle-->
     <!--Available Values: Integer, FloatOne, FloatTwo, FloatMaxTwo, PercentZero, PercentOne, PercentTwo, Temperature, TemperatureOffset, WorkAmount-->
     <toStringStyle>enum_value</toStringStyle>
-    <!--Type: System.Nullable`1[[Verse.ToStringStyle, Assembly-CSharp, Version=0.18.6505.24525, Culture=neutral, PublicKeyToken=null]]<Verse.ToStringStyle>-->
+    <!--Type: System.Nullable`1[[Verse.ToStringStyle, Assembly-CSharp, Version=0.18.6527.35959, Culture=neutral, PublicKeyToken=null]]<Verse.ToStringStyle>-->
     <toStringStyleUnfinalized>value</toStringStyleUnfinalized>
     <!--Type: string-->
     <formatString>string_value</formatString>
